@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/placement_select_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/loadAd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/placement_select_group"
+        android:layout_alignTop="@id/placement_select_group"
+        android:text="加载广告（根据广告位选择）" />
+
+    <Button
+        android:id="@+id/loadcache_ad_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadAd_btn"
+        android:layout_toRightOf="@id/placement_select_group"
+        android:text="获取缓存（根据广告位选择）" />
+
+
+    <FrameLayout
+        android:id="@+id/ad_container"
+        android:layout_below="@id/placement_select_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></FrameLayout>
+
+
+</RelativeLayout>
