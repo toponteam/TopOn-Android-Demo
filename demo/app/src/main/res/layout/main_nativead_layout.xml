@@ -42,7 +42,7 @@
 
     <FrameLayout
         android:id="@+id/ad_container"
-        android:layout_below="@id/show_gdpr"
+        android:layout_below="@id/placement_select_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></FrameLayout>
 

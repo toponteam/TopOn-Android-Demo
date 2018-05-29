@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -64,7 +65,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 
         contentArea.removeAllViews();
         if (mediaView != null) {
-            Log.i("test","111");
+
             if(mNetworkType == GDTLocationKeyMaps.getGDTType() && mediaView instanceof NativeExpressADView){
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
@@ -75,16 +76,27 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 
             int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
 //            CommonLogUtil.d("1111",height+":pppp:"+ViewGroup.LayoutParams.WRAP_CONTENT+"--contentArea.getWidth():"+contentArea.getWidth());
-            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
 
         } else {
-            Log.i("test","222");
-            int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
+
             final SimpleDraweeView imageView = new SimpleDraweeView(mContext);
 
+            imageView.setImageURI(ad.getMainImageUrl());
+            ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            imageView.setLayoutParams(params);
+            contentArea.addView(imageView, params);
+            ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    int width = imageView.getMeasuredWidth();
+                    int height = width * 10 / 16;
+                    imageView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height));
 
-                imageView.setImageURI(ad.getMainImageUrl());
-                contentArea.addView(imageView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+                }
+            };
+            imageView.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
 
         }
 
