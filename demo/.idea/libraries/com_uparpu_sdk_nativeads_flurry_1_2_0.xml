@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-flurry-1.2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-flurry-1.2.0.aar/cb6d92165858a31b4c3e5a2f8a33161d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-flurry-1.2.0.aar/cb6d92165858a31b4c3e5a2f8a33161d/jars/libs/uparpu_network_flurry.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-flurry-1.2.0.aar/cb6d92165858a31b4c3e5a2f8a33161d/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads-flurry/1.2.0/ea9ffdb8b2ce1aa6a2af75156e390a540985d66a/nativeads-flurry-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

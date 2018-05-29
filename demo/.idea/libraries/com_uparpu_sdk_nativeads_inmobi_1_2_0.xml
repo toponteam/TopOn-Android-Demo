@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-inmobi-1.2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-inmobi-1.2.0.aar/d5f078620e322bb6dd485d6eec3dfae2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-inmobi-1.2.0.aar/d5f078620e322bb6dd485d6eec3dfae2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-inmobi-1.2.0.aar/d5f078620e322bb6dd485d6eec3dfae2/jars/libs/uparpu_network_inmobi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads-inmobi/1.2.0/72ebe5bbe30b46152ed1d36e54e8956761a5165e/nativeads-inmobi-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

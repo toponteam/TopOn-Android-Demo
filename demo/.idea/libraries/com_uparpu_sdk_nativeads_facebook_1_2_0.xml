@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-facebook-1.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-facebook-1.2.0.aar/8b926553ff2030f46326323f0732fe2b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-facebook-1.2.0.aar/8b926553ff2030f46326323f0732fe2b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-facebook-1.2.0.aar/8b926553ff2030f46326323f0732fe2b/jars/libs/uparpu_network_facebook.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads-facebook/1.2.0/ad57145db11d0e15a6e6a047fa2f22337acc6604/nativeads-facebook-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

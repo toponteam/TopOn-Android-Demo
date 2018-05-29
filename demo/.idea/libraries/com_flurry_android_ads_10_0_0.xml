@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.flurry.android:ads-10.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ads-10.0.0.aar/479004a7118a68180341757c220e94c8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ads-10.0.0.aar/479004a7118a68180341757c220e94c8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

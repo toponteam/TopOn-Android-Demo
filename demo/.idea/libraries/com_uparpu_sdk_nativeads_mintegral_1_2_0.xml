@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-mintegral-1.2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-mintegral-1.2.0.aar/bc3e477a7627d4c0951212e33050aea3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-mintegral-1.2.0.aar/bc3e477a7627d4c0951212e33050aea3/jars/libs/uparpu_network_mintegral.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-mintegral-1.2.0.aar/bc3e477a7627d4c0951212e33050aea3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads-mintegral/1.2.0/4020db3687d831b9110febc1de5d623b8607b740/nativeads-mintegral-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

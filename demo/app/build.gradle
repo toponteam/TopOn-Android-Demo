@@ -32,60 +32,65 @@ dependencies {
 //    implementation 'com.android.support:appcompat-v7:26.1.0'
 //    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.uparpu.sdk:nativeads-base:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-admob:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-applovin:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-facebook:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-flurry:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-inmobi:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-mintegral:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-gdt:1.1.0'
-    implementation 'com.uparpu.sdk:nativeads-mopub:1.1.0'
+    implementation 'com.uparpu.sdk:nativeads-base:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-admob:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-applovin:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-facebook:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-flurry:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-inmobi:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-mintegral:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-gdt:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-mopub:1.2.0'
 
 
 
     //mv
+    compile(name: 'mobvista_mvjscommon', ext: 'aar')
     compile(name: 'mobvista_alphab', ext: 'aar')
     compile(name: 'mobvista_common', ext: 'aar')
     compile(name: 'mobvista_mvnative', ext: 'aar')
     compile(name: 'mobvista_nativeex', ext: 'aar')
     compile(name: 'mobvista_playercommon', ext: 'aar')
     compile(name: 'mobvista_videocommon', ext: 'aar')
+    compile(name: 'mobvista_videojs', ext: 'aar')
 
-    //applovin
-    compile 'com.applovin:applovin-sdk:+'
 
-    //inmobi
-    compile "com.inmobi.monetization:inmobi-ads:7.0.0"
+    //applovin 8.0.1 支持GDPR
+    compile 'com.applovin:applovin-sdk:8.0.1'
+
+    //inmobi GDPR 7.0.0-->7.1.0
+    compile "com.inmobi.monetization:inmobi-ads:7.1.0"
     compile 'com.squareup.picasso:picasso:2.5.2'
 
     //admob
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    compile 'com.google.android.gms:play-services-ads:11.0.1'
 
     //facebook
     compile ('com.facebook.android:audience-network-sdk:4.+'){
         exclude module: 'support-v4'
     }
 
-    //flurry
-    compile 'com.flurry.android:analytics:8.0.2@aar'
-    compile 'com.flurry.android:ads:8.0.2@aar'
+    //flurry GDPR 8.0.2-->10.0.0
+    compile 'com.flurry.android:analytics:10.0.0@aar'
+    compile 'com.flurry.android:ads:10.0.0@aar'
 
     //mopub
-    compile('com.mopub:mopub-sdk:4.20.0@aar') {
+    compile('com.mopub:mopub-sdk:5.0.0@aar') {
         transitive = true
         exclude module: 'libAvid-mopub' // To exclude AVID
         exclude module: 'moat-mobile-app-kit' // To exclude Moat
     }
-
+//    compile('com.mopub:mopub-sdk:4.11.0@aar'){
+//        transitive = true
+//    }
     // For native static (images).
-    compile('com.mopub:mopub-sdk-native-static:4.20.0@aar') {
+    compile('com.mopub:mopub-sdk-native-static:5.0.0@aar') {
         transitive = true
         exclude module: 'libAvid-mopub' // To exclude AVID
         exclude module: 'moat-mobile-app-kit' // To exclude Moat
     }
     // For native video. This will automatically also include native static
-    compile('com.mopub:mopub-sdk-native-video:4.20.0@aar') {
+    compile('com.mopub:mopub-sdk-native-video:5.0.0@aar') {
         transitive = true
         exclude module: 'libAvid-mopub' // To exclude AVID
         exclude module: 'moat-mobile-app-kit' // To exclude Moat

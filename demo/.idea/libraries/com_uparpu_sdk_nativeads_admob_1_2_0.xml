@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-admob-1.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-admob-1.2.0.aar/85551ffb05153a9134d256ec79f2a91f/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-admob-1.2.0.aar/85551ffb05153a9134d256ec79f2a91f/jars/libs/uparpu_network_admob.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-admob-1.2.0.aar/85551ffb05153a9134d256ec79f2a91f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads-admob/1.2.0/150b2006e51baf9c7af0c30b4530c79c86e6f794/nativeads-admob-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
