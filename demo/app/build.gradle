@@ -32,15 +32,15 @@ dependencies {
 //    implementation 'com.android.support:appcompat-v7:26.1.0'
 //    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.uparpu.sdk:nativeads-base:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-admob:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-applovin:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-facebook:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-flurry:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-inmobi:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-mintegral:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-gdt:1.2.0'
-    implementation 'com.uparpu.sdk:nativeads-mopub:1.2.0'
+    implementation 'com.uparpu.sdk:nativeads-base:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-admob:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-applovin:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-facebook:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-flurry:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-inmobi:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-mintegral:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-gdt:1.2.1'
+    implementation 'com.uparpu.sdk:nativeads-mopub:1.2.1'
 
 
 
@@ -66,7 +66,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:11.0.1'
 
     //facebook
-    compile ('com.facebook.android:audience-network-sdk:4.+'){
+    compile ('com.facebook.android:audience-network-sdk:4.28.+'){
         exclude module: 'support-v4'
     }
 
