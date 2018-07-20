@@ -20,6 +20,32 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://dl.bintray.com/uparpu/maven' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        jcenter()
+        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+        //ironsource
+        maven {
+            url  "https://dl.bintray.com/ironsource-mobile/android-sdk"
+        }
+        //adcolony
+        maven {
+            url  "https://adcolony.bintray.com/AdColony"
+        }
+        //ironsource
+        maven {
+            url  "https://dl.bintray.com/ironsource-mobile/android-sdk"
+        }
+        maven {
+            url  "http://dl.bintray.com/ironsource-mobile/android-adapters"
+        }
+
+        //vungle
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 

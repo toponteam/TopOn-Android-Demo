@@ -2,20 +2,17 @@ package com.testjcenter.uparpu.testjcenter;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.qq.e.ads.nativ.NativeExpressADView;
 import com.uparpu.nativead.api.UpArpuNativeAdRenderer;
-import com.uparpu.nativead.api.UpArpuNativeAdView;
 import com.uparpu.nativead.unitgroup.api.CustomNativeAd;
-import com.uparpu.network.gdt.GDTLocationKeyMaps;
+import com.uparpu.network.gdt.GDTUpArpuConst;
+
 /**
  * Created by Z on 2018/1/18.
  */
@@ -24,22 +21,16 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 
     Context mContext;
 
+    int mNetworkType;
     public UpArpuRender(Context context) {
         mContext = context;
     }
 
-    View mDevelopView;
-    int mNetworkType;
     @Override
     public View createView(Context context, int networkType) {
-        if (mDevelopView == null) {
-            mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
-        }
         mNetworkType = networkType;
-        return mDevelopView;
+        return LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
     }
-
-
 
     @Override
     public void renderAdView(View view, CustomNativeAd ad) {
@@ -51,7 +42,6 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
 
         final SimpleDraweeView iconView = (SimpleDraweeView) view.findViewById(R.id.native_ad_image);
-        iconView.setImageDrawable(null);
         iconView.setImageURI(ad.getIconImageUrl());
 
         final SimpleDraweeView logoView = (SimpleDraweeView) view.findViewById(R.id.native_ad_logo);
@@ -66,7 +56,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         contentArea.removeAllViews();
         if (mediaView != null) {
 
-            if(mNetworkType == GDTLocationKeyMaps.getGDTType() && mediaView instanceof NativeExpressADView){
+            if(mNetworkType == GDTUpArpuConst.getGDTType() && mediaView instanceof NativeExpressADView){
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);
@@ -74,30 +64,13 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
                 iconView.setVisibility(View.GONE);
             }
 
-            int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
-//            CommonLogUtil.d("1111",height+":pppp:"+ViewGroup.LayoutParams.WRAP_CONTENT+"--contentArea.getWidth():"+contentArea.getWidth());
-            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
-
+//            int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
+            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
         } else {
-
+//            int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
             final SimpleDraweeView imageView = new SimpleDraweeView(mContext);
-
             imageView.setImageURI(ad.getMainImageUrl());
-            ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            imageView.setLayoutParams(params);
-            contentArea.addView(imageView, params);
-            ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener = new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                    int width = imageView.getMeasuredWidth();
-                    int height = width * 10 / 16;
-                    imageView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height));
-
-                }
-            };
-            imageView.getViewTreeObserver().addOnGlobalLayoutListener(onGlobalLayoutListener);
-
+            contentArea.addView(imageView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
         }
 
         titleView.setText(ad.getTitle());
