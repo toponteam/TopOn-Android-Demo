@@ -107,10 +107,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-rewardedvideo-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_common:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-admob-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-ads-11.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.stetho:stetho:1.3.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: commons-cli:commons-cli:1.2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:core-1.9.1_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-gdt-2.0.0_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-inmobi-2.0.0_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-tapjoy-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:26.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_optimizedata:@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-r2.4.4" level="project" />
@@ -120,22 +123,19 @@
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-native-static-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_videojs:@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-chartboost-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:common:1.0.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui-26.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:nativeads-1.9.1_beta" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-chartboost-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_alphab:@aar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_playercommon:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-gdt-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-hls-r2.4.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-tapjoy-1.9.1_beta" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-mintegral-1.9.1_beta" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-admob-1.9.1_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-vungle-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.flurry.android:analytics-10.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.inmobi.monetization:inmobi-ads:7.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_mtgjscommon:@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:rewardedvideo-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-base-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/Z/salmonads_gitproject/uparpu_demo_android/demo/app/libs/unity_3d.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-11.0.1" level="project" />
@@ -143,23 +143,25 @@
     <orderEntry type="library" name="Gradle: com.ironsource.sdk:mediationsdk:6.7.9.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.vungle:vungle-android-sdk-5.3.2" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-0.11.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-ironsource-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-ui-r2.4.4" level="project" />
     <orderEntry type="library" name="Gradle: com.nineoldandroids:library:2.4.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-base-0.11.0" level="project" />
     <orderEntry type="library" name="Gradle: com.applovin:applovin-sdk:8.0.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-ads-lite-11.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-adcolony-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_videofeeds:@aar" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/Z/salmonads_gitproject/uparpu_demo_android/demo/app/libs/tapjoyconnectlibrary.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_videocommon:@aar" level="project" />
     <orderEntry type="library" name="Gradle: de.greenrobot:eventbus:2.2.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:core-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:fbcore-0.11.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-core-r2.4.4" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_mtgdownloads:@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.adcolony:sdk-3.3.5" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-smoothstreaming-r2.4.4" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-facebook-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava:2.2.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-gass-11.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.mopub.volley:mopub-volley:2.0.0@jar" level="project" />
@@ -171,41 +173,40 @@
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-interstitial-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.11.0@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-flurry-1.9.1_beta" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-applovin-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.ads.consent:consent-library-1.0.6" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-unityads-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-clearcut-11.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-5.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-toutiao-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_mtgnative:@aar" level="project" />
     <orderEntry type="library" name="Gradle: mintegral_nativeex:@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-mopub-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.core:common:1.0.0@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-vungle-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.4@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.flurry.android:ads-10.0.0" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/Z/salmonads_gitproject/uparpu_demo_android/demo/app/libs/chartboost.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:rewardedvideo-1.9.1_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-mopub-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat-26.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-native-video-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.2.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.2.0@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-adcolony-1.9.1_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-flurry-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.6.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:fresco-0.11.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-base-11.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:nativeads-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: __local_aars__:/Users/Z/salmonads_gitproject/uparpu_demo_android/demo/app/libs/GDTUnionSDK.4.15.559.min.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-ironsource-1.9.1_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.exoplayer:exoplayer-dash-r2.4.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-mintegral-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fresco:drawee-0.11.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-facebook-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.moat.analytics.mobile.mpub:moat-mobile-app-kit-2.4.5" level="project" />
-    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-inmobi-1.9.1_beta" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-applovin-2.0.0_beta" level="project" />
     <orderEntry type="library" name="Gradle: com.mopub:mopub-sdk-banner-5.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks-11.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:retrofit:2.2.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.uparpu.sdk:adapter-unityads-2.0.0_beta" level="project" />
   </component>
 </module>

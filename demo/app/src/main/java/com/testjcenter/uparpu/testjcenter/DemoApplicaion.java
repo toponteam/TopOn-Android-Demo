@@ -41,6 +41,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_UNITYAD = "b5b449f809139c";
     public static final String mPlacementId_rewardvideo_vungle = "b5b449f97e0b5f";
     public static final String mPlacementId_rewardvideo_adcolony = "b5b449faa95391";
+    public static final String mPlacementId_rewardvideo_toutiao = "b5b728e7a08cd4";
 
 
 

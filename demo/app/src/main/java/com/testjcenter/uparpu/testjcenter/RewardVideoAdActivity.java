@@ -19,6 +19,7 @@ import com.uparpu.network.inmobi.InmobiUpArpuRewardedVideoSetting;
 import com.uparpu.network.mintegral.MintegralUpArpuRewardedVideoSetting;
 import com.uparpu.network.mopub.MopubUpArpuRewardedVideoSetting;
 import com.uparpu.network.tapjoy.TapjoyUpArpuRewardedVideoSetting;
+import com.uparpu.network.toutiao.TTUpArpuRewardedVideoSetting;
 import com.uparpu.network.unityads.UnityAdsUpArpuRewardedVideoSetting;
 import com.uparpu.network.vungle.VungleRewardedVideoSetting;
 import com.uparpu.rewardvideo.api.UpArpuRewardVideoAd;
@@ -43,6 +44,7 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_UNITYAD
             , DemoApplicaion.mPlacementId_rewardvideo_vungle
             , DemoApplicaion.mPlacementId_rewardvideo_adcolony
+            , DemoApplicaion.mPlacementId_rewardvideo_toutiao
     };
 
     String unitGroupName[] = new String[]{
@@ -60,7 +62,8 @@ public class RewardVideoAdActivity extends Activity {
             "ironsource",
             "unity3d",
             "vungle",
-            "adcolony"
+            "adcolony",
+            "toutiao"
     };
 
     RadioGroup mRadioGroup;
@@ -237,6 +240,9 @@ public class RewardVideoAdActivity extends Activity {
         adColonyUparpuRewardVideoSetting.setEnableResultsDialog(false);
         mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_ADCOLONY, adColonyUparpuRewardVideoSetting);
 
+        TTUpArpuRewardedVideoSetting ttUpArpuRewardedVideoSetting = new TTUpArpuRewardedVideoSetting();
+        ttUpArpuRewardedVideoSetting.setRequirePermission(true);
+        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_TOUTIAO, ttUpArpuRewardedVideoSetting);
 
     }
 
