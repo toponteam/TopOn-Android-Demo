@@ -52,8 +52,8 @@
 
         <!--接入广告平台需要的组件-->
         <!--接入applovin必须静态写入sdkkey-->
-        <meta-data android:name="applovin.sdk.key"
-            android:value="KCHSA7-Nxt85VNdCJ2SLnE3U15pfS9soM7EWEDuA51FbOtohvF1gT5AVBz9e7_QT6f_LuuVzvmTHcL-Wa0C35M"/>
+        <!--<meta-data android:name="applovin.sdk.key"-->
+            <!--android:value="KCHSA7-Nxt85VNdCJ2SLnE3U15pfS9soM7EWEDuA51FbOtohvF1gT5AVBz9e7_QT6f_LuuVzvmTHcL-Wa0C35M"/>-->
         <activity
             android:name="com.applovin.adview.AppLovinInterstitialActivity"
             android:configChanges="orientation|screenSize" />
