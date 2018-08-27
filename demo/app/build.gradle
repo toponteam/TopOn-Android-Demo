@@ -8,7 +8,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 5
-        versionName "2.0.2"
+        versionName "2.1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -32,24 +32,24 @@ dependencies {
 //    implementation 'com.android.support:appcompat-v7:26.1.0'
 //    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.uparpu.sdk:core:2.0.2'
-    implementation 'com.uparpu.sdk:nativeads:2.0.2'
-    implementation 'com.uparpu.sdk:rewardedvideo:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-adcolony:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-admob:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-applovin:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-chartboost:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-facebook:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-flurry:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-gdt:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-inmobi:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-ironsource:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-mintegral:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-mopub:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-tapjoy:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-unityads:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-vungle:2.0.2'
-    implementation 'com.uparpu.sdk:adapter-toutiao:2.0.2'
+    implementation 'com.uparpu.sdk:core:2.1.0'
+    implementation 'com.uparpu.sdk:nativeads:2.1.0'
+    implementation 'com.uparpu.sdk:rewardedvideo:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-adcolony:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-admob:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-applovin:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-chartboost:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-facebook:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-flurry:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-gdt:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-inmobi:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-ironsource:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-mintegral:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-mopub:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-tapjoy:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-unityads:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-vungle:2.1.0'
+    implementation 'com.uparpu.sdk:adapter-toutiao:2.1.0'
 
 
     def batchImportAar = {
