@@ -99,7 +99,7 @@ public class InterstitialAdActivity extends Activity {
             @Override
             public void onClick(View v) {
                 boolean isReady = mInterstitialAd.isAdReady();
-                Toast.makeText(InterstitialAdActivity.this, "video ad ready status:" + isReady, Toast.LENGTH_SHORT).show();
+                Toast.makeText(InterstitialAdActivity.this, "Interstitial ad ready status:" + isReady, Toast.LENGTH_SHORT).show();
             }
         });
 
