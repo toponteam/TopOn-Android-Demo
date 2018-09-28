@@ -2,4 +2,22 @@
     <!-- 这个下载路径也不可以修改，必须为GDTDOWNLOAD -->
     <external-path name="gdt_sdk_download_path" path="GDTDOWNLOAD" />
     <external-files-path name="external_files_path" path="Download" />
+
+    <root-path name="download" path="" />
+
+    <files-path
+        name="files"
+        path="" />
+    <external-path
+        name="sdcard"
+        path="" />
+    <cache-path
+        name="cache"
+        path="" />
+    <external-files-path
+        name="exFiles"
+        path="" />
+    <external-cache-path
+        name="exCache"
+        path="" />
 </paths>

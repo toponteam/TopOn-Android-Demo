@@ -43,6 +43,46 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_adcolony = "b5b449faa95391";
     public static final String mPlacementId_rewardvideo_toutiao = "b5b728e7a08cd4";
 
+    //banner正式
+    public static final String mPlacementId_banner_facebook = "";
+    public static final String mPlacementId_banner_admob = "b5baca41a2536f";
+    public static final String mPlacementId_banner_inmobi = "";
+    public static final String mPlacementId_banner_flurry = "";
+    public static final String mPlacementId_banner_applovin = "";
+    public static final String mPlacementId_banner_mobivsta = "";
+    public static final String mPlacementId_banner_mopub = "";
+    public static final String mPlacementId_banner_GDT = "b5baca43951901";
+    public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
+    public static final String mPlacementId_banner_CHARTBOOST = "";
+    public static final String mPlacementId_banner_TAPJOY = "";
+    public static final String mPlacementId_banner_IRONSOURCE = "";
+    public static final String mPlacementId_banner_UNITYAD = "";
+    public static final String mPlacementId_banner_vungle =  "";
+    public static final String mPlacementId_banner_adcolony = "";
+    public static final String mPlacementId_banner_toutiao = "b5baca45138428";
+    public static final String mPlacementId_banner_uniplay = "b5baca4aebcb93";
+
+    //interstital正式
+    public static final String mPlacementId_interstitial_facebook = "";
+    public static final String mPlacementId_interstitial_admob = "b5baca54674522";
+    public static final String mPlacementId_interstitial_inmobi = "";
+    public static final String mPlacementId_interstitial_flurry = "";
+    public static final String mPlacementId_interstitial_applovin = "";
+    public static final String mPlacementId_interstitial_mobivsta = "";
+    public static final String mPlacementId_interstitial_mopub = "";
+    public static final String mPlacementId_interstitial_GDT = "b5baca561bc100";
+    public static final String mPlacementId_interstitial_all = "b5baca53984692";
+    public static final String mPlacementId_interstitial_CHARTBOOST = "";
+    public static final String mPlacementId_interstitial_TAPJOY = "";
+    public static final String mPlacementId_interstitial_IRONSOURCE = "";
+    public static final String mPlacementId_interstitial_UNITYAD = "";
+    public static final String mPlacementId_interstitial_vungle =  "";
+    public static final String mPlacementId_interstitial_adcolony = "";
+    public static final String mPlacementId_interstitial_toutiao = "b5baca585a8fef";
+    public static final String mPlacementId_interstitial_video_toutiao = "b5baca599c7c61";
+    public static final String mPlacementId_interstitial_uniplay = "b5baca5d16c597";
+    public static final String mPlacementId_interstitial_video_uniplay = "";
+    public static final String mPlacementId_interstitial_oneway = "b5baca5e3d2b29";
 
 
     @Override
