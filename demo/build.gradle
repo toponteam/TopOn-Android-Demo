@@ -46,6 +46,9 @@ allprojects {
         maven {
             url "https://jitpack.io"
         }
+
+        //appnext
+        maven { url "http://dl.appnext.com/" }
     }
 }
 

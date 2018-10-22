@@ -45,6 +45,12 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_vungle
             , DemoApplicaion.mPlacementId_rewardvideo_adcolony
             , DemoApplicaion.mPlacementId_rewardvideo_toutiao
+            , DemoApplicaion.mPlacementId_rewardvideo_uniplay
+            , DemoApplicaion.mPlacementId_rewardvideo_oneway
+            , DemoApplicaion.mPlacementId_rewardvideo_ksyun
+            , DemoApplicaion.mPlacementId_rewardvideo_mobpower
+            , DemoApplicaion.mPlacementId_rewardvideo_yeahmobi
+            , DemoApplicaion.mPlacementId_rewardvideo_appnext
     };
 
     String unitGroupName[] = new String[]{
@@ -63,7 +69,13 @@ public class RewardVideoAdActivity extends Activity {
             "unity3d",
             "vungle",
             "adcolony",
-            "toutiao"
+            "toutiao",
+            "uniplay",
+            "oneway",
+            "Ksyun",
+            "mobpower",
+            "yeahmobi",
+            "appnext"
     };
 
     RadioGroup mRadioGroup;

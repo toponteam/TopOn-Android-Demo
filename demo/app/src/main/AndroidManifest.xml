@@ -35,7 +35,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
-        android:name=".DemoApplicaion"
+        android:name=".DemoApplication"
         android:label="@string/app_name">
 
         <activity android:name=".MainActivity"
@@ -57,7 +57,7 @@
         <!--接入广告平台需要的组件-->
         <!--接入applovin必须静态写入sdkkey-->
         <!--<meta-data android:name="applovin.sdk.key"-->
-            <!--android:value="KCHSA7-Nxt85VNdCJ2SLnE3U15pfS9soM7EWEDuA51FbOtohvF1gT5AVBz9e7_QT6f_LuuVzvmTHcL-Wa0C35M"/>-->
+        <!--android:value="KCHSA7-Nxt85VNdCJ2SLnE3U15pfS9soM7EWEDuA51FbOtohvF1gT5AVBz9e7_QT6f_LuuVzvmTHcL-Wa0C35M"/>-->
         <activity
             android:name="com.applovin.adview.AppLovinInterstitialActivity"
             android:configChanges="orientation|screenSize" />
@@ -71,6 +71,7 @@
             android:resizeableActivity="false"
             android:theme="@android:style/Theme.NoTitleBar"
             tools:ignore="UnusedAttribute" />
+
         <service
             android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
             android:enabled="true" />
@@ -79,11 +80,16 @@
             android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
-        <!-- mintegral -->
+        <!-- MV -->
         <activity
             android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.mintegral.msdk.interstitial.view.MTGInterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
 
         <!-- mopub -->
         <activity
@@ -112,14 +118,25 @@
             android:name="com.qq.e.ads.ADActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
 
 
         <!--Adcolony-->
-        <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+        <activity
+            android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:hardwareAccelerated="true"/>
-        <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"/>
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <!--unity 3d-->
         <activity
@@ -170,8 +187,8 @@
         <activity
             android:name="com.tapjoy.TJAdUnitActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            android:hardwareAccelerated="true" />
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <activity
             android:name="com.tapjoy.mraid.view.ActionHandler"
             android:configChanges="orientation|keyboardHidden|screenSize" />
@@ -183,20 +200,6 @@
             android:name="com.tapjoy.TJContentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
-
-        <!--头条适配7.0，8.0和GDT配置-->
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/network_file_path" />
-        </provider>
 
         <!--one way -->
         <activity
@@ -213,12 +216,41 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/network_file_path" />
+                android:resource="@xml/file_path" />
         </provider>
+
         <provider
             android:name="com.liulishuo.okdownload.OkDownloadProvider"
             android:authorities="${applicationId}.com.liulishuo.okdownload"
             android:exported="false" />
+
+        <!--facebook-->
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <!--适配7.0，8.0-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <!--<provider-->
+        <!--android:name="com.bytedance.sdk.openadsdk.service.TTDownloadProvider"-->
+        <!--android:authorities="${applicationId}.union_adsdk_tt"-->
+        <!--android:exported="false"></provider>-->
+
 
         <!--玩转互联-->
         <activity
@@ -252,9 +284,30 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/network_file_path" />
+                android:resource="@xml/file_path" />
         </provider>
         <service android:name="com.uniplay.adsdk.DownloadService" />
+
+        <!-- 金山云-->
+        <provider
+            android:name="com.ksc.ad.sdk.util.KsyunFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <!--yeahmobi-->
+        <!-- Necessary -->
+        <activity
+            android:name="com.cloudtech.ads.view.InnerWebLandingActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.cloudtech.ads.view.InterstitialActivity" />
+        <activity android:name="com.cloudtech.videoads.view.CTInterstitialActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
 
     </application>
 

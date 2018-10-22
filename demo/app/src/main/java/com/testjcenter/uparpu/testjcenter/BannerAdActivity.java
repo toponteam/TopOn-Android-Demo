@@ -19,11 +19,35 @@ public class BannerAdActivity extends Activity {
 
 
     String unitIds[] = new String[]{
-            DemoApplicaion.mPlacementId_banner_all, DemoApplicaion.mPlacementId_banner_admob, DemoApplicaion.mPlacementId_banner_GDT, DemoApplicaion.mPlacementId_banner_toutiao, DemoApplicaion.mPlacementId_banner_uniplay
+            DemoApplicaion.mPlacementId_banner_all
+            , DemoApplicaion.mPlacementId_banner_admob
+            , DemoApplicaion.mPlacementId_banner_GDT
+            , DemoApplicaion.mPlacementId_banner_toutiao
+            , DemoApplicaion.mPlacementId_banner_uniplay
+            , DemoApplicaion.mPlacementId_banner_facebook
+            , DemoApplicaion.mPlacementId_banner_inmobi
+            , DemoApplicaion.mPlacementId_banner_flurry
+            , DemoApplicaion.mPlacementId_banner_applovin
+            , DemoApplicaion.mPlacementId_banner_mopub
+            , DemoApplicaion.mPlacementId_banner_mobpower
+            , DemoApplicaion.mPlacementId_banner_yeahmobi
+            , DemoApplicaion.mPlacementId_banner_appnext
     };
 
     String unitGroupName[] = new String[]{
-            "All", "Admob", "GDT", "Toutiao", "Uniplay"
+            "All",
+            "Admob",
+            "GDT",
+            "Toutiao",
+            "Uniplay",
+            "Facebook",
+            "Inmobi",
+            "Flurry",
+            "Applovin",
+            "Mopub",
+            "Mobpower",
+            "yeahmobi",
+            "appnext"
     };
 
     UpArpuBannerView mBannerView;

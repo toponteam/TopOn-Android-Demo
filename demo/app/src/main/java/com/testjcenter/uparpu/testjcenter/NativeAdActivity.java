@@ -31,6 +31,9 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_mobivsta
             , DemoApplicaion.mPlacementId_native_mopub
             , DemoApplicaion.mPlacementId_native_GDT
+            , DemoApplicaion.mPlacementId_native_mobpower
+            , DemoApplicaion.mPlacementId_native_yeahmobi
+            , DemoApplicaion.mPlacementId_native_appnext
 
     };
 
@@ -43,7 +46,10 @@ public class NativeAdActivity extends Activity {
             "applovin",
             "mintegral",
             "mopub",
-            "gdt"
+            "gdt",
+            "mobpower",
+            "yeahmobi",
+            "appnext"
     };
 
     UpArpuNative upArapuNatives[] = new UpArpuNative[unitIds.length];

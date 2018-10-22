@@ -17,46 +17,54 @@ public class InterstitialAdActivity extends Activity {
     private static String TAG = "InterstitialAdActivity";
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_interstitial_all
-          //  , DemoApplicaion.mPlacementId_interstitial_facebook
+            , DemoApplicaion.mPlacementId_interstitial_facebook
             , DemoApplicaion.mPlacementId_interstitial_admob
-            //, DemoApplicaion.mPlacementId_interstitial_inmobi
-          //  , DemoApplicaion.mPlacementId_interstitial_flurry
-           // , DemoApplicaion.mPlacementId_interstitial_applovin
-           // , DemoApplicaion.mPlacementId_interstitial_mobivsta
-          //  , DemoApplicaion.mPlacementId_interstitial_mopub
+            , DemoApplicaion.mPlacementId_interstitial_inmobi
+            , DemoApplicaion.mPlacementId_interstitial_flurry
+            , DemoApplicaion.mPlacementId_interstitial_applovin
+            , DemoApplicaion.mPlacementId_interstitial_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_video_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_mopub
             , DemoApplicaion.mPlacementId_interstitial_GDT
-          //  , DemoApplicaion.mPlacementId_interstitial_CHARTBOOST
-          //  , DemoApplicaion.mPlacementId_interstitial_TAPJOY
-           // , DemoApplicaion.mPlacementId_interstitial_IRONSOURCE
-          //  , DemoApplicaion.mPlacementId_interstitial_UNITYAD
-           // , DemoApplicaion.mPlacementId_interstitial_vungle
-           // , DemoApplicaion.mPlacementId_interstitial_adcolony
+            , DemoApplicaion.mPlacementId_interstitial_CHARTBOOST
+            , DemoApplicaion.mPlacementId_interstitial_TAPJOY
+            , DemoApplicaion.mPlacementId_interstitial_IRONSOURCE
+            //  , DemoApplicaion.mPlacementId_interstitial_UNITYAD
+            , DemoApplicaion.mPlacementId_interstitial_vungle
+            , DemoApplicaion.mPlacementId_interstitial_adcolony
             , DemoApplicaion.mPlacementId_interstitial_video_toutiao
             , DemoApplicaion.mPlacementId_interstitial_toutiao
             , DemoApplicaion.mPlacementId_interstitial_uniplay
             , DemoApplicaion.mPlacementId_interstitial_oneway
+            , DemoApplicaion.mPlacementId_interstitial_mobpower
+            , DemoApplicaion.mPlacementId_interstitial_yeahmobi
+            , DemoApplicaion.mPlacementId_interstitial_appnext
     };
 
     String unitGroupName[] = new String[]{
             "All network",
-         //   "facebook",
+            "facebook",
             "admob",
-          //  "inmobi",
-          //  "flurry",
-            //"applovin",
-          //  "mintegral",
-         //   "mopub",
+            "inmobi",
+            "flurry",
+            "applovin",
+            "mintegral",
+            "mintegral video",
+            "mopub",
             "gdt",
-           // "chartboost",
-           // "tapjoy",
-           // "ironsource",
-          //  "unity3d",
-         //   "vungle",
-           // "adcolony",
-            "toutiao_video",
+            "chartboost",
+            "tapjoy",
+            "ironsource",
+            //  "unity3d",
+            "vungle",
+            "adcolony",
+            "toutiao video",
             "toutiao",
             "uniplay",
-            "oneway"
+            "oneway",
+            "mobpower",
+            "yeahmobi",
+            "appnext"
     };
 
     RadioGroup mRadioGroup;
