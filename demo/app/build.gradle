@@ -5,7 +5,6 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.uparpu.demo"
-//        applicationId "com.superapp.filemanager"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 5
