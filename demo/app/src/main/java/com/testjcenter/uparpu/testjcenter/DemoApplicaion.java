@@ -96,6 +96,10 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_yeahmobi = "b5bc7f3df516df";
     public static final String mPlacementId_interstitial_appnext = "b5bc7f3ec5b952";
 
+    //splash
+    public static final String mPlacementId_splash_all = "b5bea7cc9a4497";
+    public static final String mPlacementId_splash_gdt = "b5bea7bfd93f01";
+    public static final String mPlacementId_splash_toutiao = "b5bea7c1b653ef";
 
     @Override
     public void onCreate() {

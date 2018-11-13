@@ -49,4 +49,13 @@
         android:text="Interstitial Demo"
         android:textSize="15dp"
         android:gravity="center"/>
+
+    <Button
+        android:id="@+id/splashBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="Splash Demo"
+        android:textSize="15dp"
+        android:gravity="center"/>
 </LinearLayout>

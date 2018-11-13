@@ -53,6 +53,16 @@
         <activity android:name=".RewardVideoAdActivity" android:label="UpArpu RewardedVideo"></activity>
         <activity android:name=".BannerAdActivity" android:label="UpArpu Banner"></activity>
         <activity android:name=".InterstitialAdActivity" android:label="UpArpu Interstitial"></activity>
+        <activity
+            android:name=".SplashAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:label="UpArpu Splash"></activity>
+
+        <activity
+            android:name=".SplashAdShowActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"></activity>
+
 
         <!--接入广告平台需要的组件-->
         <!--接入applovin必须静态写入sdkkey-->

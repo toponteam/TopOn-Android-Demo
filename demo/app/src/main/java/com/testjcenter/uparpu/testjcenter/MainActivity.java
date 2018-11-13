@@ -48,5 +48,12 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, InterstitialAdActivity.class));
             }
         });
+
+        findViewById(R.id.splashBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SplashAdActivity.class));
+            }
+        });
     }
 }
