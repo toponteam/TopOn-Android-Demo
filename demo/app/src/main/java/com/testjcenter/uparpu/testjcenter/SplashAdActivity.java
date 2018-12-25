@@ -14,12 +14,14 @@ public class SplashAdActivity extends Activity {
             DemoApplicaion.mPlacementId_splash_all
             ,DemoApplicaion.mPlacementId_splash_gdt
             , DemoApplicaion.mPlacementId_splash_toutiao
+            ,DemoApplicaion.mPlacementId_splash_baidu
     };
 
     String unitGroupName[] = new String[]{
             "All",
             "GDT",
-            "Toutiao"
+            "Toutiao",
+            "Baidu"
     };
 
     int mCurrentSelectIndex;

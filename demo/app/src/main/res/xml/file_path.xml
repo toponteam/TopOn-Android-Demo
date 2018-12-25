@@ -31,4 +31,8 @@
     <external-cache-path
         name="apk/."
         path="" />
+
+    <!--baidu-->
+    <external-files-path name="bdpath" path="bddownload/" />
+    <external-path name="bdpathsd" path="bddownload/" />
 </paths>

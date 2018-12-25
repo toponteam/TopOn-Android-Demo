@@ -39,6 +39,7 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_mobpower
             , DemoApplicaion.mPlacementId_interstitial_yeahmobi
             , DemoApplicaion.mPlacementId_interstitial_appnext
+            , DemoApplicaion.mPlacementId_interstitial_baidu
     };
 
     String unitGroupName[] = new String[]{
@@ -64,7 +65,8 @@ public class InterstitialAdActivity extends Activity {
             "oneway",
             "mobpower",
             "yeahmobi",
-            "appnext"
+            "appnext",
+            "baidu"
     };
 
     RadioGroup mRadioGroup;
