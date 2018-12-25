@@ -8,7 +8,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 5
-        versionName "3.2.0"
+        versionName "3.4.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -32,33 +32,34 @@ dependencies {
 //    implementation 'com.android.support:appcompat-v7:26.1.0'
 //    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.uparpu.sdk:core:3.2.0'
-    implementation 'com.uparpu.sdk:nativeads:3.2.0'
-    implementation 'com.uparpu.sdk:rewardedvideo:3.2.0'
-    implementation 'com.uparpu.sdk:banner:3.2.0'
-    implementation 'com.uparpu.sdk:interstitial:3.2.0'
-    implementation 'com.uparpu.sdk:splashad:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-adcolony:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-admob:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-applovin:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-chartboost:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-facebook:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-flurry:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-gdt:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-inmobi:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-ironsource:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-mintegral:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-mopub:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-tapjoy:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-unityads:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-vungle:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-toutiao:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-oneway:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-uniplay:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-appnext:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-yeahmobi:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-mobpower:3.2.0'
-    implementation 'com.uparpu.sdk:adapter-ksyun:3.2.0'
+    implementation 'com.uparpu.sdk:core:3.4.0'
+    implementation 'com.uparpu.sdk:nativeads:3.4.0'
+    implementation 'com.uparpu.sdk:rewardedvideo:3.4.0'
+    implementation 'com.uparpu.sdk:banner:3.4.0'
+    implementation 'com.uparpu.sdk:interstitial:3.4.0'
+    implementation 'com.uparpu.sdk:splashad:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-adcolony:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-admob:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-applovin:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-chartboost:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-facebook:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-flurry:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-gdt:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-inmobi:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-ironsource:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-mintegral:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-mopub:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-tapjoy:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-unityads:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-vungle:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-toutiao:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-oneway:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-uniplay:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-appnext:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-yeahmobi:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-mobpower:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-ksyun:3.4.0'
+    implementation 'com.uparpu.sdk:adapter-baidu:3.4.0'
 
 
 
