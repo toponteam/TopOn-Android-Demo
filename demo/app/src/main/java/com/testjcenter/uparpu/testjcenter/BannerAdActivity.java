@@ -105,6 +105,21 @@ public class BannerAdActivity extends Activity {
                         "onBannerClose",
                         Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onBannerAutoRefreshed() {
+                Toast.makeText(BannerAdActivity.this,
+                        "onBannerAutoRefreshed",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onBannerAutoRefreshFail(AdError adError) {
+                Toast.makeText(BannerAdActivity.this,
+                        "onBannerAutoRefreshFail",
+                        Toast.LENGTH_SHORT).show();
+            }
+
         });
 
         // 声明一个ArrayAdapter用于存放简单数据
