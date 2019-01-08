@@ -20,12 +20,13 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_inmobi = "b5aa1fa5d10190";
     public static final String mPlacementId_native_flurry = "b5aa1fa6c00d2f";
     public static final String mPlacementId_native_applovin = "b5aa1fa7956158";
-    public static final String mPlacementId_native_mobivsta = "b5aa1fa85b86d5";
+    public static final String mPlacementId_native_mintegral = "b5aa1fa85b86d5";
     public static final String mPlacementId_native_GDT = "b5ab8590d44f82";
     public static final String mPlacementId_native_mopub = "b5ab858fb0175f";
     public static final String mPlacementId_native_mobpower = "b5bbdc6363fff0";
     public static final String mPlacementId_native_yeahmobi = "b5bc7f35b2606b";
     public static final String mPlacementId_native_appnext = "b5bc7f369610cd";
+    public static final String mPlacementId_native_toutiao = "b5c2c97629da0d";
 
     //rv线上
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
@@ -34,9 +35,9 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_inmobi = "b5b449f0c6b84a";
     public static final String mPlacementId_rewardvideo_flurry = "b5b449f15d04ca";
     public static final String mPlacementId_rewardvideo_applovin = "b5b449f20155a7";
-    public static final String mPlacementId_rewardvideo_mobivsta = "b5b449f2f58cd7";
+    public static final String mPlacementId_rewardvideo_mintegral = "b5b449f2f58cd7";
     public static final String mPlacementId_rewardvideo_mopub = "b5b449f4927359";
-    public static final String mPlacementId_rewardvideo_GDT = "";
+    public static final String mPlacementId_rewardvideo_GDT = "b5c2c880cb9d52";
     public static final String mPlacementId_rewardvideo_CHARTBOOST = "b5b449f548e010";
     public static final String mPlacementId_rewardvideo_TAPJOY = "b5b449f66ceaf5";
     public static final String mPlacementId_rewardvideo_IRONSOURCE = "b5b449f75948c5";
@@ -50,6 +51,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_mobpower = "b5bbdc67536039";
     public static final String mPlacementId_rewardvideo_yeahmobi = "b5bc7f380e12a2";
     public static final String mPlacementId_rewardvideo_appnext = "b5bc7f38df0a73";
+    public static final String mPlacementId_rewardvideo_baidu = "b5c2c800fb3a52";
 
     //banner正式
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";
@@ -63,7 +65,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_CHARTBOOST = "";
     public static final String mPlacementId_banner_TAPJOY = "";
     public static final String mPlacementId_banner_IRONSOURCE = "";
-    public static final String mPlacementId_banner_UNITYAD = "";
+    public static final String mPlacementId_banner_UNITYAD = "b5c21a2eb3d5f4";
     public static final String mPlacementId_banner_vungle = "";
     public static final String mPlacementId_banner_adcolony = "";
     public static final String mPlacementId_banner_toutiao = "b5baca45138428";
@@ -97,6 +99,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_yeahmobi = "b5bc7f3df516df";
     public static final String mPlacementId_interstitial_appnext = "b5bc7f3ec5b952";
     public static final String mPlacementId_interstitial_baidu = "b5c0508e2c84d4";
+    public static final String mPlacementId_interstitial_UNITYAD = "b5c21a303c25e0";
 
     //splash
     public static final String mPlacementId_splash_all = "b5bea7cc9a4497";

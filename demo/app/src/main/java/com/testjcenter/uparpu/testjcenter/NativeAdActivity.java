@@ -28,12 +28,13 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_inmobi
             , DemoApplicaion.mPlacementId_native_flurry
             , DemoApplicaion.mPlacementId_native_applovin
-            , DemoApplicaion.mPlacementId_native_mobivsta
+            , DemoApplicaion.mPlacementId_native_mintegral
             , DemoApplicaion.mPlacementId_native_mopub
             , DemoApplicaion.mPlacementId_native_GDT
             , DemoApplicaion.mPlacementId_native_mobpower
             , DemoApplicaion.mPlacementId_native_yeahmobi
             , DemoApplicaion.mPlacementId_native_appnext
+            , DemoApplicaion.mPlacementId_native_toutiao
 
     };
 

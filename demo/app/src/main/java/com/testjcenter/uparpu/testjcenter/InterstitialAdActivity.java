@@ -29,7 +29,7 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_CHARTBOOST
             , DemoApplicaion.mPlacementId_interstitial_TAPJOY
             , DemoApplicaion.mPlacementId_interstitial_IRONSOURCE
-            //  , DemoApplicaion.mPlacementId_interstitial_UNITYAD
+            , DemoApplicaion.mPlacementId_interstitial_UNITYAD
             , DemoApplicaion.mPlacementId_interstitial_vungle
             , DemoApplicaion.mPlacementId_interstitial_adcolony
             , DemoApplicaion.mPlacementId_interstitial_video_toutiao
@@ -56,7 +56,7 @@ public class InterstitialAdActivity extends Activity {
             "chartboost",
             "tapjoy",
             "ironsource",
-            //  "unity3d",
+            "unity3d",
             "vungle",
             "adcolony",
             "toutiao video",
