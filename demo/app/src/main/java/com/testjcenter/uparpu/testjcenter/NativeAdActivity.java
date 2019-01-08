@@ -115,8 +115,13 @@ public class NativeAdActivity extends Activity {
                 localMap.put(GDTUpArpuConst.ADTYPE, "3");
                 localMap.put(GDTUpArpuConst.AD_WIDTH, ADSize.FULL_WIDTH);//
                 localMap.put(GDTUpArpuConst.AD_HEIGHT, ADSize.FULL_WIDTH);//
-                upArapuNatives[i].setLocalExtra(localMap);
             }
+
+            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_WIDTH, CommonUtil.dip2px(this, 250));
+            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_HEIGHT, CommonUtil.dip2px(this, 170));
+            localMap.put(TTUpArpuConst.NATIVE_AD_INTERRUPT_VIDEOPLAY, true);
+
+            upArapuNatives[i].setLocalExtra(localMap);
 
             if (upArpuNativeAdView == null) {
                 upArpuNativeAdView = new UpArpuNativeAdView(this);
