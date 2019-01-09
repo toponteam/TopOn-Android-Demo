@@ -16,6 +16,7 @@ import com.uparpu.nativead.api.UpArpuNative;
 import com.uparpu.nativead.api.UpArpuNativeAdView;
 import com.uparpu.nativead.api.UpArpuNativeNetworkListener;
 import com.uparpu.network.gdt.GDTUpArpuConst;
+import com.uparpu.network.toutiao.TTUpArpuConst;
 
 import java.util.HashMap;
 import java.util.Map;
