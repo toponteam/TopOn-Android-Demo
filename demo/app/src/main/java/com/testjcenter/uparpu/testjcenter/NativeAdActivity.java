@@ -1,6 +1,7 @@
 package com.testjcenter.uparpu.testjcenter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -35,6 +36,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_yeahmobi
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_toutiao
+            , DemoApplicaion.mPlacementId_native_toutiao_drawer
 
     };
 
@@ -50,7 +52,9 @@ public class NativeAdActivity extends Activity {
             "gdt",
             "mobpower",
             "yeahmobi",
-            "appnext"
+            "appnext",
+            "toutiao",
+            "toutiao_drawer"
     };
 
     UpArpuNative upArapuNatives[] = new UpArpuNative[unitIds.length];
@@ -109,16 +113,16 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
+            localMap = new HashMap<>();
             //如果是广点通的 需要配置额外配置
             if (i == GDTUpArpuConst.getGDTType()) {
-                localMap = new HashMap<>();
                 localMap.put(GDTUpArpuConst.ADTYPE, "3");
                 localMap.put(GDTUpArpuConst.AD_WIDTH, ADSize.FULL_WIDTH);//
                 localMap.put(GDTUpArpuConst.AD_HEIGHT, ADSize.FULL_WIDTH);//
             }
 
-            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_WIDTH, CommonUtil.dip2px(this, 250));
-            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_HEIGHT, CommonUtil.dip2px(this, 170));
+            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_WIDTH, dip2px(this, 250));
+            localMap.put(TTUpArpuConst.NATIVE_AD_IMAGE_HEIGHT, dip2px(this, 170));
             localMap.put(TTUpArpuConst.NATIVE_AD_INTERRUPT_VIDEOPLAY, true);
 
             upArapuNatives[i].setLocalExtra(localMap);
@@ -167,4 +171,10 @@ public class NativeAdActivity extends Activity {
             mNativeAd.destory();
         }
     }
+
+    public static int dip2px(Context context, float dipValue) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
+    }
+
 }
