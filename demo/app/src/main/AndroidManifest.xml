@@ -92,6 +92,25 @@
 
         <!-- MV -->
         <activity
+            android:name="com.mintegral.msdk.activity.MTGCommonActivity"
+            android:configChanges="keyboard|orientation"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <receiver android:name="com.mintegral.msdk.click.AppReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.mintegral.msdk.shell.MTGService" >
+            <intent-filter>
+                <action android:name="com.mintegral.msdk.download.action" />
+            </intent-filter>
+        </service>
+        <activity
             android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
@@ -126,6 +145,12 @@
             android:exported="false" />
         <activity
             android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.qq.e.ads.PortraitADActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.qq.e.ads.LandscapeADActivity"
+            android:screenOrientation="landscape"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
 
         <provider
