@@ -11,9 +11,9 @@ allprojects {
 
 dependencies {
     //yeahmbi
-    compile 'com.cloudtech:ads:3.3.0'
-    compile 'com.cloudtech:imageloader:3.3.0'   // for preload image
-    compile 'com.cloudtech:videoads:3.3.0'
+    compile 'com.cloudtech:ads:3.4.0'
+    compile 'com.cloudtech:imageloader:3.4.0'   // for preload image
+    compile 'com.cloudtech:videoads:3.4.0'
 }
 
 AndroidManifest配置：
