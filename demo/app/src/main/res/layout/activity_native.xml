@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/placement_select_group"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="加载广告（根据广告位选择）" />
+            android:text="Load Native Ad" />
 
         <Button
             android:id="@+id/loadcache_ad_btn"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/loadAd_btn"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="获取缓存（根据广告位选择）" />
+            android:text="Show Native Ad" />
 
 
         <FrameLayout

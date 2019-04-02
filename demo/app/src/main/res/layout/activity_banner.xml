@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/banner_spinner"
-        android:text="加载广告（根据广告位选择）" />
+        android:text="Banner Load Ad" />
 
 
     <FrameLayout

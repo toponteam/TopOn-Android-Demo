@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/placement_select_group"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="加载广告（根据广告位选择）" />
+            android:text="Load Video Ad" />
 
         <Button
             android:id="@+id/is_ad_ready_btn"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/loadAd_btn"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="广告是否已经准备好（根据广告位选择）" />
+            android:text="Is Video Ad Ready" />
 
         <Button
             android:id="@+id/show_ad_btn"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/is_ad_ready_btn"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="打开广告" />
+            android:text="Show Video Ad" />
 
         <Button
             android:id="@+id/clean_ad_view_btn"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/show_ad_btn"
             android:layout_toRightOf="@id/placement_select_group"
-            android:text="清理广告" />
+            android:text="CLean Video Ad" />
 
 
     </RelativeLayout>

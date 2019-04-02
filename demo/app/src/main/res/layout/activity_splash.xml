@@ -15,6 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/splash_spinner"
-        android:text="展示开屏广告（根据广告位选择）" />
+        android:text="Show Splash Ad" />
 
 </RelativeLayout>

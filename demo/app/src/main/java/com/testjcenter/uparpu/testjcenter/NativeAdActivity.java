@@ -98,13 +98,8 @@ public class NativeAdActivity extends Activity {
         for (int i = 0; i < unitIds.length; i++) {
             upArapuNatives[i] = new UpArpuNative(this, unitIds[i], new UpArpuNativeNetworkListener() {
                 @Override
-                public void onNativeAdLoaded(NativeAd nativeAd) {
-                    if (nativeAd != null) {
-                        mNativeAd = nativeAd;
-                        mNativeAd.renderAdView(upArpuNativeAdView, upArpuRender);
-                        upArpuNativeAdView.setVisibility(View.VISIBLE);
-                        mNativeAd.prepare(upArpuNativeAdView);
-                    }
+                public void onNativeAdLoaded() {
+                    Toast.makeText(NativeAdActivity.this, "load success...", Toast.LENGTH_LONG).show();
                 }
 
                 @Override
@@ -147,7 +142,7 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadcache_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].showAds();
+                NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
                     mNativeAd.renderAdView(upArpuNativeAdView, upArpuRender);
