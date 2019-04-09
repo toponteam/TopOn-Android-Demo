@@ -1,4 +1,4 @@
-通过Gradle导入目录下的所有的AAR文件：v9.0.2
+通过Gradle导入目录下的所有的AAR文件：v9.10.0
 
 AndrodManifest配置：
 <activity

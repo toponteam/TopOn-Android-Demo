@@ -1,4 +1,4 @@
-Gradle引入tapjoyconnectlibrary.jar：v11.12.2
+Gradle引入tapjoyconnectlibrary.jar：v12.2.1
 需要额外引入：
 dependencies {
     implementation 'com.liulishuo.okdownload:okdownload:1.0.3'

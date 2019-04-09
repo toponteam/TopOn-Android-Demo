@@ -1,8 +1,7 @@
 Gradle导入：
 
 dependencies {
-     //applovin 9.1.3 支持GDPR
-     compile 'com.applovin:applovin-sdk:9.1.3'
+     compile 'com.applovin:applovin-sdk:9.4.2'
 }
 
 
