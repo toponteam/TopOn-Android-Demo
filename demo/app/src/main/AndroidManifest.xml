@@ -90,10 +90,6 @@
             android:theme="@android:style/Theme.NoTitleBar"
             tools:ignore="UnusedAttribute" />
 
-        <service
-            android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
-            android:enabled="true" />
-
         <activity
             android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
@@ -323,12 +319,13 @@
 
         <!--yeahmobi-->
         <!-- Necessary -->
+        <activity android:name="com.zcoup.base.view.InnerWebViewActivity" />
+
         <activity
-            android:name="com.cloudtech.ads.view.InnerWebLandingActivity"
-            android:launchMode="singleInstance" />
-        <activity android:name="com.cloudtech.ads.view.InterstitialActivity" />
-        <activity android:name="com.cloudtech.videoads.view.CTInterstitialActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+            android:name="com.zcoup.video.view.RewardedVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <activity android:name="com.zcoup.base.view.InterstitialActivity" />
 
 
         <!--baidu-->
