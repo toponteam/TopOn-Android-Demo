@@ -30,9 +30,9 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_applovin
             , DemoApplicaion.mPlacementId_banner_mopub
             , DemoApplicaion.mPlacementId_banner_mobpower
-            , DemoApplicaion.mPlacementId_banner_yeahmobi
             , DemoApplicaion.mPlacementId_banner_appnext
             , DemoApplicaion.mPLacementId_banner_baidu
+            , DemoApplicaion.mPlacementId_banner_nend
     };
 
     String unitGroupName[] = new String[]{
@@ -47,9 +47,9 @@ public class BannerAdActivity extends Activity {
             "Applovin",
             "Mopub",
             "Mobpower",
-            "yeahmobi",
             "appnext",
-            "Baidu"
+            "Baidu",
+            "Nend"
     };
 
     UpArpuBannerView mBannerView;

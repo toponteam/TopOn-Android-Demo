@@ -34,10 +34,10 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_mopub
             , DemoApplicaion.mPlacementId_native_GDT
             , DemoApplicaion.mPlacementId_native_mobpower
-            , DemoApplicaion.mPlacementId_native_yeahmobi
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_toutiao
             , DemoApplicaion.mPlacementId_native_toutiao_drawer
+            , DemoApplicaion.mPlacementId_native_nend
 
     };
 
@@ -52,10 +52,10 @@ public class NativeAdActivity extends Activity {
             "mopub",
             "gdt",
             "mobpower",
-            "yeahmobi",
             "appnext",
             "toutiao",
-            "toutiao_drawer"
+            "toutiao_drawer",
+            "nend"
     };
 
     UpArpuNative upArapuNatives[] = new UpArpuNative[unitIds.length];

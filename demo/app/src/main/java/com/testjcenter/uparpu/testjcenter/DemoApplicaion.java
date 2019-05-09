@@ -28,6 +28,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_appnext = "b5bc7f369610cd";
     public static final String mPlacementId_native_toutiao = "b5c2c97629da0d";
     public static final String mPlacementId_native_toutiao_drawer = "b5c355d79ef9be";
+    public static final String mPlacementId_native_nend = "b5cb95ead9e60a";
 
     //rv线上
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
@@ -53,6 +54,8 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_yeahmobi = "b5bc7f380e12a2";
     public static final String mPlacementId_rewardvideo_appnext = "b5bc7f38df0a73";
     public static final String mPlacementId_rewardvideo_baidu = "b5c2c800fb3a52";
+    public static final String mPlacementId_rewardvideo_nend = "b5cb95efa0c793";
+    public static final String mPlacementId_rewardvideo_maio = "b5cb961e495a18";
 
     //banner正式
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";
@@ -75,6 +78,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_yeahmobi = "b5bc7f3a3e68b1";
     public static final String mPlacementId_banner_appnext = "b5bc7f3b034a2b";
     public static final String mPLacementId_banner_baidu = "b5c0508c4c073f";
+    public static final String mPlacementId_banner_nend = "b5cb95ed13203c";
 
     //interstital正式
     public static final String mPlacementId_interstitial_facebook = "b5bbdc69a21187";
@@ -101,6 +105,8 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_appnext = "b5bc7f3ec5b952";
     public static final String mPlacementId_interstitial_baidu = "b5c0508e2c84d4";
     public static final String mPlacementId_interstitial_UNITYAD = "b5c21a303c25e0";
+    public static final String mPlacementId_interstitial_nend = "b5cb95eeb7e908";
+    public static final String mPlacementId_interstitia_maio = "b5cb961d9d3414";
 
     //splash
     public static final String mPlacementId_splash_all = "b5bea7cc9a4497";

@@ -50,6 +50,16 @@ allprojects {
 
         //appnext
         maven { url "http://dl.appnext.com/" }
+
+        //maio
+        maven{
+            url "https://imobile-maio.github.io/maven"
+        }
+
+        //nend
+        maven {
+            url 'http://fan-adn.github.io/nendSDK-Android-lib/library'
+        }
     }
 }
 

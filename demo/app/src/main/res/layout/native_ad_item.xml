@@ -90,4 +90,16 @@
         android:gravity="center"
         android:textColor="#ffffff"
         />
+
+    <TextView
+        android:id="@+id/native_ad_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#888888"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        />
 </RelativeLayout>

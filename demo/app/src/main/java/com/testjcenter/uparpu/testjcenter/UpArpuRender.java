@@ -37,6 +37,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         TextView titleView = (TextView) view.findViewById(R.id.native_ad_title);
         TextView descView = (TextView) view.findViewById(R.id.native_ad_desc);
         TextView ctaView = (TextView) view.findViewById(R.id.native_ad_install_btn);
+        TextView adFromView = (TextView) view.findViewById(R.id.native_ad_from);
 
         FrameLayout contentArea = (FrameLayout) view.findViewById(R.id.native_ad_content_image_area);
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
@@ -76,5 +77,12 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         titleView.setText(ad.getTitle());
         descView.setText(ad.getDescriptionText());
         ctaView.setText(ad.getCallToActionText());
+
+        if (!TextUtils.isEmpty(ad.getAdFrom())) {
+            adFromView.setText(ad.getAdFrom() != null ? ad.getAdFrom() : "");
+            adFromView.setVisibility(View.VISIBLE);
+        } else {
+            adFromView.setVisibility(View.GONE);
+        }
     }
 }

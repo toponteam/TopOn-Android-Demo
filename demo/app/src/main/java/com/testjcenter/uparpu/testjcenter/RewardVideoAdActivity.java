@@ -49,9 +49,10 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_oneway
             , DemoApplicaion.mPlacementId_rewardvideo_ksyun
             , DemoApplicaion.mPlacementId_rewardvideo_mobpower
-            , DemoApplicaion.mPlacementId_rewardvideo_yeahmobi
             , DemoApplicaion.mPlacementId_rewardvideo_appnext
             , DemoApplicaion.mPlacementId_rewardvideo_baidu
+            , DemoApplicaion.mPlacementId_rewardvideo_nend
+            , DemoApplicaion.mPlacementId_rewardvideo_maio
     };
 
     String unitGroupName[] = new String[]{
@@ -75,9 +76,10 @@ public class RewardVideoAdActivity extends Activity {
             "oneway",
             "Ksyun",
             "mobpower",
-            "yeahmobi",
             "appnext",
-            "baidu"
+            "baidu",
+            "nend",
+            "maio"
     };
 
     RadioGroup mRadioGroup;
