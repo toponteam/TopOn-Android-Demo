@@ -10,12 +10,13 @@
         android:layout_marginLeft="2dp"
         android:src="@drawable/ad_logo"/>
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <FrameLayout
         android:id="@+id/native_ad_image"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_margin="10dp"
-        android:scaleType="fitCenter"/>
+        android:layout_margin="10dp">
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/native_ad_title"

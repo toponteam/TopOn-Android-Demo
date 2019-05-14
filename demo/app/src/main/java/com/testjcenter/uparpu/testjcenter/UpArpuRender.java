@@ -42,8 +42,15 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         FrameLayout contentArea = (FrameLayout) view.findViewById(R.id.native_ad_content_image_area);
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
 
-        final SimpleDraweeView iconView = (SimpleDraweeView) view.findViewById(R.id.native_ad_image);
-        iconView.setImageURI(ad.getIconImageUrl());
+        final FrameLayout iconViewFrameLayout = (FrameLayout) view.findViewById(R.id.native_ad_image);
+        View iconView = ad.getAdIconView();
+        if (iconView == null) {
+            iconView = new SimpleDraweeView(mContext);
+            ((SimpleDraweeView) iconView).setImageURI(ad.getIconImageUrl());
+        }
+
+        iconViewFrameLayout.addView(iconView);
+
 
         final SimpleDraweeView logoView = (SimpleDraweeView) view.findViewById(R.id.native_ad_logo);
         if (!TextUtils.isEmpty(ad.getAdChoiceIconUrl())) {
@@ -62,7 +69,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);
                 logoView.setVisibility(View.GONE);
-                iconView.setVisibility(View.GONE);
+                iconViewFrameLayout.setVisibility(View.GONE);
             }
 
 //            int height = contentArea.getWidth() == 0 ? ViewGroup.LayoutParams.WRAP_CONTENT : contentArea.getWidth() * 3 / 4;
