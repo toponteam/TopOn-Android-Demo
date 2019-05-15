@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:nativeads-3.5.7beta1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-3.5.7beta1.aar/6e57ccd58f1046de5198f686d7b7bcc1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-3.5.7beta1.aar/6e57ccd58f1046de5198f686d7b7bcc1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/nativeads-3.5.7beta1.aar/6e57ccd58f1046de5198f686d7b7bcc1/jars/libs/uparpu_nativead.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/nativeads/3.5.7beta1/fe912f0f77aa49a0afc87e04213111f64cef5ce2/nativeads-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

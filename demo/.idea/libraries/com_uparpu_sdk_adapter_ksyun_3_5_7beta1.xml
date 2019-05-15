@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-ksyun-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-ksyun-3.5.7beta1.aar/fcd8313c2c62f247e42465e54542bd3c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-ksyun-3.5.7beta1.aar/fcd8313c2c62f247e42465e54542bd3c/jars/libs/uparpu_network_ksyun.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-ksyun-3.5.7beta1.aar/fcd8313c2c62f247e42465e54542bd3c/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-ksyun/3.5.7beta1/ae198a26cda822627c6006e94dae966511dc7f76/adapter-ksyun-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

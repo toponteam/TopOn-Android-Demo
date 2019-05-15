@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:splashad-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/splashad-3.5.7beta1.aar/9eec699e3dce2e39afa97a06c72bd16a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/splashad-3.5.7beta1.aar/9eec699e3dce2e39afa97a06c72bd16a/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/splashad-3.5.7beta1.aar/9eec699e3dce2e39afa97a06c72bd16a/jars/libs/uparpu_splash.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/splashad/3.5.7beta1/9a867ea8843682251b4b172c2b19eec056ddc2e3/splashad-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-maio-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-maio-3.5.7beta1.aar/3714fb6d6f9332edb2e157624e651602/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-maio-3.5.7beta1.aar/3714fb6d6f9332edb2e157624e651602/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-maio-3.5.7beta1.aar/3714fb6d6f9332edb2e157624e651602/jars/libs/uparpu_network_maio.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-maio/3.5.7beta1/2a3c7a296b68be7ee3d97d142ab805d75f97b4f4/adapter-maio-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

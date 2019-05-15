@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-oneway-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-oneway-3.5.7beta1.aar/f0335ecbf88445da76232dca931a5c14/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-oneway-3.5.7beta1.aar/f0335ecbf88445da76232dca931a5c14/jars/libs/uparpu_network_oneway.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-oneway-3.5.7beta1.aar/f0335ecbf88445da76232dca931a5c14/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-oneway/3.5.7beta1/b15581a2102b2bc7712083558992b0caed511525/adapter-oneway-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

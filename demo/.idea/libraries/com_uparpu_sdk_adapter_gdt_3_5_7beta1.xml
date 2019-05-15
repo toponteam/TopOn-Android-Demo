@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-gdt-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-gdt-3.5.7beta1.aar/1bf2a3f20ebe37641020213232ad2f1b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-gdt-3.5.7beta1.aar/1bf2a3f20ebe37641020213232ad2f1b/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-gdt-3.5.7beta1.aar/1bf2a3f20ebe37641020213232ad2f1b/jars/libs/uparpu_network_gdt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-gdt/3.5.7beta1/b697f33f0ea0792467866dbf205618fdd17b1cdf/adapter-gdt-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

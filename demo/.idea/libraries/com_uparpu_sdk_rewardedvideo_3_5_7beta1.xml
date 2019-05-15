@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:rewardedvideo-3.5.7beta1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rewardedvideo-3.5.7beta1.aar/971e8789dfee3feacff2a0e199cc001c/jars/libs/uparpu_rewardedvideo.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rewardedvideo-3.5.7beta1.aar/971e8789dfee3feacff2a0e199cc001c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rewardedvideo-3.5.7beta1.aar/971e8789dfee3feacff2a0e199cc001c/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/rewardedvideo/3.5.7beta1/96f879a4c987e7d11fb7245e75d37064aacbb46e/rewardedvideo-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

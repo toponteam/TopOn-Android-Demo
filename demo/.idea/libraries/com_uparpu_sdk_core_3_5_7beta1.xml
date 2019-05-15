@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:core-3.5.7beta1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-3.5.7beta1.aar/85c0d45a00c06db824502e1e28ae198f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-3.5.7beta1.aar/85c0d45a00c06db824502e1e28ae198f/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-3.5.7beta1.aar/85c0d45a00c06db824502e1e28ae198f/jars/libs/uparpu_core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/core/3.5.7beta1/1eed4bbc7a3cc1b31250199a65d61efe5f48a8c5/core-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

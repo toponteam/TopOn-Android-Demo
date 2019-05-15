@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-tapjoy-3.5.7beta1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-tapjoy-3.5.7beta1.aar/c26652e3de6721e9b1893808284c1b32/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-tapjoy-3.5.7beta1.aar/c26652e3de6721e9b1893808284c1b32/jars/libs/uparpu_network_tapjoy.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-tapjoy-3.5.7beta1.aar/c26652e3de6721e9b1893808284c1b32/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-tapjoy/3.5.7beta1/c7e59f3f8ec7a74f9a5a1e64e282cb908a56aa9e/adapter-tapjoy-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

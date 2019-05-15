@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-toutiao-3.5.7beta1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-toutiao-3.5.7beta1.aar/64ef60c5117ae73f5899dcb823630157/jars/libs/uparpu_network_toutiao.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-toutiao-3.5.7beta1.aar/64ef60c5117ae73f5899dcb823630157/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-toutiao-3.5.7beta1.aar/64ef60c5117ae73f5899dcb823630157/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-toutiao/3.5.7beta1/ff7bcfd9d41616ce2a3da3795db6401dac5fd874/adapter-toutiao-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="com.uparpu.sdk:adapter-admob-3.5.7beta1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-admob-3.5.7beta1.aar/a1447452ff22b0b9ed00943dceda2fac/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-admob-3.5.7beta1.aar/a1447452ff22b0b9ed00943dceda2fac/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/adapter-admob-3.5.7beta1.aar/a1447452ff22b0b9ed00943dceda2fac/jars/libs/uparpu_network_admob.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uparpu.sdk/adapter-admob/3.5.7beta1/2eb50de9abe5c126ef00125a54363b7d971da962/adapter-admob-3.5.7beta1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
