@@ -2,6 +2,7 @@ package com.testjcenter.uparpu.testjcenter;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,7 @@ import java.util.HashMap;
 
 public class BannerAdActivity extends Activity {
 
-
+    private static String TAG = "BannerAdActivity";
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_banner_all
             , DemoApplicaion.mPlacementId_banner_admob
@@ -72,6 +73,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerLoaded",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerLoaded: ");
                 if (!hasAddBannerView) {
                     frameLayout.addView(mBannerView);
                     hasAddBannerView = true;
@@ -83,6 +85,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerFailed",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerFailed: "+adError.printStackTrace());
             }
 
             @Override
@@ -90,6 +93,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClicked",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerClicked: ");
             }
 
             @Override
@@ -97,6 +101,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerShow",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerShow: ");
             }
 
             @Override
@@ -104,6 +109,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClose",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerClose: ");
             }
 
             @Override
@@ -111,6 +117,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerAutoRefreshed",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerAutoRefreshed: ");
             }
 
             @Override
@@ -118,6 +125,7 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerAutoRefreshFail",
                         Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onBannerAutoRefreshFail: "+adError.printStackTrace());
             }
 
         });

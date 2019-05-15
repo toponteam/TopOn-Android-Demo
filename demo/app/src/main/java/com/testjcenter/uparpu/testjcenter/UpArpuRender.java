@@ -64,7 +64,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         contentArea.removeAllViews();
         if (mediaView != null) {
 
-            if(mNetworkType == GDTUpArpuConst.getGDTType() && mediaView instanceof NativeExpressADView){
+            if(mNetworkType == GDTUpArpuConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressADView){
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);

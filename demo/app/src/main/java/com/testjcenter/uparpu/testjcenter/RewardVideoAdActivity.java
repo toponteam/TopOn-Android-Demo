@@ -9,19 +9,32 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.uparpu.api.AdError;
-import com.uparpu.api.UpArpuNetworkType;
+import com.uparpu.network.adcolony.AdColonyUpArpuConst;
 import com.uparpu.network.adcolony.AdColonyUparpuRewardedVideoSetting;
+import com.uparpu.network.admob.AdmobUpArpuConst;
 import com.uparpu.network.admob.AdmobUpArpuRewardedVideoSetting;
+import com.uparpu.network.applovin.ApplovinUpArpuConst;
 import com.uparpu.network.applovin.ApplovinUpArpuRewardedVideoSetting;
+import com.uparpu.network.chartboost.ChartboostUpArpuConst;
 import com.uparpu.network.chartboost.ChartboostUpArpuRewardedVideoSetting;
+import com.uparpu.network.flurry.FlurryUpArpuConst;
 import com.uparpu.network.flurry.FlurryUpArpuRewardedVideoSetting;
+import com.uparpu.network.inmobi.InmobiUpArpuConst;
 import com.uparpu.network.inmobi.InmobiUpArpuRewardedVideoSetting;
+import com.uparpu.network.ironsource.IronsourceUpArpuRewardedVideoSetting;
+import com.uparpu.network.ironsource.IronsourceUparpuConst;
+import com.uparpu.network.mintegral.MintegralUpArpuConst;
 import com.uparpu.network.mintegral.MintegralUpArpuRewardedVideoSetting;
+import com.uparpu.network.mopub.MopubUpArpuConst;
 import com.uparpu.network.mopub.MopubUpArpuRewardedVideoSetting;
+import com.uparpu.network.tapjoy.TapjoyUpArpuConst;
 import com.uparpu.network.tapjoy.TapjoyUpArpuRewardedVideoSetting;
+import com.uparpu.network.toutiao.TTUpArpuConst;
 import com.uparpu.network.toutiao.TTUpArpuRewardedVideoSetting;
+import com.uparpu.network.unityads.UnityAdsUpArpuConst;
 import com.uparpu.network.unityads.UnityAdsUpArpuRewardedVideoSetting;
 import com.uparpu.network.vungle.VungleRewardedVideoSetting;
+import com.uparpu.network.vungle.VungleUpArpuConst;
 import com.uparpu.rewardvideo.api.UpArpuRewardVideoAd;
 import com.uparpu.rewardvideo.api.UpArpuRewardVideoListener;
 
@@ -205,61 +218,59 @@ public class RewardVideoAdActivity extends Activity {
     }
 
     private void addSetting() {
-
         AdmobUpArpuRewardedVideoSetting _admobUpArpuMediationSetting = new AdmobUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_ADMOB, _admobUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(AdmobUpArpuConst.NETWORK_FIRM_ID, _admobUpArpuMediationSetting);
 
         MintegralUpArpuRewardedVideoSetting _mintegralUpArpuMediationSetting = new MintegralUpArpuRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_MINTEGRAL, _mintegralUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(MintegralUpArpuConst.NETWORK_FIRM_ID, _mintegralUpArpuMediationSetting);
 
 
         ApplovinUpArpuRewardedVideoSetting _applovinUpArpuMediationSetting = new ApplovinUpArpuRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_APPLOVIN, _applovinUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(ApplovinUpArpuConst.NETWORK_FIRM_ID, _applovinUpArpuMediationSetting);
 
 
         FlurryUpArpuRewardedVideoSetting _flurryUpArpuMediationSetting = new FlurryUpArpuRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_FLURRY, _flurryUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(FlurryUpArpuConst.NETWORK_FIRM_ID, _flurryUpArpuMediationSetting);
 
 
         InmobiUpArpuRewardedVideoSetting _inmobiUpArpuMediationSetting = new InmobiUpArpuRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_INMOBI, _inmobiUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(InmobiUpArpuConst.NETWORK_FIRM_ID, _inmobiUpArpuMediationSetting);
 
 
         MopubUpArpuRewardedVideoSetting _mopubUpArpuMediationSetting = new MopubUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_MOPUB, _mopubUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(MopubUpArpuConst.NETWORK_FIRM_ID, _mopubUpArpuMediationSetting);
 
 
         ChartboostUpArpuRewardedVideoSetting _chartboostUpArpuMediationSetting = new ChartboostUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_CHARTBOOST, _chartboostUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(ChartboostUpArpuConst.NETWORK_FIRM_ID, _chartboostUpArpuMediationSetting);
 
         TapjoyUpArpuRewardedVideoSetting _tapjoyUpArpuMediationSetting = new TapjoyUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_TAPJOY, _tapjoyUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(TapjoyUpArpuConst.NETWORK_FIRM_ID, _tapjoyUpArpuMediationSetting);
 
-//        IronsourceUpArpuRewardedVideoSetting _ironsourceUpArpuMediationSetting = new IronsourceUpArpuRewardedVideoSetting();
-//        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_IRONSOURCE, _ironsourceUpArpuMediationSetting);
+        IronsourceUpArpuRewardedVideoSetting _ironsourceUpArpuMediationSetting = new IronsourceUpArpuRewardedVideoSetting();
+        mRewardVideoAd.addSetting(IronsourceUparpuConst.NETWORK_FIRM_ID, _ironsourceUpArpuMediationSetting);
 
         UnityAdsUpArpuRewardedVideoSetting _unityAdUpArpuMediationSetting = new UnityAdsUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_UNITYADS, _unityAdUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(UnityAdsUpArpuConst.NETWORK_FIRM_ID, _unityAdUpArpuMediationSetting);
 
         VungleRewardedVideoSetting vungleRewardVideoSetting = new VungleRewardedVideoSetting();
         vungleRewardVideoSetting.setOrientation(2);
         vungleRewardVideoSetting.setSoundEnable(true);
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_VUNGLE, vungleRewardVideoSetting);
+        mRewardVideoAd.addSetting(VungleUpArpuConst.NETWORK_FIRM_ID, vungleRewardVideoSetting);
 
 
         AdColonyUparpuRewardedVideoSetting adColonyUparpuRewardVideoSetting = new AdColonyUparpuRewardedVideoSetting();
         adColonyUparpuRewardVideoSetting.setEnableConfirmationDialog(false);
         adColonyUparpuRewardVideoSetting.setEnableResultsDialog(false);
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_ADCOLONY, adColonyUparpuRewardVideoSetting);
+        mRewardVideoAd.addSetting(AdColonyUpArpuConst.NETWORK_FIRM_ID, adColonyUparpuRewardVideoSetting);
 
         TTUpArpuRewardedVideoSetting ttUpArpuRewardedVideoSetting = new TTUpArpuRewardedVideoSetting();
         ttUpArpuRewardedVideoSetting.setRequirePermission(true);
-        mRewardVideoAd.addSetting(UpArpuNetworkType.NETWORK_TOUTIAO, ttUpArpuRewardedVideoSetting);
-
+        mRewardVideoAd.addSetting(TTUpArpuConst.NETWORK_FIRM_ID, ttUpArpuRewardedVideoSetting);
     }
 
     @Override

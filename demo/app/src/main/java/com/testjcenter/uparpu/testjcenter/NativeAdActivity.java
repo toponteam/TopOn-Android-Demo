@@ -3,6 +3,7 @@ package com.testjcenter.uparpu.testjcenter;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -14,6 +15,7 @@ import com.uparpu.api.AdError;
 import com.uparpu.nativead.api.NativeAd;
 import com.uparpu.nativead.api.UpArpuNative;
 import com.uparpu.nativead.api.UpArpuNativeAdView;
+import com.uparpu.nativead.api.UpArpuNativeEventListener;
 import com.uparpu.nativead.api.UpArpuNativeNetworkListener;
 import com.uparpu.network.gdt.GDTUpArpuConst;
 import com.uparpu.network.toutiao.TTUpArpuConst;
@@ -23,6 +25,7 @@ import java.util.Map;
 
 public class NativeAdActivity extends Activity {
 
+    private static String TAG = "NativeAdActivity";
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
             , DemoApplicaion.mPlacementId_native_facebook
@@ -100,18 +103,20 @@ public class NativeAdActivity extends Activity {
                 @Override
                 public void onNativeAdLoaded() {
                     Toast.makeText(NativeAdActivity.this, "load success...", Toast.LENGTH_LONG).show();
+                    Log.i(TAG, "onNativeAdLoaded: ");
                 }
 
                 @Override
                 public void onNativeAdLoadFail(AdError adError) {
                     Toast.makeText(NativeAdActivity.this, "load fail...：" + adError.getDesc(), Toast.LENGTH_LONG).show();
+                    Log.i(TAG, "onNativeAdLoadFail: "+adError.printStackTrace());
 
                 }
             });
 
             localMap = new HashMap<>();
             //如果是广点通的 需要配置额外配置
-            if (i == GDTUpArpuConst.getGDTType()) {
+            if (i == GDTUpArpuConst.NETWORK_FIRM_ID) {
                 localMap.put(GDTUpArpuConst.ADTYPE, "3");
                 localMap.put(GDTUpArpuConst.AD_WIDTH, ADSize.FULL_WIDTH);//
                 localMap.put(GDTUpArpuConst.AD_HEIGHT, ADSize.FULL_WIDTH);//
@@ -145,7 +150,38 @@ public class NativeAdActivity extends Activity {
                 NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
-                    mNativeAd.renderAdView(upArpuNativeAdView, upArpuRender);
+                    mNativeAd.setNativeEventListener(new UpArpuNativeEventListener() {
+                        @Override
+                        public void onAdImpressed(UpArpuNativeAdView upArpuNativeAdView) {
+                            Log.i(TAG, "onAdImpressed: -----------");
+                        }
+
+                        @Override
+                        public void onAdClicked(UpArpuNativeAdView upArpuNativeAdView) {
+                            Log.i(TAG, "onAdClicked: -----------");
+                        }
+
+                        @Override
+                        public void onAdVideoStart(UpArpuNativeAdView upArpuNativeAdView) {
+                            Log.i(TAG, "onAdVideoStart: -----------");
+                        }
+
+                        @Override
+                        public void onAdVideoEnd(UpArpuNativeAdView upArpuNativeAdView) {
+                            Log.i(TAG, "onAdVideoEnd: -----------");
+                        }
+
+                        @Override
+                        public void onAdVideoProgress(UpArpuNativeAdView upArpuNativeAdView, int i) {
+                            Log.i(TAG, "onAdVideoProgress: -----------");
+                        }
+                    });
+
+                    try {
+                        mNativeAd.renderAdView(upArpuNativeAdView, upArpuRender);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     upArpuNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(upArpuNativeAdView);
                 } else {
