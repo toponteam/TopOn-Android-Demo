@@ -1,4 +1,4 @@
-通过Gradle导入目录下的open_ad_sdk.aar：v1.9.9.2
+通过Gradle导入目录下的open_ad_sdk.aar：v2.0.1.1
 额外引入：
 dependencies {
     compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6" //only for splashad

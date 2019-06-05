@@ -1,4 +1,4 @@
-Gradle引入GDTUnionSDK.4.20.580.min.jar：v4.20.580
+Gradle引入GDTUnionSDK.4.40.910.min.jar：v4.40.910
 
 
 AndroidManifest配置：
