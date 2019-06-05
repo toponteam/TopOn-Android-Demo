@@ -24,6 +24,24 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/nativeBannerAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Native Banner Ad Demo"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/nativeSplashAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Native Splash Ad Demo"
+        android:gravity="center"/>
+
+    <Button
         android:id="@+id/rewardedVideoBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
