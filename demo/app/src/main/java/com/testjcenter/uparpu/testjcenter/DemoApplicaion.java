@@ -7,6 +7,9 @@ import com.facebook.stetho.Stetho;
 import com.qq.e.ads.cfg.MultiProcessFlag;
 import com.uparpu.api.UpArpuSDK;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Z on 2018/1/10.
  */
@@ -119,6 +122,11 @@ public class DemoApplicaion extends MultiDexApplication {
         super.onCreate();
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
+        UpArpuSDK.setChannel("uparpu_test");
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("key1","Value1");
+        map.put("key2","Value2");
+        UpArpuSDK.initCustomMap(map);
         UpArpuSDK.init(this, appid, appKey);
         MultiProcessFlag.setMultiProcess(true);
         UpArpuSDK.setNetworkLogDebug(true);
