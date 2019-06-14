@@ -1,4 +1,4 @@
-Gradle引入UniplayAdSDK_5.8.2.jar：v5.8.2
+Gradle引入Uniplay_AdSDK_6.0.2.jar：v6.0.2
 
 
 AndroidManifest配置：
