@@ -27,7 +27,7 @@ public class SplashAdShowActivity extends Activity implements UpArpuSplashAdList
         skipView = findViewById(R.id.splash_ad_skip);
         skipView.setVisibility(View.VISIBLE);
 
-        splashAd = new UpArpuSplashAd(this, container, skipView, unitId, this, null);
+        splashAd = new UpArpuSplashAd(this, container, skipView, unitId, this);
 
 
     }

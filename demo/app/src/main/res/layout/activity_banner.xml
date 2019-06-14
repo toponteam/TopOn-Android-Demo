@@ -21,7 +21,7 @@
     <FrameLayout
         android:id="@+id/adview_container"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="300dp"
         android:layout_below="@id/loadAd_btn"
         android:layout_marginTop="10dp"></FrameLayout>
 

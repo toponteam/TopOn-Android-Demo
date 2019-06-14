@@ -59,6 +59,8 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_baidu = "b5c2c800fb3a52";
     public static final String mPlacementId_rewardvideo_nend = "b5cb95efa0c793";
     public static final String mPlacementId_rewardvideo_maio = "b5cb961e495a18";
+    public static final String mPlacementId_rewardvideo_startapp = "b5cff0d063ac32";
+    public static final String mPlacementId_rewardvideo_superawesome = "b5cff0d2157805";
 
     //banner正式
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";

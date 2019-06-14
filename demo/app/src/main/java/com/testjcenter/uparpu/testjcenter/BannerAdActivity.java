@@ -67,6 +67,10 @@ public class BannerAdActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new UpArpuBannerView(this);
+//        if (!hasAddBannerView) {
+        frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+//            hasAddBannerView = true;
+//        }
         mBannerView.setBannerAdListener(new UpArpuBannerListener() {
             @Override
             public void onBannerLoaded() {
@@ -74,10 +78,7 @@ public class BannerAdActivity extends Activity {
                         "onBannerLoaded",
                         Toast.LENGTH_SHORT).show();
                 Log.i(TAG, "onBannerLoaded: ");
-                if (!hasAddBannerView) {
-                    frameLayout.addView(mBannerView);
-                    hasAddBannerView = true;
-                }
+
             }
 
             @Override

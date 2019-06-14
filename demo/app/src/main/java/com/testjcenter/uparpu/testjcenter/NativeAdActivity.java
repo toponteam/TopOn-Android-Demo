@@ -137,10 +137,7 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String, String> maps = new HashMap<>();
-                maps.put("age", "22");
-                maps.put("sex", "lady");
-                upArapuNatives[mCurrentSelectIndex].makeAdRequest(maps);
+                upArapuNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
 

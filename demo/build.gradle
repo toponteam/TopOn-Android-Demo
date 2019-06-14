@@ -60,6 +60,11 @@ allprojects {
         maven {
             url 'http://fan-adn.github.io/nendSDK-Android-lib/library'
         }
+
+        //awesome
+        maven {
+            url  "http://dl.bintray.com/sharkofmirkwood/maven"
+        }
     }
 }
 
