@@ -10,7 +10,7 @@ allprojects {
 }
 dependencies {
     //adcolony SDK dependency
-    compile 'com.adcolony:sdk:3.3.5'
+    compile 'com.adcolony:sdk:3.3.10'
 }
 
 

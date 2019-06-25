@@ -139,7 +139,7 @@ dependencies {
     implementation 'com.ironsource.sdk:mediationsdk:6.7.9.1@jar'
 
     //adcolony SDK dependency
-    implementation 'com.adcolony:sdk:3.3.5'
+    implementation 'com.adcolony:sdk:3.3.10'
 
     //Add Vungle SDK dependency
     implementation 'com.github.vungle:vungle-android-sdk:6.3.12'
