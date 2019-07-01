@@ -7,7 +7,7 @@
 |Admob | 17.2.0 |
 |Inmobi | 7.2.7 | 
 |Flurry| 11.5.0 | 
-|Applovin| 9.7.0 | 
+|Applovin| 9.7.1 | 
 |Mintegral | 9.10.0 |
 |Mopub | 5.3.0 |
 |GDT | 4.40.910|
@@ -16,9 +16,9 @@
 |Ironsource | 6.8.1|
 |UnityAds | 3.1.0 |
 |Vungle | 6.3.24 | 
-|Adcolony | 3.3.8 | 
-|TouTiao|v2.0.1.1|
-|玩转互联 | 5.8.2  |
+|Adcolony | 3.3.10 | 
+|TouTiao|v2.1.0.2|
+|玩转互联 | 6.0.2  |
 |Oneway|2.1.3|
 |MobPower | 4.8.0 |
 |Yeahmobi|4.0.6 |
@@ -26,6 +26,8 @@
 |Baidu|5.8.0 |
 |Nend|5.1.0 |
 |Maio|1.1.7 |
+|StartApp|4.0.2|
+|SuperAwesome|3.6.5|
 
 
 | Network Name| NETWORK FIRM ID|
