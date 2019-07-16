@@ -1,4 +1,4 @@
-# uparpu_demo_android_3.6.2
+# uparpu_demo_android_4.1.0
 
 
 | Network Name| NETWORK VERSION|
@@ -8,7 +8,7 @@
 |Inmobi | 7.2.7 | 
 |Flurry| 11.5.0 | 
 |Applovin| 9.7.1 | 
-|Mintegral | 9.10.0 |
+|Mintegral | 9.12.0 |
 |Mopub | 5.3.0 |
 |GDT | 4.40.910|
 |Chartboost | 7.2.0| 
@@ -17,13 +17,13 @@
 |UnityAds | 3.1.0 |
 |Vungle | 6.3.24 | 
 |Adcolony | 3.3.10 | 
-|TouTiao|v2.1.0.2|
+|TouTiao|v2.1.0.3|
 |玩转互联 | 6.0.2  |
 |Oneway|2.1.3|
 |MobPower | 4.8.0 |
 |Yeahmobi|4.0.6 |
 |Appnext|2.4.5.472|
-|Baidu|5.8.0 |
+|Baidu|5.81 |
 |Nend|5.1.0 |
 |Maio|1.1.7 |
 |StartApp|4.0.2|
