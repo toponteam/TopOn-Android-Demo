@@ -1,4 +1,4 @@
-通过Gradle导入目录下的open_ad_sdk.aar：v2.1.0.2
+通过Gradle导入目录下的open_ad_sdk.aar：v2.1.0.3
 额外引入：
 dependencies {
     compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6"

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.testjcenter.uparpu.testjcenter">
+    package="com.test.ad.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--one way-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <!--头条-->
     <!--必须要有的权限-->
@@ -26,23 +24,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
     <!--最好能提供的权限-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!--one way-->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-
     <application
         android:name=".DemoApplicaion"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true">
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light">
 
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-        <activity android:name=".MainActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-            >
+        <activity android:name="com.test.ad.demo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,31 +46,45 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.test.ad.demo.NativeAdActivity"
+            android:label="UpArpu Native"
+            android:launchMode="singleTask"></activity>
 
-        <activity android:name=".NativeAdActivity" android:label="UpArpu Native"></activity>
-        <activity android:name=".RewardVideoAdActivity" android:label="UpArpu RewardedVideo"></activity>
-        <activity android:name=".BannerAdActivity" android:label="UpArpu Banner"></activity>
-        <activity android:name=".InterstitialAdActivity" android:label="UpArpu Interstitial"></activity>
-        <activity android:name=".NativeBannerActivity" android:label="UpArpu Native Banner"></activity>
-        <activity android:name=".NativeSplashActivity" android:label="UpArpu Native Splash"></activity>
+        <activity
+            android:name="com.test.ad.demo.RewardVideoAdActivity"
+            android:label="UpArpu RewardedVideo"
+            android:launchMode="singleTask"></activity>
+
+        <activity
+            android:name="com.test.ad.demo.InterstitialAdActivity"
+            android:label="UpArpu Interstitial"
+            android:launchMode="singleTask"></activity>
+
+        <activity
+            android:name="com.test.ad.demo.BannerAdActivity"
+            android:label="UpArpu Banner"
+            android:launchMode="singleTask"></activity>
+
         <activity
             android:name=".SplashAdActivity"
-            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
-            android:label="UpArpu Splash"></activity>
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"></activity>
 
         <activity
             android:name=".SplashAdShowActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"></activity>
 
+        <activity android:name=".NativeBannerActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"></activity>
+
+        <activity android:name=".NativeSplashActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"></activity>
+
 
         <!--接入广告平台需要的组件-->
-
-        <!--admob-->
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
-
         <!--接入applovin必须静态写入sdkkey-->
         <!--<meta-data android:name="applovin.sdk.key"-->
         <!--android:value="KCHSA7-Nxt85VNdCJ2SLnE3U15pfS9soM7EWEDuA51FbOtohvF1gT5AVBz9e7_QT6f_LuuVzvmTHcL-Wa0C35M"/>-->
@@ -82,7 +92,6 @@
             android:name="com.applovin.adview.AppLovinInterstitialActivity"
             android:configChanges="orientation|screenSize" />
 
-        <!--<activity android:name="com.applovin.adview.AppLovinConfirmationActivity" />-->
 
         <activity
             android:name="com.inmobi.rendering.InMobiAdActivity"
@@ -91,6 +100,7 @@
             android:resizeableActivity="false"
             android:theme="@android:style/Theme.NoTitleBar"
             tools:ignore="UnusedAttribute" />
+
 
         <activity
             android:name="com.flurry.android.FlurryFullscreenTakeoverActivity"
@@ -116,6 +126,7 @@
                 <action android:name="com.mintegral.msdk.download.action" />
             </intent-filter>
         </service>
+
         <activity
             android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -152,12 +163,14 @@
         <activity
             android:name="com.qq.e.ads.ADActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+
         <activity android:name="com.qq.e.ads.PortraitADActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
         <activity android:name="com.qq.e.ads.LandscapeADActivity"
             android:screenOrientation="landscape"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -209,12 +222,12 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.tapjoy.mraid.view.ActionHandler"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity
-            android:name="com.tapjoy.mraid.view.Browser"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <!--<activity-->
+            <!--android:name="com.tapjoy.mraid.view.ActionHandler"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize" />-->
+        <!--<activity-->
+            <!--android:name="com.tapjoy.mraid.view.Browser"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize" />-->
 
         <activity
             android:name="com.tapjoy.TJContentActivity"
@@ -328,8 +341,6 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
         <activity android:name="com.zcoup.base.view.InterstitialActivity" />
-
-
         <!--baidu-->
         <!-- 如果targetSdkVersion设置值>=24，则强烈建议添加以下provider，否则会影响app变现效率 -->
         <provider
@@ -363,6 +374,26 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_path" />
         </provider>
+
+        <!--google-->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+
+        <!-- 洛米配置 -->
+        <provider
+            android:name="com.uparpu.network.luomi.LuomiUpArpuFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/lmc_paths" />
+        </provider>
+
+        <meta-data
+            android:name="${applicationId}.fileprovider"
+            android:value="zy_provider_authorities" />
     </application>
 
 </manifest>

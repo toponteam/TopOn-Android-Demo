@@ -5,18 +5,18 @@
     android:background="#ffffff">
 
     <ImageView
+        android:id="@+id/native_self_adlogo"
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:layout_marginLeft="2dp"
         android:src="@drawable/ad_logo"/>
 
-    <FrameLayout
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/native_ad_image"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_margin="10dp">
-
-    </FrameLayout>
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter"/>
 
     <TextView
         android:id="@+id/native_ad_title"
@@ -95,11 +95,14 @@
     <TextView
         android:id="@+id/native_ad_from"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="10dp"
+        android:layout_toRightOf="@id/native_self_adlogo"
+        android:layout_alignTop="@id/native_ad_logo"
         android:background="#888888"
-        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textSize="6dp"
         android:gravity="center"
         android:textColor="#ffffff"
         />

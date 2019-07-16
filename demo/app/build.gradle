@@ -7,7 +7,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 5
-        versionName "3.6.2"
+        versionName "4.1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -25,46 +25,9 @@ repositories{
     }
 }
 
-
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation 'com.android.support:appcompat-v7:26.1.0'
-//    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    implementation 'com.uparpu.sdk:core:3.6.2'
-    implementation 'com.uparpu.sdk:nativeads:3.6.2'
-    implementation 'com.uparpu.sdk:rewardedvideo:3.6.2'
-    implementation 'com.uparpu.sdk:banner:3.6.2'
-    implementation 'com.uparpu.sdk:interstitial:3.6.2'
-    implementation 'com.uparpu.sdk:splashad:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-adcolony:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-admob:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-applovin:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-chartboost:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-facebook:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-flurry:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-gdt:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-inmobi:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-ironsource:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-mintegral:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-mopub:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-tapjoy:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-unityads:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-vungle:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-toutiao:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-oneway:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-uniplay:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-appnext:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-mobpower:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-ksyun:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-baidu:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-nend:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-maio:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-startapp:3.6.2'
-    implementation 'com.uparpu.sdk:adapter-superawesome:3.6.2'
-
-
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     def batchImportAar = {
         fileTree(dir: 'libs', include: '*.aar').each { File file ->
             def name = file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name };
@@ -72,21 +35,23 @@ dependencies {
         }
     }
     batchImportAar()
-
     implementation ('com.facebook.fresco:fresco:0.11.0')
     implementation 'com.facebook.stetho:stetho:1.3.1'
-    implementation 'com.android.support:recyclerview-v7:26+'
 
     implementation 'com.android.support:multidex:1.0.1'
 
 
+    //applovin 8.0.1 支持GDPR
     implementation 'com.applovin:applovin-sdk:9.7.1'
 
+    //inmobi GDPR 7.0.0-->7.1.0
     implementation "com.inmobi.monetization:inmobi-ads:7.2.7"
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
     //admob
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
+//    compile 'com.google.android.ads.consent:consent-library:1.0.4'
+    //GDPR支持
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
 
     //facebook
@@ -155,21 +120,26 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
     //appnext
-    implementation 'com.appnext.sdk:ads:2.+'
-    implementation 'com.appnext.sdk:banners:2.+'
-    implementation 'com.appnext.sdk:native-ads2:2.+' // New Native Ads
+    implementation 'com.appnext.sdk:ads:2.4.6.472'
+    implementation 'com.appnext.sdk:banners:2.4.6.472'
+    implementation 'com.appnext.sdk:native-ads2:2.4.6.472' // New Native Ads
 
     implementation "pl.droidsonroids.gif:android-gif-drawable:1.2.6"
 
     //maio
-    implementation 'com.maio:android-sdk:1.1.7@aar'
+    implementation ('com.maio:android-sdk:1.1.7@aar'){
+        exclude module: 'support-v4'
+    }
 
     //nend
-    implementation 'net.nend.android:nend-sdk:5.1.0'
+    implementation ('net.nend.android:nend-sdk:5.1.0'){
+        exclude module: 'support-v4'
+    }
 
     //startApp
     implementation 'com.startapp:inapp-sdk:4.0.2'
 
     //awesome
     implementation 'tv.superawesome.sdk:sa-sdk:3.6.5@aar'
+
 }

@@ -1,3 +1,4 @@
+其中BiddingKit是facebook做headbidding的包，可选择导入
 Gradle导入：
 
 dependencies {
