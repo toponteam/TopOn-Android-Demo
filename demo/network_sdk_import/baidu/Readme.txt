@@ -1,4 +1,4 @@
-通过Gradle导入目录下的Baidu_MobAds_SDK-release.aar：v4.6.0
+通过Gradle导入目录下的Baidu_MobAds_SDK-release.aar：v5.8.1
 
 AndrodManifest配置：
 <!--baidu-->
