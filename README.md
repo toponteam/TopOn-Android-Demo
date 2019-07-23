@@ -1,4 +1,4 @@
-# uparpu_demo_android_4.1.0
+# uparpu_demo_android_4.1.1
 
 
 | Network Name| NETWORK VERSION|
@@ -8,7 +8,7 @@
 |Inmobi | 7.2.7 | 
 |Flurry| 11.5.0 | 
 |Applovin| 9.7.1 | 
-|Mintegral | 9.12.0 |
+|Mintegral | 9.12.4 |
 |Mopub | 5.3.0 |
 |GDT | 4.40.910|
 |Chartboost | 7.2.0| 
