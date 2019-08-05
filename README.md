@@ -1,9 +1,9 @@
-# uparpu_demo_android_4.1.1
+# uparpu_demo_android_4.1.2
 
 
 | Network Name| NETWORK VERSION|
 |---|---|
-|Facebook | 5.3.1 |
+|Facebook | 5.3.1|
 |Admob | 17.2.0 |
 |Inmobi | 7.2.7 | 
 |Flurry| 11.5.0 | 
@@ -17,7 +17,7 @@
 |UnityAds | 3.1.0 |
 |Vungle | 6.3.24 | 
 |Adcolony | 3.3.10 | 
-|TouTiao|v2.1.0.3|
+|TouTiao|v2.2.0.1|
 |玩转互联 | 6.0.2  |
 |Oneway|2.1.3|
 |MobPower | 4.8.0 |
