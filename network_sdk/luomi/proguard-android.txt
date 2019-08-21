@@ -1,0 +1,18 @@
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+
+-keep class com.hz.yl.** {
+    <fields>;
+    <methods>;
+}
+-keep class com.glide.** {
+     <fields>;
+     <methods>;
+ }
+-keep class android.support.v4**{
+    <fields>;
+    <methods>;
+}

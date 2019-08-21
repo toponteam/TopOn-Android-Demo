@@ -1,70 +1,24 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
-        
+        classpath 'com.android.tools.build:gradle:3.4.0'
+
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-
 allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://dl.bintray.com/uparpu/maven' }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        jcenter()
-        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
-        //ironsource
-        maven {
-            url  "https://dl.bintray.com/ironsource-mobile/android-sdk"
-        }
-        //adcolony
-        maven {
-            url  "https://adcolony.bintray.com/AdColony"
-        }
-        //ironsource
-        maven {
-            url  "https://dl.bintray.com/ironsource-mobile/android-sdk"
-        }
-        maven {
-            url  "http://dl.bintray.com/ironsource-mobile/android-adapters"
-        }
-
-        //vungle
-        maven {
-            url "https://jitpack.io"
-        }
-
-        //appnext
-        maven { url "http://dl.appnext.com/" }
-
-        //maio
-        maven{
-            url "https://imobile-maio.github.io/maven"
-        }
-
-        //nend
-        maven {
-            url 'http://fan-adn.github.io/nendSDK-Android-lib/library'
-        }
-
-        //awesome
-        maven {
-            url  "http://dl.bintray.com/sharkofmirkwood/maven"
-        }
     }
 }
 

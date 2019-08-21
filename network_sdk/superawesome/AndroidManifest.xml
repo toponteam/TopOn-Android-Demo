@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tv.superawesome.sdk.publisher">
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity
+            android:name="tv.superawesome.sdk.publisher.SAVideoAd"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="SAFullscreenVideoAd"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="tv.superawesome.sdk.publisher.SAInterstitialAd"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="SAInterstitialAd"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="tv.superawesome.lib.sabumperpage.SABumperPage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:label="SABumperPage"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+    </application>
+</manifest>

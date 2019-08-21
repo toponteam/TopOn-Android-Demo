@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.test.ad.demo">
+    <uses-sdk android:minSdkVersion="14" />
+    <application
+        android:name=".DemoApplicaion"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light">
+
+        <activity android:name="com.test.ad.demo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".NativeAdActivity"
+            android:label="UpArpu Native"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".RewardVideoAdActivity"
+            android:label="UpArpu RewardedVideo"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".InterstitialAdActivity"
+            android:label="UpArpu Interstitial"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".BannerAdActivity"
+            android:label="UpArpu Banner"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name=".SplashAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"/>
+
+        <activity
+            android:name=".SplashAdShowActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"/>
+
+        <activity android:name=".NativeBannerActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"/>
+
+        <activity android:name=".NativeSplashActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"/>
+
+    </application>
+
+</manifest>

@@ -8,13 +8,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.qq.e.ads.nativ.ADSize;
 import com.uparpu.api.AdError;
 import com.uparpu.nativead.api.NativeAd;
 import com.uparpu.nativead.api.UpArpuNative;
 import com.uparpu.nativead.api.UpArpuNativeAdView;
 import com.uparpu.nativead.api.UpArpuNativeNetworkListener;
-import com.uparpu.network.gdt.GDTUpArpuConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -112,15 +110,6 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
-            //如果是广点通的 需要配置额外配置
-            if (i == GDTUpArpuConst.NETWORK_FIRM_ID) {
-                localMap = new HashMap<>();
-                localMap.put(GDTUpArpuConst.ADTYPE, "3");
-                localMap.put(GDTUpArpuConst.AD_WIDTH, ADSize.FULL_WIDTH);//
-                localMap.put(GDTUpArpuConst.AD_HEIGHT, ADSize.FULL_WIDTH);//
-                upArapuNatives[i].setLocalExtra(localMap);
-            }
-
             if (upArpuNativeAdView == null) {
                 upArpuNativeAdView = new UpArpuNativeAdView(this);
             }
@@ -164,5 +153,21 @@ public class NativeAdActivity extends Activity {
         if (mNativeAd != null) {
             mNativeAd.destory();
         }
+    }
+
+    @Override
+    protected void onPause() {
+        if (mNativeAd != null) {
+            mNativeAd.onPause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        if (mNativeAd != null) {
+            mNativeAd.onResume();
+        }
+        super.onResume();
     }
 }

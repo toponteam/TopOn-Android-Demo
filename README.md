@@ -1,33 +1,33 @@
-# uparpu_demo_android_4.1.2
+# uparpu_demo_android_4.2.1
 
 
 | Network Name| NETWORK VERSION|
 |---|---|
-|Facebook | 5.3.1|
+|Facebook | 5.4.1|
 |Admob | 17.2.0 |
-|Inmobi | 7.2.7 | 
+|Inmobi | 7.3.0 | 
 |Flurry| 11.5.0 | 
-|Applovin| 9.7.1 | 
-|Mintegral | 9.12.4 |
-|Mopub | 5.3.0 |
-|GDT | 4.40.910|
+|Applovin| 9.8.0 | 
+|Mintegral | 9.13.1 |
+|Mopub | 5.8.0 |
+|GDT | 4.70.940|
 |Chartboost | 7.2.0| 
-|Tapjoy | 12.2.1 |
-|Ironsource | 6.8.1|
-|UnityAds | 3.1.0 |
-|Vungle | 6.3.24 | 
+|Tapjoy | 12.3.1 |
+|Ironsource | 6.9.1|
+|UnityAds | 3.2.0 |
+|Vungle | 6.4.11 | 
 |Adcolony | 3.3.10 | 
-|TouTiao|v2.2.0.1|
+|TouTiao|v2.0.1.7|
 |玩转互联 | 6.0.2  |
 |Oneway|2.1.3|
 |MobPower | 4.8.0 |
 |Yeahmobi|4.0.6 |
-|Appnext|2.4.5.472|
+|Appnext|2.4.8.472|
 |Baidu|5.81 |
 |Nend|5.1.0 |
-|Maio|1.1.7 |
+|Maio|1.1.9 |
 |StartApp|4.0.2|
-|SuperAwesome|3.6.5|
+|SuperAwesome|7.0.1|
 
 
 | Network Name| NETWORK FIRM ID|

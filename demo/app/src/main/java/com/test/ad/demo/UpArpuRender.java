@@ -8,10 +8,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.qq.e.ads.nativ.NativeExpressADView;
 import com.uparpu.nativead.api.UpArpuNativeAdRenderer;
 import com.uparpu.nativead.unitgroup.api.CustomNativeAd;
-import com.uparpu.network.gdt.GDTUpArpuConst;
 
 /**
  * Created by Z on 2018/1/18.
@@ -57,7 +55,7 @@ public class UpArpuRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
         contentArea.removeAllViews();
         if (mediaView != null) {
 
-            if(mNetworkType == GDTUpArpuConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressADView){
+            if (TextUtils.isEmpty(ad.getTitle()) && TextUtils.isEmpty(ad.getIconImageUrl())) {
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);

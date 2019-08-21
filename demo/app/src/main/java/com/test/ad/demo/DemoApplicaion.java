@@ -4,7 +4,6 @@ import android.support.multidex.MultiDexApplication;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
-import com.qq.e.ads.cfg.MultiProcessFlag;
 import com.uparpu.api.UpArpuSDK;
 
 /**
@@ -124,7 +123,6 @@ public class DemoApplicaion extends MultiDexApplication {
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
         UpArpuSDK.init(this, appid, appKey);
-        MultiProcessFlag.setMultiProcess(true);
         UpArpuSDK.setNetworkLogDebug(true);
 
     }

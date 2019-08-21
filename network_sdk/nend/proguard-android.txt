@@ -1,0 +1,2 @@
+-keep class net.nend.android.** { *; }
+-dontwarn net.nend.android.**
