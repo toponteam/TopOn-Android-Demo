@@ -1,5 +1,30 @@
-# uparpu_demo_android_4.2.1
+# TopOn v4.2.1
 
+##目录说明
+**libs**: 存放UpArpu的主要SDK的包
+
+| SDK包名字| 说明|
+|---|---|
+|uparpu_core.aar|TopOn的基础包，必须导入|
+|uparpu_native.aar|TopOn的Native广告集成包|
+|uparpu_banner.aar|TopOn的Banner广告集成包|
+|uparpu_interstitial.aar|TopOn的插屏广告集成包|
+|uparpu_rewardvideo.aar|TopOn的激励视频广告集成包|
+|uparpu_splash.aar|TopOn的开屏广告集成包|
+|uparpu_headbiding.aar|TopOn的Headbidding插件包|
+
+**network_sdk**: 主要存放第三方的Network SDK包，按需要聚合的平台选择集成，以下是每个平台文件夹的目录说明：
+
+| 目录/文件| 说明|
+|---|---|
+|libs|聚合第三方Network SDK必须集成的包目录|
+|extra|聚合第三方Network SDK必须的插件包目录，如果工程已存在该插件包则不用再重复集成|
+|AndroidManifest.xml|需将AndroidManifest里的组件信息添加到工程的AndroidManifest|
+|proguard-android.txt|聚合第三方Network SDK的混淆配置|
+|res|聚合第三方Network SDK必须导入的资源|
+
+
+##TopOn v4.2.1聚合的第三方广告平台的版本说明
 
 | Network Name| NETWORK VERSION|
 |---|---|
@@ -29,6 +54,7 @@
 |StartApp|4.0.2|
 |SuperAwesome|7.0.1|
 
+##TopOn 各个平台对应ID信息
 
 | Network Name| NETWORK FIRM ID|
 |---|---|
