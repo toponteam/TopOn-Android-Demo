@@ -1,5 +1,6 @@
 # TopOn v4.2.1
 
+
 ##目录说明
 **libs**: 存放UpArpu的主要SDK的包
 
@@ -23,6 +24,20 @@
 |proguard-android.txt|聚合第三方Network SDK的混淆配置|
 |res|聚合第三方Network SDK必须导入的资源|
 
+
+##SDK各版本的下载地址
+
+**百度网盘**
+
+链接: https://pan.baidu.com/s/1bz6wDl-sdZgjpoep5pbzag <br>
+提取码: 7ukt
+
+<br>
+**Google网盘**
+
+https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sharing
+
+<br>
 
 ##TopOn v4.2.1聚合的第三方广告平台的版本说明
 
@@ -53,6 +68,7 @@
 |Maio|1.1.9 |
 |StartApp|4.0.2|
 |SuperAwesome|7.0.1|
+
 
 ##TopOn 各个平台对应ID信息
 
