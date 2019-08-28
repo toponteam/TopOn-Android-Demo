@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.nativead.banner.api.UpArpuNaitveBannerListener;
 import com.uparpu.nativead.banner.api.UpArpuNaitveBannerSize;
 import com.uparpu.nativead.banner.api.UpArpuNativeBannerConfig;
@@ -52,7 +53,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick() {
+            public void onAdClick(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "640---onAdClick----");
             }
 
@@ -62,12 +63,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow() {
+            public void onAdShow(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "640---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh() {
+            public void onAutoRefresh(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "640---onAutoRefresh----");
             }
 
@@ -105,7 +106,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick() {
+            public void onAdClick(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdClick----");
             }
 
@@ -115,12 +116,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow() {
+            public void onAdShow(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh() {
+            public void onAutoRefresh(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAutoRefresh----");
             }
 
@@ -160,7 +161,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick() {
+            public void onAdClick(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdClick----");
             }
 
@@ -170,12 +171,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow() {
+            public void onAdShow(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh() {
+            public void onAutoRefresh(UpArpuAdInfo entity) {
                 Log.i("BannerActivity", "320---onAutoRefresh----");
             }
 

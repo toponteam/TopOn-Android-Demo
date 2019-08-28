@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.uparpu.api.AdError;
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.network.adcolony.AdColonyUpArpuConst;
 import com.uparpu.network.adcolony.AdColonyUparpuRewardedVideoSetting;
 import com.uparpu.network.admob.AdmobUpArpuConst;
@@ -190,31 +191,31 @@ public class RewardVideoAdActivity extends Activity {
             }
 
             @Override
-            public void onRewardedVideoAdPlayStart() {
+            public void onRewardedVideoAdPlayStart(UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayStart");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayStart", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayEnd() {
+            public void onRewardedVideoAdPlayEnd(UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayEnd");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayEnd", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayFailed(AdError errorCode) {
+            public void onRewardedVideoAdPlayFailed(AdError errorCode, UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayFailed error:" + errorCode.printStackTrace());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayFailed:" + errorCode.printStackTrace(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdClosed(boolean isRewarded) {
+            public void onRewardedVideoAdClosed(boolean isRewarded,UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdClosed reward:" + isRewarded);
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed: isrewadr:" + isRewarded, Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayClicked() {
+            public void onRewardedVideoAdPlayClicked(UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayClicked");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayClicked", Toast.LENGTH_SHORT).show();
             }

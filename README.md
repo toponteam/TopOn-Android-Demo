@@ -51,13 +51,13 @@ https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sha
 |Mintegral | 9.13.1 |
 |Mopub | 5.8.0 |
 |GDT | 4.70.940|
-|Chartboost | 7.2.0| 
+|Chartboost | 7.5.0| 
 |Tapjoy | 12.3.1 |
 |Ironsource | 6.9.1|
 |UnityAds | 3.2.0 |
 |Vungle | 6.4.11 | 
 |Adcolony | 3.3.10 | 
-|TouTiao|v2.0.1.7|
+|TouTiao|v2.3.0.5(需要开发者在自己头条账号后台下载相应的SDK)|
 |玩转互联 | 6.0.2  |
 |Oneway|2.1.3|
 |MobPower | 4.8.0 |

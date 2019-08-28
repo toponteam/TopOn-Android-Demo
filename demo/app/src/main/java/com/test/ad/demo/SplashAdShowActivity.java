@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.uparpu.api.AdError;
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.splashad.api.UpArpuSplashAd;
 import com.uparpu.splashad.api.UpArpuSplashAdListener;
 
@@ -45,17 +46,17 @@ public class SplashAdShowActivity extends Activity implements UpArpuSplashAdList
     }
 
     @Override
-    public void onAdShow() {
+    public void onAdShow(UpArpuAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdShow---------");
     }
 
     @Override
-    public void onAdClick() {
+    public void onAdClick(UpArpuAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdClick---------");
     }
 
     @Override
-    public void onAdDismiss() {
+    public void onAdDismiss(UpArpuAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdDismiss---------");
         finish();
         Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();

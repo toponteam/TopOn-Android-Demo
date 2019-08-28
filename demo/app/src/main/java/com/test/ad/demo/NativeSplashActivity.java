@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.nativead.splash.api.UpArpuNativeSplash;
 import com.uparpu.nativead.splash.api.UpArpuNativeSplashListener;
 
@@ -37,12 +38,12 @@ public class NativeSplashActivity extends Activity {
             }
 
             @Override
-            public void onAdShow() {
+            public void onAdShow(UpArpuAdInfo entity) {
                 Log.i("NativeSplashActivity", "Develop callback onAdShow");
             }
 
             @Override
-            public void onAdClick() {
+            public void onAdClick(UpArpuAdInfo entity) {
                 Log.i("NativeSplashActivity", "Develop callback onAdClick");
             }
 

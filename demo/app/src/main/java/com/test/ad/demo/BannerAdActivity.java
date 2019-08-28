@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.uparpu.api.AdError;
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.banner.api.UpArpuBannerListener;
 import com.uparpu.banner.api.UpArpuBannerView;
 
@@ -86,7 +87,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerClicked() {
+            public void onBannerClicked(UpArpuAdInfo entity) {
                 Log.i("BannerAdActivity", "onBannerClicked");
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClicked",
@@ -94,7 +95,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerShow() {
+            public void onBannerShow(UpArpuAdInfo entity) {
                 Log.i("BannerAdActivity", "onBannerShow");
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerShow",
@@ -110,7 +111,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerAutoRefreshed() {
+            public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
 
             }
 

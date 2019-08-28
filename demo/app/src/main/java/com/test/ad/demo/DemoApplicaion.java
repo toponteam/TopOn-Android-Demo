@@ -110,6 +110,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_UNITYAD = "b5c21a303c25e0";
     public static final String mPlacementId_interstitial_nend = "b5cb95eeb7e908";
     public static final String mPlacementId_interstitia_maio = "b5cb961d9d3414";
+    public static final String mPlacementId_interstitia_startapp = "b5d5e641d9c30a";
 
     //splash
     public static final String mPlacementId_splash_all = "b5bea7cc9a4497";

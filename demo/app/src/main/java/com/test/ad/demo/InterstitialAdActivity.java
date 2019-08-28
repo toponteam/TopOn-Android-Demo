@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.uparpu.api.AdError;
+import com.uparpu.api.UpArpuAdInfo;
 import com.uparpu.interstitial.api.UpArpuInterstitial;
 import com.uparpu.interstitial.api.UpArpuInterstitialListener;
 
@@ -41,6 +42,7 @@ public class InterstitialAdActivity extends Activity {
                 , DemoApplicaion.mPlacementId_interstitial_baidu
                 , DemoApplicaion.mPlacementId_interstitial_nend
                 , DemoApplicaion.mPlacementId_interstitia_maio
+                , DemoApplicaion.mPlacementId_interstitia_startapp
     };
 
     String unitGroupName[] = new String[]{
@@ -68,7 +70,8 @@ public class InterstitialAdActivity extends Activity {
             "appnext",
             "baidu",
             "nend",
-            "maio"
+            "maio",
+            "startapp"
     };
 
     RadioGroup mRadioGroup;
@@ -160,19 +163,19 @@ public class InterstitialAdActivity extends Activity {
             }
 
             @Override
-            public void onInterstitialAdClicked() {
+            public void onInterstitialAdClicked(UpArpuAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClicked");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdShow() {
+            public void onInterstitialAdShow(UpArpuAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdShow");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdShow", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdClose() {
+            public void onInterstitialAdClose(UpArpuAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClose");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClose", Toast.LENGTH_SHORT).show();
             }
