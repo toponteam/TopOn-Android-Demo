@@ -1,4 +1,4 @@
-# TopOn v4.2.1
+# TopOn v4.2.2
 
 
 ##目录说明
@@ -39,7 +39,7 @@ https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sha
 
 <br>
 
-##TopOn v4.2.1聚合的第三方广告平台的版本说明
+##TopOn 聚合的第三方广告平台的版本说明
 
 | Network Name| NETWORK VERSION|
 |---|---|
