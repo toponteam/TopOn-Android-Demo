@@ -14,7 +14,6 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-    <uses-sdk android:minSdkVersion="14" />
     <application>
         <provider
             android:name="com.uparpu.network.luomi.LuomiUpArpuFileProvider"

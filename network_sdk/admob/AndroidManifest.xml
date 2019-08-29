@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.uparpu.admob">
 
-    <uses-sdk android:minSdkVersion="14" />
     <application>
         <!--google-->
         <meta-data

@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-sdk android:minSdkVersion="14" />
     <application>
         <!--android:networkSecurityConfig="@xml/network_security_config"-->
 

@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <uses-sdk android:minSdkVersion="14" />
     <application>
         <activity
             android:name="com.ironsource.sdk.controller.ControllerActivity"

@@ -10,7 +10,6 @@
     <!-- Optional permission - Location based ad targeting -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-sdk android:minSdkVersion="14" />
     <application>
         <!-- Required Activities if using Flurry Advertising -->
         <activity

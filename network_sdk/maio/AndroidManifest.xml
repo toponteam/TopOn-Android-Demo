@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.uparpu.maio">
 
-    <uses-sdk android:minSdkVersion="14" />
 
     <application>
         <!--Maio SDk Activity starts here-->
