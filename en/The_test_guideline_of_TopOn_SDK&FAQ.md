@@ -17,7 +17,7 @@
 
 1. Make sure there is a configured ad source under the ad placement in the TopOn background, add it via the **Add ad source** button, and the **status is on **.
 
-![The configuration of ad source](The configuration of ad source.png)
+![](The_configuration_of_ad_source.png)
 
 For example, the **DemoBlack_RV** ad placement (id: **b5c4ad2f0de421**) is configured with the following ad sources:
 
@@ -82,7 +82,7 @@ platformMsg：Third-party ad platform error message(need to check when the ad is
 1. Take the **DemoBlack_RV** ad placement as an example. When **the loading, display, click, and close** of the **ironSource** are successful, the ad source is test passed.
 2. Then you need to test whether the **Applovin**, which is ranked second, is successful. You can click **the status switch** of the ad source in the TopOn background to close the status of the first **ironSource**. Like below:
 
-![Close the status of ad source](Close the status of ad source.png)
+![](Close_the_status_of_ad_source.png)
 
 The closed ad source will automatically move down. **Changes take effect after about 5 minutes**, **The ad source for the ad placement at this time is as follows: **
 
@@ -105,7 +105,7 @@ After all the ad sources are verified successful, this ad placement has no excep
 
 1. After Testing one ad placement, you need to test other ad placement (**if your app has multiple ad placements**). In the TopOn background, you can **click the ad placement button to switch the ad placement**, like this:
 
-![Switch to other ad placement](Switch to other ad placement.png)
+![](Switch_to_other_ad_placement.png)
 
 2. **Repeat steps 1.2~1.4** until all ad placements in your app have been verified.
 

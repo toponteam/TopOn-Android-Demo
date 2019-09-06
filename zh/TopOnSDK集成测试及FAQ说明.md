@@ -17,7 +17,7 @@
 
 1. 确保TopOn后台中的广告位下有配置广告源，通过**添加广告源**按钮进行添加，并且**状态为开启**
 
-![The configuration of ad source](The configuration of ad source.png)
+![](The_configuration_of_ad_source.png)
 
 以上图为例，**DemoBlack_RV**这个广告位（id: **b5c4ad2f0de421**)配置了以下广告源：
 
@@ -87,7 +87,7 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 
 2、然后需要测试排在第二位的**Applovin**这个广告源是否接入成功，可在TopOn后台点击广告源的状态开关，将第一位的**ironSource**这个广告源的状态关闭，像下面这样：
 
-![Close the status of ad source](Close the status of ad source.png)
+![](Close_the_status_of_ad_source.png)
 
 关闭状态的广告源将自动下移。**修改后大约5分钟生效**，**此时广告位的广告源如下：**
 
@@ -113,7 +113,7 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 
 1、在验证完一个广告位之后，需要验证其他广告位（如果你的应用有多个广告位）。在TopOn后台，可以通过**点击广告位进行广告位的切换**，像下面这样：
 
-![Switch to other ad placement](Switch to other ad placement.png)
+![](Switch_to_other_ad_placement.png)
 
 2、**重复执行1.2~1.4步骤**，直至应用中所有广告位验证完毕。
 
