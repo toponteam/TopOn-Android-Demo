@@ -1,45 +1,15 @@
 # TopOn v4.3.0
 
+<h3>TopOn SDK的集成指引</h3>
 
-##目录说明
-**libs**: 存放UpArpu的主要SDK的包
+[Topon SDK的集成文档（中文版）](zh/Android_TopOn_SDK_集成文档.md)<br>
+[TopOn SDK集成测试文档及FAQ说明（中文版）](zh/TopOnSDK集成测试及FAQ说明.md)
 
-| SDK包名字| 说明|
-|---|---|
-|uparpu_core.aar|TopOn的基础包，必须导入|
-|uparpu_native.aar|TopOn的Native广告集成包|
-|uparpu_banner.aar|TopOn的Banner广告集成包|
-|uparpu_interstitial.aar|TopOn的插屏广告集成包|
-|uparpu_rewardvideo.aar|TopOn的激励视频广告集成包|
-|uparpu_splash.aar|TopOn的开屏广告集成包|
-|uparpu_headbiding.aar|TopOn的Headbidding插件包|
-
-**network_sdk**: 主要存放第三方的Network SDK包，按需要聚合的平台选择集成，以下是每个平台文件夹的目录说明：
-
-| 目录/文件| 说明|
-|---|---|
-|libs|聚合第三方Network SDK必须集成的包目录|
-|extra|聚合第三方Network SDK必须的插件包目录，如果工程已存在该插件包则不用再重复集成|
-|AndroidManifest.xml|需将AndroidManifest里的组件信息添加到工程的AndroidManifest|
-|proguard-android.txt|聚合第三方Network SDK的混淆配置|
-|res|聚合第三方Network SDK必须导入的资源|
+[Android Integration Document For TopOn SDK (English)](en/Android_Integration_Document_For_TopOn_SDK.md)<br>
+[The test guideline of TopOn SDK&FAQ (English)](en/The_test_guideline_of_TopOn_SDK&FAQ.md)
 
 
-##SDK各版本的下载地址
-
-**百度网盘**
-
-链接: https://pan.baidu.com/s/1bz6wDl-sdZgjpoep5pbzag <br>
-提取码: 7ukt
-
-<br>
-**Google网盘**
-
-https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sharing
-
-<br>
-
-##TopOn 聚合的第三方广告平台的版本说明
+<h3>TopOn聚合的第三方广告平台的版本说明</h3>
 
 | Network Name| NETWORK VERSION|
 |---|---|
@@ -70,7 +40,7 @@ https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sha
 |SuperAwesome|7.0.1|
 
 
-##TopOn 各个平台对应ID信息
+<h3>TopOn 各个平台对应NetwortType信息</h3>
 
 | Network Name| NETWORK FIRM ID|
 |---|---|
@@ -100,3 +70,5 @@ https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sha
 |Maio|24|
 |StartApp |25|
 |SuperAwesome |26|
+
+
