@@ -1,4 +1,4 @@
-# TopOn v4.3.0
+# TopOn v4.4.0
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -38,7 +38,9 @@
 |Maio|1.1.9 |
 |StartApp|4.0.2|
 |SuperAwesome|7.0.1|
-
+|洛米|9.1.30|
+|快手|3.0|
+|Sigmob|2.12.0|
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
 
@@ -70,5 +72,7 @@
 |Maio|24|
 |StartApp |25|
 |SuperAwesome |26|
-
+|洛米|27|
+|快手|28|
+|Sigmob |29|
 

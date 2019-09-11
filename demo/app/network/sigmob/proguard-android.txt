@@ -1,0 +1,11 @@
+# android.support.v4
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+
+
+# WindAd
+-keep class sun.misc.Unsafe { *; }
+-dontwarn com.sigmob.**
+-keep class com.sigmob.**.**{*;}

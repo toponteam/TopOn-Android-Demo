@@ -58,6 +58,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_startapp = "b5cff0d063ac32";
     public static final String mPlacementId_rewardvideo_superawesome = "b5cff0d2157805";
     public static final String mPlacementId_rewardvideo_ks = "b5d67459a3e535";
+    public static final String mPlacementId_rewardvideo_sigmob = "b5d7228c6c5d6a";
 
     //banner正式
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";
@@ -109,12 +110,14 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitia_maio = "b5cb961d9d3414";
     public static final String mPlacementId_interstitia_startapp = "b5d5e641d9c30a";
     public static final String mPlacementId_interstitial_ks = "b5d6745b8133f2";
+    public static final String mPlacementId_interstitial_sigmob = "b5d7614ab30695";
 
     //splash
     public static final String mPlacementId_splash_all = "b5bea7cc9a4497";
     public static final String mPlacementId_splash_gdt = "b5bea7bfd93f01";
     public static final String mPlacementId_splash_toutiao = "b5bea7c1b653ef";
     public static final String mPlacementId_splash_baidu = "b5c05090192a58";
+    public static final String mPlacementId_splash_sigmob = "b5d76150bab3ad";
 
     @Override
     public void onCreate() {

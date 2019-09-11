@@ -41,6 +41,7 @@ networkLibsPath.add("vungle");
 
 networkLibsPath.add("mobpower");
 networkLibsPath.add("ks");
+networkLibsPath.add("sigmob");
 
 android {
     compileSdkVersion 28
@@ -86,6 +87,7 @@ android {
             res.srcDirs += 'network/uniplay/res'
             res.srcDirs += 'network/unityads/res'
             res.srcDirs += 'network/yeahmobi/res'
+            res.srcDirs += 'network/sigmob/res'
         }
     }
 }

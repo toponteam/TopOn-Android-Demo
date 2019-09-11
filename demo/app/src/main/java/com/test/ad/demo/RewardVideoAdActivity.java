@@ -70,6 +70,7 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_startapp
             , DemoApplicaion.mPlacementId_rewardvideo_superawesome
             , DemoApplicaion.mPlacementId_rewardvideo_ks
+            , DemoApplicaion.mPlacementId_rewardvideo_sigmob
     };
 
     String unitGroupName[] = new String[]{
@@ -99,7 +100,8 @@ public class RewardVideoAdActivity extends Activity {
             "maio",
             "startApp",
             "superAwesome",
-            "kuaishou"
+            "kuaishou",
+            "sigmob"
     };
 
     RadioGroup mRadioGroup;
@@ -211,15 +213,21 @@ public class RewardVideoAdActivity extends Activity {
             }
 
             @Override
-            public void onRewardedVideoAdClosed(boolean isRewarded,UpArpuAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdClosed reward:" + isRewarded);
-                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed: isrewadr:" + isRewarded, Toast.LENGTH_SHORT).show();
+            public void onRewardedVideoAdClosed(UpArpuAdInfo upArpuAdInfo) {
+                Log.i(TAG, "onRewardedVideoAdClosed " );
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdPlayClicked(UpArpuAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayClicked");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayClicked", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onReward(UpArpuAdInfo upArpuAdInfo) {
+                Log.i(TAG, "onReward" );
+                Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
         });
     }

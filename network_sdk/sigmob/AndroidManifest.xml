@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.uparpu.sigmob">
+
+
+    <!-- SDK所需要权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />    <!-- 如果需要精确定位的话请加上此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <application>
+
+        <!-- targetSDKVersion >= 24时才需要添加这个provider。
+       provider的authorities属性的值为${applicationId}.sigprovider -->
+        <provider
+            android:name="com.sigmob.sdk.SigmobFileProvider"
+            android:authorities="${applicationId}.sigprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/uparpu_bk_sigmob_file_path"/>
+        </provider>
+
+        <!--广告展示Activity -->
+        <activity android:name="com.sigmob.sdk.base.common.AdActivity"
+            android:theme="@android:style/Theme.DeviceDefault"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+    </application>
+
+
+</manifest>
