@@ -740,7 +740,8 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 
 1.Splash的广告是依赖开发者创建自己的Activity来实现的，只将需要展示广告的容器ViewGroup传给Splash的api使用即可，Splash会自动给ViewGroup渲染广告；<br>
 2.Splash广告的展示区域最好是屏幕高度的**75%以上**且**跳过秒数超过3秒以上**，否则可能会出现广告展示无效；<br>
-3.Splash**不支持横屏**的应用。
+3.确保初始化方法中的skipView是VISIBLE，不能配置是INVISIBLE或者GONE，否则会导致广告平台认为广告曝光失败；<br>
+4.Splash**不支持横屏**的应用。
 
 
 <h3>10.2 Splash广告API说明</h3>
