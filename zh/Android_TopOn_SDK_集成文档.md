@@ -84,7 +84,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | 目录/文件| 说明|
 |---|---|
 |libs|聚合第三方Network SDK必须集成的包目录|
-|extra|聚合第三方Network SDK必须的插件包目录，如果工程已存在该插件包则不用再重复集成（没有则不需要导入）|
+|extra|聚合第三方Network SDK必须的插件包目录，如果工程已存在该插件包则不用再重复集成（不存在该文件夹则不需要导入）|
 |AndroidManifest.xml|需将AndroidManifest里的组件信息添加到工程的AndroidManifest（文件不存在则不需要配置）|
 |proguard-android.txt|聚合第三方Network SDK的混淆配置（文件不存在则不需要配置）|
 |res|聚合第三方Network SDK必须导入的资源（没有则不需要导入）|
