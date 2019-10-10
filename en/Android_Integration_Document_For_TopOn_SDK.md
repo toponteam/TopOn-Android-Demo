@@ -543,7 +543,8 @@ public *** extends Activity {
 | onRewardedVideoAdPlayStart|(UpArpuAdInfo entity)|The callback that the ad starts to play, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 | onRewardedVideoAdPlayEnd|(UpArpuAdInfo entity)|The callback of the end of the ad, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 | onRewardedVideoAdPlayFailed|(AdError errorCode, UpArpuAdInfo entity)|The callback of the ad playback failure can be obtained by AdError.printStackTrace(), where UpArpuAdInfo is the information object of the advertisement, mainly including the id information of the third-party aggregation platform.|
-| onRewardedVideoAdClosed|(boolean isRewarded, UpArpuAdInfo entity)| The callback of closing ad, isRewarded indicateds whether to issue rewards. The UpArpuAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
+| onReward|(UpArpuAdInfo entity)|  The callback of reward. The UpArpuAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
+| onRewardedVideoAdClosed|(UpArpuAdInfo entity)| The callback of closing ad. The UpArpuAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
 | onRewardedVideoAdPlayClicked|(UpArpuAdInfo entity)|The callback of the ad click, where UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 
 
@@ -573,8 +574,12 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
             public void onRewardedVideoAdPlayFailed(AdError errorCode, UpArpuAdInfo entity) {
             }
 
+	    @Override
+            public void onRewarde(UpArpuAdInfo entity) {
+            }
+	    
             @Override
-            public void onRewardedVideoAdClosed(boolean isRewarded, UpArpuAdInfo entity) {
+            public void onRewardedVideoAdClosed(UpArpuAdInfo entity) {
             }
 
             @Override
