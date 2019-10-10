@@ -543,7 +543,8 @@ public *** extends Activity {
 | onRewardedVideoAdPlayStart|(UpArpuAdInfo entity)|广告刷新回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onRewardedVideoAdPlayEnd|(UpArpuAdInfo entity)|广告播放结束，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onRewardedVideoAdPlayFailed|(AdError errorCode, UpArpuAdInfo entity)|广告播放失败回调，可通过AdError.printStackTrace()获取全部错误信息，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onRewardedVideoAdClosed|(boolean isRewarded, UpArpuAdInfo entity)| 广告关闭回调，isRewarded会带有是否下发激励。其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onReward |(UpArpuAdInfo entity)| 下发激励的时候会回调该接口。其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdClosed|(UpArpuAdInfo entity)| 广告关闭回调。其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onRewardedVideoAdPlayClicked|(UpArpuAdInfo entity)|广告点击，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 
 
@@ -574,7 +575,11 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
             }
 
             @Override
-            public void onRewardedVideoAdClosed(boolean isRewarded, UpArpuAdInfo entity) {
+            public void onRewardedVideoAdClosed(UpArpuAdInfo entity) {
+            }
+	    
+	    @Override
+            public void onReward(UpArpuAdInfo entity) {
             }
 
             @Override
