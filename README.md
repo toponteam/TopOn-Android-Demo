@@ -1,4 +1,4 @@
-# TopOn v4.4.2
+# TopOn v4.4.3
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -29,7 +29,7 @@
 |Adcolony | 3.3.10 | 
 |TouTiao|v2.3.0.8(需要开发者在自己头条账号后台下载相应的SDK)|
 |玩转互联 | 6.0.2  |
-|Oneway|2.1.3|
+|Oneway|2.3.4|
 |MobPower | 4.8.0 |
 |Yeahmobi|4.0.6 |
 |Appnext|2.4.8.472|

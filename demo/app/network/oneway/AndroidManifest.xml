@@ -13,14 +13,14 @@
 
     <application>
         <activity
-            android:name="mobi.oneway.sdk.AdShowActivity"
+            android:name="mobi.oneway.export.AdShowActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@style/UpArpuOneWayAdTheme"
+            android:launchMode="singleTask"/>
 
         <provider
-            android:name="com.uparpu.network.oneway.OnewayUpArpuFileProvider"
+            android:name="mobi.oneway.export.OWProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
