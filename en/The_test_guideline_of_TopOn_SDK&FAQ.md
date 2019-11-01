@@ -9,9 +9,9 @@
 
 <h3>1.1 Open the logging function of the SDK</h3>
 
-1. Add this code before initialization：**UpArpuSDK.setNetworkLogDebug(true).**
+1. Add this code before initialization：**ATSDK.setNetworkLogDebug(true).**
 
-2. Filter "**uparpu_network**"  in Logcat in AndroidStudio to view logs.
+2. Filter "**anythink_network**"  in Logcat in AndroidStudio to view logs.
 
 <h3>1.2 Configure the ad source in the ad placement</h3>
 

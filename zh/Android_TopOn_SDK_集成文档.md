@@ -39,13 +39,13 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 
 | SDK包 | 说明 | 是否必须|
 | --- | --- |---|
-|uparpu_core.aar|TopOn的基础包，必须导入| **是**|
-|uparpu_native.aar|TopOn的Native广告集成包| 否|
-|uparpu_banner.aar|TopOn的Banner广告集成包|否|
-|uparpu_interstitial.aar|TopOn的插屏广告集成包|否|
-|uparpu_rewardvideo.aar|TopOn的激励视频广告集成包|否|
-|uparpu_splash.aar|TopOn的开屏广告集成包|否|
-|uparpu_headbiding.aar|TopOn的Headbidding插件包，是聚合第三方SDK的头部竞价的包，具体说明请查看[HeadBidding说明](#12)|否|
+|anythink_core.aar|TopOn的基础包，必须导入| **是**|
+|anythink_native.aar|TopOn的Native广告集成包| 否|
+|anythink_banner.aar|TopOn的Banner广告集成包|否|
+|anythink_interstitial.aar|TopOn的插屏广告集成包|否|
+|anythink_rewardvideo.aar|TopOn的激励视频广告集成包|否|
+|anythink_splash.aar|TopOn的开屏广告集成包|否|
+|anythink_headbiding.aar|TopOn的Headbidding插件包，是聚合第三方SDK的头部竞价的包，具体说明请查看[HeadBidding说明](#12)|否|
 
 <h4>2.2.2 network_sdk目录的说明</h4>
 
@@ -115,9 +115,9 @@ implementation 'com.android.support:appcompat-v7:28.0.0'
 <h4>2.2.4 混淆配置</h4>
 
 ```java
--dontwarn com.uparpu.**
--keep public class com.uparpu.network.**
--keepclassmembers class com.uparpu.network.** {
+-dontwarn com.anythink.**
+-keep public class com.anythink.network.**
+-keepclassmembers class com.anythink.network.** {
    public *;
 }
 ```
@@ -130,7 +130,7 @@ implementation 'com.android.support:appcompat-v7:28.0.0'
 
 <h3>3.1 API说明</h3>
 
-**UpArpuSDK**
+**ATSDK**
 
 | API | 参数 | 说明|
 | --- | --- |---|
@@ -138,7 +138,7 @@ implementation 'com.android.support:appcompat-v7:28.0.0'
 | setChannel | (String channel) | 设置渠道信息，用于TopOn后台区分广告数据|
 | setSubChannel | (String subChannel) | 设置子渠道信息 |
 | initCustomMap | (Map<String, String> customMap)| 自定义key-value，可用于匹配后端下发的广告列表信息|
-| setGDPRUploadDataLevel|(Context context, int level) |设置GDPR下数据的上报等级，level主要分以下三个等级：<br> **UpArpuSDK.PERSONALIZED**：上报数据包含设备参数<br> **UpArpuSDK.NONPERSONALIZED**：上报数据不包含设备参数<br> **UpArpuSDK.FORBIDDEN**：不做任何上报，停止广告请求|
+| setGDPRUploadDataLevel|(Context context, int level) |设置GDPR下数据的上报等级，level主要分以下三个等级：<br> **ATSDK.PERSONALIZED**：上报数据包含设备参数<br> **ATSDK.NONPERSONALIZED**：上报数据不包含设备参数<br> **ATSDK.FORBIDDEN**：不做任何上报，停止广告请求|
 |getGDPRDataLevel|(Context context)| 获取当前的上报等级|
 |isEUTraffic|(Context context)| 判断是否是欧盟地区|
 |showGdprAuth|(Activity activity)|展示GDPR授权页面的Activity|
@@ -148,7 +148,7 @@ implementation 'com.android.support:appcompat-v7:28.0.0'
 <h3>3.2 示例代码</h3>
 
 ```java
-UpArpuSDK.init(getApplicationContext(), appid, appKey);
+ATSDK.init(getApplicationContext(), appid, appKey);
 ```
 
 
@@ -164,16 +164,16 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 
 <h3>4.2 Native广告API说明</h3>
 
-**UpArpuNative:** Native广告加载的类
+**ATNative:** Native广告加载的类
 
 | API | 参数 | 说明|
 | --- | --- | ---|
-|UpArpuNative|Context context, String placementId, UpArpuNativeNetworkListener listener | 原生广告初始化方法，其中placementId是通过TopOn后台创建广告位获取的|
+|ATNative|Context context, String placementId, ATNativeNetworkListener listener | 原生广告初始化方法，其中placementId是通过TopOn后台创建广告位获取的|
 | makeAdRequest|-|发起Native广告请求|
 | getNativeAd |-|获取已经加载完成的广告**（建议获取之后都要进行非null判断，因为可能会有部分情况出现null）**|
 
 
-**UpArpuNativeNetworkListener:** 广告加载的监听器
+**ATNativeNetworkListener:** 广告加载的监听器
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
@@ -186,26 +186,26 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
-| setNativeEventListener|(UpArpuNativeEventListener listener) | 设置广告事件监听，其中UpArpuNativeEventListener是广告事件的接口类 |
-| renderAdView|(UpArpuNativeAdView view, UpArpuNativeAdRenderer render)|用于广告渲染，其中view必须使用我们提供的UpArpuNativeAdView，UpArpuNativeAdRenderer则需要继承实现相应的接口功能 |
-| prepare|(UpArpuNativeAdView view)| 用于配置广告点击事件，在renderAdView方法之后调用（默认全部view可点击，存在广告标识的会有默认展示位置和大小）|
-| prepare|(UpArpuNativeAdView view, FrameLayout.LayoutParams layoutParams) |配置广告点击事件，在renderAdView方法之后调用:<br>layoutParams用于配置广告标识的位置和大小（目前仅Facebook，GDT有效，可为空）|
-| prepare|(UpArpuNativeAdView view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) |配置广告点击事件，在renderAdView方法之后调用:<br>clickViewList用于配置可点击的View <br>layoutParams用于配置广告标识的位置和大小（目前仅Facebook，GDT有效，可为空）|
-| clear|(UpArpuNativeAdView view)|移除广告对view的绑定|
+| setNativeEventListener|(ATNativeEventListener listener) | 设置广告事件监听，其中ATNativeEventListener是广告事件的接口类 |
+| renderAdView|(ATNativeAdView view, ATNativeAdRenderer render)|用于广告渲染，其中view必须使用我们提供的ATNativeAdView，ATNativeAdRenderer则需要继承实现相应的接口功能 |
+| prepare|(ATNativeAdView view)| 用于配置广告点击事件，在renderAdView方法之后调用（默认全部view可点击，存在广告标识的会有默认展示位置和大小）|
+| prepare|(ATNativeAdView view, FrameLayout.LayoutParams layoutParams) |配置广告点击事件，在renderAdView方法之后调用:<br>layoutParams用于配置广告标识的位置和大小（目前仅Facebook，GDT有效，可为空）|
+| prepare|(ATNativeAdView view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) |配置广告点击事件，在renderAdView方法之后调用:<br>clickViewList用于配置可点击的View <br>layoutParams用于配置广告标识的位置和大小（目前仅Facebook，GDT有效，可为空）|
+| clear|(ATNativeAdView view)|移除广告对view的绑定|
 |onResume|-|在Activity的onResume时调用（主要针对部分广告平台的视频广告）|
 |onPause|-|在Activity的onPause时调用（主要针对部分广告平台的视频广告）|
 
-**UpArpuNativeEventListener:** 广告事件监听接口类
+**ATNativeEventListener:** 广告事件监听接口类
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
-| onAdImpressed(UpArpuNativeAdView view, UpArpuAdInfo entity) | 广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onAdClicked(UpArpuNativeAdView view, UpArpuAdInfo entity)| 广告点击回调|
-| onAdVideoStart(UpArpuNativeAdView view)| 广告视频播放开始（仅部分广告平台存在）|
-| onAdVideoEnd(UpArpuNativeAdView view) | 广告视频播放结束（仅部分广告平台存在）|
-| onAdVideoProgress(UpArpuNativeAdView view, int progress) | 广告视频播放进度（仅部分广告平台存在）|
+| onAdImpressed(ATNativeAdView view, ATAdInfo entity) | 广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onAdClicked(ATNativeAdView view, ATAdInfo entity)| 广告点击回调|
+| onAdVideoStart(ATNativeAdView view)| 广告视频播放开始（仅部分广告平台存在）|
+| onAdVideoEnd(ATNativeAdView view) | 广告视频播放结束（仅部分广告平台存在）|
+| onAdVideoProgress(ATNativeAdView view, int progress) | 广告视频播放进度（仅部分广告平台存在）|
 
-**UpArpuNativeAdRenderer:** 用于实现广告渲染的接口类
+**ATNativeAdRenderer:** 用于实现广告渲染的接口类
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
@@ -233,17 +233,17 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 <h3>4.3 Native广告示例代码</h3>
 
 ```java
-if (upArpuNativeAdView == null) {
-	upArpuNativeAdView = new UpArpuNativeAdView(this);
+if (atNativeAdView == null) {
+	atNativeAdView = new ATNativeAdView(this);
 }
 
-UpArpuNative upArapuNatives= new UpArpuNative(this, placementId, new UpArpuNativeNetworkListener() {
+ATNative atNatives = new ATNative(this, placementId, new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
-                    NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
+                    NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 		if (nativeAd != null) {
-                    	nativeAd.renderAdView(upArpuNativeAdView, new NativeAdRender());
-                       nativeAd.prepare(upArpuNativeAdView);
+                    	nativeAd.renderAdView(ATNativeAdView, new NativeAdRender());
+                       nativeAd.prepare(ATNativeAdView);
                 		} else {
                     
 
@@ -256,17 +256,17 @@ UpArpuNative upArapuNatives= new UpArpuNative(this, placementId, new UpArpuNativ
 
                 }
             });
-upArapuNatives.makeAdRequest();
+atNatives.makeAdRequest();
 ```
 
 ```java
 
-public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
+public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     Context mContext;
     List<View> mClickView = new ArrayList<>();
 
-    public UpArpuRender(Context context) {
+    public NativeAdRender(Context context) {
         mContext = context;
     }
 
@@ -366,28 +366,28 @@ public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 
 <h3>5.2 NativeBanner广告API说明</h3>
 
-**UpArpuNativeBannerView:** NativeBanner广告的加载类，同时也是一个显示NativeBanner广告的View
+**ATNativeBannerView:** NativeBanner广告的加载类，同时也是一个显示NativeBanner广告的View
 
 | 方法            | 参数                                   | 说明                                                         |
 | --------------- | -------------------------------------- | ------------------------------------------------------------ |
 | setUnitId       | (String placementId)                   | 设置广告位id（必须设置Native广告的广告位id）                 |
-| setAdListener   | (UpArpuNaitveBannerListener listener)  | 设置NativeBanner广告监听回调，其中UpArpuNaitveBannerListener是需要实现广告事件回调的接口类 |
+| setAdListener   | (ATNaitveBannerListener listener)  | 设置NativeBanner广告监听回调，其中ATNaitveBannerListener是需要实现广告事件回调的接口类 |
 | loadAd          | (Map<String, String> customRequestMap) | 其中customRequestMap设置为null即可，已经不再使用传入的参数   |
-| setBannerConfig | (UpArpuNativeBannerConfig config)      | 设置NativeBanner的本地配置，例如：字体颜色和字体大小         |
+| setBannerConfig | (ATNativeBannerConfig config)      | 设置NativeBanner的本地配置，例如：字体颜色和字体大小         |
 
-**UpArpuNaitveBannerListener:** NativeBanner广告的事件回调监听
+**ATNaitveBannerListener:** NativeBanner广告的事件回调监听
 
 | 方法              | 参数                  | 说明                                                         |
 | ----------------- | --------------------- | ------------------------------------------------------------ |
 | onAdLoaded        | -                     | 广告加载成功回调                                             |
 | onAdError         | (String error)        | 广告加载失败回调                                             |
-| onAdClick         | (UpArpuAdInfo entity) | 广告点击，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
-| onAdShow          | (UpArpuAdInfo entity) | 广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
+| onAdClick         | (ATAdInfo entity) | 广告点击，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
+| onAdShow          | (ATAdInfo entity) | 广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
 | onAdClose         | -                     | 广告关闭回调（部分广告平台有该回调），可在此处执行移除view的操作 |
-| onAutoRefresh     | (UpArpuAdInfo entity) | 广告刷新回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
+| onAutoRefresh     | (ATAdInfo entity) | 广告刷新回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
 | onAutoRefreshFail | (String error)        | 广告刷新失败回调                                             |
 
-**UpArpuNativeBannerConfig:** NativeBanner的本地设置项
+**ATNativeBannerConfig:** NativeBanner的本地设置项
 
 | 设置项         | 类型                   | 说明                                                         |
 | -------------- | ---------------------- | ------------------------------------------------------------ |
@@ -399,16 +399,16 @@ public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 | isCloseBtnShow | boolean                | 是否展示关闭按钮                                             |
 | isCtaBtnShow   | boolean                | 是否展示CTA按钮（注意海外平台的尽可能展示，否则可能会出现展示无效） |
 | refreshTime    | long                   | 刷新时间（单位：毫秒）                                       |
-| bannerSize     | UpArpuNaitveBannerSize | NativeBanner的Size枚举：<br>**UpArpuNaitveBannerSize.BANNER\_SIZE\_AUTO**:自适应NativeBanner View的宽高<br>**UpArpuNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150的比例宽高<br>**UpArpuNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50的比例宽高 |
+| bannerSize     | ATNaitveBannerSize | NativeBanner的Size枚举：<br>**ATNaitveBannerSize.BANNER\_SIZE\_AUTO**:自适应NativeBanner View的宽高<br>**ATNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150的比例宽高<br>**ATNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50的比例宽高 |
 
 <h3>5.3 NativeBanner广告示例代码</h3>
 
 ```java
-UpArpuBannerView  mBannerView = new UpArpuBannerView(BannerAdActivity.this);
+ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
 mBannerView.setUnitId(placementId);
 mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 50)));
-mBannerView.setBannerAdListener(new UpArpuBannerListener() {
+mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
 	public void onBannerLoaded() { 
 	}
@@ -418,11 +418,11 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerClicked(UpArpuAdInfo entity) {
+	public void onBannerClicked(ATAdInfo entity) {
 	}
 
 	@Override
-	public void onBannerShow(UpArpuAdInfo entity) {
+	public void onBannerShow(ATAdInfo entity) {
 	}
 
 	@Override
@@ -430,7 +430,7 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
+	public void onBannerAutoRefreshed(ATAdInfo entity) {
 	}
 
 	@Override
@@ -449,21 +449,21 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 
 <h3>6.2 NativeSplash广告API说明</h3>
 
-**UpArpuNativeSplash:** NativeSplash广告的加载类
+**ATNativeSplash:** NativeSplash广告的加载类
 
 | 方法               | 参数                                                         | 说明                                                         |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| UpArpuNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId UpArpuNativeSplashListener listener) | NativeSplash的初始化方法，以下是参数说明：<br> **activity**:展示广告的Activity<br> **container**:展示广告容器<br> **skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br> **placementId**:广告位id <br>**listener**:广告事件监听器 |
-| UpArpuNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId, long requestTimeOut, long fetchDelay, UpArpuNativeSplashListener listener) | NativeSplash的初始化方法，以下是参数说明：<br> **activity**:展示广告的Activity<br> **container**:展示广告容器<br> **skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br> **placementId**:广告位id <br>**requestTimeOut**:请求超时时间<br> **fetchDelay**:广告展示的倒计时总时长<br> **listener**:广告事件监听器 |
+| ATNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId ATNativeSplashListener listener) | NativeSplash的初始化方法，以下是参数说明：<br> **activity**:展示广告的Activity<br> **container**:展示广告容器<br> **skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br> **placementId**:广告位id <br>**listener**:广告事件监听器 |
+| ATNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId, long requestTimeOut, long fetchDelay, ATNativeSplashListener listener) | NativeSplash的初始化方法，以下是参数说明：<br> **activity**:展示广告的Activity<br> **container**:展示广告容器<br> **skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br> **placementId**:广告位id <br>**requestTimeOut**:请求超时时间<br> **fetchDelay**:广告展示的倒计时总时长<br> **listener**:广告事件监听器 |
 
-**UpArpuNativeSplashListener:** NativeSplash广告的事件回调类
+**ATNativeSplashListener:** NativeSplash广告的事件回调类
 
 | 方法         | 参数                        | 说明                                                         |
 | ------------ | --------------------------- | ------------------------------------------------------------ |
 | onAdLoaded   | -                           | 广告加载成功回调                                             |
 | onNoAdError  | (AdError error)             | 广告加载失败回调，可通过AdError.printStackTrace()获取全部错误信息 |
-| onAdShow     | (UpArpuAdInfo entity)       | 广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
-| onAdClick    | (UpArpuAdInfo entity)       | 广告点击回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
+| onAdShow     | (ATAdInfo entity)       | 广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
+| onAdClick    | (ATAdInfo entity)       | 广告点击回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息 |
 | onAdSkip     | -                           | Skip按钮点击回调                                             |
 | onAdTimeOver | -                           | 广告的倒计时结束，可在这里关闭NativeSplash广告的Activity     |
 | onAdTick     | （long millisUtilFinished） | 广告的倒计时回调，用于倒计时秒数的刷新，返回单位：毫秒       |
@@ -479,7 +479,7 @@ public *** extends Activity {
 
         FrameLayout container = findViewById(R.id.splash_ad_container);
 
-        UpArpuNativeSplash splash = new UpArpuNativeSplash(this, container, null, placementId, new UpArpuNativeSplashListener() {
+        ATNativeSplash splash = new ATNativeSplash(this, container, null, placementId, new ATNativeSplashListener() {
             @Override
             public void onAdLoaded() {
             }
@@ -489,11 +489,11 @@ public *** extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
             }
 
             @Override
@@ -523,37 +523,37 @@ public *** extends Activity {
 
 <h3>7.2 RewardedVideo广告API说明</h3>
 
-**UpArpuRewardVideoAd:** RewardedVideo广告的加载类
+**ATRewardVideoAd:** RewardedVideo广告的加载类
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
-|UpArpuRewardVideoAd|(Context context, String placementId)|RewardedVideo广告的初始化方法|
+|ATRewardVideoAd|(Context context, String placementId)|RewardedVideo广告的初始化方法|
 |load|-|发起广告加载|
-|setAdListener|(UpArpuRewardVideoListener listener)| 设置RewardedVideo广告监听回调，其中UpArpuRewardVideoListener是需要实现广告事件回调的接口类|
+|setAdListener|(ATRewardVideoListener listener)| 设置RewardedVideo广告监听回调，其中ATRewardVideoListener是需要实现广告事件回调的接口类|
 |isAdReady|-|判断当前RewardedVideo是否存在可展示的广告|
 |show|-|展示RewardedVideo的广告|
 |setUserData|(String userId, String customData)|设置用户的信息，主要用于激励下发|
 
-**UpArpuRewardVideoListener:** RewardedVideo广告的事件回调监听:
+**ATRewardVideoListener:** RewardedVideo广告的事件回调监听:
 
 | 方法 | 参数 | 说明|
 | --- | --- |--- |
 | onRewardedVideoAdLoaded|-|广告加载成功回调|
 | onRewardedVideoAdFailed|(AdError error)| 广告加载失败回调，可通过AdError.printStackTrace()获取全部错误信息|
-| onRewardedVideoAdPlayStart|(UpArpuAdInfo entity)|广告刷新回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onRewardedVideoAdPlayEnd|(UpArpuAdInfo entity)|广告播放结束，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onRewardedVideoAdPlayFailed|(AdError errorCode, UpArpuAdInfo entity)|广告播放失败回调，可通过AdError.printStackTrace()获取全部错误信息，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onReward |(UpArpuAdInfo entity)| 下发激励的时候会回调该接口。其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onRewardedVideoAdClosed|(UpArpuAdInfo entity)| 广告关闭回调。其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onRewardedVideoAdPlayClicked|(UpArpuAdInfo entity)|广告点击，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdPlayStart|(ATAdInfo entity)|广告刷新回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdPlayEnd|(ATAdInfo entity)|广告播放结束，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdPlayFailed|(AdError errorCode, ATAdInfo entity)|广告播放失败回调，可通过AdError.printStackTrace()获取全部错误信息，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onReward |(ATAdInfo entity)| 下发激励的时候会回调该接口。其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdClosed|(ATAdInfo entity)| 广告关闭回调。其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onRewardedVideoAdPlayClicked|(ATAdInfo entity)|广告点击，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 
 
 <h3>7.3 RewardedVideo广告示例代码</h3>
 
 
 ```java
-UpArpuRewardVideoAd mRewardVideoAd = new UpArpuRewardVideoAd(this,placementId);
-mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
+ATRewardVideoAd mRewardVideoAd = new ATRewardVideoAd(this,placementId);
+mRewardVideoAd.setAdListener(new ATRewardVideoListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
             }
@@ -563,27 +563,27 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
             }
 
             @Override
-            public void onRewardedVideoAdPlayStart(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayStart(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayEnd(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayEnd(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayFailed(AdError errorCode, UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdClosed(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdClosed(ATAdInfo entity) {
             }
 	    
 	    @Override
-            public void onReward(UpArpuAdInfo entity) {
+            public void onReward(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayClicked(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayClicked(ATAdInfo entity) {
             }
         });
 
@@ -604,26 +604,26 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
 
 <h3>8.2 Interstitial广告API说明</h3>
 
-**UpArpuInterstitial:** Interstitial广告的加载类
+**ATInterstitial:** Interstitial广告的加载类
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
-|UpArpuInterstitial|(Context context, String placementId)|Interstitial广告的初始化方法|
+|ATInterstitial|(Context context, String placementId)|Interstitial广告的初始化方法|
 |load|-|发起广告加载|
-|setAdListener|(UpArpuInterstitialListener listener)| 设置Interstitial广告监听回调，其中UpArpuInterstitialListener是需要实现广告事件回调的接口类|
+|setAdListener|(ATInterstitialListener listener)| 设置Interstitial广告监听回调，其中ATInterstitialListener是需要实现广告事件回调的接口类|
 |isAdReady|-|判断当前Interstitial是否存在可展示的广告|
 |show|-|展示Interstitial的广告|
 
-**UpArpuInterstitialListener:** 是Interstitial广告的事件回调监听:
+**ATInterstitialListener:** 是Interstitial广告的事件回调监听:
 
 | 方法 | 参数 | 说明|
 | --- | --- |--- |
 | onInterstitialAdLoaded|-|广告加载成功回调|
 | onInterstitialAdLoadFail|(AdError error)| 广告加载失败回调，可通过AdError.printStackTrace()获取全部错误信息|
-| onInterstitialAdClicked|(UpArpuAdInfo entity)|广告点击，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onInterstitialAdShow|(UpArpuAdInfo entity)| 广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onInterstitialAdClose|(UpArpuAdInfo entity)| 广告关闭回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onInterstitialAdVideoStart|-|视频广告刷新回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onInterstitialAdClicked|(ATAdInfo entity)|广告点击，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onInterstitialAdShow|(ATAdInfo entity)| 广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onInterstitialAdClose|(ATAdInfo entity)| 广告关闭回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onInterstitialAdVideoStart|-|视频广告刷新回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onInterstitialAdVideoEnd|-|视频广告播放结束|
 | onInterstitialAdVideoError|-|Interstitial视频广告播放失败回调，可通过AdError.printStackTrace()获取全部错误信息|
 
@@ -632,8 +632,8 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
 
 
 ```java
-UpArpuInterstitial mInterstitialAd = new UpArpuInterstitial(this, placementId);
-mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
+ATInterstitial mInterstitialAd = new ATInterstitial(this, placementId);
+mInterstitialAd.setAdListener(new ATInterstitialListener() {
             @Override
             public void onInterstitialAdLoaded() {               
             }
@@ -641,13 +641,13 @@ mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
             public void onInterstitialAdLoadFail(AdError adError) {                
             }
             @Override
-            public void onInterstitialAdClicked(UpArpuAdInfo entity) {                
+            public void onInterstitialAdClicked(ATAdInfo entity) {                
             }
             @Override
-            public void onInterstitialAdShow(UpArpuAdInfo entity) {                
+            public void onInterstitialAdShow(ATAdInfo entity) {                
             }
             @Override
-            public void onInterstitialAdClose(UpArpuAdInfo entity) {           
+            public void onInterstitialAdClose(ATAdInfo entity) {           
             }
             @Override
             public void onInterstitialAdVideoStart() {         
@@ -678,35 +678,35 @@ mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
 
 <h3>9.2 Banner广告API说明</h3>
 
-**UpArpuBannerView:** Banner广告的加载类，同时也是一个显示Banner广告的View
+**ATBannerView:** Banner广告的加载类，同时也是一个显示Banner广告的View
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
 | setUnitId|(String placementId)|设置广告位id（必须设置）|
-| setBannerAdListener|(UpArpuBannerListener listener)| 设置Banner广告监听回调，其中UpArpuBannerListener是需要实现广告事件回调的接口类|
+| setBannerAdListener|(ATBannerListener listener)| 设置Banner广告监听回调，其中ATBannerListener是需要实现广告事件回调的接口类|
 | loadAd|-|Banner广告加载|
 
-**UpArpuBannerListener:** 是Banner广告的事件回调监听
+**ATBannerListener:** 是Banner广告的事件回调监听
 
 | 方法 | 参数 | 说明|
 | --- | --- |--- |
 | onBannerLoaded|-|广告加载成功回调|
 | onBannerFailed|(AdError error)| 广告加载失败回调，可通过AdError.printStackTrace()获取全部错误信息|
 | onBannerClicked|-|广告点击|
-| onBannerShow|(UpArpuAdInfo entity)| 广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onBannerShow|(ATAdInfo entity)| 广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onBannerClose|-| 广告关闭回调（部分广告平台有该回调），可在此处执行移除view的操作|
-| onBannerAutoRefreshed|(UpArpuAdInfo entity)|广告自动刷新回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onBannerAutoRefreshed|(ATAdInfo entity)|广告自动刷新回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 | onBannerAutoRefreshFail |(AdError error)|广告自动刷新失败回调，可通过AdError.printStackTrace()获取全部错误信息|
 
 
 <h3>9.3 Banner广告示例代码</h3>
 
 ```java
-UpArpuBannerView  mBannerView = new UpArpuBannerView(BannerAdActivity.this);
+ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
 mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
 mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 300)));
-mBannerView.setBannerAdListener(new UpArpuBannerListener() {
+mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
 	public void onBannerLoaded() { 
 	}
@@ -716,11 +716,11 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerClicked(UpArpuAdInfo entity) {
+	public void onBannerClicked(ATAdInfo entity) {
 	}
 
 	@Override
-	public void onBannerShow(UpArpuAdInfo entity) {
+	public void onBannerShow(ATAdInfo entity) {
 	}
 
 	@Override
@@ -728,7 +728,7 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
+	public void onBannerAutoRefreshed(ATAdInfo entity) {
 	}
 
 	@Override
@@ -751,22 +751,22 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 
 <h3>10.2 Splash广告API说明</h3>
 
-**UpArpuSplashAd:** Splash广告的加载类
+**ATSplashAd:** Splash广告的加载类
 
 | 方法 | 参数 | 说明|
 | --- | --- |---|
-|UpArpuSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, UpArpuSplashAdListener listener, long fetchDelay)|Splash的初始化方法，以下是参数说明：<br>**activity**:展示广告的Activity<br>**container**:展示广告容器<br>**skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br>**placementId**:广告位id <br>**listener**:广告事件监听器<br>**fetchDelay**:广告展示的倒计时总时长|
-|UpArpuSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, UpArpuSplashAdListener listener)|Splash的初始化方法（里面默认展示时长3秒），以下是参数说明：<br>**activity**:展示广告的Activity<br>**container**:展示广告容器<br>**skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br>**placementId**:广告位id <br>**listener**:广告事件监听器<br>|
+|ATSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, ATSplashAdListener listener, long fetchDelay)|Splash的初始化方法，以下是参数说明：<br>**activity**:展示广告的Activity<br>**container**:展示广告容器<br>**skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br>**placementId**:广告位id <br>**listener**:广告事件监听器<br>**fetchDelay**:广告展示的倒计时总时长|
+|ATSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, ATSplashAdListener listener)|Splash的初始化方法（里面默认展示时长3秒），以下是参数说明：<br>**activity**:展示广告的Activity<br>**container**:展示广告容器<br>**skipView**:容器skipView(事件自动绑定在SDK,开发者不能绑定事件的点击事件)<br>**placementId**:广告位id <br>**listener**:广告事件监听器<br>|
 
-**UpArpuSplashAdListener:** Splash广告的事件回调类
+**ATSplashAdListener:** Splash广告的事件回调类
 
 | 方法 | 参数 | 说明|
 | --- | --- |--- |
 | onAdLoaded|-|广告加载成功回调|
 | onNoAdError|(AdError error)| 广告加载失败回调，可通过AdError.printStackTrace()获取全部错误信息|
-| onAdShow|(UpArpuAdInfo entity)|广告展示回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onAdClick|(UpArpuAdInfo entity)| 广告点击回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
-| onAdDismiss|(UpArpuAdInfo entity)|广告关闭回调，其中UpArpuAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onAdShow|(ATAdInfo entity)|广告展示回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onAdClick|(ATAdInfo entity)| 广告点击回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
+| onAdDismiss|(ATAdInfo entity)|广告关闭回调，其中ATAdInfo是广告的信息对象，主要包含是第三方聚合平台的id信息|
 |onAdTick|(long millisUtilFinished)|广告的倒计时回调，用于倒计时秒数的刷新|
 
 
@@ -783,7 +783,7 @@ public *** extends Activity {
         FrameLayout container = findViewById(R.id.splash_ad_container);
         TextView skipView = findViewById(R.id.splash_ad_skip);
 
-        UpArpuSplashAd splashAd = new UpArpuSplashAd(this, container, skipView, placementId, new UpArpuSplashAdListener(){
+        ATSplashAd splashAd = new ATSplashAd(this, container, skipView, placementId, new ATSplashAdListener(){
 		    @Override
 		    public void onAdLoaded() {
 		    }
@@ -794,16 +794,16 @@ public *** extends Activity {
 		    }
 		
 		    @Override
-		    public void onAdShow(UpArpuAdInfo entity) {
+		    public void onAdShow(ATAdInfo entity) {
 		    }
 		
 		    @Override
-		    public void onAdClick(UpArpuAdInfo entity) {
+		    public void onAdClick(ATAdInfo entity) {
 		        
 		    }
 		
 		    @Override
-		    public void onAdDismiss(UpArpuAdInfo entity) {
+		    public void onAdDismiss(ATAdInfo entity) {
 		        finish();
 		    }
 		
@@ -828,17 +828,17 @@ public *** extends Activity {
 
 ```java
 int level= { //level有以下选择
-  UpArpuSDK.PERSONALIZED //设备数据允许上报 
-  UpArpuSDK.NONPERSONALIZED //设备数据不允许上报
-  UpArpuSDK.FORBIDDEN //不做任何数据上报（所有广告请求停止）
+  ATSDK.PERSONALIZED //设备数据允许上报 
+  ATSDK.NONPERSONALIZED //设备数据不允许上报
+  ATSDK.FORBIDDEN //不做任何数据上报（所有广告请求停止）
 }
-UpArpuSDK.setGDPRUploadDataLevel(context, level);
+ATSDK.setGDPRUploadDataLevel(context, level);
 ```
 
 2.可以通过TopOn提供的授权的页面**（授权页会根据用户的选择设置上报等级）**：
 
 ```java
-UpArpuSDK.showGdprAuth(activity);
+ATSDK.showGdprAuth(activity);
 ```
 
 3.可以通过TopOn去单独设置第三方SDK的GDPR等级:
@@ -847,51 +847,51 @@ UpArpuSDK.showGdprAuth(activity);
 Map localMap = new HashMap<>();
 //Admob配置
 // true:同意上报个人信息， false:不同意上报个人信息
-localMap.put(AdmobUpArpuConst.LOCATION_MAP_KEY_GDPR, true);   
-UpArpuSDK.addNetworkGDPRInfo(this, AdmobUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(AdmobATConst.LOCATION_MAP_KEY_GDPR, true);   
+ATSDK.addNetworkGDPRInfo(this, AdmobATConst.NETWORK_FIRM_ID, localMap);
 
 //Inmob配置
 //1:表示在欧盟地区，0:表示不在欧盟地区
-localMap.put(InmobiUpArpuConst.LOCATION_MAP_KEY_GDPR_SCOPE, "1");//1|0
+localMap.put(InmobiATConst.LOCATION_MAP_KEY_GDPR_SCOPE, "1");//1|0
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(InmobiUpArpuConst.LOCATION_MAP_KEY_GDPR, true);//true | false
-UpArpuSDK.addNetworkGDPRInfo(this, InmobiUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(InmobiATConst.LOCATION_MAP_KEY_GDPR, true);//true | false
+ATSDK.addNetworkGDPRInfo(this, InmobiATConst.NETWORK_FIRM_ID, localMap);
 
 //Applovin配置
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(ApplovinUpArpuConst.LOCATION_MAP_KEY_GDPR, true);
-UpArpuSDK.addNetworkGDPRInfo(this, ApplovinUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(ApplovinATConst.LOCATION_MAP_KEY_GDPR, true);
+ATSDK.addNetworkGDPRInfo(this, ApplovinATConst.NETWORK_FIRM_ID, localMap);
 
 //Mintegral配置
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(MintegralUpArpuConst.LOCATION_MAP_KEY_GDPR, MIntegralConstans.IS_SWITCH_ON);
-UpArpuSDK.addNetworkGDPRInfo(this, MintegralUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(MintegralATConst.LOCATION_MAP_KEY_GDPR, MIntegralConstans.IS_SWITCH_ON);
+ATSDK.addNetworkGDPRInfo(this, MintegralATConst.NETWORK_FIRM_ID, localMap);
 
 //Mopub配置
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(MopubUpArpuConst.LOCATION_MAP_KEY_GDPR, true);
-UpArpuSDK.addNetworkGDPRInfo(this, MopubUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(MopubATConst.LOCATION_MAP_KEY_GDPR, true);
+ATSDK.addNetworkGDPRInfo(this, MopubATConst.NETWORK_FIRM_ID, localMap);
 
 //Chartboost配置
 //false:同意上报个人信息，true:不同意上报个人信息
-localMap.put(ChartboostUpArpuConst.LOCATION_MAP_KEY_RESTRICTDATACONTROL, true);
-UpArpuSDK.addNetworkGDPRInfo(this, ChartboostUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(ChartboostATConst.LOCATION_MAP_KEY_RESTRICTDATACONTROL, true);
+ATSDK.addNetworkGDPRInfo(this, ChartboostATConst.NETWORK_FIRM_ID, localMap);
 
 //Ironsource配置
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(IronsourceUparpuConst.LOCATION_MAP_KEY_CONSENT, true);
-UpArpuSDK.addNetworkGDPRInfo(this, IronsourceUparpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(IronsourceATConst.LOCATION_MAP_KEY_CONSENT, true);
+ATSDK.addNetworkGDPRInfo(this, IronsourceATConst.NETWORK_FIRM_ID, localMap);
 
 //UnityAds配置
 //true:同意上报个人信息，false:不同意上报个人信息
-localMap.put(UnityAdsUpArpuConst.LOCATION_MAP_KEY_GDPR_CONSENT, true);
-UpArpuSDK.addNetworkGDPRInfo(this, UnityAdsUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(UnityAdsATConst.LOCATION_MAP_KEY_GDPR_CONSENT, true);
+ATSDK.addNetworkGDPRInfo(this, UnityAdsATConst.NETWORK_FIRM_ID, localMap);
 
 //Adcolony配置
 //1:同意上报个人信息，0:不同意上报个人信息
-localMap.put(AdColonyUpArpuConst.LOCATION_MAP_KEY_GDPRCONTENT, "0"); 
-//true:表示在欧盟地区，false:表示不在欧盟地区          localMap.put(AdColonyUpArpuConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
-UpArpuSDK.addNetworkGDPRInfo(this, AdColonyUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRCONTENT, "0"); 
+//true:表示在欧盟地区，false:表示不在欧盟地区          localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
+ATSDK.addNetworkGDPRInfo(this, AdColonyATConst.NETWORK_FIRM_ID, localMap);
 ```
 
 

@@ -38,13 +38,13 @@ TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_
 
 | SDK package | Description | Necessary |
 | --- | --- |---|
-|uparpu_core.aar|TopOn basic package，must imported| **Yes** |
-|uparpu_native.aar|TopOn integration package for native| No |
-|uparpu_banner.aar|TopOn integration package for banner|No|
-|uparpu_interstitial.aar|TopOn integration package for interstitial|No|
-|uparpu_rewardvideo.aar|TopOn integration package for rewarded video|No|
-|uparpu_splash.aar|TopOn integration package for splash|No|
-|uparpu_headbiding.aar|TopOn integration package for headbidding, it is a package that aggregates third-party SDK head bids. For details, please see [HeadBidding Instructions](#12)|No|
+|anythink_core.aar|TopOn basic package，must imported| **Yes** |
+|anythink_native.aar|TopOn integration package for native| No |
+|anythink_banner.aar|TopOn integration package for banner|No|
+|anythink_interstitial.aar|TopOn integration package for interstitial|No|
+|anythink_rewardvideo.aar|TopOn integration package for rewarded video|No|
+|anythink_splash.aar|TopOn integration package for splash|No|
+|anythink_headbiding.aar|TopOn integration package for headbidding, it is a package that aggregates third-party SDK head bids. For details, please see [HeadBidding Instructions](#12)|No|
 
 <h4>2.2.2 Description of the network_sdk directory</h4>
 
@@ -114,9 +114,9 @@ The configuration of AndroidManifest for the third-party network platform, pleas
 <h4>2.2.4 The configuration of confusion</h4>
 
 ```java
--dontwarn com.uparpu.**
--keep public class com.uparpu.network.**
--keepclassmembers class com.uparpu.network.** {
+-dontwarn com.anythink.**
+-keep public class com.anythink.network.**
+-keepclassmembers class com.anythink.network.** {
    public *;
 }
 ```
@@ -129,7 +129,7 @@ The configuration of confusion for the third-party network platform, please refe
 
 <h3>3.1 API</h3>
 
-**UpArpuSDK**
+**ATSDK**
 
 | API | Parameter | Description |
 | --- | --- |---|
@@ -137,7 +137,7 @@ The configuration of confusion for the third-party network platform, please refe
 | setChannel | (String channel) | Set channel information for TopOn background to distinguish ads data. |
 | setSubChannel | (String subChannel) | Set sub channel information. |
 | initCustomMap | (Map<String, String> customMap)| Custom key-value, which can be used to match the ads list information delivered by the server. |
-| setGDPRUploadDataLevel|(Context context, int level) |Set the reporting level of the data for GDPR. The level is divided into the following three levels: <br/> **UpArpuSDK.PERSONALIZED**: The reported data contains device parameters.<br/> **UpArpuSDK.NONPERSONALIZED**: The reported data does not contain device parameters. < Br> **UpArpuSDK.FORBIDDEN**: Do not report any, stop ad request.|
+| setGDPRUploadDataLevel|(Context context, int level) |Set the reporting level of the data for GDPR. The level is divided into the following three levels: <br/> **ATSDK.PERSONALIZED**: The reported data contains device parameters.<br/> **ATSDK.NONPERSONALIZED**: The reported data does not contain device parameters. < Br> **ATSDK.FORBIDDEN**: Do not report any, stop ad request.|
 |getGDPRDataLevel|(Context context)| Get the current reporting level                              |
 |isEUTraffic|(Context context)| Judge if it is an EU region |
 |showGdprAuth|(Activity activity)|Show the GDPR authorization page|
@@ -147,7 +147,7 @@ The configuration of confusion for the third-party network platform, please refe
 <h3>3.2 Sample code</h3>
 
 ```java
-UpArpuSDK.init(getApplicationContext(), appid, appKey);
+ATSDK.init(getApplicationContext(), appid, appKey);
 ```
 
 
@@ -163,15 +163,15 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 
 <h3>4.2 Native ad API</h3>
 
-**UpArpuNative:** Native ad loaded class
+**ATNative:** Native ad loaded class
 
 | API | Parameter | Description |
 | --- | --- | ---|
-|UpArpuNative|Context context, String placementId, UpArpuNativeNetworkListener listener | Initialization method for Native ad, where placementId is obtained by creating an ad placement in the TopOn background. |
+|ATNative|Context context, String placementId, ATNativeNetworkListener listener | Initialization method for Native ad, where placementId is obtained by creating an ad placement in the TopOn background. |
 | makeAdRequest|-|Start Native Ad Request.|
 | getNativeAd |-|Get the loaded advertisement **(It is recommended that non-null judgment be made after acquisition, because null may occur in some cases)**.|
 
-**UpArpuNativeNetworkListener:** Event callback for Native ad
+**ATNativeNetworkListener:** Event callback for Native ad
 
 | Method | Parameter | Description |
 | --- | --- |---|
@@ -182,26 +182,26 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 
 | Method | Parameter | Description |
 | --- | --- |---|
-| setNativeEventListener|(UpArpuNativeEventListener listener) | Set the ad event listener, where UpArpuNativeEventListener is the interface class for the ad event |
-| renderAdView|(UpArpuNativeAdView view, UpArpuNativeAdRenderer render)|Used for ad rendering, where view must use the UpArpuNativeAdView we provide, and UpArpuNativeAdRenderer needs to inherit the corresponding interface function. |
-| prepare|(UpArpuNativeAdView view)| Used to configure ad click events, called after the renderAdView method (default all views can be clicked, there will be default placement and size of the ad logo). |
-| prepare|(UpArpuNativeAdView view, FrameLayout.LayoutParams layoutParams) |Set the ad click event, which is called after the renderAdView method: <br/>layoutParams is used to configure the location and size of the ad logo(currently only Facebook, GDT is valid, can be empty).|
-| prepare|(UpArpuNativeAdView view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) |Set  the ad click event, which is called after the renderAdView method: <br/>clickViewList is used to configure the clickable View <br/>layoutParams to configure the location and size of the ad tag (currently only Facebook, GDT is valid, can be empty).|
-| clear|(UpArpuNativeAdView view)|Remove the binding of the ad to the view.|
+| setNativeEventListener|(ATNativeEventListener listener) | Set the ad event listener, where ATNativeEventListener is the interface class for the ad event |
+| renderAdView|(ATNativeAdView view, ATNativeAdRenderer render)|Used for ad rendering, where view must use the ATNativeAdView we provide, and ATNativeAdRenderer needs to inherit the corresponding interface function. |
+| prepare|(ATNativeAdView view)| Used to configure ad click events, called after the renderAdView method (default all views can be clicked, there will be default placement and size of the ad logo). |
+| prepare|(ATNativeAdView view, FrameLayout.LayoutParams layoutParams) |Set the ad click event, which is called after the renderAdView method: <br/>layoutParams is used to configure the location and size of the ad logo(currently only Facebook, GDT is valid, can be empty).|
+| prepare|(ATNativeAdView view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) |Set  the ad click event, which is called after the renderAdView method: <br/>clickViewList is used to configure the clickable View <br/>layoutParams to configure the location and size of the ad tag (currently only Facebook, GDT is valid, can be empty).|
+| clear|(ATNativeAdView view)|Remove the binding of the ad to the view.|
 |onResume|-|Called when the Activity's onResume (mainly for the video Ad of some advertisingplatforms).|
 |onPause|-|Called when the Activity's onPause(mainly for the video Ad of some advertisingplatforms).|
 
-**UpArpuNativeEventListener:** Ad event listener interface class
+**ATNativeEventListener:** Ad event listener interface class
 
 | Method | Parameter | Description |
 | --- | --- |---|
-| onAdImpressed|(UpArpuNativeAdView view, UpArpuAdInfo entity) | The callback for ad display, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. ||
-| onAdClicked|(UpArpuNativeAdView view, UpArpuAdInfo entity)| The callback for the ad click. ||
-| onAdVideoStart|(UpArpuNativeAdView view)| The callback when the ad video start to play (only some advertising platforms exist). ||
-| onAdVideoEnd|(UpArpuNativeAdView view) | The callback when the ad video end to play(only some advertising platforms exist). ||
-| onAdVideoProgress|(UpArpuNativeAdView view, int progress) | The callback when the progress of the ad video playing is changing(only some advertising platforms exist). ||
+| onAdImpressed|(ATNativeAdView view, ATAdInfo entity) | The callback for ad display, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. ||
+| onAdClicked|(ATNativeAdView view, ATAdInfo entity)| The callback for the ad click. ||
+| onAdVideoStart|(ATNativeAdView view)| The callback when the ad video start to play (only some advertising platforms exist). ||
+| onAdVideoEnd|(ATNativeAdView view) | The callback when the ad video end to play(only some advertising platforms exist). ||
+| onAdVideoProgress|(ATNativeAdView view, int progress) | The callback when the progress of the ad video playing is changing(only some advertising platforms exist). ||
 
-**UpArpuNativeAdRenderer:** Interface class for implementing ad rendering
+**ATNativeAdRenderer:** Interface class for implementing ad rendering
 
 | Method | Parameter | Description |
 | --- | --- |---|
@@ -229,17 +229,17 @@ UpArpuSDK.init(getApplicationContext(), appid, appKey);
 <h3>4.3 Native ad sample code</h3>
 
 ```java
-if (upArpuNativeAdView == null) {
-	upArpuNativeAdView = new UpArpuNativeAdView(this);
+if (atNativeAdView == null) {
+	atNativeAdView = new ATNativeAdView(this);
 }
 
-UpArpuNative upArapuNatives= new UpArpuNative(this, placementId, new UpArpuNativeNetworkListener() {
+ATNative atNatives = new ATNative(this, placementId, new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
-                    NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
+                    NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 		if (nativeAd != null) {
-                    	nativeAd.renderAdView(upArpuNativeAdView, new NativeAdRender());
-                       nativeAd.prepare(upArpuNativeAdView);
+                    	nativeAd.renderAdView(ATNativeAdView, new NativeAdRender());
+                       nativeAd.prepare(ATNativeAdView);
                 		} else {
                     
 
@@ -252,17 +252,17 @@ UpArpuNative upArapuNatives= new UpArpuNative(this, placementId, new UpArpuNativ
 
                 }
             });
-upArapuNatives.makeAdRequest();
+atNatives.makeAdRequest();
 ```
 
 ```java
 
-public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
+public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     Context mContext;
     List<View> mClickView = new ArrayList<>();
 
-    public UpArpuRender(Context context) {
+    public NativeAdRender(Context context) {
         mContext = context;
     }
 
@@ -362,28 +362,28 @@ public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 
 <h3>5.2 NativeBanner ad API</h3>
 
-**UpArpuNativeBannerView:** The loaded class of the NativeBanner ad is also a View that displays the NativeBanner ad.
+**ATNativeBannerView:** The loaded class of the NativeBanner ad is also a View that displays the NativeBanner ad.
 
 | Method          | Parameter                              | Description                                                  |
 | --------------- | -------------------------------------- | ------------------------------------------------------------ |
 | setUnitId       | (String placementId)                   | Set the ad placement id (you must set the ad placement id of the Native ad). |
-| setAdListener   | (UpArpuNaitveBannerListener listener)  | Set the callback for NativeBanner ad , where UpArpuNaitveBannerListener is the interface class that needs to implement the ad event callback. |
+| setAdListener   | (ATNaitveBannerListener listener)  | Set the callback for NativeBanner ad , where ATNaitveBannerListener is the interface class that needs to implement the ad event callback. |
 | loadAd          | (Map<String, String> customRequestMap) | set to null, and Incoming parameters are no longer used.     |
-| setBannerConfig | (UpArpuNativeBannerConfig config)      | Set the native configuration of NativeBanner, for example: font color and font size. |
+| setBannerConfig | (ATNativeBannerConfig config)      | Set the native configuration of NativeBanner, for example: font color and font size. |
 
-**UpArpuNaitveBannerListener:** Event callback for NativeBanner ad
+**ATNaitveBannerListener:** Event callback for NativeBanner ad
 
 | Method            | Parameter             | Description                                                  |
 | ----------------- | --------------------- | ------------------------------------------------------------ |
 | onAdLoaded        | -                     | The callback for successful ad loading.                      |
 | onAdError         | (String error)        | The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
-| onAdClick         | (UpArpuAdInfo entity) | The callback of the ad click, where UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
-| onAdShow          | (UpArpuAdInfo entity) | The callback of the ad display, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onAdClick         | (ATAdInfo entity) | The callback of the ad click, where ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onAdShow          | (ATAdInfo entity) | The callback of the ad display, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
 | onAdClose         | -                     | The callback for closing ad (some callbacks are available on some platforms), where you can remove the view. |
-| onAutoRefresh     | (UpArpuAdInfo entity) | The callback of the automatic refresh of the ad, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party nwtwork platform. |
+| onAutoRefresh     | (ATAdInfo entity) | The callback of the automatic refresh of the ad, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party nwtwork platform. |
 | onAutoRefreshFail | (String error)        | The callback for automatic refresh failure.                  |
 
-**UpArpuNativeBannerConfig:** Local settings of NativeBanner
+**ATNativeBannerConfig:** Local settings of NativeBanner
 
 | Setting item   | Type                   | Description                                                  |
 | -------------- | ---------------------- | ------------------------------------------------------------ |
@@ -395,16 +395,16 @@ public class NativeAdRender implements UpArpuNativeAdRenderer<CustomNativeAd> {
 | isCloseBtnShow | boolean                | Whether to show the close button.                            |
 | isCtaBtnShow   | boolean                | Whether to show the CTA button(Show as much as possible on overseas platform, otherwise the display may be invalid. |
 | refreshTime    | long                   | Refresh time in milliseconds.                                |
-| bannerSize     | UpArpuNaitveBannerSize | The enumeration of size for NativeBanner: <br/>**UpArpuNaitveBannerSize.BANNER\_SIZE\_AUTO**: Adaptive the width and height of NativeBanner View <br/>**UpArpuNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150 aspect ratio <br/>**UpArpuNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50 aspect ratio |
+| bannerSize     | ATNaitveBannerSize | The enumeration of size for NativeBanner: <br/>**ATNaitveBannerSize.BANNER\_SIZE\_AUTO**: Adaptive the width and height of NativeBanner View <br/>**ATNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150 aspect ratio <br/>**ATNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50 aspect ratio |
 
 <h3>5.3 NativeBanner ad sample code</h3>
 
 ```java
-UpArpuBannerView  mBannerView = new UpArpuBannerView(BannerAdActivity.this);
+ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
 mBannerView.setUnitId(placementId);
 mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 50)));
-mBannerView.setBannerAdListener(new UpArpuBannerListener() {
+mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
 	public void onBannerLoaded() { 
 	}
@@ -414,11 +414,11 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerClicked(UpArpuAdInfo entity) {
+	public void onBannerClicked(ATAdInfo entity) {
 	}
 
 	@Override
-	public void onBannerShow(UpArpuAdInfo entity) {
+	public void onBannerShow(ATAdInfo entity) {
 	}
 
 	@Override
@@ -426,7 +426,7 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
+	public void onBannerAutoRefreshed(ATAdInfo entity) {
 	}
 
 	@Override
@@ -447,22 +447,22 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 
 <h3>6.2 NativeSplash ad API</h3>
 
-**UpArpuNativeSplash:** NativeSplash ad loaded class
+**ATNativeSplash:** NativeSplash ad loaded class
 
 | Method             | Parameter          | Description      |
 | ------------------ | ------------------  | ------------------  |
-| UpArpuNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId UpArpuNativeSplashListener listener) | Initialization method for NativeSplash, the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**:the view for skip (the event automatically bind In the SDK, developers can't bind click events)<br/>**placementId**: ad placement id <br/>**listener**: ad event listener |
-| UpArpuNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId, long requestTimeOut, long fetchDelay, UpArpuNativeSplashListener listener) | Initialization method for NativeSplash, the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**: the view for skip(the event automatically bind In the SDK, developers can't bind click events)<br/>**placementId**: ad placement id <br/>**requestTimeOut**: request timeout time<br/>**fetchDelay**: ad display total countdown time <br/>**listener**: ad event listener |
+| ATNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId ATNativeSplashListener listener) | Initialization method for NativeSplash, the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**:the view for skip (the event automatically bind In the SDK, developers can't bind click events)<br/>**placementId**: ad placement id <br/>**listener**: ad event listener |
+| ATNativeSplash | (Activity activity, ViewGroup container, View skipView, String placementId, long requestTimeOut, long fetchDelay, ATNativeSplashListener listener) | Initialization method for NativeSplash, the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**: the view for skip(the event automatically bind In the SDK, developers can't bind click events)<br/>**placementId**: ad placement id <br/>**requestTimeOut**: request timeout time<br/>**fetchDelay**: ad display total countdown time <br/>**listener**: ad event listener |
 
 
-**UpArpuNativeSplashListener:** Event callback for NativeSplash ad
+**ATNativeSplashListener:** Event callback for NativeSplash ad
 
 | Method       | Parameter                   | Description                         |
 | ------------ | --------------------------- | ------------------------------------------------------------ |
 | onAdLoaded   | -                           | The callback for successful ad loading.                      |
 | onNoAdError  | (AdError error)             | The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
-| onAdShow     | (UpArpuAdInfo entity)       | The callback of the ad display, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
-| onAdClick    | (UpArpuAdInfo entity)       | The callback of the ad click, where UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onAdShow     | (ATAdInfo entity)       | The callback of the ad display, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onAdClick    | (ATAdInfo entity)       | The callback of the ad click, where ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
 | onAdSkip     | -                           | The callback of the skip button clicked.                     |
 | onAdTimeOver | -                           | The callback of the end of the ad countdown, where you can turn off the Activity of the NativeSplash ad. |
 | onAdTick     | （long millisUtilFinished） | The callback of the ad countdown, used to refresh the countdown seconds, in milliseconds. |
@@ -478,7 +478,7 @@ public *** extends Activity {
 
         FrameLayout container = findViewById(R.id.splash_ad_container);
 
-        UpArpuNativeSplash splash = new UpArpuNativeSplash(this, container, null, placementId, new UpArpuNativeSplashListener() {
+        ATNativeSplash splash = new ATNativeSplash(this, container, null, placementId, new ATNativeSplashListener() {
             @Override
             public void onAdLoaded() {
             }
@@ -488,11 +488,11 @@ public *** extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
             }
 
             @Override
@@ -523,37 +523,37 @@ public *** extends Activity {
 
 <h3>7.2 RewardedVideo ad API</h3>
 
-**UpArpuRewardVideoAd:** Rewarded video ad loaded class
+**ATRewardVideoAd:** Rewarded video ad loaded class
 
 | Method | Parameter | Description |
 | --- | --- |---|
-|UpArpuRewardVideoAd|(Context context, String placementId)|Initialization method for Rewarded video ad.|
+|ATRewardVideoAd|(Context context, String placementId)|Initialization method for Rewarded video ad.|
 |load|-|Start ad loading.|
-|setAdListener|(UpArpuRewardVideoListener listener)| Set the Rewarded video ad listener, where UpArpuRewardVideoListener is the interface class for the ad event callback that needs to be implemented. |
+|setAdListener|(ATRewardVideoListener listener)| Set the Rewarded video ad listener, where ATRewardVideoListener is the interface class for the ad event callback that needs to be implemented. |
 |isAdReady|-|Judge if there is an ad that can be displayed currently.|
 |show|-|Show rewarded video's ad.|
 |setUserData|(String userId, String customData)|Set user information, mainly used to issue rewards.|
 
-**UpArpuRewardVideoListener:** Event callback for rewarded video ads:
+**ATRewardVideoListener:** Event callback for rewarded video ads:
 
 | Method | Parameter | Description |
 | --- | --- |--- |
 | onRewardedVideoAdLoaded|-|The callback for successful ad loading.|
 | onRewardedVideoAdFailed|(AdError error)| The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
-| onRewardedVideoAdPlayStart|(UpArpuAdInfo entity)|The callback that the ad starts to play, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
-| onRewardedVideoAdPlayEnd|(UpArpuAdInfo entity)|The callback of the end of the ad, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
-| onRewardedVideoAdPlayFailed|(AdError errorCode, UpArpuAdInfo entity)|The callback of the ad playback failure can be obtained by AdError.printStackTrace(), where UpArpuAdInfo is the information object of the advertisement, mainly including the id information of the third-party aggregation platform.|
-| onReward|(UpArpuAdInfo entity)|  The callback of reward. The UpArpuAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
-| onRewardedVideoAdClosed|(UpArpuAdInfo entity)| The callback of closing ad. The UpArpuAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
-| onRewardedVideoAdPlayClicked|(UpArpuAdInfo entity)|The callback of the ad click, where UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onRewardedVideoAdPlayStart|(ATAdInfo entity)|The callback that the ad starts to play, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onRewardedVideoAdPlayEnd|(ATAdInfo entity)|The callback of the end of the ad, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onRewardedVideoAdPlayFailed|(AdError errorCode, ATAdInfo entity)|The callback of the ad playback failure can be obtained by AdError.printStackTrace(), where ATAdInfo is the information object of the advertisement, mainly including the id information of the third-party aggregation platform.|
+| onReward|(ATAdInfo entity)|  The callback of reward. The ATAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
+| onRewardedVideoAdClosed|(ATAdInfo entity)| The callback of closing ad. The ATAdInfo is an information object of the ad, and mainly includes the id information of the third-party network platform. |
+| onRewardedVideoAdPlayClicked|(ATAdInfo entity)|The callback of the ad click, where ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 
 
 <h3>7.3 RewardedVideo ad sample code</h3>
 
 
 ```java
-UpArpuRewardVideoAd mRewardVideoAd = new UpArpuRewardVideoAd(this,placementId);
-mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
+ATRewardVideoAd mRewardVideoAd = new ATRewardVideoAd(this,placementId);
+mRewardVideoAd.setAdListener(new ATRewardVideoListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
             }
@@ -563,27 +563,27 @@ mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
             }
 
             @Override
-            public void onRewardedVideoAdPlayStart(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayStart(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayEnd(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayEnd(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayFailed(AdError errorCode, UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
             }
 
 	    @Override
-            public void onRewarde(UpArpuAdInfo entity) {
+            public void onRewarde(ATAdInfo entity) {
             }
 	    
             @Override
-            public void onRewardedVideoAdClosed(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdClosed(ATAdInfo entity) {
             }
 
             @Override
-            public void onRewardedVideoAdPlayClicked(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayClicked(ATAdInfo entity) {
             }
         });
 
@@ -604,26 +604,26 @@ Interstitial ad including the image interstitial ads and video interstitial ads 
 
 <h3>8.2 Interstitial ad API</h3>
 
-**UpArpuInterstitial:** Interstitial ad loaded class
+**ATInterstitial:** Interstitial ad loaded class
 
 | Method | Parameter | Description |
 | --- | --- |---|
-|UpArpuInterstitial|(Context context, String placementId)|Initialization method for Interstitial ad.|
+|ATInterstitial|(Context context, String placementId)|Initialization method for Interstitial ad.|
 |load|-|Start ad loading.|
-|setAdListener|(UpArpuInterstitialListener listener)| Set the Interstitial ad listener, where UpArpuInterstitialListener is the interface class that needs to implement the ad event callback. |
+|setAdListener|(ATInterstitialListener listener)| Set the Interstitial ad listener, where ATInterstitialListener is the interface class that needs to implement the ad event callback. |
 |isAdReady|-|Judge if there is an ad that can be displayed current ly.|
 |show|-|Show Interstitial ad.|
 
-**UpArpuInterstitialListener:** Event callback for Interstitial ad
+**ATInterstitialListener:** Event callback for Interstitial ad
 
 | Method | Parameter | Description |
 | --- | --- |--- |
 | onInterstitialAdLoaded|-|The callback for successful ad loading.|
 | onInterstitialAdLoadFail|(AdError error)| The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
-| onInterstitialAdClicked|(UpArpuAdInfo entity)|The callback that the ad click, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
-| onInterstitialAdShow|(UpArpuAdInfo entity)| The callback of the ad display, wherein UpArpuAdInfo is the information object of the advertisement, mainly including the id information of the third-party network platform. |
-| onInterstitialAdClose|(UpArpuAdInfo entity)| The callback of closing ad, where UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
-| onInterstitialAdVideoStart|-|The callback that the video ad starts to play, where UpArpuAdInfo is the information object of the advertisement, mainly including the id information of the third-party network platform.|
+| onInterstitialAdClicked|(ATAdInfo entity)|The callback that the ad click, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onInterstitialAdShow|(ATAdInfo entity)| The callback of the ad display, wherein ATAdInfo is the information object of the advertisement, mainly including the id information of the third-party network platform. |
+| onInterstitialAdClose|(ATAdInfo entity)| The callback of closing ad, where ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onInterstitialAdVideoStart|-|The callback that the video ad starts to play, where ATAdInfo is the information object of the advertisement, mainly including the id information of the third-party network platform.|
 | onInterstitialAdVideoEnd|-| The callback for the end of video ad.                        |
 | onInterstitialAdVideoError|-|The callback for interstitial video ad play failure, all error messages can be obtained through AdError.printStackTrace().|
 
@@ -632,8 +632,8 @@ Interstitial ad including the image interstitial ads and video interstitial ads 
 
 
 ```java
-UpArpuInterstitial mInterstitialAd = new UpArpuInterstitial(this, placementId);
-mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
+ATInterstitial mInterstitialAd = new ATInterstitial(this, placementId);
+mInterstitialAd.setAdListener(new ATInterstitialListener() {
             @Override
             public void onInterstitialAdLoaded() {               
             }
@@ -641,13 +641,13 @@ mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
             public void onInterstitialAdLoadFail(AdError adError) {                
             }
             @Override
-            public void onInterstitialAdClicked(UpArpuAdInfo entity) {                
+            public void onInterstitialAdClicked(ATAdInfo entity) {                
             }
             @Override
-            public void onInterstitialAdShow(UpArpuAdInfo entity) {                
+            public void onInterstitialAdShow(ATAdInfo entity) {                
             }
             @Override
-            public void onInterstitialAdClose(UpArpuAdInfo entity) {           
+            public void onInterstitialAdClose(ATAdInfo entity) {           
             }
             @Override
             public void onInterstitialAdVideoStart() {         
@@ -678,35 +678,35 @@ mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
 
 <h3>9.2 Banner ad API</h3>
 
-**UpArpuBannerView:** The loaded class of the Banner ad is also a View that displays the Banner ad.
+**ATBannerView:** The loaded class of the Banner ad is also a View that displays the Banner ad.
 
 | Method | Param | Description |
 | --- | --- |---|
 | setUnitId|(String placementId)|Set the ad placement id (must be set).|
-| setBannerAdListener|(UpArpuBannerListener listener)| Set the callback of the Banner ad, where UpArpuBannerListener is the interface class that needs to implement the callback of the ad event. |
+| setBannerAdListener|(ATBannerListener listener)| Set the callback of the Banner ad, where ATBannerListener is the interface class that needs to implement the callback of the ad event. |
 | loadAd|-|Start ad loading.|
 
-**UpArpuBannerListener:** Event callback for Banner ad
+**ATBannerListener:** Event callback for Banner ad
 
 | Method | Parameter | Description |
 | --- | --- |--- |
 | onBannerLoaded|-|The callback for successful ad loading|
 | onBannerFailed|(AdError error)| The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
 | onBannerClicked|-|The callback for the ad click.|
-| onBannerShow|(UpArpuAdInfo entity)| The callback of the ad display, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onBannerShow|(ATAdInfo entity)| The callback of the ad display, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
 | onBannerClose|-| The callback for closing ad (some callbacks are available on some platforms), where you can remove the view. |
-| onBannerAutoRefreshed|(UpArpuAdInfo entity)|The callback of the automatic refresh of the ad, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onBannerAutoRefreshed|(ATAdInfo entity)|The callback of the automatic refresh of the ad, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 | onBannerAutoRefreshFail(AdError adError)|(AdError error)|The callback that fails to automatically refresh the ad. All error messages can be obtained through AdError.printStackTrace().|
 
 
 <h3>9.3 Banner ad sample code</h3>
 
 ```java
-UpArpuBannerView  mBannerView = new UpArpuBannerView(BannerAdActivity.this);
+ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
 mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
 mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 300)));
-mBannerView.setBannerAdListener(new UpArpuBannerListener() {
+mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
 	public void onBannerLoaded() { 
 	}
@@ -716,11 +716,11 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerClicked(UpArpuAdInfo entity) {
+	public void onBannerClicked(ATAdInfo entity) {
 	}
 
 	@Override
-	public void onBannerShow(UpArpuAdInfo entity) {
+	public void onBannerShow(ATAdInfo entity) {
 	}
 
 	@Override
@@ -728,7 +728,7 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 	}
 
 	@Override
-	public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
+	public void onBannerAutoRefreshed(ATAdInfo entity) {
 	}
 
 	@Override
@@ -750,22 +750,22 @@ mBannerView.setBannerAdListener(new UpArpuBannerListener() {
 
 <h3>10.2 Splash ad API</h3>
 
-**UpArpuSplashAd:** Splash ad loaded class
+**ATSplashAd:** Splash ad loaded class
 
 | Method | Parameter | Description |
 | --- | --- |---|
-|UpArpuSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, UpArpuSplashAdListener listener, long fetchDelay)|Initialization method for Splash ad, the following is the parameter description: <br/> **activity**: display activity <br/> **container**: display ad container <br/> **skipView**: the view for skip(the event automatically bind In the SDK, developers can't bind click events)<br/> **placementId**: ad placement id <br/> **listener**: ad event listener<br/> **fetchDelay**: ad show total countdown time|
-|UpArpuSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, UpArpuSplashAdListener listener)|Initialization method for Splash ad(the default display time is 3 seconds), the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**: the view for skip(the event is automatically bind in the SDK, the developer can't bind click event)<br/>**placementId**: the ad placement id <br/>**listener**: the ad event listener<br/>|
+|ATSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, ATSplashAdListener listener, long fetchDelay)|Initialization method for Splash ad, the following is the parameter description: <br/> **activity**: display activity <br/> **container**: display ad container <br/> **skipView**: the view for skip(the event automatically bind In the SDK, developers can't bind click events)<br/> **placementId**: ad placement id <br/> **listener**: ad event listener<br/> **fetchDelay**: ad show total countdown time|
+|ATSplashAd|(Activity activity, ViewGroup container, View skipView, String placementId, ATSplashAdListener listener)|Initialization method for Splash ad(the default display time is 3 seconds), the following is the parameter description: <br/>**activity**: display activity <br/>**container**: display ad container <br/>**skipView**: the view for skip(the event is automatically bind in the SDK, the developer can't bind click event)<br/>**placementId**: the ad placement id <br/>**listener**: the ad event listener<br/>|
 
-**UpArpuSplashAdListener:**  Event callback for Splash ad
+**ATSplashAdListener:**  Event callback for Splash ad
 
 | Method | Parameter | Description |
 | --- | --- |--- |
 | onAdLoaded|-|The callback for successful ad loading.|
 | onNoAdError|(AdError error)| The callback for failed ad loading, all error messages can be obtained through AdError.printStackTrace(). |
-| onAdShow|(UpArpuAdInfo entity)|The callback of the ad display, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
-| onAdClick|(UpArpuAdInfo entity)| The callback of the ad click, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
-| onAdDismiss|(UpArpuAdInfo entity)|The callback of closing ad, wherein UpArpuAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onAdShow|(ATAdInfo entity)|The callback of the ad display, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
+| onAdClick|(ATAdInfo entity)| The callback of the ad click, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform. |
+| onAdDismiss|(ATAdInfo entity)|The callback of closing ad, wherein ATAdInfo is the information object of the ad, mainly including the id information of the third-party network platform.|
 |onAdTick|(long millisUtilFinished)|The countdown callback for the ad, used to refresh the countdown seconds.|
 
 
@@ -782,7 +782,7 @@ public *** extends Activity {
         FrameLayout container = findViewById(R.id.splash_ad_container);
         TextView skipView = findViewById(R.id.splash_ad_skip);
 
-        UpArpuSplashAd splashAd = new UpArpuSplashAd(this, container, skipView, placementId, new UpArpuSplashAdListener(){
+        ATSplashAd splashAd = new ATSplashAd(this, container, skipView, placementId, new ATSplashAdListener(){
 		    @Override
 		    public void onAdLoaded() {
 		    }
@@ -793,16 +793,16 @@ public *** extends Activity {
 		    }
 		
 		    @Override
-		    public void onAdShow(UpArpuAdInfo entity) {
+		    public void onAdShow(ATAdInfo entity) {
 		    }
 		
 		    @Override
-		    public void onAdClick(UpArpuAdInfo entity) {
+		    public void onAdClick(ATAdInfo entity) {
 		        
 		    }
 		
 		    @Override
-		    public void onAdDismiss(UpArpuAdInfo entity) {
+		    public void onAdDismiss(ATAdInfo entity) {
 		        finish();
 		    }
 		
@@ -824,17 +824,17 @@ Beginning on May 25, 2018, the Eurapean Union's General Data Protection Regulati
 
 ```java
 int level= { //Level has the following options
-  UpArpuSDK.PERSONALIZED //Device data is allowed to be reported
-  UpArpuSDK.NONPERSONALIZED //Device data is not allowed to be reported
-  UpArpuSDK.FORBIDDEN //Do not do any data reporting (all ad requests stop)
+  ATSDK.PERSONALIZED //Device data is allowed to be reported
+  ATSDK.NONPERSONALIZED //Device data is not allowed to be reported
+  ATSDK.FORBIDDEN //Do not do any data reporting (all ad requests stop)
 }
-UpArpuSDK.setGDPRUploadDataLevel(context, level);
+ATSDK.setGDPRUploadDataLevel(context, level);
 ```
 
 2.The authorized page provided by TopOn **(the authorization page will set the level according to the user's choice)**:
 
 ```java
-UpArpuSDK.showGdprAuth(activity);
+ATSDK.showGdprAuth(activity);
 ```
 
 3.You can also set the GDPR level of the third-party SDK separately through TopOn:
@@ -843,52 +843,52 @@ UpArpuSDK.showGdprAuth(activity);
 Map localMap = new HashMap<>();
 //Admob configuration
 // true:Agree to report personal information， false:Disagree with reporting personal information
-localMap.put(AdmobUpArpuConst.LOCATION_MAP_KEY_GDPR, true);   
-UpArpuSDK.addNetworkGDPRInfo(this, AdmobUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(AdmobATConst.LOCATION_MAP_KEY_GDPR, true);   
+ATSDK.addNetworkGDPRInfo(this, AdmobATConst.NETWORK_FIRM_ID, localMap);
     
 //Inmobconfiguration
 //1:In the EU，0:Not in the EU
-localMap.put(InmobiUpArpuConst.LOCATION_MAP_KEY_GDPR_SCOPE, "1");//1 | 0
+localMap.put(InmobiATConst.LOCATION_MAP_KEY_GDPR_SCOPE, "1");//1 | 0
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(InmobiUpArpuConst.LOCATION_MAP_KEY_GDPR, true);//true | false
-UpArpuSDK.addNetworkGDPRInfo(this, InmobiUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(InmobiATConst.LOCATION_MAP_KEY_GDPR, true);//true | false
+ATSDK.addNetworkGDPRInfo(this, InmobiATConst.NETWORK_FIRM_ID, localMap);
 
 //Applovin configuration
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(ApplovinUpArpuConst.LOCATION_MAP_KEY_GDPR, true);
-UpArpuSDK.addNetworkGDPRInfo(this, ApplovinUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(ApplovinATConst.LOCATION_MAP_KEY_GDPR, true);
+ATSDK.addNetworkGDPRInfo(this, ApplovinATConst.NETWORK_FIRM_ID, localMap);
 
 //Mintegral configuration
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(MintegralUpArpuConst.LOCATION_MAP_KEY_GDPR, MIntegralConstans.IS_SWITCH_ON);
-UpArpuSDK.addNetworkGDPRInfo(this, MintegralUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(MintegralATConst.LOCATION_MAP_KEY_GDPR, MIntegralConstans.IS_SWITCH_ON);
+ATSDK.addNetworkGDPRInfo(this, MintegralATConst.NETWORK_FIRM_ID, localMap);
 
 //Mopub configuration
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(MopubUpArpuConst.LOCATION_MAP_KEY_GDPR, true);
-UpArpuSDK.addNetworkGDPRInfo(this, MopubUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(MopubATConst.LOCATION_MAP_KEY_GDPR, true);
+ATSDK.addNetworkGDPRInfo(this, MopubATConst.NETWORK_FIRM_ID, localMap);
 
 //Chartboost configuration
 //false:Agree to report personal information，true:Disagree with reporting personal information
-localMap.put(ChartboostUpArpuConst.LOCATION_MAP_KEY_RESTRICTDATACONTROL, true);
-UpArpuSDK.addNetworkGDPRInfo(this, ChartboostUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(ChartboostATConst.LOCATION_MAP_KEY_RESTRICTDATACONTROL, true);
+ATSDK.addNetworkGDPRInfo(this, ChartboostATConst.NETWORK_FIRM_ID, localMap);
 
 //Ironsource configuration
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(IronsourceUparpuConst.LOCATION_MAP_KEY_CONSENT, true);
-UpArpuSDK.addNetworkGDPRInfo(this, IronsourceUparpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(IronsourceATConst.LOCATION_MAP_KEY_CONSENT, true);
+ATSDK.addNetworkGDPRInfo(this, IronsourceATConst.NETWORK_FIRM_ID, localMap);
 
 //UnityAds configuration
 //true:Agree to report personal information，false:Disagree with reporting personal information
-localMap.put(UnityAdsUpArpuConst.LOCATION_MAP_KEY_GDPR_CONSENT, true);
-UpArpuSDK.addNetworkGDPRInfo(this, UnityAdsUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(UnityAdsATConst.LOCATION_MAP_KEY_GDPR_CONSENT, true);
+ATSDK.addNetworkGDPRInfo(this, UnityAdsATConst.NETWORK_FIRM_ID, localMap);
 
 //Adcolony configuration
 //1:Agree to report personal information，0:Disagree with reporting personal information
-localMap.put(AdColonyUpArpuConst.LOCATION_MAP_KEY_GDPRCONTENT, "0"); 
+localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRCONTENT, "0"); 
 //true:In the EU，false:Not in the EU       
-localMap.put(AdColonyUpArpuConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
-UpArpuSDK.addNetworkGDPRInfo(this, AdColonyUpArpuConst.NETWORK_FIRM_ID, localMap);
+localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
+ATSDK.addNetworkGDPRInfo(this, AdColonyATConst.NETWORK_FIRM_ID, localMap);
 ```
 
 

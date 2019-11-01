@@ -9,9 +9,9 @@
 
 <h3>1.1 打开SDK的日志功能</h3>
 
-1. 初始化之前，加上此代码：**UpArpuSDK.setNetworkLogDebug(true)**
+1. 初始化之前，加上此代码：**ATSDK.setNetworkLogDebug(true)**
 
-2. AndroidStudio中Logcat以**uparpu_network**为TAG进行过滤，查看日志
+2. AndroidStudio中Logcat以**anythink_network**为TAG进行过滤，查看日志
 
 <h3>1.2 广告位配置广告源</h3>
 
