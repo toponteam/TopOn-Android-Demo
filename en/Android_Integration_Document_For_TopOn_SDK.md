@@ -139,7 +139,7 @@ The configuration of confusion for the third-party network platform, please refe
 | setChannel | (String channel) | Set channel information for TopOn background to distinguish ads data. |
 | setSubChannel | (String subChannel) | Set sub channel information. |
 | initCustomMap | (Map<String, String> customMap)| Custom key-value, which can be used to match the ads list information delivered by the server. |
-| setGDPRUploadDataLevel|(Context context, int level) |Set the reporting level of the data for GDPR. The level is divided into the following three levels: <br/> **ATSDK.PERSONALIZED**: The reported data contains device parameters.<br/> **ATSDK.NONPERSONALIZED**: The reported data does not contain device parameters. < Br> **ATSDK.FORBIDDEN**: Do not report any, stop ad request.|
+| setGDPRUploadDataLevel|(Context context, int level) |Set the reporting level of the data for GDPR. The level is divided into the following three levels: <br/> **ATSDK.PERSONALIZED**: The reported data contains device parameters.<br/> **ATSDK.NONPERSONALIZED**: The reported data does not contain device parameters. <br/> **ATSDK.FORBIDDEN**: Do not report any, stop ad request.|
 |getGDPRDataLevel|(Context context)| Get the current reporting level                              |
 |isEUTraffic|(Context context)| Judge if it is an EU region |
 |showGdprAuth|(Activity activity)|Show the GDPR authorization page|
