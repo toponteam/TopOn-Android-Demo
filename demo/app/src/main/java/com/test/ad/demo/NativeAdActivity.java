@@ -57,7 +57,7 @@ public class NativeAdActivity extends Activity {
     };
 
     ATNative upArapuNatives[] = new ATNative[unitIds.length];
-    ATNativeAdView upArpuNativeAdView;
+    ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
     RadioGroup mRadioGroup;
@@ -90,7 +90,7 @@ public class NativeAdActivity extends Activity {
             }
         });
 
-        final NativeDemoRender upArpuRender = new NativeDemoRender(this);
+        final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
         Map<String, Object> localMap = null;
         for (int i = 0; i < unitIds.length; i++) {
@@ -108,8 +108,8 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
-            if (upArpuNativeAdView == null) {
-                upArpuNativeAdView = new ATNativeAdView(this);
+            if (anyThinkNativeAdView == null) {
+                anyThinkNativeAdView = new ATNativeAdView(this);
             }
         }
 
@@ -130,9 +130,9 @@ public class NativeAdActivity extends Activity {
                 NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
-                    mNativeAd.renderAdView(upArpuNativeAdView, upArpuRender);
-                    upArpuNativeAdView.setVisibility(View.VISIBLE);
-                    mNativeAd.prepare(upArpuNativeAdView);
+                    mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                    anyThinkNativeAdView.setVisibility(View.VISIBLE);
+                    mNativeAd.prepare(anyThinkNativeAdView);
                 } else {
                     Toast.makeText(NativeAdActivity.this, "this placement no cache!", Toast.LENGTH_LONG).show();
 
@@ -141,8 +141,8 @@ public class NativeAdActivity extends Activity {
             }
         });
 
-        upArpuNativeAdView.setVisibility(View.GONE);
-        ((FrameLayout) findViewById(R.id.ad_container)).addView(upArpuNativeAdView);
+        anyThinkNativeAdView.setVisibility(View.GONE);
+        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView);
     }
 
     @Override

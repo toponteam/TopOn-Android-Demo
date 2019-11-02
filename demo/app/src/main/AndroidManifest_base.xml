@@ -22,22 +22,22 @@
 
         <activity
             android:name=".NativeAdActivity"
-            android:label="UpArpu Native"
+            android:label="AT Native"
             android:launchMode="singleTask"/>
 
         <activity
             android:name=".RewardVideoAdActivity"
-            android:label="UpArpu RewardedVideo"
+            android:label="AT RewardedVideo"
             android:launchMode="singleTask"/>
 
         <activity
             android:name=".InterstitialAdActivity"
-            android:label="UpArpu Interstitial"
+            android:label="AT Interstitial"
             android:launchMode="singleTask"/>
 
         <activity
             android:name=".BannerAdActivity"
-            android:label="UpArpu Banner"
+            android:label="AT Banner"
             android:launchMode="singleTask"/>
 
         <activity

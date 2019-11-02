@@ -223,7 +223,7 @@ public class RewardVideoAdActivity extends Activity {
             }
 
             @Override
-            public void onReward(ATAdInfo upArpuAdInfo) {
+            public void onReward(ATAdInfo atAdInfo) {
                 Log.i(TAG, "onReward" );
                 Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
