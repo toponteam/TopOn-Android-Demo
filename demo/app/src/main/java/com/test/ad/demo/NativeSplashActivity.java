@@ -6,9 +6,9 @@ import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.nativead.splash.api.UpArpuNativeSplash;
-import com.uparpu.nativead.splash.api.UpArpuNativeSplashListener;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.nativead.splash.api.ATNativeSplash;
+import com.anythink.nativead.splash.api.ATNativeSplashListener;
 
 public class NativeSplashActivity extends Activity {
     @Override
@@ -19,12 +19,12 @@ public class NativeSplashActivity extends Activity {
         FrameLayout splashView = findViewById(R.id.native_splash_view);
 //        Map<String, Object> localMap = new HashMap<>();
 //        //广点通需要加的
-//        localMap.put(GDTUpArpuConst.ADTYPE, "1");
-//        localMap.put(GDTUpArpuConst.AD_WIDTH, ADSize.FULL_WIDTH);
-//        localMap.put(GDTUpArpuConst.AD_HEIGHT, ADSize.FULL_WIDTH);
+//        localMap.put(GDTATConst.ADTYPE, "1");
+//        localMap.put(GDTATConst.AD_WIDTH, ADSize.FULL_WIDTH);
+//        localMap.put(GDTATConst.AD_HEIGHT, ADSize.FULL_WIDTH);
 
-//        config.mode = UpArpuNativeSplashConfig.ICON_IMAGE_MODE;
-        UpArpuNativeSplash splash = new UpArpuNativeSplash(this, splashView, null, DemoApplicaion.mPlacementId_native_all, new UpArpuNativeSplashListener() {
+//        config.mode = ATNativeSplashConfig.ICON_IMAGE_MODE;
+        ATNativeSplash splash = new ATNativeSplash(this, splashView, null, DemoApplicaion.mPlacementId_native_all, new ATNativeSplashListener() {
             @Override
             public void onAdLoaded() {
                 Log.i("SplashActivity", "Develop callback loaded");
@@ -38,12 +38,12 @@ public class NativeSplashActivity extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
                 Log.i("NativeSplashActivity", "Develop callback onAdShow");
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
                 Log.i("NativeSplashActivity", "Develop callback onAdClick");
             }
 

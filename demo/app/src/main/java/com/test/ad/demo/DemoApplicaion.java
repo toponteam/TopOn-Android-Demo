@@ -2,9 +2,9 @@ package com.test.ad.demo;
 
 import android.support.multidex.MultiDexApplication;
 
+import com.anythink.core.api.ATSDK;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
-import com.uparpu.api.UpArpuSDK;
 
 /**
  * Created by Z on 2018/1/10.
@@ -124,8 +124,8 @@ public class DemoApplicaion extends MultiDexApplication {
         super.onCreate();
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
-        UpArpuSDK.init(this, appid, appKey);
-        UpArpuSDK.setNetworkLogDebug(true);
+        ATSDK.init(this, appid, appKey);
+        ATSDK.setNetworkLogDebug(true);
 
     }
 }

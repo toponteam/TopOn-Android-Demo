@@ -8,10 +8,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.uparpu.api.AdError;
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.interstitial.api.UpArpuInterstitial;
-import com.uparpu.interstitial.api.UpArpuInterstitialListener;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.AdError;
+import com.anythink.interstitial.api.ATInterstitial;
+import com.anythink.interstitial.api.ATInterstitialListener;
 
 public class InterstitialAdActivity extends Activity {
 
@@ -37,7 +37,6 @@ public class InterstitialAdActivity extends Activity {
                 , DemoApplicaion.mPlacementId_interstitial_toutiao
                 , DemoApplicaion.mPlacementId_interstitial_uniplay
                 , DemoApplicaion.mPlacementId_interstitial_oneway
-                , DemoApplicaion.mPlacementId_interstitial_mobpower
                 , DemoApplicaion.mPlacementId_interstitial_appnext
                 , DemoApplicaion.mPlacementId_interstitial_baidu
                 , DemoApplicaion.mPlacementId_interstitial_nend
@@ -68,7 +67,6 @@ public class InterstitialAdActivity extends Activity {
             "toutiao",
             "uniplay",
             "oneway",
-            "mobpower",
             "appnext",
             "baidu",
             "nend",
@@ -84,7 +82,7 @@ public class InterstitialAdActivity extends Activity {
     int mCurrentSelectIndex;
 
 
-    UpArpuInterstitial mInterstitialAd;
+    ATInterstitial mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,9 +149,9 @@ public class InterstitialAdActivity extends Activity {
             mInterstitialAd.onDestory();
             mInterstitialAd = null;
         }
-        mInterstitialAd = new UpArpuInterstitial(this, unitIds[mCurrentSelectIndex]);
+        mInterstitialAd = new ATInterstitial(this, unitIds[mCurrentSelectIndex]);
         addSetting();
-        mInterstitialAd.setAdListener(new UpArpuInterstitialListener() {
+        mInterstitialAd.setAdListener(new ATInterstitialListener() {
             @Override
             public void onInterstitialAdLoaded() {
                 Log.i(TAG, "onInterstitialAdLoaded");
@@ -167,19 +165,19 @@ public class InterstitialAdActivity extends Activity {
             }
 
             @Override
-            public void onInterstitialAdClicked(UpArpuAdInfo entity) {
+            public void onInterstitialAdClicked(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClicked");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdShow(UpArpuAdInfo entity) {
+            public void onInterstitialAdShow(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdShow");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdShow", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdClose(UpArpuAdInfo entity) {
+            public void onInterstitialAdClose(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClose");
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClose", Toast.LENGTH_SHORT).show();
             }

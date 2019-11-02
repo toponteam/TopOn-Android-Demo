@@ -10,10 +10,10 @@ import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.uparpu.api.AdError;
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.banner.api.UpArpuBannerListener;
-import com.uparpu.banner.api.UpArpuBannerView;
+import com.anythink.banner.api.ATBannerListener;
+import com.anythink.banner.api.ATBannerView;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.AdError;
 
 import java.util.HashMap;
 
@@ -31,7 +31,6 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_flurry
             , DemoApplicaion.mPlacementId_banner_applovin
             , DemoApplicaion.mPlacementId_banner_mopub
-            , DemoApplicaion.mPlacementId_banner_mobpower
             , DemoApplicaion.mPlacementId_banner_appnext
             , DemoApplicaion.mPLacementId_banner_baidu
             , DemoApplicaion.mPlacementId_banner_nend
@@ -48,13 +47,12 @@ public class BannerAdActivity extends Activity {
             "Flurry",
             "Applovin",
             "Mopub",
-            "Mobpower",
             "appnext",
             "Baidu",
             "Nend"
     };
 
-    UpArpuBannerView mBannerView;
+    ATBannerView mBannerView;
 
     int mCurrentSelectIndex;
     boolean hasAddBannerView = false;
@@ -67,9 +65,9 @@ public class BannerAdActivity extends Activity {
 
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
-        mBannerView = new UpArpuBannerView(this);
+        mBannerView = new ATBannerView(this);
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
-        mBannerView.setBannerAdListener(new UpArpuBannerListener() {
+        mBannerView.setBannerAdListener(new ATBannerListener() {
             @Override
             public void onBannerLoaded() {
                 Log.i("BannerAdActivity", "onBannerLoaded");
@@ -87,7 +85,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerClicked(UpArpuAdInfo entity) {
+            public void onBannerClicked(ATAdInfo entity) {
                 Log.i("BannerAdActivity", "onBannerClicked");
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClicked",
@@ -95,7 +93,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerShow(UpArpuAdInfo entity) {
+            public void onBannerShow(ATAdInfo entity) {
                 Log.i("BannerAdActivity", "onBannerShow");
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerShow",
@@ -111,7 +109,7 @@ public class BannerAdActivity extends Activity {
             }
 
             @Override
-            public void onBannerAutoRefreshed(UpArpuAdInfo entity) {
+            public void onBannerAutoRefreshed(ATAdInfo entity) {
 
             }
 

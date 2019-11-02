@@ -1,5 +1,5 @@
--keep public class com.uparpu.network.vungle.*
--keepclassmembers class com.uparpu.network.vungle.* {
+-keep public class com.anythink.network.vungle.*
+-keepclassmembers class com.anythink.network.vungle.* {
 <fields>;
 <methods>;
 }

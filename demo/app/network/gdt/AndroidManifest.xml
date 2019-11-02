@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.uparpu.gdt">
+    package="com.anythink.gdt">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -31,13 +31,13 @@
             android:screenOrientation="landscape" />
 
         <provider
-            android:name="com.uparpu.network.gdt.GDTUpArpuFileProvider"
+            android:name="com.anythink.network.gdt.GDTATFileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_gdt_file_path" />
+                android:resource="@xml/anythink_bk_gdt_file_path" />
         </provider>
     </application>
 

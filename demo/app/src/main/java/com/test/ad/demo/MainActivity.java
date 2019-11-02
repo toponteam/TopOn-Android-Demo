@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.uparpu.api.UpArpuSDK;
+import com.anythink.core.api.ATSDK;
 
 public class MainActivity extends Activity {
 
@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.gdprBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UpArpuSDK.showGdprAuth(MainActivity.this);
+                ATSDK.showGdprAuth(MainActivity.this);
             }
         });
 

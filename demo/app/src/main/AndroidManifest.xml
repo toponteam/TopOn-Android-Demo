@@ -34,7 +34,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@android:style/Theme.DeviceDefault.Light" >
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
         <activity android:name="com.test.ad.demo.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,19 +48,19 @@
         </activity>
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
-            android:label="UpArpu Native"
+            android:label="AT Native"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
-            android:label="UpArpu RewardedVideo"
+            android:label="AT RewardedVideo"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
-            android:label="UpArpu Interstitial"
+            android:label="AT Interstitial"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
-            android:label="UpArpu Banner"
+            android:label="AT Banner"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.SplashAdActivity"
@@ -97,7 +101,7 @@
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_baidu_file_path" />
+                android:resource="@xml/anythink_bk_baidu_file_path" />
         </provider>
 
         <activity
@@ -140,7 +144,7 @@
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_gdt_file_path" />
+                android:resource="@xml/anythink_bk_gdt_file_path" />
         </provider> <!-- android:networkSecurityConfig="@xml/network_security_config" -->
         <activity
             android:name="com.inmobi.rendering.InMobiAdActivity"
@@ -170,16 +174,16 @@
             android:exported="false" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_ksyun_file_path" />
+                android:resource="@xml/anythink_bk_ksyun_file_path" />
         </provider>
         <provider
-            android:name="com.uparpu.network.luomi.LuomiUpArpuFileProvider"
+            android:name="com.anythink.network.luomi.LuomiATFileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_luomi_file_path" />
+                android:resource="@xml/anythink_bk_luomi_file_path" />
         </provider>
 
         <meta-data
@@ -256,13 +260,13 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <provider
-            android:name="com.uparpu.network.oneway.OnewayUpArpuFileProvider"
+            android:name="com.anythink.network.oneway.OnewayATFileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_oneway_file_path" />
+                android:resource="@xml/anythink_bk_oneway_file_path" />
         </provider>
 
         <activity
@@ -332,7 +336,7 @@
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_tt_file_path" />
+                android:resource="@xml/anythink_bk_tt_file_path" />
         </provider>
 
         <activity
@@ -369,7 +373,7 @@
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_uniplay_file_path" />
+                android:resource="@xml/anythink_bk_uniplay_file_path" />
         </provider> <!-- Vungle Activities -->
         <activity
             android:name="com.vungle.warren.ui.VungleActivity"

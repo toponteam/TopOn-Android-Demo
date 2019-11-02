@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.uparpu.mintegral">
+    package="com.anythink.mintegral.inter">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
@@ -43,7 +43,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_mtg_file_path" />
+                android:resource="@xml/anythink_bk_mtg_file_path" />
         </provider>
     </application>
 

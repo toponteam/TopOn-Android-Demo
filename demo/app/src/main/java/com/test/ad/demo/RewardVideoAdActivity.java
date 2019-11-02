@@ -8,36 +8,36 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.uparpu.api.AdError;
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.network.adcolony.AdColonyUpArpuConst;
-import com.uparpu.network.adcolony.AdColonyUparpuRewardedVideoSetting;
-import com.uparpu.network.admob.AdmobUpArpuConst;
-import com.uparpu.network.admob.AdmobUpArpuRewardedVideoSetting;
-import com.uparpu.network.applovin.ApplovinUpArpuConst;
-import com.uparpu.network.applovin.ApplovinUpArpuRewardedVideoSetting;
-import com.uparpu.network.chartboost.ChartboostUpArpuConst;
-import com.uparpu.network.chartboost.ChartboostUpArpuRewardedVideoSetting;
-import com.uparpu.network.flurry.FlurryUpArpuConst;
-import com.uparpu.network.flurry.FlurryUpArpuRewardedVideoSetting;
-import com.uparpu.network.inmobi.InmobiUpArpuConst;
-import com.uparpu.network.inmobi.InmobiUpArpuRewardedVideoSetting;
-import com.uparpu.network.ironsource.IronsourceUpArpuRewardedVideoSetting;
-import com.uparpu.network.ironsource.IronsourceUparpuConst;
-import com.uparpu.network.mintegral.MintegralUpArpuConst;
-import com.uparpu.network.mintegral.MintegralUpArpuRewardedVideoSetting;
-import com.uparpu.network.mopub.MopubUpArpuConst;
-import com.uparpu.network.mopub.MopubUpArpuRewardedVideoSetting;
-import com.uparpu.network.tapjoy.TapjoyUpArpuConst;
-import com.uparpu.network.tapjoy.TapjoyUpArpuRewardedVideoSetting;
-import com.uparpu.network.toutiao.TTUpArpuConst;
-import com.uparpu.network.toutiao.TTUpArpuRewardedVideoSetting;
-import com.uparpu.network.unityads.UnityAdsUpArpuConst;
-import com.uparpu.network.unityads.UnityAdsUpArpuRewardedVideoSetting;
-import com.uparpu.network.vungle.VungleRewardedVideoSetting;
-import com.uparpu.network.vungle.VungleUpArpuConst;
-import com.uparpu.rewardvideo.api.UpArpuRewardVideoAd;
-import com.uparpu.rewardvideo.api.UpArpuRewardVideoListener;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.AdError;
+import com.anythink.network.adcolony.AdColonyATConst;
+import com.anythink.network.adcolony.AdColonyRewardedVideoSetting;
+import com.anythink.network.admob.AdmobATConst;
+import com.anythink.network.admob.AdmobRewardedVideoSetting;
+import com.anythink.network.applovin.ApplovinATConst;
+import com.anythink.network.applovin.ApplovinRewardedVideoSetting;
+import com.anythink.network.chartboost.ChartboostATConst;
+import com.anythink.network.chartboost.ChartboostRewardedVideoSetting;
+import com.anythink.network.flurry.FlurryATConst;
+import com.anythink.network.flurry.FlurryRewardedVideoSetting;
+import com.anythink.network.inmobi.InmobiATConst;
+import com.anythink.network.inmobi.InmobiRewardedVideoSetting;
+import com.anythink.network.ironsource.IronsourceATConst;
+import com.anythink.network.ironsource.IronsourceRewardedVideoSetting;
+import com.anythink.network.mintegral.MintegralATConst;
+import com.anythink.network.mintegral.MintegralRewardedVideoSetting;
+import com.anythink.network.mopub.MopubATConst;
+import com.anythink.network.mopub.MopubRewardedVideoSetting;
+import com.anythink.network.tapjoy.TapjoyATConst;
+import com.anythink.network.tapjoy.TapjoyRewardedVideoSetting;
+import com.anythink.network.toutiao.TTATConst;
+import com.anythink.network.toutiao.TTRewardedVideoSetting;
+import com.anythink.network.unityads.UnityAdsATConst;
+import com.anythink.network.unityads.UnityAdsRewardedVideoSetting;
+import com.anythink.network.vungle.VungleATConst;
+import com.anythink.network.vungle.VungleRewardedVideoSetting;
+import com.anythink.rewardvideo.api.ATRewardVideoAd;
+import com.anythink.rewardvideo.api.ATRewardVideoListener;
 
 public class RewardVideoAdActivity extends Activity {
 
@@ -62,7 +62,6 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_uniplay
             , DemoApplicaion.mPlacementId_rewardvideo_oneway
             , DemoApplicaion.mPlacementId_rewardvideo_ksyun
-            , DemoApplicaion.mPlacementId_rewardvideo_mobpower
             , DemoApplicaion.mPlacementId_rewardvideo_appnext
             , DemoApplicaion.mPlacementId_rewardvideo_baidu
             , DemoApplicaion.mPlacementId_rewardvideo_nend
@@ -93,7 +92,6 @@ public class RewardVideoAdActivity extends Activity {
             "uniplay",
             "oneway",
             "Ksyun",
-            "mobpower",
             "appnext",
             "baidu",
             "nend",
@@ -110,7 +108,7 @@ public class RewardVideoAdActivity extends Activity {
     int mCurrentSelectIndex;
 
 
-    UpArpuRewardVideoAd mRewardVideoAd;
+    ATRewardVideoAd mRewardVideoAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,11 +175,11 @@ public class RewardVideoAdActivity extends Activity {
             mRewardVideoAd.onDestory();
             mRewardVideoAd = null;
         }
-        mRewardVideoAd = new UpArpuRewardVideoAd(this, unitIds[mCurrentSelectIndex]);
+        mRewardVideoAd = new ATRewardVideoAd(this, unitIds[mCurrentSelectIndex]);
         String userid = "test_userid_001";
         mRewardVideoAd.setUserData(userid, "");
         addSetting();
-        mRewardVideoAd.setAdListener(new UpArpuRewardVideoListener() {
+        mRewardVideoAd.setAdListener(new ATRewardVideoListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
                 Log.i(TAG, "onRewardedVideoAdLoaded");
@@ -195,37 +193,37 @@ public class RewardVideoAdActivity extends Activity {
             }
 
             @Override
-            public void onRewardedVideoAdPlayStart(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayStart(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayStart");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayStart", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayEnd(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayEnd(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayEnd");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayEnd", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayFailed(AdError errorCode, UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayFailed error:" + errorCode.printStackTrace());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayFailed:" + errorCode.printStackTrace(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdClosed(UpArpuAdInfo upArpuAdInfo) {
+            public void onRewardedVideoAdClosed(ATAdInfo adInfo) {
                 Log.i(TAG, "onRewardedVideoAdClosed " );
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onRewardedVideoAdPlayClicked(UpArpuAdInfo entity) {
+            public void onRewardedVideoAdPlayClicked(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayClicked");
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onReward(UpArpuAdInfo upArpuAdInfo) {
+            public void onReward(ATAdInfo upArpuAdInfo) {
                 Log.i(TAG, "onReward" );
                 Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
@@ -234,59 +232,59 @@ public class RewardVideoAdActivity extends Activity {
 
     private void addSetting() {
 
-        AdmobUpArpuRewardedVideoSetting _admobUpArpuMediationSetting = new AdmobUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(AdmobUpArpuConst.NETWORK_FIRM_ID, _admobUpArpuMediationSetting);
+        AdmobRewardedVideoSetting _admobATMediationSetting = new AdmobRewardedVideoSetting();
+        mRewardVideoAd.addSetting(AdmobATConst.NETWORK_FIRM_ID, _admobATMediationSetting);
 
-        MintegralUpArpuRewardedVideoSetting _mintegralUpArpuMediationSetting = new MintegralUpArpuRewardedVideoSetting();
+        MintegralRewardedVideoSetting _mintegralATMediationSetting = new MintegralRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(MintegralUpArpuConst.NETWORK_FIRM_ID, _mintegralUpArpuMediationSetting);
-
-
-        ApplovinUpArpuRewardedVideoSetting _applovinUpArpuMediationSetting = new ApplovinUpArpuRewardedVideoSetting();
-
-        mRewardVideoAd.addSetting(ApplovinUpArpuConst.NETWORK_FIRM_ID, _applovinUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(MintegralATConst.NETWORK_FIRM_ID, _mintegralATMediationSetting);
 
 
-        FlurryUpArpuRewardedVideoSetting _flurryUpArpuMediationSetting = new FlurryUpArpuRewardedVideoSetting();
+        ApplovinRewardedVideoSetting _applovinATMediationSetting = new ApplovinRewardedVideoSetting();
 
-        mRewardVideoAd.addSetting(FlurryUpArpuConst.NETWORK_FIRM_ID, _flurryUpArpuMediationSetting);
-
-
-        InmobiUpArpuRewardedVideoSetting _inmobiUpArpuMediationSetting = new InmobiUpArpuRewardedVideoSetting();
-
-        mRewardVideoAd.addSetting(InmobiUpArpuConst.NETWORK_FIRM_ID, _inmobiUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(ApplovinATConst.NETWORK_FIRM_ID, _applovinATMediationSetting);
 
 
-        MopubUpArpuRewardedVideoSetting _mopubUpArpuMediationSetting = new MopubUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(MopubUpArpuConst.NETWORK_FIRM_ID, _mopubUpArpuMediationSetting);
+        FlurryRewardedVideoSetting _flurryATMediationSetting = new FlurryRewardedVideoSetting();
+
+        mRewardVideoAd.addSetting(FlurryATConst.NETWORK_FIRM_ID, _flurryATMediationSetting);
 
 
-        ChartboostUpArpuRewardedVideoSetting _chartboostUpArpuMediationSetting = new ChartboostUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(ChartboostUpArpuConst.NETWORK_FIRM_ID, _chartboostUpArpuMediationSetting);
+        InmobiRewardedVideoSetting _inmobiATMediationSetting = new InmobiRewardedVideoSetting();
 
-        TapjoyUpArpuRewardedVideoSetting _tapjoyUpArpuMediationSetting = new TapjoyUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(TapjoyUpArpuConst.NETWORK_FIRM_ID, _tapjoyUpArpuMediationSetting);
+        mRewardVideoAd.addSetting(InmobiATConst.NETWORK_FIRM_ID, _inmobiATMediationSetting);
 
-        IronsourceUpArpuRewardedVideoSetting _ironsourceUpArpuMediationSetting = new IronsourceUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(IronsourceUparpuConst.NETWORK_FIRM_ID, _ironsourceUpArpuMediationSetting);
 
-        UnityAdsUpArpuRewardedVideoSetting _unityAdUpArpuMediationSetting = new UnityAdsUpArpuRewardedVideoSetting();
-        mRewardVideoAd.addSetting(UnityAdsUpArpuConst.NETWORK_FIRM_ID, _unityAdUpArpuMediationSetting);
+        MopubRewardedVideoSetting _mopubATMediationSetting = new MopubRewardedVideoSetting();
+        mRewardVideoAd.addSetting(MopubATConst.NETWORK_FIRM_ID, _mopubATMediationSetting);
+
+
+        ChartboostRewardedVideoSetting _chartboostATMediationSetting = new ChartboostRewardedVideoSetting();
+        mRewardVideoAd.addSetting(ChartboostATConst.NETWORK_FIRM_ID, _chartboostATMediationSetting);
+
+        TapjoyRewardedVideoSetting _tapjoyATMediationSetting = new TapjoyRewardedVideoSetting();
+        mRewardVideoAd.addSetting(TapjoyATConst.NETWORK_FIRM_ID, _tapjoyATMediationSetting);
+
+        IronsourceRewardedVideoSetting _ironsourceATMediationSetting = new IronsourceRewardedVideoSetting();
+        mRewardVideoAd.addSetting(IronsourceATConst.NETWORK_FIRM_ID, _ironsourceATMediationSetting);
+
+        UnityAdsRewardedVideoSetting _unityAdATMediationSetting = new UnityAdsRewardedVideoSetting();
+        mRewardVideoAd.addSetting(UnityAdsATConst.NETWORK_FIRM_ID, _unityAdATMediationSetting);
 
         VungleRewardedVideoSetting vungleRewardVideoSetting = new VungleRewardedVideoSetting();
         vungleRewardVideoSetting.setOrientation(2);
         vungleRewardVideoSetting.setSoundEnable(true);
-        mRewardVideoAd.addSetting(VungleUpArpuConst.NETWORK_FIRM_ID, vungleRewardVideoSetting);
+        mRewardVideoAd.addSetting(VungleATConst.NETWORK_FIRM_ID, vungleRewardVideoSetting);
 
 
-        AdColonyUparpuRewardedVideoSetting adColonyUparpuRewardVideoSetting = new AdColonyUparpuRewardedVideoSetting();
-        adColonyUparpuRewardVideoSetting.setEnableConfirmationDialog(false);
-        adColonyUparpuRewardVideoSetting.setEnableResultsDialog(false);
-        mRewardVideoAd.addSetting(AdColonyUpArpuConst.NETWORK_FIRM_ID, adColonyUparpuRewardVideoSetting);
+        AdColonyRewardedVideoSetting adColonyRewardVideoSetting = new AdColonyRewardedVideoSetting();
+        adColonyRewardVideoSetting.setEnableConfirmationDialog(false);
+        adColonyRewardVideoSetting.setEnableResultsDialog(false);
+        mRewardVideoAd.addSetting(AdColonyATConst.NETWORK_FIRM_ID, adColonyRewardVideoSetting);
 
-        TTUpArpuRewardedVideoSetting ttUpArpuRewardedVideoSetting = new TTUpArpuRewardedVideoSetting();
-        ttUpArpuRewardedVideoSetting.setRequirePermission(true);
-        mRewardVideoAd.addSetting(TTUpArpuConst.NETWORK_FIRM_ID, ttUpArpuRewardedVideoSetting);
+        TTRewardedVideoSetting ttRewardedVideoSetting = new TTRewardedVideoSetting();
+        ttRewardedVideoSetting.setRequirePermission(true);
+        mRewardVideoAd.addSetting(TTATConst.NETWORK_FIRM_ID, ttRewardedVideoSetting);
 
     }
 

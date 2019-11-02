@@ -7,11 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.nativead.banner.api.UpArpuNaitveBannerListener;
-import com.uparpu.nativead.banner.api.UpArpuNaitveBannerSize;
-import com.uparpu.nativead.banner.api.UpArpuNativeBannerConfig;
-import com.uparpu.nativead.banner.api.UpArpuNativeBannerView;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.nativead.banner.api.ATNaitveBannerListener;
+import com.anythink.nativead.banner.api.ATNaitveBannerSize;
+import com.anythink.nativead.banner.api.ATNativeBannerConfig;
+import com.anythink.nativead.banner.api.ATNativeBannerView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,9 +27,9 @@ public class NativeBannerActivity extends Activity {
 
         final LinearLayout frameLayout = findViewById(R.id.native_banner_frame);
 
-        final UpArpuNativeBannerView bannerView = new UpArpuNativeBannerView(this);
-        UpArpuNativeBannerConfig config640 = new UpArpuNativeBannerConfig();
-        config640.bannerSize = UpArpuNaitveBannerSize.BANNER_SIZE_640x150;
+        final ATNativeBannerView bannerView = new ATNativeBannerView(this);
+        ATNativeBannerConfig config640 = new ATNativeBannerConfig();
+        config640.bannerSize = ATNaitveBannerSize.BANNER_SIZE_640x150;
 //        config640.backgroupResId = R.drawable.uparpu_test_bg;
         config640.ctaBgColor = 0xff000000;
         bannerView.setBannerConfig(config640);
@@ -40,7 +40,7 @@ public class NativeBannerActivity extends Activity {
         params640.topMargin = dip2px(this, 10);
         bannerView.setBackgroundColor(0xffffffff);
         frameLayout.addView(bannerView, params640);
-        bannerView.setAdListener(new UpArpuNaitveBannerListener() {
+        bannerView.setAdListener(new ATNaitveBannerListener() {
             @Override
             public void onAdLoaded() {
                 bannerView.setVisibility(View.VISIBLE);
@@ -53,7 +53,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
                 Log.i("BannerActivity", "640---onAdClick----");
             }
 
@@ -63,12 +63,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
                 Log.i("BannerActivity", "640---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh(UpArpuAdInfo entity) {
+            public void onAutoRefresh(ATAdInfo entity) {
                 Log.i("BannerActivity", "640---onAutoRefresh----");
             }
 
@@ -78,10 +78,10 @@ public class NativeBannerActivity extends Activity {
             }
         });
 
-        final UpArpuNativeBannerView bannerView320 = new UpArpuNativeBannerView(this);
+        final ATNativeBannerView bannerView320 = new ATNativeBannerView(this);
 
-        UpArpuNativeBannerConfig config320 = new UpArpuNativeBannerConfig();
-        config320.bannerSize = UpArpuNaitveBannerSize.BANNER_SIZE_320x50;
+        ATNativeBannerConfig config320 = new ATNativeBannerConfig();
+        config320.bannerSize = ATNaitveBannerSize.BANNER_SIZE_320x50;
 //        config320.backgroupResId = R.drawable.uparpu_test_bg;
         config320.ctaBgColor = 0xff000000;
         bannerView320.setBannerConfig(config320);
@@ -93,7 +93,7 @@ public class NativeBannerActivity extends Activity {
         params320.topMargin = dip2px(this, 10);
         frameLayout.addView(bannerView320, params320);
 
-        bannerView320.setAdListener(new UpArpuNaitveBannerListener() {
+        bannerView320.setAdListener(new ATNaitveBannerListener() {
             @Override
             public void onAdLoaded() {
                 bannerView320.setVisibility(View.VISIBLE);
@@ -106,7 +106,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdClick----");
             }
 
@@ -116,12 +116,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh(UpArpuAdInfo entity) {
+            public void onAutoRefresh(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAutoRefresh----");
             }
 
@@ -132,11 +132,11 @@ public class NativeBannerActivity extends Activity {
         });
 
 
-        final UpArpuNativeBannerView bannerViewAuto = new UpArpuNativeBannerView(this);
+        final ATNativeBannerView bannerViewAuto = new ATNativeBannerView(this);
         bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_admob);
         bannerViewAuto.setVisibility(View.GONE);
-        UpArpuNativeBannerConfig configAuto = new UpArpuNativeBannerConfig();
-        configAuto.bannerSize = UpArpuNaitveBannerSize.BANNER_SIZE_AUTO;
+        ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
+        configAuto.bannerSize = ATNaitveBannerSize.BANNER_SIZE_AUTO;
 //                configAuto.backgroupResId = R.drawable.uparpu_test_bg;
         configAuto.isCtaBtnShow = true;
         configAuto.ctaBgColor = 0xff000000;
@@ -149,7 +149,7 @@ public class NativeBannerActivity extends Activity {
         paramsAuto.topMargin = dip2px(getApplicationContext(), 10);
         frameLayout.addView(bannerViewAuto, paramsAuto);
 
-        bannerViewAuto.setAdListener(new UpArpuNaitveBannerListener() {
+        bannerViewAuto.setAdListener(new ATNaitveBannerListener() {
             @Override
             public void onAdLoaded() {
                 Log.i("BannerActivity", "320---onAdLoaded----");
@@ -161,7 +161,7 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdClick(UpArpuAdInfo entity) {
+            public void onAdClick(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdClick----");
             }
 
@@ -171,12 +171,12 @@ public class NativeBannerActivity extends Activity {
             }
 
             @Override
-            public void onAdShow(UpArpuAdInfo entity) {
+            public void onAdShow(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAdShow----");
             }
 
             @Override
-            public void onAutoRefresh(UpArpuAdInfo entity) {
+            public void onAutoRefresh(ATAdInfo entity) {
                 Log.i("BannerActivity", "320---onAutoRefresh----");
             }
 

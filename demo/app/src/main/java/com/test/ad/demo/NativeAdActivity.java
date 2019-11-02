@@ -8,11 +8,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.uparpu.api.AdError;
-import com.uparpu.nativead.api.NativeAd;
-import com.uparpu.nativead.api.UpArpuNative;
-import com.uparpu.nativead.api.UpArpuNativeAdView;
-import com.uparpu.nativead.api.UpArpuNativeNetworkListener;
+import com.anythink.core.api.AdError;
+import com.anythink.nativead.api.ATNative;
+import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeNetworkListener;
+import com.anythink.nativead.api.NativeAd;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +29,6 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_mintegral
             , DemoApplicaion.mPlacementId_native_mopub
             , DemoApplicaion.mPlacementId_native_GDT
-            , DemoApplicaion.mPlacementId_native_mobpower
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_toutiao
             , DemoApplicaion.mPlacementId_native_toutiao_drawer
@@ -49,7 +48,6 @@ public class NativeAdActivity extends Activity {
             "mintegral",
             "mopub",
             "gdt",
-            "mobpower",
             "appnext",
             "toutiao",
             "toutiao_drawer",
@@ -58,8 +56,8 @@ public class NativeAdActivity extends Activity {
             "luomi"
     };
 
-    UpArpuNative upArapuNatives[] = new UpArpuNative[unitIds.length];
-    UpArpuNativeAdView upArpuNativeAdView;
+    ATNative upArapuNatives[] = new ATNative[unitIds.length];
+    ATNativeAdView upArpuNativeAdView;
     NativeAd mNativeAd;
 
     RadioGroup mRadioGroup;
@@ -92,11 +90,11 @@ public class NativeAdActivity extends Activity {
             }
         });
 
-        final UpArpuRender upArpuRender = new UpArpuRender(this);
+        final NativeDemoRender upArpuRender = new NativeDemoRender(this);
 
         Map<String, Object> localMap = null;
         for (int i = 0; i < unitIds.length; i++) {
-            upArapuNatives[i] = new UpArpuNative(this, unitIds[i], new UpArpuNativeNetworkListener() {
+            upArapuNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Toast.makeText(NativeAdActivity.this, "load success..."
@@ -111,7 +109,7 @@ public class NativeAdActivity extends Activity {
             });
 
             if (upArpuNativeAdView == null) {
-                upArpuNativeAdView = new UpArpuNativeAdView(this);
+                upArpuNativeAdView = new ATNativeAdView(this);
             }
         }
 

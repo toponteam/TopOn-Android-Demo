@@ -9,14 +9,14 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.uparpu.api.AdError;
-import com.uparpu.api.UpArpuAdInfo;
-import com.uparpu.splashad.api.UpArpuSplashAd;
-import com.uparpu.splashad.api.UpArpuSplashAdListener;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.AdError;
+import com.anythink.splashad.api.ATSplashAd;
+import com.anythink.splashad.api.ATSplashAdListener;
 
-public class SplashAdShowActivity extends Activity implements UpArpuSplashAdListener {
+public class SplashAdShowActivity extends Activity implements ATSplashAdListener {
     TextView skipView;
-    UpArpuSplashAd splashAd;
+    ATSplashAd splashAd;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +25,9 @@ public class SplashAdShowActivity extends Activity implements UpArpuSplashAdList
 
         String unitId = getIntent().getStringExtra("unitId");
         FrameLayout container = findViewById(R.id.splash_ad_container);
-        skipView = findViewById(R.id.splash_ad_skip);
-        skipView.setVisibility(View.GONE);
+        skipView = findViewById(R.id.splash_ad_skip); //这个skipview必须是可见状态，否则会影响广告结算
 
-        splashAd = new UpArpuSplashAd(this, container, skipView, unitId, this, null);
+        splashAd = new ATSplashAd(this, container, skipView, unitId, this, null);
 
 
     }
@@ -46,17 +45,17 @@ public class SplashAdShowActivity extends Activity implements UpArpuSplashAdList
     }
 
     @Override
-    public void onAdShow(UpArpuAdInfo entity) {
+    public void onAdShow(ATAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdShow---------");
     }
 
     @Override
-    public void onAdClick(UpArpuAdInfo entity) {
+    public void onAdClick(ATAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdClick---------");
     }
 
     @Override
-    public void onAdDismiss(UpArpuAdInfo entity) {
+    public void onAdDismiss(ATAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdDismiss---------");
         finish();
         Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();

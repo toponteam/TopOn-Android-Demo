@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.uparpu.oneway">
+    package="com.anythink.oneway">
 
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,7 +16,7 @@
             android:name="mobi.oneway.export.AdShowActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:hardwareAccelerated="true"
-            android:theme="@style/UpArpuOneWayAdTheme"
+            android:theme="@style/ATOneWayAdTheme"
             android:launchMode="singleTask"/>
 
         <provider
@@ -26,7 +26,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/uparpu_bk_oneway_file_path" />
+                android:resource="@xml/anythink_bk_oneway_file_path" />
         </provider>
     </application>
 
