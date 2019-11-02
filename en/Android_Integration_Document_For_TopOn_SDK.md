@@ -91,7 +91,9 @@ According to the platform that you need to integrate, add SDK package to your An
 **In the Gradle file, you need to add the configuration of the android-v7 package:**
 
 ```java
-implementation 'com.android.support:appcompat-v7:28.0.0'
+dependencies {
+   implementation 'com.android.support:appcompat-v7:28.0.0'
+}
 ```
 
 <h4>2.2.3 The configuration description of AndroidManifest</h4>
