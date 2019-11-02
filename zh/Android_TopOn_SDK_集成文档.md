@@ -92,7 +92,9 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 **在Gradle的文件中需要补上android-v7包的配置：**
 
 ```java
-implementation 'com.android.support:appcompat-v7:28.0.0'
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+}
 ```
 
 <h4>2.2.3 AndroidManifest配置说明 </h4>
