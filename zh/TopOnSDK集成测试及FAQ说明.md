@@ -1,11 +1,71 @@
+
 # TopOn SDK 集成测试及FAQ说明
 
+[0. 集成检查列表 CheckList](#0)<br>
 [1. TopOn SDK测试指引](#1)<br>
 [2. 错误码信息](#2)<br>
 [3. FAQ](#3)<br>
 
 
+<h2 id='0'>0. 集成检查列表 CheckList</h2>
+
+a、SDK核心依赖包：
+```
+anythink_core.aar
+```
+
+b、广告形式依赖包：
+```
+原生广告：anythink_native.aar 
+横幅广告：anythink_banner.aar
+插屏广告：anythink_interstitial.aar 
+激励视频：anythink_rewardvideo.aar 
+开屏广告：anythink_splash.aar 
+```
+
+c、头部竞价功能依赖包：
+```
+anythink_headbiding.aar<br>
+```
+
+**d、广告平台的依赖，network_sdk目录下对应广告平台文件夹中的:**
+```
+libs、extra文件夹中的aar、jar包
+AndroidManifest.xml
+proguard-android.txt
+res资源
+```
+(比如：聚合Facebook和Admob两家广告平台，则network_sdk目录下的facebook、admob文件夹中的所有相关资源均需要导入、配置）
+
+e、android-v7库依赖：
+```java
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+}
+```
+
+f、AndroidManifest.xml 9.0高版本适配<br>
+
+```java
+ <application
+        ...
+        <!--针对Android高版本下可以使用Http请求的配置-->
+        android:usesCleartextTraffic="true">
+        ....
+        <!--针对Android 9.0以上的配置，用于适配9.0的网络请求-->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        ....
+<application>
+```
+<br>
+
+集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](https://github.com/anythinkteam/demo_android/blob/master/zh/Android_TopOn_SDK_%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3.md)
+
+
+
 <h2 id='1'>1. TopOn SDK测试指引</h2>
+
+**测试开始前请按照 [集成检查列表](#0) 检查TopOn SDK的依赖包以及您打算聚合的广告平台的依赖是否均导入进工程中，包括aar、jar、AndroidManifest.xml、proguard-android.txt、res资源等。**
 
 <h3>1.1 打开SDK的日志功能</h3>
 
@@ -60,7 +120,7 @@
 
 <h4>1.3.1 “success”：成功</h4>
 
-如果**加载、显示、点击、关闭**等全部流程均成功，<a href="#1.4 验证下一个广告源">请跳转 1.4</a>
+如果**加载、显示、点击、关闭**等全部流程均成功，请跳转 [1.4 验证下一个广告源](#1.4)
 
 <h4>1.3.2 “fail”：失败</h4>
 
@@ -78,10 +138,10 @@ platformCode：第三方广告平台的错误码（广告没有填充的时候�
 platformMsg：第三方广告平台的错误信息（广告没有填充的时候需要检查的错误信息）
 ```
 
-1. 请先根据**code**进行查询，请跳转 <a href="#2. 错误码信息">错误码信息说明</a>，查询TopOnSDK的错误码及描述
+1. 请先根据**code**进行查询，请跳转 [2. 错误码信息](#2)，查询TopOnSDK的错误码及描述
 2. 如果**code==4001**，请根据**platformCode**、**platformMsg**到对应的第三方广告平台查询错误码及描述
 
-<h3>1.4 验证下一个广告源</h3>
+<h3 id="1.4">1.4 验证下一个广告源</h3>
 
 1、以**DemoBlack_RV**这个广告位为例，当**ironSource**这个广告源的**加载、展示、点击、关闭**均成功后，说明此广告源以成功接入。
 
@@ -89,7 +149,7 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 
 ![](Close_the_status_of_ad_source.png)
 
-关闭状态的广告源将自动下移。**修改后大约5分钟生效**，**此时广告位的广告源如下：**
+关闭状态的广告源将自动下移。**修改后大约1分钟生效（因为SDK本地会有缓存，所以需要清除应用数据后再试）**，**此时广告位的广告源如下：**
 
 ​	1) **Applovin (此时TopOn SDK将首先请求此广告源)**
 
@@ -148,11 +208,22 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 
 **问**：当请求广告时出现的platform的错误码和错误信息，应该怎么查询没有填充的问题？<br>
 **答**：如果TopOn的错误码是4001的话，出现platform的错误码需要到对应的第三方平台网站查看错误码信息（可通过日志中networkType字段来查看是哪家第三方广告平台的）。
+
+
+|广告平台 | NetworkType | platformCode | platformMsg | 解决方法 |
+| ------- | ----------- | ----------- | ----------- | ------- |
+| Facebook | 1          | 1001        | No Fill     | 上线后才会有填充，请到Facebook后台添加测试设备进行测试 |
+| Admob    | 2          |             | 1           | 广告位异常，请检查Admob后台与TopOn后台|
+|          |            |             | 2           | 网络异常，请检查网络是否可用，并且已翻墙|
+|          |            |             | 3           | 上线后才会有填充，请用测试id进行测试，[Admob广告位测试id](https://developers.google.com/admob/android/test-ads)。|
+| toutiao  | 15         | 40025       | 未知错误或者渲染错误       | 请到您的穿山甲后台下载相应的穿山甲的SDK的aar包，替换掉open\_ad\_sdk\_\*.aar这个包|
+
+
 <br>
 <br>
 
 **问**：在TopOn后台调整广告位下的AdSource列表之后，大概需要多久生效？<br>
-**答**：调整之后预计是5分钟左右生效，5分钟之后需要杀死应用重启，SDK就会获取到最新的策略。
+**答**：调整之后预计是1分钟左右生效，1分钟之后需要杀死并清除应用数据后重启，SDK就会获取到最新的策略。
 <br>
 <br>
 
@@ -187,3 +258,29 @@ R.id.mintegral_*
 
 <br>
 <br>
+
+**问**：Firebase与TopOn SDK冲突，如何解决？<br>
+**答**：这是因为Admob与Firebase所依赖的Google Play Services版本不相同导致的
+
+| Admob SDK版本 | Firebase 版本 |
+| ------ | ------------------------------------------------------------ |
+| 17.2.0 | 16.0.7 |
+<br>
+
+**问**：在某些设备上，头条广告下载的apk安装不了，如何解决？<br>
+**答**：在我们提供的头条的文件夹里的anythink_bk_tt_file_path这个文件里，补上这句话：<br>
+```
+<root-path name="root" path="" />
+```
+
+<br>
+<br>
+
+**问**：头条的激励视频广告在播放时报了空指针，如何解决？<br>
+**答**：如果打包时会打出多个dex，请确保头条相关的类要打入classes.dex中。
+
+<br>
+<br>
+
+
+

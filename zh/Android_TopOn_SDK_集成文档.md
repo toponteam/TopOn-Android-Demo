@@ -12,6 +12,7 @@
 [10. Splash广告集成说明](#10)<br>
 [11. GDPR说明](#11)<br>
 [12. HeadBidding说明](#12)<br>
+[13. 集成测试、错误码、FAQ](#13)<br>
 
 
 
@@ -22,6 +23,12 @@
 
 
 <h2 id='2'>2. TopOn SDK的集成说明 </h2>
+
+**在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+
+**SDK集成过程中遇到的问题**以及**集成完成后广告的验证流程**，请参考 [13. 集成测试、错误码、FAQ](#13)
+
 
 <h3>2.1 SDK下载地址</h3>
 
@@ -103,10 +110,9 @@ dependencies {
  <application
         ...
         <!--针对Android高版本下可以使用Http请求的配置-->
-        android:usesCleartextTraffic="true" 
-        >
+        android:usesCleartextTraffic="true">
         ....
-		<!--针对Android 9.0以上的配置，用于适配9.0的网络请求-->
+        <!--针对Android 9.0以上的配置，用于适配9.0的网络请求-->
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         ....
 <application>
@@ -129,6 +135,12 @@ dependencies {
 
 
 <h2 id='3'>3. SDK初始化说明 </h2>
+
+**在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+
+**SDK集成过程中遇到的问题**以及**集成完成后广告的验证流程**，请参考 [13. 集成测试、错误码、FAQ](#13)
+
 
 <h3>3.1 API说明</h3>
 
@@ -910,3 +922,12 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 | Mintegral | Android  | 原生, 激励视频, 插屏视频 | >= 9.12.4           | mintegral_mtgbid.aar |
 
 注：以上额外的SDK包已经在对应平台的SDK目录已经存在，如果有需要直接导入即可。
+
+
+
+<h2 id='13'>13. 集成测试、错误码、FAQ</h2>
+
+**请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+
+请跳转 [TopOn SDK 集成测试及FAQ说明](https://github.com/anythinkteam/demo_android/blob/master/zh/TopOnSDK%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E5%8F%8AFAQ%E8%AF%B4%E6%98%8E.md)
