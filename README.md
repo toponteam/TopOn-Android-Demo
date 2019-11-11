@@ -1,4 +1,4 @@
-# TopOn v4.6.0
+# TopOn v5.0.0
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -13,34 +13,34 @@
 
 | Network Name| NETWORK VERSION|
 |---|---|
-|Facebook | 5.4.1|
-|Admob | 17.2.0 |
-|Inmobi | 7.3.0 | 
+|Facebook | 5.5.0|
+|Admob | 18.2.0 |
+|Inmobi | 9.0.0 | 
 |Flurry| 11.5.0 | 
-|Applovin| 9.8.0 | 
-|Mintegral | 9.13.1 |
+|Applovin| 9.9.2 | 
+|Mintegral | 10.1.21 |
 |Mopub | 5.8.0 |
-|GDT | 4.70.940|
+|GDT | 4.100|
 |Chartboost | 7.5.0| 
-|Tapjoy | 12.3.1 |
+|Tapjoy | 12.3.4 |
 |Ironsource | 6.10.1|
-|UnityAds | 3.2.0 |
+|UnityAds | 3.3.0 |
 |Vungle | 6.4.11 | 
-|Adcolony | 3.3.10 | 
-|TouTiao|v2.3.0.8(需要开发者在自己头条账号后台下载相应的SDK)|
+|Adcolony | 4.1.0 | 
+|TouTiao|v2.5.2.4(需要开发者在自己头条账号后台下载相应的SDK)|
 |玩转互联 | 6.0.2  |
 |Oneway|2.3.4|
 |MobPower | 4.8.0 |
 |Yeahmobi|4.0.6 |
 |Appnext|2.4.8.472|
-|Baidu|5.81 |
-|Nend|5.1.0 |
-|Maio|1.1.9 |
-|StartApp|4.0.2|
+|Baidu|5.83 |
+|Nend|5.3.0 |
+|Maio|1.1.10 |
+|StartApp|4.2.4|
 |SuperAwesome|7.0.1|
 |洛米|9.1.30|
-|快手|2.2.1|
-|Sigmob|2.12.0|
+|快手|2.2.5|
+|Sigmob|2.13.1|
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
 

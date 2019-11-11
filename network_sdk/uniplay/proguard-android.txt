@@ -1,0 +1,16 @@
+-keep class com.uniplay.adsdk.**
+-keep class com.joomob.**
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+-keepattributes Annotation
+-keepattributes JavascriptInterface
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers public class com.uniplay.adsdk.JavaScriptInterface{
+    <fields>;
+    <methods>;
+    public *;
+    private *;
+}

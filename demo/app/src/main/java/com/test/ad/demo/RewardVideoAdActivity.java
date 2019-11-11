@@ -70,6 +70,7 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_superawesome
             , DemoApplicaion.mPlacementId_rewardvideo_ks
             , DemoApplicaion.mPlacementId_rewardvideo_sigmob
+            , DemoApplicaion.mPlacementId_rewardvideo_myoffer
     };
 
     String unitGroupName[] = new String[]{
@@ -99,7 +100,8 @@ public class RewardVideoAdActivity extends Activity {
             "startApp",
             "superAwesome",
             "kuaishou",
-            "sigmob"
+            "sigmob",
+            "myoffer"
     };
 
     RadioGroup mRadioGroup;

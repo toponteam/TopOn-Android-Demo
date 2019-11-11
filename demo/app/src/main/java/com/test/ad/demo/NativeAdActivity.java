@@ -2,15 +2,18 @@ package com.test.ad.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 
@@ -18,6 +21,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class NativeAdActivity extends Activity {
+
+    private static String TAG = "NativeAdActivity";
 
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
@@ -97,12 +102,14 @@ public class NativeAdActivity extends Activity {
             upArapuNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
+                    Log.i(TAG, "onNativeAdLoaded");
                     Toast.makeText(NativeAdActivity.this, "load success..."
                             , Toast.LENGTH_LONG).show();
                 }
 
                 @Override
                 public void onNativeAdLoadFail(AdError adError) {
+                    Log.i(TAG, "onNativeAdLoadFail, " + adError.printStackTrace());
                     Toast.makeText(NativeAdActivity.this, "load fail...：" + adError.printStackTrace(), Toast.LENGTH_LONG).show();
 
                 }
@@ -130,6 +137,32 @@ public class NativeAdActivity extends Activity {
                 NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
+                    mNativeAd.setNativeEventListener(new ATNativeEventListener() {
+                        @Override
+                        public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
+                            Log.i(TAG, "native ad onAdImpressed--------\n" + entity.printInfo());
+                        }
+
+                        @Override
+                        public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
+                            Log.i(TAG, "native ad onAdClicked--------\n" + entity.printInfo());
+                        }
+
+                        @Override
+                        public void onAdVideoStart(ATNativeAdView view) {
+                            Log.i(TAG, "native ad onAdVideoStart--------");
+                        }
+
+                        @Override
+                        public void onAdVideoEnd(ATNativeAdView view) {
+                            Log.i(TAG, "native ad onAdVideoEnd--------");
+                        }
+
+                        @Override
+                        public void onAdVideoProgress(ATNativeAdView view, int progress) {
+                            Log.i(TAG, "native ad onAdVideoProgress--------:" + progress);
+                        }
+                    });
                     mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(anyThinkNativeAdView);

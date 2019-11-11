@@ -59,6 +59,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_superawesome = "b5cff0d2157805";
     public static final String mPlacementId_rewardvideo_ks = "b5d67459a3e535";
     public static final String mPlacementId_rewardvideo_sigmob = "b5d7228c6c5d6a";
+    public static final String mPlacementId_rewardvideo_myoffer = "b5db6c3764aea3";
 
     //banner正式
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";
@@ -111,6 +112,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitia_startapp = "b5d5e641d9c30a";
     public static final String mPlacementId_interstitial_ks = "b5d6745b8133f2";
     public static final String mPlacementId_interstitial_sigmob = "b5d7614ab30695";
+    public static final String mPlacementId_interstitial_myoffer = "b5db6c39aed9c5";
 
     //splash
     public static final String mPlacementId_splash_all = "b5bea7cc9a4497";

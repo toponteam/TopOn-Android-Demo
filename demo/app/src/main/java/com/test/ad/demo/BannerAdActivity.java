@@ -110,11 +110,12 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerAutoRefreshed(ATAdInfo entity) {
-
+                Log.i("BannerAdActivity", "onBannerAutoRefreshed");
             }
 
             @Override
             public void onBannerAutoRefreshFail(AdError adError) {
+                Log.i("BannerAdActivity", "onBannerAutoRefreshFail");
 
             }
         });
