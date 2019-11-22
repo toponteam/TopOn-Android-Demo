@@ -67,6 +67,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_inmobi = "b5bbdc535a9d1a";
     public static final String mPlacementId_banner_flurry = "b5bbdc584f1368";
     public static final String mPlacementId_banner_applovin = "b5bbdc59f88520";
+    public static final String mPlacementId_banner_mintegral = "b5dd388839bf5e";
     public static final String mPlacementId_banner_mopub = "b5bbdc5c857b2f";
     public static final String mPlacementId_banner_GDT = "b5baca43951901";
     public static final String mPlacementId_banner_all = "b5baca4f74c3d8";

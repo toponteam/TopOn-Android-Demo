@@ -9,3 +9,7 @@
 -keep class sun.misc.Unsafe { *; }
 -dontwarn com.sigmob.**
 -keep class com.sigmob.**.**{*;}
+
+# miitmdid
+-keep class com.bun.miitmdid.core.** {*;}
+-dontwarn com.bun.miitmdid.core.**

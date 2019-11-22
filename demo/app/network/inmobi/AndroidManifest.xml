@@ -1,19 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.anythink.inmobi">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
         <!--android:networkSecurityConfig="@xml/network_security_config"-->
-
-        <activity
-            android:name="com.inmobi.rendering.InMobiAdActivity"
-            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
-            android:hardwareAccelerated="true"
-            android:resizeableActivity="false"
-            android:theme="@android:style/Theme.NoTitleBar"
-            tools:ignore="UnusedAttribute" />
 
     </application>
 

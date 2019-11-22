@@ -30,6 +30,7 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_inmobi
             , DemoApplicaion.mPlacementId_banner_flurry
             , DemoApplicaion.mPlacementId_banner_applovin
+            , DemoApplicaion.mPlacementId_banner_mintegral
             , DemoApplicaion.mPlacementId_banner_mopub
             , DemoApplicaion.mPlacementId_banner_appnext
             , DemoApplicaion.mPLacementId_banner_baidu
@@ -46,6 +47,7 @@ public class BannerAdActivity extends Activity {
             "Inmobi",
             "Flurry",
             "Applovin",
+            "Mintegral",
             "Mopub",
             "appnext",
             "Baidu",

@@ -27,7 +27,7 @@ networkLibsPath.add("ksyun");
 networkLibsPath.add("luomi");
 networkLibsPath.add("maio");
 //networkLibsPath.add("mintegral_china");
-networkLibsPath.add("mintegral_other");
+networkLibsPath.add("mintegral_international");
 networkLibsPath.add("mopub");
 networkLibsPath.add("nend");
 networkLibsPath.add("oneway");
@@ -76,7 +76,7 @@ android {
             res.srcDirs += 'network/luomi/res'
             res.srcDirs += 'network/maio/res'
 //            res.srcDirs += 'network/mintegral_china/res'
-            res.srcDirs += 'network/mintegral_other/res'
+            res.srcDirs += 'network/mintegral_international/res'
             res.srcDirs += 'network/mobpower/res'
             res.srcDirs += 'network/mopub/res'
             res.srcDirs += 'network/oneway/res'
@@ -102,12 +102,12 @@ dependencies {
     api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
 
 //    api fileTree(dir: "network", include: ["**/libs/*.jar", "**/libs/*.aar"])
-//            .exclude("mintegral_other/libs/*.jar")
-//            .exclude("mintegral_other/libs/*.aar")
+//            .exclude("mintegral_international/libs/*.jar")
+//            .exclude("mintegral_international/libs/*.aar")
 //
 //    implementation fileTree(dir: "network", include: ["**/extra/*.jar", "**/extra/*.aar"])
-//            .exclude("mintegral_other/extra/*.jar")
-//            .exclude("mintegral_other/extra/*.aar")
+//            .exclude("mintegral_international/extra/*.jar")
+//            .exclude("mintegral_international/extra/*.aar")
 
     def batchImportPackage = {
         HashMap<String, Boolean> packageNameMap = new HashMap<>();
