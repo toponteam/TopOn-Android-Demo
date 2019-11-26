@@ -3,10 +3,12 @@
 <h3>TopOn SDK的集成指引</h3>
 
 [Topon SDK的集成文档（中文版）](zh/Android_TopOn_SDK_集成文档.md)<br>
-[TopOn SDK集成测试文档及FAQ说明（中文版）](zh/TopOnSDK集成测试及FAQ说明.md)
+[TopOn SDK集成测试文档及FAQ说明（中文版）](zh/TopOnSDK集成测试及FAQ说明.md)<br>
+[TopOn与Firebase集成冲突解决方案（中文版）](zh/TopOn与Firebase集成冲突解决方案.md)
 
 [Android Integration Document For TopOn SDK (English)](en/Android_Integration_Document_For_TopOn_SDK.md)<br>
-[The test guideline of TopOn SDK&FAQ (English)](en/The_test_guideline_of_TopOn_SDK&FAQ.md)
+[The test guideline of TopOn SDK&FAQ (English)](en/The_test_guideline_of_TopOn_SDK&FAQ.md)<br>
+[TopOn and Firebase integration conflict resolution (English)](en/TopOn_and_Firebase_integration_conflict_resolution.md)
 
 
 <h3>TopOn聚合的第三方广告平台的版本说明</h3>

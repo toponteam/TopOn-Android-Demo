@@ -1,11 +1,77 @@
 # The test guideline of TopOn SDK&FAQ
 
+[0. Checklist](#0)<br>
 [1. The test guideline of TopOn SDK](#1)<br>
 [2. ErrorCode](#2)<br>
 [3. FAQ](#3)<br>
 
+<h2 id='0'>0. CheckList</h2>
+
+**a、SDK core dependency package：**
+```
+anythink_core.aar
+```
+
+**b、Ad form dependency package：**
+```
+Native ad：anythink_native.aar 
+Banner ad：anythink_banner.aar
+Interstitial ad：anythink_interstitial.aar 
+RewardVideo ad：anythink_rewardvideo.aar 
+Splash ad：anythink_splash.aar 
+```
+
+**c、Head bidding function dependency package：**（Must be imported when using the head bidding function）
+```
+anythink_headbiding.aar<br>
+```
+
+**d、Ad platform dependence，in the corresponding network platform folder under the network directory:**
+```
+Aar, jar package in libs, extra folder
+AndroidManifest.xml
+proguard-android.txt
+Resource in res folder
+```
+(For example: aggregating Facebook and Admob advertising platforms, all relevant resources in the facebook and admob folders in the network directory need to be imported and configured)
+
+**e、Android-v7 library dependency：**
+```java
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+}
+```
+
+**f、AndroidManifest.xml<br>**
+```java
+ <application
+        ...
+        <!--Configuration for Http request for Android high version-->
+        android:usesCleartextTraffic="true">
+        ....
+        <!--Configuration For Android 9.0 and above, it is used to adapt network request-->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        ....
+<application>
+```
+
+**g、Proguard**
+```java
+-dontwarn com.anythink.**
+-keep public class com.anythink.network.**
+-keepclassmembers class com.anythink.network.** {
+   public *;
+}
+```
+
+<br>
+
+Integration If there is a problem, please jump [Android_Integration_Document_For_TopOn_SDK](https://github.com/anythinkteam/demo_android/blob/master/en/Android_Integration_Document_For_TopOn_SDK.md)
+
 
 <h2 id='1'>1. The test guideline of TopOn SDK</h2>
+
+**Please refer to [CheckList](#0) to check the TopOn SDK dependency package and the dependencies of the advertising platform you intend to aggregate before start testing, including aar, jar, AndroidManifest.xml, proguard-android.txt, res resources, etc.**
 
 <h3>1.1 Open the logging function of the SDK</h3>
 
@@ -56,7 +122,7 @@ Observe the value of the **"result"** field
 
 <h4>1.3.1 “success”</h4>
 
-If **load, display, click, close**, etc. all processes are successful，Please step to <a href="#1.4 Test the next ad source">1.4  Test the next ad source</a>.
+If **load, display, click, close**, etc. all processes are successful，Please step to [1.4 Test the next ad source](#1.4).
 
 <h4>1.3.2 “fail”</h4>
 
@@ -74,17 +140,17 @@ platformCode：Third-party ad platform error code(need to check when the ad is n
 platformMsg：Third-party ad platform error message(need to check when the ad is not filled)
 ```
 
-1. Please first query according to **code**, Please jump to <a href="#2. ErrorCode">The description of error code</a>, query TopOnSDK error code and description.
+1. Please first query according to **code**, Please jump to  [2. ErrorCode](#2), query TopOnSDK error code and description.
 2. If **code==4001**, please go to the corresponding third-party advertising platform to query **platformCode**, **platformMsg**.
 
-<h3> 1.4 Test the next ad source</h3>
+<h3 id="1.4"> 1.4 Test the next ad source</h3>
 
 1. Take the **DemoBlack_RV** ad placement as an example. When **the loading, display, click, and close** of the **ironSource** are successful, the ad source is test passed.
 2. Then you need to test whether the **Applovin**, which is ranked second, is successful. You can click **the status switch** of the ad source in the TopOn background to close the status of the first **ironSource**. Like below:
 
 ![](Close_the_status_of_ad_source.png)
 
-The closed ad source will automatically move down. **Changes take effect after about 5 minutes**, **The ad source for the ad placement at this time is as follows: **
+The closed ad source will automatically move down. **Changes take effect after about 1 minutes(try after clear the data of **, **The ad source for the ad placement at this time is as follows: **
 
 ​	1) **Applovin (At this point, the TopOn SDK will first request this ad source.)**
 ​	2) Inmobi
@@ -140,11 +206,22 @@ After all the ad sources are verified successful, this ad placement has no excep
 
 **Q**：How should I query the problem of no fill by the error code and error information of the platform that appears when requesting an advertisement?<br>
 **A**：If the error code of TopOn is 4001, the error code of the platform needs to go to the corresponding third-party platform website to view the error code information (you can check the third-party advertising platform through the networkType field in the log)
+
+
+|广告平台 | NetworkType | platformCode | platformMsg | 解决方法 |
+| ------- | ----------- | ----------- | ----------- | ------- |
+| Facebook | 1          | 1001        | No Fill     | There will be filled after going online, please add test device to the Facebook background for testing. |
+| Admob    | 2          |             | 1           | The ad placement is abnormal, please check the Admob background and TopOn background|
+|          |            |             | 2           | The network is abnormal, please check if the network is available and has turned over the wall|
+|          |            |             | 3           | There will be filled after going online, please test with test id，[Admob test id](https://developers.google.com/admob/android/test-ads)。|
+| toutiao  | 15         | 40025       | Unknown error or rendering error       | 请Please go to your toutiao background to download the corresponding toutiao SDK aar package and replace open\_ad\_sdk\_\*.aar|
+
+
 <br>
 <br>
 
 **Q**：After adjusts the AdSource list of the ad placement on the TopOn background, how long will it take effect？<br>
-**A**：The adjustment is expected to take effect in about 5 minutes. After 5 minutes, you need to kill the application to restart, and the SDK will get the latest strategy.
+**A**：The adjustment is expected to take effect in about 1 minutes. After 1 minutes, you need to kill the application and clear the data of application, then restart, and the SDK will get the latest strategy.
 <br>
 <br>
 
@@ -176,6 +253,26 @@ R.drawable.mintegral_*
 R.layout.mintegral_*
 R.id.mintegral_*
 ```
+
+<br>
+<br>
+
+**问**：How to resolve the conflict with Firebase after importing TopOn SDK？<br>
+**答**：[TopOn and Firebase integration conflict resolution](en/TopOn_and_Firebase_integration_conflict_resolution.md)
+<br>
+<br>
+
+**Q**：On some devices, the apk of the toutiao ad download can't be installed. How to solve it?<br>
+**A**：In the anythink_bk_tt_file_path file in the toutiao directory we provide,add：<br>
+```
+<root-path name="root" path="" />
+```
+
+<br>
+<br>
+
+**Q**：The toutiao's reward video ad reported a null pointer exception during playback. How to solve it?<br>
+**A**：If multiple dex will be played when packaging, please make sure that the related items of the toutiao are entered into classes.dex.。
 
 <br>
 <br>

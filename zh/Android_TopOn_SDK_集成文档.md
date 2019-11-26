@@ -25,7 +25,7 @@
 <h2 id='2'>2. TopOn SDK的集成说明 </h2>
 
 **在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
-在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
 
 **SDK集成过程中遇到的问题**以及**集成完成后广告的验证流程**，请参考 [13. 集成测试、错误码、FAQ](#13)
 
@@ -78,6 +78,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | mopub           | Mopub SDK相关文件                 |
 | nend            | Nend SDK相关文件                  |
 | oneway          | Oneway SDK相关文件（中国区）      |
+| sigmob          | Sigmob SDK相关文件（中国区）      |
 | startapp        | StartApp SDK相关文件              |
 | superawesome    | SuperAwesome SDK相关文件          |
 | tapjoy          | Tapjoy SDK相关文件                |
@@ -105,7 +106,6 @@ dependencies {
 ```
 
 <h4>2.2.3 AndroidManifest配置说明 </h4>
-
 ```java
  <application
         ...
@@ -137,7 +137,7 @@ dependencies {
 <h2 id='3'>3. SDK初始化说明 </h2>
 
 **在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
-在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
 
 **SDK集成过程中遇到的问题**以及**集成完成后广告的验证流程**，请参考 [13. 集成测试、错误码、FAQ](#13)
 
@@ -928,6 +928,6 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 <h2 id='13'>13. 集成测试、错误码、FAQ</h2>
 
 **请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
-在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(BuildConfig.DEBUG);**<br>
+在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
 
-请跳转 [TopOn SDK 集成测试及FAQ说明](https://github.com/anythinkteam/demo_android/blob/master/zh/TopOnSDK%E9%9B%86%E6%88%90%E6%B5%8B%E8%AF%95%E5%8F%8AFAQ%E8%AF%B4%E6%98%8E.md)
+请跳转 [TopOn SDK 集成测试及FAQ说明](zh/TopOnSDK集成测试及FAQ说明.md)

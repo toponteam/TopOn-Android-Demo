@@ -9,12 +9,12 @@
 
 <h2 id='0'>0. 集成检查列表 CheckList</h2>
 
-a、SDK核心依赖包：
+**a、SDK核心依赖包：**
 ```
 anythink_core.aar
 ```
 
-b、广告形式依赖包：
+**b、广告形式依赖包：**
 ```
 原生广告：anythink_native.aar 
 横幅广告：anythink_banner.aar
@@ -23,28 +23,28 @@ b、广告形式依赖包：
 开屏广告：anythink_splash.aar 
 ```
 
-c、头部竞价功能依赖包：
+**c、头部竞价功能依赖包：**（使用头部竞价功能时必须导入）
 ```
-anythink_headbiding.aar<br>
+anythink_headbiding.aar
 ```
 
-**d、广告平台的依赖，network_sdk目录下对应广告平台文件夹中的:**
+**d、广告平台的依赖，network目录下对应广告平台文件夹中的:**
 ```
 libs、extra文件夹中的aar、jar包
 AndroidManifest.xml
 proguard-android.txt
 res资源
 ```
-(比如：聚合Facebook和Admob两家广告平台，则network_sdk目录下的facebook、admob文件夹中的所有相关资源均需要导入、配置）
+(比如：聚合Facebook和Admob两家广告平台，则network目录下的facebook、admob文件夹中的所有相关资源均需要导入、配置）
 
-e、android-v7库依赖：
+**e、android-v7库依赖：**
 ```java
 dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
 }
 ```
 
-f、AndroidManifest.xml 9.0高版本适配<br>
+**f、AndroidManifest.xml 9.0高版本适配**
 
 ```java
  <application
@@ -57,6 +57,16 @@ f、AndroidManifest.xml 9.0高版本适配<br>
         ....
 <application>
 ```
+
+**g、SDK 混淆配置**
+```java
+-dontwarn com.anythink.**
+-keep public class com.anythink.network.**
+-keepclassmembers class com.anythink.network.** {
+   public *;
+}
+```
+
 <br>
 
 集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](https://github.com/anythinkteam/demo_android/blob/master/zh/Android_TopOn_SDK_%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3.md)
@@ -213,9 +223,9 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 |广告平台 | NetworkType | platformCode | platformMsg | 解决方法 |
 | ------- | ----------- | ----------- | ----------- | ------- |
 | Facebook | 1          | 1001        | No Fill     | 上线后才会有填充，请到Facebook后台添加测试设备进行测试 |
-| Admob    | 2          |             | 1           | 广告位异常，请检查Admob后台与TopOn后台|
-|          |            |             | 2           | 网络异常，请检查网络是否可用，并且已翻墙|
-|          |            |             | 3           | 上线后才会有填充，请用测试id进行测试，[Admob广告位测试id](https://developers.google.com/admob/android/test-ads)。|
+| Admob    | 2          | 1           |            | 广告位异常，请检查Admob后台与TopOn后台|
+|          |            | 2           |            | 网络异常，请检查网络是否可用，并且已翻墙|
+|          |            | 3           |             | 上线后才会有填充，请用测试id进行测试，[Admob广告位测试id](https://developers.google.com/admob/android/test-ads)。|
 | toutiao  | 15         | 40025       | 未知错误或者渲染错误       | 请到您的穿山甲后台下载相应的穿山甲的SDK的aar包，替换掉open\_ad\_sdk\_\*.aar这个包|
 
 
@@ -259,12 +269,9 @@ R.id.mintegral_*
 <br>
 <br>
 
-**问**：Firebase与TopOn SDK冲突，如何解决？<br>
-**答**：这是因为Admob与Firebase所依赖的Google Play Services版本不相同导致的
-
-| Admob SDK版本 | Firebase 版本 |
-| ------ | ------------------------------------------------------------ |
-| 17.2.0 | 16.0.7 |
+**问**：导入TopOn SDK后与Firebase发生冲突，如何解决？<br>
+**答**：[TopOn与Firebase集成冲突解决方案](zh/TopOn与Firebase集成冲突解决方案.md)
+<br>
 <br>
 
 **问**：在某些设备上，头条广告下载的apk安装不了，如何解决？<br>

@@ -12,6 +12,7 @@
 [10. Splash](#10)<br>
 [11. GDPR](#11)<br>
 [12. HeadBidding](#12)<br>
+[13. Integration Test, Error Code, FAQ](#13)<br>
 
 
 <h2 id='1'>1. TopOn introduction</h2>
@@ -21,6 +22,11 @@ This document mainly introduces how to integrate TopOn SDK in Android project. T
 
 
 <h2 id='2'>2.  Integrating the TopOn SDK </h2>
+
+**In the integration testing phase of the SDK, please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
+Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
+
+**Problems encountered in the SDK integration process** and **the verification process of the advertisement after the integration is completed**, please refer to [13. Integration Test, Error Code, FAQ](#13)
 
 <h3>2.1 SDK download address</h3>
 
@@ -70,6 +76,7 @@ TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_
 | mopub           | Mopub SDK                |
 | nend            | Nend SDK                 |
 | oneway          | Oneway SDK(China)        |
+| sigmob          | Sigmob SDK(China)        |
 | startapp        | StartApp SDK             |
 | superawesome    | SuperAwesome SDK         |
 | tapjoy          | Tapjoy SDK               |
@@ -102,10 +109,9 @@ dependencies {
  <application
         ...
         <!--Configuration for Http request for Android high version-->
-        android:usesCleartextTraffic="true" 
-        >
+        android:usesCleartextTraffic="true">
         ....
-		<!--Configuration For Android 9.0 and above, it is used to adapt network request-->
+        <!--Configuration For Android 9.0 and above, it is used to adapt network request-->
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         ....
 <application>
@@ -128,6 +134,11 @@ The configuration of confusion for the third-party network platform, please refe
 
 
 <h2 id='3'>3. Integrating the TopOn SDK </h2>
+
+**In the integration testing phase of the SDK, please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
+Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
+
+**Problems encountered in the SDK integration process** and **the verification process of the advertisement after the integration is completed**, please refer to [13. Integration Test, Error Code, FAQ](#13)
 
 <h3>3.1 API</h3>
 
@@ -907,3 +918,11 @@ The SDK versions of Mintegral and Facebook that support header bidding are as fo
 | Mintegral | Android  | Native, Rewarded Video, Interstitial Video | >= 9.12.4           | mintegral_mtgbid.aar |
 
 Note: Extra's SDK has been in the directory of Network SDK, you can import the SDK if you need.
+
+
+<h2 id='13'>13. Integration Test, Error Code, FAQ</h2>
+
+**Please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
+Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
+
+Please go to [The test guideline of TopOn_SDK&FAQ](en/TopOn_and_Firebase_integration_conflict_resolution.md)
