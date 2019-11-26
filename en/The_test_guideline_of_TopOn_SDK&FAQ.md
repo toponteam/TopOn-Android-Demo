@@ -66,7 +66,7 @@ dependencies {
 
 <br>
 
-Integration If there is a problem, please jump [Android_Integration_Document_For_TopOn_SDK](en/Android_Integration_Document_For_TopOn_SDK.md)
+Integration If there is a problem, please jump [Android_Integration_Document_For_TopOn_SDK](Android_Integration_Document_For_TopOn_SDK.md)
 
 
 <h2 id='1'>1. The test guideline of TopOn SDK</h2>
@@ -258,7 +258,7 @@ R.id.mintegral_*
 <br>
 
 **问**：How to resolve the conflict with Firebase after importing TopOn SDK？<br>
-**答**：[TopOn and Firebase integration conflict resolution](en/TopOn_and_Firebase_integration_conflict_resolution.md)
+**答**：[TopOn and Firebase integration conflict resolution](TopOn_and_Firebase_integration_conflict_resolution.md)
 <br>
 <br>
 

@@ -69,7 +69,7 @@ dependencies {
 
 <br>
 
-集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](zh/Android_TopOn_SDK_集成文档.md)
+集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](Android_TopOn_SDK_集成文档.md)
 
 
 
@@ -270,7 +270,7 @@ R.id.mintegral_*
 <br>
 
 **问**：导入TopOn SDK后与Firebase发生冲突，如何解决？<br>
-**答**：[TopOn与Firebase集成冲突解决方案](zh/TopOn与Firebase集成冲突解决方案.md)
+**答**：[TopOn与Firebase集成冲突解决方案](TopOn与Firebase集成冲突解决方案.md)
 <br>
 <br>
 

@@ -925,4 +925,4 @@ Note: Extra's SDK has been in the directory of Network SDK, you can import the S
 **Please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
 Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
-Please go to [The test guideline of TopOn_SDK&FAQ](en/TopOn_and_Firebase_integration_conflict_resolution.md)
+Please go to [The test guideline of TopOn_SDK&FAQ](TopOn_and_Firebase_integration_conflict_resolution.md)

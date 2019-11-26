@@ -930,4 +930,4 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 **请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
 在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
 
-请跳转 [TopOn SDK 集成测试及FAQ说明](zh/TopOnSDK集成测试及FAQ说明.md)
+请跳转 [TopOn SDK 集成测试及FAQ说明](TopOnSDK集成测试及FAQ说明.md)
