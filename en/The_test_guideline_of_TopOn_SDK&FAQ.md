@@ -66,7 +66,7 @@ dependencies {
 
 <br>
 
-Integration If there is a problem, please jump [Android_Integration_Document_For_TopOn_SDK](https://github.com/anythinkteam/demo_android/blob/master/en/Android_Integration_Document_For_TopOn_SDK.md)
+Integration If there is a problem, please jump [Android_Integration_Document_For_TopOn_SDK](en/Android_Integration_Document_For_TopOn_SDK.md)
 
 
 <h2 id='1'>1. The test guideline of TopOn SDK</h2>

@@ -69,7 +69,7 @@ dependencies {
 
 <br>
 
-集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](https://github.com/anythinkteam/demo_android/blob/master/zh/Android_TopOn_SDK_%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3.md)
+集成如果有问题，请跳转 [Android_TopOn_SDK_集成文档](zh/Android_TopOn_SDK_集成文档.md)
 
 
 
@@ -223,9 +223,9 @@ platformMsg：第三方广告平台的错误信息（广告没有填充的时候
 |广告平台 | NetworkType | platformCode | platformMsg | 解决方法 |
 | ------- | ----------- | ----------- | ----------- | ------- |
 | Facebook | 1          | 1001        | No Fill     | 上线后才会有填充，请到Facebook后台添加测试设备进行测试 |
-| Admob    | 2          | 1           |            | 广告位异常，请检查Admob后台与TopOn后台|
-|          |            | 2           |            | 网络异常，请检查网络是否可用，并且已翻墙|
-|          |            | 3           |             | 上线后才会有填充，请用测试id进行测试，[Admob广告位测试id](https://developers.google.com/admob/android/test-ads)。|
+| Admob    | 2          |             | 1           | 广告位异常，请检查Admob后台与TopOn后台|
+|          |            |             | 2           | 网络异常，请检查网络是否可用，并且已翻墙|
+|          |            |             | 3           | 上线后才会有填充，请用测试id进行测试，[Admob广告位测试id](https://developers.google.com/admob/android/test-ads)。|
 | toutiao  | 15         | 40025       | 未知错误或者渲染错误       | 请到您的穿山甲后台下载相应的穿山甲的SDK的aar包，替换掉open\_ad\_sdk\_\*.aar这个包|
 
 
