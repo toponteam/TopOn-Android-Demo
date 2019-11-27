@@ -18,6 +18,7 @@ TopOn 提供的**Admob**的aar包与**Firebase**的依赖发生冲突导致的
 
 
 <h2 id='2'>2. 定位冲突</h2>
+
 以**17.2.0**版本的**Admob**与**16.0.1**版本的**Firebase**冲突的情况为例，项目中通过gradle导入了16.0.1版本的Firebase依赖，并且导入了17.2.0版本的Admob的aar包。
 
 libs：
@@ -123,6 +124,7 @@ dependencies {
 
 
 <h2 id='4'>4. Admob与Firebase兼容列表</h2>
+
 | Admob         | Firebase      |
 | ------------- | ------------- |
 | 17.2.0        | 16.0.7        |
