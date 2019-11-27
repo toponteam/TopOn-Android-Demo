@@ -124,6 +124,7 @@ dependencies {
 
 
 <h2 id='4'>4. Admob and Firebase compatibility list</h2>
+
 | Admob         | Firebase      |
 | ------------- | ------------- |
 | 17.2.0        | 16.0.7        |
