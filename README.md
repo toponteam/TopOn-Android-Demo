@@ -1,4 +1,4 @@
-# TopOn v5.1.0
+# TopOn v5.2.0
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -29,7 +29,7 @@
 |UnityAds | 3.3.0 |
 |Vungle | 6.4.11 | 
 |Adcolony | 4.1.0 | 
-|TouTiao|v2.5.2.4(需要开发者在自己头条账号后台下载相应的SDK)|
+|TouTiao|v2.5.2.6(需要开发者在自己头条账号后台下载相应的SDK)|
 |玩转互联 | 6.0.2  |
 |Oneway|2.3.4|
 |MobPower | 4.8.0 |
@@ -43,6 +43,7 @@
 |洛米|9.1.30|
 |快手|2.2.5|
 |Sigmob|2.14.2|
+|Ogury|4.3.6|
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
 
@@ -77,4 +78,6 @@
 |洛米|27|
 |快手|28|
 |Sigmob |29|
+|Ogury |36|
+
 
