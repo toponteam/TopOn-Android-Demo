@@ -30,6 +30,7 @@ networkLibsPath.add("maio");
 networkLibsPath.add("mintegral_international");
 networkLibsPath.add("mopub");
 networkLibsPath.add("nend");
+networkLibsPath.add("ogury");
 networkLibsPath.add("oneway");
 networkLibsPath.add("startapp");
 networkLibsPath.add("superawesome");
@@ -79,6 +80,7 @@ android {
             res.srcDirs += 'network/mintegral_international/res'
             res.srcDirs += 'network/mobpower/res'
             res.srcDirs += 'network/mopub/res'
+            res.srcDirs += 'network/ogury/res'
             res.srcDirs += 'network/oneway/res'
             res.srcDirs += 'network/startapp/res'
             res.srcDirs += 'network/superawesome/res'

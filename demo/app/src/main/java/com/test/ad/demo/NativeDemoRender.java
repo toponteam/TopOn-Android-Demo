@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.anythink.network.gdt.GDTATConst;
+import com.anythink.network.toutiao.TTATConst;
+import com.bytedance.sdk.openadsdk.core.nativeexpress.NativeExpressView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.qq.e.ads.nativ.NativeExpressADView;
 
@@ -79,7 +81,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         contentArea.removeAllViews();
         if (mediaView != null) {
 
-            if (mNetworkType == GDTATConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressADView) {
+            if ((mNetworkType == GDTATConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressADView)
+                    || mNetworkType == TTATConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressView) {
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);
