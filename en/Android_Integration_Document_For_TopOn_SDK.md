@@ -733,7 +733,7 @@ mInterstitialAd.setAdListener(new ATInterstitialListener() {
 
 <h3>9.1 Banner ad introduction</h3>
 1.Banner's advertisement provides the API of the advertisement in the form of View. View can customize the width and height, but some ad platforms may not be able to adapt to the custom width and height, so the aspect ratio should be configured with the TopOn background before setting the width and height. Consistent, and need to adjust according to the actual effect after test;<br>
-2.Banner provides automatic refresh function, the default is 20 seconds,  in TopOn background you can be set interval time, or set no refresh (Banner's View will be automatically refreshed after it has been added to Windows and visible).<br>
+2.Banner provides automatic refresh function, the default is off,  in TopOn background you can be set interval time, or set no refresh (Banner's View will be automatically refreshed after it has been added to Windows and visible).<br>
 
 
 <h3>9.2 Banner ad API</h3>
