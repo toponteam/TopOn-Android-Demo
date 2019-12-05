@@ -68,6 +68,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | oneway          | Oneway SDK相关文件（中国区）      |插屏广告，激励视频 |
 | uniplay         | Uniplay SDK相关文件（中国区）     |横幅广告，插屏广告，激励视频 |
 | sigmob          | Sigmob SDK相关文件（中国区）      | 插屏广告，激励视频，开屏广告 |
+| toutiao         | 穿山甲SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频，开屏广告|
 
 **非中国地区** （应用是发布Google Play使用的广告平台）
 
@@ -89,7 +90,6 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | startapp        | StartApp SDK相关文件              |插屏广告，激励视频 |
 | superawesome    | SuperAwesome SDK相关文件          |激励视频 |
 | tapjoy          | Tapjoy SDK相关文件                |插屏广告，激励视频 |
-| toutiao         | 穿山甲SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频，开屏广告|
 | unityads        | UnityAds SDK相关文件              |插屏广告，激励视频 |
 | vungle          | Vungle SDK相关文件                | 插屏广告，激励视频 |
 
