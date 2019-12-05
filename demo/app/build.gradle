@@ -40,7 +40,7 @@ networkLibsPath.add("uniplay");
 networkLibsPath.add("unityads");
 networkLibsPath.add("vungle");
 
-networkLibsPath.add("mobpower");
+networkLibsPath.add("mcore");
 networkLibsPath.add("ks");
 networkLibsPath.add("sigmob");
 
@@ -78,7 +78,7 @@ android {
             res.srcDirs += 'network/maio/res'
 //            res.srcDirs += 'network/mintegral_china/res'
             res.srcDirs += 'network/mintegral_international/res'
-            res.srcDirs += 'network/mobpower/res'
+            res.srcDirs += 'network/mcore/res'
             res.srcDirs += 'network/mopub/res'
             res.srcDirs += 'network/ogury/res'
             res.srcDirs += 'network/oneway/res'

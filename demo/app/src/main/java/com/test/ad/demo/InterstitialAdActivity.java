@@ -37,6 +37,7 @@ public class InterstitialAdActivity extends Activity {
                 , DemoApplicaion.mPlacementId_interstitial_toutiao
                 , DemoApplicaion.mPlacementId_interstitial_uniplay
                 , DemoApplicaion.mPlacementId_interstitial_oneway
+                , DemoApplicaion.mPlacementId_interstitial_mcore
                 , DemoApplicaion.mPlacementId_interstitial_appnext
                 , DemoApplicaion.mPlacementId_interstitial_baidu
                 , DemoApplicaion.mPlacementId_interstitial_nend
@@ -69,6 +70,7 @@ public class InterstitialAdActivity extends Activity {
             "toutiao",
             "uniplay",
             "oneway",
+            "mcore",
             "appnext",
             "baidu",
             "nend",

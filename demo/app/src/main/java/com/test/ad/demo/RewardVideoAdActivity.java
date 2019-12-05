@@ -61,6 +61,7 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_toutiao
             , DemoApplicaion.mPlacementId_rewardvideo_uniplay
             , DemoApplicaion.mPlacementId_rewardvideo_oneway
+            , DemoApplicaion.mPlacementId_rewardvideo_mcore
             , DemoApplicaion.mPlacementId_rewardvideo_ksyun
             , DemoApplicaion.mPlacementId_rewardvideo_appnext
             , DemoApplicaion.mPlacementId_rewardvideo_baidu
@@ -93,6 +94,7 @@ public class RewardVideoAdActivity extends Activity {
             "toutiao",
             "uniplay",
             "oneway",
+            "mcore",
             "Ksyun",
             "appnext",
             "baidu",

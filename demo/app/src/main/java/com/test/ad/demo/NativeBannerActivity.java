@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.nativead.banner.api.ATNaitveBannerListener;
-import com.anythink.nativead.banner.api.ATNaitveBannerSize;
+import com.anythink.nativead.banner.api.ATNativeBannerListener;
+import com.anythink.nativead.banner.api.ATNativeBannerSize;
 import com.anythink.nativead.banner.api.ATNativeBannerConfig;
 import com.anythink.nativead.banner.api.ATNativeBannerView;
 
@@ -29,7 +29,7 @@ public class NativeBannerActivity extends Activity {
 
         final ATNativeBannerView bannerView = new ATNativeBannerView(this);
         ATNativeBannerConfig config640 = new ATNativeBannerConfig();
-        config640.bannerSize = ATNaitveBannerSize.BANNER_SIZE_640x150;
+        config640.bannerSize = ATNativeBannerSize.BANNER_SIZE_640x150;
 //        config640.backgroupResId = R.drawable.uparpu_test_bg;
         config640.ctaBgColor = 0xff000000;
         bannerView.setBannerConfig(config640);
@@ -40,7 +40,7 @@ public class NativeBannerActivity extends Activity {
         params640.topMargin = dip2px(this, 10);
         bannerView.setBackgroundColor(0xffffffff);
         frameLayout.addView(bannerView, params640);
-        bannerView.setAdListener(new ATNaitveBannerListener() {
+        bannerView.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
                 bannerView.setVisibility(View.VISIBLE);
@@ -81,7 +81,7 @@ public class NativeBannerActivity extends Activity {
         final ATNativeBannerView bannerView320 = new ATNativeBannerView(this);
 
         ATNativeBannerConfig config320 = new ATNativeBannerConfig();
-        config320.bannerSize = ATNaitveBannerSize.BANNER_SIZE_320x50;
+        config320.bannerSize = ATNativeBannerSize.BANNER_SIZE_320x50;
 //        config320.backgroupResId = R.drawable.uparpu_test_bg;
         config320.ctaBgColor = 0xff000000;
         bannerView320.setBannerConfig(config320);
@@ -93,7 +93,7 @@ public class NativeBannerActivity extends Activity {
         params320.topMargin = dip2px(this, 10);
         frameLayout.addView(bannerView320, params320);
 
-        bannerView320.setAdListener(new ATNaitveBannerListener() {
+        bannerView320.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
                 bannerView320.setVisibility(View.VISIBLE);
@@ -136,7 +136,7 @@ public class NativeBannerActivity extends Activity {
         bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_admob);
         bannerViewAuto.setVisibility(View.GONE);
         ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
-        configAuto.bannerSize = ATNaitveBannerSize.BANNER_SIZE_AUTO;
+        configAuto.bannerSize = ATNativeBannerSize.BANNER_SIZE_AUTO;
 //                configAuto.backgroupResId = R.drawable.uparpu_test_bg;
         configAuto.isCtaBtnShow = true;
         configAuto.ctaBgColor = 0xff000000;
@@ -149,7 +149,7 @@ public class NativeBannerActivity extends Activity {
         paramsAuto.topMargin = dip2px(getApplicationContext(), 10);
         frameLayout.addView(bannerViewAuto, paramsAuto);
 
-        bannerViewAuto.setAdListener(new ATNaitveBannerListener() {
+        bannerViewAuto.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
                 Log.i("BannerActivity", "320---onAdLoaded----");

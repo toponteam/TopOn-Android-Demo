@@ -37,6 +37,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_toutiao
             , DemoApplicaion.mPlacementId_native_toutiao_drawer
+            , DemoApplicaion.mPlacementId_native_mcore
             , DemoApplicaion.mPlacementId_native_nend
             , DemoApplicaion.mPlacementId_native_baidu
             , DemoApplicaion.mPlacementId_native_luomi
@@ -56,6 +57,7 @@ public class NativeAdActivity extends Activity {
             "appnext",
             "toutiao",
             "toutiao_drawer",
+            "mcore",
             "nend",
             "baidu",
             "luomi"
