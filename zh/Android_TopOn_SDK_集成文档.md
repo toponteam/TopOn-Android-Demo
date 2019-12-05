@@ -734,7 +734,7 @@ mInterstitialAd.setAdListener(new ATInterstitialListener() {
 
 <h3>9.1 Banner广告介绍</h3>
 1.Banner广告以View的形式提供广告的API，View可以自定义宽高，但是部分广告平台不一定能适配自定义的宽高，所以在设置宽高之前要与在TopOn后台配置的宽高比要一致，且需要经过测试看看实际效果来进行调整；<br>
-2.Banner提供自动刷新的功能，默认是20秒一次，可通过TopOn后台配置刷新时间或者不刷新（Banner的View必须已经Add进Windows且可视状态才会自动刷新）<br>
+2.Banner提供自动刷新的功能，**默认不开启** ，可通过TopOn后台配置刷新时间或者不刷新（Banner的View必须已经Add进Windows且可视状态才会自动刷新）<br>
 
 
 <h3>9.2 Banner广告API说明</h3>
