@@ -32,8 +32,7 @@
 
 <h3>2.1 SDK下载地址</h3>
 
-[Baidu网盘下载地址]( https://pan.baidu.com/s/1bz6wDl-sdZgjpoep5pbzag)：提取码：7ukt<br>
-[Google网盘下载地址](https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sharing)
+[TopOn SDK下载地址](http://sdk-release.toponad.com/Android/5.2.0/TopOn_SDK_v5.2.0_20191203_Release.zip)
 
 TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_android)
 
