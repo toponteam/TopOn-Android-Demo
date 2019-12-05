@@ -968,8 +968,11 @@ ConsentManager.ask(context, "YourAssetKey", new ConsentListener() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Log.d("Ogury", "ConsentManager onComplete");
-                ATSDK.setGDPRUploadDataLevel(context, ATSDK.PERSONALIZED);
+                if(ConsentManager.gdprApplies()) {
+                    ATSDK.setGDPRUploadDataLevel(context, ATSDK.PERSONALIZED);
+                } else {
+                    ATSDK.setGDPRUploadDataLevel(context, ATSDK.NONPERSONALIZED);
+                }
             }
         });
     }
@@ -979,8 +982,7 @@ ConsentManager.ask(context, "YourAssetKey", new ConsentListener() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Log.e("Ogury", "ConsentManager onError", e);
-                ATSDK.setGDPRUploadDataLevel(context, ATSDK.NONPERSONALIZED);
+               
             }
         });
     }
