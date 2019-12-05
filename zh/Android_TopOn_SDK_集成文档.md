@@ -196,8 +196,8 @@ dependencies {
 | API | 参数 | 说明|
 | --- | --- |---|
 | init | (Context context, String appId, String appKey) | TopOnSDK的初始化方法，其中appId和appKey需要在TopOn后台建立应用之后获取。<br>**该方法建议在Application onCreate的时候初始化**|
-| setChannel | (String channel) | 设置渠道信息，用于TopOn后台区分广告数据|
-| setSubChannel | (String subChannel) | 设置子渠道信息 |
+| setChannel | (String channel) | 设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：**[A-Za-z0-9_]**|
+| setSubChannel | (String subChannel) | 设置子渠道信息，只允许设置字符的规则：**[A-Za-z0-9_]** |
 | initCustomMap | (Map<String, String> customMap)| 自定义key-value，可用于匹配后端下发的广告列表信息|
 | setGDPRUploadDataLevel|(Context context, int level) |设置GDPR下数据的上报等级，level主要分以下三个等级：<br> **ATSDK.PERSONALIZED**：上报数据包含设备参数<br> **ATSDK.NONPERSONALIZED**：上报数据不包含设备参数<br> **ATSDK.FORBIDDEN**：不做任何上报，停止广告请求|
 |getGDPRDataLevel|(Context context)| 获取当前的上报等级|
