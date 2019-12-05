@@ -38,8 +38,8 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 
 <h3>2.2 SDK包的目录说明</h3>
 
-**libs：**里面存放TopOn的基础SDK包，**按照需要集成的广告形式来引入** <br>
-**network_sdk：**里面存放全部聚合平台的SDK包，**按照需要聚合的广告平台来引入**
+**libs：** 里面存放TopOn的基础SDK包，**按照需要集成的广告形式来引入** <br>
+**network_sdk：** 里面存放全部聚合平台的SDK包，**按照需要聚合的广告平台来引入**
 
 <h4>2.2.1 libs目录的SDK包集成说明</h4>
 
@@ -55,36 +55,43 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 
 <h4>2.2.2 network_sdk目录的说明</h4>
 
-| 目录            | 说明                              |
-| --------------- | --------------------------------- |
-| adcolony        | AdColony SDK相关文件              |
-| admob           | Admob SDK相关文件                 |
-| applovin        | Applovin SDK相关文件              |
-| appnext         | Appnext SDK相关文件               |
-| baidu           | 百度SDK相关文件（中国区）         |
-| chartboost      | Chartboost SDK相关文件            |
-| facebook        | Facebook SDK相关文件              |
-| flurry          | Flurry SDK相关文件                |
-| gdt             | 广点通SDK相关文件（中国区）       |
-| inmobi          | Inmobi SDK相关文件                |
-| ironsource      | Ironsource SDK相关文件            |
-| ks              | 快手SDK相关文件（中国区）         |
-| ksyun           | 金山云SDK相关文件（中国区）       |
-| luomi           | 洛米SDK相关文件（中国区）         |
-| maio            | Maio SDK相关文件                  |
-| mintegral_china | Mintegral SDK相关文件（中国区）   |
-| mintegral_other | Mintegral SDK相关文件（非中国区） |
-| mopub           | Mopub SDK相关文件                 |
-| nend            | Nend SDK相关文件                  |
-| oneway          | Oneway SDK相关文件（中国区）      |
-| sigmob          | Sigmob SDK相关文件（中国区）      |
-| startapp        | StartApp SDK相关文件              |
-| superawesome    | SuperAwesome SDK相关文件          |
-| tapjoy          | Tapjoy SDK相关文件                |
-| toutiao         | 穿山甲SDK相关文件                 |
-| uniplay         | Uniplay SDK相关文件（中国区）     |
-| unityads        | UnityAds SDK相关文件              |
-| vungle          | Vungle SDK相关文件                |
+**中国地区** （应用是发布中国大陆市场使用的广告平台）
+
+| 目录            | 说明                              |      广告形式支持   |
+| --------------- | -------------------------------  | ------------------|
+| baidu           | 百度SDK相关文件（中国区）         | 原生广告，横幅广告，插屏广告，激励视频，开屏广告  |
+| gdt             | 广点通SDK相关文件（中国区）       | 原生广告，横幅广告，插屏广告，激励视频，开屏广告|
+| ks              | 快手SDK相关文件（中国区）         |插屏广告，激励视频 |
+| ksyun           | 金山云SDK相关文件（中国区）       | 激励视频 |
+| luomi           | 洛米SDK相关文件（中国区）         | 原生广告  |
+| mintegral_china | Mintegral SDK相关文件（中国区）   |原生广告，横幅广告，插屏广告，激励视频 |
+| oneway          | Oneway SDK相关文件（中国区）      |插屏广告，激励视频 |
+| uniplay         | Uniplay SDK相关文件（中国区）     |横幅广告，插屏广告，激励视频 |
+| sigmob          | Sigmob SDK相关文件（中国区）      | 插屏广告，激励视频，开屏广告 |
+
+**非中国地区** （应用是发布Google Play使用的广告平台）
+
+| 目录            | 说明                              |      广告形式支持   |
+| --------------- | -------------------------------  | ------------------|
+| adcolony        | AdColony SDK相关文件              | 插屏广告，激励视频|
+| admob           | Admob SDK相关文件                 | 原生广告，横幅广告，插屏广告，激励视频|
+| applovin        | Applovin SDK相关文件              | 原生广告，横幅广告，插屏广告，激励视频 |
+| appnext         | Appnext SDK相关文件               | 原生广告，横幅广告，插屏广告，激励视频 |
+| chartboost      | Chartboost SDK相关文件            | 插屏广告，激励视频 |
+| facebook        | Facebook SDK相关文件              |原生广告，横幅广告，插屏广告，激励视频 |
+| flurry          | Flurry SDK相关文件                |原生广告，横幅广告，插屏广告，激励视频 |
+| inmobi          | Inmobi SDK相关文件                |原生广告，横幅广告，插屏广告，激励视频 |
+| ironsource      | Ironsource SDK相关文件            | 插屏广告，激励视频 |
+| maio            | Maio SDK相关文件                  |插屏广告，激励视频 |
+| mintegral_international | Mintegral SDK相关文件（非中国区） |原生广告，横幅广告，插屏广告，激励视频 |
+| mopub           | Mopub SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频 |
+| nend            | Nend SDK相关文件                  |原生广告，横幅广告，插屏广告，激励视频 |
+| startapp        | StartApp SDK相关文件              |插屏广告，激励视频 |
+| superawesome    | SuperAwesome SDK相关文件          |激励视频 |
+| tapjoy          | Tapjoy SDK相关文件                |插屏广告，激励视频 |
+| toutiao         | 穿山甲SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频，开屏广告|
+| unityads        | UnityAds SDK相关文件              |插屏广告，激励视频 |
+| vungle          | Vungle SDK相关文件                | 插屏广告，激励视频 |
 
 可集成需要聚合的平台SDK包到Android项目下，每个聚合的第三方SDK的文件夹内容说明：
 
@@ -131,15 +138,55 @@ dependencies {
 
 聚合第三方Network的混淆配置，请参考**network_sdk**目录下该平台文件夹下的proguard-android.txt
 
-
-
-<h2 id='3'>3. SDK初始化说明 </h2>
+<h4>2.2.5 广告测试说明</h4>
 
 **在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
 在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
 
 **SDK集成过程中遇到的问题**以及**集成完成后广告的验证流程**，请参考 [13. 集成测试、错误码、FAQ](#13)
 
+**以下提供TopOn测试AppId信息和PlacementId信息，可通过以下的测试id先验证集成是否正常：**
+
+| AppId | AppKey |
+|----|----|
+| a5aa1f9deda26d| 4f7b9ac17decb9babec83aac078742c7|
+
+
+|广告平台| 原生广告位 |横幅广告位 | 插屏广告位| 激励视频广告位| 开屏广告位|
+|----|----|----|----|----|----|
+| AdColony        |-|-|b5bbdc92f49ce7|b5b449faa95391|-|
+| Admob           | b5aa1fa501d9f6|b5baca41a2536f|b5baca54674522|b5b449f025ec7c|-|
+| Applovin        |b5aa1fa7956158|b5bbdc59f88520|b5bbdc6fc65dd1|b5b449f20155a7|-|
+| Appnext         | b5bc7f369610cd | b5bc7f3b034a2b |b5bc7f3ec5b952|b5bc7f38df0a73|-|
+| 百度           |b5d148f9f2e47d|b5c0508c4c073f|b5c0508e2c84d4|b5c2c800fb3a52|b5c05090192a58|
+| Chartboost      |-|- |b5bbdc8a68d901|b5b449f548e010|-|
+| Facebook        | b5aa1fa4165ea3 |b5bbdc51a35e29|b5bbdc69a21187|b5b449eefcab50|-|
+| Flurry          | b5aa1fa6c00d2f|b5bbdc584f1368|b5bbdc6d5e1362|b5b449f15d04ca|-|
+| 广点通             |b5ab8590d44f82|b5baca43951901|b5baca561bc100|b5c2c880cb9d52|b5bea7bfd93f01|
+| Inmobi          | b5aa1fa5d10190 |b5bbdc535a9d1a|b5bbdc6b63458f|b5b449f0c6b84a|-|
+| Ironsource      |-|-|b5bbdc8e9ef916|b5b449f75948c5|-|
+| 快手              |-|-|b5d6745b8133f2|b5d67459a3e535|-|
+| 金山云           |-|-|-|b5bbd61d0aa571|-|
+| 洛米           |b5d1ef61e17981|-|-|-|-|
+| Maio            |-|-|b5cb961d9d3414|b5cb961e495a18|-|
+| Mintegral |b5aa1fa85b86d5 |b5dd388839bf5e|b5bbdc725768fa|b5b449f2f58cd7|-|
+| Mopub           | b5ab858fb0175f|b5bbdc5c857b2f|b5bbdc86dd8e3b|b5b449f4927359|-|
+| Nend            | b5cb95ead9e60a |b5cb95ed13203c |b5cb95eeb7e908|b5cb95efa0c793|-|
+| Oneway          |-|-|b5baca5e3d2b29|b5badf5b390201|-|
+| StartApp        |-|-|b5d5e641d9c30a|b5cff0d063ac32|-|
+| Superawesome    |-|-|- |b5cff0d2157805|-|
+| Tapjoy          |-|-|b5bbdc8b6e9829|b5b449f66ceaf5|-|
+| 穿山甲         |b5c2c97629da0d|b5baca45138428|b5baca585a8fef|b5b728e7a08cd4|b5bea7c1b653ef|
+| Uniplay（玩转互联）         |-| b5baca4aebcb93 |b5baca5d16c597|b5badef36435e7|-|
+| Unityads        |-|-|b5c21a303c25e0|b5b449f809139c|-|
+| Vungle          |-|-|b5bbdc9182f9f2|b5b449f97e0b5f|-|
+| Sigmob          |-|-|b5d7614ab30695|b5d7228c6c5d6a|b5d76150bab3ad|
+
+
+
+<h2 id='3'>3. SDK初始化说明 </h2>
+
+**注意：** 在任何的一个广告位加载广告执行之前，都必须先执行SDK的初始化方法，否则会出现无法加载广告的情况。
 
 <h3>3.1 API说明</h3>
 
