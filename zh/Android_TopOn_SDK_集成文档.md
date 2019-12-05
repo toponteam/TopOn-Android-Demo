@@ -112,6 +112,7 @@ dependencies {
 ```
 
 <h4>2.2.3 AndroidManifest配置说明 </h4>
+
 ```java
  <application
         ...
