@@ -87,6 +87,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | mintegral_international | Mintegral SDK相关文件（非中国区） |原生广告，横幅广告，插屏广告，激励视频 |
 | mopub           | Mopub SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频 |
 | nend            | Nend SDK相关文件                  |原生广告，横幅广告，插屏广告，激励视频 |
+| ogury           | Ogury SDK相关文件                  |插屏广告，激励视频 |
 | startapp        | StartApp SDK相关文件              |插屏广告，激励视频 |
 | superawesome    | SuperAwesome SDK相关文件          |激励视频 |
 | tapjoy          | Tapjoy SDK相关文件                |插屏广告，激励视频 |
@@ -187,7 +188,7 @@ dependencies {
 
 <h2 id='3'>3. SDK初始化说明 </h2>
 
-**注意：** 在任何的一个广告位加载广告执行之前，都必须先执行SDK的初始化方法，否则会出现无法加载广告的情况。
+**注意：** 在任何的一个广告位加载广告执行之前，都必须先执行TopOn SDK的初始化方法，否则会出现无法加载广告的情况。
 
 <h3>3.1 API说明</h3>
 
@@ -432,11 +433,11 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 | 方法            | 参数                                   | 说明                                                         |
 | --------------- | -------------------------------------- | ------------------------------------------------------------ |
 | setUnitId       | (String placementId)                   | 设置广告位id（必须设置Native广告的广告位id）                 |
-| setAdListener   | (ATNaitveBannerListener listener)  | 设置NativeBanner广告监听回调，其中ATNaitveBannerListener是需要实现广告事件回调的接口类 |
+| setAdListener   | (ATNativeBannerListener listener)  | 设置NativeBanner广告监听回调，其中ATNativeBannerListener是需要实现广告事件回调的接口类 |
 | loadAd          | (Map<String, String> customRequestMap) | 其中customRequestMap设置为null即可，已经不再使用传入的参数   |
 | setBannerConfig | (ATNativeBannerConfig config)      | 设置NativeBanner的本地配置，例如：字体颜色和字体大小         |
 
-**ATNaitveBannerListener:** NativeBanner广告的事件回调监听
+**ATNativeBannerListener:** NativeBanner广告的事件回调监听
 
 | 方法              | 参数                  | 说明                                                         |
 | ----------------- | --------------------- | ------------------------------------------------------------ |
@@ -460,7 +461,7 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 | isCloseBtnShow | boolean                | 是否展示关闭按钮                                             |
 | isCtaBtnShow   | boolean                | 是否展示CTA按钮（注意海外平台的尽可能展示，否则可能会出现展示无效） |
 | refreshTime    | long                   | 刷新时间（单位：毫秒）                                       |
-| bannerSize     | ATNaitveBannerSize | NativeBanner的Size枚举：<br>**ATNaitveBannerSize.BANNER\_SIZE\_AUTO**:自适应NativeBanner View的宽高<br>**ATNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150的比例宽高<br>**ATNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50的比例宽高 |
+| bannerSize     | ATNativeBannerSize | NativeBanner的Size枚举：<br>**ATNativeBannerSize.BANNER\_SIZE\_AUTO**:自适应NativeBanner View的宽高<br>**ATNativeBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150的比例宽高<br>**ATNativeBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50的比例宽高 |
 
 <h3>5.3 NativeBanner广告示例代码</h3>
 
@@ -578,7 +579,7 @@ public *** extends Activity {
 <h2 id='7'>7. RewardedVideo广告集成说明</h2>
 
 <h3>7.1 RewardedVideo广告介绍</h3>
-1.激励视频的激励下发是在视频广告关闭的事件回调中下发Boolean字段，告诉开发者是否可以下发激励给用户的。<br>
+1.激励视频的激励下发时会回调onReward(),开发者可以在onReward回调中下发激励给用户。<br>
 2.目前激励视频不支持S2S的激励下发机制
 
 
@@ -953,6 +954,37 @@ ATSDK.addNetworkGDPRInfo(this, UnityAdsATConst.NETWORK_FIRM_ID, localMap);
 localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRCONTENT, "0"); 
 //true:表示在欧盟地区，false:表示不在欧盟地区          localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
 ATSDK.addNetworkGDPRInfo(this, AdColonyATConst.NETWORK_FIRM_ID, localMap);
+```
+
+4.Ogury平台GDPR说明:
+
+当您集成Ogury时，请通过以下代码进行GDPR的设置。**因为Ogury没有提供设置GDPR等级的API，只能通过他们的弹窗进行设置。**
+
+
+```
+ConsentManager.ask(context, "YourAssetKey", new ConsentListener() {
+    @Override
+    public void onComplete(final ConsentManager.Answer answer) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("Ogury", "ConsentManager onComplete");
+                ATSDK.setGDPRUploadDataLevel(context, ATSDK.PERSONALIZED);
+            }
+        });
+    }
+
+    @Override
+    public void onError(final ConsentException e) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("Ogury", "ConsentManager onError", e);
+                ATSDK.setGDPRUploadDataLevel(context, ATSDK.NONPERSONALIZED);
+            }
+        });
+    }
+});
 ```
 
 

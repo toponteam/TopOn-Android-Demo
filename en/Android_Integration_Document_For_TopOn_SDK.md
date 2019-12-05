@@ -85,6 +85,7 @@ TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_
 | mintegral_international | Mintegral SDK（Non-China） |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
 | mopub           | Mopub SDK                |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
 | nend            | Nend SDK                  |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| ogury           | Ogury SDK                  |InterstitalAd，RewardedVideoAd |
 | startapp        | StartApp SDK             |InterstitalAd，RewardedVideoAd |
 | superawesome    | SuperAwesome SDK          |RewardedVideoAd |
 | tapjoy          | Tapjoy SDK               |InterstitalAd，RewardedVideoAd |
@@ -138,7 +139,7 @@ The configuration of AndroidManifest for the third-party network platform, pleas
 The configuration of confusion for the third-party network platform, please refer to the proguard-android.txt under the platform folder in the **network_sdk** directory.
 
 
-<h4>2.2.5 广告测试说明</h4>
+<h4>2.2.5 Ad Test</h4>
 
 **In the integration testing phase of the SDK, please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
 Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
@@ -188,6 +189,8 @@ Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
 
 <h3>3.1 API</h3>
+
+**Note: Before any one of the ad placements is loaded with ads and executed, the initialization method of TopOn SDK must be executed first, otherwise it will fail to load the ads.**
 
 **ATSDK**
 
@@ -427,11 +430,11 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 | Method          | Parameter                              | Description                                                  |
 | --------------- | -------------------------------------- | ------------------------------------------------------------ |
 | setUnitId       | (String placementId)                   | Set the ad placement id (you must set the ad placement id of the Native ad). |
-| setAdListener   | (ATNaitveBannerListener listener)  | Set the callback for NativeBanner ad , where ATNaitveBannerListener is the interface class that needs to implement the ad event callback. |
+| setAdListener   | (ATNativeBannerListener listener)  | Set the callback for NativeBanner ad , where ATNativeBannerListener is the interface class that needs to implement the ad event callback. |
 | loadAd          | (Map<String, String> customRequestMap) | set to null, and Incoming parameters are no longer used.     |
 | setBannerConfig | (ATNativeBannerConfig config)      | Set the native configuration of NativeBanner, for example: font color and font size. |
 
-**ATNaitveBannerListener:** Event callback for NativeBanner ad
+**ATNativeBannerListener:** Event callback for NativeBanner ad
 
 | Method            | Parameter             | Description                                                  |
 | ----------------- | --------------------- | ------------------------------------------------------------ |
@@ -455,7 +458,7 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 | isCloseBtnShow | boolean                | Whether to show the close button.                            |
 | isCtaBtnShow   | boolean                | Whether to show the CTA button(Show as much as possible on overseas platform, otherwise the display may be invalid. |
 | refreshTime    | long                   | Refresh time in milliseconds.                                |
-| bannerSize     | ATNaitveBannerSize | The enumeration of size for NativeBanner: <br/>**ATNaitveBannerSize.BANNER\_SIZE\_AUTO**: Adaptive the width and height of NativeBanner View <br/>**ATNaitveBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150 aspect ratio <br/>**ATNaitveBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50 aspect ratio |
+| bannerSize     | ATNativeBannerSize | The enumeration of size for NativeBanner: <br/>**ATNativeBannerSize.BANNER\_SIZE\_AUTO**: Adaptive the width and height of NativeBanner View <br/>**ATNativeBannerSize.BANNER\_SIZE\_640x150**: NativeBanner 640x150 aspect ratio <br/>**ATNativeBannerSize.BANNER\_SIZE\_320x50**: NativeBanner 320x50 aspect ratio |
 
 <h3>5.3 NativeBanner ad sample code</h3>
 
@@ -576,7 +579,7 @@ public *** extends Activity {
 <h2 id='7'>7. RewardedVideo</h2>
 
 <h3>7.1 RewardedVideo ad introduction</h3>
-1.Reward delivery of the rewarded video is to issue a Boolean field in the event callback of the video advertisement to close, telling the developer whether the reward can be issued to the user.<br>
+1.OnReward () will be called back when the reward is issued. Developers can send reward to users in the onReward callback..<br>
 
 2.At present, the rewarded video does not support the S2S.
 
@@ -951,6 +954,36 @@ localMap.put(AdColonyATConst.LOCATION_MAP_KEY_GDPRREQUEST, true);
 ATSDK.addNetworkGDPRInfo(this, AdColonyATConst.NETWORK_FIRM_ID, localMap);
 ```
 
+4.set the GDPR level of Ogury:
+
+When you integrate Ogury, please set GDPR by the following code. **Because Ogury does not provide an API to set the GDPR level, it can only be set through their popup.**
+
+
+```
+ConsentManager.ask(context, "YourAssetKey", new ConsentListener() {
+    @Override
+    public void onComplete(final ConsentManager.Answer answer) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("Ogury", "ConsentManager onComplete");
+                ATSDK.setGDPRUploadDataLevel(context, ATSDK.PERSONALIZED);
+            }
+        });
+    }
+
+    @Override
+    public void onError(final ConsentException e) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("Ogury", "ConsentManager onError", e);
+                ATSDK.setGDPRUploadDataLevel(context, ATSDK.NONPERSONALIZED);
+            }
+        });
+    }
+});
+```
 
 
 <h2 id='12'>12. HeadBidding</h2>
