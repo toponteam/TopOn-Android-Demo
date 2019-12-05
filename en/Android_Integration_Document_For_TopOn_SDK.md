@@ -30,8 +30,7 @@ Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
 <h3>2.1 SDK download address</h3>
 
-[Baidu network disk download address]( https://pan.baidu.com/s/1bz6wDl-sdZgjpoep5pbzag)：password：7ukt<br>
-[Google network disk download address](https://drive.google.com/drive/folders/1yBvuKY61aa6WzBtGBr4BE04vDH6EZqtj?usp=sharing)
+[TopOn SDK download address](http://sdk-release.toponad.com/Android/5.2.0/TopOn_SDK_v5.2.0_20191203_Release.zip)
 
 TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_android)
 
