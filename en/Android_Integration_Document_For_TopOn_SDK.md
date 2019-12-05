@@ -53,36 +53,43 @@ TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_
 
 <h4>2.2.2 Description of the network_sdk directory</h4>
 
-| Directory       | Description              |
-| --------------- | ------------------------ |
-| adcolony        | AdColony SDK             |
-| admob           | Admob SDK                |
-| applovin        | Applovin SDK             |
-| appnext         | Appnext SDK              |
-| baidu           | Baidu SDK(China)         |
-| chartboost      | Chartboost SDK           |
-| facebook        | Facebook SDK             |
-| flurry          | Flurry SDK               |
-| gdt             | GDT SDK(China)           |
-| inmobi          | Inmobi SDK               |
-| ironsource      | Ironsource SDK           |
-| ks              | Kuaishou SDK(China)      |
-| ksyun           | Ksyun SDK(China)         |
-| luomi           | Luomi SDK(China)）       |
-| maio            | Maio SDK                 |
-| mintegral_china | Mintegral SDK(China)     |
-| mintegral_other | Mintegral SDK(Non-China) |
-| mopub           | Mopub SDK                |
-| nend            | Nend SDK                 |
-| oneway          | Oneway SDK(China)        |
-| sigmob          | Sigmob SDK(China)        |
-| startapp        | StartApp SDK             |
-| superawesome    | SuperAwesome SDK         |
-| tapjoy          | Tapjoy SDK               |
-| toutiao         | Tiktok SDK(China)        |
-| uniplay         | Uniplay SDK(China)       |
-| unityads        | UnityAds SDK             |
-| vungle          | Vungle SDK               |
+**China** （Release of advertising platform used in mainland China market）
+
+| Directory            | Description                              |      Support   |
+| --------------- | -------------------------------  | ------------------|
+| baidu           | 百度SDK（China）         | NativeAd，BannerAd，InterstitalAd，RewardedVideoAd，SplashAd  |
+| gdt             | 广点通SDK（China）       | NativeAd，BannerAd，InterstitalAd，RewardedVideoAd，SplashAd|
+| ks              | 快手SDK（China）         |InterstitalAd，RewardedVideoAd |
+| ksyun           | 金山云SDK（China）       | RewardedVideoAd |
+| luomi           | 洛米SDK（China）         | NativeAd  |
+| mintegral_china | Mintegral SDK（China）   |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| oneway          | Oneway SDK（China）      |InterstitalAd，RewardedVideoAd |
+| uniplay         | Uniplay SDK（China）     |BannerAd，InterstitalAd，RewardedVideoAd |
+| sigmob          | Sigmob SDK（China）      | InterstitalAd，RewardedVideoAd，SplashAd |
+| toutiao         | 穿山甲SDK                |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd，SplashAd|
+
+**Non-China** （Publish the advertising platform used by Google Play）
+
+| Directory            | Description                              |      Support   |
+| --------------- | -------------------------------  | ------------------|
+| adcolony        | AdColony SDK              | InterstitalAd，RewardedVideoAd|
+| admob           | Admob SDK                 | NativeAd，BannerAd，InterstitalAd，RewardedVideoAd|
+| applovin        | Applovin SDK             | NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| appnext         | Appnext SDK               | NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| chartboost      | Chartboost SDK            | InterstitalAd，RewardedVideoAd |
+| facebook        | Facebook SDK              |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| flurry          | Flurry SDK                |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| inmobi          | Inmobi SDK               |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| ironsource      | Ironsource SDK            | InterstitalAd，RewardedVideoAd |
+| maio            | Maio SDK                  |InterstitalAd，RewardedVideoAd |
+| mintegral_international | Mintegral SDK（Non-China） |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| mopub           | Mopub SDK                |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| nend            | Nend SDK                  |NativeAd，BannerAd，InterstitalAd，RewardedVideoAd |
+| startapp        | StartApp SDK             |InterstitalAd，RewardedVideoAd |
+| superawesome    | SuperAwesome SDK          |RewardedVideoAd |
+| tapjoy          | Tapjoy SDK               |InterstitalAd，RewardedVideoAd |
+| unityads        | UnityAds SDK              |InterstitalAd，RewardedVideoAd |
+| vungle          | Vungle SDK              | InterstitalAd，RewardedVideoAd |
 
 According to the platform that you need to integrate, add SDK package to your Android project，description of the folder contents of each third-party SDK：
 
@@ -131,13 +138,54 @@ The configuration of AndroidManifest for the third-party network platform, pleas
 The configuration of confusion for the third-party network platform, please refer to the proguard-android.txt under the platform folder in the **network_sdk** directory.
 
 
-
-<h2 id='3'>3. Integrating the TopOn SDK </h2>
+<h4>2.2.5 广告测试说明</h4>
 
 **In the integration testing phase of the SDK, please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
 Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
 **Problems encountered in the SDK integration process** and **the verification process of the advertisement after the integration is completed**, please refer to [13. Integration Test, Error Code, FAQ](#13)
+
+**You can first verify whether the integration is normal through the following test id：**
+
+| AppId | AppKey |
+|----|----|
+| a5aa1f9deda26d| 4f7b9ac17decb9babec83aac078742c7|
+
+
+|Ad platform| NativeAd | BannerAd | InterstitalAd | RewardedVideoAd| SplashAd|
+|----|----|----|----|----|----|
+| AdColony        |-|-|b5bbdc92f49ce7|b5b449faa95391|-|
+| Admob           | b5aa1fa501d9f6|b5baca41a2536f|b5baca54674522|b5b449f025ec7c|-|
+| Applovin        |b5aa1fa7956158|b5bbdc59f88520|b5bbdc6fc65dd1|b5b449f20155a7|-|
+| Appnext         | b5bc7f369610cd | b5bc7f3b034a2b |b5bc7f3ec5b952|b5bc7f38df0a73|-|
+| 百度           |b5d148f9f2e47d|b5c0508c4c073f|b5c0508e2c84d4|b5c2c800fb3a52|b5c05090192a58|
+| Chartboost      |-|- |b5bbdc8a68d901|b5b449f548e010|-|
+| Facebook        | b5aa1fa4165ea3 |b5bbdc51a35e29|b5bbdc69a21187|b5b449eefcab50|-|
+| Flurry          | b5aa1fa6c00d2f|b5bbdc584f1368|b5bbdc6d5e1362|b5b449f15d04ca|-|
+| 广点通             |b5ab8590d44f82|b5baca43951901|b5baca561bc100|b5c2c880cb9d52|b5bea7bfd93f01|
+| Inmobi          | b5aa1fa5d10190 |b5bbdc535a9d1a|b5bbdc6b63458f|b5b449f0c6b84a|-|
+| Ironsource      |-|-|b5bbdc8e9ef916|b5b449f75948c5|-|
+| 快手              |-|-|b5d6745b8133f2|b5d67459a3e535|-|
+| 金山云           |-|-|-|b5bbd61d0aa571|-|
+| 洛米           |b5d1ef61e17981|-|-|-|-|
+| Maio            |-|-|b5cb961d9d3414|b5cb961e495a18|-|
+| Mintegral |b5aa1fa85b86d5 |b5dd388839bf5e|b5bbdc725768fa|b5b449f2f58cd7|-|
+| Mopub           | b5ab858fb0175f|b5bbdc5c857b2f|b5bbdc86dd8e3b|b5b449f4927359|-|
+| Nend            | b5cb95ead9e60a |b5cb95ed13203c |b5cb95eeb7e908|b5cb95efa0c793|-|
+| Oneway          |-|-|b5baca5e3d2b29|b5badf5b390201|-|
+| StartApp        |-|-|b5d5e641d9c30a|b5cff0d063ac32|-|
+| Superawesome    |-|-|- |b5cff0d2157805|-|
+| Tapjoy          |-|-|b5bbdc8b6e9829|b5b449f66ceaf5|-|
+| 穿山甲         |b5c2c97629da0d|b5baca45138428|b5baca585a8fef|b5b728e7a08cd4|b5bea7c1b653ef|
+| Uniplay（玩转互联）         |-| b5baca4aebcb93 |b5baca5d16c597|b5badef36435e7|-|
+| Unityads        |-|-|b5c21a303c25e0|b5b449f809139c|-|
+| Vungle          |-|-|b5bbdc9182f9f2|b5b449f97e0b5f|-|
+| Sigmob          |-|-|b5d7614ab30695|b5d7228c6c5d6a|b5d76150bab3ad|
+
+
+<h2 id='3'>3. Integrating the TopOn SDK </h2>
+
+
 
 <h3>3.1 API</h3>
 
@@ -681,7 +729,7 @@ mInterstitialAd.setAdListener(new ATInterstitialListener() {
 
 
 
-<h2 id=9'>9. Banner</h2>
+<h2 id='9'>9. Banner</h2>
 
 <h3>9.1 Banner ad introduction</h3>
 1.Banner's advertisement provides the API of the advertisement in the form of View. View can customize the width and height, but some ad platforms may not be able to adapt to the custom width and height, so the aspect ratio should be configured with the TopOn background before setting the width and height. Consistent, and need to adjust according to the actual effect after test;<br>
