@@ -1,4 +1,4 @@
-# TopOn v5.2.0
+# TopOn v5.2.1
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -10,7 +10,7 @@
 [The test guideline of TopOn SDK&FAQ (English)](en/The_test_guideline_of_TopOn_SDK&FAQ.md)<br>
 [TopOn and Firebase integration conflict resolution (English)](en/TopOn_and_Firebase_integration_conflict_resolution.md)<br>
 
-**下载地址（Download link）：**[TopOn SDK](http://sdk-release.toponad.com/Android/5.2.0/TopOn_SDK_v5.2.0_20191203_Release.zip)
+**下载地址（Download link）：**[TopOn SDK](http://sdk-release.toponad.com/Android/5.2.1/TopOn_SDK_v5.2.1_20191205_Release.zip )
 
 <h3>TopOn聚合的第三方广告平台的版本说明</h3>
 
@@ -21,9 +21,9 @@
 |Inmobi | 9.0.1 | 
 |Flurry| 11.5.0 | 
 |Applovin| 9.10.1 | 
-|Mintegral | 10.1.21 |
+|Mintegral | 10.1.7 |
 |Mopub | 5.8.0 |
-|GDT | 4.100|
+|GDT | 4.110.980|
 |Chartboost | 7.5.0| 
 |Tapjoy | 12.3.4 |
 |Ironsource | 6.10.2|
@@ -42,7 +42,7 @@
 |StartApp|4.2.4|
 |SuperAwesome|7.0.1|
 |洛米|9.1.30|
-|快手|2.2.5|
+|快手|2.2.7|
 |Sigmob|2.14.2|
 |Ogury|4.3.6|
 
