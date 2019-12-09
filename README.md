@@ -10,7 +10,8 @@
 [The test guideline of TopOn SDK&FAQ (English)](en/The_test_guideline_of_TopOn_SDK&FAQ.md)<br>
 [TopOn and Firebase integration conflict resolution (English)](en/TopOn_and_Firebase_integration_conflict_resolution.md)<br>
 
-**下载地址（Download link）：**[TopOn SDK](http://sdk-release.toponad.com/Android/5.2.1/TopOn_SDK_v5.2.1_20191205_Release.zip )
+**下载地址（Download link）：**[TopOn SDK](http://sdk-release.toponad.com/Android/5.2.1/TopOn_SDK_v5.2.1_20191205_Release.zip)<br>
+注意：不要通过GitHub的Download ZIP下载TopOn SDK（Note: Do not download TopOn SDK via Download ZIP on GitHub）
 
 <h3>TopOn聚合的第三方广告平台的版本说明</h3>
 
