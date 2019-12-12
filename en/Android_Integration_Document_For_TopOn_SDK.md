@@ -286,8 +286,8 @@ ATSDK.init(getApplicationContext(), appid, appKey);
 | getAdFrom |-| Get the source of the ad (the Nend ad platform must render this information). |
 | getAdLogo |-|Get the bitmap of the ad logo (currently only toutiao can get it).|
 | getImageUrlList|-|Get the url list of the image.|
-|getStarRating|-|Get the rating of the ad.|
-
+| getStarRating |-|Get the rating of the ad.|
+| isNativeExpress |-|Whether it is a personalized template (for GDT and Toutiao)|
 
 <h3>4.3 Native ad sample code</h3>
 
@@ -414,6 +414,26 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 
 ```
 
+<h3>4.3 Explanation of Native Personalized Templates for GDT and Toutiao </h3>
+1、CustomNativeAd#isNativeExpress () can be used to determine whether the advertisement is a personalized template. The personalized template will only return MediaView (obtained through CustomNativeAd#getAdMediaView ()), and the others will be null. <br>
+2、Because the personalized template only returns a View, which is rendered by the advertising platform, developers cannot layout the internal materials. <br>
+3、When a Toutiao personalized template advertisement is configured in the advertisement slot, the width and height of the advertisement need to be passed before the request is initiated.
+
+```java
+    Map<String, Object> localMap = new HashMap<>();
+    localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, width);//Unit: px
+    localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, height);//Unit: px
+    
+    //ATNative Native ad
+    atNative.setLocalExtra(localMap);
+
+    //ATNativeBanner  Native banner ad
+    atNativebBannerView.setLocalExtra(localMapAuto);
+     
+    //ATNativeSplash  Native splash ad
+    ATNativeSplash splash = new ATNativeSplash(this, splashView, null, placementid, localMap, new ATNativeSplashListener();
+```
+4、Poor compatibility between personalized templates and other self-rendered native ads.
 
 
 <h2 id='5'>5. NativeBanner</h2>
@@ -463,9 +483,9 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 <h3>5.3 NativeBanner ad sample code</h3>
 
 ```java
-ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
+ATNativeBannerView  mBannerView = new ATNativeBannerView(this);
+mBannerView.setBannerConfig(ATNativeBannerSize.BANNER_SIZE_640x150);
 mBannerView.setUnitId(placementId);
-mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 50)));
 mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
@@ -496,6 +516,7 @@ mBannerView.setBannerAdListener(new ATBannerListener() {
 	public void onBannerAutoRefreshFail(AdError adError) {
 	}
 });
+mBannerView.loadAd();
 ```
 
 

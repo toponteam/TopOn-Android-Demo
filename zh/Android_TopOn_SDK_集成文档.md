@@ -289,7 +289,8 @@ ATSDK.init(getApplicationContext(), appid, appKey);
 | getAdFrom |-| 获取广告来源（Nend广告平台必须渲染该信息）|
 | getAdLogo |-|获取AdLogo的Bitmap（目前只有穿山甲能获取到）|
 | getImageUrlList|-|获取图片的url列表|
-|getStarRating|-|获取广告的评分|
+| getStarRating |-|获取广告的评分|
+| isNativeExpress |-|是否为个性化模板（针对广点通、穿山甲的个性化模板）|
 
 
 <h3>4.3 Native广告示例代码</h3>
@@ -417,6 +418,26 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 
 ```
 
+<h3>4.3 关于广点通、穿山甲的Native个性化模板说明</h3>
+1、可通过CustomNativeAd#isNativeExpress()判断广告是否为个性化模板，个性化模板只会返回MediaView（通过CustomNativeAd#getAdMediaView()获取），其他都会为null。<br>
+2、因为个性化模板只会返回一个View，由广告平台进行渲染，所以开发者不能进行内部素材的布局。<br>
+3、当广告位配置有穿山甲的个性化模板广告时，发起请求之前需要传递广告的宽高。
+
+```java
+    Map<String, Object> localMap = new HashMap<>();
+    localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, width);//单位：px
+    localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, height);//单位：px
+    
+    //ATNative 原生广告
+    atNative.setLocalExtra(localMap);
+
+    //ATNativeBanner  原生横幅广告
+    atNativebBannerView.setLocalExtra(localMapAuto);
+     
+    //ATNativeSplash  原生开屏广告
+    ATNativeSplash splash = new ATNativeSplash(this, splashView, null, placementid, localMap, new ATNativeSplashListener();
+```
+4、个性化模板与其他自渲染的原生广告兼容性比较差。
 
 
 <h2 id='5'>5. NativeBanner广告集成说明</h2>
@@ -466,9 +487,9 @@ public class NativeAdRender implements ATNativeAdRenderer<CustomNativeAd> {
 <h3>5.3 NativeBanner广告示例代码</h3>
 
 ```java
-ATBannerView  mBannerView = new ATBannerView(BannerAdActivity.this);
+ATNativeBannerView  mBannerView = new ATNativeBannerView(this);
+mBannerView.setBannerConfig(ATNativeBannerSize.BANNER_SIZE_640x150);
 mBannerView.setUnitId(placementId);
-mBannerView.loadAd();
 frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, CommonUtil.dip2px(getApplicationContext(), 50)));
 mBannerView.setBannerAdListener(new ATBannerListener() {
 	@Override
@@ -499,6 +520,7 @@ mBannerView.setBannerAdListener(new ATBannerListener() {
 	public void onBannerAutoRefreshFail(AdError adError) {
 	}
 });
+mBannerView.loadAd();
 ```
 
 <h2 id='6'>6. NativeSplash广告集成说明</h2>

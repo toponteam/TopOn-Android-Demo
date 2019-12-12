@@ -15,37 +15,37 @@
 
 <h3>TopOn聚合的第三方广告平台的版本说明</h3>
 
-| Network Name| NETWORK VERSION|
-|---|---|
-|Facebook | 5.6.0|
-|Admob | 18.3.0 |
-|Inmobi | 9.0.1 | 
-|Flurry| 11.5.0 | 
-|Applovin| 9.10.1 | 
-|Mintegral | 10.1.7 |
-|Mopub | 5.8.0 |
-|GDT | 4.110.980|
-|Chartboost | 7.5.0| 
-|Tapjoy | 12.3.4 |
-|Ironsource | 6.10.2|
-|UnityAds | 3.3.0 |
-|Vungle | 6.4.11 | 
-|Adcolony | 4.1.0 | 
-|TouTiao|v2.5.2.6(需要开发者在自己头条账号后台下载相应的SDK)|
-|玩转互联 | 6.0.2  |
-|Oneway|2.3.4|
-|MobPower | 4.8.0 |
-|Yeahmobi|4.0.6 |
-|Appnext|2.4.8.472|
-|Baidu|5.83 |
-|Nend|5.3.0 |
-|Maio|1.1.10 |
-|StartApp|4.2.4|
-|SuperAwesome|7.0.1|
-|洛米|9.1.30|
-|快手|2.2.7|
-|Sigmob|2.14.2|
-|Ogury|4.3.6|
+| Network Name| NETWORK VERSION| P.S. |
+|---|---|---|
+|Facebook | 5.6.0|  |
+|Admob | 18.3.0 |  |
+|Inmobi | 9.0.1 |   |
+|Flurry| 11.5.0 |   |
+|Applovin| 9.10.1 |   |
+|Mintegral | 10.1.7 |  |
+|Mopub | 5.8.0 |  |
+|GDT | 4.110.980| 广点通/Tencent/腾讯 |
+|Chartboost | 7.5.0|  | 
+|Tapjoy | 12.3.4 |  |
+|Ironsource | 6.10.2|  |
+|UnityAds | 3.3.0 |  |
+|Vungle | 6.4.11 |   |
+|Adcolony | 4.1.0 |   |
+|TouTiao|v2.5.2.6(需要开发者在自己头条账号后台下载相应的SDK)| 头条/穿山甲 |
+|玩转互联 | 6.0.2  |  |
+|Oneway|2.3.4|  |
+|MobPower | 4.8.0 |  |
+|Yeahmobi|4.0.6 |  |
+|Appnext|2.4.8.472|  |
+|Baidu|5.83 |  |
+|Nend|5.3.0 |  |
+|Maio|1.1.10 |  |
+|StartApp|4.2.4|  |
+|SuperAwesome|7.0.1|  |
+|洛米|9.1.30|  |
+|快手|2.2.7|  |
+|Sigmob|2.14.2|  |
+|Ogury|4.3.6|  |
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
 
