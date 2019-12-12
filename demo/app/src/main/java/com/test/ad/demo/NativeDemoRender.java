@@ -81,8 +81,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         contentArea.removeAllViews();
         if (mediaView != null) {
 
-            if ((mNetworkType == GDTATConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressADView)
-                    || mNetworkType == TTATConst.NETWORK_FIRM_ID && mediaView instanceof NativeExpressView) {
+            if (ad.isNativeExpress()) {//是 个性化模板
                 titleView.setVisibility(View.GONE);
                 descView.setVisibility(View.GONE);
                 ctaView.setVisibility(View.GONE);

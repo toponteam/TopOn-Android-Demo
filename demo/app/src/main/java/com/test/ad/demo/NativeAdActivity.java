@@ -16,6 +16,8 @@ import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.network.toutiao.TTATConst;
+import com.mcore.core.common.utils.CommonUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -99,7 +101,6 @@ public class NativeAdActivity extends Activity {
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
-        Map<String, Object> localMap = null;
         for (int i = 0; i < unitIds.length; i++) {
             upArapuNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
                 @Override
@@ -116,6 +117,11 @@ public class NativeAdActivity extends Activity {
 
                 }
             });
+
+            Map<String, Object> localMap = new HashMap<>();
+            localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, CommonUtil.dip2px(this, 250));
+            localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, CommonUtil.dip2px(this, 170));
+            upArapuNatives[i].setLocalExtra(localMap);
 
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);

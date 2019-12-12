@@ -12,6 +12,7 @@ import com.anythink.nativead.banner.api.ATNativeBannerListener;
 import com.anythink.nativead.banner.api.ATNativeBannerSize;
 import com.anythink.nativead.banner.api.ATNativeBannerConfig;
 import com.anythink.nativead.banner.api.ATNativeBannerView;
+import com.anythink.network.toutiao.TTATConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +24,6 @@ public class NativeBannerActivity extends Activity {
 
         setContentView(R.layout.activity_native_banner);
 
-        final Map<String, Object> localConfigMap = new HashMap<>();
 
         final LinearLayout frameLayout = findViewById(R.id.native_banner_frame);
 
@@ -133,7 +133,7 @@ public class NativeBannerActivity extends Activity {
 
 
         final ATNativeBannerView bannerViewAuto = new ATNativeBannerView(this);
-        bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_admob);
+        bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_toutiao);
         bannerViewAuto.setVisibility(View.GONE);
         ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
         configAuto.bannerSize = ATNativeBannerSize.BANNER_SIZE_AUTO;
@@ -143,46 +143,52 @@ public class NativeBannerActivity extends Activity {
         configAuto.ctaColor = 0xff00ff00;
         configAuto.titleColor = 0xffffffff;
         bannerViewAuto.setBannerConfig(configAuto);
+        final Map<String, Object> localMapAuto = new HashMap<>();
+        //穿山甲个性化模板
+        localMapAuto.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, dip2px(getApplicationContext(), 320));
+        localMapAuto.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, dip2px(getApplicationContext(), 205));
+        bannerViewAuto.setLocalExtra(localMapAuto);
 
         bannerViewAuto.setBackgroundColor(0xffffffff);
-        LinearLayout.LayoutParams paramsAuto = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 360), dip2px(getApplicationContext(), 35));
+        LinearLayout.LayoutParams paramsAuto = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 320), dip2px(getApplicationContext(), 205));
         paramsAuto.topMargin = dip2px(getApplicationContext(), 10);
         frameLayout.addView(bannerViewAuto, paramsAuto);
 
         bannerViewAuto.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
-                Log.i("BannerActivity", "320---onAdLoaded----");
+                bannerViewAuto.setVisibility(View.VISIBLE);
+                Log.i("BannerActivity", "auto---onAdLoaded----");
             }
 
             @Override
             public void onAdError(String errorMsg) {
-                Log.i("BannerActivity", "320---onAdError----:" + errorMsg);
+                Log.i("BannerActivity", "auto---onAdError----:" + errorMsg);
             }
 
             @Override
             public void onAdClick(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAdClick----");
+                Log.i("BannerActivity", "auto---onAdClick----");
             }
 
             @Override
             public void onAdClose() {
-                Log.i("BannerActivity", "320---onAdClose----");
+                Log.i("BannerActivity", "auto---onAdClose----");
             }
 
             @Override
             public void onAdShow(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAdShow----");
+                Log.i("BannerActivity", "auto---onAdShow----");
             }
 
             @Override
             public void onAutoRefresh(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAutoRefresh----");
+                Log.i("BannerActivity", "auto---onAutoRefresh----");
             }
 
             @Override
             public void onAutoRefreshFail(String errorMsg) {
-                Log.i("BannerActivity", "320---onAutoRefreshFail----" + errorMsg);
+                Log.i("BannerActivity", "auto---onAutoRefreshFail----" + errorMsg);
             }
         });
 
