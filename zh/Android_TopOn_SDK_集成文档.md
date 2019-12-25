@@ -32,8 +32,6 @@
 
 <h3>2.1 SDK下载地址</h3>
 
-[TopOn SDK下载地址](http://sdk-release.toponad.com/Android/5.2.0/TopOn_SDK_v5.2.0_20191203_Release.zip)
-
 TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_android)
 
 <h3>2.2 SDK包的目录说明</h3>
@@ -46,6 +44,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | SDK包 | 说明 | 是否必须|
 | --- | --- |---|
 |anythink_core.aar|TopOn的基础包，必须导入| **是**|
+|tramini_sdk_v1.0|收集SDK错误信息 | **否** |
 |anythink_native.aar|TopOn的Native广告集成包| 否|
 |anythink_banner.aar|TopOn的Banner广告集成包|否|
 |anythink_interstitial.aar|TopOn的插屏广告集成包|否|
