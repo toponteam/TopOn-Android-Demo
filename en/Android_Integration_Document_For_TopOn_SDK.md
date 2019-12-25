@@ -30,8 +30,6 @@ Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
 <h3>2.1 SDK download address</h3>
 
-[TopOn SDK download address](http://sdk-release.toponad.com/Android/5.2.0/TopOn_SDK_v5.2.0_20191203_Release.zip)
-
 TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_android)
 
 <h3>2.2 Directory description of the SDK package</h3>
@@ -44,6 +42,7 @@ TopOn SDK Demo：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_
 | SDK package | Description | Necessary |
 | --- | --- |---|
 |anythink_core.aar|TopOn basic package，must imported| **Yes** |
+|tramini_sdk_v1.0.aar|Error message collecting mode | No |
 |anythink_native.aar|TopOn integration package for native| No |
 |anythink_banner.aar|TopOn integration package for banner|No|
 |anythink_interstitial.aar|TopOn integration package for interstitial|No|
