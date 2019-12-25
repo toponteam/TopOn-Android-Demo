@@ -1,4 +1,4 @@
-# TopOn v5.3.0
+# TopOn v5.4.0
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -11,8 +11,8 @@
 [TopOn and Firebase integration conflict resolution (English)](en/TopOn_and_Firebase_integration_conflict_resolution.md)<br>
 
 **下载地址（Download link）：**<br>
-TopOn Android SDK V5.3.0<br>
-http://sdk-release.toponad.com/Android/5.3.0/TopOn_SDK_v5.3.0_20191212_Release.zip <br>
+TopOn Android SDK V5.4.0<br>
+http://sdk-release.toponad.com/Android/5.4.0/TopOn_SDK_v5.4.0_20191224_Release.zip <br>
 TopOn Unity for Android SDK V5.3.0<br>
 http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0.unitypackage <br>
 
