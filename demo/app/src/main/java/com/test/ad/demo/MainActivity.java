@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.anythink.core.api.ATSDK;
+import com.anythink.core.api.ATGDPRAuthCallback;
 
 public class MainActivity extends Activity {
 
@@ -17,7 +18,12 @@ public class MainActivity extends Activity {
         findViewById(R.id.gdprBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ATSDK.showGdprAuth(MainActivity.this);
+                ATSDK.showGdprAuth(MainActivity.this, new ATGDPRAuthCallback() {
+                    @Override
+                    public void onAuthResult(int level) {
+                        ATSDK.setGDPRUploadDataLevel(MainActivity.this, level);
+                    }
+                });
             }
         });
 
