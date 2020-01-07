@@ -20,37 +20,37 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0.unitypackage <br>
 
 <h3>TopOn聚合的第三方广告平台的版本说明</h3>
 
-| Network Name| NETWORK VERSION| P.S. |
-|---|---|---|
-|Facebook | 5.6.0|  |
-|Admob | 18.3.0 |  |
-|Inmobi | 9.0.1 |   |
-|Flurry| 11.5.0 |   |
-|Applovin| 9.10.1 |   |
-|Mintegral | 10.1.7 |  |
-|Mopub | 5.8.0 |  |
-|GDT | 4.110.980| 广点通/Tencent/腾讯 |
-|Chartboost | 7.5.0|  | 
-|Tapjoy | 12.3.4 |  |
-|Ironsource | 6.10.2|  |
-|UnityAds | 3.3.0 |  |
-|Vungle | 6.4.11 |   |
-|Adcolony | 4.1.0 |   |
-|TouTiao|v2.5.3.2(需要开发者在自己头条账号后台下载相应的SDK)| 头条/穿山甲 |
-|玩转互联 | 6.0.2  |  |
-|Oneway|2.3.4|  |
-|MobPower | 4.8.0 |  |
-|Yeahmobi|4.0.6 |  |
-|Appnext|2.4.8.472|  |
-|Baidu|5.83 |  |
-|Nend|5.3.0 |  |
-|Maio|1.1.10 |  |
-|StartApp|4.2.4|  |
-|SuperAwesome|7.0.1|  |
-|洛米|9.1.30|  |
-|快手|2.2.8|  |
-|Sigmob|2.14.2|  |
-|Ogury|4.3.6|  |
+| Network Name| CURRENT_NETWORK VERSION| SUPPORT_NETWORK_VERSION | P.S. |
+|---|---|---|---|
+|Facebook | 5.6.0| 5.6.0 |   |
+|Admob | 18.3.0 | 18.3.0 |   |
+|Inmobi | 9.0.1 |  9.0.1 |   |
+|Flurry| 11.5.0 | 11.5.0 |   |
+|Applovin| 9.10.5 | 9.10.1、9.10.5 |   |
+|Mintegral | 10.1.7 | 10.1.7 |   |
+|Mopub | 5.8.0 | 5.8.0 |   |
+|GDT | 4.110.980 | 4.110.980 | 广点通/Tencent/腾讯 |
+|Chartboost | 7.5.0 | 7.5.0 |   | 
+|Tapjoy | 12.4.0 | 12.3.4、12.4.0 |   |
+|Ironsource | 6.11.1 | 6.10.2、6.11.1 |   |
+|UnityAds | 3.4.0 | 3.3.0、3.4.0 |   |
+|Vungle | 6.4.11 | 6.4.11 |   |
+|Adcolony | 4.1.2 | 4.1.0、4.1.2 |   |
+|TouTiao| v2.5.3.2(需要开发者在自己头条账号后台下载相应的SDK) | 2.5.3.2 | 头条/穿山甲 |
+|玩转互联 | 6.0.2 | 6.0.2 |   |
+|Oneway| 2.3.4 | 2.3.4 |   |
+|MobPower | 4.8.0 | 4.8.0 |   |
+|Yeahmobi| 4.0.6 | 4.0.6 |   |
+|Appnext| 2.4.8.472 | 2.4.8.472 |   |
+|Baidu| 5.83 | 5.83 |   |
+|Nend| 5.4.0 | 5.3.0、5.4.0 |   |
+|Maio| 1.1.11 | 1.1.10、1.1.11 |   |
+|StartApp| 4.2.4 | 4.2.4 |   |
+|SuperAwesome| 7.0.1 | 7.0.1 |   |
+|洛米| 9.1.30 | 9.1.30 |   |
+|快手| 2.2.8 | 2.2.8 |   |
+|Sigmob| 2.15.1 | 2.15.1 |   |
+|Ogury| 4.3.6 | 4.3.6 |   |
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
 
