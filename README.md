@@ -1,4 +1,4 @@
-# TopOn v5.4.3
+# TopOn v5.4.4
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -11,8 +11,8 @@
 [TopOn and Firebase integration conflict resolution (English)](en/TopOn_and_Firebase_integration_conflict_resolution.md)<br>
 
 **下载地址（Download link）：**<br>
-TopOn Android SDK V5.4.3<br>
-http://sdk-release.toponad.com/Android/5.4.3/TopOn_SDK_v5.4.3_20200107_Release.zip <br>
+TopOn Android SDK V5.4.4<br>
+http://sdk-release.toponad.com/Android/5.4.4/TopOn_SDK_v5.4.4_20200115_Release.zip <br>
 TopOn Unity for Android SDK V5.3.0<br>
 http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0.unitypackage <br>
 
@@ -36,7 +36,7 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0.unitypackage <br>
 |UnityAds | 3.4.0 | 3.3.0、3.4.0 |   |
 |Vungle | 6.4.11 | 6.4.11 |   |
 |Adcolony | 4.1.2 | 4.1.0、4.1.2 |   |
-|TouTiao| v2.5.3.2(需要开发者在自己头条账号后台下载相应的SDK) | 2.5.3.2 | 头条/穿山甲 |
+|TouTiao| v2.8.0.0(需要开发者在自己头条账号后台下载相应的SDK) | 2.5.3.2、2.8.0.0 | 头条/穿山甲 |
 |玩转互联 | 6.0.2 | 6.0.2 |   |
 |Oneway| 2.3.4 | 2.3.4 |   |
 |MobPower | 4.8.0 | 4.8.0 |   |
