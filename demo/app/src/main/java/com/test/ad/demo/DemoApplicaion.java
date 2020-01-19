@@ -129,8 +129,9 @@ public class DemoApplicaion extends MultiDexApplication {
         super.onCreate();
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
-        ATSDK.init(this, appid, appKey);
         ATSDK.setNetworkLogDebug(true);
+        ATSDK.integrationChecking(getApplicationContext());
+        ATSDK.init(this, appid, appKey);
 
     }
 }
