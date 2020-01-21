@@ -140,7 +140,35 @@ dependencies {
 
 聚合第三方Network的混淆配置，请参考**network_sdk**目录下该平台文件夹下的proguard-android.txt
 
-<h4>2.2.5 广告测试说明</h4>
+<h4>2.2.5 测试说明</h4>
+
+（1）**第一步：** 验证第三方SDK集成是否正确<br>
+
+可通过调用方法：**ATSDK.integrationChecking(applicationContext);**，在logcat中过滤 **anythink** 的Tag来查看日志，日志输出的例子如下：
+
+```java
+********************************** Network Integration Status *************************************
+----------------------------------------
+NetworkName: Admob //聚合的广告平台的名字
+SDK: VERIFIED //验证聚合SDK是否正确，正确则显示VERIFIED，否则显示NOT VERIFIED
+Dependence Plugin: VERIFIED //验证广告平台依赖的插件是否存在，正确则显示VERIFIED，否则显示缺少的配置
+Activities : VERIFIED //验证广告平台的Activity声明是否存在，正确则显示VERIFIED，否则显示缺少的配置
+Providers : VERIFIED  //验证广告平台的Provider声明是否存在，正确则显示VERIFIED，否则显示缺少的配置
+Status: Success //验证广告平台是否全部集成正确，正确则显示Success，否则显示Fail
+----------------------------------------
+NetworkName: Facebook
+SDK: VERIFIED
+Dependence Plugin: VERIFIED
+Activities : VERIFIED
+Services : VERIFIED
+Providers : VERIFIED
+Status: Success
+********************************** Network Integration Status *************************************
+```
+
+其中只要平台下的 **Status** 是 **Success** ，则该广告平台集成正确，否则具体查看各个参数的原因来补充缺少集成的部分。 <br>
+
+(2) **第二步：** 验证所有广告平台的加载是否正常<br>
 
 **在SDK的集成测试阶段，请打开TopOn SDK的日志功能，方便验证广告回调状态和排查错误。**<br>
 在初始化SDK之前加上：**ATSDK.setNetworkLogDebug(true);**<br>
