@@ -140,6 +140,34 @@ The configuration of confusion for the third-party network platform, please refe
 
 <h4>2.2.5 Ad Test</h4>
 
+**Step 1:**  Verify correct third-party SDK integration
+
+You could call "ATSDK.integrationChecking(applicationContext)" to check the correctness of network and filter anythink tags in logcat to view logs. For example:
+
+```java
+********************************** Network Integration Status *************************************
+----------------------------------------
+NetworkName: Admob //Name of network
+SDK: VERIFIED //Verify that the SDK is aggregated
+Dependence Plugin: VERIFIED //Verify the existence of plugins that the ad platform depends on
+Activities : VERIFIED //Verify Activities has been declared in AndroidManifest
+Providers : VERIFIED  //Verify Providers has been declared in AndroidManifest
+Status: Success //Verify that the advertising platform is fully integrated
+----------------------------------------
+NetworkName: Facebook
+SDK: VERIFIED
+Dependence Plugin: VERIFIED
+Activities : VERIFIED
+Services : VERIFIED
+Providers : VERIFIED
+Status: Success
+********************************** Network Integration Status *************************************
+```
+
+Among them, as long as the **Status** under the platform is **Success** , the advertising platform is correctly integrated; otherwise, the reasons for each parameter are specifically checked to supplement the lack of integration. <br>
+
+**Step 2:** Verify that all ad platforms are loading properly
+
 **In the integration testing phase of the SDK, please open the logging function of the TopOn SDK to facilitate verification of the callback status and troubleshooting errors.**<br>
 Add before the SDK is initialized: **ATSDK.setNetworkLogDebug(true);**<br>
 
