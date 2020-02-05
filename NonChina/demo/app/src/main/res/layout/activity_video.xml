@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/placement_select_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"></RadioGroup>
+
+        <Button
+            android:id="@+id/loadAd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/placement_select_group"
+            android:layout_toRightOf="@id/placement_select_group"
+            android:text="Load Video Ad" />
+
+        <Button
+            android:id="@+id/is_ad_ready_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loadAd_btn"
+            android:layout_toRightOf="@id/placement_select_group"
+            android:text="Is Video Ad Ready" />
+
+        <Button
+            android:id="@+id/show_ad_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/is_ad_ready_btn"
+            android:layout_toRightOf="@id/placement_select_group"
+            android:text="Show Video Ad" />
+
+        <Button
+            android:id="@+id/clean_ad_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_ad_btn"
+            android:layout_toRightOf="@id/placement_select_group"
+            android:text="CLean Video Ad" />
+
+
+    </RelativeLayout>
+</ScrollView>

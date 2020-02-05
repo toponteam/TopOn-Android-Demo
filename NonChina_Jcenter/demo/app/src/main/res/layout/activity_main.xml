@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/gdprBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="GDPR Setting"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/nativeAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Native Ad Demo"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/nativeBannerAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Native Banner Ad Demo"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/nativeSplashAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:text="Native Splash Ad Demo"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/rewardedVideoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="RewardedVideo Demo"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/bannerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="Banner Demo"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/interstitialBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="Interstitial Demo"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+</LinearLayout>

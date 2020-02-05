@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/banner_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/loadAd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_spinner"
+        android:text="Banner Load Ad" />
+
+
+    <FrameLayout
+        android:id="@+id/adview_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/loadAd_btn"
+        android:layout_marginTop="10dp"></FrameLayout>
+
+
+
+</RelativeLayout>
