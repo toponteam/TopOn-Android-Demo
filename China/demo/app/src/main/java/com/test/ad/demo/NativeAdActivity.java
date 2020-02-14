@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,6 +14,7 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
@@ -33,6 +35,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_toutiao_drawer
             , DemoApplicaion.mPlacementId_native_baidu
             , DemoApplicaion.mPlacementId_native_luomi
+            , DemoApplicaion.mPlacementId_native_kuaishou
 
     };
 
@@ -43,7 +46,8 @@ public class NativeAdActivity extends Activity {
             "toutiao",
             "toutiao_drawer",
             "baidu",
-            "luomi"
+            "luomi",
+            "kuaishou"
     };
 
     ATNative upArapuNatives[] = new ATNative[unitIds.length];
@@ -150,6 +154,14 @@ public class NativeAdActivity extends Activity {
                         @Override
                         public void onAdVideoProgress(ATNativeAdView view, int progress) {
                             Log.i(TAG, "native ad onAdVideoProgress--------:" + progress);
+                        }
+                    });
+                    mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
+                        @Override
+                        public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
+                            if (view.getParent() != null) {
+                                ((ViewGroup) view.getParent()).removeView(view);
+                            }
                         }
                     });
                     mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);

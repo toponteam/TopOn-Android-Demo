@@ -20,6 +20,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_toutiao_drawer = "b5c355d79ef9be";
     public static final String mPlacementId_native_baidu = "b5d148f9f2e47d";
     public static final String mPlacementId_native_luomi = "b5d1ef61e17981";
+    public static final String mPlacementId_native_kuaishou = "b5e4105d4f21b6";
 
     //rv线上
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";

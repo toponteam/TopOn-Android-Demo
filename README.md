@@ -1,4 +1,4 @@
-# TopOn v5.4.5
+# TopOn v5.4.7
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -48,7 +48,7 @@ http://sdk-release.toponad.com/Unity/5.4.4/Unity_Androidv5.4.4.unitypackage <br>
 |StartApp| 4.2.4 | 4.2.4 |   |
 |SuperAwesome| 7.0.1 | 7.0.1 |   |
 |洛米| 9.1.30 | 9.1.30 |   |
-|快手| 2.2.8 | 2.2.8 |   |
+|快手| 2.3.0 | 2.3.0 |   |
 |Sigmob| 2.15.1 | 2.15.1 |   |
 |Ogury| 4.3.6 | 4.3.6 |   |
 
