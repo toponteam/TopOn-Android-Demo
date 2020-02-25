@@ -23,23 +23,4 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"></LinearLayout>
 
-    <!--<com.uparpu.plugin.banner.api.UpArpuNativeBannerView-->
-        <!--android:id="@+id/banner_640_view"-->
-        <!--android:layout_width="360dp"-->
-        <!--android:layout_height="75dp"-->
-        <!--android:background="#ffffff"></com.uparpu.plugin.banner.api.UpArpuNativeBannerView>-->
-
-    <!--<com.uparpu.plugin.banner.api.UpArpuNativeBannerView-->
-        <!--android:id="@+id/banner_320_view"-->
-        <!--android:layout_width="320dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:background="#ffffff"></com.uparpu.plugin.banner.api.UpArpuNativeBannerView>-->
-
-    <!--<com.uparpu.plugin.banner.api.UpArpuNativeBannerView-->
-        <!--android:id="@+id/banner_auto_view"-->
-        <!--android:layout_width="200dp"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:background="#ffffff"></com.uparpu.plugin.banner.api.UpArpuNativeBannerView>-->
 </LinearLayout>
