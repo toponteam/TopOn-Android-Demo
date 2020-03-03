@@ -36,6 +36,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_baidu
             , DemoApplicaion.mPlacementId_native_luomi
             , DemoApplicaion.mPlacementId_native_kuaishou
+            , DemoApplicaion.mPlacementId_native_kuaishou_drawer
 
     };
 
@@ -47,7 +48,8 @@ public class NativeAdActivity extends Activity {
             "toutiao_drawer",
             "baidu",
             "luomi",
-            "kuaishou"
+            "kuaishou",
+            "kuaishou_drawer"
     };
 
     ATNative upArapuNatives[] = new ATNative[unitIds.length];
