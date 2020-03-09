@@ -81,7 +81,6 @@ public class NativeBannerActivity extends Activity {
 
         ATNativeBannerConfig config320 = new ATNativeBannerConfig();
         config320.bannerSize = ATNativeBannerSize.BANNER_SIZE_320x50;
-//        config320.backgroupResId = R.drawable.uparpu_test_bg;
         config320.ctaBgColor = 0xff000000;
         bannerView320.setBannerConfig(config320);
 
@@ -136,14 +135,12 @@ public class NativeBannerActivity extends Activity {
         bannerViewAuto.setVisibility(View.GONE);
         ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
         configAuto.bannerSize = ATNativeBannerSize.BANNER_SIZE_AUTO;
-//                configAuto.backgroupResId = R.drawable.uparpu_test_bg;
         configAuto.isCtaBtnShow = true;
         configAuto.ctaBgColor = 0xff000000;
         configAuto.ctaColor = 0xff00ff00;
         configAuto.titleColor = 0xffffffff;
         bannerViewAuto.setBannerConfig(configAuto);
         final Map<String, Object> localMapAuto = new HashMap<>();
-        //穿山甲个性化模板
         bannerViewAuto.setLocalExtra(localMapAuto);
 
         bannerViewAuto.setBackgroundColor(0xffffffff);

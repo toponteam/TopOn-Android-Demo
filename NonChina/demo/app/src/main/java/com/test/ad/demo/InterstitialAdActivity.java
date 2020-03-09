@@ -81,7 +81,7 @@ public class InterstitialAdActivity extends Activity {
 
         for (int i = 0; i < unitIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setPadding(20, 20, 20, 20);                 // 设置文字距离按钮四周的距离
+            radioButton.setPadding(20, 20, 20, 20);
             radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
             mRadioGroup.addView(radioButton);
@@ -97,7 +97,6 @@ public class InterstitialAdActivity extends Activity {
             }
         });
 
-//        mCurrentSelectIndex = 9;
         init();
 
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
@@ -118,14 +117,7 @@ public class InterstitialAdActivity extends Activity {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mInterstitialAd.show();
-            }
-        });
-
-        findViewById(R.id.clean_ad_view_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mInterstitialAd.clean();
+                mInterstitialAd.show(InterstitialAdActivity.this);
             }
         });
 
@@ -133,10 +125,6 @@ public class InterstitialAdActivity extends Activity {
 
 
     private void init() {
-        if (mInterstitialAd != null) {
-            mInterstitialAd.onDestory();
-            mInterstitialAd = null;
-        }
         mInterstitialAd = new ATInterstitial(this, unitIds[mCurrentSelectIndex]);
         addSetting();
         mInterstitialAd.setAdListener(new ATInterstitialListener() {
@@ -198,21 +186,16 @@ public class InterstitialAdActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        mInterstitialAd.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mInterstitialAd.onPause();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mInterstitialAd != null) {
-            mInterstitialAd.onDestory();
-        }
     }
 }
 

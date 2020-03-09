@@ -61,7 +61,7 @@ public class RewardVideoAdActivity extends Activity {
 
         for (int i = 0; i < unitIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setPadding(20, 20, 20, 20);                 // 设置文字距离按钮四周的距离
+            radioButton.setPadding(20, 20, 20, 20);
             radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
             mRadioGroup.addView(radioButton);
@@ -98,14 +98,7 @@ public class RewardVideoAdActivity extends Activity {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mRewardVideoAd.show();
-            }
-        });
-
-        findViewById(R.id.clean_ad_view_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRewardVideoAd.clean();
+                mRewardVideoAd.show(RewardVideoAdActivity.this);
             }
         });
 
@@ -113,10 +106,6 @@ public class RewardVideoAdActivity extends Activity {
 
 
     private void init() {
-        if (mRewardVideoAd != null) {
-            mRewardVideoAd.onDestory();
-            mRewardVideoAd = null;
-        }
         mRewardVideoAd = new ATRewardVideoAd(this, unitIds[mCurrentSelectIndex]);
         String userid = "test_userid_001";
         mRewardVideoAd.setUserData(userid, "");
@@ -175,13 +164,11 @@ public class RewardVideoAdActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        mRewardVideoAd.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        mRewardVideoAd.onPause();
     }
 }
 

@@ -49,7 +49,7 @@ public class NativeAdActivity extends Activity {
             "baidu",
             "luomi",
             "kuaishou",
-            "kuaishou_drawer"
+            "kuaishou-draw"
     };
 
     ATNative upArapuNatives[] = new ATNative[unitIds.length];
@@ -71,7 +71,7 @@ public class NativeAdActivity extends Activity {
 
         for (int i = 0; i < unitIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setPadding(20, 20, 20, 20);                 // 设置文字距离按钮四周的距离
+            radioButton.setPadding(20, 20, 20, 20);
             radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
             mRadioGroup.addView(radioButton);
@@ -85,6 +85,10 @@ public class NativeAdActivity extends Activity {
                 mCurrentSelectIndex = i;
             }
         });
+
+
+        int padding = dip2px(10);
+        int adViewHeight = dip2px(340) - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
@@ -105,9 +109,10 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
+
             Map<String, Object> localMap = new HashMap<>();
-            localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, dip2px(250));
-            localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, dip2px(170));
+            localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+            localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, adViewHeight);
             upArapuNatives[i].setLocalExtra(localMap);
 
             if (anyThinkNativeAdView == null) {
@@ -119,10 +124,7 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String, String> maps = new HashMap<>();
-                maps.put("age", "22");
-                maps.put("sex", "lady");
-                upArapuNatives[mCurrentSelectIndex].makeAdRequest(maps);
+                upArapuNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
 
@@ -166,7 +168,12 @@ public class NativeAdActivity extends Activity {
                             }
                         }
                     });
-                    mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                    try{
+                        mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                    }catch (Exception e){
+
+                    }
+
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(anyThinkNativeAdView);
                 } else {
@@ -176,9 +183,10 @@ public class NativeAdActivity extends Activity {
 
             }
         });
+        anyThinkNativeAdView.setPadding(padding,padding,padding,padding);
 
         anyThinkNativeAdView.setVisibility(View.GONE);
-        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView);
+        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
     }
 
     @Override

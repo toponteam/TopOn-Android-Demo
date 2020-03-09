@@ -16,12 +16,12 @@ networkLibsPath.add("baidu");
 networkLibsPath.add("gdt");
 networkLibsPath.add("ksyun");
 networkLibsPath.add("luomi");
-networkLibsPath.add("mintegral_china");
+networkLibsPath.add("mintegral");
 networkLibsPath.add("oneway");
-networkLibsPath.add("toutiao");
+networkLibsPath.add("pangle");
 networkLibsPath.add("uniplay");
 
-networkLibsPath.add("ks");
+networkLibsPath.add("kuaishou");
 networkLibsPath.add("sigmob");
 
 android {
@@ -46,11 +46,10 @@ android {
             res.srcDirs += 'network/gdt/res'
             res.srcDirs += 'network/ksyun/res'
             res.srcDirs += 'network/luomi/res'
-            res.srcDirs += 'network/mintegral_china/res'
+            res.srcDirs += 'network/mintegral/res'
             res.srcDirs += 'network/oneway/res'
-            res.srcDirs += 'network/toutiao/res'
+            res.srcDirs += 'network/pangle/res'
             res.srcDirs += 'network/uniplay/res'
-            res.srcDirs += 'network/yeahmobi/res'
             res.srcDirs += 'network/sigmob/res'
         }
     }

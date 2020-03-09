@@ -50,14 +50,40 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         TextView descView = (TextView) view.findViewById(R.id.native_ad_desc);
         TextView ctaView = (TextView) view.findViewById(R.id.native_ad_install_btn);
         TextView adFromView = (TextView) view.findViewById(R.id.native_ad_from);
-
         FrameLayout contentArea = (FrameLayout) view.findViewById(R.id.native_ad_content_image_area);
+        FrameLayout iconArea = (FrameLayout) view.findViewById(R.id.native_ad_image);
+        final SimpleDraweeView logoView = (SimpleDraweeView) view.findViewById(R.id.native_ad_logo);
+
+        titleView.setText("");
+        descView.setText("");
+        ctaView.setText("");
+        adFromView.setText("");
+        titleView.setText("");
+        contentArea.removeAllViews();
+        iconArea.removeAllViews();
+        logoView.setImageDrawable(null);
+
+
+        if (ad.isNativeExpress()) {//是 个性化模板
+            titleView.setVisibility(View.GONE);
+            descView.setVisibility(View.GONE);
+            ctaView.setVisibility(View.GONE);
+            logoView.setVisibility(View.GONE);
+            iconArea.setVisibility(View.GONE);
+        } else {
+            titleView.setVisibility(View.VISIBLE);
+            descView.setVisibility(View.VISIBLE);
+            ctaView.setVisibility(View.VISIBLE);
+            logoView.setVisibility(View.VISIBLE);
+            iconArea.setVisibility(View.VISIBLE);
+        }
+
+
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
         View adiconView = ad.getAdIconView();
 
-        FrameLayout iconArea = (FrameLayout) view.findViewById(R.id.native_ad_image);
+
         final SimpleDraweeView iconView = new SimpleDraweeView(mContext);
-        iconView.setImageDrawable(null);
         if (adiconView == null) {
             iconArea.addView(iconView);
             iconView.setImageURI(ad.getIconImageUrl());
@@ -66,25 +92,14 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         }
 
 
-        final SimpleDraweeView logoView = (SimpleDraweeView) view.findViewById(R.id.native_ad_logo);
         if (!TextUtils.isEmpty(ad.getAdChoiceIconUrl())) {
-            logoView.setVisibility(View.VISIBLE);
             logoView.setImageURI(ad.getAdChoiceIconUrl());
         } else {
-            logoView.setVisibility(View.GONE);
+//            logoView.setImageResource(R.drawable.ad_logo);
         }
 
-        contentArea.removeAllViews();
+
         if (mediaView != null) {
-
-            if (ad.isNativeExpress()) {//是 个性化模板
-                titleView.setVisibility(View.GONE);
-                descView.setVisibility(View.GONE);
-                ctaView.setVisibility(View.GONE);
-                logoView.setVisibility(View.GONE);
-                iconView.setVisibility(View.GONE);
-            }
-
             contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
         } else {

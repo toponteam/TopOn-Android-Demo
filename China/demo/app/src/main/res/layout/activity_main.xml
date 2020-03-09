@@ -4,16 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <Button
-        android:id="@+id/gdprBtn"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:text="GDPR Setting"
-        android:textSize="15dp"
-        android:gravity="center"/>
-
     <Button
         android:id="@+id/nativeAdBtn"
         android:layout_width="match_parent"

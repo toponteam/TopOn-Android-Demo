@@ -1,7 +1,8 @@
 package com.test.ad.demo;
 
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 
+import com.anythink.core.api.ATGDPRAuthCallback;
 import com.anythink.core.api.ATSDK;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
@@ -13,6 +14,7 @@ import com.facebook.stetho.Stetho;
 public class DemoApplicaion extends MultiDexApplication {
     public static final String appid = "a5aa1f9deda26d";
     public static final String appKey = "4f7b9ac17decb9babec83aac078742c7";
+    //Native
     public static final String mPlacementId_native_all = "b5aa1fa2cae775";
     public static final String mPlacementId_native_facebook = "b5aa1fa4165ea3";
     public static final String mPlacementId_native_admob = "b5aa1fa501d9f6";
@@ -24,7 +26,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_appnext = "b5bc7f369610cd";
     public static final String mPlacementId_native_nend = "b5cb95ead9e60a";
 
-    //rv线上
+    //RewardedVideo
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
     public static final String mPlacementId_rewardvideo_facebook = "b5b449eefcab50";
     public static final String mPlacementId_rewardvideo_admob = "b5b449f025ec7c";
@@ -47,7 +49,8 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_myoffer = "b5db6c3764aea3";
     public static final String mPlacementId_rewardvideo_ogury = "b5dde267f73eb4";
 
-    //banner正式
+    //Banner
+    public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
     public static final String mPlacementId_banner_facebook = "b5bbdc51a35e29";
     public static final String mPlacementId_banner_admob = "b5baca41a2536f";
     public static final String mPlacementId_banner_inmobi = "b5bbdc535a9d1a";
@@ -55,17 +58,11 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_applovin = "b5bbdc59f88520";
     public static final String mPlacementId_banner_mintegral = "b5dd388839bf5e";
     public static final String mPlacementId_banner_mopub = "b5bbdc5c857b2f";
-    public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
-    public static final String mPlacementId_banner_CHARTBOOST = "";
-    public static final String mPlacementId_banner_TAPJOY = "";
-    public static final String mPlacementId_banner_IRONSOURCE = "";
-    public static final String mPlacementId_banner_UNITYAD = "b5c21a2eb3d5f4";
-    public static final String mPlacementId_banner_vungle = "";
-    public static final String mPlacementId_banner_adcolony = "";
     public static final String mPlacementId_banner_appnext = "b5bc7f3b034a2b";
     public static final String mPlacementId_banner_nend = "b5cb95ed13203c";
 
-    //interstital正式
+    //Interstitial
+    public static final String mPlacementId_interstitial_all = "b5baca53984692";
     public static final String mPlacementId_interstitial_facebook = "b5bbdc69a21187";
     public static final String mPlacementId_interstitial_admob = "b5baca54674522";
     public static final String mPlacementId_interstitial_inmobi = "b5bbdc6b63458f";
@@ -74,7 +71,6 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_mintegral = "b5bbdc725768fa";
     public static final String mPlacementId_interstitial_video_mintegral = "b5bbdc855a1506";
     public static final String mPlacementId_interstitial_mopub = "b5bbdc86dd8e3b";
-    public static final String mPlacementId_interstitial_all = "b5baca53984692";
     public static final String mPlacementId_interstitial_CHARTBOOST = "b5bbdc8a68d901";
     public static final String mPlacementId_interstitial_TAPJOY = "b5bbdc8b6e9829";
     public static final String mPlacementId_interstitial_IRONSOURCE = "b5bbdc8e9ef916";
@@ -93,8 +89,20 @@ public class DemoApplicaion extends MultiDexApplication {
         super.onCreate();
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
-        ATSDK.init(this, appid, appKey);
         ATSDK.setNetworkLogDebug(true);
+        ATSDK.init(this, appid, appKey);
+
+        /**
+         * Call it after init SDK
+         */
+        if (ATSDK.isEUTraffic(this) && ATSDK.getGDPRDataLevel(this) == ATSDK.UNKNOWN) {
+            ATSDK.showGdprAuth(this, new ATGDPRAuthCallback() {
+                @Override
+                public void onAuthResult(int level) {
+                    ATSDK.setGDPRUploadDataLevel(DemoApplicaion.this, level);
+                }
+            });
+        }
 
     }
 }

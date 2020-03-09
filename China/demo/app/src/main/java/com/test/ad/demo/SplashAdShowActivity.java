@@ -17,6 +17,7 @@ import com.anythink.splashad.api.ATSplashAdListener;
 public class SplashAdShowActivity extends Activity implements ATSplashAdListener {
     TextView skipView;
     ATSplashAd splashAd;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +26,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
 
         String unitId = getIntent().getStringExtra("unitId");
         FrameLayout container = findViewById(R.id.splash_ad_container);
-        skipView = findViewById(R.id.splash_ad_skip); //这个skipview必须是可见状态，否则会影响广告结算
+        skipView = findViewById(R.id.splash_ad_skip); /**Skipview must be visible.**/
 
-        splashAd = new ATSplashAd(this, container, skipView, unitId, this, null);
+        splashAd = new ATSplashAd(this, container, skipView, unitId, this);
 
 
     }
@@ -46,6 +47,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
 
     @Override
     public void onAdShow(ATAdInfo entity) {
+        skipView.setBackgroundColor(0xff868282);
         Log.i("SplashAdShowActivity", "onAdShow---------");
     }
 
@@ -63,7 +65,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
 
     @Override
     public void onAdTick(long millisUtilFinished) {
-        skipView.setVisibility(View.VISIBLE);
         Log.i("SplashAdShowActivity", "onAdTick---------：" + millisUtilFinished);
         skipView.setText(String.valueOf(millisUtilFinished / 1000) + "| SKIP");
     }

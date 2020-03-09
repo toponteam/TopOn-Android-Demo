@@ -40,14 +40,6 @@
             android:layout_toRightOf="@id/placement_select_group"
             android:text="Show Video Ad" />
 
-        <Button
-            android:id="@+id/clean_ad_view_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/show_ad_btn"
-            android:layout_toRightOf="@id/placement_select_group"
-            android:text="CLean Video Ad" />
-
 
     </RelativeLayout>
 </ScrollView>

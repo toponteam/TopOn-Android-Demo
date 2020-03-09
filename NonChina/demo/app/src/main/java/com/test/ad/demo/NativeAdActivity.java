@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -13,9 +14,11 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.network.toutiao.TTATConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,7 +51,7 @@ public class NativeAdActivity extends Activity {
             "mintegral",
             "mopub",
             "appnext",
-            "nend",
+            "nend"
     };
 
     ATNative upArapuNatives[] = new ATNative[unitIds.length];
@@ -70,7 +73,7 @@ public class NativeAdActivity extends Activity {
 
         for (int i = 0; i < unitIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
-            radioButton.setPadding(20, 20, 20, 20);                 // 设置文字距离按钮四周的距离
+            radioButton.setPadding(20, 20, 20, 20);
             radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
             mRadioGroup.addView(radioButton);
@@ -84,6 +87,10 @@ public class NativeAdActivity extends Activity {
                 mCurrentSelectIndex = i;
             }
         });
+
+
+        int padding = dip2px(10);
+        int adViewHeight = dip2px(340) - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
@@ -104,9 +111,6 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
-            Map<String, Object> localMap = new HashMap<>();
-            upArapuNatives[i].setLocalExtra(localMap);
-
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);
             }
@@ -116,10 +120,7 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String, String> maps = new HashMap<>();
-                maps.put("age", "22");
-                maps.put("sex", "lady");
-                upArapuNatives[mCurrentSelectIndex].makeAdRequest(maps);
+                upArapuNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
 
@@ -155,7 +156,20 @@ public class NativeAdActivity extends Activity {
                             Log.i(TAG, "native ad onAdVideoProgress--------:" + progress);
                         }
                     });
-                    mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                    mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
+                        @Override
+                        public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
+                            if (view.getParent() != null) {
+                                ((ViewGroup) view.getParent()).removeView(view);
+                            }
+                        }
+                    });
+                    try{
+                        mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                    }catch (Exception e){
+
+                    }
+
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(anyThinkNativeAdView);
                 } else {
@@ -165,9 +179,10 @@ public class NativeAdActivity extends Activity {
 
             }
         });
+        anyThinkNativeAdView.setPadding(padding,padding,padding,padding);
 
         anyThinkNativeAdView.setVisibility(View.GONE);
-        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView);
+        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
     }
 
     @Override
@@ -192,5 +207,10 @@ public class NativeAdActivity extends Activity {
             mNativeAd.onResume();
         }
         super.onResume();
+    }
+
+    public int dip2px(float dipValue) {
+        float scale = this.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
     }
 }

@@ -21,13 +21,6 @@ public class NativeSplashActivity extends Activity {
         setContentView(R.layout.activity_native_splash);
         FrameLayout splashView = findViewById(R.id.native_splash_view);
         Map<String, Object> localMap = new HashMap<>();
-//        //广点通需要加的
-//        localMap.put(GDTATConst.ADTYPE, "1");
-//        localMap.put(GDTATConst.AD_WIDTH, ADSize.FULL_WIDTH);
-//        localMap.put(GDTATConst.AD_HEIGHT, ADSize.FULL_WIDTH);
-        //穿山甲个性化模板
-
-//        config.mode = ATNativeSplashConfig.ICON_IMAGE_MODE;
         ATNativeSplash splash = new ATNativeSplash(this, splashView, null, DemoApplicaion.mPlacementId_native_all, localMap, new ATNativeSplashListener() {
             @Override
             public void onAdLoaded() {
