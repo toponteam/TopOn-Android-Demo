@@ -1,4 +1,4 @@
-# TopOn v5.5.1
+# TopOn v5.5.2
 
 <h3>TopOn SDK的集成指引</h3>
 
@@ -36,9 +36,9 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <
 |Tapjoy | 12.4.0 | 12.3.4、12.4.0 |   |
 |Ironsource | 6.11.1 | 6.10.2、6.11.1 |   |
 |UnityAds | 3.4.0 | 3.3.0、3.4.0 |   |
-|Vungle | 6.4.11 | 6.4.11 |   |
+|Vungle | 6.5.2 | 6.5.2 |   |
 |Adcolony | 4.1.2 | 4.1.0、4.1.2 |   |
-|TouTiao| v2.9.0.0(需要开发者在自己头条账号后台下载相应的SDK) | 2.9.0.0、2.9.0.0 | 头条/穿山甲 |
+|TouTiao| v2.9.0.0(需要开发者在自己头条账号后台下载相应的SDK) | 2.8.0.0、2.9.0.0 | 头条/穿山甲 |
 |玩转互联 | 6.0.2 | 6.0.2 |   |
 |Oneway| 2.3.4 | 2.3.4 |   |
 |MobPower | 4.8.0 | 4.8.0 |   |
