@@ -12,8 +12,8 @@
 
 **下载地址（Download link）：**<br>
 
-TopOn Android SDK V5.5.1<br>
-http://sdk-release.toponad.com/Android/5.5.1/TopOn_SDK_v5.5.1_20200304_Release.zip   <br>
+TopOn Android SDK V5.5.2<br>
+http://sdk-release.toponad.com/Android/5.5.2/TopOn_SDK_v5.5.2_20200309_Release.zip   <br>
 TopOn Unity for Android SDK V5.5.1<br>
 http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <br>
 
