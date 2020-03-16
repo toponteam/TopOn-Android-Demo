@@ -35,16 +35,21 @@
 TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparputeam/uparpu_demo_android)
 
 <h3>2.2 SDK包的目录说明</h3>
+**China:** 里面存放TopOn中国区相关的SDK包 <br>
+**China/libs：** 里面存放TopOn中国区的基础SDK包，**按照需要集成的广告形式来引入** <br>
+**China/network_sdk：** 里面存放全部中国区聚合平台的SDK包，**按照需要聚合的广告平台来引入**
 
-**libs：** 里面存放TopOn的基础SDK包，**按照需要集成的广告形式来引入** <br>
-**network_sdk：** 里面存放全部聚合平台的SDK包，**按照需要聚合的广告平台来引入**
+**NonChina:** 里面存放TopOn非中国区相关的SDK包 <br>
+**NonChina/libs：** 里面存放TopOn非中国区的基础SDK包，**按照需要集成的广告形式来引入** <br>
+**NonChina/network_sdk：** 里面存放全部非中国区聚合平台的SDK包，**按照需要聚合的广告平台来引入**
 
 <h4>2.2.1 libs目录的SDK包集成说明</h4>
 
 | SDK包 | 说明 | 是否必须|
 | --- | --- |---|
 |anythink_core.aar|TopOn的基础包，必须导入| **是**|
-|tramini_sdk_v1.0|收集SDK错误信息 | **否** |
+|anythink_china_core.aar|TopOn的中国区基础包，中国区必须导入|**是**|
+|tramini_sdk|收集SDK错误信息 | **是** |
 |anythink_native.aar|TopOn的Native广告集成包| 否|
 |anythink_banner.aar|TopOn的Banner广告集成包|否|
 |anythink_interstitial.aar|TopOn的插屏广告集成包|否|
@@ -54,22 +59,22 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 
 <h4>2.2.2 network_sdk目录的说明</h4>
 
-**中国地区** （应用是发布中国大陆市场使用的广告平台）
+**中国地区：China/network_sdk** （应用是发布中国大陆市场使用的广告平台）
 
 | 目录            | 说明                              |      广告形式支持   |
 | --------------- | -------------------------------  | ------------------|
 | baidu           | 百度SDK相关文件（中国区）         | 原生广告，横幅广告，插屏广告，激励视频，开屏广告  |
 | gdt             | 广点通SDK相关文件（中国区）       | 原生广告，横幅广告，插屏广告，激励视频，开屏广告|
-| ks              | 快手SDK相关文件（中国区）         |插屏广告，激励视频 |
+| kuaishou              | 快手SDK相关文件（中国区）         |插屏广告，激励视频 |
 | ksyun           | 金山云SDK相关文件（中国区）       | 激励视频 |
 | luomi           | 洛米SDK相关文件（中国区）         | 原生广告  |
-| mintegral_china | Mintegral SDK相关文件（中国区）   |原生广告，横幅广告，插屏广告，激励视频 |
+| mintegral | Mintegral SDK相关文件（中国区）   |原生广告，横幅广告，插屏广告，激励视频 |
 | oneway          | Oneway SDK相关文件（中国区）      |插屏广告，激励视频 |
 | uniplay         | Uniplay SDK相关文件（中国区）     |横幅广告，插屏广告，激励视频 |
 | sigmob          | Sigmob SDK相关文件（中国区）      | 插屏广告，激励视频，开屏广告 |
-| toutiao         | 穿山甲SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频，开屏广告|
+| pangle         | 穿山甲SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频，开屏广告|
 
-**非中国地区** （应用是发布Google Play使用的广告平台）
+**非中国地区：NonChina/network_sdk** （应用是发布Google Play使用的广告平台）
 **注意：不要引入上面中国地区的依赖包，否则可能导致Google Play审核通过不了！**
 
 | 目录            | 说明                              |      广告形式支持   |
@@ -84,7 +89,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | inmobi          | Inmobi SDK相关文件                |原生广告，横幅广告，插屏广告，激励视频 |
 | ironsource      | Ironsource SDK相关文件            | 插屏广告，激励视频 |
 | maio            | Maio SDK相关文件                  |插屏广告，激励视频 |
-| mintegral_international | Mintegral SDK相关文件（非中国区） |原生广告，横幅广告，插屏广告，激励视频 |
+| mintegral | Mintegral SDK相关文件（非中国区） |原生广告，横幅广告，插屏广告，激励视频 |
 | mopub           | Mopub SDK相关文件                 |原生广告，横幅广告，插屏广告，激励视频 |
 | nend            | Nend SDK相关文件                  |原生广告，横幅广告，插屏广告，激励视频 |
 | ogury           | Ogury SDK相关文件                  |插屏广告，激励视频 |
@@ -93,6 +98,7 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 | tapjoy          | Tapjoy SDK相关文件                |插屏广告，激励视频 |
 | unityads        | UnityAds SDK相关文件              |插屏广告，激励视频 |
 | vungle          | Vungle SDK相关文件                | 插屏广告，激励视频 |
+| pangle         | 穿山甲SDK相关文件(非中国区版本)                 |插屏广告，激励视频|
 
 可集成需要聚合的平台SDK包到Android项目下，每个聚合的第三方SDK的文件夹内容说明：
 
