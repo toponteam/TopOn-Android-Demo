@@ -37,8 +37,8 @@ TopOn SDK的使用Demo可查看：[TopOn SDK Demo&SDK](https://github.com/uparpu
 <h3>2.2 SDK包的目录说明</h3>
 **China:** 里面存放TopOn中国区相关的SDK包 <br>
 **China/libs：** 里面存放TopOn中国区的基础SDK包，**按照需要集成的广告形式来引入** <br>
-**China/network_sdk：** 里面存放全部中国区聚合平台的SDK包，**按照需要聚合的广告平台来引入**
-
+**China/network_sdk：** 里面存放全部中国区聚合平台的SDK包，**按照需要聚合的广告平台来引入**<br>
+<br>
 **NonChina:** 里面存放TopOn非中国区相关的SDK包 <br>
 **NonChina/libs：** 里面存放TopOn非中国区的基础SDK包，**按照需要集成的广告形式来引入** <br>
 **NonChina/network_sdk：** 里面存放全部非中国区聚合平台的SDK包，**按照需要聚合的广告平台来引入**
