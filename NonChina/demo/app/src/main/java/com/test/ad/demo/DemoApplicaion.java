@@ -1,5 +1,8 @@
 package com.test.ad.demo;
 
+import android.os.Build;
+import android.webkit.WebView;
+
 import androidx.multidex.MultiDexApplication;
 
 import com.anythink.core.api.ATGDPRAuthCallback;
@@ -87,6 +90,15 @@ public class DemoApplicaion extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //Android 9 or above must be set
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            String processName = getProcessName();
+            if (!getPackageName().equals(processName)) {
+                WebView.setDataDirectorySuffix(processName);
+            }
+        }
+
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);

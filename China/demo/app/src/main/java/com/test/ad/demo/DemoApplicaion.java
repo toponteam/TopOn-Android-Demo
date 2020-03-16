@@ -1,10 +1,16 @@
 package com.test.ad.demo;
 
+import android.app.ActivityManager;
+import android.content.Context;
+import android.os.Build;
 import android.support.multidex.MultiDexApplication;
+import android.webkit.WebView;
 
 import com.anythink.core.api.ATSDK;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
+
+import java.util.HashMap;
 
 /**
  * Created by Z on 2018/1/10.
@@ -19,7 +25,6 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_toutiao = "b5c2c97629da0d";
     public static final String mPlacementId_native_toutiao_drawer = "b5c355d79ef9be";
     public static final String mPlacementId_native_baidu = "b5d148f9f2e47d";
-    public static final String mPlacementId_native_luomi = "b5d1ef61e17981";
     public static final String mPlacementId_native_kuaishou = "b5e4105d4f21b6";
     public static final String mPlacementId_native_kuaishou_drawer = "b5e5dc4110310f";
 
@@ -68,11 +73,21 @@ public class DemoApplicaion extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        //Android 9 or above must be set
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            String processName = getProcessName();
+            if (!getPackageName().equals(processName)) {
+                WebView.setDataDirectorySuffix(processName);
+            }
+        }
+
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
         ATSDK.integrationChecking(getApplicationContext());
+
         ATSDK.init(this, appid, appKey);
 
     }
+
 }

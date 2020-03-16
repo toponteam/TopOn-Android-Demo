@@ -75,7 +75,7 @@ public class NativeAdActivity extends Activity {
             RadioButton radioButton = new RadioButton(this);
             radioButton.setPadding(20, 20, 20, 20);
             radioButton.setText(unitGroupName[i]);
-            radioButton.setId(i);
+            radioButton.setId(i + 1000);
             mRadioGroup.addView(radioButton);
         }
 
@@ -84,7 +84,7 @@ public class NativeAdActivity extends Activity {
         mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                mCurrentSelectIndex = i;
+                mCurrentSelectIndex = i - 1000;
             }
         });
 
@@ -133,27 +133,27 @@ public class NativeAdActivity extends Activity {
                     mNativeAd.setNativeEventListener(new ATNativeEventListener() {
                         @Override
                         public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
-                            Log.i(TAG, "native ad onAdImpressed--------\n" + entity.printInfo());
+                            Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
                         }
 
                         @Override
                         public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
-                            Log.i(TAG, "native ad onAdClicked--------\n" + entity.printInfo());
+                            Log.i(TAG, "native ad onAdClicked:\n" + entity.toString());
                         }
 
                         @Override
                         public void onAdVideoStart(ATNativeAdView view) {
-                            Log.i(TAG, "native ad onAdVideoStart--------");
+                            Log.i(TAG, "native ad onAdVideoStart");
                         }
 
                         @Override
                         public void onAdVideoEnd(ATNativeAdView view) {
-                            Log.i(TAG, "native ad onAdVideoEnd--------");
+                            Log.i(TAG, "native ad onAdVideoEnd");
                         }
 
                         @Override
                         public void onAdVideoProgress(ATNativeAdView view, int progress) {
-                            Log.i(TAG, "native ad onAdVideoProgress--------:" + progress);
+                            Log.i(TAG, "native ad onAdVideoProgress:" + progress);
                         }
                     });
                     mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
