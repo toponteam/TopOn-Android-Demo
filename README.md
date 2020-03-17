@@ -29,7 +29,7 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <
 |Inmobi | 9.0.1 |  9.0.1 |   |
 |Flurry| 11.5.0 | 11.5.0 |   |
 |Applovin| 9.10.5 | 9.10.1、9.10.5 |   |
-|Mintegral | 10.2.2 | 10.2.2 |   |
+|Mintegral | 10.2.4 | 10.2.2、10.2.4 |   |
 |Mopub | 5.8.0 | 5.8.0 |   |
 |GDT | 4.170.1040 | 4.170.1040 | 广点通/Tencent/腾讯 |
 |Chartboost | 7.5.0 | 7.5.0 |   | 
