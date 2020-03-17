@@ -24,7 +24,7 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <
 
 | Network Name| CURRENT_NETWORK VERSION| SUPPORT_NETWORK_VERSION | P.S. |
 |---|---|---|---|
-|Facebook | 5.7.0| 5.7.0 |   |
+|Facebook | 5.7.1| 5.6.0、5.7.1 |   |
 |Admob | 18.3.0 | 18.3.0 |   |
 |Inmobi | 9.0.1 |  9.0.1 |   |
 |Flurry| 11.5.0 | 11.5.0 |   |
@@ -35,7 +35,7 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <
 |Chartboost | 7.5.0 | 7.5.0 |   | 
 |Tapjoy | 12.4.0 | 12.3.4、12.4.0 |   |
 |Ironsource | 6.11.1 | 6.10.2、6.11.1 |   |
-|UnityAds | 3.4.2 | 3.3.0、3.4.0 |   |
+|UnityAds | 3.4.2 | 3.3.0、3.4.0、3.4.2 |   |
 |Vungle | 6.5.2 | 6.5.2 |   |
 |Adcolony | 4.1.2 | 4.1.0、4.1.2 |   |
 |TouTiao| v2.9.0.0(需要开发者在自己头条账号后台下载相应的SDK) | 2.8.0.0、2.9.0.0 | 头条/穿山甲 |
@@ -50,8 +50,8 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv5.5.1v2.unitypackage  <
 |StartApp| 4.2.4 | 4.2.4 |   |
 |SuperAwesome| 7.0.1 | 7.0.1 |   |
 |洛米| 9.1.30 | 9.1.30 |   |
-|快手| 2.4.0 | 2.3.0 |   |
-|Sigmob| 2.15.4 | 2.15.1 |   |
+|快手| 2.6.1 | 2.3.0、2.6.1 |   |
+|Sigmob| 2.15.4 | 2.15.1、2.15.4 |   |
 |Ogury| 4.3.6 | 4.3.6 |   |
 
 <h3>TopOn 各个平台对应NetwortType信息</h3>
