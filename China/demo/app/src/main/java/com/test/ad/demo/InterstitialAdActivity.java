@@ -17,18 +17,18 @@ public class InterstitialAdActivity extends Activity {
 
     private static String TAG = "InterstitialAdActivity";
     String unitIds[] = new String[]{
-        DemoApplicaion.mPlacementId_interstitial_all
-                , DemoApplicaion.mPlacementId_interstitial_mintegral
-                , DemoApplicaion.mPlacementId_interstitial_video_mintegral
-                , DemoApplicaion.mPlacementId_interstitial_GDT
-                , DemoApplicaion.mPlacementId_interstitial_video_toutiao
-                , DemoApplicaion.mPlacementId_interstitial_toutiao
-                , DemoApplicaion.mPlacementId_interstitial_uniplay
-                , DemoApplicaion.mPlacementId_interstitial_oneway
-                , DemoApplicaion.mPlacementId_interstitial_baidu
-                , DemoApplicaion.mPlacementId_interstitial_kuaishou
-                , DemoApplicaion.mPlacementId_interstitial_sigmob
-                , DemoApplicaion.mPlacementId_interstitial_myoffer
+            DemoApplicaion.mPlacementId_interstitial_all
+            , DemoApplicaion.mPlacementId_interstitial_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_video_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_GDT
+            , DemoApplicaion.mPlacementId_interstitial_video_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_uniplay
+            , DemoApplicaion.mPlacementId_interstitial_oneway
+            , DemoApplicaion.mPlacementId_interstitial_baidu
+            , DemoApplicaion.mPlacementId_interstitial_kuaishou
+            , DemoApplicaion.mPlacementId_interstitial_sigmob
+            , DemoApplicaion.mPlacementId_interstitial_myoffer
     };
 
     String unitGroupName[] = new String[]{
@@ -119,43 +119,43 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onInterstitialAdLoadFail(AdError adError) {
-                Log.i(TAG, "onInterstitialAdLoadFail");
+                Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.printStackTrace());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdLoadFail:" + adError.printStackTrace(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdClicked(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdClicked");
+                Log.i(TAG, "onInterstitialAdClicked:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdShow(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdShow");
+                Log.i(TAG, "onInterstitialAdShow:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdShow", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdClose(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdClose");
+                Log.i(TAG, "onInterstitialAdClose:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClose", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdVideoStart() {
-                Log.i(TAG, "onInterstitialAdVideoStart");
+            public void onInterstitialAdVideoStart(ATAdInfo entity) {
+                Log.i(TAG, "onInterstitialAdVideoStart:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoStart", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdVideoEnd() {
-                Log.i(TAG, "onInterstitialAdVideoEnd");
+            public void onInterstitialAdVideoEnd(ATAdInfo entity) {
+                Log.i(TAG, "onInterstitialAdVideoEnd:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoEnd", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdVideoError(AdError adError) {
-                Log.i(TAG, "onInterstitialAdVideoError");
+                Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.printStackTrace());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoError", Toast.LENGTH_SHORT).show();
             }
 

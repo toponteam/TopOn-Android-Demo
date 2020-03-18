@@ -72,7 +72,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerClicked(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerClicked");
+                Log.i("BannerAdActivity", "onBannerClicked:" + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClicked",
                         Toast.LENGTH_SHORT).show();
@@ -80,15 +80,15 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerShow(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerShow");
+                Log.i("BannerAdActivity", "onBannerShow:"  + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerShow",
                         Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onBannerClose() {
-                Log.i("BannerAdActivity", "onBannerClose");
+            public void onBannerClose(ATAdInfo entity) {
+                Log.i("BannerAdActivity", "onBannerClose:"  + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClose",
                         Toast.LENGTH_SHORT).show();
@@ -96,7 +96,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerAutoRefreshed(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerAutoRefreshed");
+                Log.i("BannerAdActivity", "onBannerAutoRefreshed:"  + entity.toString());
             }
 
             @Override

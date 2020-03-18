@@ -136,43 +136,43 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onInterstitialAdLoadFail(AdError adError) {
-                Log.i(TAG, "onInterstitialAdLoadFail");
+                Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.printStackTrace());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdLoadFail:" + adError.printStackTrace(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdClicked(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdClicked");
+                Log.i(TAG, "onInterstitialAdClicked:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdShow(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdShow");
+                Log.i(TAG, "onInterstitialAdShow:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdShow", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdClose(ATAdInfo entity) {
-                Log.i(TAG, "onInterstitialAdClose");
+                Log.i(TAG, "onInterstitialAdClose:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdClose", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdVideoStart() {
-                Log.i(TAG, "onInterstitialAdVideoStart");
+            public void onInterstitialAdVideoStart(ATAdInfo entity) {
+                Log.i(TAG, "onInterstitialAdVideoStart:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoStart", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onInterstitialAdVideoEnd() {
-                Log.i(TAG, "onInterstitialAdVideoEnd");
+            public void onInterstitialAdVideoEnd(ATAdInfo entity) {
+                Log.i(TAG, "onInterstitialAdVideoEnd:\n" + entity.toString());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoEnd", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onInterstitialAdVideoError(AdError adError) {
-                Log.i(TAG, "onInterstitialAdVideoError");
+                Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.printStackTrace());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoError", Toast.LENGTH_SHORT).show();
             }
 
