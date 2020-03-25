@@ -1,0 +1,355 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:2:1-58:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:1:1-13:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:1:1-21:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:1:1-17:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:1:1-29:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/inmobi/AndroidManifest.xml:1:1-11:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:1:1-25:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:1:1-38:12
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:1:1-45:12
+	package
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:4:5-31
+	xmlns:tools
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:5:5-44
+	android:minSdkVersion
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:5:15-41
+application
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:6:5-56:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:5:5-11:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:5:5-11:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:18:5-19:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:18:5-19:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:7:5-15:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:7:5-15:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:13:5-27:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:13:5-27:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/inmobi/AndroidManifest.xml:6:5-9:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/inmobi/AndroidManifest.xml:6:5-9:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:8:5-23:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:8:5-23:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:7:5-36:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:7:5-36:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:17:5-43:19
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:17:5-43:19
+	android:supportsRtl
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:15:9-65
+	android:networkSecurityConfig
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:14:9-69
+	android:usesCleartextTraffic
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:7:9-39
+uses-library#org.apache.http.legacy
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:17:9-87
+	android:required
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:17:61-85
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:17:23-60
+activity#com.test.ad.demo.MainActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:19:19-63
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.test.ad.demo.NativeAdActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:27:9-30:46
+	android:label
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:29:13-38
+	android:launchMode
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:30:13-44
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:28:13-45
+activity#com.test.ad.demo.RewardVideoAdActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:32:9-35:46
+	android:label
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:34:13-45
+	android:launchMode
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:35:13-44
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:33:13-50
+activity#com.test.ad.demo.InterstitialAdActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:37:9-40:46
+	android:label
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:39:13-44
+	android:launchMode
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:40:13-44
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:38:13-51
+activity#com.test.ad.demo.BannerAdActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:42:9-45:46
+	android:label
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:44:13-38
+	android:launchMode
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:45:13-44
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:43:13-45
+activity#com.test.ad.demo.NativeBannerActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:48:9-50:117
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:50:13-115
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:49:13-77
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:48:19-55
+activity#com.test.ad.demo.NativeSplashActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:52:9-54:117
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:54:13-115
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:53:13-77
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:52:19-55
+meta-data#com.google.android.gms.ads.AD_MANAGER_APP
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:7:9-9:36
+	android:value
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:9:13-33
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/admob/AndroidManifest.xml:8:13-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:2:1-58:12 reason: com.anythink.admob has a targetSdkVersion < 4
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:14:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:14:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:9:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:9:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:14:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:14:5-81
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:2:1-58:12 reason: com.anythink.admob has a targetSdkVersion < 4
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:8:5-75
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:8:5-75
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/src/main/AndroidManifest.xml:2:1-58:12 reason: com.anythink.admob requested WRITE_EXTERNAL_STORAGE
+uses-permission#android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:6:5-83
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:6:22-80
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:7:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:9:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:11:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:11:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:11:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:10:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:10:5-81
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.GET_TASKS
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:11:22-65
+uses-permission#android.permission.REAL_GET_TASKS
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:12:22-70
+uses-permission#android.permission.PACKAGE_USAGE_STATS
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:13:5-78
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:13:22-75
+uses-permission#android.permission.CAMERA
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:15:5-65
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:15:22-62
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:16:5-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/appnext/AndroidManifest.xml:16:22-71
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:5:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:6:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:6:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/inmobi/AndroidManifest.xml:4:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/inmobi/AndroidManifest.xml:4:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:5:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:5:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:4:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:4:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:6:5-67
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:5:22-64
+activity#com.chartboost.sdk.CBImpressionActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:8:9-13:86
+	android:excludeFromRecents
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:11:13-46
+	android:hardwareAccelerated
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:12:13-47
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:10:13-74
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:13:13-83
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/chartboost/AndroidManifest.xml:9:13-67
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:7:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:6:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:6:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:7:5-79
+MERGED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:7:22-76
+activity#com.flurry.android.FlurryFullscreenTakeoverActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:15:9-17:124
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:17:13-122
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:16:13-79
+activity#com.flurry.android.FlurryTileAdActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:19:9-21:125
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:21:13-122
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:20:13-67
+activity#com.flurry.android.FlurryBrowserActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:23:9-25:125
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:25:13-122
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/flurry/AndroidManifest.xml:24:13-68
+activity#com.ironsource.sdk.controller.ControllerActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:9:9-12:50
+	android:hardwareAccelerated
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:12:13-47
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:11:13-59
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:10:13-76
+activity#com.ironsource.sdk.controller.InterstitialActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:13:9-17:64
+	android:hardwareAccelerated
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:16:13-47
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:15:13-59
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:17:13-61
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:14:13-78
+activity#com.ironsource.sdk.controller.OpenUrlActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:18:9-22:64
+	android:hardwareAccelerated
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:21:13-47
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:20:13-59
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:22:13-61
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/ironsource/AndroidManifest.xml:19:13-73
+activity#com.mintegral.msdk.activity.MTGCommonActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:8:9-13:75
+	android:screenOrientation
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:12:13-49
+	android:exported
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:11:13-36
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:10:13-57
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:13:13-72
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:9:13-73
+receiver#com.mintegral.msdk.click.AppReceiver
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:15:9-20:20
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:15:19-70
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+data:scheme:package
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:16:13-19:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:17:17-78
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:17:25-75
+data
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:18:17-50
+	android:scheme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:18:23-47
+service#com.mintegral.msdk.shell.MTGService
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:21:9-25:19
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:21:18-68
+intent-filter#action:name:com.mintegral.msdk.download.action
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:22:13-24:29
+action#com.mintegral.msdk.download.action
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:23:25-74
+activity#com.mintegral.msdk.reward.player.MTGRewardVideoActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:27:9-30:74
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:29:13-74
+	android:theme
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:30:13-71
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:28:13-83
+activity#com.mintegral.msdk.interstitial.view.MTGInterstitialActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:32:9-35:52
+	android:screenOrientation
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:35:13-49
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:34:13-59
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mintegral_international/AndroidManifest.xml:33:13-88
+activity#com.mopub.common.privacy.ConsentDialogActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:19:9-21:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:21:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:20:13-74
+activity#com.mopub.common.MoPubBrowser
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:24:9-26:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:26:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:25:13-57
+activity#com.mopub.mobileads.MoPubActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:29:9-31:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:31:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:30:13-61
+activity#com.mopub.mobileads.MraidActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:32:9-34:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:34:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:33:13-61
+activity#com.mopub.mobileads.RewardedMraidActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:37:9-39:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:39:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:38:13-69
+activity#com.mopub.mobileads.MraidVideoPlayerActivity
+ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:40:9-42:77
+	android:configChanges
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:42:13-74
+	android:name
+		ADDED from /Users/Z/salmonads_gitproject/UpArpu/SDKProject/up_sdk_android/AppNonChinaDemo_JCenter/app/network/mopub/AndroidManifest.xml:41:13-72
