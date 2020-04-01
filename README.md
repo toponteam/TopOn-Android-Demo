@@ -35,7 +35,7 @@ http://sdk-release.toponad.com/Unity/5.5.4/Unity_Androidv554_iOSv554_20200327.un
 |Applovin| 9.10.5 | 9.10.1、9.10.5 |   |
 |Mintegral | 10.2.4 | 10.2.2、10.2.4 |   |
 |Mopub | 5.8.0 | 5.8.0 |   |
-|GDT | 4.170.1040 | 4.170.1040 | 广点通/Tencent/腾讯 |
+|GDT | 4.170.1040 | 4.170.1040、4.176.1046 | 广点通/Tencent/腾讯 |
 |Chartboost | 7.5.0 | 7.5.0 |   | 
 |Tapjoy | 12.4.0 | 12.3.4、12.4.0 |   |
 |Ironsource | 6.11.1 | 6.10.2、6.11.1 |   |
@@ -48,7 +48,7 @@ http://sdk-release.toponad.com/Unity/5.5.4/Unity_Androidv554_iOSv554_20200327.un
 |MobPower | 4.8.0 | 4.8.0 |   |
 |Yeahmobi| 4.0.6 | 4.0.6 |   |
 |Appnext| 2.4.8.472 | 2.4.8.472 |   |
-|Baidu| 5.83 | 5.83 |   |
+|Baidu| 5.85 | 5.85 |   |
 |Nend| 5.4.0 | 5.3.0、5.4.0 |   |
 |Maio| 1.1.11 | 1.1.10、1.1.11 |   |
 |StartApp| 4.2.4 | 4.2.4 |   |
