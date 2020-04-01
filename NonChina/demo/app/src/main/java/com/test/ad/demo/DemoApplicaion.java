@@ -1,12 +1,14 @@
 package com.test.ad.demo;
 
 import android.os.Build;
+import android.util.Log;
 import android.webkit.WebView;
 
 import androidx.multidex.MultiDexApplication;
 
 import com.anythink.core.api.ATGDPRAuthCallback;
 import com.anythink.core.api.ATSDK;
+import com.anythink.core.api.NetTrafficeCallback;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
 
@@ -102,19 +104,29 @@ public class DemoApplicaion extends MultiDexApplication {
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
-        ATSDK.init(this, appid, appKey);
+        ATSDK.integrationChecking(this);
 
-        /**
-         * Call it after init SDK
-         */
-        if (ATSDK.isEUTraffic(this) && ATSDK.getGDPRDataLevel(this) == ATSDK.UNKNOWN) {
-            ATSDK.showGdprAuth(this, new ATGDPRAuthCallback() {
-                @Override
-                public void onAuthResult(int level) {
-                    ATSDK.setGDPRUploadDataLevel(DemoApplicaion.this, level);
+        ATSDK.checkIsEuTraffic(this, new NetTrafficeCallback() {
+
+            @Override
+            public void onResultCallback(boolean isEU) {
+                if (isEU && ATSDK.getGDPRDataLevel(DemoApplicaion.this) == ATSDK.UNKNOWN) {
+                    ATSDK.showGdprAuth(DemoApplicaion.this);
                 }
-            });
-        }
+
+                Log.i("Demoapplication", "onResultCallback:" + isEU);
+            }
+
+            @Override
+            public void onErrorCallback(String errorMsg) {
+                Log.i("Demoapplication", "onErrorCallback:" + errorMsg);
+            }
+        });
+
+        ATSDK.init(DemoApplicaion.this, appid, appKey);
+
 
     }
+
+
 }

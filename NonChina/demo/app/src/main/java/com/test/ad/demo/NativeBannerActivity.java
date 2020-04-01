@@ -53,7 +53,7 @@ public class NativeBannerActivity extends Activity {
 
             @Override
             public void onAdClick(ATAdInfo entity) {
-                Log.i("BannerActivity", "640---onAdClick----");
+                Log.i("BannerActivity", "640---onAdClick----:\n" + entity.toString());
             }
 
             @Override
@@ -63,17 +63,17 @@ public class NativeBannerActivity extends Activity {
 
             @Override
             public void onAdShow(ATAdInfo entity) {
-                Log.i("BannerActivity", "640---onAdShow----");
+                Log.i("BannerActivity", "640---onAdShow----\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefresh(ATAdInfo entity) {
-                Log.i("BannerActivity", "640---onAutoRefresh----");
+                Log.i("BannerActivity", "640---onAutoRefresh----\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefreshFail(String errorMsg) {
-                Log.i("BannerActivity", "640---onAutoRefreshFail----" + errorMsg);
+                Log.i("BannerActivity", "640---onAutoRefreshFail----:" + errorMsg);
             }
         });
 
@@ -95,17 +95,17 @@ public class NativeBannerActivity extends Activity {
             @Override
             public void onAdLoaded() {
                 bannerView320.setVisibility(View.VISIBLE);
-                Log.i("BannerActivity", "320---onAdLoaded----");
+                Log.i("BannerActivity", "320---onAdLoaded");
             }
 
             @Override
             public void onAdError(String errorMsg) {
-                Log.i("BannerActivity", "320---onAdError----:" + errorMsg);
+                Log.i("BannerActivity", "320---onAdError:" + errorMsg);
             }
 
             @Override
             public void onAdClick(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAdClick----");
+                Log.i("BannerActivity", "320---onAdClick:n" + entity.toString());
             }
 
             @Override
@@ -115,17 +115,17 @@ public class NativeBannerActivity extends Activity {
 
             @Override
             public void onAdShow(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAdShow----");
+                Log.i("BannerActivity", "320---onAdShow:\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefresh(ATAdInfo entity) {
-                Log.i("BannerActivity", "320---onAutoRefresh----");
+                Log.i("BannerActivity", "320---onAutoRefresh:\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefreshFail(String errorMsg) {
-                Log.i("BannerActivity", "auto---onAutoRefreshFail----" + errorMsg);
+                Log.i("BannerActivity", "auto---onAutoRefreshFail:" + errorMsg);
             }
         });
 
@@ -162,7 +162,7 @@ public class NativeBannerActivity extends Activity {
 
             @Override
             public void onAdClick(ATAdInfo entity) {
-                Log.i("BannerActivity", "auto---onAdClick----");
+                Log.i("BannerActivity", "auto---onAdClick:\n" + entity.toString());
             }
 
             @Override
@@ -172,17 +172,17 @@ public class NativeBannerActivity extends Activity {
 
             @Override
             public void onAdShow(ATAdInfo entity) {
-                Log.i("BannerActivity", "auto---onAdShow----");
+                Log.i("BannerActivity", "auto---onAdShow:\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefresh(ATAdInfo entity) {
-                Log.i("BannerActivity", "auto---onAutoRefresh----");
+                Log.i("BannerActivity", "auto---onAutoRefresh:\n" + entity.toString());
             }
 
             @Override
             public void onAutoRefreshFail(String errorMsg) {
-                Log.i("BannerActivity", "auto---onAutoRefreshFail----" + errorMsg);
+                Log.i("BannerActivity", "auto---onAutoRefreshFail:" + errorMsg);
             }
         });
 

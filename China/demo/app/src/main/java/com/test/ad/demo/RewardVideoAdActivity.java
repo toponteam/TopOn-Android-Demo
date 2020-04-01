@@ -124,13 +124,13 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdPlayStart(ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayStart");
+                Log.i(TAG, "onRewardedVideoAdPlayStart:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayStart", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdPlayEnd(ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayEnd");
+                Log.i(TAG, "onRewardedVideoAdPlayEnd:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayEnd", Toast.LENGTH_SHORT).show();
             }
 
@@ -141,20 +141,20 @@ public class RewardVideoAdActivity extends Activity {
             }
 
             @Override
-            public void onRewardedVideoAdClosed(ATAdInfo adInfo) {
-                Log.i(TAG, "onRewardedVideoAdClosed " );
+            public void onRewardedVideoAdClosed(ATAdInfo entity) {
+                Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString() );
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRewardedVideoAdPlayClicked(ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayClicked");
+                Log.i(TAG, "onRewardedVideoAdPlayClicked:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayClicked", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onReward(ATAdInfo atAdInfo) {
-                Log.i(TAG, "onReward" );
+            public void onReward(ATAdInfo entity) {
+                Log.e(TAG, "onReward:\n" + entity.toString() );
                 Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
         });

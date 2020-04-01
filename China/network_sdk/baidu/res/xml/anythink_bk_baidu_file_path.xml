@@ -1,5 +1,8 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--baidu-->
-    <external-files-path name="bdpath" path="bddownload/" />
-    <external-path name="bdpathsd" path="bddownload/" />
+    <external-files-path
+        name="bdpath"
+        path="bddownload/" />
+    <external-path
+        name="bdpathsd "
+        path="bddownload/" />
 </paths>

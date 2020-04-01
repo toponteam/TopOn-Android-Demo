@@ -48,17 +48,17 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     @Override
     public void onAdShow(ATAdInfo entity) {
         skipView.setBackgroundColor(0xff868282);
-        Log.i("SplashAdShowActivity", "onAdShow---------");
+        Log.i("SplashAdShowActivity", "onAdShow:\n" + entity.toString());
     }
 
     @Override
     public void onAdClick(ATAdInfo entity) {
-        Log.i("SplashAdShowActivity", "onAdClick---------");
+        Log.i("SplashAdShowActivity", "onAdClick:\n" + entity.toString());
     }
 
     @Override
     public void onAdDismiss(ATAdInfo entity) {
-        Log.i("SplashAdShowActivity", "onAdDismiss---------");
+        Log.i("SplashAdShowActivity", "onAdDismiss:\n" + entity.toString());
         finish();
         Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
     }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import android.util.Log;
 import android.view.View;
 
 import com.anythink.core.api.ATGDPRAuthCallback;
@@ -22,6 +24,11 @@ public class MainActivity extends Activity {
                     @Override
                     public void onAuthResult(int level) {
                         ATSDK.setGDPRUploadDataLevel(MainActivity.this, level);
+                    }
+
+                    @Override
+                    public void onPageLoadFail() {
+                        Log.i("MainActivity", "page load fail");
                     }
                 });
             }

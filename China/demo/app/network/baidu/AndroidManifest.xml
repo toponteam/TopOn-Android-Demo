@@ -1,5 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.anythink.baidu">
 
 
@@ -20,7 +19,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <provider
-            android:name="com.baidu.mobads.openad.FileProvider"
+            android:name="com.baidu.mobads.openad.BdFileProvider"
             android:authorities="${applicationId}.bd.provider"
             android:exported="false"
             android:grantUriPermissions="true">

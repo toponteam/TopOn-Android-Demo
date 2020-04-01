@@ -36,12 +36,12 @@ public class NativeSplashActivity extends Activity {
 
             @Override
             public void onAdShow(ATAdInfo entity) {
-                Log.i("NativeSplashActivity", "Develop callback onAdShow");
+                Log.i("NativeSplashActivity", "Develop callback onAdShow:" + entity.toString());
             }
 
             @Override
             public void onAdClick(ATAdInfo entity) {
-                Log.i("NativeSplashActivity", "Develop callback onAdClick");
+                Log.i("NativeSplashActivity", "Develop callback onAdClick:" + entity.toString());
             }
 
             @Override
