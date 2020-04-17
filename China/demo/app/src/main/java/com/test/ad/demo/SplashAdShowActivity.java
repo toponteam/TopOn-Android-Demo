@@ -2,6 +2,7 @@ package com.test.ad.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
+import com.anythink.network.baidu.BaiduATConst;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
 
@@ -26,9 +28,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
 
         String unitId = getIntent().getStringExtra("unitId");
         FrameLayout container = findViewById(R.id.splash_ad_container);
-        skipView = findViewById(R.id.splash_ad_skip); /**Skipview must be visible.**/
 
-        splashAd = new ATSplashAd(this, container, skipView, unitId, this);
+        splashAd = new ATSplashAd(this, container, unitId, this);
 
 
     }
@@ -41,14 +42,45 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     @Override
     public void onNoAdError(AdError adError) {
         Log.i("SplashAdShowActivity", "onNoAdError---------:" + adError.printStackTrace());
-        finish();
-        Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
+        jumpToMainActivity();
     }
 
     @Override
     public void onAdShow(ATAdInfo entity) {
-        skipView.setBackgroundColor(0xff868282);
         Log.i("SplashAdShowActivity", "onAdShow:\n" + entity.toString());
+        if (entity.getNetworkFirmId() == BaiduATConst.NETWORK_FIRM_ID) {
+            /**
+             * Only for Baidu:
+             * The display time and the skipped advertising style can be configured through the Baidu's backstage（Recommend）
+             * , and can be customized and modified in your application.
+             */
+            skipViewSetting(); //If setting skipview by Baidu's backstage, you should not run this method.
+        }
+    }
+
+    private void skipViewSetting() {
+        final TextView skipView = findViewById(R.id.splash_ad_skip);
+        CountDownTimer countDownTimer = new CountDownTimer(5000L, 1000L) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                skipView.setText((millisUntilFinished / 1000) + " | 跳过");
+            }
+
+            @Override
+            public void onFinish() {
+                jumpToMainActivity();
+            }
+        };
+
+        countDownTimer.start();
+        skipView.setVisibility(View.VISIBLE);
+
+        skipView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                jumpToMainActivity();
+            }
+        });
     }
 
     @Override
@@ -59,14 +91,24 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     @Override
     public void onAdDismiss(ATAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdDismiss:\n" + entity.toString());
-        finish();
-        Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
+        jumpToMainActivity();
     }
 
     @Override
     public void onAdTick(long millisUtilFinished) {
         Log.i("SplashAdShowActivity", "onAdTick---------：" + millisUtilFinished);
         skipView.setText(String.valueOf(millisUtilFinished / 1000) + "| SKIP");
+    }
+
+    boolean hasHandleJump = false;
+
+    public void jumpToMainActivity() {
+        if (!hasHandleJump) {
+            hasHandleJump = true;
+            finish();
+            Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override

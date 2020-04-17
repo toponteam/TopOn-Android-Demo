@@ -6,7 +6,6 @@ import android.webkit.WebView;
 
 import androidx.multidex.MultiDexApplication;
 
-import com.anythink.core.api.ATGDPRAuthCallback;
 import com.anythink.core.api.ATSDK;
 import com.anythink.core.api.NetTrafficeCallback;
 import com.facebook.drawee.backends.pipeline.Fresco;
@@ -53,6 +52,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_superawesome = "b5cff0d2157805";
     public static final String mPlacementId_rewardvideo_myoffer = "b5db6c3764aea3";
     public static final String mPlacementId_rewardvideo_ogury = "b5dde267f73eb4";
+    public static final String mPlacementId_rewardvideo_fyber = "b5e96f5e1ade5b";
 
     //Banner
     public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
@@ -65,6 +65,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_mopub = "b5bbdc5c857b2f";
     public static final String mPlacementId_banner_appnext = "b5bc7f3b034a2b";
     public static final String mPlacementId_banner_nend = "b5cb95ed13203c";
+    public static final String mPlacementId_banner_fyber = "b5e96f5f2dc516";
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -88,6 +89,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitia_startapp = "b5d5e641d9c30a";
     public static final String mPlacementId_interstitial_myoffer = "b5db6c39aed9c5";
     public static final String mPlacementId_interstitial_ogury = "b5dde269060938";
+    public static final String mPlacementId_interstitial_fyber = "b5e96f607235f6";
 
     @Override
     public void onCreate() {

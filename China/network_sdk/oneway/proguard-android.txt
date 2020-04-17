@@ -1,33 +1,12 @@
 ############################################
-## OneWaySDK configuration ##
+##           OneWaySDK 混淆配置             ##
 ############################################
 
 -keepattributes *Annotation*
--keep enum mobi.oneway.sdk.* {*;}
--keep class mobi.oneway.sdk.** {*;}
+-keep enum mobi.oneway.export.* {*;}
+-keep class mobi.oneway.export.** {*;}
 
-
-############################################
-## OkDownload configuration ##
-############################################
-
--dontwarn com.liulishuo.okdownload.**
--keep class com.liulishuo.okdownload.core.breakpoint.BreakpointStoreOnSQLite {
-public com.liulishuo.okdownload.core.breakpoint.DownloadStore createRemitSelf();
-public com.liulishuo.okdownload.core.breakpoint.BreakpointStoreOnSQLite(android.content.Context);
-}
-# okdownload:okhttp
--keepnames class com.liulishuo.okdownload.core.connection.DownloadOk
-
-
-############################################
-## OkHttp configuration ##
-############################################
-
-# okhttp https://github.com/square/okhttp/#proguard
--dontwarn okhttp3.**
--dontwarn okio.**
--dontwarn javax.annotation.**
--dontwarn org.conscrypt.**
-# A resource is loaded with a relative path so the package of this class must be preserved.
--keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+-keep class com.didi.virtualapk.** { *; }
+-dontwarn com.didi.virtualapk.**
+-dontwarn android.**
+-keep class android.** { *; }

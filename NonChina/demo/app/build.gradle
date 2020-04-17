@@ -32,6 +32,7 @@ networkLibsPath.add("tapjoy");
 networkLibsPath.add("unityads");
 networkLibsPath.add("vungle");
 networkLibsPath.add("pangle")
+networkLibsPath.add("fyber")
 
 android {
     compileSdkVersion 28

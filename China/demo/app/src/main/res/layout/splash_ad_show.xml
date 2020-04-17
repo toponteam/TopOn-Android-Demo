@@ -46,5 +46,6 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:textColor="#ffffff"
-        android:textSize="16dp"></TextView>
+        android:textSize="16dp"
+        android:visibility="gone"></TextView>
 </RelativeLayout>
