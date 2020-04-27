@@ -12,16 +12,14 @@
 
 **下载地址（Download link）：**<br>
 
-TopOn SDK Unity for Android V5.5.5 <br>
-http://sdk-release.toponad.com/Unity/5.5.5/Unity_Androidv555_20200409.unitypackage  <br>
+TopOn SDK Unity for Android V5.5.6   Beta <br>
+http://sdk-release.toponad.com/Unity/5.5.6/AnyThinkUnity_Androidv5.5.6.zip <br>
 
-TopOn SDK Unity for iOS V5.5.5 <br>
-http://sdk-release.toponad.com/Unity/5.5.5/Unity_iOSv5.5.5_20200403.unitypackage <br>
+TopOn SDK Unity for iOS V5.5.6   Beta <br>
+http://sdk-release.toponad.com/Unity/5.5.6/AnyThinkUnity_iOSv5.5.6.zip <br>
 
-TopOn SDK Unity for Android & iOS V5.5.5 <br>
-http://sdk-release.toponad.com/Unity/5.5.5/Unity_Androidv555_iOSv555_20200409.unitypackage <br>
-
-
+TopOn SDK Unity for Android & iOS V5.5.6   Beta <br>
+http://sdk-release.toponad.com/Unity/5.5.6/AnyThinkUnity_Androidv556_iOSv556.zip <br>
 
 注意：不要通过GitHub的Download ZIP下载TopOn SDK（Note: Do not download TopOn SDK via Download ZIP on GitHub）
 
