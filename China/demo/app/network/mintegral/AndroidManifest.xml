@@ -2,24 +2,29 @@
     package="com.anythink.mintegral">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Required for China-Mainland Traffic app -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
     <application>
         <activity
             android:name="com.mintegral.msdk.activity.MTGCommonActivity"
             android:configChanges="keyboard|orientation"
-            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
 
-        <receiver android:name="com.mintegral.msdk.click.AppReceiver">
+        <receiver android:name="com.mintegral.msdk.click.AppReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <service android:name="com.mintegral.msdk.shell.MTGService">
+
+        <service android:name="com.mintegral.msdk.shell.MTGService" >
             <intent-filter>
                 <action android:name="com.mintegral.msdk.download.action" />
             </intent-filter>
@@ -28,12 +33,14 @@
         <activity
             android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
             android:name="com.mintegral.msdk.interstitial.view.MTGInterstitialActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"/>
 
         <provider
             android:name="com.mintegral.msdk.base.utils.MTGFileProvider"
@@ -42,7 +49,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_mtg_file_path" />
+                android:resource="@xml/anythink_bk_mtg_file_path"/>
         </provider>
     </application>
 

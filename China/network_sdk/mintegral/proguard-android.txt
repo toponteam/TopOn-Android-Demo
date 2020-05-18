@@ -2,7 +2,9 @@
 -keepattributes *Annotation*
 -keep class com.mintegral.** {*; }
 -keep interface com.mintegral.** {*; }
--keep class android.support.v4.** { *; }
+-keep interface androidx.** { *; }
+-keep class androidx.** { *; }
+-keep public class * extends androidx.** { *; }
 -dontwarn com.mintegral.**
 -keep class **.R$* { public static final int mintegral*; }
 -keep class com.alphab.** {*; }

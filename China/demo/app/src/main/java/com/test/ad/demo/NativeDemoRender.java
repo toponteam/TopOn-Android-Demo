@@ -100,6 +100,11 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
 
         if (mediaView != null) {
+
+            if(mediaView.getParent() != null) {
+                ((ViewGroup) mediaView.getParent()).removeView(mediaView);
+            }
+
             contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
         } else {

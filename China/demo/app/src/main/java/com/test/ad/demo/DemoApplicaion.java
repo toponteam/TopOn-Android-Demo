@@ -1,16 +1,13 @@
 package com.test.ad.demo;
 
-import android.app.ActivityManager;
-import android.content.Context;
 import android.os.Build;
-import android.support.multidex.MultiDexApplication;
 import android.webkit.WebView;
+
+import androidx.multidex.MultiDexApplication;
 
 import com.anythink.core.api.ATSDK;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
-
-import java.util.HashMap;
 
 /**
  * Created by Z on 2018/1/10.

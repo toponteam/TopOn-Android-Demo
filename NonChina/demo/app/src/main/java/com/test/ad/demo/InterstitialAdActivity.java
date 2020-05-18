@@ -119,7 +119,8 @@ public class InterstitialAdActivity extends Activity {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mInterstitialAd.show(InterstitialAdActivity.this);
+//                mInterstitialAd.show(InterstitialAdActivity.this);
+                mInterstitialAd.show(InterstitialAdActivity.this, "f5e54937b0483d");
             }
         });
 

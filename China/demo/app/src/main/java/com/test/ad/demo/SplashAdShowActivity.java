@@ -3,9 +3,9 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,17 +17,20 @@ import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
 
 public class SplashAdShowActivity extends Activity implements ATSplashAdListener {
-    TextView skipView;
     ATSplashAd splashAd;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash_ad_show);
 
         String unitId = getIntent().getStringExtra("unitId");
         FrameLayout container = findViewById(R.id.splash_ad_container);
+        ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
+        /**You should set size to the layout param.**/
+        layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+        layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
 
         splashAd = new ATSplashAd(this, container, unitId, this);
 
@@ -97,7 +100,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     @Override
     public void onAdTick(long millisUtilFinished) {
         Log.i("SplashAdShowActivity", "onAdTick---------：" + millisUtilFinished);
-        skipView.setText(String.valueOf(millisUtilFinished / 1000) + "| SKIP");
     }
 
     boolean hasHandleJump = false;

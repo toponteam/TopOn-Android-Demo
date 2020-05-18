@@ -90,7 +90,7 @@ public class NativeAdActivity extends Activity {
 
 
         int padding = dip2px(10);
-        int adViewHeight = dip2px(340) - 2 * padding;
+        final int adViewHeight = dip2px(340) - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
@@ -120,6 +120,11 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(anyThinkNativeAdView != null && anyThinkNativeAdView.getParent() == null) {
+                    ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
+                }
+
                 upArapuNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
@@ -159,6 +164,7 @@ public class NativeAdActivity extends Activity {
                     mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
                         @Override
                         public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
+                            Log.i(TAG, "native ad onAdCloseButtonClick");
                             if (view.getParent() != null) {
                                 ((ViewGroup) view.getParent()).removeView(view);
                             }

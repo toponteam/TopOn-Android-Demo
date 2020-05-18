@@ -120,7 +120,8 @@ public class RewardVideoAdActivity extends Activity {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mRewardVideoAd.show(RewardVideoAdActivity.this);
+//                mRewardVideoAd.show(RewardVideoAdActivity.this);
+                mRewardVideoAd.show(RewardVideoAdActivity.this, "f5e5492eca9668");
             }
         });
 
