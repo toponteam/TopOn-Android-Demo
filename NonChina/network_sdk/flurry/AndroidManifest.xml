@@ -8,7 +8,6 @@
     <!-- Highly Recommended permission - External memory pre-caching -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- Optional permission - Location based ad targeting -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application>
         <!-- Required Activities if using Flurry Advertising -->

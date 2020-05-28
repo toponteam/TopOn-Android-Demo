@@ -1,0 +1,14 @@
+<resources>
+    <string name="sig_ad">Ad</string>
+    <string name="sig_close">Skip</string>
+    <string name="sig_back">Close</string>
+    <string name="sig_skip_args_1">Skip&#160;%1$d</string>
+    <string name="sig_skip_args_2">%1$d&#160;Skip</string>
+    <string name="sig_close_args">Skip&#160;%1$d</string>
+    <string name="sig_skip_ad_args">Skip&#160;AD&#160;%1$d</string>
+    <string name="sig_close_ad_title">Close video?</string>
+    <string name="sig_close_ad_message">You&#160;will&#160;be&#160;rewarded&#160;with&#160;only&#160;_SEC_&#160;seconds</string>
+    <string name="sig_close_ad_cancel">Cancel</string>
+    <string name="sig_close_ad_ok">Confirm</string>
+
+</resources>

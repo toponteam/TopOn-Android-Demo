@@ -5,8 +5,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />     <!--5.7.1 版本新增-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />     <!-- *8.0 版本适配请增加此条配置-->
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />     &lt;!&ndash; *8.0 版本适配请增加此条配置&ndash;&gt;-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />     <!-- *8.0 版本以后需要分别对读写同时授权-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.per!mission.WRITE_EXTERNAL_STORAGE" />

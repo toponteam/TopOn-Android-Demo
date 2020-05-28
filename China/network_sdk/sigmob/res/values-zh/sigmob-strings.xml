@@ -1,0 +1,13 @@
+<resources>
+    <string name="sig_ad">广告</string>
+    <string name="sig_close">跳过</string>
+    <string name="sig_back">关闭</string>
+    <string name="sig_skip_args_1">跳过&#160;%1$d</string>
+    <string name="sig_skip_args_2">%1$d&#160;跳过</string>
+    <string name="sig_skip_ad_args">跳过广告&#160;%1$d</string>
+    <string name="sig_close_args">关闭&#160;%1$d</string>
+    <string name="sig_close_ad_title">关闭视频?</string>
+    <string name="sig_close_ad_message">还剩_SEC_秒，您就可以获得奖励了哦!</string>
+    <string name="sig_close_ad_cancel">继续播放</string>
+    <string name="sig_close_ad_ok">确定关闭</string>
+</resources>
