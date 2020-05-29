@@ -1,0 +1,7 @@
+demo/.idea/*
+demo/build/*
+demo/.gradle/*
+demo/.gradle/4.1/*
+demo/.idea/**
+demo/app/build
+local.properties
