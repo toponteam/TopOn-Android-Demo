@@ -32,6 +32,7 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_appnext
             , DemoApplicaion.mPlacementId_banner_nend
             , DemoApplicaion.mPlacementId_banner_fyber
+            , DemoApplicaion.mPlacementId_banner_startapp
     };
 
     String unitGroupName[] = new String[]{
@@ -45,7 +46,8 @@ public class BannerAdActivity extends Activity {
             "Mopub",
             "Appnext",
             "Nend",
-            "Fyber"
+            "Fyber",
+            "StartApp"
     };
 
     ATBannerView mBannerView;

@@ -124,7 +124,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /> <!-- network type: nonchina_jcenter/network_sdk/pangle/AndroidManifest.xml -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="com.test.ad.demo.TTMultiProvider"
+            android:authorities="{applicationId}.TTMultiProvider"
             android:exported="false" />
     </application>
 

@@ -104,6 +104,7 @@ dependencies {
     //Mintegral
     api "com.anythink.sdk:adapter-mintegral-nonchina:5.5.8"
     api 'com.mintegral.msdk:videojs:14.0.01'
+    api 'com.mintegral.msdk:videofeeds:14.0.01'
     api 'com.mintegral.msdk:mtgjscommon:14.0.01'
     api 'com.mintegral.msdk:playercommon:14.0.01'
     api 'com.mintegral.msdk:reward:14.0.01'
@@ -196,7 +197,7 @@ dependencies {
 
     //StartApp
     api "com.anythink.sdk:adapter-startapp:5.5.8"
-    api "com.startapp:inapp-sdk:4.4.1"
+    api "com.startapp:inapp-sdk:4.6.0"
 
     //SuperAwesome
     api "com.anythink.sdk:adapter-superawesome:5.5.8"
