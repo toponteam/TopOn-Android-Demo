@@ -11,19 +11,19 @@ import android.widget.Toast;
 
 public class SplashAdActivity extends Activity {
     String unitIds[] = new String[]{
-            DemoApplicaion.mPlacementId_splash_all
-            ,DemoApplicaion.mPlacementId_splash_gdt
-            , DemoApplicaion.mPlacementId_splash_toutiao
-            ,DemoApplicaion.mPlacementId_splash_baidu
-            ,DemoApplicaion.mPlacementId_splash_sigmob
+            DemoApplicaion.mPlacementId_splash_toutiao,
+            DemoApplicaion.mPlacementId_splash_gdt,
+            DemoApplicaion.mPlacementId_splash_baidu,
+            DemoApplicaion.mPlacementId_splash_sigmob,
+            DemoApplicaion.mPlacementId_splash_mintegral
     };
 
     String unitGroupName[] = new String[]{
-            "All",
-            "GDT",
             "Toutiao",
+            "GDT",
             "Baidu",
-            "sigmob"
+            "Sigmob",
+            "Mintegral"
     };
 
     int mCurrentSelectIndex;

@@ -18,6 +18,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String appKey = "4f7b9ac17decb9babec83aac078742c7";
     public static final String mPlacementId_native_all = "b5aa1fa2cae775";
     public static final String mPlacementId_native_mintegral = "b5aa1fa85b86d5";
+    public static final String mPLacementId_native_automatic_rending_mintegral= "b5ee8aeb8f3458";
     public static final String mPlacementId_native_GDT = "b5ab8590d44f82";
     public static final String mPlacementId_native_toutiao = "b5c2c97629da0d";
     public static final String mPlacementId_native_toutiao_drawer = "b5c355d79ef9be";
@@ -66,6 +67,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_splash_toutiao = "b5bea7c1b653ef";
     public static final String mPlacementId_splash_baidu = "b5c05090192a58";
     public static final String mPlacementId_splash_sigmob = "b5d76150bab3ad";
+    public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
 
     @Override
     public void onCreate() {

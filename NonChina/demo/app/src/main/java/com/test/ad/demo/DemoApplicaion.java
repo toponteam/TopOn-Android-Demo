@@ -21,11 +21,13 @@ public class DemoApplicaion extends MultiDexApplication {
     //Native
     public static final String mPlacementId_native_all = "b5aa1fa2cae775";
     public static final String mPlacementId_native_facebook = "b5aa1fa4165ea3";
+    public static final String mPlacementId_native_banner_facebook = "b5ee0cb54b17f8";
     public static final String mPlacementId_native_admob = "b5aa1fa501d9f6";
     public static final String mPlacementId_native_inmobi = "b5aa1fa5d10190";
     public static final String mPlacementId_native_flurry = "b5aa1fa6c00d2f";
     public static final String mPlacementId_native_applovin = "b5aa1fa7956158";
     public static final String mPlacementId_native_mintegral = "b5aa1fa85b86d5";
+    public static final String mPLacementId_native_automatic_rending_mintegral= "b5ee8aeb8f3458";
     public static final String mPlacementId_native_mopub = "b5ab858fb0175f";
     public static final String mPlacementId_native_appnext = "b5bc7f369610cd";
     public static final String mPlacementId_native_nend = "b5cb95ead9e60a";
@@ -67,6 +69,10 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_nend = "b5cb95ed13203c";
     public static final String mPlacementId_banner_fyber = "b5e96f5f2dc516";
     public static final String mPlacementId_banner_startapp = "b5ed47d37934a4";
+    public static final String mPlacementId_banner_vungle = "b5ee8ae48f1578";
+    public static final String mPlacementId_banner_adcolony = "b5ee8ae62b2f80";
+    public static final String mPlacementId_banner_chartboost = "b5ee8ae6f9f5cf";
+
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -92,6 +98,9 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_ogury = "b5dde269060938";
     public static final String mPlacementId_interstitial_fyber = "b5e96f607235f6";
 
+    //Splash
+    public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -103,6 +112,7 @@ public class DemoApplicaion extends MultiDexApplication {
                 WebView.setDataDirectorySuffix(processName);
             }
         }
+
 
         Stetho.initializeWithDefaults(getApplicationContext());
         Fresco.initialize(getApplicationContext());

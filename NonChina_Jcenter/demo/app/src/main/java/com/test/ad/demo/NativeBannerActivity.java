@@ -42,8 +42,9 @@ public class NativeBannerActivity extends Activity {
         bannerView.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
-                bannerView.setVisibility(View.VISIBLE);
                 Log.i("BannerActivity", "640---onAdLoaded----");
+                bannerView.setVisibility(View.VISIBLE);
+
             }
 
             @Override
@@ -84,7 +85,7 @@ public class NativeBannerActivity extends Activity {
         config320.ctaBgColor = 0xff000000;
         bannerView320.setBannerConfig(config320);
 
-        bannerView320.setUnitId(DemoApplicaion.mPlacementId_native_facebook);
+        bannerView320.setUnitId(DemoApplicaion.mPlacementId_native_admob);
         bannerView320.setVisibility(View.GONE);
         bannerView320.setBackgroundColor(0xffffffff);
         LinearLayout.LayoutParams params320 = new LinearLayout.LayoutParams(dip2px(this, 320), dip2px(this, 50));
@@ -94,8 +95,9 @@ public class NativeBannerActivity extends Activity {
         bannerView320.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
-                bannerView320.setVisibility(View.VISIBLE);
                 Log.i("BannerActivity", "320---onAdLoaded");
+                bannerView320.setVisibility(View.VISIBLE);
+
             }
 
             @Override
@@ -131,7 +133,7 @@ public class NativeBannerActivity extends Activity {
 
 
         final ATNativeBannerView bannerViewAuto = new ATNativeBannerView(this);
-        bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_admob);
+        bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_facebook);
         bannerViewAuto.setVisibility(View.GONE);
         ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
         configAuto.bannerSize = ATNativeBannerSize.BANNER_SIZE_AUTO;
@@ -151,8 +153,9 @@ public class NativeBannerActivity extends Activity {
         bannerViewAuto.setAdListener(new ATNativeBannerListener() {
             @Override
             public void onAdLoaded() {
-                bannerViewAuto.setVisibility(View.VISIBLE);
                 Log.i("BannerActivity", "auto---onAdLoaded----");
+                bannerViewAuto.setVisibility(View.VISIBLE);
+
             }
 
             @Override

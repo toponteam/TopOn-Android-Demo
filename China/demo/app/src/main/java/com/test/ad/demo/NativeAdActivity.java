@@ -18,6 +18,7 @@ import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.network.mintegral.MintegralATConst;
 import com.anythink.network.toutiao.TTATConst;
 
 import java.util.HashMap;
@@ -30,6 +31,7 @@ public class NativeAdActivity extends Activity {
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
             , DemoApplicaion.mPlacementId_native_mintegral
+            , DemoApplicaion.mPLacementId_native_automatic_rending_mintegral
             , DemoApplicaion.mPlacementId_native_GDT
             , DemoApplicaion.mPlacementId_native_toutiao
             , DemoApplicaion.mPlacementId_native_toutiao_drawer
@@ -42,6 +44,7 @@ public class NativeAdActivity extends Activity {
     String unitGroupName[] = new String[]{
             "All network",
             "mintegral",
+            "mintegral auto-rending",
             "gdt",
             "toutiao",
             "toutiao_drawer",
@@ -50,7 +53,7 @@ public class NativeAdActivity extends Activity {
             "kuaishou-draw"
     };
 
-    ATNative upArapuNatives[] = new ATNative[unitIds.length];
+    ATNative atNatives[] = new ATNative[unitIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
@@ -91,7 +94,7 @@ public class NativeAdActivity extends Activity {
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
         for (int i = 0; i < unitIds.length; i++) {
-            upArapuNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
+            atNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Log.i(TAG, "onNativeAdLoaded");
@@ -109,9 +112,15 @@ public class NativeAdActivity extends Activity {
 
 
             Map<String, Object> localMap = new HashMap<>();
+            //Pangle
             localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
             localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, adViewHeight);
-            upArapuNatives[i].setLocalExtra(localMap);
+
+            //Mintegral
+            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_HEIGHT, adViewHeight);
+
+            atNatives[i].setLocalExtra(localMap);
 
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);
@@ -127,14 +136,14 @@ public class NativeAdActivity extends Activity {
                     ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
                 }
 
-                upArapuNatives[mCurrentSelectIndex].makeAdRequest();
+                atNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
 
         findViewById(R.id.loadcache_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
+                NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
                     mNativeAd.setNativeEventListener(new ATNativeEventListener() {
@@ -179,7 +188,7 @@ public class NativeAdActivity extends Activity {
                     }
 
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
-                    mNativeAd.prepare(anyThinkNativeAdView);
+                    mNativeAd.prepare(anyThinkNativeAdView, anyThinkRender.getClickView(), null);
                 } else {
                     Toast.makeText(NativeAdActivity.this, "this placement no cache!", Toast.LENGTH_LONG).show();
 

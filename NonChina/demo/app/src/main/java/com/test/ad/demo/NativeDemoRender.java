@@ -38,14 +38,15 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
         }
         mNetworkType = networkType;
-        if(mDevelopView.getParent() != null){
-            ((ViewGroup)mDevelopView.getParent()).removeView(mDevelopView);
+        if (mDevelopView.getParent() != null) {
+            ((ViewGroup) mDevelopView.getParent()).removeView(mDevelopView);
         }
         return mDevelopView;
     }
 
     @Override
     public void renderAdView(View view, CustomNativeAd ad) {
+        mClickView.clear();
         TextView titleView = (TextView) view.findViewById(R.id.native_ad_title);
         TextView descView = (TextView) view.findViewById(R.id.native_ad_desc);
         TextView ctaView = (TextView) view.findViewById(R.id.native_ad_install_btn);
@@ -63,6 +64,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         iconArea.removeAllViews();
         logoView.setImageDrawable(null);
 
+        View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
 
         if (ad.isNativeExpress()) {//是 个性化模板
             titleView.setVisibility(View.GONE);
@@ -70,16 +72,22 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             ctaView.setVisibility(View.GONE);
             logoView.setVisibility(View.GONE);
             iconArea.setVisibility(View.GONE);
-        } else {
-            titleView.setVisibility(View.VISIBLE);
-            descView.setVisibility(View.VISIBLE);
-            ctaView.setVisibility(View.VISIBLE);
-            logoView.setVisibility(View.VISIBLE);
-            iconArea.setVisibility(View.VISIBLE);
+            if(mediaView.getParent() != null) {
+                ((ViewGroup) mediaView.getParent()).removeView(mediaView);
+            }
+
+            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+            return;
         }
 
 
-        View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
+        titleView.setVisibility(View.VISIBLE);
+        descView.setVisibility(View.VISIBLE);
+        ctaView.setVisibility(View.VISIBLE);
+        logoView.setVisibility(View.VISIBLE);
+        iconArea.setVisibility(View.VISIBLE);
+
+
         View adiconView = ad.getAdIconView();
 
 
@@ -87,6 +95,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         if (adiconView == null) {
             iconArea.addView(iconView);
             iconView.setImageURI(ad.getIconImageUrl());
+            mClickView.add(iconView);
         } else {
             iconArea.addView(adiconView);
         }
@@ -100,12 +109,11 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
 
         if (mediaView != null) {
-
             if(mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
 
-            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
 
         } else {
 
@@ -115,6 +123,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
             imageView.setLayoutParams(params);
             contentArea.addView(imageView, params);
+
+            mClickView.add(imageView);
         }
 
         titleView.setText(ad.getTitle());
@@ -127,8 +137,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             adFromView.setVisibility(View.GONE);
         }
 
-        mClickView.clear();
-
+        mClickView.add(titleView);
+        mClickView.add(descView);
         mClickView.add(ctaView);
 
     }

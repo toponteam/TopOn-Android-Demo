@@ -18,7 +18,7 @@ import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.network.toutiao.TTATConst;
+import com.anythink.network.mintegral.MintegralATConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,11 +30,13 @@ public class NativeAdActivity extends Activity {
     String unitIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
             , DemoApplicaion.mPlacementId_native_facebook
+            , DemoApplicaion.mPlacementId_native_banner_facebook
             , DemoApplicaion.mPlacementId_native_admob
             , DemoApplicaion.mPlacementId_native_inmobi
             , DemoApplicaion.mPlacementId_native_flurry
             , DemoApplicaion.mPlacementId_native_applovin
             , DemoApplicaion.mPlacementId_native_mintegral
+            , DemoApplicaion.mPLacementId_native_automatic_rending_mintegral
             , DemoApplicaion.mPlacementId_native_mopub
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_nend
@@ -44,17 +46,19 @@ public class NativeAdActivity extends Activity {
     String unitGroupName[] = new String[]{
             "All network",
             "facebook",
+            "faceboon native banner",
             "admob",
             "inmobi",
             "flurry",
             "applovin",
             "mintegral",
+            "mintegral auto-rending",
             "mopub",
             "appnext",
             "nend"
     };
 
-    ATNative upArapuNatives[] = new ATNative[unitIds.length];
+    ATNative atNatives[] = new ATNative[unitIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
@@ -90,12 +94,12 @@ public class NativeAdActivity extends Activity {
 
 
         int padding = dip2px(10);
-        final int adViewHeight = dip2px(340) - 2 * padding;
+        int adViewHeight = dip2px(340) - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
         for (int i = 0; i < unitIds.length; i++) {
-            upArapuNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
+            atNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Log.i(TAG, "onNativeAdLoaded");
@@ -111,6 +115,12 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
+            Map<String, Object> localMap = new HashMap<>();
+            //Mintegral
+            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_HEIGHT, adViewHeight);
+            atNatives[i].setLocalExtra(localMap);
+
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);
             }
@@ -120,19 +130,14 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(anyThinkNativeAdView != null && anyThinkNativeAdView.getParent() == null) {
-                    ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
-                }
-
-                upArapuNatives[mCurrentSelectIndex].makeAdRequest();
+                atNatives[mCurrentSelectIndex].makeAdRequest();
             }
         });
 
         findViewById(R.id.loadcache_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NativeAd nativeAd = upArapuNatives[mCurrentSelectIndex].getNativeAd();
+                NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
                     mNativeAd = nativeAd;
                     mNativeAd.setNativeEventListener(new ATNativeEventListener() {
@@ -164,20 +169,21 @@ public class NativeAdActivity extends Activity {
                     mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
                         @Override
                         public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
-                            Log.i(TAG, "native ad onAdCloseButtonClick");
+                            Log.i(TAG, "native ad onAdCloseButtonClick:");
                             if (view.getParent() != null) {
                                 ((ViewGroup) view.getParent()).removeView(view);
                             }
                         }
                     });
-                    try{
+                    try {
                         mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
-                    }catch (Exception e){
+                    } catch (Exception e) {
 
                     }
 
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
-                    mNativeAd.prepare(anyThinkNativeAdView);
+                    mNativeAd.prepare(anyThinkNativeAdView, anyThinkRender.getClickView(), null);
+
                 } else {
                     Toast.makeText(NativeAdActivity.this, "this placement no cache!", Toast.LENGTH_LONG).show();
 
@@ -185,10 +191,12 @@ public class NativeAdActivity extends Activity {
 
             }
         });
-        anyThinkNativeAdView.setPadding(padding,padding,padding,padding);
 
+        anyThinkNativeAdView.setPadding(padding, padding, padding, padding);
         anyThinkNativeAdView.setVisibility(View.GONE);
         ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
+
+
     }
 
     @Override

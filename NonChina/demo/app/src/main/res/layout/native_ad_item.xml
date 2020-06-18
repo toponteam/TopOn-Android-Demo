@@ -4,14 +4,6 @@
     android:layout_height="wrap_content"
     android:background="#ffffff">
 
-    <ImageView
-        android:id="@+id/native_self_adlogo"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginLeft="2dp"
-        android:src="@drawable/ad_logo"/>
-
-
 
     <!--<TextView-->
     <!--android:id="@+id/native_ad_install_btn"-->
@@ -99,6 +91,13 @@
         android:visibility="gone" />
 
 
+    <ImageView
+        android:id="@+id/native_self_adlogo"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ad_logo"/>
+
     <TextView
         android:id="@+id/native_ad_from"
         android:layout_width="wrap_content"
@@ -113,4 +112,6 @@
         android:paddingRight="2dp"
         android:textColor="#ffffff"
         android:textSize="6dp" />
+
+
 </RelativeLayout>
