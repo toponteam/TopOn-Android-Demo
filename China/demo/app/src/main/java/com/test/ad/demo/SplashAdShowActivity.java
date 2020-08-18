@@ -1,8 +1,8 @@
 package com.test.ad.demo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.baidu.BaiduATConst;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
 
-public class SplashAdShowActivity extends Activity implements ATSplashAdListener {
+public class SplashAdShowActivity extends FragmentActivity implements ATSplashAdListener {
     ATSplashAd splashAd;
 
     @Override
@@ -32,7 +33,26 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
         layoutParams.width = getResources().getDisplayMetrics().widthPixels;
         layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
 
-        splashAd = new ATSplashAd(this, container, unitId, this);
+        ATMediationRequestInfo atMediationRequestInfo = null;
+
+//        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");
+//        atMediationRequestInfo.setAdSourceId("71606");
+//
+//        atMediationRequestInfo = new GDTATRequestInfo("1101152570", "8863364436303842593");
+//        atMediationRequestInfo.setAdSourceId("71602");
+//
+//        atMediationRequestInfo = new TTATRequestInfo("5020321", "820321537", false);
+//        atMediationRequestInfo.setAdSourceId("71600");
+
+//        atMediationRequestInfo = new SigmobiATRequestInfo("1282", "27531c7c64157934", "e04d1ac9231");
+//        atMediationRequestInfo.setAdSourceId("71608");
+//
+//        atMediationRequestInfo = new BaiduATRequestInfo("e866cfb0", "2058622");
+//        atMediationRequestInfo.setAdSourceId("71609");
+
+//        atMediationRequestInfo  = new KSATRequestInfo("501400010", "5014000234");
+//        atMediationRequestInfo.setAdSourceId("88377");
+        splashAd = new ATSplashAd(this, container, unitId, atMediationRequestInfo, this);
 
 
     }

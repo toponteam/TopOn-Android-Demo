@@ -8,10 +8,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RewardVideoAdActivity extends Activity {
 
@@ -39,31 +43,33 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_myoffer
             , DemoApplicaion.mPlacementId_rewardvideo_ogury
             , DemoApplicaion.mPlacementId_rewardvideo_fyber
+            , DemoApplicaion.mPlacementId_rewardvideo_googleAdManager
     };
 
     String unitGroupName[] = new String[]{
             "All network",
-            "facebook",
-            "admob",
-            "inmobi",
-            "flurry",
-            "applovin",
-            "mintegral",
-            "mopub",
-            "chartboost",
-            "tapjoy",
-            "ironsource",
-            "unity3d",
-            "vungle",
-            "adcolony",
-            "appnext",
-            "nend",
-            "maio",
-            "startApp",
-            "superAwesome",
-            "myoffer",
-            "ogury",
-            "fyber"
+            "Facebook",
+            "Admob",
+            "Inmobi",
+            "Flurry",
+            "Applovin",
+            "Mintegral",
+            "Mopub",
+            "Chartboost",
+            "Tapjoy",
+            "Ironsource",
+            "Unity3d",
+            "Vungle",
+            "Adcolony",
+            "Appnext",
+            "Nend",
+            "Maio",
+            "StartApp",
+            "SuperAwesome",
+            "Myoffer",
+            "Ogury",
+            "Fyber",
+            "Google Ad Manager"
     };
 
     RadioGroup mRadioGroup;
@@ -130,7 +136,12 @@ public class RewardVideoAdActivity extends Activity {
     private void init() {
         mRewardVideoAd = new ATRewardVideoAd(this, unitIds[mCurrentSelectIndex]);
         String userid = "test_userid_001";
-        mRewardVideoAd.setUserData(userid, "");
+        String userdata = "test_userdata_001";
+//        mRewardVideoAd.setUserData(userid, userdata);
+        Map<String, Object> localMap = new HashMap<>();
+        localMap.put(ATAdConst.KEY.USER_ID, userid);
+        localMap.put(ATAdConst.KEY.USER_CUSTOM_DATA, userdata);
+        mRewardVideoAd.setLocalExtra(localMap);
         mRewardVideoAd.setAdListener(new ATRewardVideoListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
@@ -164,7 +175,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdClosed(ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString() );
+                Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
             }
 
@@ -176,7 +187,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onReward(ATAdInfo entity) {
-                Log.e(TAG, "onReward:\n" + entity.toString() );
+                Log.e(TAG, "onReward:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
         });

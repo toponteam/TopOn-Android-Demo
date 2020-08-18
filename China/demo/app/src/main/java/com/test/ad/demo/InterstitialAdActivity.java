@@ -33,17 +33,17 @@ public class InterstitialAdActivity extends Activity {
 
     String unitGroupName[] = new String[]{
             "All network",
-            "mintegral",
-            "mintegral video",
-            "gdt",
-            "toutiao video",
-            "toutiao",
-            "uniplay",
-            "oneway",
-            "baidu",
-            "kuaishou",
-            "sigmob",
-            "myoffer"
+            "Mintegral",
+            "Mintegral video",
+            "GDT",
+            "Toutiao video",
+            "Toutiao",
+            "Uniplay",
+            "Oneway",
+            "Baidu",
+            "Kuaishou",
+            "Sigmob",
+            "Myoffer"
     };
 
     RadioGroup mRadioGroup;

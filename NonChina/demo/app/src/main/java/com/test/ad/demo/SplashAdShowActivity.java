@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
@@ -28,7 +29,10 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
         layoutParams.width = getResources().getDisplayMetrics().widthPixels;
         layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
 
-        splashAd = new ATSplashAd(this, container, unitId, this);
+        ATMediationRequestInfo atMediationRequestInfo = null;
+//        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");
+//        atMediationRequestInfo.setAdSourceId("68188");
+        splashAd = new ATSplashAd(this, container, unitId, atMediationRequestInfo, this);
 
 
     }

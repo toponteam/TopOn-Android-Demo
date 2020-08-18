@@ -9,8 +9,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.anythink.nativead.api.ATNativeAdRenderer;
+import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         TextView adFromView = (TextView) view.findViewById(R.id.native_ad_from);
         FrameLayout contentArea = (FrameLayout) view.findViewById(R.id.native_ad_content_image_area);
         FrameLayout iconArea = (FrameLayout) view.findViewById(R.id.native_ad_image);
-        final SimpleDraweeView logoView = (SimpleDraweeView) view.findViewById(R.id.native_ad_logo);
+        final ATNativeImageView logoView = (ATNativeImageView) view.findViewById(R.id.native_ad_logo);
 
         titleView.setText("");
         descView.setText("");
@@ -72,7 +72,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             ctaView.setVisibility(View.GONE);
             logoView.setVisibility(View.GONE);
             iconArea.setVisibility(View.GONE);
-            if(mediaView.getParent() != null) {
+            if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
 
@@ -91,10 +91,10 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         View adiconView = ad.getAdIconView();
 
 
-        final SimpleDraweeView iconView = new SimpleDraweeView(mContext);
+        final ATNativeImageView iconView = new ATNativeImageView(mContext);
         if (adiconView == null) {
             iconArea.addView(iconView);
-            iconView.setImageURI(ad.getIconImageUrl());
+            iconView.setImage(ad.getIconImageUrl());
             mClickView.add(iconView);
         } else {
             iconArea.addView(adiconView);
@@ -102,14 +102,14 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
 
         if (!TextUtils.isEmpty(ad.getAdChoiceIconUrl())) {
-            logoView.setImageURI(ad.getAdChoiceIconUrl());
+            logoView.setImage(ad.getAdChoiceIconUrl());
         } else {
 //            logoView.setImageResource(R.drawable.ad_logo);
         }
 
 
         if (mediaView != null) {
-            if(mediaView.getParent() != null) {
+            if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
 
@@ -117,9 +117,9 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
         } else {
 
-            final SimpleDraweeView imageView = new SimpleDraweeView(mContext);
+            ATNativeImageView imageView = new ATNativeImageView(mContext);
+            imageView.setImage(ad.getMainImageUrl());
 
-            imageView.setImageURI(ad.getMainImageUrl());
             ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
             imageView.setLayoutParams(params);
             contentArea.addView(imageView, params);

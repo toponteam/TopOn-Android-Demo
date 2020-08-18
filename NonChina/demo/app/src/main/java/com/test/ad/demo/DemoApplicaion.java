@@ -8,8 +8,12 @@ import androidx.multidex.MultiDexApplication;
 
 import com.anythink.core.api.ATSDK;
 import com.anythink.core.api.NetTrafficeCallback;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.Stetho;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Z on 2018/1/10.
@@ -31,6 +35,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_mopub = "b5ab858fb0175f";
     public static final String mPlacementId_native_appnext = "b5bc7f369610cd";
     public static final String mPlacementId_native_nend = "b5cb95ead9e60a";
+    public static final String mPlacementId_native_googleAdManager = "b5f1ea92c46353";
 
     //RewardedVideo
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
@@ -55,6 +60,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_myoffer = "b5db6c3764aea3";
     public static final String mPlacementId_rewardvideo_ogury = "b5dde267f73eb4";
     public static final String mPlacementId_rewardvideo_fyber = "b5e96f5e1ade5b";
+    public static final String mPlacementId_rewardvideo_googleAdManager = "b5f1ea95c4594e";
 
     //Banner
     public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
@@ -72,7 +78,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_vungle = "b5ee8ae48f1578";
     public static final String mPlacementId_banner_adcolony = "b5ee8ae62b2f80";
     public static final String mPlacementId_banner_chartboost = "b5ee8ae6f9f5cf";
-
+    public static final String mPlacementId_banner_googleAdManager = "b5f1ea93f1793b";
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -97,6 +103,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_myoffer = "b5db6c39aed9c5";
     public static final String mPlacementId_interstitial_ogury = "b5dde269060938";
     public static final String mPlacementId_interstitial_fyber = "b5e96f607235f6";
+    public static final String mPlacementId_interstitial_googleAdManager = "b5f1ea94f36790";
 
     //Splash
     public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
@@ -104,6 +111,10 @@ public class DemoApplicaion extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+//        JacocoHelper.Builder builder = new JacocoHelper.Builder();
+//        builder.setApplication(this).setDebuggable(true);
+//        JacocoHelper.initialize(builder.build());
 
         //Android 9 or above must be set
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
@@ -115,7 +126,6 @@ public class DemoApplicaion extends MultiDexApplication {
 
 
         Stetho.initializeWithDefaults(getApplicationContext());
-        Fresco.initialize(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
         ATSDK.integrationChecking(this);
 
@@ -135,7 +145,27 @@ public class DemoApplicaion extends MultiDexApplication {
                 Log.i("Demoapplication", "onErrorCallback:" + errorMsg);
             }
         });
+        List excludelist = new ArrayList();
+        excludelist.add("com.exclude.myoffer1");
+        excludelist.add("com.exclude.myoffer2");
+        ATSDK.setExcludeMyOfferPkgList(excludelist);
 
+        Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isChinaSDK());
+        Log.i("Demoapplication", "SDKVersionName:" + ATSDK.getSDKVersionName());
+
+        Map custommap = new HashMap();
+        custommap.put("key1","initCustomMap1");
+        custommap.put("key2","initCustomMap2");
+        ATSDK.initCustomMap(custommap);
+
+        Map subcustommap = new HashMap();
+        subcustommap.put("key1","initPlacementCustomMap1");
+        subcustommap.put("key2","initPlacementCustomMap2");
+        ATSDK.initPlacementCustomMap("b5aa1fa4165ea3",subcustommap);//native  facebook
+
+
+        ATSDK.setChannel("testChannle");
+        ATSDK.setSubChannel("testSubChannle");
         ATSDK.init(DemoApplicaion.this, appid, appKey);
 
 

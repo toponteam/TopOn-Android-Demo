@@ -17,11 +17,11 @@
         <activity
             android:name="com.baidu.mobads.AppActivity"
             android:configChanges="screenSize|keyboard|keyboardHidden|orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 
         <provider
             android:name="com.baidu.mobads.openad.BdFileProvider"
-            android:authorities="${applicationId}.bd.provider"
+            android:authorities="${packageName}.bd.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
@@ -18,8 +20,6 @@ import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.network.mintegral.MintegralATConst;
-import com.anythink.network.toutiao.TTATConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,26 +38,26 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_baidu
             , DemoApplicaion.mPlacementId_native_kuaishou
             , DemoApplicaion.mPlacementId_native_kuaishou_drawer
+            , DemoApplicaion.mPlacementId_native_oneway
 
     };
 
     String unitGroupName[] = new String[]{
             "All network",
-            "mintegral",
-            "mintegral auto-rending",
-            "gdt",
-            "toutiao",
-            "toutiao_drawer",
-            "baidu",
-            "kuaishou",
-            "kuaishou-draw"
+            "Mintegral",
+            "Mintegral auto-rending",
+            "GDT",
+            "Toutiao",
+            "Toutiao_drawer",
+            "Baidu",
+            "Kuaishou",
+            "Kuaishou-draw",
+            "Oneway"
     };
 
     ATNative atNatives[] = new ATNative[unitIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
-
-    RadioGroup mRadioGroup;
 
     int mCurrentSelectIndex;
 
@@ -68,28 +68,32 @@ public class NativeAdActivity extends Activity {
 
         setContentView(R.layout.activity_native);
 
-        mRadioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
+        Spinner spinner = (Spinner) findViewById(R.id.native_spinner);
 
-        for (int i = 0; i < unitIds.length; i++) {
-            RadioButton radioButton = new RadioButton(this);
-            radioButton.setPadding(20, 20, 20, 20);
-            radioButton.setText(unitGroupName[i]);
-            radioButton.setId(i + 1000);
-            mRadioGroup.addView(radioButton);
-        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
+                unitGroupName);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-        mRadioGroup.check(0);
-
-        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                mCurrentSelectIndex = i - 1000;
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                Toast.makeText(NativeAdActivity.this,
+                        parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
+                mCurrentSelectIndex = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
 
-
         int padding = dip2px(10);
-        final int adViewHeight = dip2px(340) - 2 * padding;
+        final int containerHeight = dip2px(340);
+        final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
+        final int adViewHeight = containerHeight - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
@@ -112,13 +116,23 @@ public class NativeAdActivity extends Activity {
 
 
             Map<String, Object> localMap = new HashMap<>();
-            //Pangle
-            localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
-            localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, adViewHeight);
 
-            //Mintegral
-            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
-            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_HEIGHT, adViewHeight);
+            // since v5.6.4
+            localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
+            localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
+
+            // since v5.6.2
+//            localMap.put(ATNative.KEY_WIDTH, adViewWidth);
+//            localMap.put(ATNative.KEY_HEIGHT, adViewHeight);
+//
+//            // before v5.6.2
+//            //Pangle
+//            localMap.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, adViewWidth);
+//            localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, adViewHeight);
+//            //Mintegral
+//            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_WIDTH, adViewWidth);
+//            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_HEIGHT, adViewHeight);
+            // before v5.6.2
 
             atNatives[i].setLocalExtra(localMap);
 
@@ -132,8 +146,8 @@ public class NativeAdActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                if(anyThinkNativeAdView != null && anyThinkNativeAdView.getParent() == null) {
-                    ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
+                if (anyThinkNativeAdView != null && anyThinkNativeAdView.getParent() == null) {
+                    ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
                 }
 
                 atNatives[mCurrentSelectIndex].makeAdRequest();
@@ -145,6 +159,9 @@ public class NativeAdActivity extends Activity {
             public void onClick(View view) {
                 NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
+                    if (mNativeAd != null) {
+                        mNativeAd.destory();
+                    }
                     mNativeAd = nativeAd;
                     mNativeAd.setNativeEventListener(new ATNativeEventListener() {
                         @Override
@@ -181,9 +198,9 @@ public class NativeAdActivity extends Activity {
                             }
                         }
                     });
-                    try{
+                    try {
                         mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
-                    }catch (Exception e){
+                    } catch (Exception e) {
 
                     }
 
@@ -196,10 +213,10 @@ public class NativeAdActivity extends Activity {
 
             }
         });
-        anyThinkNativeAdView.setPadding(padding,padding,padding,padding);
+        anyThinkNativeAdView.setPadding(padding, padding, padding, padding);
 
         anyThinkNativeAdView.setVisibility(View.GONE);
-        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, adViewHeight));
+        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
     }
 
     @Override

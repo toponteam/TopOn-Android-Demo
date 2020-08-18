@@ -83,7 +83,7 @@
         >
     </FrameLayout>
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <com.anythink.nativead.api.ATNativeImageView
         android:id="@+id/native_ad_logo"
         android:layout_width="10dp"
         android:layout_height="10dp"

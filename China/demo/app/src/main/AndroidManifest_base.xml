@@ -60,7 +60,9 @@
         <activity android:name=".NativeSplashActivity"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"/>
-
+        <activity android:name=".NativeListActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
     </application>
 
 </manifest>

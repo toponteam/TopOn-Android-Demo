@@ -9,7 +9,7 @@
 <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />     &lt;!&ndash; *8.0 版本适配请增加此条配置&ndash;&gt;-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />     <!-- *8.0 版本以后需要分别对读写同时授权-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.per!mission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
     <application>
