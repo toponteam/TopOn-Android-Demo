@@ -25,9 +25,6 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_mintegral
             , DemoApplicaion.mPlacementId_rewardvideo_GDT
             , DemoApplicaion.mPlacementId_rewardvideo_toutiao
-            , DemoApplicaion.mPlacementId_rewardvideo_uniplay
-            , DemoApplicaion.mPlacementId_rewardvideo_oneway
-            , DemoApplicaion.mPlacementId_rewardvideo_ksyun
             , DemoApplicaion.mPlacementId_rewardvideo_baidu
             , DemoApplicaion.mPlacementId_rewardvideo_ks
             , DemoApplicaion.mPlacementId_rewardvideo_sigmob
@@ -39,9 +36,6 @@ public class RewardVideoAdActivity extends Activity {
             "Mintegral",
             "GDT",
             "Toutiao",
-            "Uniplay",
-            "Oneway",
-            "Ksyun",
             "Baidu",
             "Kuaishou",
             "Sigmob",

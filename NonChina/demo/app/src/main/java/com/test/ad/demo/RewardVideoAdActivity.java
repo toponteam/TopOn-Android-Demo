@@ -25,7 +25,6 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_facebook
             , DemoApplicaion.mPlacementId_rewardvideo_admob
             , DemoApplicaion.mPlacementId_rewardvideo_inmobi
-            , DemoApplicaion.mPlacementId_rewardvideo_flurry
             , DemoApplicaion.mPlacementId_rewardvideo_applovin
             , DemoApplicaion.mPlacementId_rewardvideo_mintegral
             , DemoApplicaion.mPlacementId_rewardvideo_mopub
@@ -39,7 +38,6 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_nend
             , DemoApplicaion.mPlacementId_rewardvideo_maio
             , DemoApplicaion.mPlacementId_rewardvideo_startapp
-            , DemoApplicaion.mPlacementId_rewardvideo_superawesome
             , DemoApplicaion.mPlacementId_rewardvideo_myoffer
             , DemoApplicaion.mPlacementId_rewardvideo_ogury
             , DemoApplicaion.mPlacementId_rewardvideo_fyber
@@ -51,7 +49,6 @@ public class RewardVideoAdActivity extends Activity {
             "Facebook",
             "Admob",
             "Inmobi",
-            "Flurry",
             "Applovin",
             "Mintegral",
             "Mopub",
@@ -65,7 +62,6 @@ public class RewardVideoAdActivity extends Activity {
             "Nend",
             "Maio",
             "StartApp",
-            "SuperAwesome",
             "Myoffer",
             "Ogury",
             "Fyber",

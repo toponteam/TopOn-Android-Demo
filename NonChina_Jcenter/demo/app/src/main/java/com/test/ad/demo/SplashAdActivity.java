@@ -11,11 +11,12 @@ import android.widget.Toast;
 
 public class SplashAdActivity extends Activity {
     String unitIds[] = new String[]{
-            DemoApplicaion.mPlacementId_splash_mintegral
+            DemoApplicaion.mPlacementId_splash_mintegral,
+            DemoApplicaion.mPlacementId_splash_myoffer
     };
 
     String unitGroupName[] = new String[]{
-            "Mintegral"};
+            "Mintegral", "MyOffer"};
 
     int mCurrentSelectIndex;
     Spinner spinner;

@@ -21,7 +21,6 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_facebook
             , DemoApplicaion.mPlacementId_interstitial_admob
             , DemoApplicaion.mPlacementId_interstitial_inmobi
-            , DemoApplicaion.mPlacementId_interstitial_flurry
             , DemoApplicaion.mPlacementId_interstitial_applovin
             , DemoApplicaion.mPlacementId_interstitial_mintegral
             , DemoApplicaion.mPlacementId_interstitial_video_mintegral
@@ -47,7 +46,6 @@ public class InterstitialAdActivity extends Activity {
             "Facebook",
             "Admob",
             "Inmobi",
-            "Flurry",
             "Applovin",
             "Mintegral",
             "Mintegral video",

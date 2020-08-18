@@ -1,6 +1,8 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -25,9 +27,27 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
         String unitId = getIntent().getStringExtra("unitId");
         FrameLayout container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
+
+        Configuration cf = getResources().getConfiguration();
+
+        int ori = cf.orientation;
+
         /**You should set size to the layout param.**/
-        layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-        layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+        if (ori == Configuration.ORIENTATION_LANDSCAPE) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+            layoutParams.width = (int)(getResources().getDisplayMetrics().widthPixels * 0.9);
+            layoutParams.height = getResources().getDisplayMetrics().heightPixels;
+        } else if (ori == Configuration.ORIENTATION_PORTRAIT) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+        }
+
+
 
         ATMediationRequestInfo atMediationRequestInfo = null;
 //        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");

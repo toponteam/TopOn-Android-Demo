@@ -27,7 +27,6 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_admob
             , DemoApplicaion.mPlacementId_banner_facebook
             , DemoApplicaion.mPlacementId_banner_inmobi
-            , DemoApplicaion.mPlacementId_banner_flurry
             , DemoApplicaion.mPlacementId_banner_applovin
             , DemoApplicaion.mPlacementId_banner_mintegral
             , DemoApplicaion.mPlacementId_banner_mopub
@@ -39,6 +38,7 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_adcolony
             , DemoApplicaion.mPlacementId_banner_chartboost
             , DemoApplicaion.mPlacementId_banner_googleAdManager
+            , DemoApplicaion.mPlacementId_banner_myoffer
     };
 
     String unitGroupName[] = new String[]{
@@ -46,7 +46,6 @@ public class BannerAdActivity extends Activity {
             "Admob",
             "Facebook",
             "Inmobi",
-            "Flurry",
             "Applovin",
             "Mintegral",
             "Mopub",
@@ -57,7 +56,8 @@ public class BannerAdActivity extends Activity {
             "Vungle",
             "AdColony",
             "Chartboost",
-            "Google Ad Manager"
+            "Google Ad Manager",
+            "MyOffer"
     };
 
     ATBannerView mBannerView;
@@ -74,6 +74,7 @@ public class BannerAdActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new ATBannerView(this);
+        mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         mBannerView.setBannerAdListener(new ATBannerListener() {
             @Override
@@ -141,6 +142,8 @@ public class BannerAdActivity extends Activity {
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 mCurrentSelectIndex = position;
+                mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
+                mBannerView.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -153,8 +156,6 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 HashMap<String, String> maps = new HashMap<>();
-                mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
-
                 //since v5.6.5
                 Map<String, Object> localExtra = new HashMap<>();
                 localExtra.put(AdmobATConst.INLINE_ADAPTIVE_ORIENTATION, AdmobATConst.ORIENTATION_CURRENT);

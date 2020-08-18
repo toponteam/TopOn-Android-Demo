@@ -10,15 +10,11 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 如果有视频相关的广告且使用textureView播放，请务必添加，否则黑屏 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:name="com.test.ad.demo.DemoApplicaion"
@@ -72,7 +68,8 @@
             android:name="com.test.ad.demo.NativeSplashActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
-        <activity android:name=".NativeListActivity"
+        <activity
+            android:name="com.test.ad.demo.NativeListActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <!-- 非信息广告必须添加 -->
@@ -82,7 +79,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <provider
-            android:name="com.baidu.mobads.openad.FileProvider"
+            android:name="com.baidu.mobads.openad.BdFileProvider"
             android:authorities="${applicationId}.bd.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
@@ -116,35 +113,14 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_gdt_file_path" />
         </provider>
-        <provider
-            android:name="com.ksc.ad.sdk.util.KsyunFileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_ksyun_file_path" />
-        </provider>
-        <provider
-            android:name="com.anythink.network.luomi.LuomiATFileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_luomi_file_path" />
-        </provider>
-
-        <meta-data
-            android:name="${applicationId}.fileprovider"
-            android:value="zy_provider_authorities" />
 
         <activity
             android:name="com.mintegral.msdk.activity.MTGCommonActivity"
             android:configChanges="keyboard|orientation"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
 
         <receiver android:name="com.mintegral.msdk.click.AppReceiver" >
             <intent-filter>
@@ -163,10 +139,12 @@
         <activity
             android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
             android:name="com.mintegral.msdk.interstitial.view.MTGInterstitialActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <provider
@@ -177,23 +155,6 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_mtg_file_path" />
-        </provider>
-
-        <activity
-            android:name="mobi.oneway.export.AdShowActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:theme="@style/ATOneWayAdTheme" />
-
-        <provider
-            android:name="mobi.oneway.export.OWProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_oneway_file_path" />
         </provider>
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
@@ -207,43 +168,6 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_tt_file_path" />
-        </provider>
-
-        <activity
-            android:name="com.uniplay.adsdk.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.uniplay.adsdk.InterstitialAdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <receiver android:name="com.uniplay.adsdk.PackageReceiver" >
-            <intent-filter android:priority="2147483647" >
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-            </intent-filter>
-            <intent-filter android:priority="2147483647" >
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.uniplay.adsdk.NetworkChangeActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <service android:name="com.uniplay.adsdk.DownloadService" />
-
-        <provider
-            android:name="com.uniplay.adsdk.UniPlayFileProvider"
-            android:authorities="${applicationId}.uniplay.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_uniplay_file_path" />
         </provider>
         <!--
  targetSDKVersion >= 24时才需要添加这个provider。

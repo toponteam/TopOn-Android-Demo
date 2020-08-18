@@ -36,7 +36,6 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_banner_facebook
             , DemoApplicaion.mPlacementId_native_admob
             , DemoApplicaion.mPlacementId_native_inmobi
-            , DemoApplicaion.mPlacementId_native_flurry
             , DemoApplicaion.mPlacementId_native_applovin
             , DemoApplicaion.mPlacementId_native_mintegral
             , DemoApplicaion.mPLacementId_native_automatic_rending_mintegral
@@ -44,6 +43,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_appnext
             , DemoApplicaion.mPlacementId_native_nend
             , DemoApplicaion.mPlacementId_native_googleAdManager
+            , DemoApplicaion.mPlacementId_native_myoffer
 
     };
 
@@ -53,14 +53,14 @@ public class NativeAdActivity extends Activity {
             "Faceboon native banner",
             "Admob",
             "Inmobi",
-            "Flurry",
             "Applovin",
             "Mintegral",
             "Mintegral auto-rending",
             "Mopub",
             "Appnext",
             "Nend",
-            "Google Ad Manager"
+            "Google Ad Manager",
+            "MyOffer"
     };
 
     ATNative atNatives[] = new ATNative[unitIds.length];

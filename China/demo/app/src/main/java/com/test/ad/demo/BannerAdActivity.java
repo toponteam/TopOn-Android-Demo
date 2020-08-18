@@ -24,18 +24,18 @@ public class BannerAdActivity extends Activity {
             DemoApplicaion.mPlacementId_banner_all
             , DemoApplicaion.mPlacementId_banner_GDT
             , DemoApplicaion.mPlacementId_banner_toutiao
-            , DemoApplicaion.mPlacementId_banner_uniplay
             , DemoApplicaion.mPlacementId_banner_mintegral
             , DemoApplicaion.mPLacementId_banner_baidu
+            , DemoApplicaion.mPlacementId_banner_myoffer
     };
 
     String unitGroupName[] = new String[]{
             "All",
             "GDT",
             "Toutiao",
-            "Uniplay",
             "Mintegral",
             "Baidu",
+            "MyOffer"
     };
 
     ATBannerView mBannerView;
@@ -52,6 +52,7 @@ public class BannerAdActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new ATBannerView(this);
+        mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         mBannerView.setBannerAdListener(new ATBannerListener() {
             @Override
@@ -119,6 +120,8 @@ public class BannerAdActivity extends Activity {
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 mCurrentSelectIndex = position;
+                mBannerView.setUnitId(unitIds[mCurrentSelectIndex]);
+                mBannerView.setVisibility(View.VISIBLE);
             }
 
             @Override

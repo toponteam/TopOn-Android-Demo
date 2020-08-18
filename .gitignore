@@ -5,3 +5,9 @@ demo/.gradle/4.1/*
 demo/.idea/**
 demo/app/build
 local.properties
+China/demo/.gradle
+China/demo/.idea
+China/demo/app/build
+NonChina_Jcenter/demo/app/build
+NonChina_Jcenter/demo/.idea
+NonChina_Jcenter/demo/.gradle

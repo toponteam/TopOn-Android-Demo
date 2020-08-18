@@ -6,8 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <!-- If there is a video ad and it is played with textureView, please be sure to add this, otherwise a black screen will appear -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+<!--    &lt;!&ndash; If there is a video ad and it is played with textureView, please be sure to add this, otherwise a black screen will appear &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
 
     <application>
         <provider

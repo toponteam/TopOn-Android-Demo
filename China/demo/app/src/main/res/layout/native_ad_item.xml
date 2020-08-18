@@ -85,10 +85,12 @@
 
     <com.anythink.nativead.api.ATNativeImageView
         android:id="@+id/native_ad_logo"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
         android:layout_alignParentRight="true"
-        android:visibility="gone" />
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"/>
 
 
     <ImageView
