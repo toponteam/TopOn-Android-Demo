@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.core.common.utils.CommonDeviceUtil;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
 
