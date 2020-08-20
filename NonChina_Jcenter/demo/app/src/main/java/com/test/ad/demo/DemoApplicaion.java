@@ -36,6 +36,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_nend = "b5cb95ead9e60a";
     public static final String mPlacementId_native_googleAdManager = "b5f1ea92c46353";
     public static final String mPlacementId_native_myoffer = "b5f33a12982b7f";
+    public static final String mPlacementId_native_huawei = "b5f35311178efe";
 
     //RewardedVideo
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
@@ -59,6 +60,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_ogury = "b5dde267f73eb4";
     public static final String mPlacementId_rewardvideo_fyber = "b5e96f5e1ade5b";
     public static final String mPlacementId_rewardvideo_googleAdManager = "b5f1ea95c4594e";
+    public static final String mPlacementId_rewardvideo_huawei = "b5f353142ed321";
 
     //Banner
     public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
@@ -77,6 +79,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_chartboost = "b5ee8ae6f9f5cf";
     public static final String mPlacementId_banner_googleAdManager = "b5f1ea93f1793b";
     public static final String mPlacementId_banner_myoffer = "b5f33a1409b96b";
+    public static final String mPlacementId_banner_huawei = "b5f35312714b7f";
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -101,10 +104,12 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_ogury = "b5dde269060938";
     public static final String mPlacementId_interstitial_fyber = "b5e96f607235f6";
     public static final String mPlacementId_interstitial_googleAdManager = "b5f1ea94f36790";
+    public static final String mPlacementId_interstitial_huawei = "b5f3531369a785";
 
     //Splash
     public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
     public static final String mPlacementId_splash_myoffer = "b5f33a1598fe94";
+    public static final String mPlacementId_splash_huawei = "b5f3531509b722";
 
     @Override
     public void onCreate() {

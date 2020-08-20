@@ -39,6 +39,8 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_chartboost
             , DemoApplicaion.mPlacementId_banner_googleAdManager
             , DemoApplicaion.mPlacementId_banner_myoffer
+            , DemoApplicaion.mPlacementId_banner_huawei
+
     };
 
     String unitGroupName[] = new String[]{
@@ -57,7 +59,8 @@ public class BannerAdActivity extends Activity {
             "AdColony",
             "Chartboost",
             "Google Ad Manager",
-            "MyOffer"
+            "MyOffer",
+            "Huawei"
     };
 
     ATBannerView mBannerView;

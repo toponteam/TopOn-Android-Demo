@@ -39,6 +39,7 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_ogury
             , DemoApplicaion.mPlacementId_interstitial_fyber
             , DemoApplicaion.mPlacementId_interstitial_googleAdManager
+            , DemoApplicaion.mPlacementId_interstitial_huawei
     };
 
     String unitGroupName[] = new String[]{
@@ -63,7 +64,8 @@ public class InterstitialAdActivity extends Activity {
             "Myoffer",
             "Ogury",
             "Fyber",
-            "Google Ad Manager"
+            "Google Ad Manager",
+            "Huawei"
     };
 
     RadioGroup mRadioGroup;

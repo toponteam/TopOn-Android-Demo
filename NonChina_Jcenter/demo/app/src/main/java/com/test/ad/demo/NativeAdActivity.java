@@ -44,6 +44,7 @@ public class NativeAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_native_nend
             , DemoApplicaion.mPlacementId_native_googleAdManager
             , DemoApplicaion.mPlacementId_native_myoffer
+            , DemoApplicaion.mPlacementId_native_huawei
 
     };
 
@@ -60,7 +61,8 @@ public class NativeAdActivity extends Activity {
             "Appnext",
             "Nend",
             "Google Ad Manager",
-            "MyOffer"
+            "MyOffer",
+            "Huawei"
     };
 
     ATNative atNatives[] = new ATNative[unitIds.length];
