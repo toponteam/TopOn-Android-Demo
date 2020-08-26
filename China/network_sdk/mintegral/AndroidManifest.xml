@@ -30,18 +30,6 @@
             </intent-filter>
         </service>
 
-        <activity
-            android:name="com.mintegral.msdk.reward.player.MTGRewardVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-
-        <activity
-            android:name="com.mintegral.msdk.interstitial.view.MTGInterstitialActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"
-            android:configChanges="orientation|screenSize"/>
-
         <provider
             android:name="com.mintegral.msdk.base.utils.MTGFileProvider"
             android:authorities="${applicationId}.mtgFileProvider"
