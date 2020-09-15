@@ -38,7 +38,7 @@ public class NativeListActivity extends Activity {
     private int firstCompletelyVisibleItemPosition = -1;
     private int lastCompletelyVisibleItemPosition = -1;
 
-    String unitIds[] = new String[]{
+    String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_toutiao
 //            DemoApplicaion.mPlacementId_native_all
 //            , DemoApplicaion.mPlacementId_native_mintegral
@@ -188,7 +188,7 @@ public class NativeListActivity extends Activity {
 
     private void loadAd() {
         if (mATNative == null) {
-            mATNative = new ATNative(this, unitIds[0], new ATNativeNetworkListener() {
+            mATNative = new ATNative(this, placementIds[0], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     isLoadingAd = false;

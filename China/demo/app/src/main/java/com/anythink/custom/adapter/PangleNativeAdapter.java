@@ -298,7 +298,7 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
                 break;
             default:
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError("", "The Native type is not exit.");
+                    mLoadListener.onAdLoadError("", "The Native type is not exist.");
                 }
                 break;
         }

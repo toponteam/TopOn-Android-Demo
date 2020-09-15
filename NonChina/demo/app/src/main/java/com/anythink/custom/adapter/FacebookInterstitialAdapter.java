@@ -12,6 +12,9 @@ import com.facebook.ads.InterstitialAdListener;
 
 import java.util.Map;
 
+/**
+ * Created by Z on 2018/6/27.
+ */
 
 public class FacebookInterstitialAdapter extends CustomInterstitialAdapter {
 
@@ -85,7 +88,6 @@ public class FacebookInterstitialAdapter extends CustomInterstitialAdapter {
     public void destory() {
         try {
             if (mInterstitialAd != null) {
-                mInterstitialAd.setAdListener(null);
                 mInterstitialAd.destroy();
                 mInterstitialAd = null;
             }

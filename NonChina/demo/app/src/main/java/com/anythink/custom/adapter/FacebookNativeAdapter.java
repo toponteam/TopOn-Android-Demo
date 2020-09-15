@@ -5,10 +5,7 @@ import android.text.TextUtils;
 
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAdapter;
-import com.facebook.ads.Ad;
-import com.facebook.ads.AdError;
 import com.facebook.ads.NativeAd;
-import com.facebook.ads.NativeAdListener;
 import com.facebook.ads.NativeBannerAd;
 
 import java.util.Map;
@@ -72,60 +69,48 @@ public class FacebookNativeAdapter extends CustomNativeAdapter {
 
 
     private void startAdLoad(final Context context) {
-        NativeAdListener nativeAdListener = new NativeAdListener() {
-            @Override
-            public void onMediaDownloaded(Ad ad) {
-
-            }
-
-            @Override
-            public void onError(Ad ad, AdError adError) {
-                if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(adError.getErrorCode() + "", adError.getErrorMessage());
-                }
-            }
-
-            @Override
-            public void onAdLoaded(Ad ad) {
-                switch (unitType) {
-                    case "1":
-                        FacebookNativeBannerAd nativeBanner = new FacebookNativeBannerAd(context, (NativeBannerAd) ad, unitHeight);
-                        if (mLoadListener != null) {
-                            mLoadListener.onAdCacheLoaded(nativeBanner);
-                        }
-                        break;
-                    default:
-                        FacebookNativeAd nativeAd = new FacebookNativeAd(context, (NativeAd) ad);
-                        if (mLoadListener != null) {
-                            mLoadListener.onAdCacheLoaded(nativeAd);
-                        }
-                        break;
-                }
-
-            }
-
-            @Override
-            public void onAdClicked(Ad ad) {
-
-            }
-
-            @Override
-            public void onLoggingImpression(Ad ad) {
-
-            }
-        };
-
         switch (unitType) {
             case "1":
                 NativeBannerAd nativeBanner = new NativeBannerAd(context, unitId);
-                nativeBanner.setAdListener(nativeAdListener);
-                nativeBanner.loadAd();
+                final FacebookNativeBannerAd facebookNativeBannerAd = new FacebookNativeBannerAd(context, nativeBanner, unitHeight);
+                facebookNativeBannerAd.loadAd(mPayload, new FacebookNativeBannerAd.FBNativeBannerLoadListener() {
+                    @Override
+                    public void onLoadSuccess() {
+                        if (mLoadListener != null) {
+                            if (mLoadListener != null) {
+                                mLoadListener.onAdCacheLoaded(facebookNativeBannerAd);
+                            }
+                        }
+                    }
 
+                    @Override
+                    public void onLoadFail(String code, String message) {
+                        if (mLoadListener != null) {
+                            mLoadListener.onAdLoadError(code, message);
+                        }
+                    }
+                });
                 break;
             default:
                 NativeAd nativeAd = new NativeAd(context, unitId);
-                nativeAd.setAdListener(nativeAdListener);
-                nativeAd.loadAd();
+                final FacebookNativeAd facebookNativeAd = new FacebookNativeAd(context, nativeAd);
+                facebookNativeAd.loadAd(mPayload, new FacebookNativeAd.FBNativeLoadListener() {
+                    @Override
+                    public void onLoadSuccess() {
+                        if (mLoadListener != null) {
+                            if (mLoadListener != null) {
+                                mLoadListener.onAdCacheLoaded(facebookNativeAd);
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onLoadFail(String code, String message) {
+                        if (mLoadListener != null) {
+                            mLoadListener.onAdLoadError(code, message);
+                        }
+                    }
+                });
                 break;
         }
     }

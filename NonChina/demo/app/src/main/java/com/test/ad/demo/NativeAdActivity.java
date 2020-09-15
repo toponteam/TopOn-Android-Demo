@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -30,7 +28,7 @@ public class NativeAdActivity extends Activity {
 
     private static String TAG = "NativeAdActivity";
 
-    String unitIds[] = new String[]{
+    String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
             , DemoApplicaion.mPlacementId_native_facebook
             , DemoApplicaion.mPlacementId_native_banner_facebook
@@ -65,7 +63,7 @@ public class NativeAdActivity extends Activity {
             "Huawei"
     };
 
-    ATNative atNatives[] = new ATNative[unitIds.length];
+    ATNative atNatives[] = new ATNative[placementIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
@@ -108,8 +106,8 @@ public class NativeAdActivity extends Activity {
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
 
-        for (int i = 0; i < unitIds.length; i++) {
-            atNatives[i] = new ATNative(this, unitIds[i], new ATNativeNetworkListener() {
+        for (int i = 0; i < placementIds.length; i++) {
+            atNatives[i] = new ATNative(this, placementIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Log.i(TAG, "onNativeAdLoaded");

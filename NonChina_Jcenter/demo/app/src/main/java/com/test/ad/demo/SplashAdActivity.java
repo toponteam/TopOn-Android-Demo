@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SplashAdActivity extends Activity {
-    String unitIds[] = new String[]{
+    String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_splash_mintegral,
             DemoApplicaion.mPlacementId_splash_myoffer,
             DemoApplicaion.mPlacementId_splash_huawei
@@ -52,7 +52,7 @@ public class SplashAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                intent.putExtra("unitId", unitIds[mCurrentSelectIndex]);
+                intent.putExtra("unitId", placementIds[mCurrentSelectIndex]);
                 startActivity(intent);
             }
         });

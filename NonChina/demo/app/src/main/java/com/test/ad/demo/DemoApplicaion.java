@@ -127,7 +127,6 @@ public class DemoApplicaion extends MultiDexApplication {
             }
         }
 
-
         Stetho.initializeWithDefaults(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
         ATSDK.integrationChecking(this);

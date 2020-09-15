@@ -86,6 +86,7 @@ public class FacebookBannerAdapter extends CustomBannerAdapter {
             case "320x90":
                 adView = new AdView(activity, unitid, AdSize.BANNER_HEIGHT_90);
                 break;
+            case "320x250":
             case "300x250":
                 adView = new AdView(activity, unitid, AdSize.RECTANGLE_HEIGHT_250);
                 break;
