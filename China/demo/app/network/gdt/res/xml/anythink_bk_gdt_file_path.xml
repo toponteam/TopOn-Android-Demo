@@ -1,4 +1,10 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path name="gdt_sdk_download_path" path="GDTDOWNLOAD" />
     <root-path name="root" path="" />
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
 </paths>

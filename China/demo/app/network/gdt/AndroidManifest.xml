@@ -12,26 +12,10 @@
     <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
 
     <application>
-        <service
-            android:name="com.qq.e.comm.DownloadService"
-            android:exported="false" />
-
-        <activity
-            android:name="com.qq.e.ads.ADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
-
-        <activity
-            android:name="com.qq.e.ads.PortraitADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.qq.e.ads.LandscapeADActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape" />
 
         <provider
-            android:name="com.anythink.network.gdt.GDTATFileProvider"
-            android:authorities="${applicationId}.fileprovider"
+            android:name="com.qq.e.comm.GDTFileProvider"
+            android:authorities="${applicationId}.gdt.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

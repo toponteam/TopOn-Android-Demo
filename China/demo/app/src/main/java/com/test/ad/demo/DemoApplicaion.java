@@ -7,6 +7,9 @@ import android.webkit.WebView;
 import com.anythink.core.api.ATSDK;
 import com.facebook.stetho.Stetho;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Z on 2018/1/10.
  */
@@ -83,6 +86,19 @@ public class DemoApplicaion extends MultiDexApplication {
         Stetho.initializeWithDefaults(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
         ATSDK.integrationChecking(getApplicationContext());
+
+        Map<String, Object> custommap = new HashMap<String, Object>();
+        custommap.put("key1","initCustomMap1");
+        custommap.put("key2","initCustomMap2");
+        ATSDK.initCustomMap(custommap);
+
+        Map<String, Object> subcustommap = new HashMap<String, Object>();
+        subcustommap.put("key1","initPlacementCustomMap1");
+        subcustommap.put("key2","initPlacementCustomMap2");
+        ATSDK.initPlacementCustomMap("b5aa1fa4165ea3",subcustommap);//native  facebook
+
+        ATSDK.setChannel("testChannle");
+        ATSDK.setSubChannel("testSubChannle");
 
         ATSDK.init(this, appid, appKey);
 

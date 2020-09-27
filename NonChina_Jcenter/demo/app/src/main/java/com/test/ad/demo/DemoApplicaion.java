@@ -155,12 +155,12 @@ public class DemoApplicaion extends MultiDexApplication {
         Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isChinaSDK());
         Log.i("Demoapplication", "SDKVersionName:" + ATSDK.getSDKVersionName());
 
-        Map custommap = new HashMap();
+        Map<String, Object> custommap = new HashMap<String, Object>();
         custommap.put("key1","initCustomMap1");
         custommap.put("key2","initCustomMap2");
         ATSDK.initCustomMap(custommap);
 
-        Map subcustommap = new HashMap();
+        Map<String, Object> subcustommap = new HashMap<String, Object>();
         subcustommap.put("key1","initPlacementCustomMap1");
         subcustommap.put("key2","initPlacementCustomMap2");
         ATSDK.initPlacementCustomMap("b5aa1fa4165ea3",subcustommap);//native  facebook

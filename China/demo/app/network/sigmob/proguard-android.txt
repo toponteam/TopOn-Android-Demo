@@ -22,5 +22,14 @@
 -keep class com.sigmob.**.**{*;}
 
 # miitmdid
--keep class com.bun.miitmdid.core.** {*;}
--dontwarn com.bun.miitmdid.core.**
+
+-keep class com.bun.** {*;}
+-dontwarn com.bun.**
+
+-keep, includedescriptorclasses class com.asus.msa.SupplementaryDID.** { *; }
+-keepclasseswithmembernames class com.asus.msa.SupplementaryDID.** { *; }
+-keep, includedescriptorclasses class com.asus.msa.sdid.** { *; }
+-keepclasseswithmembernames class com.asus.msa.sdid.** { *; }
+-keep public class com.netease.nis.sdkwrapper.Utils {public <methods>;}
+-keep class com.samsung.android.deviceidservice.**{*;}
+-keep class a.**{*;}

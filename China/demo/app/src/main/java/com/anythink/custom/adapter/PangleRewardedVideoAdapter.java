@@ -83,11 +83,6 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
         }
 
         @Override
-        public void onRewardVerify(boolean rewardVerify, int rewardAmount, String rewardName) {
-
-        }
-
-        @Override
         public void onSkippedVideo() {
 
         }
@@ -96,6 +91,11 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
             if (mImpressionListener != null) {
                 mImpressionListener.onRewardedVideoAdPlayFailed("", "Callback VideoError");
             }
+        }
+
+        @Override
+        public void onRewardVerify(boolean rewardVerify, int rewardAmount, String rewardName, int errorCode, String errorMsg) {
+
         }
     };
 
@@ -210,7 +210,7 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
     public String getNetworkSDKVersion() {
         return PangleInitManager.getInstance().getNetworkVersion();
     }
-    
+
     private static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / (scale <= 0 ? 1 : scale) + 0.5f);
