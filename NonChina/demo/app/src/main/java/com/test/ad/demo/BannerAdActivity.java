@@ -40,6 +40,7 @@ public class BannerAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_banner_googleAdManager
             , DemoApplicaion.mPlacementId_banner_myoffer
             , DemoApplicaion.mPlacementId_banner_huawei
+            , DemoApplicaion.mPlacementId_banner_unityads
 
     };
 
@@ -60,7 +61,8 @@ public class BannerAdActivity extends Activity {
             "Chartboost",
             "Google Ad Manager",
             "MyOffer",
-            "Huawei"
+            "Huawei",
+            "UnityAds"
     };
 
     ATBannerView mBannerView;

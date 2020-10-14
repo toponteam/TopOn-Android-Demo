@@ -20,7 +20,6 @@ import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.anythink.network.toutiao.TTATConst;
 
 import java.util.ArrayList;
 import java.util.HashMap;

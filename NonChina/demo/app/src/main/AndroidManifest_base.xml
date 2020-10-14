@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.test.ad.demo" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.test.ad.demo">
 
 
 
@@ -15,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light"
         android:usesCleartextTraffic="true" >
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9488501426181082~6354662111"/>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -59,10 +62,10 @@
             android:name="com.test.ad.demo.NativeSplashActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
-
         <activity android:name=".NativeListActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
     </application>
 
 </manifest>

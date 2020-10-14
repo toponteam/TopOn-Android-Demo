@@ -80,6 +80,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_googleAdManager = "b5f1ea93f1793b";
     public static final String mPlacementId_banner_myoffer = "b5f33a1409b96b";
     public static final String mPlacementId_banner_huawei = "b5f35312714b7f";
+    public static final String mPlacementId_banner_unityads = "b5f7fd2c9a50a8";
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -107,6 +108,7 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_huawei = "b5f3531369a785";
 
     //Splash
+    public static final String mPlacementId_splash_admob = "b5f73fe0c5db29";
     public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
     public static final String mPlacementId_splash_myoffer = "b5f33a1598fe94";
     public static final String mPlacementId_splash_huawei = "b5f3531509b722";

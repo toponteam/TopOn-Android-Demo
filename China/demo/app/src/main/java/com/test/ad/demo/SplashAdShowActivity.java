@@ -71,7 +71,7 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashAd
 //        atMediationRequestInfo.setAdSourceId("88377");
         splashAd = new ATSplashAd(this, container, unitId, atMediationRequestInfo, this);
 
-
+        ATSplashAd.checkSplashDefaultConfigList(this, unitId, null);
     }
 
     @Override
