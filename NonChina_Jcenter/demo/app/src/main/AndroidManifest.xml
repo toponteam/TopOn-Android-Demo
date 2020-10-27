@@ -24,7 +24,7 @@
         android:usesCleartextTraffic="true" >
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9488501426181082~6354662111" />
+            android:value="ca-app-pub-9488501426181082$6354662111" />
 
         <uses-library
             android:name="org.apache.http.legacy"
