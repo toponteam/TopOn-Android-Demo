@@ -11,6 +11,9 @@ repositories {
     maven {
         url "https://dl.bintray.com/mintegral-official/Mintegral_ad_SDK_Android"
     }
+    maven {
+        url "https://dl.bintray.com/mintegral-official/mintegral_ad_sdk_android_for_oversea"
+    }
 
     //Mopub
     maven {
@@ -82,12 +85,12 @@ dependencies {
 
     //Facebook
     api "com.anythink.sdk:adapter-facebook:5.7.3"
-    api "com.facebook.android:audience-network-sdk:6.1.0"
+    api "com.facebook.android:audience-network-sdk:6.2.0"
     api "androidx.recyclerview:recyclerview:1.0.0"
 
     //Admob
     api "com.anythink.sdk:adapter-admob:5.7.3"
-    api "com.google.android.gms:play-services-ads:19.4.0"
+    api "com.google.android.gms:play-services-ads:19.5.0"
     api "com.google.android.ads.consent:consent-library:1.0.8"
 
     //Inmobi
@@ -104,21 +107,19 @@ dependencies {
 
     //Mintegral
     api "com.anythink.sdk:adapter-mintegral-nonchina:5.7.3"
-    api "com.mintegral.msdk:videojs:14.5.01"
-    api "com.mintegral.msdk:mtgjscommon:14.5.01"
-    api "com.mintegral.msdk:playercommon:14.5.01"
-    api "com.mintegral.msdk:reward:14.5.01"
-    api "com.mintegral.msdk:videocommon:14.5.01"
-    api "com.mintegral.msdk:common:14.5.01"
-    api "com.mintegral.msdk:interstitialvideo:14.5.01"
-    api "com.mintegral.msdk:mtgnative:14.5.01"
-    api "com.mintegral.msdk:nativeex:14.5.01"
-    api "com.mintegral.msdk:interstitial:14.5.01"
-    api "com.mintegral.msdk:mtgnativeadvanced:14.5.01"
-    api "com.mintegral.msdk:mtgbanner:14.5.01"
-    api "com.mintegral.msdk:interactiveads:14.5.01"
-    api "com.mintegral.msdk:mtgsplash:14.5.01"
-    api "com.mintegral.msdk:mtgbid:14.5.01"
+    api "com.mintegral.msdk.oversea:mtgjscommon:15.2.11"
+    api "com.mintegral.msdk.oversea:videocommon:15.2.11"
+    api "com.mintegral.msdk.oversea:common:15.2.11"
+    api "com.mintegral.msdk.oversea:videojs:15.2.11"
+    api "com.mintegral.msdk.oversea:playercommon:15.2.11"
+    api "com.mintegral.msdk.oversea:reward:15.2.11"
+    api "com.mintegral.msdk.oversea:interstitialvideo:15.2.11"
+    api "com.mintegral.msdk.oversea:mtgnative:15.2.11"
+    api "com.mintegral.msdk.oversea:nativeex:15.2.11"
+    api "com.mintegral.msdk.oversea:mtgnativeadvanced:15.2.11"
+    api "com.mintegral.msdk.oversea:interstitial:15.2.11"
+    api "com.mintegral.msdk.oversea:mtgbanner:15.2.11"
+    api "com.mintegral.msdk.oversea:mtgsplash:15.2.11"
 
     //Mopub
     api "com.anythink.sdk:adapter-mopub:5.7.3"
