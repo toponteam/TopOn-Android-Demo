@@ -1,6 +1,6 @@
 # TopOn-Android-Demo SDK for Android
 
-TopOn is an ad mediation platform that helps global app developers manage ad networks conveniently and maximize revenue lightly. Especially in China, TopOn becomes the Top #1 mediation platform. Until now, We have cooperated with around 400 companies. We have supported rich local advertising platform resources and lots of global ad platforms. 
+TopOn is an ad mediation platform that helps global app developers to find a perfect fit for your monetization strategy.  We have more than 35 million DAU, 400 million daily ad impression and 3.5 billion daily ad request. In China, TopOn becomes the Top #1 mediation platform.
 
 
 ## Communication
