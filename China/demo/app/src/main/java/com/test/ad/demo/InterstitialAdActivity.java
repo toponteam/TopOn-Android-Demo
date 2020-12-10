@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -9,6 +16,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialListener;
@@ -81,8 +89,9 @@ public class InterstitialAdActivity extends Activity {
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isReady = mInterstitialAd.isAdReady();
-                Toast.makeText(InterstitialAdActivity.this, "video ad ready status:" + isReady, Toast.LENGTH_SHORT).show();
+//                boolean isReady = mInterstitialAd.isAdReady();
+                ATAdStatusInfo atAdStatusInfo = mInterstitialAd.checkAdStatus();
+                Toast.makeText(InterstitialAdActivity.this, "video ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -116,8 +125,8 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onInterstitialAdLoadFail(AdError adError) {
-                Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.printStackTrace());
-                Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdLoadFail:" + adError.printStackTrace(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.getFullErrorInfo());
+                Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdLoadFail:" + adError.getFullErrorInfo(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -152,7 +161,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onInterstitialAdVideoError(AdError adError) {
-                Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.printStackTrace());
+                Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.getFullErrorInfo());
                 Toast.makeText(InterstitialAdActivity.this, "onInterstitialAdVideoError", Toast.LENGTH_SHORT).show();
             }
 

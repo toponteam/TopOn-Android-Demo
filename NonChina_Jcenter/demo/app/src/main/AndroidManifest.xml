@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.ad.demo" >
 
@@ -39,19 +45,19 @@
         </activity>
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
-            android:label="AT Native"
+            android:label="Native"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
-            android:label="AT RewardedVideo"
+            android:label="RewardedVideo"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
-            android:label="AT Interstitial"
+            android:label="Interstitial"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
-            android:label="AT Banner"
+            android:label="Banner"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.SplashAdActivity"
@@ -77,6 +83,15 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
+        <!-- Pangle -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+
+        <!-- network type: nonchina_jcenter/network_sdk/inmobi/AndroidManifest.xml -->
+        <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+        <!-- network type: nonchina_jcenter/network_sdk/mopub/AndroidManifest.xml -->
         <!-- MoPub's consent dialog -->
         <activity
             android:name="com.mopub.common.privacy.ConsentDialogActivity"
@@ -96,12 +111,6 @@
         <activity
             android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
-
-        <!-- Pangle -->
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="${applicationId}.TTMultiProvider"
-            android:exported="false" />
     </application>
 
 </manifest>

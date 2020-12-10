@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test.ad.demo">
@@ -31,17 +38,17 @@
 
         <activity
             android:name=".RewardVideoAdActivity"
-            android:label="AT RewardedVideo"
+            android:label="RewardedVideo"
             android:launchMode="singleTask"/>
 
         <activity
             android:name=".InterstitialAdActivity"
-            android:label="AT Interstitial"
+            android:label="Interstitial"
             android:launchMode="singleTask"/>
 
         <activity
             android:name=".BannerAdActivity"
-            android:label="AT Banner"
+            android:label="Banner"
             android:launchMode="singleTask"/>
 
         <activity

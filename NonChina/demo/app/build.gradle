@@ -34,11 +34,11 @@ networkLibsPath.add("fyber")
 networkLibsPath.add("huawei")
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.superapp.filemanager"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         multiDexEnabled = true
@@ -129,6 +129,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.browser:browser:1.0.0'
 
+    //Mopub
+    implementation 'androidx.media2:media2-session:1.0.1'
+    implementation 'androidx.media2:media2-widget:1.0.1'
+    implementation 'androidx.media2:media2-player:1.0.1'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.3.61'
 
 }
 

@@ -1,3 +1,10 @@
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path name="gdt_sdk_download_path" path="GDTDOWNLOAD" />
     <root-path name="root" path="" />

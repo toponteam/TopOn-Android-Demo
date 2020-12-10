@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -11,20 +18,22 @@ import android.widget.Toast;
 
 public class SplashAdActivity extends Activity {
     String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_splash_all,
             DemoApplicaion.mPlacementId_splash_toutiao,
             DemoApplicaion.mPlacementId_splash_gdt,
             DemoApplicaion.mPlacementId_splash_baidu,
-            DemoApplicaion.mPlacementId_splash_sigmob,
+//            DemoApplicaion.mPlacementId_splash_sigmob,
             DemoApplicaion.mPlacementId_splash_mintegral,
             DemoApplicaion.mPlacementId_splash_kuaishou,
             DemoApplicaion.mPlacementId_splash_myoffer
     };
 
     String unitGroupName[] = new String[]{
+            "All",
             "Toutiao",
             "GDT",
             "Baidu",
-            "Sigmob",
+//            "Sigmob",
             "Mintegral",
             "Kuaishou",
             "MyOffer"

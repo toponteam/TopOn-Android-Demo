@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -10,6 +18,7 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoListener;
@@ -109,8 +118,9 @@ public class RewardVideoAdActivity extends Activity {
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isReady = mRewardVideoAd.isAdReady();
-                Toast.makeText(RewardVideoAdActivity.this, "video ad ready status:" + isReady, Toast.LENGTH_SHORT).show();
+                ATAdStatusInfo atAdStatusInfo = mRewardVideoAd.checkAdStatus();
+                Toast.makeText(RewardVideoAdActivity.this, "video ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -149,8 +159,8 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdFailed(AdError errorCode) {
-                Log.i(TAG, "onRewardedVideoAdFailed error:" + errorCode.printStackTrace());
-                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdFailed:" + errorCode.printStackTrace(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onRewardedVideoAdFailed error:" + errorCode.getFullErrorInfo());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdFailed:" + errorCode.getFullErrorInfo(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -167,8 +177,8 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayFailed error:" + errorCode.printStackTrace());
-                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayFailed:" + errorCode.printStackTrace(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "onRewardedVideoAdPlayFailed error:" + errorCode.getFullErrorInfo());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayFailed:" + errorCode.getFullErrorInfo(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

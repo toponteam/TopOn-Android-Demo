@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -117,8 +125,8 @@ public class NativeAdActivity extends Activity {
 
                 @Override
                 public void onNativeAdLoadFail(AdError adError) {
-                    Log.i(TAG, "onNativeAdLoadFail, " + adError.printStackTrace());
-                    Toast.makeText(NativeAdActivity.this, "load fail...：" + adError.printStackTrace(), Toast.LENGTH_LONG).show();
+                    Log.i(TAG, "onNativeAdLoadFail, " + adError.getFullErrorInfo());
+                    Toast.makeText(NativeAdActivity.this, "load fail...：" + adError.getFullErrorInfo(), Toast.LENGTH_LONG).show();
 
                 }
             });

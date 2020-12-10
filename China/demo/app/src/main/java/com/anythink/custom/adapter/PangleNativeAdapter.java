@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.anythink.custom.adapter;
 
 import android.content.Context;
@@ -53,7 +60,7 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
 
         int requestNum = 1;
         try {
-            requestNum = Integer.parseInt(serverExtra.get(CustomNativeAd.AD_REQUEST_NUM).toString());
+            requestNum = Integer.parseInt(serverExtra.get("request_ad_num").toString());
         } catch (Exception e) {
         }
 

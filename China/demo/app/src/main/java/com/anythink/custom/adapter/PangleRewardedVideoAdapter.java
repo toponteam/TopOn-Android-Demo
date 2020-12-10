@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.anythink.custom.adapter;
 
 import android.app.Activity;
@@ -210,7 +217,7 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
     public String getNetworkSDKVersion() {
         return PangleInitManager.getInstance().getNetworkVersion();
     }
-
+    
     private static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / (scale <= 0 ? 1 : scale) + 0.5f);

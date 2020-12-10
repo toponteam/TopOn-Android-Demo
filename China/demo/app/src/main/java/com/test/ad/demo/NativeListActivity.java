@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -207,7 +214,7 @@ public class NativeListActivity extends Activity {
                 @Override
                 public void onNativeAdLoadFail(AdError adError) {
                     isLoadingAd = false;
-                    Log.e(TAG, "native ad onNativeAdLoadFail------------- " + adError.printStackTrace());
+                    Log.e(TAG, "native ad onNativeAdLoadFail------------- " + adError.getFullErrorInfo());
                 }
             });
         }

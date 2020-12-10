@@ -1,10 +1,19 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.anythink.custom.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.splashad.unitgroup.api.CustomSplashAdapter;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdManager;
@@ -21,8 +30,10 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
     String slotId = "";
     String personalizedTemplate = "";
 
+    TTSplashAd splashAd;
+
     @Override
-    public void loadCustomNetworkAd(final Context context, Map<String, Object> serverExtra, Map<String, Object> localExtra) {
+    public void loadCustomNetworkAd(final Context context, Map<String, Object> serverExtra, final Map<String, Object> localExtra) {
         if (serverExtra.containsKey("app_id") && serverExtra.containsKey("slot_id")) {
             appId = (String) serverExtra.get("app_id");
             slotId = (String) serverExtra.get("slot_id");
@@ -42,12 +53,12 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
         PangleInitManager.getInstance().initSDK(context, serverExtra, true, new PangleInitManager.InitCallback() {
             @Override
             public void onFinish() {
-                startLoad(context);
+                startLoad(context, localExtra);
             }
         });
     }
 
-    private void startLoad(Context context) {
+    private void startLoad(Context context, Map<String, Object> localExtra) {
         TTAdManager ttAdManager = TTAdSdk.getAdManager();
 
         final TTAdNative mTTAdNative = ttAdManager.createAdNative(context);//baseContext is recommended for activity
@@ -55,22 +66,26 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
 
         int width = 0;
         int height = 0;
-        ViewGroup.LayoutParams layoutParams = mContainer.getLayoutParams();
-        if (layoutParams != null) {
-            width = layoutParams.width;
-            height = layoutParams.height;
+        try {
+            if (localExtra.containsKey(ATAdConst.KEY.AD_WIDTH)) {
+                width = Integer.parseInt(localExtra.get(ATAdConst.KEY.AD_WIDTH).toString());
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
-        if (width <= 0) {
-            width = context.getResources().getDisplayMetrics().widthPixels;
-        }
-        if (height <= 0) {
-            height = context.getResources().getDisplayMetrics().heightPixels;
+
+        try {
+            if (localExtra.containsKey(ATAdConst.KEY.AD_HEIGHT)) {
+                height = Integer.parseInt(localExtra.get(ATAdConst.KEY.AD_HEIGHT).toString());
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
 
         adSlotBuilder.setImageAcceptedSize(width, height); //Must be set
 
         if (TextUtils.equals("1", personalizedTemplate)) {// Native Express
-            adSlotBuilder.setExpressViewAcceptedSize(width, height);
+            adSlotBuilder.setExpressViewAcceptedSize(px2dip(context, width), px2dip(context, height));
         }
 
         postOnMainThread(new Runnable() {
@@ -94,31 +109,31 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
 
                     @Override
                     public void onSplashAdLoad(TTSplashAd ttSplashAd) {
-                        if (ttSplashAd != null) {
-//                    ttSplashAd.setNotAllowSdkCountdown();
-                            ttSplashAd.setSplashInteractionListener(PangleSplashAdapter.this);
-                            View splashView = ttSplashAd.getSplashView();
-                            if (splashView != null) {
-                                if (mLoadListener != null) {
-                                    mLoadListener.onAdCacheLoaded();
-                                }
-                                mContainer.removeAllViews();
-                                mContainer.addView(splashView);
-                            } else {
-                                if (mLoadListener != null) {
-                                    mLoadListener.onAdLoadError("", "");
-                                }
-                            }
-
-                        } else {
-                            if (mLoadListener != null) {
-                                mLoadListener.onAdLoadError("", "");
-                            }
+                        splashAd = ttSplashAd;
+                        if (mLoadListener != null) {
+                            mLoadListener.onAdCacheLoaded();
                         }
                     }
-                });
+                }, mFetchAdTimeout);
             }
         });
+
+    }
+
+    @Override
+    public boolean isAdReady() {
+        return splashAd != null;
+    }
+
+    @Override
+    public void show(Activity activity, ViewGroup container) {
+        if (splashAd != null) {
+            splashAd.setSplashInteractionListener(PangleSplashAdapter.this);
+            View splashView = splashAd.getSplashView();
+            if (splashView != null) {
+                container.addView(splashView);
+            }
+        }
 
     }
 
@@ -170,6 +185,11 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
         if (mImpressionListener != null) {
             mImpressionListener.onSplashAdDismiss();
         }
+    }
+
+    private static int px2dip(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / (scale <= 0 ? 1 : scale) + 0.5f);
     }
 
 }

@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.os.Build;
@@ -15,9 +23,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Z on 2018/1/10.
- */
 
 public class DemoApplicaion extends MultiDexApplication {
     public static final String appid = "a5aa1f9deda26d";
@@ -154,7 +159,7 @@ public class DemoApplicaion extends MultiDexApplication {
         excludelist.add("com.exclude.myoffer2");
         ATSDK.setExcludeMyOfferPkgList(excludelist);
 
-        Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isChinaSDK());
+        Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isCnSDK());
         Log.i("Demoapplication", "SDKVersionName:" + ATSDK.getSDKVersionName());
 
         Map<String, Object> custommap = new HashMap<String, Object>();

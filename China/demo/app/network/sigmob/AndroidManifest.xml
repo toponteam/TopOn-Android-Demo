@@ -1,3 +1,10 @@
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.anythink.sigmob">
@@ -33,11 +40,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_sigmob_file_path"/>
         </provider>
-
-        <!--广告展示Activity -->
-        <activity android:name="com.sigmob.sdk.base.common.AdActivity"
-            android:theme="@android:style/Theme.DeviceDefault"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
 
     </application>
 

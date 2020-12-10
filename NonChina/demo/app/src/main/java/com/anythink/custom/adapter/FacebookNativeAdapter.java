@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.anythink.custom.adapter;
 
 import android.content.Context;
@@ -9,10 +17,6 @@ import com.facebook.ads.NativeAd;
 import com.facebook.ads.NativeBannerAd;
 
 import java.util.Map;
-
-/**
- * Created by Z on 2018/1/12.
- */
 
 public class FacebookNativeAdapter extends CustomNativeAdapter {
 

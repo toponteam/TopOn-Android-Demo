@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.anythink.custom.adapter;
 
 import android.content.Context;
@@ -5,19 +12,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import com.androidquery.AQuery;
 import com.anythink.core.api.ATInitMediation;
 import com.bytedance.sdk.openadsdk.TTAdConfig;
 import com.bytedance.sdk.openadsdk.TTAdConstant;
 import com.bytedance.sdk.openadsdk.TTAdManager;
 import com.bytedance.sdk.openadsdk.TTAdSdk;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 
 public class PangleInitManager extends ATInitMediation {
     public static final String TAG = PangleInitManager.class.getSimpleName();
@@ -109,7 +110,8 @@ public class PangleInitManager extends ATInitMediation {
     }
 
 
-    public static String getNetworkVersion() {
+    @Override
+    public String getNetworkVersion() {
         try {
             TTAdManager ttAdManager = TTAdSdk.getAdManager();
             return ttAdManager.getSDKVersion();

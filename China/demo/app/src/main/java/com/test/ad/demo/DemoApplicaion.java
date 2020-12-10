@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ */
+
 package com.test.ad.demo;
 
 import android.os.Build;
@@ -9,10 +16,6 @@ import com.facebook.stetho.Stetho;
 
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * Created by Z on 2018/1/10.
- */
 
 public class DemoApplicaion extends MultiDexApplication {
     public static final String appid = "a5aa1f9deda26d";

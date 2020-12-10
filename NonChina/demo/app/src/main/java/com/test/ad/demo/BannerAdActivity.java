@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -92,7 +100,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerFailed(AdError adError) {
-                Log.i("BannerAdActivity", "onBannerFailed：" + adError.printStackTrace());
+                Log.i("BannerAdActivity", "onBannerFailed：" + adError.getFullErrorInfo());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerFailed",
                         Toast.LENGTH_SHORT).show();

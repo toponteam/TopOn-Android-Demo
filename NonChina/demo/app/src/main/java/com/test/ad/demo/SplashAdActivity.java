@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -13,12 +21,15 @@ public class SplashAdActivity extends Activity {
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_splash_admob,
             DemoApplicaion.mPlacementId_splash_mintegral,
-            DemoApplicaion.mPlacementId_splash_myoffer,
-            DemoApplicaion.mPlacementId_splash_huawei
+            DemoApplicaion.mPlacementId_splash_myoffer
+//            ,
+//            DemoApplicaion.mPlacementId_splash_huawei
     };
 
     String unitGroupName[] = new String[]{
-            "Admob", "Mintegral", "MyOffer", "Huawei"};
+            "Admob", "Mintegral", "MyOffer"
+//            , "Huawei"
+    };
 
     int mCurrentSelectIndex;
     Spinner spinner;

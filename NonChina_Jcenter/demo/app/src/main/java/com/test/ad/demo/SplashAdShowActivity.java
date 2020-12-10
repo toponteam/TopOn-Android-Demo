@@ -1,3 +1,11 @@
+/*
+ * Copyright © 2018-2020 TopOn. All rights reserved.
+ * https://www.toponad.com
+ * Licensed under the TopOn SDK License Agreement
+ * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+ *
+ */
+
 package com.test.ad.demo;
 
 import android.app.Activity;
@@ -9,15 +17,19 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdListener;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SplashAdShowActivity extends Activity implements ATSplashAdListener {
     ATSplashAd splashAd;
-
+    FrameLayout container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +37,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
         setContentView(R.layout.splash_ad_show);
 
         String unitId = getIntent().getStringExtra("unitId");
-        FrameLayout container = findViewById(R.id.splash_ad_container);
+        container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
 
         Configuration cf = getResources().getConfiguration();
@@ -47,15 +59,26 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
             layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
         }
 
-
+        Map<String, Object> localMap = new HashMap<>();
+        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
+        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
         ATMediationRequestInfo atMediationRequestInfo = null;
+
 //        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");
 //        atMediationRequestInfo.setAdSourceId("68188");
 
 //        atMediationRequestInfo = new AdmobATRequestInfo("ca-app-pub-9488501426181082~6354662111", "ca-app-pub-3940256099942544/1033173712", AdmobATRequestInfo.ORIENTATION_PORTRAIT);
 //        atMediationRequestInfo.setAdSourceId("145022");
-        splashAd = new ATSplashAd(this, container, unitId, atMediationRequestInfo, this);
+        splashAd = new ATSplashAd(this, unitId, atMediationRequestInfo, this, 5000);
+        splashAd.setLocalExtra(localMap);
+        if (splashAd.isAdReady()) {
+            Log.i("SplashAdShowActivity", "SplashAd is ready to show.");
+            splashAd.show(this, container);
+        } else {
+            Log.i("SplashAdShowActivity", "SplashAd isn't ready to show, start to request.");
+            splashAd.loadAd();
+        }
 
         ATSplashAd.checkSplashDefaultConfigList(this, unitId, null);
     }
@@ -63,11 +86,12 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     @Override
     public void onAdLoaded() {
         Log.i("SplashAdShowActivity", "onAdLoaded---------");
+        splashAd.show(this, container);
     }
 
     @Override
     public void onNoAdError(AdError adError) {
-        Log.i("SplashAdShowActivity", "onNoAdError---------:" + adError.printStackTrace());
+        Log.i("SplashAdShowActivity", "onNoAdError---------:" + adError.getFullErrorInfo());
         jumpToMainActivity();
     }
 
@@ -86,11 +110,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashAdListener
     public void onAdDismiss(ATAdInfo entity) {
         Log.i("SplashAdShowActivity", "onAdDismiss:\n" + entity.toString());
         jumpToMainActivity();
-    }
-
-    @Override
-    public void onAdTick(long millisUtilFinished) {
-        Log.i("SplashAdShowActivity", "onAdTick---------：" + millisUtilFinished);
     }
 
     boolean hasHandleJump = false;

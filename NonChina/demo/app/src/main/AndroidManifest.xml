@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.ad.demo">
 
@@ -42,19 +49,19 @@
         </activity>
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
-            android:label="AT Native"
+            android:label="Native"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
-            android:label="AT RewardedVideo"
+            android:label="RewardedVideo"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
-            android:label="AT Interstitial"
+            android:label="Interstitial"
             android:launchMode="singleTask" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
-            android:label="AT Banner"
+            android:label="Banner"
             android:launchMode="singleTask" />
 
         <activity
@@ -80,25 +87,6 @@
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
-
-        <activity
-            android:name="com.mopub.common.privacy.ConsentDialogActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- All ad formats -->
-        <activity
-            android:name="com.mopub.common.MoPubBrowser"
-            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- Interstitials -->
-        <activity
-            android:name="com.mopub.mobileads.MoPubActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.mopub.mobileads.MraidActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- Rewarded Video and Rewarded Playables -->
-        <activity
-            android:name="com.mopub.mobileads.RewardedMraidActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity
-            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
