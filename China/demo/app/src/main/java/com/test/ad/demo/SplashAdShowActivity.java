@@ -10,27 +10,26 @@ package com.test.ad.demo;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.network.baidu.BaiduATConst;
 import com.anythink.splashad.api.ATSplashAd;
-import com.anythink.splashad.api.ATSplashAdListener;
+import com.anythink.splashad.api.ATSplashExListener;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SplashAdShowActivity extends FragmentActivity implements ATSplashAdListener {
+public class SplashAdShowActivity extends FragmentActivity implements ATSplashExListener {
+
+    private static final String TAG = SplashAdShowActivity.class.getSimpleName();
+
     ATSplashAd splashAd;
     FrameLayout container;
 
@@ -40,7 +39,7 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashAd
 
         setContentView(R.layout.splash_ad_show);
 
-        String unitId = getIntent().getStringExtra("unitId");
+        String placementId = getIntent().getStringExtra("placementId");
         container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         Configuration cf = getResources().getConfiguration();
@@ -50,7 +49,7 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashAd
         /**You should set size to the layout param.**/
         if (ori == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-            layoutParams.width = (int)(getResources().getDisplayMetrics().widthPixels * 0.9);
+            layoutParams.width = (int) (getResources().getDisplayMetrics().widthPixels * 0.9);
             layoutParams.height = getResources().getDisplayMetrics().heightPixels;
         } else if (ori == Configuration.ORIENTATION_PORTRAIT) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
@@ -61,10 +60,6 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashAd
             layoutParams.width = getResources().getDisplayMetrics().widthPixels;
             layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
         }
-
-        Map<String,Object> localMap = new HashMap<>();
-        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
-        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
         ATMediationRequestInfo atMediationRequestInfo = null;
 
@@ -85,78 +80,55 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashAd
 
 //        atMediationRequestInfo  = new KSATRequestInfo("501400010", "5014000234");
 //        atMediationRequestInfo.setAdSourceId("88377");
-        splashAd = new ATSplashAd(this, unitId, atMediationRequestInfo, this, 5000);
+        splashAd = new ATSplashAd(this, placementId, atMediationRequestInfo, this, 5000);
+
+        Map<String, Object> localMap = new HashMap<>();
+        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
+        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
         splashAd.setLocalExtra(localMap);
+
         if (splashAd.isAdReady()) {
-            Log.i("SplashAdShowActivity", "SplashAd is ready to show.");
+            Log.i(TAG, "SplashAd is ready to show.");
             splashAd.show(this, container);
         } else {
-            Log.i("SplashAdShowActivity", "SplashAd isn't ready to show, start to request.");
+            Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();
         }
 
 
-        ATSplashAd.checkSplashDefaultConfigList(this, unitId, null);
+        ATSplashAd.checkSplashDefaultConfigList(this, placementId, null);
+    }
+
+    @Override
+    public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
+        Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
     }
 
     @Override
     public void onAdLoaded() {
-        Log.i("SplashAdShowActivity", "onAdLoaded---------");
+        Log.i(TAG, "onAdLoaded---------");
         splashAd.show(this, container);
     }
 
     @Override
     public void onNoAdError(AdError adError) {
-        Log.i("SplashAdShowActivity", "onNoAdError---------:" + adError.getFullErrorInfo());
+        Log.i(TAG, "onNoAdError---------:" + adError.getFullErrorInfo());
         jumpToMainActivity();
     }
 
     @Override
     public void onAdShow(ATAdInfo entity) {
-        Log.i("SplashAdShowActivity", "onAdShow:\n" + entity.toString());
-        if (entity.getNetworkFirmId() == BaiduATConst.NETWORK_FIRM_ID) {
-            /**
-             * Only for Baidu:
-             * The display time and the skipped advertising style can be configured through the Baidu's backstage（Recommend）
-             * , and can be customized and modified in your application.
-             */
-            skipViewSetting(); //If setting skipview by Baidu's backstage, you should not run this method.
-        }
-    }
-
-    private void skipViewSetting() {
-        final TextView skipView = findViewById(R.id.splash_ad_skip);
-        CountDownTimer countDownTimer = new CountDownTimer(5000L, 1000L) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                skipView.setText((millisUntilFinished / 1000) + " | 跳过");
-            }
-
-            @Override
-            public void onFinish() {
-                jumpToMainActivity();
-            }
-        };
-
-        countDownTimer.start();
-        skipView.setVisibility(View.VISIBLE);
-
-        skipView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                jumpToMainActivity();
-            }
-        });
+        Log.i(TAG, "onAdShow:\n" + entity.toString());
     }
 
     @Override
     public void onAdClick(ATAdInfo entity) {
-        Log.i("SplashAdShowActivity", "onAdClick:\n" + entity.toString());
+        Log.i(TAG, "onAdClick:\n" + entity.toString());
     }
 
     @Override
     public void onAdDismiss(ATAdInfo entity) {
-        Log.i("SplashAdShowActivity", "onAdDismiss:\n" + entity.toString());
+        Log.i(TAG, "onAdDismiss:\n" + entity.toString());
         jumpToMainActivity();
     }
 

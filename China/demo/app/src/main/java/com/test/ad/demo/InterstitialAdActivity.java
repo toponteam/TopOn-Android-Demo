@@ -19,11 +19,12 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
-import com.anythink.interstitial.api.ATInterstitialListener;
+import com.anythink.interstitial.api.ATInterstitialExListener;
 
 public class InterstitialAdActivity extends Activity {
 
-    private static String TAG = "InterstitialAdActivity";
+    private static final String TAG = InterstitialAdActivity.class.getSimpleName();
+
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_interstitial_all
             , DemoApplicaion.mPlacementId_interstitial_mintegral
@@ -83,7 +84,6 @@ public class InterstitialAdActivity extends Activity {
             }
         });
 
-//        mCurrentSelectIndex = 9;
         init();
 
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,7 @@ public class InterstitialAdActivity extends Activity {
             public void onClick(View v) {
 //                boolean isReady = mInterstitialAd.isAdReady();
                 ATAdStatusInfo atAdStatusInfo = mInterstitialAd.checkAdStatus();
-                Toast.makeText(InterstitialAdActivity.this, "video ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(InterstitialAdActivity.this, "interstitial ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -105,8 +105,8 @@ public class InterstitialAdActivity extends Activity {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                mInterstitialAd.show(InterstitialAdActivity.this);
-                mInterstitialAd.show(InterstitialAdActivity.this, "f5e54937b0483d");
+                mInterstitialAd.show(InterstitialAdActivity.this);
+//                mInterstitialAd.show(InterstitialAdActivity.this, "f5e54937b0483d");
             }
         });
 
@@ -115,8 +115,13 @@ public class InterstitialAdActivity extends Activity {
 
     private void init() {
         mInterstitialAd = new ATInterstitial(this, placementIds[mCurrentSelectIndex]);
-        addSetting();
-        mInterstitialAd.setAdListener(new ATInterstitialListener() {
+        mInterstitialAd.setAdListener(new ATInterstitialExListener() {
+
+            @Override
+            public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
+                Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
             @Override
             public void onInterstitialAdLoaded() {
                 Log.i(TAG, "onInterstitialAdLoaded");
@@ -168,23 +173,5 @@ public class InterstitialAdActivity extends Activity {
         });
     }
 
-    private void addSetting() {
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }
 

@@ -3,7 +3,6 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
@@ -20,11 +19,12 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
-import com.anythink.interstitial.api.ATInterstitialListener;
+import com.anythink.interstitial.api.ATInterstitialExListener;
 
 public class InterstitialAdActivity extends Activity {
 
-    private static String TAG = "InterstitialAdActivity";
+    private static final String TAG = InterstitialAdActivity.class.getSimpleName();
+
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_interstitial_all
             , DemoApplicaion.mPlacementId_interstitial_facebook
@@ -116,8 +116,7 @@ public class InterstitialAdActivity extends Activity {
             @Override
             public void onClick(View v) {
                 ATAdStatusInfo atAdStatusInfo = mInterstitialAd.checkAdStatus();
-                Toast.makeText(InterstitialAdActivity.this, "video ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(InterstitialAdActivity.this, "interstitial ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -140,8 +139,13 @@ public class InterstitialAdActivity extends Activity {
 
     private void init() {
         mInterstitialAd = new ATInterstitial(this, placementIds[mCurrentSelectIndex]);
-        addSetting();
-        mInterstitialAd.setAdListener(new ATInterstitialListener() {
+        mInterstitialAd.setAdListener(new ATInterstitialExListener() {
+
+            @Override
+            public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
+                Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
             @Override
             public void onInterstitialAdLoaded() {
                 Log.i(TAG, "onInterstitialAdLoaded");
@@ -193,23 +197,5 @@ public class InterstitialAdActivity extends Activity {
         });
     }
 
-    private void addSetting() {
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }
 

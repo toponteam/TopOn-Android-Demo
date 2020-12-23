@@ -72,7 +72,7 @@ public class SplashAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                intent.putExtra("unitId", placementIds[mCurrentSelectIndex]);
+                intent.putExtra("placementId", placementIds[mCurrentSelectIndex]);
                 startActivity(intent);
             }
         });

@@ -3,7 +3,6 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
@@ -25,7 +24,7 @@ import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
-import com.anythink.nativead.api.ATNativeEventListener;
+import com.anythink.nativead.api.ATNativeEventExListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 
@@ -34,7 +33,7 @@ import java.util.Map;
 
 public class NativeAdActivity extends Activity {
 
-    private static String TAG = "NativeAdActivity";
+    private static final String TAG = NativeAdActivity.class.getSimpleName();
 
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_native_all
@@ -106,7 +105,6 @@ public class NativeAdActivity extends Activity {
             }
         });
 
-
         int padding = dip2px(10);
         final int containerHeight = dip2px(340);
         final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
@@ -131,21 +129,12 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
+
             Map<String, Object> localMap = new HashMap<>();
 
             // since v5.6.4
             localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
             localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
-
-            // since v5.6.2
-//            localMap.put(ATNative.KEY_WIDTH, adViewWidth);
-//            localMap.put(ATNative.KEY_HEIGHT, adViewHeight);
-//
-//            // before v5.6.2
-//            //Mintegral
-//            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_WIDTH, adViewWidth);
-//            localMap.put(MintegralATConst.AUTO_RENDER_NATIVE_HEIGHT, adViewHeight);
-            // before v5.6.2
 
             atNatives[i].setLocalExtra(localMap);
 
@@ -176,7 +165,12 @@ public class NativeAdActivity extends Activity {
                         mNativeAd.destory();
                     }
                     mNativeAd = nativeAd;
-                    mNativeAd.setNativeEventListener(new ATNativeEventListener() {
+                    mNativeAd.setNativeEventListener(new ATNativeEventExListener() {
+                        @Override
+                        public void onDeeplinkCallback(ATNativeAdView view, ATAdInfo adInfo, boolean isSuccess) {
+                            Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+                        }
+
                         @Override
                         public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                             Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
@@ -205,7 +199,7 @@ public class NativeAdActivity extends Activity {
                     mNativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
                         @Override
                         public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
-                            Log.i(TAG, "native ad onAdCloseButtonClick:");
+                            Log.i(TAG, "native ad onAdCloseButtonClick");
                             if (view.getParent() != null) {
                                 ((ViewGroup) view.getParent()).removeView(view);
                             }
@@ -219,7 +213,6 @@ public class NativeAdActivity extends Activity {
 
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(anyThinkNativeAdView, anyThinkRender.getClickView(), null);
-
                 } else {
                     Toast.makeText(NativeAdActivity.this, "this placement no cache!", Toast.LENGTH_LONG).show();
 
@@ -227,12 +220,10 @@ public class NativeAdActivity extends Activity {
 
             }
         });
-
         anyThinkNativeAdView.setPadding(padding, padding, padding, padding);
+
         anyThinkNativeAdView.setVisibility(View.GONE);
         ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
-
-
     }
 
     @Override

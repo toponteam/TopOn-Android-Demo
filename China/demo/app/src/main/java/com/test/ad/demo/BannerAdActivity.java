@@ -17,15 +17,14 @@ import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.anythink.banner.api.ATBannerListener;
+import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 
-import java.util.HashMap;
-
 public class BannerAdActivity extends Activity {
 
+    private static final String TAG = BannerAdActivity.class.getSimpleName();
 
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_banner_all
@@ -48,7 +47,6 @@ public class BannerAdActivity extends Activity {
     ATBannerView mBannerView;
 
     int mCurrentSelectIndex;
-    boolean hasAddBannerView = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +59,16 @@ public class BannerAdActivity extends Activity {
         mBannerView = new ATBannerView(this);
         mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
-        mBannerView.setBannerAdListener(new ATBannerListener() {
+        mBannerView.setBannerAdListener(new ATBannerExListener() {
+
+            @Override
+            public void onDeeplinkCallback(boolean isRefresh, ATAdInfo adInfo, boolean isSuccess) {
+                Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
             @Override
             public void onBannerLoaded() {
-                Log.i("BannerAdActivity", "onBannerLoaded");
+                Log.i(TAG, "onBannerLoaded");
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerLoaded",
                         Toast.LENGTH_SHORT).show();
@@ -72,7 +76,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerFailed(AdError adError) {
-                Log.i("BannerAdActivity", "onBannerFailed：" + adError.getFullErrorInfo());
+                Log.i(TAG, "onBannerFailed: " + adError.getFullErrorInfo());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerFailed: " + adError.getFullErrorInfo(),
                         Toast.LENGTH_SHORT).show();
@@ -80,7 +84,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerClicked(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerClicked:" + entity.toString());
+                Log.i(TAG, "onBannerClicked:" + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClicked",
                         Toast.LENGTH_SHORT).show();
@@ -88,7 +92,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerShow(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerShow:" + entity.toString());
+                Log.i(TAG, "onBannerShow:" + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerShow",
                         Toast.LENGTH_SHORT).show();
@@ -96,7 +100,7 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerClose(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerClose:" + entity.toString());
+                Log.i(TAG, "onBannerClose:" + entity.toString());
                 Toast.makeText(BannerAdActivity.this,
                         "onBannerClose",
                         Toast.LENGTH_SHORT).show();
@@ -104,12 +108,12 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onBannerAutoRefreshed(ATAdInfo entity) {
-                Log.i("BannerAdActivity", "onBannerAutoRefreshed:" + entity.toString());
+                Log.i(TAG, "onBannerAutoRefreshed:" + entity.toString());
             }
 
             @Override
             public void onBannerAutoRefreshFail(AdError adError) {
-                Log.i("BannerAdActivity", "onBannerAutoRefreshFail");
+                Log.i(TAG, "onBannerAutoRefreshFail: " + adError.getFullErrorInfo());
 
             }
         });
@@ -140,8 +144,7 @@ public class BannerAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String, String> maps = new HashMap<>();
-                mBannerView.setUnitId(placementIds[mCurrentSelectIndex]);
+                mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
                 mBannerView.loadAd();
             }
         });

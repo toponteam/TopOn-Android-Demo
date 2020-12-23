@@ -3,7 +3,6 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
@@ -64,7 +63,7 @@ public class SplashAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                intent.putExtra("unitId", placementIds[mCurrentSelectIndex]);
+                intent.putExtra("placementId", placementIds[mCurrentSelectIndex]);
                 startActivity(intent);
             }
         });
