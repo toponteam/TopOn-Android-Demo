@@ -49,6 +49,12 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_fyber
             , DemoApplicaion.mPlacementId_interstitial_googleAdManager
             , DemoApplicaion.mPlacementId_interstitial_huawei
+            , DemoApplicaion.mPlacementId_interstitial_adx
+            , DemoApplicaion.mPlacementId_interstitial_online
+            , DemoApplicaion.mPlacementId_interstitial_kidoz
+            , DemoApplicaion.mPlacementId_interstitial_mytarget
+            , DemoApplicaion.mPlacementId_interstitial_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_toutiao_video
     };
 
     String unitGroupName[] = new String[]{
@@ -74,7 +80,13 @@ public class InterstitialAdActivity extends Activity {
             "Ogury",
             "Fyber",
             "Google Ad Manager",
-            "Huawei"
+            "Huawei",
+            "Adx",
+            "OnlineApi",
+            "Kidoz",
+            "MyTarget",
+            "Pangle",
+            "Pangle FullVideo"
     };
 
     RadioGroup mRadioGroup;

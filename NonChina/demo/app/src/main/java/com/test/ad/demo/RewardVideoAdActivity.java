@@ -52,6 +52,10 @@ public class RewardVideoAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_rewardvideo_fyber
             , DemoApplicaion.mPlacementId_rewardvideo_googleAdManager
             , DemoApplicaion.mPlacementId_rewardvideo_huawei
+            , DemoApplicaion.mPlacementId_rewardvideo_kidoz
+            , DemoApplicaion.mPlacementId_rewardvideo_mytarget
+            , DemoApplicaion.mPlacementId_rewardvideo_toutiao
+
     };
 
     String unitGroupName[] = new String[]{
@@ -76,7 +80,10 @@ public class RewardVideoAdActivity extends Activity {
             "Ogury",
             "Fyber",
             "Google Ad Manager",
-            "Huawei"
+            "Huawei",
+            "Kidoz",
+            "MyTarget",
+            "Pangle"
     };
 
     RadioGroup mRadioGroup;

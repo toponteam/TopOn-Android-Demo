@@ -27,6 +27,7 @@ import java.util.Map;
 public class DemoApplicaion extends MultiDexApplication {
     public static final String appid = "a5aa1f9deda26d";
     public static final String appKey = "4f7b9ac17decb9babec83aac078742c7";
+
     //Native
     public static final String mPlacementId_native_all = "b5aa1fa2cae775";
     public static final String mPlacementId_native_facebook = "b5aa1fa4165ea3";
@@ -42,6 +43,8 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_native_googleAdManager = "b5f1ea92c46353";
     public static final String mPlacementId_native_myoffer = "b5f33a12982b7f";
     public static final String mPlacementId_native_huawei = "b5f35311178efe";
+    public static final String mPlacementId_native_toutiao = "b5c2c97629da0d";
+    public static final String mPlacementId_native_toutiao_drawer = "b5c355d79ef9be";
 
     //RewardedVideo
     public static final String mPlacementId_rewardvideo_all = "b5b449fb3d89d7";
@@ -66,6 +69,9 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_rewardvideo_fyber = "b5e96f5e1ade5b";
     public static final String mPlacementId_rewardvideo_googleAdManager = "b5f1ea95c4594e";
     public static final String mPlacementId_rewardvideo_huawei = "b5f353142ed321";
+    public static final String mPlacementId_rewardvideo_kidoz = "b5fe1a15f35ed8";
+    public static final String mPlacementId_rewardvideo_mytarget = "b5fe44e9ddde50";
+    public static final String mPlacementId_rewardvideo_toutiao = "b5b728e7a08cd4";
 
     //Banner
     public static final String mPlacementId_banner_all = "b5baca4f74c3d8";
@@ -86,6 +92,9 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_banner_myoffer = "b5f33a1409b96b";
     public static final String mPlacementId_banner_huawei = "b5f35312714b7f";
     public static final String mPlacementId_banner_unityads = "b5f7fd2c9a50a8";
+    public static final String mPLacementId_banner_kidoz = "b5fe1a185c873d";
+    public static final String mPLacementId_banner_mytarget = "b5fe46855125b2";
+    public static final String mPlacementId_banner_toutiao = "b5baca45138428";
 
     //Interstitial
     public static final String mPlacementId_interstitial_all = "b5baca53984692";
@@ -111,12 +120,17 @@ public class DemoApplicaion extends MultiDexApplication {
     public static final String mPlacementId_interstitial_fyber = "b5e96f607235f6";
     public static final String mPlacementId_interstitial_googleAdManager = "b5f1ea94f36790";
     public static final String mPlacementId_interstitial_huawei = "b5f3531369a785";
+    public static final String mPlacementId_interstitial_kidoz = "b5fe1a17660acb";
+    public static final String mPlacementId_interstitial_mytarget = "b5fe46832e1023";
+    public static final String mPlacementId_interstitial_toutiao = "b5baca585a8fef";
+    public static final String mPlacementId_interstitial_toutiao_video = "b5baca599c7c61";
 
     //Splash
     public static final String mPlacementId_splash_admob = "b5f73fe0c5db29";
     public static final String mPlacementId_splash_mintegral = "b5ee8ae8611366";
     public static final String mPlacementId_splash_myoffer = "b5f33a1598fe94";
     public static final String mPlacementId_splash_huawei = "b5f3531509b722";
+    public static final String mPlacementId_splash_toutiao = "b5bea7c1b653ef";
 
     @Override
     public void onCreate() {

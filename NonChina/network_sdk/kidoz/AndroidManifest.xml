@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anythink.kidoz">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:hardwareAccelerated="true">
+
+        <activity
+            android:name="com.kidoz.sdk.api.ui_views.interstitial.KidozAdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <receiver
+            android:name="com.kidoz.sdk.api.receivers.SdkReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

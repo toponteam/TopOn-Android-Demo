@@ -1,0 +1,9 @@
+-keep class com.kidoz.** { *;}
+-keepclassmembers class com.kidoz.** {
+   *;
+}
+
+-keep class com.squareup.imagelib.** { *;}
+-keepclassmembers class com.squareup.imagelib.** {
+   *;
+}

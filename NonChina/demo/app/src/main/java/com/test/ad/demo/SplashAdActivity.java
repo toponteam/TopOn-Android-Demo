@@ -20,7 +20,7 @@ public class SplashAdActivity extends Activity {
     String placementIds[] = new String[]{
             DemoApplicaion.mPlacementId_splash_admob,
             DemoApplicaion.mPlacementId_splash_mintegral,
-            DemoApplicaion.mPlacementId_splash_myoffer
+            DemoApplicaion.mPlacementId_splash_myoffer,
 //            ,
 //            DemoApplicaion.mPlacementId_splash_huawei
     };
