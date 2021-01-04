@@ -110,7 +110,23 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
             android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize" />
+            android:configChanges="keyboardHidden|orientation|screenSize" /> <!-- source file: nonchina_jcenter/network_sdk/appnext/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/fyber/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/kidoz/AndroidManifest.xml -->
+        <activity
+            android:name="com.kidoz.sdk.api.ui_views.interstitial.KidozAdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:hardwareAccelerated="true" />
+
+        <receiver
+            android:name="com.kidoz.sdk.api.receivers.SdkReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
