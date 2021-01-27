@@ -22,7 +22,7 @@ public class SplashAdActivity extends Activity {
             DemoApplicaion.mPlacementId_splash_toutiao,
             DemoApplicaion.mPlacementId_splash_gdt,
             DemoApplicaion.mPlacementId_splash_baidu,
-//            DemoApplicaion.mPlacementId_splash_sigmob,
+            DemoApplicaion.mPlacementId_splash_sigmob,
             DemoApplicaion.mPlacementId_splash_mintegral,
             DemoApplicaion.mPlacementId_splash_kuaishou,
             DemoApplicaion.mPlacementId_splash_myoffer
@@ -33,7 +33,7 @@ public class SplashAdActivity extends Activity {
             "Toutiao",
             "GDT",
             "Baidu",
-//            "Sigmob",
+            "Sigmob",
             "Mintegral",
             "Kuaishou",
             "MyOffer"
