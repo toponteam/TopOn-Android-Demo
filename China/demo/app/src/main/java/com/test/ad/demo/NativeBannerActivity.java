@@ -14,12 +14,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.nativead.banner.api.ATNativeBannerConfig;
 import com.anythink.nativead.banner.api.ATNativeBannerListener;
 import com.anythink.nativead.banner.api.ATNativeBannerSize;
-import com.anythink.nativead.banner.api.ATNativeBannerConfig;
 import com.anythink.nativead.banner.api.ATNativeBannerView;
-import com.anythink.network.toutiao.TTATConst;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -149,8 +149,8 @@ public class NativeBannerActivity extends Activity {
         bannerViewAuto.setBannerConfig(configAuto);
         final Map<String, Object> localMapAuto = new HashMap<>();
         //穿山甲个性化模板
-        localMapAuto.put(TTATConst.NATIVE_AD_IMAGE_WIDTH, dip2px(getApplicationContext(), 320));
-        localMapAuto.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, dip2px(getApplicationContext(), 205));
+        localMapAuto.put(ATAdConst.KEY.AD_WIDTH, dip2px(getApplicationContext(), 320));
+        localMapAuto.put(ATAdConst.KEY.AD_HEIGHT, dip2px(getApplicationContext(), 205));
         bannerViewAuto.setLocalExtra(localMapAuto);
 
         bannerViewAuto.setBackgroundColor(0xffffffff);
