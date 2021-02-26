@@ -4,6 +4,7 @@
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  ~
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -122,6 +123,5 @@
         android:paddingRight="2dp"
         android:textColor="#ffffff"
         android:textSize="6dp" />
-
 
 </RelativeLayout>

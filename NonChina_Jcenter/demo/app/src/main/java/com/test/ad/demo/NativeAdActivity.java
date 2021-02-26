@@ -10,17 +10,20 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
+import com.anythink.core.common.utils.CommonUtil;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
@@ -78,6 +81,8 @@ public class NativeAdActivity extends Activity {
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
+    ImageView mCloseView;
+
     int mCurrentSelectIndex;
 
     @Override
@@ -109,12 +114,15 @@ public class NativeAdActivity extends Activity {
             }
         });
 
+        initCloseView();
+
         int padding = dip2px(10);
         final int containerHeight = dip2px(340);
         final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
         final int adViewHeight = containerHeight - 2 * padding;
 
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
+        anyThinkRender.setCloseView(mCloseView);
 
         for (int i = 0; i < placementIds.length; i++) {
             atNatives[i] = new ATNative(this, placementIds[i], new ATNativeNetworkListener() {
@@ -133,15 +141,6 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
-
-            Map<String, Object> localMap = new HashMap<>();
-
-            // since v5.6.4
-            localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
-            localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
-
-            atNatives[i].setLocalExtra(localMap);
-
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);
             }
@@ -152,9 +151,21 @@ public class NativeAdActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                if (anyThinkNativeAdView != null && anyThinkNativeAdView.getParent() == null) {
-                    ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+                if (anyThinkNativeAdView != null) {
+                    anyThinkNativeAdView.removeAllViews();
+
+                    if (anyThinkNativeAdView.getParent() == null) {
+                        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+                    }
                 }
+
+                Map<String, Object> localMap = new HashMap<>();
+
+                // since v5.6.4
+                localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
+                localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
+
+                atNatives[mCurrentSelectIndex].setLocalExtra(localMap);
 
                 atNatives[mCurrentSelectIndex].makeAdRequest();
             }
@@ -165,6 +176,15 @@ public class NativeAdActivity extends Activity {
             public void onClick(View view) {
                 NativeAd nativeAd = atNatives[mCurrentSelectIndex].getNativeAd();
                 if (nativeAd != null) {
+
+                    if (anyThinkNativeAdView != null) {
+                        anyThinkNativeAdView.removeAllViews();
+
+                        if (anyThinkNativeAdView.getParent() == null) {
+                            ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+                        }
+                    }
+
                     if (mNativeAd != null) {
                         mNativeAd.destory();
                     }
@@ -206,6 +226,7 @@ public class NativeAdActivity extends Activity {
                             Log.i(TAG, "native ad onAdCloseButtonClick");
                             if (view.getParent() != null) {
                                 ((ViewGroup) view.getParent()).removeView(view);
+                                view.removeAllViews();
                             }
                         }
                     });
@@ -214,6 +235,8 @@ public class NativeAdActivity extends Activity {
                     } catch (Exception e) {
 
                     }
+
+                    anyThinkNativeAdView.addView(mCloseView);
 
                     anyThinkNativeAdView.setVisibility(View.VISIBLE);
                     mNativeAd.prepare(anyThinkNativeAdView, anyThinkRender.getClickView(), null);
@@ -226,8 +249,26 @@ public class NativeAdActivity extends Activity {
         });
         anyThinkNativeAdView.setPadding(padding, padding, padding, padding);
 
-        anyThinkNativeAdView.setVisibility(View.GONE);
-        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+    }
+
+    private void initCloseView() {
+        if (mCloseView == null) {
+            mCloseView = new ImageView(this);
+            mCloseView.setImageResource(R.drawable.ad_close);
+
+            int padding = CommonUtil.dip2px(this, 5);
+            mCloseView.setPadding(padding, padding, padding, padding);
+
+            int size = CommonUtil.dip2px(this, 30);
+            int margin = CommonUtil.dip2px(this, 2);
+
+            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
+            layoutParams.topMargin = margin;
+            layoutParams.rightMargin = margin;
+            layoutParams.gravity = Gravity.TOP | Gravity.RIGHT;
+
+            mCloseView.setLayoutParams(layoutParams);
+        }
     }
 
     @Override

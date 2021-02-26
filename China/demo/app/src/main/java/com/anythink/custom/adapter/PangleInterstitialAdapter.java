@@ -308,8 +308,15 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
         final int finalLayoutType = layoutType;
         PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
             @Override
-            public void onFinish() {
+            public void onSuccess() {
                 startLoad(context, localExtra, finalLayoutType, personalized_template);
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMsg) {
+                if (mLoadListener != null) {
+                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                }
             }
         });
     }

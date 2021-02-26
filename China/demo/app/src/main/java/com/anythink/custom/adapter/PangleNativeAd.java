@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
+import com.bytedance.sdk.openadsdk.TTAdDislike;
 import com.bytedance.sdk.openadsdk.TTDrawFeedAd;
 import com.bytedance.sdk.openadsdk.TTFeedAd;
 import com.bytedance.sdk.openadsdk.TTImage;
@@ -129,6 +130,8 @@ public class PangleNativeAd extends CustomNativeAd {
 
         if(view.getContext() instanceof Activity) {
             mTTFeedAd.setActivityForDownloadApp(((Activity) view.getContext()));
+
+            bindDislike(((Activity) view.getContext()));
         }
 
     }
@@ -153,8 +156,52 @@ public class PangleNativeAd extends CustomNativeAd {
         });
         if(view.getContext() instanceof Activity) {
             mTTFeedAd.setActivityForDownloadApp(((Activity) view.getContext()));
+
+            bindDislike(((Activity) view.getContext()));
         }
     }
+
+
+    private void bindDislike(final Activity activity) {
+        ExtraInfo extraInfo = getExtraInfo();
+        if (extraInfo != null) {
+            View closeView = extraInfo.getCloseView();
+            if (closeView != null) {
+
+                closeView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        TTAdDislike dislikeDialog = mTTFeedAd.getDislikeDialog(activity);
+                        dislikeDialog.setDislikeInteractionCallback(new TTAdDislike.DislikeInteractionCallback() {
+                            @Override
+                            public void onShow() {
+
+                            }
+
+                            @Override
+                            public void onSelected(int i, String s) {
+                                notifyAdDislikeClick();
+                            }
+
+                            @Override
+                            public void onCancel() {
+
+                            }
+
+                            @Override
+                            public void onRefuse() {
+
+                            }
+                        });
+                        if (!dislikeDialog.isShow()) {
+                            dislikeDialog.showDislikeDialog();
+                        }
+                    }
+                });
+            }
+        }
+    }
+
 
     @Override
     public Bitmap getAdLogo() {

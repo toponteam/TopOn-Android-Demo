@@ -49,8 +49,6 @@ public class InterstitialAdActivity extends Activity {
             , DemoApplicaion.mPlacementId_interstitial_fyber
             , DemoApplicaion.mPlacementId_interstitial_googleAdManager
             , DemoApplicaion.mPlacementId_interstitial_huawei
-            , DemoApplicaion.mPlacementId_interstitial_adx
-            , DemoApplicaion.mPlacementId_interstitial_online
             , DemoApplicaion.mPlacementId_interstitial_kidoz
             , DemoApplicaion.mPlacementId_interstitial_mytarget
             , DemoApplicaion.mPlacementId_interstitial_toutiao

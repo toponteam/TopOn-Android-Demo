@@ -126,6 +126,11 @@ public class PangleNativeExpressAd extends CustomNativeAd {
         //Use the default dislike popup style in the default personalization template
         mTTNativeExpressAd.setDislikeCallback(activity, new TTAdDislike.DislikeInteractionCallback() {
             @Override
+            public void onShow() {
+
+            }
+
+            @Override
             public void onSelected(int position, String value) {
                 //用户选择不喜欢原因后，移除广告展示
                 notifyAdDislikeClick();

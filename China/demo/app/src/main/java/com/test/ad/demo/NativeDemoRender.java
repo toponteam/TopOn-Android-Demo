@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.anythink.nativead.api.ATNativeAdRenderer;
@@ -27,6 +28,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     Context mContext;
     List<View> mClickView = new ArrayList<>();
+    View mCloseView;
 
     public NativeDemoRender(Context context) {
         mContext = context;
@@ -59,6 +61,12 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         FrameLayout iconArea = (FrameLayout) view.findViewById(R.id.native_ad_image);
         final ATNativeImageView logoView = (ATNativeImageView) view.findViewById(R.id.native_ad_logo);
 
+        // bind close button
+        CustomNativeAd.ExtraInfo extraInfo = new CustomNativeAd.ExtraInfo.Builder()
+                .setCloseView(mCloseView)
+                .build();
+        ad.setExtraInfo(extraInfo);
+
         titleView.setText("");
         descView.setText("");
         ctaView.setText("");
@@ -70,12 +78,15 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
 
-        if (ad.isNativeExpress()) {//是 个性化模板
+        if (ad.isNativeExpress()) {// 模板渲染（个性化模板、自动渲染）
             titleView.setVisibility(View.GONE);
             descView.setVisibility(View.GONE);
             ctaView.setVisibility(View.GONE);
             logoView.setVisibility(View.GONE);
             iconArea.setVisibility(View.GONE);
+            if (mCloseView != null) {
+                mCloseView.setVisibility(View.GONE);
+            }
             if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
@@ -84,14 +95,16 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             return;
         }
 
+        // 自渲染（自定义渲染）
 
         titleView.setVisibility(View.VISIBLE);
         descView.setVisibility(View.VISIBLE);
         ctaView.setVisibility(View.VISIBLE);
         logoView.setVisibility(View.VISIBLE);
         iconArea.setVisibility(View.VISIBLE);
-
-
+        if (mCloseView != null) {
+            mCloseView.setVisibility(View.VISIBLE);
+        }
         View adiconView = ad.getAdIconView();
 
 
@@ -157,5 +170,10 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     public List<View> getClickView() {
         return mClickView;
+    }
+
+    public void setCloseView(ImageView closeView) {
+        this.mCloseView = closeView;
+
     }
 }
