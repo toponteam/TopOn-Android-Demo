@@ -113,6 +113,7 @@ dependencies {
     api "com.mbridge.msdk.oversea:mbnativeadvanced:15.4.71"
     api "com.mbridge.msdk.oversea:mbbanner:15.4.71"
     api "com.mbridge.msdk.oversea:interactiveads:15.4.71"
+    api "com.mbridge.msdk.oversea:mbbid:15.4.71"
     api "com.google.android.exoplayer:exoplayer-core:2.12.2"
 
     //Mopub
