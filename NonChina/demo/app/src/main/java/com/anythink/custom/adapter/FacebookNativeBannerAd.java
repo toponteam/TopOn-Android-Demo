@@ -131,6 +131,7 @@ public class FacebookNativeBannerAd extends CustomNativeAd implements NativeAdLi
 
     @Override
     public void onLoggingImpression(Ad ad) {
+        notifyAdImpression();
     }
 
 

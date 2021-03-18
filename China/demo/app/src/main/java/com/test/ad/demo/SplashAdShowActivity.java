@@ -7,10 +7,11 @@
 
 package com.test.ad.demo;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
@@ -19,14 +20,17 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
+import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
-import com.anythink.splashad.api.ATSplashExListener;
+import com.anythink.splashad.api.ATSplashExListenerWithConfirmInfo;
+import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class SplashAdShowActivity extends FragmentActivity implements ATSplashExListener {
+public class SplashAdShowActivity extends Activity implements ATSplashExListenerWithConfirmInfo {
 
     private static final String TAG = SplashAdShowActivity.class.getSimpleName();
 
@@ -85,6 +89,10 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashEx
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
+
+        // Only for GDT (true: open download dialog, false: download directly)
+        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
+
         splashAd.setLocalExtra(localMap);
 
         if (splashAd.isAdReady()) {
@@ -150,5 +158,17 @@ public class SplashAdShowActivity extends FragmentActivity implements ATSplashEx
             splashAd.onDestory();
         }
 
+    }
+
+    @Override
+    public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+        /**
+         * Only for GDT
+         */
+        if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
+            //Open Dialog view
+            new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+            Log.i(TAG, "nonDownloadConfirm open confirm dialog");
+        }
     }
 }

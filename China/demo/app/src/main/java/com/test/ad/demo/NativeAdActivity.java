@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -22,14 +24,16 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.core.common.utils.CommonUtil;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventExListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.network.gdt.GDTDownloadFirmInfo;
+import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -73,6 +77,8 @@ public class NativeAdActivity extends Activity {
 
     int mCurrentSelectIndex;
 
+    CheckBox mDownloadConfimCheckBox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +87,7 @@ public class NativeAdActivity extends Activity {
         setContentView(R.layout.activity_native);
 
         Spinner spinner = (Spinner) findViewById(R.id.native_spinner);
+        mDownloadConfimCheckBox = findViewById(R.id.download_listener_check);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
@@ -95,6 +102,12 @@ public class NativeAdActivity extends Activity {
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 mCurrentSelectIndex = position;
+
+                if (unitGroupName[mCurrentSelectIndex] == "GDT") {
+                    mDownloadConfimCheckBox.setVisibility(View.VISIBLE);
+                } else {
+                    mDownloadConfimCheckBox.setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -177,6 +190,7 @@ public class NativeAdActivity extends Activity {
                         mNativeAd.destory();
                     }
                     mNativeAd = nativeAd;
+
                     mNativeAd.setNativeEventListener(new ATNativeEventExListener() {
                         @Override
                         public void onDeeplinkCallback(ATNativeAdView view, ATAdInfo adInfo, boolean isSuccess) {
@@ -218,6 +232,33 @@ public class NativeAdActivity extends Activity {
                             }
                         }
                     });
+
+                    if (mDownloadConfimCheckBox.isChecked()) {
+                        mNativeAd.setDownloadConfirmListener(new NativeAd.DownloadConfirmListener() {
+                            @Override
+                            public void onDownloadConfirm(Context context, ATAdInfo atAdInfo, View clickView, ATNetworkConfirmInfo networkConfirmInfo) {
+                                /**
+                                 * Only for GDT
+                                 */
+                                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
+                                    if (clickView != null && anyThinkRender.getDownloadDirectViews().contains(clickView)) {
+                                        //You can try to get appinfo from  ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl
+                                        ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
+                                    } else {
+                                        //Open Dialog view
+                                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
+//                                    new DownloadApkConfirmDialog(context, DownloadConfirmHelper.getApkJsonInfoUrl(((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl), ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                                    }
+                                }
+                            }
+                        });
+                        anyThinkRender.setWhetherSettingDownloadConfirmListener(true);
+                    } else {
+                        anyThinkRender.setWhetherSettingDownloadConfirmListener(false);
+                    }
+
+
                     try {
                         mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
                     } catch (Exception e) {
@@ -244,11 +285,11 @@ public class NativeAdActivity extends Activity {
             mCloseView = new ImageView(this);
             mCloseView.setImageResource(R.drawable.ad_close);
 
-            int padding = CommonUtil.dip2px(this, 5);
+            int padding = dip2px( 5);
             mCloseView.setPadding(padding, padding, padding, padding);
 
-            int size = CommonUtil.dip2px(this, 30);
-            int margin = CommonUtil.dip2px(this, 2);
+            int size = dip2px( 30);
+            int margin =dip2px(  2);
 
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
             layoutParams.topMargin = margin;

@@ -1,9 +1,9 @@
 -keepattributes Signature
 -keepattributes *Annotation*
--keep class com.mintegral.** {*; }
--keep interface com.mintegral.** {*; }
+-keep class com.mbridge.** {*; }
+-keep interface com.mbridge.** {*; }
 -keep interface androidx.** { *; }
 -keep class androidx.** { *; }
 -keep public class * extends androidx.** { *; }
--dontwarn com.mintegral.**
--keep class **.R$* { public static final int mintegral*; }
+-dontwarn com.mbridge.**
+-keep class **.R$* { public static final int mbridge*; }

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright © 2018-2020 TopOn. All rights reserved.
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
@@ -36,11 +35,22 @@
             android:layout_toRightOf="@id/loadAd_btn"
             android:text="Show Native Ad" />
 
+        <CheckBox
+            android:id="@+id/download_listener_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loadAd_btn"
+            android:padding="2dp"
+            android:text="Download Confirm"
+            android:checked="false"
+            android:textColor="#000000"
+            android:visibility="gone"/>
+
         <FrameLayout
             android:id="@+id/ad_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/loadAd_btn"/>
+            android:layout_below="@id/download_listener_check" />
 
 
     </RelativeLayout>

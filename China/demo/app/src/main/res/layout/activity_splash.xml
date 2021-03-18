@@ -22,6 +22,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/splash_spinner"
-        android:text="Show Splash Ad" />
+        android:text="Show Splash Ad In Other Activity" />
+
+    <Button
+        android:id="@+id/show_in_current_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_btn"
+        android:text="Show Splash Ad In Current Activity" />
+
 
 </RelativeLayout>

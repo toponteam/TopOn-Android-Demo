@@ -8,7 +8,9 @@
 package com.test.ad.demo;
 
 import android.content.Context;
+import android.text.Html;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 
 import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeImageView;
+import com.anythink.nativead.api.NativeAdInteractionType;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 
 import java.util.ArrayList;
@@ -28,10 +31,17 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     Context mContext;
     List<View> mClickView = new ArrayList<>();
+    List<View> mClickDownloadDirectViews = new ArrayList<>();
     View mCloseView;
+
+    boolean isSelfHandleDownloadConfirm;
 
     public NativeDemoRender(Context context) {
         mContext = context;
+    }
+
+    public void setWhetherSettingDownloadConfirmListener(boolean isSelfHandle){
+        isSelfHandleDownloadConfirm = isSelfHandle;
     }
 
     View mDevelopView;
@@ -52,6 +62,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     @Override
     public void renderAdView(View view, CustomNativeAd ad) {
+        List<View> customDownloadViews = new ArrayList<>();
         mClickView.clear();
         TextView titleView = (TextView) view.findViewById(R.id.native_ad_title);
         TextView descView = (TextView) view.findViewById(R.id.native_ad_desc);
@@ -60,12 +71,38 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         FrameLayout contentArea = (FrameLayout) view.findViewById(R.id.native_ad_content_image_area);
         FrameLayout iconArea = (FrameLayout) view.findViewById(R.id.native_ad_image);
         final ATNativeImageView logoView = (ATNativeImageView) view.findViewById(R.id.native_ad_logo);
+        View versionArea = view.findViewById(R.id.native_ad_version_area);
+        TextView versionTextView = view.findViewById(R.id.native_ad_version);
+        versionTextView.setText(Html.fromHtml("<u>" + "版本" + "</u>"));
+
+
+        if (mNetworkType == 8 && isSelfHandleDownloadConfirm) {
+            customDownloadViews.add(versionTextView);
+            versionTextView.setVisibility(View.VISIBLE);
+        } else {
+            versionTextView.setVisibility(View.GONE);
+        }
+
+        //bind view to download directly(Only for Baidu, GDT)
+        //(For GDT):If NativeAd call setDownloadConfirmListener, these views' click event will callback to NativeAd.DownloadConfirmListener.onDownloadConfirm and you must handle these event)
+        customDownloadViews.add(ctaView);
 
         // bind close button
         CustomNativeAd.ExtraInfo extraInfo = new CustomNativeAd.ExtraInfo.Builder()
                 .setCloseView(mCloseView)
+                .setCustomViewList(customDownloadViews) //bind view to download directly(Only for Baidu, GDT, GDT must handle click confirm in DownloadConfirmListener)
                 .build();
+
         ad.setExtraInfo(extraInfo);
+
+        mClickDownloadDirectViews = new ArrayList<>();
+        //Only for GDT && Baidu
+        if (mNetworkType == 8 || mNetworkType == 22) {
+            mClickDownloadDirectViews.add(ctaView);
+        } else {
+            mClickView.add(ctaView);
+        }
+
 
         titleView.setText("");
         descView.setText("");
@@ -77,6 +114,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         logoView.setImageDrawable(null);
 
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
+
+        Log.i("NativeDemoRender", "Ad Interaction type:" + (ad.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOW"));
 
         if (ad.isNativeExpress()) {// 模板渲染（个性化模板、自动渲染）
             titleView.setVisibility(View.GONE);
@@ -90,6 +129,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
+            versionArea.setVisibility(View.GONE);
 
             contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
             return;
@@ -102,6 +142,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         ctaView.setVisibility(View.VISIBLE);
         logoView.setVisibility(View.VISIBLE);
         iconArea.setVisibility(View.VISIBLE);
+        versionArea.setVisibility(View.VISIBLE);
         if (mCloseView != null) {
             mCloseView.setVisibility(View.VISIBLE);
         }
@@ -150,7 +191,6 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         if (!TextUtils.isEmpty(ad.getCallToActionText())) {
             ctaView.setVisibility(View.VISIBLE);
             ctaView.setText(ad.getCallToActionText());
-            mClickView.add(ctaView);
         } else {
             ctaView.setVisibility(View.GONE);
         }
@@ -166,6 +206,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         mClickView.add(titleView);
         mClickView.add(descView);
 
+
     }
 
     public List<View> getClickView() {
@@ -175,5 +216,9 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
     public void setCloseView(ImageView closeView) {
         this.mCloseView = closeView;
 
+    }
+
+    public List<View> getDownloadDirectViews() {
+        return mClickDownloadDirectViews;
     }
 }

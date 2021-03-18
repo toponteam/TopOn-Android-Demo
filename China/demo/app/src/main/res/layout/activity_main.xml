@@ -87,5 +87,15 @@
             android:gravity="center"
             android:text="Splash Demo"
             android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/multiLoadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Multi Format Load Demo"
+            android:textSize="15dp" />
+
     </LinearLayout>
 </ScrollView>
