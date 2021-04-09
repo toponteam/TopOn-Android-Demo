@@ -9,7 +9,7 @@ apply from: 'topon.gradle'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.superapp.filemanager"
+        applicationId "com.anythink.sdk.demo"
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
@@ -39,4 +39,9 @@ dependencies {
     }
 
     api 'androidx.multidex:multidex:2.0.1'
+
+    implementation ('androidx.preference:preference:1.1.1') {
+        exclude module: 'recyclerview'
+    }
+
 }

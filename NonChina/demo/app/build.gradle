@@ -20,9 +20,11 @@ networkLibsPath.add("chartboost");
 networkLibsPath.add("facebook");
 networkLibsPath.add("inmobi");
 networkLibsPath.add("ironsource");
+networkLibsPath.add("kidoz")
 networkLibsPath.add("maio");
 networkLibsPath.add("mintegral");
 networkLibsPath.add("mopub");
+networkLibsPath.add("mytarget")
 networkLibsPath.add("nend");
 networkLibsPath.add("ogury");
 networkLibsPath.add("startapp");
@@ -36,7 +38,7 @@ networkLibsPath.add("huawei")
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.superapp.filemanager"
+        applicationId "com.anythink.sdk.demo"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -128,6 +130,10 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.browser:browser:1.0.0'
+
+    implementation ('androidx.preference:preference:1.1.1') {
+        exclude module: 'recyclerview'
+    }
 
     //Mopub
     implementation 'androidx.media2:media2-session:1.0.1'

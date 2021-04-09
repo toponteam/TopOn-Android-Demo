@@ -20,6 +20,7 @@ import com.anythink.nativead.banner.api.ATNativeBannerConfig;
 import com.anythink.nativead.banner.api.ATNativeBannerListener;
 import com.anythink.nativead.banner.api.ATNativeBannerSize;
 import com.anythink.nativead.banner.api.ATNativeBannerView;
+import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class NativeBannerActivity extends Activity {
         config640.ctaBgColor = 0xff000000;
         bannerView.setBannerConfig(config640);
 
-        bannerView.setUnitId(DemoApplicaion.mPlacementId_native_all);
+        bannerView.setUnitId(PlacementIdUtil.getNativePlacements(this).get("All"));
         bannerView.setVisibility(View.GONE);
         LinearLayout.LayoutParams params640 = new LinearLayout.LayoutParams(dip2px(this, 360), dip2px(this, 75));
         params640.topMargin = dip2px(this, 10);
@@ -91,7 +92,7 @@ public class NativeBannerActivity extends Activity {
         config320.ctaBgColor = 0xff000000;
         bannerView320.setBannerConfig(config320);
 
-        bannerView320.setUnitId(DemoApplicaion.mPlacementId_native_toutiao);
+        bannerView320.setUnitId(PlacementIdUtil.getNativePlacements(this).get("Toutiao"));
         bannerView320.setVisibility(View.GONE);
         bannerView320.setBackgroundColor(0xffffffff);
         LinearLayout.LayoutParams params320 = new LinearLayout.LayoutParams(dip2px(this, 320), dip2px(this, 50));
@@ -138,7 +139,7 @@ public class NativeBannerActivity extends Activity {
 
 
         final ATNativeBannerView bannerViewAuto = new ATNativeBannerView(this);
-        bannerViewAuto.setUnitId(DemoApplicaion.mPlacementId_native_toutiao);
+        bannerViewAuto.setUnitId(PlacementIdUtil.getNativePlacements(this).get("Toutiao"));
         bannerViewAuto.setVisibility(View.GONE);
         ATNativeBannerConfig configAuto = new ATNativeBannerConfig();
         configAuto.bannerSize = ATNativeBannerSize.BANNER_SIZE_AUTO;

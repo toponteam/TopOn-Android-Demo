@@ -22,66 +22,18 @@ import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.admob.AdmobATConst;
+import com.test.ad.demo.util.PlacementIdUtil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BannerAdActivity extends Activity {
 
     private static final String TAG = BannerAdActivity.class.getSimpleName();
 
-    String placementIds[] = new String[]{
-            DemoApplicaion.mPlacementId_banner_all
-            , DemoApplicaion.mPlacementId_banner_admob
-            , DemoApplicaion.mPlacementId_banner_facebook
-            , DemoApplicaion.mPlacementId_banner_inmobi
-            , DemoApplicaion.mPlacementId_banner_applovin
-            , DemoApplicaion.mPlacementId_banner_mintegral
-            , DemoApplicaion.mPlacementId_banner_mopub
-            , DemoApplicaion.mPlacementId_banner_appnext
-            , DemoApplicaion.mPlacementId_banner_nend
-            , DemoApplicaion.mPlacementId_banner_fyber
-            , DemoApplicaion.mPlacementId_banner_startapp
-            , DemoApplicaion.mPlacementId_banner_vungle
-            , DemoApplicaion.mPlacementId_banner_adcolony
-            , DemoApplicaion.mPlacementId_banner_chartboost
-            , DemoApplicaion.mPlacementId_banner_googleAdManager
-            , DemoApplicaion.mPlacementId_banner_myoffer
-            , DemoApplicaion.mPlacementId_banner_huawei
-            , DemoApplicaion.mPlacementId_banner_unityads
-            , DemoApplicaion.mPLacementId_banner_kidoz
-            , DemoApplicaion.mPLacementId_banner_mytarget
-            , DemoApplicaion.mPlacementId_banner_toutiao
-
-    };
-
-    String unitGroupName[] = new String[]{
-            "All",
-            "Admob",
-            "Facebook",
-            "Inmobi",
-            "Applovin",
-            "Mintegral",
-            "Mopub",
-            "Appnext",
-            "Nend",
-            "Fyber",
-            "StartApp",
-            "Vungle",
-            "AdColony",
-            "Chartboost",
-            "Google Ad Manager",
-            "MyOffer",
-            "Huawei",
-            "UnityAds",
-            "Kidoz",
-            "MyTarget",
-            "Pangle"
-    };
-
     ATBannerView mBannerView;
-
-    int mCurrentSelectIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,10 +41,13 @@ public class BannerAdActivity extends Activity {
 
         setContentView(R.layout.activity_banner);
 
+        Map<String, String> placementIdMap = PlacementIdUtil.getBannerPlacements(this);
+        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
+
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new ATBannerView(this);
-        mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
+        mBannerView.setPlacementId(placementIdMap.get(placementNameList.get(0)));
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
@@ -155,7 +110,7 @@ public class BannerAdActivity extends Activity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 BannerAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                unitGroupName);
+                placementNameList);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -165,8 +120,8 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
-                mCurrentSelectIndex = position;
-                mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
+                String placementName = parent.getSelectedItem().toString();
+                mBannerView.setPlacementId(placementIdMap.get(placementName));
                 mBannerView.setVisibility(View.VISIBLE);
             }
 
@@ -179,13 +134,10 @@ public class BannerAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String, String> maps = new HashMap<>();
                 //since v5.6.5
                 Map<String, Object> localExtra = new HashMap<>();
                 localExtra.put(AdmobATConst.ADAPTIVE_TYPE, AdmobATConst.ADAPTIVE_ANCHORED);
                 localExtra.put(AdmobATConst.ADAPTIVE_ORIENTATION, AdmobATConst.ORIENTATION_CURRENT);
-//                localExtra.put(AdmobATConst.INLINE_ADAPTIVE_ORIENTATION, AdmobATConst.ORIENTATION_PORTRAIT);
-//                localExtra.put(AdmobATConst.INLINE_ADAPTIVE_ORIENTATION, AdmobATConst.ORIENTATION_LANDSCAPE);
                 localExtra.put(AdmobATConst.ADAPTIVE_WIDTH, getResources().getDisplayMetrics().widthPixels);
                 mBannerView.setLocalExtra(localExtra);
 

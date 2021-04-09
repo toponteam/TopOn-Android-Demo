@@ -96,8 +96,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         ad.setExtraInfo(extraInfo);
 
         mClickDownloadDirectViews = new ArrayList<>();
-        //Only for GDT && Baidu
-        if (mNetworkType == 8 || mNetworkType == 22) {
+        //Only for GDT
+        if (mNetworkType == 8) {
             mClickDownloadDirectViews.add(ctaView);
         } else {
             mClickView.add(ctaView);
