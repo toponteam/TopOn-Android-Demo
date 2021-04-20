@@ -10,7 +10,6 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -35,18 +34,42 @@ import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
-import com.test.ad.demo.util.PlacementIdUtil;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class NativeAdActivity extends Activity {
 
     private static final String TAG = NativeAdActivity.class.getSimpleName();
 
-    ATNative[] atNatives;
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_native_all
+            , DemoApplicaion.mPlacementId_native_mintegral
+            , DemoApplicaion.mPLacementId_native_automatic_rending_mintegral
+            , DemoApplicaion.mPlacementId_native_GDT
+            , DemoApplicaion.mPlacementId_native_toutiao
+            , DemoApplicaion.mPlacementId_native_toutiao_drawer
+            , DemoApplicaion.mPlacementId_native_baidu
+            , DemoApplicaion.mPlacementId_native_kuaishou
+            , DemoApplicaion.mPlacementId_native_kuaishou_drawer
+            , DemoApplicaion.mPlacementId_native_myoffer
+
+    };
+
+    String unitGroupName[] = new String[]{
+            "All network",
+            "Mintegral",
+            "Mintegral auto-rending",
+            "GDT",
+            "Toutiao",
+            "Toutiao_drawer",
+            "Baidu",
+            "Kuaishou",
+            "Kuaishou-draw",
+            "MyOffer"
+    };
+
+    ATNative atNatives[] = new ATNative[placementIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
@@ -63,28 +86,24 @@ public class NativeAdActivity extends Activity {
 
         setContentView(R.layout.activity_native);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getNativePlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-
-        atNatives = new ATNative[placementNameList.size()];
-
         Spinner spinner = (Spinner) findViewById(R.id.native_spinner);
         mDownloadConfimCheckBox = findViewById(R.id.download_listener_check);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
+                unitGroupName);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                String networkName = parent.getItemAtPosition(position).toString();
-                Toast.makeText(NativeAdActivity.this, networkName, Toast.LENGTH_SHORT).show();
+                Toast.makeText(NativeAdActivity.this,
+                        parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
                 mCurrentSelectIndex = position;
 
-                if (TextUtils.equals(networkName, "GDT")) {
+                if (unitGroupName[mCurrentSelectIndex] == "GDT") {
                     mDownloadConfimCheckBox.setVisibility(View.VISIBLE);
                 } else {
                     mDownloadConfimCheckBox.setVisibility(View.GONE);
@@ -106,8 +125,8 @@ public class NativeAdActivity extends Activity {
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
         anyThinkRender.setCloseView(mCloseView);
 
-        for (int i = 0; i < placementNameList.size(); i++) {
-            atNatives[i] = new ATNative(this, placementIdMap.get(placementNameList.get(i)), new ATNativeNetworkListener() {
+        for (int i = 0; i < placementIds.length; i++) {
+            atNatives[i] = new ATNative(this, placementIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Log.i(TAG, "onNativeAdLoaded");
@@ -132,6 +151,14 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (anyThinkNativeAdView != null) {
+                    anyThinkNativeAdView.removeAllViews();
+
+                    if (anyThinkNativeAdView.getParent() == null) {
+                        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+                    }
+                }
 
                 Map<String, Object> localMap = new HashMap<>();
 
@@ -163,6 +190,7 @@ public class NativeAdActivity extends Activity {
                         mNativeAd.destory();
                     }
                     mNativeAd = nativeAd;
+
                     mNativeAd.setNativeEventListener(new ATNativeEventExListener() {
                         @Override
                         public void onDeeplinkCallback(ATNativeAdView view, ATAdInfo adInfo, boolean isSuccess) {
@@ -257,11 +285,11 @@ public class NativeAdActivity extends Activity {
             mCloseView = new ImageView(this);
             mCloseView.setImageResource(R.drawable.ad_close);
 
-            int padding = dip2px(5);
+            int padding = dip2px( 5);
             mCloseView.setPadding(padding, padding, padding, padding);
 
-            int size = dip2px(30);
-            int margin = dip2px(2);
+            int size = dip2px( 30);
+            int margin =dip2px(  2);
 
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
             layoutParams.topMargin = margin;

@@ -20,15 +20,42 @@ import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialExListener;
-import com.test.ad.demo.util.PlacementIdUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class InterstitialAdActivity extends Activity {
 
     private static final String TAG = InterstitialAdActivity.class.getSimpleName();
+
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_interstitial_all
+            , DemoApplicaion.mPlacementId_interstitial_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_video_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_GDT
+            , DemoApplicaion.mPlacementId_interstitial_video_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_baidu
+            , DemoApplicaion.mPlacementId_interstitial_kuaishou
+            , DemoApplicaion.mPlacementId_interstitial_sigmob
+            , DemoApplicaion.mPlacementId_interstitial_myoffer
+    };
+
+    String unitGroupName[] = new String[]{
+            "All network",
+            "Mintegral",
+            "Mintegral video",
+            "GDT",
+            "Toutiao video",
+            "Toutiao",
+            "Baidu",
+            "Kuaishou",
+            "Sigmob",
+            "Myoffer"
+    };
+
+    RadioGroup mRadioGroup;
+
+
+    int mCurrentSelectIndex;
+
 
     ATInterstitial mInterstitialAd;
 
@@ -37,31 +64,27 @@ public class InterstitialAdActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getInterstitialPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
+        mRadioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
-
-        for (int i = 0; i < placementNameList.size(); i++) {
+        for (int i = 0; i < placementIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
             radioButton.setPadding(20, 20, 20, 20);
-            radioButton.setText(placementNameList.get(i));
+            radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
-            radioGroup.addView(radioButton);
+            mRadioGroup.addView(radioButton);
         }
 
-        radioGroup.check(0);
+        mRadioGroup.check(0);
 
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                String placementName = placementNameList.get(i);
-                init(placementIdMap.get(placementName));
+                mCurrentSelectIndex = i;
+                init();
             }
         });
 
-        String placementName = placementNameList.get(0);
-        init(placementIdMap.get(placementName));
+        init();
 
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,8 +113,8 @@ public class InterstitialAdActivity extends Activity {
     }
 
 
-    private void init(String placementId) {
-        mInterstitialAd = new ATInterstitial(this, placementId);
+    private void init() {
+        mInterstitialAd = new ATInterstitial(this, placementIds[mCurrentSelectIndex]);
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
 
             @Override

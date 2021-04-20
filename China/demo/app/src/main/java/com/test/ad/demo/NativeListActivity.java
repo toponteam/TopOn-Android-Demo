@@ -26,7 +26,6 @@ import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,13 +46,13 @@ public class NativeListActivity extends Activity {
     private int lastCompletelyVisibleItemPosition = -1;
 
     String placementIds[] = new String[]{
-            PlacementIdUtil.getNativePlacements(this).get("Toutiao")
-//            ResourceUtils.getNativePlacements(this).get("All")
-//            ResourceUtils.getNativePlacements(this).get("Mintegral")
-//            ResourceUtils.getNativePlacements(this).get("GDT")
-//            ResourceUtils.getNativePlacements(this).get("Toutiao")
-//            ResourceUtils.getNativePlacements(this).get("Toutiao Draw")
-//            ResourceUtils.getNativePlacements(this).get("Baidu")
+            DemoApplicaion.mPlacementId_native_toutiao
+//            DemoApplicaion.mPlacementId_native_all
+//            , DemoApplicaion.mPlacementId_native_mintegral
+//            , DemoApplicaion.mPlacementId_native_GDT
+//            , DemoApplicaion.mPlacementId_native_toutiao
+//            , DemoApplicaion.mPlacementId_native_toutiao_drawer
+//            , DemoApplicaion.mPlacementId_native_baidu
 
     };
 

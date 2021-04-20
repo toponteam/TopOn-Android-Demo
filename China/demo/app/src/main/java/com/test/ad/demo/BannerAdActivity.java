@@ -21,17 +21,32 @@ import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
-import com.test.ad.demo.util.PlacementIdUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class BannerAdActivity extends Activity {
 
     private static final String TAG = BannerAdActivity.class.getSimpleName();
 
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_banner_all
+            , DemoApplicaion.mPlacementId_banner_GDT
+            , DemoApplicaion.mPlacementId_banner_toutiao
+            , DemoApplicaion.mPlacementId_banner_mintegral
+            , DemoApplicaion.mPLacementId_banner_baidu
+            , DemoApplicaion.mPlacementId_banner_myoffer
+    };
+
+    String unitGroupName[] = new String[]{
+            "All",
+            "GDT",
+            "Toutiao",
+            "Mintegral",
+            "Baidu",
+            "MyOffer"
+    };
+
     ATBannerView mBannerView;
+
+    int mCurrentSelectIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +54,10 @@ public class BannerAdActivity extends Activity {
 
         setContentView(R.layout.activity_banner);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getBannerPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new ATBannerView(this);
-        mBannerView.setPlacementId(placementIdMap.get(placementNameList.get(0)));
+        mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
@@ -108,7 +120,7 @@ public class BannerAdActivity extends Activity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 BannerAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
+                unitGroupName);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -118,10 +130,9 @@ public class BannerAdActivity extends Activity {
                 Toast.makeText(BannerAdActivity.this,
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
-                String placementName = parent.getSelectedItem().toString();
-                mBannerView.setPlacementId(placementIdMap.get(placementName));
+                mCurrentSelectIndex = position;
+                mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
                 mBannerView.setVisibility(View.VISIBLE);
-
             }
 
             @Override
@@ -133,6 +144,7 @@ public class BannerAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mBannerView.setPlacementId(placementIds[mCurrentSelectIndex]);
                 mBannerView.loadAd();
             }
         });

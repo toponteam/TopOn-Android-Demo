@@ -17,7 +17,6 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.nativead.splash.api.ATNativeSplash;
 import com.anythink.nativead.splash.api.ATNativeSplashListener;
-import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,8 +29,7 @@ public class NativeSplashActivity extends Activity {
         setContentView(R.layout.activity_native_splash);
         FrameLayout splashView = findViewById(R.id.native_splash_view);
         Map<String, Object> localMap = new HashMap<>();
-        String placementId = PlacementIdUtil.getNativePlacements(this).get("All");
-        ATNativeSplash splash = new ATNativeSplash(this, splashView, null, placementId, localMap, new ATNativeSplashListener() {
+        ATNativeSplash splash = new ATNativeSplash(this, splashView, null, DemoApplicaion.mPlacementId_native_all, localMap, new ATNativeSplashListener() {
             @Override
             public void onAdLoaded() {
                 Log.i("SplashActivity", "Develop callback loaded");

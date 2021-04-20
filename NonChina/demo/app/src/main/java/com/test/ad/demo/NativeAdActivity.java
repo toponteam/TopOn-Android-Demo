@@ -23,24 +23,61 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
+import com.anythink.core.common.utils.CommonUtil;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventExListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
-import com.test.ad.demo.util.PlacementIdUtil;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class NativeAdActivity extends Activity {
 
     private static final String TAG = NativeAdActivity.class.getSimpleName();
 
-    ATNative[] atNatives;
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_native_all
+            , DemoApplicaion.mPlacementId_native_facebook
+            , DemoApplicaion.mPlacementId_native_banner_facebook
+            , DemoApplicaion.mPlacementId_native_admob
+            , DemoApplicaion.mPlacementId_native_inmobi
+            , DemoApplicaion.mPlacementId_native_applovin
+            , DemoApplicaion.mPlacementId_native_mintegral
+            , DemoApplicaion.mPLacementId_native_automatic_rending_mintegral
+            , DemoApplicaion.mPlacementId_native_mopub
+            , DemoApplicaion.mPlacementId_native_appnext
+            , DemoApplicaion.mPlacementId_native_nend
+            , DemoApplicaion.mPlacementId_native_googleAdManager
+            , DemoApplicaion.mPlacementId_native_myoffer
+            , DemoApplicaion.mPlacementId_native_huawei
+            , DemoApplicaion.mPlacementId_native_toutiao
+            , DemoApplicaion.mPlacementId_native_toutiao_drawer
+
+    };
+
+    String unitGroupName[] = new String[]{
+            "All network",
+            "Facebook",
+            "Faceboon native banner",
+            "Admob",
+            "Inmobi",
+            "Applovin",
+            "Mintegral",
+            "Mintegral auto-rending",
+            "Mopub",
+            "Appnext",
+            "Nend",
+            "Google Ad Manager",
+            "MyOffer",
+            "Huawei",
+            "Pangle Feed",
+            "Pangle Draw"
+    };
+
+    ATNative atNatives[] = new ATNative[placementIds.length];
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
 
@@ -55,16 +92,11 @@ public class NativeAdActivity extends Activity {
 
         setContentView(R.layout.activity_native);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getNativePlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-
-        atNatives = new ATNative[placementNameList.size()];
-
         Spinner spinner = (Spinner) findViewById(R.id.native_spinner);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
+                unitGroupName);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -92,8 +124,8 @@ public class NativeAdActivity extends Activity {
         final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
         anyThinkRender.setCloseView(mCloseView);
 
-        for (int i = 0; i < placementNameList.size(); i++) {
-            atNatives[i] = new ATNative(this, placementIdMap.get(placementNameList.get(i)), new ATNativeNetworkListener() {
+        for (int i = 0; i < placementIds.length; i++) {
+            atNatives[i] = new ATNative(this, placementIds[i], new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     Log.i(TAG, "onNativeAdLoaded");
@@ -118,6 +150,14 @@ public class NativeAdActivity extends Activity {
         findViewById(R.id.loadAd_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (anyThinkNativeAdView != null) {
+                    anyThinkNativeAdView.removeAllViews();
+
+                    if (anyThinkNativeAdView.getParent() == null) {
+                        ((FrameLayout) findViewById(R.id.ad_container)).addView(anyThinkNativeAdView, new FrameLayout.LayoutParams(getResources().getDisplayMetrics().widthPixels, containerHeight));
+                    }
+                }
 
                 Map<String, Object> localMap = new HashMap<>();
 
@@ -216,11 +256,11 @@ public class NativeAdActivity extends Activity {
             mCloseView = new ImageView(this);
             mCloseView.setImageResource(R.drawable.ad_close);
 
-            int padding = dip2px(5);
+            int padding = CommonUtil.dip2px(this, 5);
             mCloseView.setPadding(padding, padding, padding, padding);
 
-            int size = dip2px(30);
-            int margin = dip2px(2);
+            int size = CommonUtil.dip2px(this, 30);
+            int margin = CommonUtil.dip2px(this, 2);
 
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
             layoutParams.topMargin = margin;

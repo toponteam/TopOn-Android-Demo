@@ -20,15 +20,78 @@ import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialExListener;
-import com.test.ad.demo.util.PlacementIdUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class InterstitialAdActivity extends Activity {
 
     private static final String TAG = InterstitialAdActivity.class.getSimpleName();
+
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_interstitial_all
+            , DemoApplicaion.mPlacementId_interstitial_facebook
+            , DemoApplicaion.mPlacementId_interstitial_admob
+            , DemoApplicaion.mPlacementId_interstitial_inmobi
+            , DemoApplicaion.mPlacementId_interstitial_applovin
+            , DemoApplicaion.mPlacementId_interstitial_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_video_mintegral
+            , DemoApplicaion.mPlacementId_interstitial_mopub
+            , DemoApplicaion.mPlacementId_interstitial_CHARTBOOST
+            , DemoApplicaion.mPlacementId_interstitial_TAPJOY
+            , DemoApplicaion.mPlacementId_interstitial_IRONSOURCE
+            , DemoApplicaion.mPlacementId_interstitial_UNITYAD
+            , DemoApplicaion.mPlacementId_interstitial_vungle
+            , DemoApplicaion.mPlacementId_interstitial_adcolony
+            , DemoApplicaion.mPlacementId_interstitial_appnext
+            , DemoApplicaion.mPlacementId_interstitial_nend
+            , DemoApplicaion.mPlacementId_interstitia_maio
+            , DemoApplicaion.mPlacementId_interstitia_startapp
+            , DemoApplicaion.mPlacementId_interstitial_myoffer
+            , DemoApplicaion.mPlacementId_interstitial_ogury
+            , DemoApplicaion.mPlacementId_interstitial_fyber
+            , DemoApplicaion.mPlacementId_interstitial_googleAdManager
+            , DemoApplicaion.mPlacementId_interstitial_huawei
+            , DemoApplicaion.mPlacementId_interstitial_kidoz
+            , DemoApplicaion.mPlacementId_interstitial_mytarget
+            , DemoApplicaion.mPlacementId_interstitial_toutiao
+            , DemoApplicaion.mPlacementId_interstitial_toutiao_video
+    };
+
+    String unitGroupName[] = new String[]{
+            "All network",
+            "Facebook",
+            "Admob",
+            "Inmobi",
+            "Applovin",
+            "Mintegral",
+            "Mintegral video",
+            "Mopub",
+            "Chartboost",
+            "Tapjoy",
+            "Ironsource",
+            "Unity3d",
+            "Vungle",
+            "Adcolony",
+            "Appnext",
+            "Nend",
+            "Maio",
+            "Startapp",
+            "Myoffer",
+            "Ogury",
+            "Fyber",
+            "Google Ad Manager",
+            "Huawei",
+            "Adx",
+            "OnlineApi",
+            "Kidoz",
+            "MyTarget",
+            "Pangle",
+            "Pangle FullVideo"
+    };
+
+    RadioGroup mRadioGroup;
+
+
+    int mCurrentSelectIndex;
+
 
     ATInterstitial mInterstitialAd;
 
@@ -37,31 +100,27 @@ public class InterstitialAdActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getInterstitialPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
+        mRadioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
-
-        for (int i = 0; i < placementNameList.size(); i++) {
+        for (int i = 0; i < placementIds.length; i++) {
             RadioButton radioButton = new RadioButton(this);
             radioButton.setPadding(20, 20, 20, 20);
-            radioButton.setText(placementNameList.get(i));
+            radioButton.setText(unitGroupName[i]);
             radioButton.setId(i);
-            radioGroup.addView(radioButton);
+            mRadioGroup.addView(radioButton);
         }
 
-        radioGroup.check(0);
+        mRadioGroup.check(0);
 
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                String placementName = placementNameList.get(i);
-                init(placementIdMap.get(placementName));
+                mCurrentSelectIndex = i;
+                init();
             }
         });
 
-        String placementName = placementNameList.get(0);
-        init(placementIdMap.get(placementName));
+        init();
 
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,8 +147,8 @@ public class InterstitialAdActivity extends Activity {
     }
 
 
-    private void init(String placementId) {
-        mInterstitialAd = new ATInterstitial(this, placementId);
+    private void init() {
+        mInterstitialAd = new ATInterstitial(this, placementIds[mCurrentSelectIndex]);
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
 
             @Override

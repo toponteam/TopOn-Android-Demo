@@ -16,28 +16,31 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.test.ad.demo.util.PlacementIdUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class SplashAdActivity extends Activity {
+    String placementIds[] = new String[]{
+            DemoApplicaion.mPlacementId_splash_admob,
+            DemoApplicaion.mPlacementId_splash_mintegral,
+            DemoApplicaion.mPlacementId_splash_myoffer,
+//            ,
+//            DemoApplicaion.mPlacementId_splash_huawei
+    };
 
-    String mCurrentPlacementName;
+    String unitGroupName[] = new String[]{
+            "Admob", "Mintegral", "MyOffer"
+//            , "Huawei"
+    };
 
+    int mCurrentSelectIndex;
+    Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getSplashPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-
-        Spinner spinner = (Spinner) findViewById(R.id.splash_spinner);
+        spinner = (Spinner) findViewById(R.id.splash_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 SplashAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
+                unitGroupName);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -47,7 +50,7 @@ public class SplashAdActivity extends Activity {
                 Toast.makeText(SplashAdActivity.this,
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
-                mCurrentPlacementName = parent.getSelectedItem().toString();
+                mCurrentSelectIndex = position;
             }
 
             @Override
@@ -60,7 +63,7 @@ public class SplashAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
+                intent.putExtra("placementId", placementIds[mCurrentSelectIndex]);
                 startActivity(intent);
             }
         });
