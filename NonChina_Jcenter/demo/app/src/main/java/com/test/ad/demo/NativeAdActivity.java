@@ -23,7 +23,7 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
-//import com.anythink.core.common.utils.CommonUtil;
+import com.anythink.core.common.utils.CommonUtil;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
@@ -256,11 +256,11 @@ public class NativeAdActivity extends Activity {
             mCloseView = new ImageView(this);
             mCloseView.setImageResource(R.drawable.ad_close);
 
-            int padding = dip2px(5);
+            int padding = CommonUtil.dip2px(this, 5);
             mCloseView.setPadding(padding, padding, padding, padding);
 
-            int size = dip2px( 30);
-            int margin = dip2px(2);
+            int size = CommonUtil.dip2px(this, 30);
+            int margin = CommonUtil.dip2px(this, 2);
 
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
             layoutParams.topMargin = margin;
