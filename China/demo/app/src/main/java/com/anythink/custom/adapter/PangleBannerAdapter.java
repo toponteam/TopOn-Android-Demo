@@ -293,6 +293,13 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
             }
 
             @Override
+            public void onSelected(int i, String s, boolean b) {
+                if (mImpressionEventListener != null) {
+                    mImpressionEventListener.onBannerAdClose();
+                }
+            }
+
+            @Deprecated
             public void onSelected(int position, String value) {
                 if (mImpressionEventListener != null) {
                     mImpressionEventListener.onBannerAdClose();
@@ -303,7 +310,7 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
             public void onCancel() {
             }
 
-            @Override
+            @Deprecated
             public void onRefuse() {
 
             }

@@ -9,6 +9,7 @@ package com.test.ad.demo;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,14 +37,14 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     View mDevelopView;
 
-    int mNetworkType;
+    int mNetworkFirmId;
 
     @Override
-    public View createView(Context context, int networkType) {
+    public View createView(Context context, int networkFirmId) {
         if (mDevelopView == null) {
             mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
         }
-        mNetworkType = networkType;
+        mNetworkFirmId = networkFirmId;
         if (mDevelopView.getParent() != null) {
             ((ViewGroup) mDevelopView.getParent()).removeView(mDevelopView);
         }
@@ -77,6 +78,17 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         logoView.setImageDrawable(null);
 
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
+
+        String type = CustomNativeAd.NativeAdConst.UNKNOWN_TYPE;
+        switch (ad.getAdType()) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                type = "Video";
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                type = "Image";
+                break;
+        }
+        Log.i("NativeDemoRender", "Ad type:" + type);
 
         if (ad.isNativeExpress()) {// Template rendering
             titleView.setVisibility(View.GONE);

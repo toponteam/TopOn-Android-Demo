@@ -46,14 +46,14 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     View mDevelopView;
 
-    int mNetworkType;
+    int mNetworkFirmId;
 
     @Override
-    public View createView(Context context, int networkType) {
+    public View createView(Context context, int networkFirmId) {
         if (mDevelopView == null) {
             mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
         }
-        mNetworkType = networkType;
+        mNetworkFirmId = networkFirmId;
         if (mDevelopView.getParent() != null) {
             ((ViewGroup) mDevelopView.getParent()).removeView(mDevelopView);
         }
@@ -76,7 +76,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         versionTextView.setText(Html.fromHtml("<u>" + "版本" + "</u>"));
 
 
-        if (mNetworkType == 8 && isSelfHandleDownloadConfirm) {
+        if (mNetworkFirmId == 8 && isSelfHandleDownloadConfirm) {
             customDownloadViews.add(versionTextView);
             versionTextView.setVisibility(View.VISIBLE);
         } else {
@@ -96,8 +96,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         ad.setExtraInfo(extraInfo);
 
         mClickDownloadDirectViews = new ArrayList<>();
-        //Only for GDT && Baidu
-        if (mNetworkType == 8 || mNetworkType == 22) {
+        //Only for GDT
+        if (mNetworkFirmId == 8) {
             mClickDownloadDirectViews.add(ctaView);
         } else {
             mClickView.add(ctaView);
@@ -116,6 +116,17 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         View mediaView = ad.getAdMediaView(contentArea, contentArea.getWidth());
 
         Log.i("NativeDemoRender", "Ad Interaction type:" + (ad.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOW"));
+
+        String type = CustomNativeAd.NativeAdConst.UNKNOWN_TYPE;
+        switch (ad.getAdType()) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                type = "Video";
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                type = "Image";
+                break;
+        }
+        Log.i("NativeDemoRender", "Ad type:" + type);
 
         if (ad.isNativeExpress()) {// 模板渲染（个性化模板、自动渲染）
             titleView.setVisibility(View.GONE);

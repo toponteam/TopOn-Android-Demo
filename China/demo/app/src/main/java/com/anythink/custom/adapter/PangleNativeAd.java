@@ -179,6 +179,11 @@ public class PangleNativeAd extends CustomNativeAd {
                             }
 
                             @Override
+                            public void onSelected(int i, String s, boolean b) {
+                                notifyAdDislikeClick();
+                            }
+
+                            @Deprecated
                             public void onSelected(int i, String s) {
                                 notifyAdDislikeClick();
                             }
@@ -188,7 +193,7 @@ public class PangleNativeAd extends CustomNativeAd {
 
                             }
 
-                            @Override
+                            @Deprecated
                             public void onRefuse() {
 
                             }

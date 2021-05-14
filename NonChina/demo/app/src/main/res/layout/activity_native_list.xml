@@ -4,6 +4,7 @@
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  ~
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

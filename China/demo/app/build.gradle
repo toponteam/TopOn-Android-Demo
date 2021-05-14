@@ -22,7 +22,7 @@ networkLibsPath.add("sigmob");
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.superapp.filemanager"
+        applicationId "com.anythink.sdk.demo"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1

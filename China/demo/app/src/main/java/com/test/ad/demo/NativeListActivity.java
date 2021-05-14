@@ -26,6 +26,7 @@ import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
+import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,16 +46,7 @@ public class NativeListActivity extends Activity {
     private int firstCompletelyVisibleItemPosition = -1;
     private int lastCompletelyVisibleItemPosition = -1;
 
-    String placementIds[] = new String[]{
-            DemoApplicaion.mPlacementId_native_toutiao
-//            DemoApplicaion.mPlacementId_native_all
-//            , DemoApplicaion.mPlacementId_native_mintegral
-//            , DemoApplicaion.mPlacementId_native_GDT
-//            , DemoApplicaion.mPlacementId_native_toutiao
-//            , DemoApplicaion.mPlacementId_native_toutiao_drawer
-//            , DemoApplicaion.mPlacementId_native_baidu
-
-    };
+    private String placementId;
 
     private int adViewWidth;
     private int adViewHeight;
@@ -66,6 +58,14 @@ public class NativeListActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_native_list);
+
+        placementId = PlacementIdUtil.getNativePlacements(this).get("Toutiao");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("All");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Mintegral");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("GDT");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Toutiao Draw");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Baidu");
+
 
         adViewWidth = getResources().getDisplayMetrics().widthPixels;
         adViewHeight = dip2px(340);
@@ -195,7 +195,7 @@ public class NativeListActivity extends Activity {
 
     private void loadAd() {
         if (mATNative == null) {
-            mATNative = new ATNative(this, placementIds[0], new ATNativeNetworkListener() {
+            mATNative = new ATNative(this, placementId, new ATNativeNetworkListener() {
                 @Override
                 public void onNativeAdLoaded() {
                     isLoadingAd = false;

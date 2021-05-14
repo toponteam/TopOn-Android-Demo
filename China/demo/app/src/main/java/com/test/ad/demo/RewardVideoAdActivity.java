@@ -21,41 +21,16 @@ import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoExListener;
+import com.test.ad.demo.util.PlacementIdUtil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class RewardVideoAdActivity extends Activity {
 
     private static final String TAG = RewardVideoAdActivity.class.getSimpleName();
-
-    String placementIds[] = new String[]{
-            DemoApplicaion.mPlacementId_rewardvideo_all
-            , DemoApplicaion.mPlacementId_rewardvideo_mintegral
-            , DemoApplicaion.mPlacementId_rewardvideo_GDT
-            , DemoApplicaion.mPlacementId_rewardvideo_toutiao
-            , DemoApplicaion.mPlacementId_rewardvideo_baidu
-            , DemoApplicaion.mPlacementId_rewardvideo_ks
-            , DemoApplicaion.mPlacementId_rewardvideo_sigmob
-            , DemoApplicaion.mPlacementId_rewardvideo_myoffer
-    };
-
-    String unitGroupName[] = new String[]{
-            "All network",
-            "Mintegral",
-            "GDT",
-            "Toutiao",
-            "Baidu",
-            "Kuaishou",
-            "Sigmob",
-            "Myoffer"
-    };
-
-    RadioGroup mRadioGroup;
-
-
-    int mCurrentSelectIndex;
-
 
     ATRewardVideoAd mRewardVideoAd;
 
@@ -64,27 +39,32 @@ public class RewardVideoAdActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
-        mRadioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
+        Map<String, String> placementIdMap = PlacementIdUtil.getRewardedVideoPlacements(this);
+        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
 
-        for (int i = 0; i < placementIds.length; i++) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.placement_select_group);
+
+        for (int i = 0; i < placementNameList.size(); i++) {
             RadioButton radioButton = new RadioButton(this);
             radioButton.setPadding(20, 20, 20, 20);
-            radioButton.setText(unitGroupName[i]);
+            radioButton.setText(placementNameList.get(i));
             radioButton.setId(i);
-            mRadioGroup.addView(radioButton);
+            radioGroup.addView(radioButton);
         }
 
-        mRadioGroup.check(0);
+        radioGroup.check(0);
 
-        mRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                mCurrentSelectIndex = i;
-                init();
+                String placementName = placementNameList.get(i);
+                init(placementIdMap.get(placementName));
             }
         });
 
-        init();
+        String placementName = placementNameList.get(0);
+        init(placementIdMap.get(placementName));
+
 
         findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,8 +93,8 @@ public class RewardVideoAdActivity extends Activity {
     }
 
 
-    private void init() {
-        mRewardVideoAd = new ATRewardVideoAd(this, placementIds[mCurrentSelectIndex]);
+    private void init(String placementId) {
+        mRewardVideoAd = new ATRewardVideoAd(this, placementId);
         String userid = "test_userid_001";
         String userdata = "test_userdata_001";
         Map<String, Object> localMap = new HashMap<>();
