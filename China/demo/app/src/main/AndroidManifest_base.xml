@@ -70,6 +70,10 @@
         <activity android:name=".NativeListActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+        <activity android:name="TestMainActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
     </application>
 
 </manifest>

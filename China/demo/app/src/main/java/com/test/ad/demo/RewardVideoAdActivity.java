@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
@@ -72,6 +73,15 @@ public class RewardVideoAdActivity extends Activity {
 //                boolean isReady = mRewardVideoAd.isAdReady();
                 ATAdStatusInfo atAdStatusInfo = mRewardVideoAd.checkAdStatus();
                 Toast.makeText(RewardVideoAdActivity.this, "video ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
+                List<ATAdInfo> atAdInfoList = mRewardVideoAd.checkValidAdCaches();
+                Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
+                if (atAdInfoList != null) {
+                    for (ATAdInfo adInfo : atAdInfoList) {
+                        Log.i(TAG, "\nCahce detail:" + adInfo.toString());
+                    }
+                }
+
+
             }
         });
 
@@ -140,7 +150,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdClosed(ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString() );
+                Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
             }
 
@@ -156,6 +166,56 @@ public class RewardVideoAdActivity extends Activity {
                 Toast.makeText(RewardVideoAdActivity.this, "onReward", Toast.LENGTH_SHORT).show();
             }
         });
+
+        mRewardVideoAd.setAdDownloadListener(new ATAppDownloadListener() {
+
+            @Override
+            public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+        });
+
     }
 
 }

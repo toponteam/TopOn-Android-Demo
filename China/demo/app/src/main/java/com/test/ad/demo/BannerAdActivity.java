@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
+import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.util.PlacementIdUtil;
@@ -105,6 +106,56 @@ public class BannerAdActivity extends Activity {
 
             }
         });
+
+        mBannerView.setAdDownloadListener(new ATAppDownloadListener() {
+
+            @Override
+            public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+        });
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 BannerAdActivity.this, android.R.layout.simple_spinner_dropdown_item,

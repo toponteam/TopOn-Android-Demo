@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.AdError;
@@ -69,6 +70,13 @@ public class InterstitialAdActivity extends Activity {
 //                boolean isReady = mInterstitialAd.isAdReady();
                 ATAdStatusInfo atAdStatusInfo = mInterstitialAd.checkAdStatus();
                 Toast.makeText(InterstitialAdActivity.this, "interstitial ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
+                List<ATAdInfo> atAdInfoList = mInterstitialAd.checkValidAdCaches();
+                Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
+                if (atAdInfoList != null) {
+                    for (ATAdInfo adInfo : atAdInfoList) {
+                        Log.i(TAG, "\nCahce detail:" + adInfo.toString());
+                    }
+                }
             }
         });
 
@@ -148,6 +156,56 @@ public class InterstitialAdActivity extends Activity {
             }
 
         });
+
+        mInterstitialAd.setAdDownloadListener(new ATAppDownloadListener() {
+
+            @Override
+            public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
+                        + "\ncurrBytes:" + currBytes
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+
+            @Override
+            public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
+                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
+                        + "\nfileName:" + fileName
+                        + "\nappName:" + appName);
+            }
+        });
+
     }
 
 }

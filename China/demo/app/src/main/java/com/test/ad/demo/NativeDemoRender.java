@@ -117,16 +117,27 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
         Log.i("NativeDemoRender", "Ad Interaction type:" + (ad.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOW"));
 
-        String type = CustomNativeAd.NativeAdConst.UNKNOWN_TYPE;
         switch (ad.getAdType()) {
             case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
-                type = "Video";
+                Log.i("NativeDemoRender", "Ad source type: Video" + ", video duration: " + ad.getVideoDuration());
                 break;
             case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
-                type = "Image";
+                Log.i("NativeDemoRender", "Ad source type: Image");
+                break;
+            default:
+                Log.i("NativeDemoRender", "Ad source type: Unknown");
                 break;
         }
-        Log.i("NativeDemoRender", "Ad type:" + type);
+
+        switch (ad.getNativeType()) {
+            case CustomNativeAd.NativeType.FEED:
+                Log.i("NativeDemoRender", "Native type: Feed");
+                break;
+            case CustomNativeAd.NativeType.PATCH:
+                Log.i("NativeDemoRender", "Native type: Patch");
+                break;
+        }
+
 
         if (ad.isNativeExpress()) {// 模板渲染（个性化模板、自动渲染）
             titleView.setVisibility(View.GONE);

@@ -9,6 +9,7 @@ package com.test.ad.demo;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
@@ -25,7 +27,10 @@ import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashExListenerWithConfirmInfo;
+import com.anythink.splashad.api.IATSplashEyeAd;
 import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
+import com.test.ad.demo.zoomout.SplashEyeAdHolder;
+import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -103,8 +108,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             splashAd.loadAd();
         }
 
-
-        ATSplashAd.checkSplashDefaultConfigList(this, placementId, null);
     }
 
     @Override
@@ -135,20 +138,63 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     @Override
-    public void onAdDismiss(ATAdInfo entity) {
+    public void onAdDismiss(ATAdInfo entity, IATSplashEyeAd splashEyeAd) {
         Log.i(TAG, "onAdDismiss:\n" + entity.toString());
+        SplashEyeAdHolder.splashEyeAd = splashEyeAd;
         jumpToMainActivity();
     }
 
     boolean hasHandleJump = false;
+    boolean canJump;
 
     public void jumpToMainActivity() {
+
+        if (!canJump) {
+            canJump = true;
+            return;
+        }
+
         if (!hasHandleJump) {
             hasHandleJump = true;
+
+            if (SplashEyeAdHolder.splashEyeAd != null) {
+                try {
+                    SplashZoomOutManager zoomOutManager = SplashZoomOutManager.getInstance(getApplicationContext());
+                    zoomOutManager.setSplashInfo(container.getChildAt(0),
+                            getWindow().getDecorView());
+                } catch (Throwable e) {
+                    Log.e(TAG, "jumpToMainActivity: ------------------------------------------ error");
+                    e.printStackTrace();
+                }
+
+                Intent intent = new Intent(this, TestMainActivity.class);
+                startActivity(intent);
+
+                overridePendingTransition(0, 0);
+            }
+
             finish();
             Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (canJump) {
+            jumpToMainActivity();
+        }
+
+        canJump = true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        canJump = false;
     }
 
     @Override
@@ -171,4 +217,5 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             Log.i(TAG, "nonDownloadConfirm open confirm dialog");
         }
     }
+
 }
