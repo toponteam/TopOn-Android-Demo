@@ -18,6 +18,7 @@ networkLibsPath.add("mintegral");
 networkLibsPath.add("pangle");
 networkLibsPath.add("kuaishou");
 networkLibsPath.add("sigmob");
+networkLibsPath.add("huawei");
 
 android {
     compileSdkVersion 29
