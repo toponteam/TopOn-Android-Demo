@@ -17,19 +17,22 @@
         android:layout_alignParentTop="true"
         android:spinnerMode="dropdown" />
 
+    <CheckBox
+        android:id="@+id/splash_is_custom_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_spinner"
+        android:padding="2dp"
+        android:text="Custom Skip View"
+        android:checked="false"
+        android:textColor="#000000" />
+
     <Button
         android:id="@+id/show_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/splash_spinner"
+        android:layout_below="@id/splash_is_custom_skip"
         android:text="Show Splash Ad In Other Activity" />
-
-    <Button
-        android:id="@+id/show_in_current_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/show_btn"
-        android:text="Show Splash Ad In Current Activity" />
 
 
 </RelativeLayout>

@@ -11,10 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
     <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -91,21 +88,6 @@
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
             android:exported="false" />
-
-        <!-- source file: nonchina_jcenter/network_sdk/inmobi/AndroidManifest.xml -->
-        <!-- android:networkSecurityConfig="@xml/network_security_config" -->
-        <!-- source file: nonchina_jcenter/network_sdk/mopub/AndroidManifest.xml -->
-        <!-- source file: nonchina_jcenter/network_sdk/tapjoy/AndroidManifest.xml -->
-        <activity
-            android:name="com.tapjoy.TJAdUnitActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.tapjoy.TJContentActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 
 </manifest>

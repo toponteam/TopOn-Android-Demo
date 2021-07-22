@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright © 2018-2020 TopOn. All rights reserved.
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
@@ -16,6 +15,21 @@
         android:id="@+id/splash_ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></FrameLayout>
+
+    <TextView
+        android:id="@+id/splash_ad_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/splash_bg_custom_skip_view"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/logo_area"

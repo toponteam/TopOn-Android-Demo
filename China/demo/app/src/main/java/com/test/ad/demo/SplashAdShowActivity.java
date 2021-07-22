@@ -14,11 +14,12 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
@@ -27,6 +28,8 @@ import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashExListenerWithConfirmInfo;
+import com.anythink.splashad.api.ATSplashSkipAdListener;
+import com.anythink.splashad.api.ATSplashSkipInfo;
 import com.anythink.splashad.api.IATSplashEyeAd;
 import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
@@ -42,6 +45,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     ATSplashAd splashAd;
     FrameLayout container;
 
+    boolean isCustomSkipView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +54,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         setContentView(R.layout.splash_ad_show);
 
         String placementId = getIntent().getStringExtra("placementId");
+        isCustomSkipView = getIntent().getBooleanExtra("custom_skip_view", false);
         container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         Configuration cf = getResources().getConfiguration();
@@ -118,7 +124,36 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     public void onAdLoaded() {
         Log.i(TAG, "onAdLoaded---------");
-        splashAd.show(this, container);
+
+        if (isCustomSkipView) {
+            showAdWithCustomSkipView();
+        } else {
+            splashAd.show(this, container);
+        }
+
+    }
+
+    private void showAdWithCustomSkipView() {
+        TextView skipView = findViewById(R.id.splash_ad_skip);
+
+        long countDownDuration = 5000;
+        long callbackInterval = 1000;
+        skipView.setText(((int) (countDownDuration / 1000)) + "s | Skip");
+
+        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
+            @Override
+            public void onAdTick(long duration, long remainder) {
+                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
+            }
+
+            @Override
+            public void isSupportCustomSkipView(boolean isSupport) {
+                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
+                if (isSupport) {
+                    skipView.setVisibility(View.VISIBLE);
+                }
+            }
+        }));
     }
 
     @Override

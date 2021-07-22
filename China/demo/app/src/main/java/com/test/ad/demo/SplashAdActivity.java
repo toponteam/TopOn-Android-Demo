@@ -10,9 +10,11 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -35,6 +37,8 @@ public class SplashAdActivity extends Activity {
         List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
         
         Spinner spinner = (Spinner) findViewById(R.id.splash_spinner);
+        CheckBox isCustomSkipViewCheckBox = findViewById(R.id.splash_is_custom_skip);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 SplashAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
                 placementNameList);
@@ -48,6 +52,13 @@ public class SplashAdActivity extends Activity {
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 mCurrentPlacementName = parent.getSelectedItem().toString();
+
+                if (TextUtils.equals(mCurrentPlacementName, "MyOffer")) {
+                    isCustomSkipViewCheckBox.setVisibility(View.VISIBLE);
+                } else {
+                    isCustomSkipViewCheckBox.setVisibility(View.GONE);
+                }
+
             }
 
             @Override
@@ -61,6 +72,7 @@ public class SplashAdActivity extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
                 intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
+                intent.putExtra("custom_skip_view", isCustomSkipViewCheckBox.isChecked());
                 startActivity(intent);
             }
         });
