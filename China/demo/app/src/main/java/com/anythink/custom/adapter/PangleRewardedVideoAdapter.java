@@ -10,6 +10,7 @@ package com.anythink.custom.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.rewardvideo.unitgroup.api.CustomRewardVideoAdapter;
@@ -37,8 +38,14 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
         }
 
         //Callback of cached video file resources to local after video ad loading
+        /** @deprecated in ver3.8.0.0,need to remove after sdk update*/
         @Override
         public void onRewardVideoCached() {
+        }
+
+        @Override
+        public void onRewardVideoCached(TTRewardVideoAd ttRewardVideoAd) {
+            mttRewardVideoAd = ttRewardVideoAd;
             if (mLoadListener != null) {
                 mLoadListener.onAdCacheLoaded();
             }
@@ -47,7 +54,6 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
         //Video creatives are loaded, such as title, video url, etc., excluding video files
         @Override
         public void onRewardVideoAdLoad(TTRewardVideoAd ad) {
-            mttRewardVideoAd = ad;
             if (mLoadListener != null) {
                 mLoadListener.onAdDataLoaded();
             }

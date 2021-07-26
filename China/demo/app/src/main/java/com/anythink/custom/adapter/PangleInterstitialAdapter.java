@@ -10,6 +10,7 @@ package com.anythink.custom.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
@@ -91,15 +92,19 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
 
         @Override
         public void onFullScreenVideoAdLoad(TTFullScreenVideoAd ad) {
-            mTTFullScreenVideoAd = ad;
-
             if (mLoadListener != null) {
                 mLoadListener.onAdDataLoaded();
             }
         }
 
+        /** @deprecated in ver3.8.0.0,need to remove after sdk update*/
         @Override
         public void onFullScreenVideoCached() {
+        }
+
+        @Override
+        public void onFullScreenVideoCached(TTFullScreenVideoAd ttFullScreenVideoAd) {
+            mTTFullScreenVideoAd = ttFullScreenVideoAd;
             if (mLoadListener != null) {
                 mLoadListener.onAdCacheLoaded();
             }
