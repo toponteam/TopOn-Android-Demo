@@ -12,11 +12,6 @@ repositories {
         url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
     }
 
-    //Chartboost
-    maven {
-        url "https://chartboostmobile.bintray.com/Chartboost"
-    }
-
     //Tapjoy
     maven {
         url "https://sdk.tapjoy.com/"
@@ -25,11 +20,6 @@ repositories {
     //Ironsource
     maven {
         url "https://android-sdk.is.com/"
-    }
-
-    //AdColony
-    maven {
-        url "https://adcolony.bintray.com/AdColony"
     }
 
     //Appnext
@@ -50,11 +40,6 @@ repositories {
     //Ogury
     maven {
         url "https://maven.ogury.co"
-    }
-
-    //Fyber
-    maven {
-        url "https://fyber.bintray.com/marketplace"
     }
 
     //Huawei
@@ -168,7 +153,7 @@ dependencies {
 
     //UnityAds
     api "com.anythink.sdk:adapter-unityads:5.7.63"
-    api "com.unity3d.ads:unity-ads:3.7.2"
+    api "com.unity3d.ads:unity-ads:3.7.5"
 
     //Vungle
     api "com.anythink.sdk:adapter-vungle:5.7.63"
@@ -229,6 +214,7 @@ dependencies {
     //Kidoz
     api "com.anythink.sdk:adapter-kidoz:5.7.63"
     api "com.kidoz.sdk:KidozSDK:8.9.1"
+    api "org.greenrobot:eventbus:3.2.0"
 
     //Mytarget
     api "com.anythink.sdk:adapter-mytarget:5.7.63"
