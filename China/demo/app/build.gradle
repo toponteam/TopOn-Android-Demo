@@ -19,6 +19,7 @@ networkLibsPath.add("pangle");
 networkLibsPath.add("kuaishou");
 networkLibsPath.add("sigmob");
 networkLibsPath.add("huawei");
+networkLibsPath.add("mimo");
 
 android {
     compileSdkVersion 29
