@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,14 +17,19 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.anythink.china.api.ATAppDownloadListener;
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialExListener;
+import com.anythink.network.gdt.GDTDownloadFirmInfo;
+import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -100,11 +106,37 @@ public class InterstitialAdActivity extends Activity {
 
     private void init(String placementId) {
         mInterstitialAd = new ATInterstitial(this, placementId);
+
+        Map<String, Object> localMap = new HashMap<>();
+
+        // Only for GDT (true: open download dialog, false: download directly)
+        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
+
+        mInterstitialAd.setLocalExtra(localMap);
+
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
 
             @Override
             public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
                 Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
+            @Override
+            public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+                /**
+                 * Only for GDT
+                 */
+                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
+                    //Open Dialog view
+                    try {
+                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
+                    } catch (Throwable e) {
+                        if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
+                            ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
+                        }
+                    }
+                }
             }
 
             @Override
@@ -161,7 +193,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
                         + "\ncurrBytes:" + currBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
@@ -169,7 +201,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
                         + "\ncurrBytes:" + currBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
@@ -177,7 +209,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
                         + "\ncurrBytes:" + currBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
@@ -185,14 +217,14 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
             }
 
             @Override
             public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
                         + "\ncurrBytes:" + currBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
@@ -200,7 +232,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
+                Log.e(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
             }

@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATMediationRequestInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashExListener;
@@ -89,6 +91,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
         Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+    }
+
+    @Override
+    public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+
     }
 
     @Override

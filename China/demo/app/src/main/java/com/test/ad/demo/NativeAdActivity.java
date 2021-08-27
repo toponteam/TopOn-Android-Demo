@@ -221,7 +221,15 @@ public class NativeAdActivity extends Activity {
                                         //Open Dialog view
                                         Log.i(TAG, "nonDownloadConfirm open confirm dialog");
 //                                    new DownloadApkConfirmDialog(context, DownloadConfirmHelper.getApkJsonInfoUrl(((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl), ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
-                                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                                        //Open Dialog view
+                                        try {
+                                            new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                                            Log.i(TAG, "nonDownloadConfirm open confirm dialog");
+                                        } catch (Throwable e) {
+                                            if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
+                                                ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
+                                            }
+                                        }
                                     }
                                 }
                             }

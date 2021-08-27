@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.admob.AdmobATConst;
 import com.test.ad.demo.util.PlacementIdUtil;
@@ -54,6 +56,11 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onDeeplinkCallback(boolean isRefresh, ATAdInfo adInfo, boolean isSuccess) {
                 Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
+            @Override
+            public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+
             }
 
             @Override

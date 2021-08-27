@@ -1,0 +1,3 @@
+-keep class jp.maio.sdk.android.** {
+      *;
+}

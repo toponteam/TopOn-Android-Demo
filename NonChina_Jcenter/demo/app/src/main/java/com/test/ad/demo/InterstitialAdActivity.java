@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialExListener;
@@ -95,6 +97,11 @@ public class InterstitialAdActivity extends Activity {
             @Override
             public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
                 Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
+            @Override
+            public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+
             }
 
             @Override

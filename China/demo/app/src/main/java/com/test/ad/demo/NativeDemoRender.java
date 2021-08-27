@@ -8,16 +8,21 @@
 package com.test.ad.demo;
 
 import android.content.Context;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
+import com.anythink.core.api.ATAdAppInfo;
 import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.NativeAdInteractionType;
@@ -40,7 +45,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         mContext = context;
     }
 
-    public void setWhetherSettingDownloadConfirmListener(boolean isSelfHandle){
+    public void setWhetherSettingDownloadConfirmListener(boolean isSelfHandle) {
         isSelfHandleDownloadConfirm = isSelfHandle;
     }
 
@@ -50,9 +55,9 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
     @Override
     public View createView(Context context, int networkFirmId) {
-        if (mDevelopView == null) {
-            mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
-        }
+//        if (mDevelopView == null) {
+        mDevelopView = LayoutInflater.from(context).inflate(R.layout.native_ad_item, null);
+//        }
         mNetworkFirmId = networkFirmId;
         if (mDevelopView.getParent() != null) {
             ((ViewGroup) mDevelopView.getParent()).removeView(mDevelopView);
@@ -94,6 +99,12 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
                 .build();
 
         ad.setExtraInfo(extraInfo);
+
+        ATAdAppInfo appInfo = ad.getAdAppInfo();
+        if (appInfo != null) {
+            Log.i("NativeDemoRender", "AppInfo:" + appInfo.toString());
+        }
+
 
         mClickDownloadDirectViews = new ArrayList<>();
         //Only for GDT
@@ -196,15 +207,21 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
         } else {
+            if (!TextUtils.isEmpty(ad.getVideoUrl())) {
+                View playerView = initializePlayer(mContext, ad.getVideoUrl());
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+                params.gravity = Gravity.CENTER;
+                playerView.setLayoutParams(params);
+                contentArea.addView(playerView, params);
+            } else {
+                ATNativeImageView imageView = new ATNativeImageView(mContext);
+                imageView.setImage(ad.getMainImageUrl());
+                ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+                imageView.setLayoutParams(params);
+                contentArea.addView(imageView, params);
+                mClickView.add(imageView);
+            }
 
-            ATNativeImageView imageView = new ATNativeImageView(mContext);
-            imageView.setImage(ad.getMainImageUrl());
-
-            ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
-            imageView.setLayoutParams(params);
-            contentArea.addView(imageView, params);
-
-            mClickView.add(imageView);
         }
 
         titleView.setText(ad.getTitle());
@@ -238,6 +255,19 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
     public void setCloseView(ImageView closeView) {
         this.mCloseView = closeView;
 
+    }
+
+    private View initializePlayer(Context context, String url) {
+        VideoView videoView = new VideoView(context);
+        videoView.setVideoURI(Uri.parse(url));
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+            }
+        });
+        videoView.start();
+
+        return videoView;
     }
 
     public List<View> getDownloadDirectViews() {

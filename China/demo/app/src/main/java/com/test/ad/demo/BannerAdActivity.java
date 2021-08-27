@@ -8,6 +8,7 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,11 +21,16 @@ import android.widget.Toast;
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.china.api.ATAppDownloadListener;
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
+import com.anythink.network.gdt.GDTDownloadFirmInfo;
+import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +40,7 @@ public class BannerAdActivity extends Activity {
 
     ATBannerView mBannerView;
 
+    Map<String, Object> localMap = new HashMap<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +53,36 @@ public class BannerAdActivity extends Activity {
         Spinner spinner = (Spinner) findViewById(R.id.banner_spinner);
         final FrameLayout frameLayout = findViewById(R.id.adview_container);
         mBannerView = new ATBannerView(this);
+
+        // Only for GDT (true: open download dialog, false: download directly)
+        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
         mBannerView.setPlacementId(placementIdMap.get(placementNameList.get(0)));
+        mBannerView.setLocalExtra(localMap);
+
         frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
             @Override
             public void onDeeplinkCallback(boolean isRefresh, ATAdInfo adInfo, boolean isSuccess) {
                 Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
+            }
+
+            @Override
+            public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+                /**
+                 * Only for GDT
+                 */
+                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
+                    //Open Dialog view
+                    try {
+                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
+                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
+                    } catch (Throwable e) {
+                        if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
+                            ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
+                        }
+                    }
+                }
             }
 
             @Override
@@ -171,6 +201,7 @@ public class BannerAdActivity extends Activity {
                         Toast.LENGTH_SHORT).show();
                 String placementName = parent.getSelectedItem().toString();
                 mBannerView.setPlacementId(placementIdMap.get(placementName));
+                mBannerView.setLocalExtra(localMap);
                 mBannerView.setVisibility(View.VISIBLE);
 
             }

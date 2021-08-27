@@ -27,7 +27,7 @@ import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
-import com.anythink.splashad.api.ATSplashExListenerWithConfirmInfo;
+import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
 import com.anythink.splashad.api.IATSplashEyeAd;
@@ -38,7 +38,7 @@ import com.test.ad.demo.zoomout.SplashZoomOutManager;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SplashAdShowActivity extends Activity implements ATSplashExListenerWithConfirmInfo {
+public class SplashAdShowActivity extends Activity implements ATSplashExListener {
 
     private static final String TAG = SplashAdShowActivity.class.getSimpleName();
 
@@ -207,9 +207,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
                 overridePendingTransition(0, 0);
             }
-
-            finish();
             Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
     }
