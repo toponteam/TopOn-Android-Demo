@@ -99,9 +99,15 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     @Override
-    public void onAdLoaded() {
-        Log.i(TAG, "onAdLoaded---------");
+    public void onAdLoaded(boolean isTimeout) {
+        Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
         splashAd.show(this, container);
+    }
+
+    @Override
+    public void onAdLoadTimeout() {
+        Log.i(TAG, "onAdLoadTimeout---------");
+        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
     }
 
     @Override

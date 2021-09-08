@@ -13,6 +13,8 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +46,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     ATSplashAd splashAd;
     FrameLayout container;
+
+    Handler mHandler = new Handler(Looper.getMainLooper());
 
     boolean isCustomSkipView;
 
@@ -108,7 +112,12 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            splashAd.show(this, container);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    splashAd.show(SplashAdShowActivity.this, container);
+                }
+            },10);
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();
@@ -122,15 +131,20 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     @Override
-    public void onAdLoaded() {
-        Log.i(TAG, "onAdLoaded---------");
+    public void onAdLoaded(boolean isTimeout) {
+        Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
 
         if (isCustomSkipView) {
             showAdWithCustomSkipView();
         } else {
             splashAd.show(this, container);
         }
+    }
 
+    @Override
+    public void onAdLoadTimeout() {
+        Log.i(TAG, "onAdLoadTimeout---------");
+        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
     }
 
     private void showAdWithCustomSkipView() {
