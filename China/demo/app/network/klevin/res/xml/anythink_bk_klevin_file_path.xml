@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_files"
+        path="." />
+    <external-path
+        name="external_files"
+        path="Download/" />
+    <external-files-path
+        name="share_image"
+        path="temp/"/>
+    <external-files-path
+        name="external_file_root"
+        path="."/>
+    <root-path
+        name="root_path"
+        path="."/>
+</paths>

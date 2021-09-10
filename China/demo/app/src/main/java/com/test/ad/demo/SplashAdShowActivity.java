@@ -99,6 +99,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
 //        atMediationRequestInfo  = new KSATRequestInfo("501400010", "5014000234");
 //        atMediationRequestInfo.setAdSourceId("88377");
+
+//        atMediationRequestInfo  = new KlevinATRequestInfo("30008", "30029");
+//        atMediationRequestInfo.setAdSourceId("853445");
         splashAd = new ATSplashAd(this, placementId, atMediationRequestInfo, this, 5000);
 
         Map<String, Object> localMap = new HashMap<>();

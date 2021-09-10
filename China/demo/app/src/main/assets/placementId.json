@@ -10,7 +10,8 @@
         "Huawei":"b5f353142ed321",
         "HeadBidding Ad":"b6063e598639f2",
         "MyOffer":"b5db6c3764aea3",
-        "Mimo":"b60f7e219cd7a9"
+        "Mimo":"b60f7e219cd7a9",
+        "Klevin":"b613abebc2cb8c"
     },
     "interstitial": {
         "All":"b5baca53984692",
@@ -25,7 +26,8 @@
         "Huawei":"b5f3531369a785",
         "HeadBidding Ad":"b6063e5c0cf5d9",
         "MyOffer":"b5db6c39aed9c5",
-        "Mimo":"b60f7e4fd22306"
+        "Mimo":"b60f7e4fd22306",
+        "Klevin":"b613ac4eeed2df"
     },
     "banner": {
         "All":"b5baca4f74c3d8",
@@ -63,6 +65,7 @@
         "Kuaishou":"b5f22758d9eae6",
         "Sigmob":"b5d76150bab3ad",
         "MyOffer":"b5f33a1598fe94",
-        "Mimo":"b60f7fa9eabe2e"
+        "Mimo":"b60f7fa9eabe2e",
+        "Klevin":"b613ac55f204b1"
     }
 }
