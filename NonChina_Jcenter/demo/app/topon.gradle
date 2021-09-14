@@ -72,7 +72,7 @@ dependencies {
 
     //Facebook
     api "com.anythink.sdk:adapter-facebook:5.7.74"
-    api "com.facebook.android:audience-network-sdk:6.5.1"
+    api "com.facebook.android:audience-network-sdk:6.6.0"
     api "androidx.annotation:annotation:1.0.0"
 
     //Admob
