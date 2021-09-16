@@ -115,10 +115,11 @@
         android:id="@+id/native_ad_logo"
         android:layout_width="40dp"
         android:layout_height="20dp"
+        android:layout_above="@+id/native_ad_image"
         android:layout_alignParentRight="true"
         android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp"
-        android:visibility="gone"/>
+        android:layout_marginBottom="2dp"
+        android:visibility="gone" />
 
 
     <ImageView
