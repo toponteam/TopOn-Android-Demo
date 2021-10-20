@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.anythink.core.api.ATAdConst;
+import com.anythink.core.api.MediationInitCallback;
 import com.anythink.rewardvideo.unitgroup.api.CustomRewardVideoAdapter;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdConstant;
@@ -195,16 +196,16 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
             return;
         }
 
-        PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
+        PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
                 startLoad(context, localExtra, personalized_template);
             }
 
             @Override
-            public void onError(String errorCode, String errorMsg) {
+            public void onFail(String errorMsg) {
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                    mLoadListener.onAdLoadError("", errorMsg);
                 }
             }
         });
@@ -230,7 +231,7 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
     public String getNetworkSDKVersion() {
         return PangleInitManager.getInstance().getNetworkVersion();
     }
-    
+
     private static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / (scale <= 0 ? 1 : scale) + 0.5f);

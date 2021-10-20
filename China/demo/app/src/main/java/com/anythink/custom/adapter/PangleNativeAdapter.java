@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
+import com.anythink.core.api.MediationInitCallback;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAdapter;
 import com.bytedance.sdk.openadsdk.AdSlot;
@@ -79,16 +80,16 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
 
         final int finalRequestNum = requestNum;
         final int finalMediaSize = mediaSize;
-        PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
+        PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
                 startLoad(context, localExtra, finalRequestNum, finalMediaSize);
             }
 
             @Override
-            public void onError(String errorCode, String errorMsg) {
+            public void onFail(String errorMsg) {
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                    mLoadListener.onAdLoadError("", errorMsg);
                 }
             }
         });
@@ -102,7 +103,7 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
         if (localExtra != null) {
 
             Object widthObject = null;
-           if (localExtra.containsKey(ATAdConst.KEY.AD_WIDTH)) {
+            if (localExtra.containsKey(ATAdConst.KEY.AD_WIDTH)) {
                 widthObject = localExtra.get(ATAdConst.KEY.AD_WIDTH);
             }
 

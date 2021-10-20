@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 
 import com.anythink.banner.unitgroup.api.CustomBannerAdapter;
+import com.anythink.core.api.MediationInitCallback;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdDislike;
 import com.bytedance.sdk.openadsdk.TTAdManager;
@@ -358,16 +359,16 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
             e.printStackTrace();
         }
 
-        PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
+        PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
                 startLoadBanner(context, serverExtra);
             }
 
             @Override
-            public void onError(String errorCode, String errorMsg) {
+            public void onFail(String errorMsg) {
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                    mLoadListener.onAdLoadError("", errorMsg);
                 }
             }
         });

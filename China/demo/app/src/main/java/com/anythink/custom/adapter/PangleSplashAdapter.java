@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.anythink.core.api.ATAdConst;
+import com.anythink.core.api.MediationInitCallback;
 import com.anythink.splashad.unitgroup.api.CustomSplashAdapter;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdManager;
@@ -50,16 +51,16 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
             personalizedTemplate = (String) serverExtra.get("personalized_template");
         }
 
-        PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
+        PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
                 startLoad(context, localExtra);
             }
 
             @Override
-            public void onError(String errorCode, String errorMsg) {
+            public void onFail(String errorMsg) {
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                    mLoadListener.onAdLoadError("", errorMsg);
                 }
             }
         });

@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
+import com.anythink.core.api.MediationInitCallback;
 import com.anythink.interstitial.unitgroup.api.CustomInterstitialAdapter;
 import com.bytedance.sdk.openadsdk.AdSlot;
 import com.bytedance.sdk.openadsdk.TTAdManager;
@@ -311,16 +312,16 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
         final String personalized_template = (String) serverExtra.get("personalized_template");
 
         final int finalLayoutType = layoutType;
-        PangleInitManager.getInstance().initSDK(context, serverExtra, new PangleInitManager.InitCallback() {
+        PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
                 startLoad(context, localExtra, finalLayoutType, personalized_template);
             }
 
             @Override
-            public void onError(String errorCode, String errorMsg) {
+            public void onFail(String errorMsg) {
                 if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError(errorCode, errorMsg);
+                    mLoadListener.onAdLoadError("", errorMsg);
                 }
             }
         });

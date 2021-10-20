@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.anythink.core.api.ATInitMediation;
+import com.anythink.core.api.MediationInitCallback;
 import com.bytedance.sdk.openadsdk.TTAdConfig;
 import com.bytedance.sdk.openadsdk.TTAdConstant;
 import com.bytedance.sdk.openadsdk.TTAdManager;
@@ -31,7 +32,7 @@ public class PangleInitManager extends ATInitMediation {
 
     private boolean mHasInit;
     private AtomicBoolean mIsIniting;
-    private List<PangleInitManager.InitCallback> mListeners;
+    private List<MediationInitCallback> mListeners;
     private final Object mLock = new Object();
 
     private PangleInitManager() {
@@ -48,12 +49,12 @@ public class PangleInitManager extends ATInitMediation {
     }
 
 
-    @Override
     public synchronized void initSDK(Context context, Map<String, Object> serviceExtras) {
         initSDK(context, serviceExtras, null);
     }
 
-    public void initSDK(final Context context, Map<String, Object> serviceExtras, final PangleInitManager.InitCallback callback) {
+    @Override
+    public void initSDK(final Context context, Map<String, Object> serviceExtras, final MediationInitCallback callback) {
 
         if (TTAdSdk.isInitSuccess() || mHasInit) {
             if (callback != null) {
@@ -131,14 +132,14 @@ public class PangleInitManager extends ATInitMediation {
     private void callbackResult(boolean success, String errorCode, String errorMsg) {
         synchronized (mLock) {
             int size = mListeners.size();
-            PangleInitManager.InitCallback initListener;
+            MediationInitCallback initListener;
             for (int i = 0; i < size; i++) {
                 initListener = mListeners.get(i);
                 if (initListener != null) {
                     if (success) {
                         initListener.onSuccess();
                     } else {
-                        initListener.onError(errorCode, errorMsg);
+                        initListener.onFail(errorCode + " | " + errorMsg);
                     }
                 }
             }
