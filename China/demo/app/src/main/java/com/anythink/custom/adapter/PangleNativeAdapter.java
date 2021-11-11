@@ -59,11 +59,6 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
             layoutType = (String) serverExtra.get("layout_type");
         }
 
-        int requestNum = 1;
-        try {
-            requestNum = Integer.parseInt(serverExtra.get("request_ad_num").toString());
-        } catch (Exception e) {
-        }
 
         if (serverExtra.containsKey("is_video")) {
             nativeType = serverExtra.get("is_video").toString();
@@ -78,12 +73,11 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
 
         }
 
-        final int finalRequestNum = requestNum;
         final int finalMediaSize = mediaSize;
         PangleInitManager.getInstance().initSDK(context, serverExtra, new MediationInitCallback() {
             @Override
             public void onSuccess() {
-                startLoad(context, localExtra, finalRequestNum, finalMediaSize);
+                startLoad(context, localExtra, mRequestNum, finalMediaSize);
             }
 
             @Override

@@ -145,6 +145,38 @@ public class RewardVideoAdActivity extends Activity {
                 }
             }
 
+            //-------------------------- Only for CSJ --------------------------
+            @Override
+            public void onRewardedVideoAdAgainPlayStart(ATAdInfo entity) {
+                Log.i(TAG, "onRewardedVideoAdAgainPlayStart:\n" + entity.toString());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdAgainPlayStart", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdAgainPlayEnd(ATAdInfo entity) {
+                Log.i(TAG, "onRewardedVideoAdAgainPlayEnd:\n" + entity.toString());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdAgainPlayEnd", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdAgainPlayFailed(AdError errorCode, ATAdInfo entity) {
+                Log.i(TAG, "onRewardedVideoAdAgainPlayFailed error: " + errorCode.getFullErrorInfo());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdAgainPlayFailed:" + errorCode.getFullErrorInfo(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onRewardedVideoAdAgainPlayClicked(ATAdInfo entity) {
+                Log.i(TAG, "onRewardedVideoAdAgainPlayClicked:\n" + entity.toString());
+                Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdAgainPlayClicked", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAgainReward(ATAdInfo entity) {
+                Log.i(TAG, "onAgainReward:\n" + entity.toString());
+                Toast.makeText(RewardVideoAdActivity.this, "onAgainReward", Toast.LENGTH_SHORT).show();
+            }
+            //-------------------------- Only for CSJ --------------------------
+
             @Override
             public void onRewardedVideoAdLoaded() {
                 Log.i(TAG, "onRewardedVideoAdLoaded");
@@ -171,7 +203,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayFailed error:" + errorCode.getFullErrorInfo());
+                Log.i(TAG, "onRewardedVideoAdPlayFailed error: " + errorCode.getFullErrorInfo());
                 Toast.makeText(RewardVideoAdActivity.this, "onRewardedVideoAdPlayFailed:" + errorCode.getFullErrorInfo(), Toast.LENGTH_SHORT).show();
             }
 

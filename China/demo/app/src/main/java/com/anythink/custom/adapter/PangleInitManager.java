@@ -158,7 +158,7 @@ public class PangleInitManager extends ATInitMediation {
 
     @Override
     public String getNetworkName() {
-        return "Pangle(Tiktok) Custom";
+        return "CSJ Custom";
     }
 
 

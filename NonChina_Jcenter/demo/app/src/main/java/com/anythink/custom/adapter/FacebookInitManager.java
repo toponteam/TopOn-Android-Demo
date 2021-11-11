@@ -33,13 +33,12 @@ public class FacebookInitManager extends ATInitMediation {
         return sInstance;
     }
 
-
     public synchronized void initSDK(Context context, Map<String, Object> serviceExtras) {
         initSDK(context, serviceExtras, null);
     }
 
     @Override
-    public void initSDK(final Context context, Map<String, Object> serviceExtras, final MediationInitCallback callback) {
+    public synchronized void initSDK(Context context, Map<String, Object> serviceExtras, MediationInitCallback mediationInitCallback) {
         try {
             if (!mIsInit) {
                 AudienceNetworkAds.initialize(context.getApplicationContext());

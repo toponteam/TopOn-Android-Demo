@@ -125,6 +125,9 @@ public class NativeAdActivity extends Activity {
                 localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
                 localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
 
+                // since v5.7.82
+//                localMap.put(AdmobATConst.AD_CHOICES_PLACEMENT, AdmobATConst.AD_CHOICES_PLACEMENT_TOP_RIGHT);
+
                 atNatives[mCurrentSelectIndex].setLocalExtra(localMap);
 
                 atNatives[mCurrentSelectIndex].makeAdRequest();

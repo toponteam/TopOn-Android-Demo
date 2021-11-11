@@ -28,6 +28,7 @@ import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
+import com.anythink.network.klevin.KlevinATRequestInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
@@ -47,9 +48,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     ATSplashAd splashAd;
     FrameLayout container;
 
-    Handler mHandler = new Handler(Looper.getMainLooper());
-
     boolean isCustomSkipView;
+
+    Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +122,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                     splashAd.show(SplashAdShowActivity.this, container);
                 }
             },10);
+
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();
@@ -131,23 +133,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
         Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
-    }
-
-    @Override
-    public void onAdLoaded(boolean isTimeout) {
-        Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
-
-        if (isCustomSkipView) {
-            showAdWithCustomSkipView();
-        } else {
-            splashAd.show(this, container);
-        }
-    }
-
-    @Override
-    public void onAdLoadTimeout() {
-        Log.i(TAG, "onAdLoadTimeout---------");
-        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
     }
 
     private void showAdWithCustomSkipView() {
@@ -172,6 +157,24 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             }
         }));
     }
+
+    @Override
+    public void onAdLoaded(boolean isTimeout) {
+        Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
+
+        if (isCustomSkipView) {
+            showAdWithCustomSkipView();
+        } else {
+            splashAd.show(this, container);
+        }
+    }
+
+    @Override
+    public void onAdLoadTimeout() {
+        Log.i(TAG, "onAdLoadTimeout---------");
+        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     public void onNoAdError(AdError adError) {

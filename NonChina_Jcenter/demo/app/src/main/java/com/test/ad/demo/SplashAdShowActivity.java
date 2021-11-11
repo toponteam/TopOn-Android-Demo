@@ -116,6 +116,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         jumpToMainActivity();
     }
 
+
+
     @Override
     public void onAdShow(ATAdInfo entity) {
         Log.i(TAG, "onAdShow:\n" + entity.toString());
