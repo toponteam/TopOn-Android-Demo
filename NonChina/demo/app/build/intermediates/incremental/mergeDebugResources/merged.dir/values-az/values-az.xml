@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"%1$s saniyə sonra pəncərə bağlanacaq."</item>
+        <item priority="translator" quantity="other">"%1$s saniyə sonra pəncərə bağlanacaq."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Reklamı %d san sonra bağlamaq mümkündür"</item>
+        <item priority="translator" quantity="other">"Reklamı %d san sonra bağlamaq mümkündür"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Seçimi %1$s gün yadda saxlayın"</item>
+        <item priority="Reviewed" quantity="other">"Seçimi %1$s gün yadda saxlayın"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"%d saniyədən sonra mükafat qazanın"</item>
+        <item priority="translator" quantity="other">"%d saniyədən sonra mükafat qazanın"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Mükafat qazanmaq üçün %d saniyə izləyin."</item>
+        <item priority="translator" quantity="other">"Mükafat qazanmaq üçün %d saniyə izləyin."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d saniyə"</item>
+        <item priority="LT" quantity="other">"%1$d saniyə"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Heç biri"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Trek <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Audio trek"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normal"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Oxutma sürəti"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Deaktiv"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Trek <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Trek <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Əsas səhifəyə keçin"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Yuxarı keçin"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Digər seçimlər"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Hazırdır"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Hamısına baxın"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Tətbiq seçin"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"DEAKTİV"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"AKTİV"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"silin"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"daxil olun"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Funksiya+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menyu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Axtarış..."</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Sorğunu silin"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Axtarış sorğusu"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Axtarın"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Sorğunu göndərin"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Səsli axtarış"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Paylaşın"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> ilə paylaşın"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Yığcamlaşdırın"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktiv edin"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> Google Play xidmətlərini aktiv edənə kimi işləməyəcək."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play xidmətlərini aktiv edin"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Quraşdırın"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> cihazınızda mövcud olmayan Google Play xidmətləri olmadan çalışmayacaq."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play xidmətlərini əldə edin"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play xidmətlərinin əlçatanlığı"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play xidmətləri xətası"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> tətbiqi ilə Google Play xidmətləri arasında problem var. Daha sonra yenidən cəhd edin."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Cihazınız tərəfindən dəstəklənməyən Google Play xidmətləri olmadan <ns1:g id="APP_NAME">%1$s</ns1:g> tətbiqi işləməyəcək."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Güncəlləyin"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> Google Play xidmətləri yeniləmə halda çalışmaz."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play xidmətlərini güncəlləşdirin"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> hal-hazırda güncəllənən Google Play xidmətləri olmadan çalışmayacaq."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play xidmətlərinin yeni versiyası lazımdır. Qısa müddətə özünü yeniləyəcək."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Telefonda açın"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Daxil olun"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google ilə daxil olun"</string>
+    <string msgid="3209159573327985035" name="copy">"Kopyalayın"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"İndi oxudulur"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Qabaqcıl ayarlar"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Reklam"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Versiya: %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s quraşdırılıb"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Quraşdırma tamamlandı. Açmaq üçün toxunun."</string>
+    <string name="hiad_app_permission" priority="LT">"İcazələr"</string>
+    <string name="hiad_calender_add" priority="LT">"OK"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Hadisə artıq mövcuddur."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Bu hadisə təqviminizə əlavə edilsin?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Hadisə əlavə etmək mümkün deyil."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Hadisə əlavə edildi."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Bu hadisə təqviminizdən silinsin?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Hadisəni silmək mümkün deyil."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Hadisə silindi."</string>
+    <string name="hiad_calender_delete" priority="LT">"Silin"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Bundan təqvim xatırladıcıları yaratmaq və ya iştirak etməyi planlaşdırdığınız promosiya məzmunlu fəaliyyətlər üçün hadisələr yaratmaq məqsədilə istifadə edilir."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Qeyd"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Bu proqram Təqvim hadisələri yaratmaq üçün Təqvim icazəsi tələb edir. Bu icazəni Parametrlərdə təmin edə bilərsiniz."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Bu proqram Təqvim hadisələrini silmək üçün Təqvim icazəsi tələb edir. Bu icazəni Parametrlərdə təmin edə bilərsiniz."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Bundan hadisələr üçün xatırladıcılar təyin edə və qəbul edə bilməyiniz üçün Təqvim xatırladıcıları yaratmaq məqsədilə istifadə edilir."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"İcazə tələb olunur"</string>
+    <string name="hiad_calender_set" priority="LT">"Parametrlər"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Bundan AR interaktiv xidmətləri üçün istifadə edilir."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Reklam gizlədilib"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Maraqlanmıram"</string>
+    <string name="hiad_choices_hide" priority="translator">"Reklamı gizlədin"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"Nəyə görə bu reklamı görürəm?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Təkrar cəhd edin"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Bu proqram quraşdırılsın?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Mobil şəbəkə %1$s verilənlərdən istifadə edəcəkdir. Davam etsin?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Təkrar ifa zamanı mobil şəbəkədən istifadə olunacaqdır. Davam etsin?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Mobil bağlantıdan istifadə edilir. İzlədikdə %1$s həcmində mobil məlumatdan istifadə ediləcək."</string>
+    <string name="hiad_continue_download" priority="LT">"Endirin"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ENDİRIN"</string>
+    <string name="hiad_continue_to_play" priority="LT">"DAVAM ET"</string>
+    <string name="hiad_copy_link" priority="LT">"Keçidi köçür"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Proqram"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Ötür"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d ərzində ötürün"</string>
+    <string name="hiad_detail" priority="LT">"Təfərrüatlar"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Endirin"</string>
+    <string name="hiad_dialog_accept" priority="translator">"İCAZƏ VER"</string>
+    <string name="hiad_dialog_allow" priority="LT">"İCAZƏ VER"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"LƏĞV ET"</string>
+    <string name="hiad_dialog_close" priority="translator">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"YÜKLƏMƏ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ANLADIM"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s-ə %2$s-i quraşdırmaq üçün icazə verilsin?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Mənbə: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"İCAZƏ VERİN"</string>
+    <string name="hiad_dialog_open" priority="LT">"AÇIN"</string>
+    <string name="hiad_dialog_reject" priority="LT">"RƏDD ET"</string>
+    <string name="hiad_dialog_title" priority="LT">"Mobil şəbəkədən istifadə etməklə endirilsin?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Qeyd"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Mobil məlumatlardan istifadə etməklə endirilsin?"</string>
+    <string name="hiad_download_download" priority="LT">"QURAŞDIRIN"</string>
+    <string name="hiad_download_download_with_size" priority="translator">"ENDİRİN (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Endirilir"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s endirən zaman səhv baş verdi."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Fayl zədəlidir Lütfən, yenidən endirin."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Fayl mövcud deyil. Lütfən, yenidən cəhd edin."</string>
+    <string name="hiad_download_install" priority="LT">"QURAŞDIR"</string>
+    <string name="hiad_download_installing" priority="LT">"Quraşdırılır"</string>
+    <string name="hiad_download_no_space" priority="LT">"Yaddaşda yer azdır. Yaddaşı bir az boşaldın və yenidən cəhd edin."</string>
+    <string name="hiad_download_open" priority="LT">"AÇ"</string>
+    <string name="hiad_download_resume" priority="LT">"DAVAM ET"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s endirilən zaman səhv baş verdi. Yükləmə yenidən başladılacaqdır."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Hazırda Wi-Fi bağlantınız yoxdur. İndi endirmək %1$s mobil şəbəkədən istifadə edəcək. Yenə də endirilsin?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Hazırda WLAN bağlantınız yoxdur. İndi endirmək %1$s mobil şəbəkədən istifadə edəcək. Yenə də endir?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Parametrlər"</string>
+    <string name="hiad_install_completed" priority="LT">"Hazırdır"</string>
+    <string name="hiad_installed_description" priority="LT">"Uğurla quraşdırıldı. Açmaq üçün toxunun."</string>
+    <string name="hiad_jump_desc" priority="translator">"Təfərrüatlara baxın və ya proqrama keçin"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Bu səhifə açmaq istəyir: %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Keçid köçürüldü."</string>
+    <string name="hiad_loading_tips" priority="LT">"Yüklənir…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Bu endirmə %1$s mobil məlumatlar istifadə edəcək."</string>
+    <string name="hiad_net_error" priority="LT">"Şəbəkə bağlantısı xətası. Yenidən cəhd edin."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"İnternet bağlantısı yoxdur. Qoşulun və yenidən cəhd edin."</string>
+    <string name="hiad_network_error" priority="LT">"Şəbəkə bağlantısı xətası."</string>
+    <string name="hiad_network_no_available" priority="LT">"İnternet bağlantısı yoxdur. Lütfən, şəbəkə parametrlərinizi yoxlayın."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Bir daha xatırlatma"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi bağlantısı yoxdur. İndi endirmək mobil məlumatlarınızdan istifadə edəcək. Endirilsin?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN bağlantısı yoxdur. İndi endirmək mobil məlumatlarınızdan istifadə edəcək. Endirilsin?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Brauzerdə aç"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Səhifə yüklənə bilmir. Lütfən, yenidən cəhd edin."</string>
+    <string name="hiad_permission_camera" priority="LT">"Bu xüsusiyyət Kamera icazəsi tələb edir. Onu Parametrlərdə təmin edin."</string>
+    <string name="hiad_permission_dialog_title" priority="translator">"%1$s aşağıdakı icazələri tələb edir:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Əvvəlcədən sifariş edin"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi-ı gözləyin"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Mobil şəbəkə vasitəsilə endirilsin?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN-ı gözləyin"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Məxfilik"</string>
+    <string name="hiad_refresh" priority="LT">"Təzələ"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Proqram %1$d MB-dan böyükdür"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Ləğv edin"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Tərtibatçı: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Versiya: %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Ötürün"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"İzləməyə davam edin"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Mükafat qazanmaq üçün bu reklamı izləyib sona çatdırın."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Məkan əsaslı Reklamlar"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Veb-saytı/proqramı açmaq üçün toxunun"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Proqram endirilir."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Yuxarıya çəkin"</string>
+    <string name="hiad_twist_screen" priority="translator">"Telefonu silkələyin"</string>
+    <string name="hiad_whether_download" priority="LT">"Bu proqram endirilsin?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi vasitəsilə əvvəldən yüklənib"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Əvvəlcədən yüklənmiş"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Geri"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Subtitr deaktivdir. Göstərmək üçün klikləyin."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Subtitr aktivdir. Gizlətmək üçün klikləyin."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"30 saniyə irəli çəkin"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Tam ekran"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"İfaçı bilinmir"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Mahnının adı bilinmir"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Növbəti media"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Videonun başlığı bilinmir"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Əvvəlki düymə siyahısına geri qayıdın"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Daha çox düyməyə baxın"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Dayandırın"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Oxudun"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Təklif etdiyiniz videonu oxutmaq alınmadı"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Əvvəlki media"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Yenidən oxudun"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"10 saniyə geri çəkin"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Oxutmanın gedişatı"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Ayarlar"</string>
+    <string name="no_browser_tips" priority="LT">"Əvvəlcə brauzer proqramı quraşdırın."</string>
+    <string msgid="478774118347071097" name="not_set">"Ayarlanmayıb"</string>
+    <string name="offline_notification_text">Reklamı açmaq üçün toxunun</string>
+    <string name="offline_notification_title">Oflayn olduqda yadda saxladığınız reklama baxın</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Yenidən onlayn olduqda keçid olan bildiriş alacaqsınız</string>
+    <string name="offline_opt_in_decline">Xeyr, təşəkkür</string>
+    <string name="offline_opt_in_message">Sizə reklamçının saytına keçid olan bildiriş göndərəcəyik.</string>
+    <string name="offline_opt_in_title">Yenidən onlayn olduqda reklamı açın.</string>
+    <string name="opendevice_ad_info" priority="LT">"Reklam məlumatları"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Reklamlar və Məxfilik Haqqında Bildiriş"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Bütün reklamçılar"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"LƏĞV EDİN"</string>
+    <string name="opendevice_bt_reset" priority="LT">"SIFIRLA"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Yeni Reklam ID-si təsadüfən təyin ediləcək."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Reklam ID-sini sıfırlayın"</string>
+    <string name="opendevice_here" priority="LT">"buraya"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Reklamlar və məxfilik"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Reklamlar"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Reklam ID-nizi istifadə edən fərdiləşdirilmiş reklamların qəbul edilməsindən imtina edə bilərsiniz. İmtina etsəniz, yenə də reklamlar qəbul edəcəksiniz, lakin onlar sizə daha az uyğun olacaq. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"Verilənlər istifadəsi və hüquqlarınız haqqında ətraflı öyrənin"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Reklam ID-si statistikasının toplanmasını qeyri-aktiv edin"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Xidmətlərimizi təkmilləşdirmək məqsədilə bu parametrlərdə ekran əməliyyatlarınız və Reklam ID-nizi istifadə edən proqramlar haqqında məlumatları toplayacağıq. Bu verilənləri necə istifadə etdiyimiz haqqında daha çox məlumat üçün %1$s toxunun."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Xidmətlərimizi təkmilləşdirmək üçün bu parametrlərdə ekrandakı əməliyyatlarınız haqqında və Reklam-ID-nizdən istifadə edən proqramlar haqqında məlumatları toplayacağıq."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Daha çox məlumat"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Reklam ID-niz (həmçinin OAID kimi tanınır) sizi fərdiləşdirilmiş reklamlar ilə təmin etmək üçün istifadə edilən müvəqqəti cihaz identifikatorudur."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Reklam ID-sini sıfırlayın"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Reklam ID-nizdən istifadə edən fərdiləşdirilmiş reklamları qəbul etməkdən imtina edə bilərsiniz. İmtina etsəniz, yenə də reklamları qəbul edəcəksiniz, lakin onlar sizə daha az uyğun ola bilər."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Reklam ID-nizdən istifadə edən fərdiləşdirilmiş reklamların qəbul edilməsindən imtina edə bilərsiniz. İmtina etsəniz, yenə də reklamlar qəbul edəcəksiniz, lakin onlar sizə daha az uyğun ola bilər."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Reklam ID-niz"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Reklam ID-niz (həmçinin OAID kimi tanınan) sizi fərdiləşdirilmiş reklamlarla təmin etmək üçün istifadə edilən müvəqqəti cihaz identifikatorudur. Daha çox məlumat üçün %1$s toxunun."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Fərdiləşdirilmiş reklamları qeyri-aktiv edin"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Daha çox öyrənin"</string>
+    <string name="opendevice_network_no_available" priority="LT">"İnternet bağlantısı yoxdur"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Fərdiləşdirilmiş reklam xidmətləri sizə maraqlı ola biləcək məzmun tövsiyə edir. Məxfiliyiniz hər zaman qorunacaq. Daha çox təfərrüat üçün %1$s bölməsinə baxın."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Fərdiləşdirilmiş reklam xidmətləri maraqlana biləcəyiniz məzmunlar tövsiyə edir. Məxfiliyiniz hər zaman qorunacaq. Daha çox məlumat üçün aşağıdakı bölməyə baxın:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI Reklamları platforması Huawei Mobile Services və üçüncü tərəf proqramları üçün reklam xidmətləri təmin edir. Fərdiləşdirilmiş reklamlar aktivləşdirilibsə, sizi daha uyğun və faydalı reklamlar ilə təmin etmək üçün şəxsi məlumatlarınız istifadə edilə bilər. Verilənlərinizin necə istifadə edildiyi və hüquqlarınız haqqında daha çox məlumat əldə etmək üçün %1$s bölməsinə istinad edin."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI Reklamları platforması Huawei Mobile Services və üçüncü tərəf proqramları üçün reklam xidmətləri təmin edir. Fərdiləşdirilmiş reklamlar aktivləşdirilərsə, sizi daha müvafiq və faydalı reklamlar ilə təmin etmək üçün şəxsi məlumatlarınız istifadə edilə bilər. Verilənlərinizin necə istifadə edilməsi və hüquqlarınız haqqında daha çox məlumat əldə etmək üçün aşağıdakı bölməyə istinad edin:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Şəbəkə parametrləri"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Cihaz identifikatoru"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID Haqqında"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Reklam ID-si Statistik Təhlili Haqqında Bildiriş"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Reklam məlumatları"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Pauza"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Oxudun"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" buferə kopyalandı."</string>
+    <string name="s1">Şəkli yadda saxlayın</string>
+    <string name="s2">Reklama təsvirləri Şəkil qalereyasında saxlamağa icazə verilsin?</string>
+    <string name="s3">Qəbul edin</string>
+    <string name="s4">Rədd edin</string>
+    <string name="s5">Təqvim tədbiri yaradın</string>
+    <string name="s6">Təqvim tədbiri yaratmaq üçün Reklama icazə verilsin?</string>
+    <string name="s7">Test Reklamı</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Axtarın"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Növbəti elementə keçin"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Əvvəlki elementə keçin"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"DEAKTİV"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"AKTİV"</string>
+</resources>

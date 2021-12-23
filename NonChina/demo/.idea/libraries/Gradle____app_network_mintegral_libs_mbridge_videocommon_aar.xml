@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mintegral/libs/mbridge_videocommon.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78bec567a313115a1f363079ffff6fb4/mbridge_videocommon/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78bec567a313115a1f363079ffff6fb4/mbridge_videocommon/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78bec567a313115a1f363079ffff6fb4/mbridge_videocommon/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78bec567a313115a1f363079ffff6fb4/mbridge_videocommon/jars/libs/classes-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

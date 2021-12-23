@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/tapjoy/libs/anythink_network_tapjoy.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c869493cdbd125d0ee0ab392e23ea8e0/jetified-anythink_network_tapjoy/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c869493cdbd125d0ee0ab392e23ea8e0/jetified-anythink_network_tapjoy/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c869493cdbd125d0ee0ab392e23ea8e0/jetified-anythink_network_tapjoy/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c869493cdbd125d0ee0ab392e23ea8e0/jetified-anythink_network_tapjoy/jars/libs/anythink_network_tapjoy.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

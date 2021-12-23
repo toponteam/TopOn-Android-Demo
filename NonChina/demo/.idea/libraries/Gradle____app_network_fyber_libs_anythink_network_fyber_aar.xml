@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/fyber/libs/anythink_network_fyber.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475527ae5698602b88fff091be961e21/jetified-anythink_network_fyber/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475527ae5698602b88fff091be961e21/jetified-anythink_network_fyber/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475527ae5698602b88fff091be961e21/jetified-anythink_network_fyber/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475527ae5698602b88fff091be961e21/jetified-anythink_network_fyber/jars/libs/anythink_network_fyber.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

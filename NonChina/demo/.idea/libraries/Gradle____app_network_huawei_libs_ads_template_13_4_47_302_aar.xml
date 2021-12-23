@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/huawei/libs/ads-template-13.4.47.302.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2d7cdb8915e094d5b9b6c548eb355fa/ads-template-13.4.47.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2d7cdb8915e094d5b9b6c548eb355fa/ads-template-13.4.47.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2d7cdb8915e094d5b9b6c548eb355fa/ads-template-13.4.47.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

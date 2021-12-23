@@ -1,0 +1,39 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/developertopon/Code/up_sdk_android/anythink_sdk/outputs/TopOn_Android_SDK_v5.7.93_202112231851_Release/NonChina/demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-2/files-2.1/37f281bec667ae9e94ee7bef9508ec8d/jetified-ads-core-3.4.47.302/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,230",
+                        "endLines": "4,5",
+                        "endColumns": "12,118",
+                        "endOffsets": "225,344"
+                    }
+                },
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-2/files-2.1/0778a59e553507e9638b0e74afc394c2/jetified-anythink_core/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "349",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "516"
+                    }
+                }
+            ]
+        }
+    ]
+}

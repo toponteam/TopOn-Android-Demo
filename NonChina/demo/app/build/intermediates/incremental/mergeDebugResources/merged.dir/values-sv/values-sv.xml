@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Fönstret stängs om %1$s sekund."</item>
+        <item priority="translator" quantity="other">"Fönstret stängs om %1$s sekunder."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Annonsen kan stängas om %d s"</item>
+        <item priority="translator" quantity="other">"Annonsen kan stängas om %d s"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Kom ihåg valet i %1$s dag"</item>
+        <item priority="Reviewed" quantity="other">"Kom ihåg valet i %1$s dagar"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"Tjäna en belöning på %d s"</item>
+        <item priority="translator" quantity="other">"Tjäna en belöning på %d s"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Titta i %d sekund för att få en belöning."</item>
+        <item priority="translator" quantity="other">"Titta i %d sekunder för att få en belöning."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d s"</item>
+        <item priority="LT" quantity="other">"%1$d s"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Inget"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Spår <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Ljudspår"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normal"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Uppspelningshastighet"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Av"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Spår <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> – <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Spår <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Navigera hem"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Navigera uppåt"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Fler alternativ"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Klar"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Visa alla"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Välj en app"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"AV"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"PÅ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt + "</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl + "</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"retur"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Funktion + "</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta + "</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Skift + "</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"blanksteg"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Symbol + "</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Meny + "</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Sök …"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Ta bort frågan"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Sökfråga"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Sök"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Skicka fråga"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Röstsökning"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Dela med"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Dela med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Komprimera"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktivera"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerar inte om du inte aktiverar Google Play-tjänster."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Aktivera Google Play-tjänster"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installera"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan inte köras utan Google Play-tjänsterna, som saknas på enheten."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Hämta Google Play-tjänster"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Tillgänglighet för Google Plays tjänster"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fel på Google Play-tjänster"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Det har uppstått ett fel mellan <ns1:g id="APP_NAME">%1$s</ns1:g> och Google Play-tjänsterna. Försök igen."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> fungerar inte utan Google Play-tjänsterna, som inte stöds på enheten."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Uppdatera"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan inte köras om du inte uppdaterar Google Play-tjänsterna."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Uppdatera Google Play-tjänster"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan inte köras utan Google Play-tjänster, och dessa uppdateras för närvarande."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"En ny version av Google Play-tjänster krävs. Den uppdateras automatiskt inom kort."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Öppna på mobilen"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Logga in"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Logga in med Google"</string>
+    <string msgid="3209159573327985035" name="copy">"Kopiera"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Nu spelas"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Avancerat"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Annons"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Version %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s har installerats"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Installation klar. Peka för att öppna."</string>
+    <string name="hiad_app_permission" priority="LT">"Behörigheter"</string>
+    <string name="hiad_calender_add" priority="LT">"OK"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Den här händelsen finns redan."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Vill du lägga till den här händelsen i din kalender?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Kunde inte lägga till händelsen."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Händelsen har lagts till."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Vill du radera den här händelsen från din kalender?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Kunde inte radera händelsen."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Händelsen har raderats."</string>
+    <string name="hiad_calender_delete" priority="LT">"Radera"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Detta används för att generera kalenderpåminnelser eller skapa händelser för kampanjaktiviteter som du planerar att delta i."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Notera"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Den här appen behöver behörigheten Kalender för att skapa Kalenderhändelser. Du kan tilldela den här behörigheten i Inställningar."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Den här appen behöver behörigheten Kalender för att radera Kalenderhändelser. Du kan tilldela den här behörigheten i Inställningar."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Detta används för att skapa Kalenderpåminnelser så att du kan ställa in och få påminnelser om händelser."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Behörighet krävs"</string>
+    <string name="hiad_calender_set" priority="LT">"Inställningar"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Detta används för AR-interaktiva tjänster."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Annons dold"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Inte intresserad"</string>
+    <string name="hiad_choices_hide" priority="translator">"Dölj annons"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Varför såg jag denna annons?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Försök igen"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Vill du installera den här appen?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Användning av ett mobilnät förbrukar %1$s data. Fortsätt?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Uppspelning använder mobildata. Vill du fortsätta?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Använder mobilanslutning. Om du tittar används %1$s mobildata."</string>
+    <string name="hiad_continue_download" priority="LT">"Ladda ned"</string>
+    <string name="hiad_continue_download_new" priority="LT">"LADDA NED"</string>
+    <string name="hiad_continue_to_play" priority="LT">"FORTSÄTT"</string>
+    <string name="hiad_copy_link" priority="LT">"Kopiera länk"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"App"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Hoppa över"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Hoppa över om %d"</string>
+    <string name="hiad_detail" priority="LT">"Detaljer"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Ladda ned"</string>
+    <string name="hiad_dialog_accept" priority="translator">"TILLÅT"</string>
+    <string name="hiad_dialog_allow" priority="LT">"TILLÅT"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"AVBRYT"</string>
+    <string name="hiad_dialog_close" priority="translator">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"LADDA NED"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"JAG FÖRSTÅR"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Tillåt %1$s att installera %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Källa: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"TILLÅT"</string>
+    <string name="hiad_dialog_open" priority="LT">"ÖPPNA"</string>
+    <string name="hiad_dialog_reject" priority="LT">"NEKA"</string>
+    <string name="hiad_dialog_title" priority="LT">"Ladda ned via mobildata?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Obs!"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Vill du ladda ned med mobildata?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALLERA"</string>
+    <string name="hiad_download_download_with_size" priority="translator">"LADDA NED (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Laddar ned"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Ett fel uppstod vid nedladdning av %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Filen är skadad. Ladda ned den igen."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Filen finns inte. Försök igen."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALLERA"</string>
+    <string name="hiad_download_installing" priority="LT">"Installerar"</string>
+    <string name="hiad_download_no_space" priority="LT">"Otillräckligt lagringsutrymme. Frigör utrymme och försök igen."</string>
+    <string name="hiad_download_open" priority="LT">"ÖPPNA"</string>
+    <string name="hiad_download_resume" priority="LT">"FORTSÄTT"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Ett fel uppstod vid nedladdning av %1$s. Nedladdningen startas om."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Du är för närvarande inte ansluten till Wi-Fi Om du laddar ned nu kommer %1$s mobildata att användas. Ladda ned ändå?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Du är för närvarande inte ansluten till WLAN. Om du laddar ned nu kommer %1$s mobildata att användas. Ladda ned ändå?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Inställningar"</string>
+    <string name="hiad_install_completed" priority="LT">"Färdig"</string>
+    <string name="hiad_installed_description" priority="LT">"Installation klar. Peka för att öppna."</string>
+    <string name="hiad_jump_desc" priority="translator">"Visa detaljer eller gå till appen"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Den här sidan vill öppna %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Länk kopierad."</string>
+    <string name="hiad_loading_tips" priority="LT">"Laddar …"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Denna nedladdning förbrukar %1$s mobildata."</string>
+    <string name="hiad_net_error" priority="LT">"Nätverksanslutningsfel. Försök igen."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Ingen internetanslutning. Anslut och försök igen."</string>
+    <string name="hiad_network_error" priority="LT">"Nätverksanslutningsfel."</string>
+    <string name="hiad_network_no_available" priority="LT">"Ingen internetanslutning. Kontrollera nätverksinställningarna."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Påminn mig inte igen"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Ingen Wi-Fi-anslutning. Om du laddar ner nu förbrukar det dina mobildata. Vill du ladda ned?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Ingen WLAN-anslutning. Om du laddar ner nu förbrukar det dina mobildata. Vill du ladda ned?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Öppna i webbläsare"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Kan inte hämta sida. Försök igen."</string>
+    <string name="hiad_permission_camera" priority="LT">"Den här funktionen behöver behörigheten Kamera. Bevilja den i Inställningar."</string>
+    <string name="hiad_permission_dialog_title" priority="translator">"%1$s kräver följande behörigheter:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Förbeställ"</string>
+    <string name="hiad_prepare_download" priority="LT">"Vänta på Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Vill du ladda ned via mobilnätverk?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Vänta på WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Sekretess"</string>
+    <string name="hiad_refresh" priority="LT">"Uppdatera"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"App större än %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Avbryt"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Utvecklare: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Version %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Hoppa över"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Fortsätt titta"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Titta klart på den här annonsen för att få en belöning."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Platsbaserade annonser"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Peka för att öppna webbplats/app"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Appen laddas ned."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Svep uppåt"</string>
+    <string name="hiad_twist_screen" priority="translator">"Skaka telefonen"</string>
+    <string name="hiad_whether_download" priority="LT">"Vill du ladda ned den här appen?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Förinstallerad över Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Förinläst"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Tillbaka"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Undertexter har inaktiverats. Klicka för att visa dem."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Undertexter har aktiverats. Klicka för att dölja dem."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Spola framåt 30 sekunder"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Helskärm"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Okänd artist"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Okänd låttitel"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Nästa media"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Okänd videotitel"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Tillbaka till föregående knapplista"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Visa fler knappar"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Pausa"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Spela upp"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Det gick inte att spela upp det valda objektet"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Föregående media"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Spela upp igen"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Spola bakåt tio sekunder"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Uppspelningsförlopp"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Inställningar"</string>
+    <string name="no_browser_tips" priority="LT">"Installera en webbläsarapp först."</string>
+    <string msgid="478774118347071097" name="not_set">"Inte angett"</string>
+    <string name="offline_notification_text">Tryck för att öppna annonsen</string>
+    <string name="offline_notification_title">Se annonsen som du sparade när du var offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Du får en avisering med en länk när du är online igen</string>
+    <string name="offline_opt_in_decline">Nej tack</string>
+    <string name="offline_opt_in_message">Vi skickar en avisering med en länk till annonsörens webbplats.</string>
+    <string name="offline_opt_in_title">Öppna annonsen när du är online igen.</string>
+    <string name="opendevice_ad_info" priority="LT">"Annonsinformation"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Meddelande om annonser och sekretess"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Alla annonsörer"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"AVBRYT"</string>
+    <string name="opendevice_bt_reset" priority="LT">"ÅTERSTÄLL"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Ett nytt annons-ID tilldelas slumpmässigt."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Återställ annons-ID"</string>
+    <string name="opendevice_here" priority="LT">"här"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Annonser och sekretess"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Annonser"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Du kan välja att sluta ta emot anpassade annonser som använder ditt annons-ID. I så fall får du ändå annonser, men de kan vara mindre relevanta för dig. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"Läs mer om dataanvändning och dina rättigheter"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Avakt. insam. av annons-ID-stat."</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Vi samlar in information om dina åtgärder på skärmen i de här inställningarna och om appar som du använder med ditt Annons-ID för att förbättra våra tjänster. Peka %1$s för mer information om hur vi använder dessa data."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Vi samlar in information om dina åtgärder på skärmen i de här inställningarna och om appar som du använder med ditt Annons-ID för att förbättra våra tjänster."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Mer information"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Ditt annons-ID (även kallat OAID) är en tillfällig enhetsidentifierare som används för att visa dig anpassad annonsering."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Återställ annons-ID"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Du kan välja bort att ta emot anpassade annonser som använder ditt annons-ID. I detta fall får du fortfarande annonser, men de kan vara mindre relevanta för dig."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Du kan välja att sluta få anpassade annonser som använder ditt annons-ID. I så fall får du ändå annonser, men de kan vara mindre relevanta för dig."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Ditt annons-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Ditt annons-ID (även kallat OAID) är en tillfällig enhetsidentifierare som används för att visa dig anpassade annonser. Peka %1$s för mer information."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Avaktivera anpassade annonser"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Läs mer"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Ingen internetanslutning"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Personanpassade annonstjänster rekommenderar innehåll som du kan vara intresserad av. Din sekretess skyddas hela tiden. Mer information finns i %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Personanpassade annonstjänster rekommenderar innehåll som du kan vara intresserad av. Din sekretess skyddas hela tiden. Se följande för mer information:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"Plattformen HUAWEI Annonser tillhandahåller annonstjänster för Huawei Mobile Services och tredje parts appar. Om anpassade annonser är aktiverade kan dina personuppgifter användas för att tillhandahålla dig mer relevanta och användbara annonser. Se %1$s för att lära dig mer om hur dina data används och om dina rättigheter."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"Plattformen HUAWEI Annonser tillhandahåller annonstjänster för Huawei Mobile Services och tredje parts appar. Om anpassade annonser är aktiverade kan dina personuppgifter användas för att tillhandahålla dig mer relevanta och användbara annonser. Se följande för att lära dig mer om hur dina data används och om dina rättigheter:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Nätverksinställn."</string>
+    <string name="opendevice_title_oaid" priority="LT">"Enhetsidentifierare"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"Om OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Meddelande om Annons-ID för statistisk analys"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Annonsinformation"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Pausa"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Spela upp"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"<ns1:g id="SUMMARY">%1$s</ns1:g> har kopierats till Urklipp."</string>
+    <string name="s1">Spara bild</string>
+    <string name="s2">Tillåter du att annonsen sparar bilden i Bildgalleriet?</string>
+    <string name="s3">Godkänn</string>
+    <string name="s4">Godkänn inte</string>
+    <string name="s5">Skapa kalenderhändelse</string>
+    <string name="s6">Tillåter du att annonsen skapar en kalenderhändelse?</string>
+    <string name="s7">Testannons</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Sök"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Hoppa till nästa objekt"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Hoppa till föregående objekt"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"AV"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"PÅ"</string>
+</resources>

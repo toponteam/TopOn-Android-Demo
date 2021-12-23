@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"%1$s സെക്കന്റിൽ വിൻഡോ അടയ്ക്കും."</item>
+        <item priority="translator" quantity="other">"%1$s സെക്കന്റിൽ വിൻഡോ അടയ്ക്കും."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"%d സെ. കഴിഞ്ഞ് പരസ്യം അടയ്‌ക്കാവുന്നതാണ്"</item>
+        <item priority="translator" quantity="other">"%d സെ. കഴിഞ്ഞ് പരസ്യം അടയ്‌ക്കാവുന്നതാണ്"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"%1$s ദിവസത്തിനുള്ള തിരഞ്ഞെടുക്കൽ ഓർമ്മിക്കുക"</item>
+        <item priority="Reviewed" quantity="other">"%1$s ദിവസത്തിനുള്ള തിരഞ്ഞെടുക്കൽ ഓർമ്മിക്കുക"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"%d സെ. കഴിഞ്ഞ് ഒരു റിവാർഡ് കരസ്ഥമാക്കുക"</item>
+        <item priority="translator" quantity="other">"%d സെ. കഴിഞ്ഞ് ഒരു റിവാർഡ് കരസ്ഥമാക്കുക"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"ഒരു റിവാർഡ് കരസ്ഥമാക്കാൻ %d സെക്കന്റ് കാണുക."</item>
+        <item priority="translator" quantity="other">"ഒരു റിവാർഡ് കരസ്ഥമാക്കാൻ %d സെക്കന്റ് കാണുക."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d സെ"</item>
+        <item priority="LT" quantity="other">"%1$d സെ"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"ഒന്നുമില്ല"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"ട്രാക്ക് <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"ഓഡിയോ ട്രാക്ക്"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"സാധാരണ"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"പ്ലേബാക്ക് വേഗത"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"ഓഫ്"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"ട്രാക്ക് <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"ട്രാക്ക് <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"ഹോമിലേക്ക് പോവുക"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"മുകളിലേക്ക് പോവുക"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"കൂടുതൽ ഓപ്ഷനുകൾ"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"പൂർത്തിയായി"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"എല്ലാം കാണുക"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"ആപ്പ് തിരഞ്ഞെടുക്കുക"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ഓഫ്"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ഓൺ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"ഇല്ലാതാക്കുക"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"ഫംഗ്ഷന്‍+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"മെറ്റ+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"സ്‌പെയ്‌സ്"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"മെനു+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"തിരയുക…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ചോദ്യം മായ്‌ക്കുക"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"ചോദ്യം തിരയുക"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"തിരയുക"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ചോദ്യം സമർപ്പിക്കുക"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"സംസാരത്തിലൂടെ തിരയുക"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"ഇനിപ്പറയുന്നതുമായി പങ്കിടുക"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> എന്നതുമായി പങ്കിടുക"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ചുരുക്കുക"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"പ്രവർത്തനക്ഷമമാക്കുക"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"നിങ്ങൾ Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുന്നില്ലെങ്കിൽ <ns1:g id="APP_NAME">%1$s</ns1:g> പ്രവർത്തിക്കില്ല."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുക"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"ഇന്‍സ്റ്റാള്‍ ചെയ്യുക"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Google Play സേവനങ്ങളില്ലാതെ <ns1:g id="APP_NAME">%1$s</ns1:g> പ്രവർത്തിക്കില്ല, ഈ സേവനങ്ങളാകട്ടെ നിങ്ങളുടെ ഉപകരണത്തിൽ ഇല്ല."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play സേവനങ്ങൾ നേടുക"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play സേവന ലഭ്യത"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play സേവനങ്ങളിലെ പിശക്"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Google Play സേവനങ്ങളുമായി ബന്ധപ്പെട്ട് <ns1:g id="APP_NAME">%1$s</ns1:g> ആപ്പിനെന്തോ പ്രശ്നമുണ്ട്. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Google Play സേവനങ്ങളില്ലാതെ <ns1:g id="APP_NAME">%1$s</ns1:g> പ്രവർത്തിക്കില്ല, സേവനങ്ങളെയാകട്ടെ നിങ്ങളുടെ ഉപകരണം പിന്തുണയ്ക്കുന്നുമില്ല."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"അപ്‌ഡേറ്റുചെയ്യുക"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"നിങ്ങൾ Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്‌തില്ലെങ്കിൽ <ns1:g id="APP_NAME">%1$s</ns1:g> പ്രവർത്തിക്കില്ല."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്യുക"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"നിലവിൽ അപ്‌ഡേറ്റുചെയ്യുന്ന Google Play സേവനങ്ങൾ ഇല്ലാതെ <ns1:g id="APP_NAME">%1$s</ns1:g> പ്രവർത്തിക്കില്ല."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play സേവനങ്ങളുടെ പുതിയ പതിപ്പ് ആവശ്യമാണ്. താമസിയാതെ ഇത് സ്വയം അപ്‌ഡേറ്റുചെയ്യും."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"ഫോണിൽ തുറക്കുക"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"സൈൻ ഇൻ ചെയ്യുക"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക"</string>
+    <string msgid="3209159573327985035" name="copy">"പകർത്തുക"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"ഇപ്പോൾ കേൾക്കുന്നത്"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"വിപുലമായത്"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"പരസ്യം"</string>
+    <string name="hiad_app_detail_version" priority="LT">"പതിപ്പ് %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ഇൻസ്റ്റാൾ ചെയ്തു"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ഇൻസ്റ്റാളേഷൻ പൂർത്തിയായി. തുറക്കാൻ, സ്പർശിക്കുക."</string>
+    <string name="hiad_app_permission" priority="LT">"അനുമതികൾ"</string>
+    <string name="hiad_calender_add" priority="LT">"ശരി"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"ഇവന്റ് നിലവിലുണ്ട്."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"നിങ്ങളുടെ കലണ്ടറിൽ ഈ ഇവന്റ് ചേർക്കണോ?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"ഇവന്റ് ചേർക്കാനാകുന്നില്ല."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"ഇവന്റ് ചേർത്തു."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"നിങ്ങളുടെ കലണ്ടറിൽ നിന്നും ഈ ഇവന്‍റ് ഇല്ലാതാക്കണോ?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ഇവന്റ് ഇല്ലാതാക്കാനാകുന്നില്ല."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ഇവന്റ് ഇല്ലാതാക്കി."</string>
+    <string name="hiad_calender_delete" priority="LT">"ഇല്ലാതാക്കുക"</string>
+    <string name="hiad_calender_description_new" priority="LT">"കലണ്ടർ റിമൈൻഡറുകൾ സൃഷ്‌ടിക്കാനോ നിങ്ങൾ പങ്കെടുക്കാൻ പദ്ധതിയിടുന്ന പ്രമോഷണൽ ആക്‌ടിവിറ്റികൾക്കുള്ള ഇവന്റുകൾ സൃഷ്‌ടിക്കാനോ ആണ് ഇത് ഉപയോഗിക്കുന്നത്."</string>
+    <string name="hiad_calender_dialog" priority="LT">"ശ്രദ്ധിക്കുക"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"ഈ ആപ്പിന് കലണ്ടർ ഇവന്റുകൾ സൃഷ്‌ടിക്കാൻ കലണ്ടർ അനുവാദം ആവശ്യമാണ്. നിങ്ങൾക്ക് ക്രമീകരണത്തിൽ ഈ അനുവാദം നൽകാവുന്നതാണ്."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"ഈ ആപ്പിന് കലണ്ടർ ഇവന്റുകൾ ഇല്ലാതാക്കാൻ കലണ്ടർ അനുവാദം ആവശ്യമാണ്. നിങ്ങൾക്ക് ക്രമീകരണത്തിൽ ഈ അനുവാദം നൽകാവുന്നതാണ്."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"ഇവന്റുകൾക്കുള്ള റിമൈൻഡറുകൾ സജ്ജീകരിക്കാനും സ്വീകരിക്കാനുമായി കലണ്ടർ റിമൈൻഡറുകൾ സൃഷ്‌ടിക്കാനാണ് ഇത് ഉപയോഗിക്കുന്നത്."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"അനുവാദം ആവശ്യമാണ്"</string>
+    <string name="hiad_calender_set" priority="LT">"ക്രമീകരണം"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"AR ഇന്ററാക്‌ടീവ് സേവനങ്ങൾക്കാണ് ഇത് ഉപയോഗിക്കുന്നത്."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"പരസ്യം മറച്ചിരിക്കുന്നു"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"താൽപ്പര്യമില്ല"</string>
+    <string name="hiad_choices_hide" priority="LT">"പരസ്യം മറയ്‌ക്കുക"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"എന്തുകൊണ്ടാണ് ഞാൻ ഈ പരസ്യം കണ്ടത്?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ഈ ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യണോ?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"ഒരു മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിക്കുന്നത് %1$s ഡാറ്റ ഉപയോഗിക്കും. തുടരണോ?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"പ്ലേബാക്കിന് മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. തുടരണോ?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"മൊബൈൽ കണക്ഷൻ ഉപയോഗിക്കുന്നു. കാണുന്നത്, %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗത്തിന് ഇടയാക്കും."</string>
+    <string name="hiad_continue_download" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_continue_to_play" priority="translator">"തുടരുക"</string>
+    <string name="hiad_copy_link" priority="LT">"ലിങ്ക് പകർത്തുക"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"ആപ്പ്"</string>
+    <string name="hiad_default_skip_text" priority="translator">"ഒഴിവാക്കുക"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d-ൽ ഒഴിവാക്കുക"</string>
+    <string name="hiad_detail" priority="translator">"വിശദാംശങ്ങൾ"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_dialog_accept" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_allow" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"റദ്ദാക്കുക"</string>
+    <string name="hiad_dialog_close" priority="LT">"ശരി"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"മനസ്സിലായി"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ഇൻസ്റ്റാൾ ചെയ്യാൻ %1$s എന്നതിനെ അനുവദിക്കണോ?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"ഉറവിടം: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_open" priority="LT">"തുറക്കുക"</string>
+    <string name="hiad_dialog_reject" priority="LT">"നിഷേധിക്കുക"</string>
+    <string name="hiad_dialog_title" priority="LT">"മൊബൈൽ ഡാറ്റ ഉപയോഗിച്ച് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"ശ്രദ്ധിക്കുക"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"മൊബൈൽ ഡാറ്റ ഉപയോഗിച്ച് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_download_download" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"ഡൗൺലോഡ് ചെയ്യുന്നു"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s ഡൗൺലോഡ് ചെയ്യുന്ന സമയത്ത് ഒരു പിശക് സംഭവിച്ചു."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ഫയൽ കേടായി. വീണ്ടും ഡൗൺലോഡ് ചെയ്യുക."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ഫയൽ നിലവിലില്ല. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_download_install" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
+    <string name="hiad_download_installing" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുന്നു"</string>
+    <string name="hiad_download_no_space" priority="LT">"അപര്യാപ്തമായ സ്റ്റോറേജ്. കുറച്ച് സ്പെയ്സ് സ്വതന്ത്രമാക്കി വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_download_open" priority="LT">"തുറക്കുക"</string>
+    <string name="hiad_download_resume" priority="LT">"തുടരുക"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s ഡൗൺലോഡ് ചെയ്യുന്ന സമയത്ത് ഒരു പിശക് സംഭവിച്ചു. ഡൗൺലോഡ് പുനരാരംഭിക്കും."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"നിങ്ങൾ നിലവിൽ Wi-Fi-യിൽ കണക്റ്റ് ചെയ്തിട്ടില്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നതിന് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. എന്തായാലും ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"നിങ്ങൾ നിലവിൽ WLAN-ൽ കണക്റ്റ് ചെയ്തിട്ടില്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നതിന് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. എന്തായാലും ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_go_to_settings" priority="LT">"ക്രമീകരണം"</string>
+    <string name="hiad_install_completed" priority="LT">"ചെയ്തു"</string>
+    <string name="hiad_installed_description" priority="translator">"ഇൻസ്റ്റാളേഷൻ വിജയകരം. തുറക്കാൻ സ്‌പർശിക്കുക."</string>
+    <string name="hiad_jump_desc" priority="translator">"വിശദാംശങ്ങൾ കാണുക, അല്ലെങ്കിൽ ആപ്പിലേക്ക് പോകുക"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ഈ പേജ് %1$s തുറക്കാൻ താൽപ്പര്യപ്പെടുന്നു."</string>
+    <string name="hiad_link_already_copied" priority="LT">"ലിങ്ക് പകർത്തി."</string>
+    <string name="hiad_loading_tips" priority="LT">"ലോഡ് ചെയ്യുന്നു…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ഈ ഡൗൺലോഡ് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും."</string>
+    <string name="hiad_net_error" priority="LT">"നെറ്റ്‌വർക്ക് കണക്ഷൻ പിശക്. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല. കണക്റ്റ് ചെയ്‌ത് വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_network_error" priority="translator">"നെറ്റ്‌വർക്ക് കണക്ഷൻ പിശക്."</string>
+    <string name="hiad_network_no_available" priority="LT">"ഇന്‍റർനെറ്റ് കണക്ഷൻ ഇല്ല. നിങ്ങളുടെ നെറ്റ്‌വർക്ക് ക്രമീകരണം പരിശോധിക്കുക."</string>
+    <string name="hiad_no_more_remind" priority="LT">"എന്നെ വീണ്ടും ഓർമ്മിപ്പിക്കരുത്"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi കണക്ഷൻ ഇല്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നത്, മൊബൈൽ ഡാറ്റാ ഉപയോഗത്തിന് ഇടയാക്കും. ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN കണക്ഷൻ ഇല്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നത്, മൊബൈൽ ഡാറ്റാ ഉപയോഗത്തിന് ഇടയാക്കും. ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ബ്രൗസറിൽ തുറക്കുക"</string>
+    <string name="hiad_page_load_failed" priority="LT">"പേജ് ലോഡ് ചെയ്യാനാകുന്നില്ല. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_permission_camera" priority="LT">"ഈ സവിശേഷതയ്‌ക്ക് ക്യാമറ അനുവാദം ആവശ്യമാണ്. ക്രമീകരണത്തിൽ അത് നൽകുക."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s-ന് ഇനിപ്പറയുന്ന അനുമതികൾ ആവശ്യമാണ്:"</string>
+    <string name="hiad_preorder_download" priority="LT">"പ്രി-ഓർഡർ ചെയ്യുക"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi യ്ക്കായി കാത്തിരിക്കുക"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"മൊബൈൽ നെറ്റ്‌വർക്ക് മുഖേന ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN-നായി കാത്തിരിക്കുക"</string>
+    <string name="hiad_privacy_policy" priority="LT">"സ്വകാര്യത"</string>
+    <string name="hiad_refresh" priority="LT">"റിഫ്രഷ് ചെയ്യുക"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"ആപ്പ് %1$d MB-യിലും വലുതാണ്"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"റദ്ദാക്കുക"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"ഡെവലപ്പർ: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"പതിപ്പ് %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ഒഴിവാക്കുക"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"കണ്ടുകൊണ്ടിരിക്കുക"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ഒരു റിവാർഡ് കരസ്ഥമാക്കാൻ ഈ പരസ്യം കാണുന്നത് പൂർത്തിയാക്കുക."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"ലൊക്കേഷൻ അധിഷ്ഠിത പരസ്യങ്ങൾ"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"വെബ്‌സൈറ്റ്/ആപ്പ് തുറക്കാൻ സ്‌പർശിക്കുക"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"ആപ്പ് ഡൗൺലോഡ് ചെയ്യുന്നു."</string>
+    <string name="hiad_swipe_screen" priority="translator">"മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക"</string>
+    <string name="hiad_twist_screen" priority="translator">"ഫോൺ കുലുക്കുക"</string>
+    <string name="hiad_whether_download" priority="LT">"ഈ ആപ്പ് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi-യിൽ മുൻകൂർ ലോഡ് ചെയ്തു"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"പ്രീലോഡ് ചെയ്‌തത്"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"പിന്നോട്ട്"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"സബ്‌ടൈറ്റിൽ ഓഫാണ്. അത് കാണിക്കാൻ ക്ലിക്ക് ചെയ്യുക."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"സബ്‌ടൈറ്റിൽ ഓണാണ്. അത് മറയ്‌ക്കാൻ ക്ലിക്ക് ചെയ്യുക."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"ശരി"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"30 സെക്കൻഡ് മുന്നോട്ട് പോവുക"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"പൂർണ്ണ സ്‌ക്രീൻ"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"അജ്ഞാത ആർട്ടിസ്‌റ്റ്"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"പാട്ടിൻ്റെ പേര് അജ്ഞാതം"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"അടുത്ത മീഡിയ"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"വീഡിയോയുടെ പേര് അജ്ഞാതം"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"മുമ്പത്തെ ബട്ടൺ ലിസ്‌റ്റിലേക്ക് പോവുക"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"കൂടുതൽ ബട്ടണുകൾ കാണുക"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"തൽക്കാലം നിർത്തുക"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"പ്ലേ ചെയ്യുക"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"നിങ്ങൾ അഭ്യർത്ഥിച്ച ഇനം പ്ലേ ചെയ്യാനായില്ല"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"മുമ്പത്തെ മീഡിയ"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"വീണ്ടും പ്ലേ ചെയ്യുക"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"10 സെക്കൻഡ് പിന്നോട്ട് പോവുക"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"പ്ലേബാക്ക് പുരോഗതി"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"ക്രമീകരണം"</string>
+    <string name="no_browser_tips" priority="LT">"ആദ്യം ഒരു ബ്രൗസർ ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക."</string>
+    <string msgid="478774118347071097" name="not_set">"സജ്ജീകരിച്ചിട്ടില്ല"</string>
+    <string name="offline_notification_text">പരസ്യം തുറക്കാൻ ടാപ്പ് ചെയ്യുക</string>
+    <string name="offline_notification_title">നിങ്ങൾ ഓഫ്‌ലൈനിൽ ആയിരുന്നപ്പോൾ സംരക്ഷിച്ച പരസ്യം കാണുക</string>
+    <string name="offline_opt_in_confirm">ശരി</string>
+    <string name="offline_opt_in_confirmation">ഓൺലൈനിൽ തിരിച്ചെത്തുമ്പോൾ ലിങ്ക് അടങ്ങിയ അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കും</string>
+    <string name="offline_opt_in_decline">വേണ്ട</string>
+    <string name="offline_opt_in_message">പരസ്യദാതാവിന്റെ സൈറ്റിലേക്കുള്ള ലിങ്ക് അടങ്ങിയ അറിയിപ്പ് ഞങ്ങൾ നിങ്ങൾക്ക് അയയ്‌ക്കും</string>
+    <string name="offline_opt_in_title">നിങ്ങൾ ഓൺലൈനിൽ തിരിച്ചെത്തുമ്പോൾ പരസ്യം തുറക്കുക.</string>
+    <string name="opendevice_ad_info" priority="LT">"പരസ്യം സംബന്ധിച്ച വിവരങ്ങൾ"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"പരസ്യങ്ങൾ, സ്വകാര്യത സംബന്ധിച്ച പ്രസ്‌താവന"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"എല്ലാ പരസ്യദാതാക്കളും"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"റദ്ദാക്കുക"</string>
+    <string name="opendevice_bt_reset" priority="LT">"പുനഃക്രമീകരിക്കുക"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"ഒരു പുതിയ പരസ്യ ID മുൻനിശ്ചയമില്ലാതെ നിയുക്തമാക്കുന്നതായിരിക്കും."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"പരസ്യ ID പുനഃക്രമീകരിക്കുക"</string>
+    <string name="opendevice_here" priority="LT">"ഇവിടെ"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"പരസ്യങ്ങളും സ്വകാര്യതയും"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"പരസ്യങ്ങൾ"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"നിങ്ങളുടെ പരസ്യ-ID ഉപയോഗിക്കുന്ന വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ സ്വീകരിക്കുന്നത് നിങ്ങൾക്ക് ഒഴിവാക്കാവുന്നതാണ്. നിങ്ങൾ ഒഴിവാക്കുകയാണെങ്കിൽ, പരസ്യങ്ങൾ സ്വീകരിക്കുന്നത് തുടരുമെങ്കിലും അവ നിങ്ങൾക്ക് പ്രസക്തി കുറഞ്ഞതാകാം. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"ഡാറ്റ ഉപയോഗവും നിങ്ങളുടെ അവകാശങ്ങളും സംബന്ധിച്ച് കൂടുതലറിയുക"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"പരസ്യ-ID സ്ഥിതിവിവരക്കണക്കുകളുടെ ശേഖരം പ്രവർത്തനരഹിതമാക്കുക"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"ഞങ്ങളുടെ സേവനങ്ങൾ മെച്ചപ്പെടുത്തുന്നതിനായി, ഈ ക്രമീകരണത്തിലെ നിങ്ങളുടെ ഓൺസ്‌ക്രീൻ പ്രവർത്തനങ്ങളെക്കുറിച്ചും നിങ്ങളുടെ പരസ്യ-ID ഉപയോഗിക്കുന്ന ആപ്പുകളെക്കുറിച്ചുമുള്ള വിവരങ്ങൾ ഞങ്ങൾ ശേഖരിക്കും. ഞങ്ങൾ ഈ ഡാറ്റ ഉപയോഗിക്കുന്ന വിധം സംബന്ധിച്ച കൂടുതൽ വിവരങ്ങൾക്ക്, %1$s സ്‌പർശിക്കുക."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"ഞങ്ങളുടെ സേവനങ്ങൾ മെച്ചപ്പെടുത്തുന്നതിനായി, ഈ ക്രമീകരണത്തിലെ നിങ്ങളുടെ ഓൺസ്‌ക്രീൻ പ്രവർത്തനങ്ങളെക്കുറിച്ചും നിങ്ങളുടെ പരസ്യ-ID ഉപയോഗിക്കുന്ന ആപ്പുകളെക്കുറിച്ചുമുള്ള വിവരങ്ങൾ ഞങ്ങൾ ശേഖരിക്കും."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"കൂടുതൽ വിവരങ്ങൾ"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"നിങ്ങൾക്ക് വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ നൽകാൻ ഉപയോഗിക്കുന്ന ഒരു താൽക്കാലിക ഉപകരണ ഐഡന്റിഫയറാണ് നിങ്ങളുടെ പരസ്യ-ID (ഒരു OAID എന്നും അറിയപ്പെടുന്നു)."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"പരസ്യ ID പുനഃക്രമീകരിക്കുക"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"നിങ്ങളുടെ പരസ്യ-ID ഉപയോഗിക്കുന്ന വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ സ്വീകരിക്കുന്നത് ഒഴിവാക്കാവുന്നതാണ്. നിങ്ങൾ ഒഴിവാക്കുകയാണെങ്കിൽ, പരസ്യങ്ങൾ സ്വീകരിക്കുന്നത് തുടരുമെങ്കിലും അവ നിങ്ങൾക്ക് പ്രസക്തി കുറഞ്ഞതാകാം."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"നിങ്ങളുടെ പരസ്യ-ID ഉപയോഗിക്കുന്ന വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ ലഭിക്കുന്നത് നിങ്ങൾക്ക് ഒഴിവാക്കാവുന്നതാണ്. നിങ്ങൾ ഒഴിവാക്കുകയാണെങ്കിൽ, പരസ്യങ്ങൾ ലഭിക്കുന്നത് തുടരുമെങ്കിലും അവ നിങ്ങൾക്ക് പ്രസക്തി കുറഞ്ഞതാകാം."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"നിങ്ങളുടെ പരസ്യ-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"നിങ്ങൾക്ക് വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ നൽകാൻ ഉപയോഗിക്കുന്ന ഒരു താൽക്കാലിക ഉപകരണ ഐഡന്റിഫയറാണ് നിങ്ങളുടെ പരസ്യ-ID (ഒരു OAID എന്നും അറിയപ്പെടുന്നു). കൂടുതൽ വിവരങ്ങൾക്ക്, %1$s സ്‌പർശിക്കുക."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ പ്രവർത്തനരഹിതമാക്കുക"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"കൂടുതൽ അറിയുക"</string>
+    <string name="opendevice_network_no_available" priority="LT">"ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"വ്യക്തിഗതമാക്കിയ പരസ്യം ചെയ്യൽ സേവനങ്ങൾ നിങ്ങൾക്ക് താൽപ്പര്യമുണ്ടാകാനിടയുള്ള ഉള്ളടക്കം ശുപാർശചെയ്യുന്നു. നിങ്ങളുടെ സ്വകാര്യത എല്ലായ്‌പ്പോഴും പരിരക്ഷിക്കപ്പെടുന്നതാണ്. കൂടുതൽ വിശദാംശങ്ങൾക്ക്, %1$s കാണുക."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"വ്യക്തിഗതമാക്കിയ പരസ്യംചെയ്യൽ സേവനങ്ങൾ നിങ്ങൾക്ക് താൽപ്പര്യമുണ്ടാകാനിടയുള്ള ഉള്ളടക്കം ശുപാർശ ചെയ്യുന്നു. നിങ്ങളുടെ സ്വകാര്യത എല്ലായ്‌പ്പോഴും പരിരക്ഷിക്കപ്പെടുന്നതാണ്. കൂടുതൽ വിവരങ്ങൾക്ക്, ഇനിപ്പറയുന്നത് പരിശോധിക്കുക:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI പരസ്യങ്ങളുടെ പ്ലാറ്റ്‌ഫോം Huawei Mobile Services-നും മൂന്നാം-കക്ഷി ആപ്പുകൾക്കുമുള്ള പരസ്യംചെയ്യൽ സേവനങ്ങൾ നൽകുന്നു. വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ പ്രവർത്തനസജ്ജമാക്കിയിട്ടുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് കൂടുതൽ പ്രസക്തമായതും ഉപയോഗപ്രദവുമായ പരസ്യങ്ങൾ നൽകാനായി നിങ്ങളുടെ വ്യക്തിഗത ഡാറ്റ ഉപയോഗിക്കാനിടയുണ്ട്. നിങ്ങളുടെ ഡാറ്റ ഉപയോഗിക്കുന്ന വിധം സംബന്ധിച്ചും നിങ്ങളുടെ അവകാശങ്ങളെക്കുറിച്ചും കൂടുതലറിയാൻ, %1$s പരിശോധിക്കുക."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI പരസ്യങ്ങളുടെ പ്ലാറ്റ്‌ഫോം Huawei Mobile Services-നും മൂന്നാം-കക്ഷി ആപ്പുകൾക്കും പരസ്യംചെയ്യൽ സേവനങ്ങൾ നൽകുന്നു. വ്യക്തിഗതമാക്കിയ പരസ്യങ്ങൾ പ്രവർത്തനസജ്ജമാക്കിയിട്ടുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് കൂടുതൽ പ്രസക്തമായതും ഉപയോഗപ്രദവുമായ പരസ്യങ്ങൾ നൽകാനായി നിങ്ങളുടെ വ്യക്തിഗത ഡാറ്റ ഉപയോഗിക്കാനിടയുണ്ട്. നിങ്ങളുടെ ഡാറ്റ ഉപയോഗിക്കുന്ന വിധം സംബന്ധിച്ചും നിങ്ങളുടെ അവകാശങ്ങളെക്കുറിച്ചും കൂടുതലറിയാൻ, ഇനിപ്പറയുന്നത് പരിശോധിക്കുക:"</string>
+    <string name="opendevice_setting_network" priority="LT">"നെറ്റ്‌വർക്ക് ക്രമീകരണം"</string>
+    <string name="opendevice_title_oaid" priority="LT">"ഉപകരണ ഐഡന്റിഫയർ"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID-യ്‌ക്ക് ഒരാമുഖം"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"പരസ്യ-ID സ്ഥിതിവിവരക്കണക്ക് സംബന്ധിയായ വിശകലനം സംബന്ധിച്ച പ്രസ്‌താവന"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"പരസ്യം സംബന്ധിച്ച വിവരങ്ങൾ"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"തൽക്കാലം നിർത്തുക"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"പ്ലേ ചെയ്യുക"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്തി."</string>
+    <string name="s1">ചിത്രം സംരക്ഷിക്കുക</string>
+    <string name="s2">\'ചിത്ര ഗാലറി\'യിൽ ചിത്രം സംഭരിക്കാൻ പരസ്യത്തെ അനുവദിക്കണോ?</string>
+    <string name="s3">അംഗീകരിക്കുക</string>
+    <string name="s4">നിരസിക്കുക</string>
+    <string name="s5">കലണ്ടർ ഇവന്റ് സൃഷ്ടിക്കുക</string>
+    <string name="s6">കലണ്ടർ ഇവന്റ് സൃഷ്ടിക്കാൻ പരസ്യത്തെ അനുവദിക്കണോ?</string>
+    <string name="s7">പരസ്യം പരീക്ഷിക്കുക</string>
+    <string msgid="730395136688082741" name="search_menu_title">"തിരയുക"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"അടുത്ത ഇനത്തിലേക്ക് പോവുക"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"മുമ്പത്തെ ഇനത്തിലേക്ക് പോവുക"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ഓഫാണ്"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ഓൺ"</string>
+</resources>

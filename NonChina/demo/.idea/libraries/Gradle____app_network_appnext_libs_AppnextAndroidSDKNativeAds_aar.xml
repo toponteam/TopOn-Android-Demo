@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/appnext/libs/AppnextAndroidSDKNativeAds.aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d08cf40818afea02d19bb54b83cf97aa/jetified-AppnextAndroidSDKNativeAds/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d08cf40818afea02d19bb54b83cf97aa/jetified-AppnextAndroidSDKNativeAds/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d08cf40818afea02d19bb54b83cf97aa/jetified-AppnextAndroidSDKNativeAds/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d08cf40818afea02d19bb54b83cf97aa/jetified-AppnextAndroidSDKNativeAds/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

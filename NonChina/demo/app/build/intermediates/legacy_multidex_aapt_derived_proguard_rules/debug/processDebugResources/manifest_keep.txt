@@ -1,0 +1,4 @@
+# Referenced at /Users/developertopon/Code/up_sdk_android/anythink_sdk/outputs/TopOn_Android_SDK_v5.7.93_202112231851_Release/NonChina/demo/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:101
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at /Users/developertopon/Code/up_sdk_android/anythink_sdk/outputs/TopOn_Android_SDK_v5.7.93_202112231851_Release/NonChina/demo/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml:101
+-keep class com.test.ad.demo.DemoApplication { <init>(); }

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"ໜ້າ​ຈໍຈະ​ປິດໃນ %1$s ວິ​ນາ​ທີ."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="other">"ສາ​ມາດ​ປິດ​ໂຄ​ສະ​ນາ​ໄດ້​ໃນ %d ວິ"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="other">"ຈື່ຕົວ​ເລືກອ​ໄວ້​ເປັນ​ເວ​ລາ %1$s ວັນ"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="other">"ຮັບ​ລາງວັນ​ໃນ %d ວິ"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="other">"ເບິ່ງ %d ວິ​ນາ​ທີ​ເພື່ອ​ຮັບ​ລາງວັນ."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d ວິ"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"ບໍ່ມີ"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"ແທຣັກ <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"ແທຣັກສຽງ"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"ທຳມະດາ"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"ຄວາມໄວການສາຍ"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"ປິດ"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"ແທຣັກ <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"ແທຣັກ <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"ກັບໄປໜ້າຫຼັກ"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"ເລື່ອນຂຶ້ນເທິງ"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"ຕົວເລືອກເພີ່ມເຕີມ"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"ແລ້ວໆ"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"ເບິ່ງທັງໝົດ"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"ເລືອກແອັບ"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ປິດ"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ເປີດ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"ລຶບ"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"ຍະຫວ່າງ"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"ຊອກຫາ…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ລຶບຂໍ້ຄວາມຊອກຫາ"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"ຄຳສຳລັບຄົ້ນຫາ"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"ຊອກຫາ"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ສົ່ງຂໍ້ມູນ"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"ຊອກຫາດ້ວຍສຽງ"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"ແບ່ງປັນກັບ"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"ແບ່ງປັນດ້ວຍ <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ຫຍໍ້ລົງ"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"ເປີດນຳໃຊ້"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ຈະບໍ່ສາມາດໃຊ້ງານໄດ້ຈົນກວ່າທ່ານຈະເປີດໃຊ້ງານ​ການ​ບໍ​ລິ​ການ Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"ເປີດໃຊ້ການ​ບໍ​ລິ​ການ Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"ຕິດຕັ້ງ"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ຈະບໍ່ສາມາດເປີດໃຊ້ໄດ້ຫາກບໍ່ມີການບໍລິການ Google Play ເຊິ່ງແທັບເລັດຂອງທ່ານບໍ່ມີ."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"ຕິດຕັ້ງບໍລິການ Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"ສະຖານະບໍລິການ Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play Services ​ເກີດ​ຄວາມ​ຜິດ​ພາດ"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ກຳລັງມີບັນຫາກັບບໍລິການ Google Play. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ຈະບໍ່ສາມາດໃຊ້ໄດ້ຫາກບໍ່ມີບໍລິການ Google Play ເຊິ່ງອຸປະກອນຂອງທ່ານບໍ່ຮອງຮັບ."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"ອັບເດດ"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ຈະບໍ່ສາມາດເຮັດວຽກໄດ້ຈົນກວ່າທ່ານຈະອັບເດດການ​ບໍ​ລິ​ການ Google Play"</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"ອັບເດດການ​ບໍ​ລິ​ການ Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> ຈະບໍ່ສາມາດໃຊ້ງານໄດ້ໂດຍທີ່ບໍ່ມີການ​ບໍ​ລິ​ການ Google Play, ເຊິ່ງ​ກຳ​ລັງ​ອັບ​ເດດ​ຢູ່​ໃນ​ປະ​ຈຸ​ບັນ."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"ຈຳ​ເປັນ​ຕ້ອງ​ມີ​ກາ​ນ​ບໍ​ລິ​ການ Google Play ເວີ​ຊັນ​ໃໝ່. ມັນ​ຈະ​ອັບ​ເດດ​ຕົວ​ເອງ​ໄວໆ​ນີ້."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"​ເປີດ​ໃນ​ໂທ​ລະ​ສັບ"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"ເຂົ້າສູ່ລະບົບ"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍ Google"</string>
+    <string msgid="3209159573327985035" name="copy">"ສຳເນົາ"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"ກຳລັງຫຼິ້ນຢູ່ຕອນນີ້"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"ຂັ້ນສູງ"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"​ໂຄສະນາ"</string>
+    <string name="hiad_app_detail_version" priority="LT">"ເວີ​ຊັນ %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ໄດ້ຖືກຕິດຕັ້ງແລ້ວ"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ການ​ຕິດ​ຕັ້ງສຳ​ເລັດ. ສຳ​ຜັດ​ເພື່ອເປີດ."</string>
+    <string name="hiad_app_permission" priority="LT">"ການ​ອະ​ນຸ​ຍາດ"</string>
+    <string name="hiad_calender_add" priority="LT">"ຕົກລົງ"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"​ເຫດ​ການ​ມີ​ຢູ່​ແລ້ວ."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"​ເພີ່ມເຫດ​ການ​ນີ້​​ໃສ່ປະ​ຕິ​ທິນຂອງ​ທ່ານ​ບໍ?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"ບໍ່​ສາ​ມາດ​​ເພີ່ມ​ເຫດ​ການໄດ້."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"​ເພີ່ມ​ເຫດ​ການ​ແລ້ວ."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"ລຶບເຫດ​ການ​ນີ້​ຈາກ​ປະ​ຕິ​ທິນຂອງ​ທ່ານ​ບໍ?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ບໍ່​ສາ​ມາດ​ລຶບ​ເຫດ​ການໄດ້."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ລຶບ​ເຫດ​ການແລ້ວ."</string>
+    <string name="hiad_calender_delete" priority="LT">"ລຶບ"</string>
+    <string name="hiad_calender_description_new" priority="LT">"​ໃຊ້​ສິ່ງ​ນີ້​ເພື່ອ​ສ້າງ​ການ​ເຕືອນ​ປະ​ຕິ​ທິນ ຫຼື ສ້າງ​ເຫດ​ການ​ສຳ​ລັບ​ກິດ​ຈະ​ກຳ​ໂປ​ຣ​ໂມ​ຊັນ​ທີ່​ທ່ານ​ກຳ​ລັງ​ວາງ​ແຜນ​ເຂົ້າ​ຮ່ວມ."</string>
+    <string name="hiad_calender_dialog" priority="LT">"​ໝາຍ​ເຫດ"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"ແອັບ​ນີ້​ຈຳ​ເປັນ​ຕ້ອງ​ມີ​ການ​ອະ​ນຸ​ຍາດ​ປະ​ຕິ​ທິນເພື່ອ​ສ້າງ​ເຫດ​ການ​ປະ​ຕິ​ທິນ. ທ່ານ​ສາ​ມາດໃຫ້​ການອະ​ນຸ​ຍາດ​ນີ້ໄດ້​ຢູ່ໃນການ​ຕັ້ງ​ຄ່າ."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"ແອັບ​ນີ້​ຈຳ​ເປັນ​ຕ້ອງ​ມີ​ການ​ອະ​ນຸ​ຍາດ​ປະ​ຕິ​ທິນ ເພື່ອ​ລຶບ​ເຫດ​ການ​ປະ​ຕິ​ທິນ. ທ່ານ​ສາ​ມາດໃຫ້​ການອະ​ນຸ​ຍາດ​ນີ້ໄດ້​ຢູ່ໃນການ​ຕັ້ງ​ຄ່າ."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"​ໃຊ້​ສິ່ງ​ນີ້​ເພື່ອ​ສ້າງ​ການ​ເຕືອນ​ປະ​ຕິ​ທິນເພື່ອ​ໃຫ້​ທ່ານ​ສາ​ມາດ​ຕັ້ງ ແລະ ຮັບ​ການ​ເຕືອນ​ສຳ​ລັບ​ເຫດ​ການໄດ້."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"ຈຳ​ເປັນ​ຕ້ອງ​ໄດ້​ມີ​ການ​ອະ​ນຸ​ຍາດ"</string>
+    <string name="hiad_calender_set" priority="LT">"ການຕັ້ງຄ່າ"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"ໃຊ້​ສິ່ງ​ນີ້​​ສຳ​ລັບການ​ບໍ​ລິ​ການໂຕ້​ຕອບ​ສື່​ສານ AR."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ໂຄ​ສະ​ນາ​ທີ່​ເຊື່ອງ​ໄວ້"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"ບໍ່​ສົນ​ໃຈ"</string>
+    <string name="hiad_choices_hide" priority="LT">"ເຊື່ອງໂຄ​ສະ​ນາ"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"ເປັນ​ຫຍັງ​ຂ້ອຍ​ຈິ່ງ​ໄດ້ເຫັນ​ໂຄ​ສະ​ນາ​ນີ້?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"ລອງໃໝ່"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ຕິດ​ຕັ້ງ​ແອັບ​ນີ້ບໍ?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"ການໃຊ້ເຄືອຂ່າຍມືຖືຈະໃຊ້ຂໍ້ມູນ %1$s. ສືບຕໍ່ບໍ?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ການຫຼິ້ນ​ຄືນຈະ​ໃຊ້ຂໍ້​ມູນມື​ຖື. ສືບຕໍ່ບໍ?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"ກຳ​ລັງ​ໃຊ້​ການ​ເຊື່ອມ​ຕໍ່​ມື​ຖື. ການ​ເບິ່ງຈະ​ໃຊ້ຂໍ້​ມູນ​ມື​ຖື %1$s."</string>
+    <string name="hiad_continue_download" priority="LT">"ດາວ​ໂຫຼດ"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ດາວ​ໂຫຼດ"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ສືບຕໍ່"</string>
+    <string name="hiad_copy_link" priority="LT">"ກັອບ​ປີ່ລິ້ງ"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"ແອັບ"</string>
+    <string name="hiad_default_skip_text" priority="LT">"ຂ້າມ"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"ຂ້າມ​ໄປໃນ %d"</string>
+    <string name="hiad_detail" priority="LT">"​ລາຍ​ລະອຽດ"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ດາວ​ໂຫຼດ"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ອະ​ນຸ​ຍາດ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ອະ​ນຸ​ຍາດ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ຍົກ​ເລີກ"</string>
+    <string name="hiad_dialog_close" priority="LT">"ຕົກ​ລົງ"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ດາວ​ໂຫຼດ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ໄດ້​ແລ້ວ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"ອະ​ນຸ​ຍາດ​ໃຫ້ %1$s ຕິດ​ຕັ້ງ %2$s ບໍ?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"ແຫຼ່ງ​ທີ່​ມາ: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ອະ​ນຸ​ຍາດ"</string>
+    <string name="hiad_dialog_open" priority="LT">"ເປີດ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ປະ​ຕິ​ເສດ"</string>
+    <string name="hiad_dialog_title" priority="LT">"ດາວ​ໂຫຼດດ້ວຍ​ການ​ໃຊ້​ຂໍ້​ມູນ​ມື​ຖື​ບໍ?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"ໝາຍ​ເຫດ"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"ດາວ​ໂຫຼດດ້ວຍ​ການ​ໃຊ້​ຂໍ້​ມູນ​ມື​ຖື​ບໍ?"</string>
+    <string name="hiad_download_download" priority="LT">"​ຕິດ​ຕັ້ງ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ດາວ​ໂຫຼດ (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"ກຳ​ລັງດາວໂຫຼດ"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"ເກີດ​ຄວາມ​ຜິດ​ພາດ​ຂຶ້ນ​ໃນ​ຂະ​ນະ​ທີ່​ກຳ​ລັງ​ດາວ​ໂຫຼດ %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ໄຟ​ລ໌ເສຍ​ຫາຍ​ແລ້ວ. ກະ​ລຸ​ນາດາວ​ໂຫຼດ​ອີກ."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ບໍ່​ມີ​ໄຟ​ລ໌. ກະ​ລຸ​ນາ​ລອງ​ໃໝ່​ອີກ."</string>
+    <string name="hiad_download_install" priority="translator">"​ຕິດ​ຕັ້ງ"</string>
+    <string name="hiad_download_installing" priority="LT">"ກຳ​ລັງຕິດຕັ້ງ"</string>
+    <string name="hiad_download_no_space" priority="LT">"ບ່ອນ​ເກັບ​ຂໍ້​ມູນບໍ່ພຽງພໍ. ເຮັດໃຫ້ມີພື້ນທີ່ຫວ່າງຈຳ​ນວນ​ໜຶ່ງ ແລະ ລອງໃໝ່ອີກ."</string>
+    <string name="hiad_download_open" priority="LT">"ເປີດ"</string>
+    <string name="hiad_download_resume" priority="LT">"ສືບ​ຕໍ່"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"ເກີດ​ຄວາມ​ຜິດ​ພາດ​ຂຶ້ນ​ໃນ​ຂະ​ນະ​ທີ່​ກຳ​ລັງ​ດາວ​ໂຫຼດ %1$s. ການ​ດາວ​ໂຫຼດ​ຈະ​ປິດ​ເປີດ​ໃໝ່."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"ປະ​ຈຸ​ບັນ​ທ່ານ​ບໍ່​ໄດ້​ເຊື່ອມ​ຕໍ່​ກັບ Wi-Fi. ດຽວ​ນີ້ການ​ດາວ​ໂຫຼດ​ຈະ​ໃຊ້ %1$s ຂອງ​ຂໍ້​ມູນມື​ຖື. ແນວ​ໃດ​ກໍ່ດາວ​ໂຫຼດບໍ?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"ປະ​ຈຸ​ບັນ​ທ່ານ​ບໍ່​ໄດ້​ເຊື່ອມ​ຕໍ່​ກັບ WLAN. ດຽວ​ນີ້ການ​ດາວ​ໂຫຼດ​ຈະ​ໃຊ້ %1$s ຂອງ​ຂໍ້​ມູນມື​ຖື. ແນວ​ໃດ​ກໍ່ດາວ​ໂຫຼດບໍ?"</string>
+    <string name="hiad_go_to_settings" priority="LT">"ການຕັ້ງຄ່າ"</string>
+    <string name="hiad_install_completed" priority="LT">"ສໍາເລັດ"</string>
+    <string name="hiad_installed_description" priority="LT">"ການຕິດ​ຕັ້ງສຳ​ເລັດຜົນ. ສຳ​ຜັດ​ເພື່ອ​ເປີດ."</string>
+    <string name="hiad_jump_desc" priority="translator">"ເບິ່ງ​ລາຍ​​ລະ​ອຽດ ຫຼື ​​ໄປ​​ທີ່ແອັບ"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ໜ້າ​ນີ້​ຕ້ອງ​ການ​ເປີດ %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"ກັອບ​ປີ້ລິ້ງ​ແລ້ວ."</string>
+    <string name="hiad_loading_tips" priority="LT">"ກຳລັງ​ໂຫຼດ…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ການ​ດາວ​ໂຫຼດ​ຈະ​ໃຊ້ຂໍ້​ມູນມື​ຖື %1$s."</string>
+    <string name="hiad_net_error" priority="LT">"ການ​ເຊື່ອມ​ຕໍ່​ເຄືອ​ຂ່າຍ​ຂັດ​ຂ້ອງ. ກະ​ລຸ​ນາ​ລອງ​ອີກຄັ້ງ."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ. ກະລຸ​ນາ​ເຊື່ອມ​ຕໍ່ ແລະ ລອງໃໝ່ອີກ."</string>
+    <string name="hiad_network_error" priority="LT">"ການ​ເຊື່ອມ​ຕໍ່​​ເຄືອ​ຂ່າຍ​ຂັດ​ຂ້ອງ."</string>
+    <string name="hiad_network_no_available" priority="LT">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ. ກະ​ລຸ​ນາ​ກວດ​ເບິ່ງ​ການຕັ້ງ​ຄ່າ​ເຄືອ​ຂ່າຍຂອງ​ທ່ານ."</string>
+    <string name="hiad_no_more_remind" priority="LT">"ຢ່າ​ເຕືອນ​ຂ້ອຍ​ອີກ"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່ Wi-Fi. ດຽວ​ນີ້ການ​ດາວ​ໂຫຼດ​ຈະ​ໃຊ້ຂໍ້​ມູນມື​ຖືຂອງ​ທ່ານ. ດາວ​ໂຫຼດບໍ?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່ WLAN. ດຽວ​ນີ້ການ​ດາວ​ໂຫຼດ​ຈະ​ໃຊ້ຂໍ້​ມູນມື​ຖືຂອງ​ທ່ານ. ດາວ​ໂຫຼດບໍ?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ເປີດຢູ່ໃນບຣາວເຊີ"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ບໍ່​ສາ​ມາດໂຫຼດໜ້າໄດ້. ກະ​ລຸ​ນາ​ລອງ​ໃໝ່​ອີກ."</string>
+    <string name="hiad_permission_camera" priority="LT">"ຄຸນ​ສົມ​ບັດ​ນີ້ຈຳ​ເປັນຕ້ອງມີການ​ອະ​ນຸ​ຍາດ​ກ້ອງ​ຖ່າຍ​ຮູບ. ໃຫ້ມັນ​ຢູ່​ໃນ​ການ​ຕັ້ງ​ຄ່າ."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s ຈຳ​ເປັນ​ຕ້ອງ​ມີ​ການ​ອະ​ນຸ​ຍາດ​ຕໍ່​ໄປ​ນີ້:"</string>
+    <string name="hiad_preorder_download" priority="LT">"ສັ່ງ​ກ່ອນລ່ວງ​ໜ້າ"</string>
+    <string name="hiad_prepare_download" priority="LT">"ລໍ​ຖ້າ Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"ດາວ​ໂຫຼດຜ່ານ​ເຄືອ​ຂ່າຍ​ມື​ຖືບໍ?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"ລໍ​ຖ້າ WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"ຄວາມເປັນສ່ວນຕົວ"</string>
+    <string name="hiad_refresh" priority="LT">"ຣີເຟຣຊ"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"ແອັບໃຫຍ່ກວ່າ %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"ຍົກເລີກ"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"ນັກພັດ​ທະ​ນາ: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"ເວີ​ຊັນ %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ຂ້າມໄປ"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"ສືບ​ຕໍ່​ຕິດ​ຕາມ​ເບິ່ງ"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"​ເບິ່ງ​ໂຄ​ສະ​ນາ​ນີ້ໃຫ້ສຳເລັດເພື່ອ​ໄດ້ຮັບລາງວັນ."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"​ໂຄສະນາທີ່​ອີງ​ຕາມ​ທີ່​ຕັ້ງ"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"ສຳ​ຜັດ​ເພື່ອ​ເປີດ​ເວັບ​ໄຊ/ແອັບ"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"ແອັບ​ກຳ​ລັງ​ດາວໂຫຼດ."</string>
+    <string name="hiad_swipe_screen" priority="translator">"ປັດ​ຂຶ້ນ"</string>
+    <string name="hiad_twist_screen" priority="translator">"ສັ່ນ​ໂທ​ລະ​ສັບ"</string>
+    <string name="hiad_whether_download" priority="LT">"ດາວ​ໂຫຼດ​ແອັບ​ນີ້​ບໍ?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"ໂຫຼດ​ໄວ້​ກ່ອນ​ຜ່ານ Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ໂຫຼດ​ໄວ້​ກ່ອນ​ແລ້ວ"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"ກັບຄືນ"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"ຄຳແປປິດຢູ່. ຄລິກເພື່ອສະແດງມັນ."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"ເປີດຄຳແປແລ້ວ. ຄລິກເພື່ອເຊື່ອງມັນ."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"ຕົກລົງ"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"ເລື່ອນໄປໜ້າ 30 ວິນາທີ"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"ເຕັມຈໍ"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"ບໍ່ຮູ້ຈັກສິນລະປິນ"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"ບໍ່ຮູ້ຈັກຊື່ເພງ"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"ມີເດຍຕໍ່ໄປ"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"ບໍ່ຮູ້ຊື່ວິດີໂອ"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"ກັບໄປທີ່ລາຍຊື່ປຸ່ມກ່ອນໜ້າ"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"ເບິ່ງປຸ່ມເພີ່ມເຕີມ"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"ຢຸດຊົ່ວຄາວ"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"ຫຼິ້ນ"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"ບໍ່ສາມາດຫຼິ້ນລາຍການທີ່ທ່ານຮ້ອງຂໍໄວ້"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"ມີເດຍຜ່ານມາ"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"ສາຍຄືນໃໝ່"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"ກັບຫຼັງ 10 ວິນາທີ"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"ສະຖານະການຫຼິ້ນ"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"ການຕັ້ງຄ່າ"</string>
+    <string name="no_browser_tips" priority="LT">"ຕິດ​ຕັ້ງ​ແອັບບ​ຣາວ​ເຊີ​ກ່ອນ."</string>
+    <string msgid="478774118347071097" name="not_set">"ບໍ່ໄດ້ຕັ້ງຄ່າ"</string>
+    <string name="offline_notification_text">ແຕະເພື່ອເປີດໂຄສະນາ</string>
+    <string name="offline_notification_title">ເບິ່ງໂຄສະນາທີ່ທ່ານບັນທຶກໄວ້ຕອນທ່ານອອບລາຍ</string>
+    <string name="offline_opt_in_confirm">ຕົກລົງ</string>
+    <string name="offline_opt_in_confirmation">ທ່ານຈະໄດ້ຮັບການແຈ້ງເຕືອນພ້ອມກັບລິ້ງເມື່ອທ່ານກັບມາອອນລາຍ</string>
+    <string name="offline_opt_in_decline">ບໍ່, ຂອບໃຈ</string>
+    <string name="offline_opt_in_message">ພວກເຮົາຈະສົ່ງການແຈ້ງເຕືອນພ້ອມກັບລິ້ງຫາເວັບໄຊຜູ້ລົງໂຄສະນາໃຫ້ທ່ານ.</string>
+    <string name="offline_opt_in_title">ເປີດໂຄສະນາເມື່ອທ່ານກັບມາອອນລາຍ.</string>
+    <string name="opendevice_ad_info" priority="LT">"ຂໍ້ມູນໂຄ​ສະ​ນາ"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"ຄຳ​ຖະແຫຼງ​ກ່ຽວ​ກັບ​ໂຄ​ສະ​ນາ ແລະ ຄວາມເປັນສ່ວນຕົວ"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"ຜູ້​ໂຄ​ສະ​ນາ​ທັງ​ໝົດ"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"​ຍົກ​ເລີກ"</string>
+    <string name="opendevice_bt_reset" priority="LT">"ຕັ້ງຄ່າຄືນໃໝ່"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"ID ໂຄ​ສະ​ນາ​ໃໝ່​ຈະ​ຖືກ​ກຳ​ນົດ​ໃຫ້​ໂດຍ​ການ​ສຸ່ມ."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"ຕັ້ງ​ຄ່າ ID ໂຄ​ສະ​ນາ​ຄືນ​ໃໝ່"</string>
+    <string name="opendevice_here" priority="LT">"ຢູ່​ທີ່​ນີ້"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"ການ​ໂຄ​ສະ​ນາ ແລະ ຄວາມ​ເປັນ​ສ່ວນ​ຕົວ"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"​ໂຄ​ສະ​ນາ"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"ທ່ານ​ສາ​ມາດ​ເລືອກ​ບໍ່​ຮັບ​ໂຄ​ສະ​ນາ​ສ່ວນ​ຕົວ​ທີ່​ໃຊ້ Ad-ID ຂອງ​ທ່ານ​ໄດ້. ຖ້າ​ທ່ານ​ເລືອກ​ອອກ, ທ່ານ​ຈະ​ຍັງ​ໄດ້​ຮັບ​ໂຄ​ສະ​ນາ​ຢູ່, ແຕ່​ພວກ​ມັນ​ອາດ​ຈະ​ກ່ຽວ​ຂ້ອງ​ກັບ​ທ່ານ​ໜ້ອຍ​ລົງ. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"ຮຽນ​ຮູ້​ເພີ່ມ​ເຕີມ​ກ່ຽວ​ກັບ​ວິ​ທີ​ການ​ໃຊ້​ຂໍ້​ມູນ ແລະ ສິດ​ທິ​ຂອງ​ທ່ານ."</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"ປິດ​ໃຊ້​ງານ​ການ​ເກັບ​ກຳ​ສະ​ຖິ​ຕິ ID ໂຄ​ສະ​ນາ"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"ພວກ​ເຮົາ​ຈະ​ເກັບ​ເອົາ​ຂໍ້​ມູນ​ກ່ຽວ​ກັບ​ການ​ດຳ​ເນີນ​ການ​ໃນ​ໜ້າ​ຈໍ​ຂອງ​ທ່ານ​ຢູ່​ໃນ​ການ​ຕັ້ງ​ຄ່າ​ເຫຼົ່າ​ນີ້ ແລະ ກ່ຽວ​ກັບ​ແອັບ​ທີ່​ໃຊ້ ID ໂຄ​ສະ​ນາ​ຂອງ​ທ່ານ​ເພື່ອ​ປັບ​ປຸງ​ການ​ບໍ​ລິ​ການ​ຂອງ​ພວກ​ເຮົາ. ສຳ​ລັບ​ຂໍ້​ມູນ​ເພີ່ມ​ຕື່ມ​ກ່ຽວ​ກັບ​ວິ​ທີ​ທີ່​ພວກ​ເຮົາໃຊ້ຂໍ້​ມູນນີ້ແນວ​ໃດ, ໃຫ້ສຳ​ຜັດ %1$s."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"ພວກ​ເຮົາ​ຈະ​ເກັບ​ເອົາ​ຂໍ້​ມູນ​ກ່ຽວ​ກັບ​ການ​ດຳ​ເນີນ​ການ​ໃນ​ໜ້າ​ຈໍ​ຂອງ​ທ່ານ​ຢູ່​ໃນ​ການ​ຕັ້ງ​ຄ່າ​ເຫຼົ່າ​ນີ້ ແລະ ກ່ຽວ​ກັບ​ແອັບ​ທີ່​ໃຊ້ ID ໂຄ​ສະ​ນາ​ຂອງ​ທ່ານ​ເພື່ອ​ປັບ​ປຸງ​ການ​ບໍ​ລິ​ການ​ຂອງ​ພວກ​ເຮົາ."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"ຂໍ້ມູນເພີ່ມ​ເຕີມ"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Ad-ID ຂອງ​ທ່ານ (ຍັງ​ເອີ້​ນວ່າ OAID) ແມ່ນ​ຕົວ​ລະ​ບຸ​ອຸ​ປະ​ກອນ​ຊົ່ວ​ຄາວ​ທີ່​ໃຊ້​ເພື່ອ​ໃຫ້​ໂຄ​ສະ​ນາ​ເປັນ​ແບບ​ສ່ວນ​ຕົວ​ແກ່​ທ່ານ."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"ຕັ້ງ​ຄ່າ ID ໂຄ​ສະ​ນາ​ຄືນ​ໃໝ່"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"ທ່ານ​ສາ​ມາດ​ເລືອກ​ບໍ່​ຮັບ​ໂຄ​ສະ​ນາ​ສ່ວນ​ຕົວ​ທີ່​ໃຊ້ Ad-ID ຂອງ​ທ່ານ​ໄດ້. ຖ້າ​ທ່ານ​ເລືອກ​ອອກ, ທ່ານ​ຈະ​ຍັງ​ໄດ້​ຮັບ​ໂຄ​ສະ​ນາ​ຢູ່, ແຕ່​ພວກ​ມັນ​ອາດ​ຈະ​ກ່ຽວ​ຂ້ອງ​ກັບ​ທ່ານ​ໜ້ອຍ​ລົງ."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"ທ່ານ​ສາ​ມາດ​ເລືອກ​ບໍ່​ຮັບ​ໂຄ​ສະ​ນາ​ແບບ​ເປັນ​ສ່ວນ​ຕົວ​ທີ່​ໃຊ້ ID ໂຄ​ສະ​ນາຂອງ​ທ່ານ. ​​ຖ້າ​ທ່ານ​ເລືອກ​ບໍ່​ຮັບ, ທ່ານຈະ​ຍັງ​​ຄົງ​ໄດ້​ຮັບ​​ໂຄ​ສະ​ນາ​​ຢູ່, ແຕ່​ພວກ​ມັນ​ອາດຈະມີ​ຄວາມ​ກ່ຽວ​ຂ້ອງ​ກັບ​ທ່ານໜ້ອຍ​ລົງ."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Ad-ID ຂອງ​ທ່ານ"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Ad-ID ຂອງ​ທ່ານ (ຍັງ​​ເອີ້​ນວ່າ OAID) ແມ່ນ​ຕົວ​ລະ​ບຸ​ອຸ​ປະ​ກອນ​ຊົ່ວ​ຄາວ​ທີ່​ໃຊ້​ເພື່ອ​ໃຫ້​ໂຄ​ສະ​ນາ​ທີ່​ເປັນ​ແບບ​ສ່ວນ​ຕົວ​ແກ່​ທ່ານ. ສຳ​ລັບ​ຂໍ້​ມູນ​ເພີ່ມ​ເຕີມ, ໃຫ້​ສຳ​ຜັດ %1$s."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"ປິດ​ໃຊ້​ງານໂຄສະນາ​ເປັນ​ແບບສ່ວນ​ຕົວ"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"ຮຽນຮູ້ເພີ່ມເຕີມ"</string>
+    <string name="opendevice_network_no_available" priority="LT">"ບໍ່​ມີ​ການ​ເຊື່ອມ​ຕໍ່​ອິນ​ເຕີ​ເນັດ"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"ການ​ບໍ​ລິ​ການ​ໂຄ​ສະ​ນາ​ເປັນ​ແບບ​ສ່ວນ​ຕົວ​ແນະ​ນຳ​ເນື້ອ​ຫາ​ທີ່ທ່ານ​ອາດ​ຈະ​ສົນ​ໃຈ​ໃຫ້. ຄວາມ​ເປັນ​ສ່ວນ​ຕົວ​ຂອງ​ທ່ານ​ຈະ​ໄດ້​ຮັບ​ການ​ປົກ​ປ້ອງ​ຢູ່​ຕະ​ຫຼອດ​ເວ​ລາ. ສຳ​ລັບ​ລາຍ​ລະ​ອຽດເພີ່ມ​ເຕີມ, ກະ​ລຸ​ນາເບິ່ງ %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"ການ​ບໍ​ລິ​ການ​ໂຄ​ສະ​ນາ​ເປັນ​ແບບ​ສ່ວນ​ຕົວ​ແນະ​ນຳ​ເນື້ອ​ຫາ​ທີ່ທ່ານ​ອາດ​ຈະ​ສົນ​ໃຈ​. ຄວາມ​ເປັນ​ສ່ວນ​ຕົວ​ຂອງ​ທ່ານ​ຈະ​ໄດ້​ຮັບ​ການ​ປົກ​ປ້ອງ​ຢູ່​ຕະ​ຫຼອດ​ເວ​ລາ. ສຳ​ລັບ​ຂໍ້​ມູນ​ເພີ່ມ​ເຕີມ, ກະ​ລຸ​ນາ​ເບິ່ງ​​ສິ່ງ​ຕໍ່​ໄປ​ນີ້:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"ແພ​ລດ​ຟອມການໂຄ​ສະ​ນາຂອງ HUAWEI ໃຫ້​ການ​ບໍ​ລິ​ການ​ໂຄ​ສະ​ນາ​ສຳ​ລັບ Huawei Mobile Services ແລະ ແອັບ​ພາກ​ສ່ວນ​ທີ​ສາມ. ຖ້າ​ເປີດ​ໃຊ້​ງານ​ໂຄ​ສະ​ນາ​ແບບ​ເປັນ​ສ່ວນ​ຕົວ, ​ອາດ​ຈະ​ໃຊ້ຂໍ້ມູນສ່ວນຕົວຂອງ​ທ່ານ​ເພື່ອ​ໃຫ້​ໂຄ​ສະ​ນາ​ທີ່​​ກ່ຽວ​ຂ້ອງ ແລະ ເປັນ​ປະ​ໂຫຍດ​ເພີ່ມ​ເຕີມ​ແກ່​ທ່ານ. ເພື່ອ​ຮຽນ​ຮູ້​ເພີ່ມ​ເຕີມ​ກ່ຽວ​ກັບ​​ວ່າ​ໃຊ້​ຂໍ້​ມູນ​ຂອງ​ທ່ານ​ແນວ​ໃດ ແລະ ກ່ຽວກັບສິດ​ທິ​ຂອງ​ທ່ານ, ກະ​ລຸ​ນາ​ເບິ່ງ​ %1$s."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"ແພ​ລດ​ຟອມການໂຄ​ສະ​ນາຂອງ HUAWEI ໃຫ້​ການ​ບໍ​ລິ​ການ​ໂຄ​ສະ​ນາ​ສຳ​ລັບ Huawei Mobile Services ແລະ ແອັບ​ພາກ​ສ່ວນ​ທີ​ສາມ. ຖ້າ​ເປີດ​ໃຊ້​ງານ​ໂຄ​ສະ​ນາ​ແບບ​ເປັນ​ສ່ວນ​ຕົວ, ​ອາດ​ຈະ​ໃຊ້ຂໍ້ມູນສ່ວນຕົວຂອງ​ທ່ານ​ເພື່ອ​ໃຫ້​ໂຄ​ສະ​ນາ​ທີ່​​ກ່ຽວ​ຂ້ອງ ແລະ ເປັນ​ປະ​ໂຫຍດ​ເພີ່ມ​ເຕີມ​ແກ່​ທ່ານ. ເພື່ອ​ຮຽນ​ຮູ້​ເພີ່ມ​ເຕີມ​ກ່ຽວ​ກັບ​​ວ່າ​ໃຊ້​ຂໍ້​ມູນ​ຂອງ​ທ່ານ​ແນວ​ໃດ ແລະ ກ່ຽວກັບສິດ​ທິ​ຂອງ​ທ່ານ, ກະ​ລຸ​ນາ​ເບິ່ງ​ສິ່ງ​ຕໍ່​ໄປ​ນີ້:"</string>
+    <string name="opendevice_setting_network" priority="LT">"ການຕັ້ງຄ່າເຄືອຂ່າຍ"</string>
+    <string name="opendevice_title_oaid" priority="LT">"ຕົວ​ລະ​ບຸອຸ​ປະ​ກອນ"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"ກ່ຽວ​ກັບ OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"ຄຳ​ຖະ​ແຫຼງ​ກ່ຽວ​ກັບ​ການ​ວິ​ເຄາະ​ສະ​ຖິ​ຕິ ID ໂຄ​ສະ​ນາ"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"ຂໍ້ມູນໂຄ​ສະ​ນາ"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"ຢຸດຊົ່ວຄາວ"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"ຫຼິ້ນ"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"ສຳເນົາ \"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ໄປໃສ່ຄລິບບອດແລ້ວ."</string>
+    <string name="s1">ບັນທຶກຮູບພາບ</string>
+    <string name="s2">ອະນຸຍາດໃຫ້ໂຄສະນາບັນທຶກຮູບພາບໃສ່ຫ້ອງສະໝຸດພາບໄດ້ບໍ່?</string>
+    <string name="s3">ຍອມຮັບ</string>
+    <string name="s4">ປະຕິເສດ</string>
+    <string name="s5">ສ້າງນັດໝາຍປະຕິທິນ</string>
+    <string name="s6">ອະນຸຍາດໃຫ້ໂຄສະນາສ້າງນັດໝາຍປະຕິທິນໄດ້ບໍ?</string>
+    <string name="s7">ໂຄສະນາທົດສອບ</string>
+    <string msgid="730395136688082741" name="search_menu_title">"ຊອກຫາ"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"ຂ້າມໄປລາຍການຕໍ່ໄປ"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"ຂ້າມໄປລາຍການກ່ອນໜ້າ"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ປິດ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ເປີດ"</string>
+</resources>

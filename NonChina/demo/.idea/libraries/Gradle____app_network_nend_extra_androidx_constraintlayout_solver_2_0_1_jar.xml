@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/nend/extra/androidx-constraintlayout-solver-2.0.1.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/network/nend/extra/androidx-constraintlayout-solver-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

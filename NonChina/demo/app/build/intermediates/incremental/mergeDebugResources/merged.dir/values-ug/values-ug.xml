@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"%1$s سېكۇنتتىن كېيىن ئۆزلۈكىدىن ئۆتۈپ كېتىدۇ"</item>
+        <item priority="translator" quantity="other">"%1$s سېكۇنتتىن كېيىن ئۆزلۈكىدىن ئۆتۈپ كېتىدۇ"</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"ئېلان (%d س)"</item>
+        <item priority="translator" quantity="other">"ئېلان (%d س)"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"تاللاشنى %1$s كۈن ئەستە ساقلاش"</item>
+        <item priority="Reviewed" quantity="other">"بۇ تاللاش %1$s كۈن ساقلانسۇن"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"%d سېكۇنتتىن كېيىن مۇكاپات بار"</item>
+        <item priority="translator" quantity="other">"%d سېكۇنتتىن كېيىن مۇكاپات بار"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"بۇ سىننى %d سېكۇنت كۆرسىڭىز مۇكاپات بار."</item>
+        <item priority="translator" quantity="other">"بۇ سىننى %d سېكۇنت كۆرسىڭىز مۇكاپات بار."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d سېكۇنت"</item>
+        <item priority="LT" quantity="other">"%1$d سېكۇنت"</item>
+    </plurals>
+    <string name="hiad_ad_label" priority="translator">"ئېلان"</string>
+    <string name="hiad_ad_label_new" priority="LT">"ئېلان"</string>
+    <string name="hiad_app_detail_version" priority="LT">"نەشرى %1$s"</string>
+    <string name="hiad_app_installed" priority="translator">"%1$s ئوڭۇشلۇق قاچىلاندى"</string>
+    <string name="hiad_app_open_notification" priority="translator">"قاچىلاندى، چېكىپ ئېچىڭ"</string>
+    <string name="hiad_app_permission" priority="LT">"ھوقۇق"</string>
+    <string name="hiad_calender_add" priority="LT">"جەزملەش"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"كۈنتەرتىپتە بۇ ئىش بار."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"بۇ ئىشنى كۈنتەرتىپكە قوشامسىز؟"</string>
+    <string name="hiad_calender_appoint_failed" priority="translator">"ئورۇنلاشتۇرۇلمىدى"</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"ئورۇنلاشتۇرۇلدى"</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"بۇ ئىشنى كۈنتەرتىپتىن ئۆچۈرەمسىز؟"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ئۆچۈرۈلمىدى"</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ئۆچۈرۈلدى"</string>
+    <string name="hiad_calender_delete" priority="LT">"ئۆچۈرۈش"</string>
+    <string name="hiad_calender_description_new" priority="LT">"بۇ ئىجازەت كالېندار ئەسكەرتمىسى ۋە سىز قاتنىشىدىغان بازار پائالىيەتلىرى ئۈچۈن كۈنتەرتىپ قۇرۇشقا ئىشلىتىلىدۇ."</string>
+    <string name="hiad_calender_dialog" priority="LT">"ئەسكەرتىش"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"كالېندارغا پائالىيەت ئۇچۇرى قوشۇش ئۈچۈن تەڭشەكتىن كالېندار ئىجازىتى بېرىڭ."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"كالېنداردىن پائالىيەت ئۇچۇرىنى چىقىرىۋېتىش ئۈچۈن تەڭشەكتىن كالېندار ئىجازىتى بېرىڭ."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"بۇ ئىجازەت پائالىيەت ئورۇنلاشتۇرۇشلىرى ئۈچۈن كالېندار ئەسكەرتمىسى قۇرۇشقا ئىشلىتىلىدۇ."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"ئىجازەت كېرەك"</string>
+    <string name="hiad_calender_set" priority="LT">"تەڭشەك"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"بۇ ئىجازەت AR ئۆزئارالىق مۇلازىمىتى تەمىنلەش ئۈچۈن ئىشلىتىلىدۇ."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ئېلان ئېتىك"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"قىزىقمايمەن"</string>
+    <string name="hiad_choices_hide" priority="LT">"ئېلان يوشۇرۇش"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"نېمىشقا بۇ ئېلان كۆرۈنىدۇ؟"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"قايتا سىناش"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"بۇ ئەپنى چۈشۈرۈپ قاچىلامسىز؟"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"كۆچمە تور ئىشلەتسىڭىز %1$s ئېقىم كېتىدۇ"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="translator">"كۆچمە تور ئىشلەتسىڭىز ئېقىم كېتىدۇ. داۋاملاشتۇرامسىز؟"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"نۆۋەتتە كۆچمە توردا، قويۇشقا %1$s ئېقىم كېتىدۇ"</string>
+    <string name="hiad_continue_download" priority="LT">"داۋاملىق چۈشۈرۈش"</string>
+    <string name="hiad_continue_download_new" priority="LT">"داۋاملىق چۈشۈرۈش"</string>
+    <string name="hiad_continue_to_play" priority="translator">"داۋاملىق قويۇش"</string>
+    <string name="hiad_copy_link" priority="translator">"ئۇلانما كۆچۈرۈش"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$sMB"</string>
+    <string name="hiad_default_app_name" priority="translator">"قوللىنىش"</string>
+    <string name="hiad_default_skip_text" priority="translator">"ئاتلاش"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"ئاتلاش %d"</string>
+    <string name="hiad_detail" priority="translator">"تەپسىلات"</string>
+    <string name="hiad_detail_download_now" priority="LT">"چۈشۈرۈش"</string>
+    <string name="hiad_dialog_accept" priority="translator">"قوبۇل قىلىش"</string>
+    <string name="hiad_dialog_allow" priority="translator">"رۇخسەت"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"بىكار قىلىش"</string>
+    <string name="hiad_dialog_close" priority="translator">"ئېتىش"</string>
+    <string name="hiad_dialog_continue" priority="translator">"چۈشۈرۈش"</string>
+    <string name="hiad_dialog_dismiss" priority="translator">"ئۆتكۈزۈۋېتىش"</string>
+    <string name="hiad_dialog_install_desc" priority="translator">"%1$s گە قوشۇلۇپ، %2$s ئەپىنى قاچىلامسىز؟"</string>
+    <string name="hiad_dialog_install_source" priority="translator">"قاچىلانما مەنبەسى: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="translator">"قوشۇلىمەن"</string>
+    <string name="hiad_dialog_open" priority="translator">"ئېچىش"</string>
+    <string name="hiad_dialog_reject" priority="translator">"رەت قىل"</string>
+    <string name="hiad_dialog_title" priority="translator">"ئەسكەرتىش"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"ئەسكەرتىش"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"داۋاملىق كۆچمە توردا چۈشۈرەمسىز؟"</string>
+    <string name="hiad_download_download" priority="LT">"چۈشۈرۈش"</string>
+    <string name="hiad_download_download_with_size" priority="translator">"چۈشۈرۈش (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"چۈشۈۋاتىدۇ"</string>
+    <string name="hiad_download_failed_toast_content" priority="translator">"تور مەسىلىسى سەۋەبلىك «%1$s» قاچىلاش بوغچىسى چۈشمىدى"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ھۆججەت بۇزۇلغان، قايتا چۈشۈرۈڭ"</string>
+    <string name="hiad_download_file_not_exist" priority="translator">"ھۆججەت يوق ،قايتا چۈشۈرۈڭ"</string>
+    <string name="hiad_download_install" priority="translator">"قاچىلاش"</string>
+    <string name="hiad_download_installing" priority="LT">"قاچىلاۋاتىدۇ"</string>
+    <string name="hiad_download_no_space" priority="translator">"بوشلۇق يېتەرسىز، بوشلۇق تازىلاپ قايتا قاچىلاڭ"</string>
+    <string name="hiad_download_open" priority="translator">"ئېچىش"</string>
+    <string name="hiad_download_resume" priority="translator">"داۋاملاشتۇر"</string>
+    <string name="hiad_download_retry_toast_content" priority="translator">"تور مەسىلىسى سەۋەبلىك «%1$s» قاچىلاش بوغچىسى نورمال چۈشمىدى، قايتىدىن چۈشۈرىدۇ"</string>
+    <string name="hiad_download_use_mobile_network" priority="translator">"Wi-Fi غا ئۇلانمىدى، چۈشۈرسىڭىز %1$s ئېقىم مىقدارى خورايدۇ. راستتىنلا چۈشۈرەمسىز؟"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="translator">"نۆۋەتتە WLAN گە ئۇلانمىدى، چۈشۈرۈشكە %1$s ئېقىم كېتىدۇ. راستتىنلا چۈشۈرەمسىز؟"</string>
+    <string name="hiad_go_to_settings" priority="LT">"تەڭشەك"</string>
+    <string name="hiad_install_completed" priority="LT">"تامام"</string>
+    <string name="hiad_installed_description" priority="LT">"قاچىلاندى، چېكىپ ئېچىڭ."</string>
+    <string name="hiad_jump_desc" priority="translator">"تەپسىلات بېتى ياكى ئۈچىنچى تەرەپ ئەپىگە ئۆتىدۇ"</string>
+    <string name="hiad_landing_page_open_app" priority="translator">"توربەت «%1$s» نى ئاچىدۇ. رۇخسەتمۇ؟"</string>
+    <string name="hiad_link_already_copied" priority="translator">"ئۇلانما كۆچۈرۈلدى"</string>
+    <string name="hiad_loading_tips" priority="LT">"يۈكلىنىۋاتىدۇ..."</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"نۆۋەتتە كۆچمە ئېقىمدا، چۈشۈرسىڭىز %1$s ئېقىم كېتىدۇ. چۈشۈرەمسىز؟"</string>
+    <string name="hiad_net_error" priority="LT">"توردا خاتالىق بار، كېيىنرەك قايتا سىناڭ"</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"تور ئۇلانمىدى، ئۇلاپ قايتا سىناڭ"</string>
+    <string name="hiad_network_error" priority="translator">"تور ئۇلانمىدى"</string>
+    <string name="hiad_network_no_available" priority="translator">"تور ئۇلانمىدى، تور تەڭشىكىنى تەكشۈرۈڭ"</string>
+    <string name="hiad_no_more_remind" priority="translator">"قايتا ئەسكەرتمەڭ"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"ھازىر Wi-Fi ھالىتىدە ئەمەس، چۈشۈرسىڭىز ئېقىم خورايدۇ. چۈشۈرۈشنى داۋاملاشتۇرامسىز؟"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"ھازىر WLAN ھالىتىدە ئەمەس، چۈشۈرسىڭىز ئېقىم خورايدۇ. چۈشۈرۈشنى داۋاملاشتۇرامسىز؟"</string>
+    <string name="hiad_open_in_browser" priority="translator">"تور كۆرگۈچ ئارقىلىق ئېچىش"</string>
+    <string name="hiad_page_load_failed" priority="translator">"بەت ئېچىلمىدى، چېكىپ قايتا سىناڭ"</string>
+    <string name="hiad_permission_camera" priority="LT">"بۇ ئىقتىدار كامېرا ئىجازىتى ئىشلىتىدۇ. تەڭشەكتىن ئىجازەت بېرىڭ."</string>
+    <string name="hiad_permission_dialog_title" priority="translator">"«%1$s» تۆۋەندىكى ئىجازەتلەر كېرەك:"</string>
+    <string name="hiad_preorder_download" priority="LT">"بۇيرۇتۇش"</string>
+    <string name="hiad_prepare_download" priority="LT">"كېيىن Wi-Fi دا چۈشۈرۈش"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"ئېقىم ئەسكەرتمىسى"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"كېيىن WLAN دا چۈشۈرۈش"</string>
+    <string name="hiad_privacy_policy" priority="LT">"مەخپىيەتلىك"</string>
+    <string name="hiad_refresh" priority="translator">"يەڭگۈشلەش"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"ئەپ %1$dMB دىن چوڭ"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"بىكار قىلىش"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"ئىجادچى: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"نەشرى: %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ئېلاننى ئېتىش"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"داۋاملىق كۆرۈش"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ئېلاننى تولۇق كۆرسىڭىز مۇكاپات چىقىدۇ"</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"ئورۇنغا ئاساسلىنىدىغان ئېلان"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"چەكسىڭىز توربېكەت/ئەپ ئېچىلىدۇ"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"ئەپنى چۈشۈرۈپ قاچىلاۋاتىدۇ"</string>
+    <string name="hiad_swipe_screen" priority="translator">"ئۈستىگە سىيرىش"</string>
+    <string name="hiad_twist_screen" priority="translator">"يانفون چايقاش"</string>
+    <string name="hiad_whether_download" priority="LT">"بۇ دېتالنى چۈشۈرەمسىز؟"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"\u200fWi-Fi دا ئالدىن يۈكلەندى"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"WLAN مۇھىتىدا ئالدىن يۈكلىنىلدى"</string>
+    <string name="no_browser_tips" priority="LT">"تور كۆرگۈچ قاچىلاپ قايتا سىناڭ."</string>
+    <string name="opendevice_ad_info" priority="LT">"ئېلان ئۇچۇرى"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"ئېلان ۋە مەخپىيەتلىك ھەققىدە بايانات"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"بارلىق ئېلانچى"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"بىكار قىلىش"</string>
+    <string name="opendevice_bt_reset" priority="LT">"قايتا بەلگىلەش"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"قايتا بەلگىلىسىڭىز، ئېلان كىملىكىڭىز ئىختىيارىي ئالماشتۇرۇلىدۇ. قايتا بەلگىلەمسىز؟"</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"ئېلان كىملىكىنى قايتا بەلگىلەش"</string>
+    <string name="opendevice_here" priority="LT">"بۇ يەر"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"ئېلان ۋە مەخپىيەتلىك"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"ئېلان"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"بارلىق ئېلان بەرگۈچىنىڭ ئېلان كىملىكىڭىز بويىچە ئارخىپ قۇرۇپ خاسلاشتۇرما ئېلان كۆرسىتىشىنى توسىدۇ. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"مەلۇمات بىر تەرەپ قىلىش ۋە ئىشلەتكۈچى ھوقۇقى ھەققىدە"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"ئېلان كىملىكىنى ئانالىز قىلىشنى ئېتىش"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"بۇ تەڭشەكتە قىلغان مەشغۇلات ھەققىدىكى ئۇچۇرلار ھەمدە ئېلان كىملىكىڭىزنى توپلاپ مۇلازىمەتنى ياخشىلاشقا ئىشلىتىمىز. بۇ مەلۇماتلارنى ئىشلىتىش ئۇسۇلىمىزنى «%1$s» دىن كۆرۈڭ."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"بۇ تەڭشەكتە قىلغان مەشغۇلات ھەققىدىكى ئۇچۇرلار ھەمدە ئېلان كىملىكىڭىزنى توپلاپ مۇلازىمەتنى ياخشىلاشقا ئىشلىتىمىز."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"باشقا ئۇچۇرلار"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"ئېلان كىملىكى (OAID) خاسلاشتۇرما ئېلان ئۈچۈن ئىشلىتىلىدىغان ۋاقىتلىق ئۈسكۈنە كىملىكىدۇر."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"ئېلان كىملىكىنى قايتا بەلگىلەش"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"قىزىقىشقا ئاساسلىنىدىغان ئېلان كۆرۈشنى تاللىمىسىڭىز، ئوخشاش ساندا ئېلان كۆرۈنۈۋېرىدۇ، ئەمما ئۇلار قىزىقىشىڭىز بويىچە كۆرۈنمەيدۇ."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"ئېلان كىملىكى ئارقىلىق ئېلان خاسلاشتۇرۇشنى چەكلىسىڭىز بولىدۇ. چەكلىسىڭىز، ئېلان قىزىقىشىڭىزغا ئاساسلانمايدۇ."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"ئېلان كىملىكى"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"ئېلان كىملىكى (OAID) ئېلان خاسلاشتۇرۇشقا ئىشلىتىلىدىغان ۋاقىتلىق كىملىكتۇر. %1$sدىن ئۇ ئېلان كىملىكى ۋە ئېلان خاسلاشتۇرۇش ھەققىدىكى تەپسىلاتلارنى كۆرەلەيسىز."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"خاسلاشتۇرما ئېلان توسۇش"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"تەپسىلات"</string>
+    <string name="opendevice_network_no_available" priority="LT">"تور ئۇلانمىدى"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"خاسلاشتۇرما ئېلان مۇلازىمىتى سىز قىزىقىدىغان مەزمۇنلارنى تەۋسىيە قىلىدۇ، بۇ جەرياندا مەخپىيەتلىكىڭىز قوغدىلىدۇ. تەپسىلاتىنى «%1$s» دىن كۆرۈڭ."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"خاسلاشتۇرما ئېلان مۇلازىمىتى قىزىقىشىڭىزغا ئاساسەن ئېلان كۆرسىتىدۇ، بۇ جەرياندا مەخپىيەتلىكىڭىز قوغدىلىدۇ. تەپسىلاتىنى تۆۋەندىكىلەردىن كۆرۈڭ:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="LT">"خۇاۋېي ئېلان سۇپىسى خۇاۋېي كۆچمە مۇلازىمىتى ۋە ئۈچىنچى تەرەپ ئەپلىرى ئۈچۈن ئېلان مۇلازىمىتى تەمىنلەيدۇ. خاسلاشتۇرما ئېلان مۇلازىمىتىنى ئاچسىڭىز، مۇناسىۋەتلىك ۋە كېرەكلىك ئېلان تەۋسىيە قىلىش ئۈچۈن شەخسىي ئۇچۇرىڭىزنى ئىشلىتىشى مۇمكىن. شەخسىي ئۇچۇرىڭىز ۋە ھوقۇقىڭىز ھەققىدىكى تەپسىلاتنى «%1$s» دىن كۆرۈڭ."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"خۇاۋېي ئېلان سۇپىسى خۇاۋېي كۆچمە مۇلازىمىتى ۋە ئۈچىنچى تەرەپ ئۈچۈن ئېلان تەمىنلەيدۇ. خاسلاشتۇرما ئېلان تەڭشىكىنى ئاچسىڭىز، شەخسىي ئۇچۇرىڭىز ئېلان خاسلاشتۇرۇشقا ئىشلىتىلىشى مۇمكىن. مەلۇماتلىرىڭىزنىڭ ئېلان ئۈچۈن قانداق ئىشلىتىلىدىغانلىقى ۋە ھوقۇقلىرىڭىز ھەققىدىكى تەپسىلاتلارنى تۆۋەندىن كۆرۈڭ:"</string>
+    <string name="opendevice_setting_network" priority="LT">"تور تەڭشەش"</string>
+    <string name="opendevice_title_oaid" priority="LT">"نامسىز ئۈسكۈنە بەلگىسى"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"ئېلان كىملىكى (OAID) ھەققىدە"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"ئېلان كىملىكىنى ئانالىز قىلىش ھەققىدە مەخپىيەتلىك باياناتى"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"ئېلان ئۇچۇرىنى كۆرۈش"</string>
+</resources>

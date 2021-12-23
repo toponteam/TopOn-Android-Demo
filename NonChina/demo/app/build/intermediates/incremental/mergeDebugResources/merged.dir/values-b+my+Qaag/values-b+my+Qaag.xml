@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"ဝင္းဒိုးသည္ %1$s စကၠန္႔အၾကာတြင္ ပိတ္သြားပါလိမ့္မည္။"</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="other">"ေၾကာ္ျငာကို %ds အၾကာတြင္ ပိတ္ႏိုင္ပါသည္"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="other">"ေရြးခ်ယ္မႈအား %1$s ရက္ၾကာ မွတ္ထားရန္"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="other">"%ds အၾကာတြင္ ဆုရယူရန္"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="other">"ဆု ရယူရန္ %d စကၠန္႔စာ ေစာင့္ၾကည့္ပါ။"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d စကၠန္႔"</item>
+    </plurals>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"ေၾကာ္ျငာ"</string>
+    <string name="hiad_app_detail_version" priority="LT">"ဗားရွင္း %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s အား ထည့္သြင္းထားျပီးပါျပီ။"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ထည့္သြင္းမႈ ျပီးဆုံးပါျပီ။ ဖြင့္ရန္ ႏွိပ္ပါ။"</string>
+    <string name="hiad_app_permission" priority="LT">"ခြင့္ျပဳခ်က္မ်ား"</string>
+    <string name="hiad_calender_add" priority="LT">"အိုေက"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"ဤပြဲစဥ္ျဖစ္ရပ္သည္ ရွိေနျပီး ျဖစ္ပါသည္။"</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"ဤပြဲစဥ္ျဖစ္ရပ္ကို သင့္ျပကၡဒိန္တြင္ ေပါင္းထည့္မည္လား။"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"ပြဲစဥ္ျဖစ္ရပ္ကို ေပါင္းထည့္၍ မရႏိုင္ပါ။"</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"ပြဲစဥ္ျဖစ္ရပ္ ေပါင္းထည့္ျပီး။"</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"ဤပြဲစဥ္ျဖစ္ရပ္ကို သင့္ျပကၡဒိန္မွ ဖ်က္ပစ္မည္လား။"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ပြဲစဥ္ျဖစ္ရပ္ကို ဖ်က္၍ မရႏိုင္ပါ။"</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ပြဲစဥ္ျဖစ္ရပ္ ဖ်က္ပစ္ျပီး။"</string>
+    <string name="hiad_calender_delete" priority="LT">"ဖ်က္ရန္"</string>
+    <string name="hiad_calender_description_new" priority="LT">"ျပကၡဒိန္ သတိေပးခ်က္ ထုတ္ရန္ သို႔မဟုတ္ သင္ပါဝင္ရန္ စီစဥ္ထားသည့္ ပရိုမိုးရွင္း လႈပ္ရွားမႈမ်ားအတြက္ ပြဲစဥ္မ်ား ဖန္တီးရန္ ဤသည္ကို သုံးပါသည္။"</string>
+    <string name="hiad_calender_dialog" priority="LT">"မွတ္ခ်က္"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"ဤအက္ပ္သည္ ျပကၡဒိန္ ပြဲစဥ္ျဖစ္ရပ္မ်ားကို ဖန္တီးရန္ ျပကၡဒိန္ ခြင့္ျပဳခ်က္ လိုအပ္ပါသည္။ ဤခြင့္ျပဳခ်က္ကို ဆက္တင္တြင္ ခြင့္ျပဳေပးႏိုင္ပါသည္။"</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"ဤအက္ပ္သည္ ျပကၡဒိန္ ပြဲစဥ္ျဖစ္ရပ္မ်ားကို ဖ်က္ရန္ ျပကၡဒိန္ ခြင့္ျပဳခ်က္ လိုအပ္ပါသည္။ ဤခြင့္ျပဳခ်က္ကို ဆက္တင္တြင္ ခြင့္ျပဳေပးႏိုင္ပါသည္။"</string>
+    <string name="hiad_calender_permission_description" priority="LT">"ျပကၡဒိန္ သတိေပးခ်က္ ဖန္တီးရန္ ဤသည္ကို သုံးပါသည္၊ သို႔မွသာ ပြဲစဥ္ျဖစ္ရပ္မ်ားအတြက္ သတိေပးခ်က္မ်ား သတ္မွတ္ျပီး လက္ခံရရွိႏိုင္မည္ ျဖစ္ပါသည္။"</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"ခြင့္ျပဳခ်က္ လိုအပ္ပါသည္"</string>
+    <string name="hiad_calender_set" priority="LT">"ဆက္တင္"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"AR တုံ႔ျပန္မႈ ဝန္ေဆာင္မႈမ်ားအတြက္ ဤသည္ကို သုံးပါသည္။"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ေၾကာ္ျငာ ဝွက္ထားျပီး"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"စိတ္မဝင္စား"</string>
+    <string name="hiad_choices_hide" priority="LT">"ေၾကာ္ျငာ ဝွက္ရန္"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"အဘယ္ေၾကာင့္ ဤေၾကာ္ျငာကို ျမင္ရသနည္း။"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"ျပန္ၾကိဳးစားရန္"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ဤအက္ပ္ကို ထည့္သြင္းမည္လား။"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"မိုဘိုင္း ကြန္ရက္အား အသုံးျပဳျခင္းျဖင့္ ေဒတာ ပမာဏ %1$s ကို သုံးစြဲသြားပါလိမ့္မည္။ ဆက္လက္ လုပ္ေဆာင္မည္လား။"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ျပန္ဖြင့္မႈအတြက္ မိုဘိုင္းေဒတာအား သုံးပါလိမ့္မည္။ ဆက္လက္ လုပ္ေဆာင္မည္လား။"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"မိုဘိုင္းခ်ိတ္ဆက္မႈ သုံးေနပါသည္။ ၾကည့္ရႈျခင္းျဖင့္ မိုဘိုင္းေဒတာ %1$s ကို သုံးစြဲသြားပါလိမ့္မည္။"</string>
+    <string name="hiad_continue_download" priority="LT">"ေဒါင္းလုဒ္"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ေဒါင္းလုဒ္"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ဆက္လုပ္မည္"</string>
+    <string name="hiad_copy_link" priority="LT">"လင့္ခ္အား ကူးရန္"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"အက္ပ္"</string>
+    <string name="hiad_default_skip_text" priority="LT">"ေက်ာ္မည္"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d အၾကာတြင္ ေက်ာ္ရန္"</string>
+    <string name="hiad_detail" priority="LT">"အေသးစိတ္ အခ်က္အလက္မ်ား"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ေဒါင္းလုဒ္"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ခြင့္ျပဳမည္"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ခြင့္ျပဳမည္"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ပယ္ဖ်က္မည္"</string>
+    <string name="hiad_dialog_close" priority="LT">"အိုေက"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ေဒါင္းလုဒ္"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"သေဘာေပါက္ပါျပီ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ကို ထည့္သြင္းရန္ %1$s ကို ခြင့္ျပဳမည္လား။"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"အရင္းအျမစ္- %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ခြင့္ျပဳမည္"</string>
+    <string name="hiad_dialog_open" priority="LT">"ဖြင့္မည္"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ခြင့္မျပဳပါ"</string>
+    <string name="hiad_dialog_title" priority="LT">"မိုဘိုင္းေဒတာ သုံး၍ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"မွတ္ခ်က္"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"မိုဘိုင္းေဒတာ သုံး၍ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_download_download" priority="LT">"ထည့္သြင္းမည္"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ေဒါင္းလုဒ္ (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"ေဒါင္းလုဒ္လုပ္ေနဆဲ"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s အား ေဒါင္းလုဒ္လုပ္ေနစဥ္ ခ်ဳိ႕ယြင္းခ်က္ ရွိခဲ့ပါသည္။"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ဖိုင္ ပ်က္ေနပါသည္။ ေဒါင္းလုဒ္ ထပ္ဆြဲေပးပါ။"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ဖိုင္ ရွိမေနပါ။ ေက်းဇူးျပဳ၍ ထပ္မံ ႀကိဳးစားပါ။"</string>
+    <string name="hiad_download_install" priority="LT">"ထည့္သြင္းမည္"</string>
+    <string name="hiad_download_installing" priority="LT">"ထည့္သြင္းေနဆဲ"</string>
+    <string name="hiad_download_no_space" priority="LT">"သိုေလွာင္မႈေနရာ မလံုေလာက္ပါ။ ေနရာလြတ္ ရရွိေစရန္ အခ်ဳိ႕ဖိုင္မ်ားအား ရွင္းပစ္ျပီး ထပ္မံၾကိဳးစားၾကည့္ပါ။"</string>
+    <string name="hiad_download_open" priority="LT">"ဖြင့္မည္"</string>
+    <string name="hiad_download_resume" priority="LT">"ဆက္လုပ္မည္"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s အား ေဒါင္းလုဒ္လုပ္ေနစဥ္ ခ်ဳိ႕ယြင္းခ်က္ ရွိခဲ့ပါသည္။ ေဒါင္းလုဒ္ လုပ္ေဆာင္မႈအား အစမွ ျပန္စပါလိမ့္မည္။"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"လက္ရွိကာလတြင္ သင္သည္ Wi-Fi ခ်ိတ္ဆက္ထားမႈ မရွိပါ။ ယခု ေဒါင္းလုဒ္လုပ္ျခင္းျဖင့္ မိုဘိုင္း ေဒတာ %1$s ပမာဏကို သုံးစြဲရပါလိမ့္မည္။ မည္သို႔ပင္ျဖစ္ေစ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"လက္ရွိကာလတြင္ သင္သည္ WLAN ခ်ိတ္ဆက္ထားမႈ မရွိပါ။ ယခု ေဒါင္းလုဒ္လုပ္ျခင္းျဖင့္ မိုဘိုင္း ေဒတာ %1$s ပမာဏကို သုံးစြဲရပါလိမ့္မည္။ မည္သို႔ပင္ျဖစ္ေစ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_go_to_settings" priority="LT">"ဆက္တင္"</string>
+    <string name="hiad_install_completed" priority="LT">"လုပ္ၿပီးၿပီ"</string>
+    <string name="hiad_installed_description" priority="LT">"ထည့္သြင္းမႈ ေအာင္ျမင္ပါသည္။ ဖြင့္ရန္ ႏွိပ္ပါ။"</string>
+    <string name="hiad_jump_desc" priority="translator">"အေသးစိတ္ ၾကည့္ရန္ သို႔မဟုတ္ အက္ပ္သို႔ သြားရန္"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ဤေပ့ခ်္သည္ %1$s အား ဖြင့္လိုပါသည္။"</string>
+    <string name="hiad_link_already_copied" priority="LT">"လင့္ခ္ ကူးျပီး။"</string>
+    <string name="hiad_loading_tips" priority="LT">"လုပ္ေဆာင္ေနဆဲ..."</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ဤေဒါင္းလုဒ္လုပ္ေဆာင္မႈသည္ မိုဘိုင္းေဒတာ %1$s ကို သုံးစြဲသြားပါလိမ့္မည္။"</string>
+    <string name="hiad_net_error" priority="LT">"ကြန္ရက္ ခ်ိတ္ဆက္မႈ ခ်ိဳ႕ယြင္းခ်က္။ ေက်းဇူးျပဳ၍ ထပ္မံ ႀကိဳးစားပါ။"</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"အင္တာနက္ ခ်ိတ္ဆက္မႈ မရွိပါ။ ခ်ိတ္ဆက္ျပီး ထပ္မံ ၾကိဳးစားၾကည့္ပါ။"</string>
+    <string name="hiad_network_error" priority="LT">"ကြန္ရက္ ခ်ိတ္ဆက္မႈ ခ်ိဳ႕ယြင္းခ်က္။"</string>
+    <string name="hiad_network_no_available" priority="LT">"အင္တာနက္ ခ်ိတ္ဆက္မႈ မရွိပါ။ ေက်းဇူးျပဳ၍ သင့္ကြန္ရက္ဆက္တင္ကို စစ္ေဆးပါ။"</string>
+    <string name="hiad_no_more_remind" priority="LT">"ေနာက္ထပ္ သတိမေပးပါႏွင့္"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi ခ်ိတ္ဆက္မႈ မရွိပါ။ ယခု ေဒါင္းလုဒ္လုပ္ျခင္းျဖင့္ မိုဘိုင္းေဒတာကို သုံးစြဲသြားပါလိမ့္မည္။ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN ခ်ိတ္ဆက္မႈ မရွိပါ ယခု ေဒါင္းလုဒ္လုပ္ျခင္းျဖင့္ မိုဘိုင္းေဒတာကို သုံးစြဲသြားပါလိမ့္မည္။ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ဘေရာက္ဇာတြင္ ဖြင့္ရန္"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ေပ့ခ်္အား ဖြင့္၍ မရပါ။ ေက်းဇူးျပဳ၍ ထပ္မံ ႀကိဳးစားပါ။"</string>
+    <string name="hiad_permission_camera" priority="LT">"ဤလုပ္ေဆာင္ခ်က္သည္ ကင္မရာ ခြင့္ျပဳခ်က္ ရရန္ လိုအပ္ပါသည္။ ၎အား ဆက္တင္တြင္ ခြင့္ျပဳေပးႏိုင္ပါသည္။"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s သည္ ေဖာ္ျပပါ ခြင့္ျပဳခ်က္မ်ား လိုအပ္ပါသည္-"</string>
+    <string name="hiad_preorder_download" priority="LT">"အႀကိဳေအာ္ဒါ"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi အား ေစာင့္ရန္"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"မိုဘိုင္းကြန္ရက္မွတစ္ဆင့္ ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN အား ေစာင့္ရန္"</string>
+    <string name="hiad_privacy_policy" priority="LT">"ကိုယ္ေရးအခ်က္အလက္ လုံျခံဳေရး"</string>
+    <string name="hiad_refresh" priority="LT">"ျပန္လည္လုပ္ေဆာင္ရန္"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d MB အထက္ အက္ပ္"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"မလုပ္ပါ"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"ဖန္တီးသူ- %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"ဗားရွင္း %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ေက်ာ္မည္"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"ဆက္ၾကည့္မည္"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ဆုရယူရန္ ဤေၾကာ္ျငာကို အျပီးၾကည့္ေပးပါ။"</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"တည္ေနရာ အေျချပဳ ေၾကာ္ျငာမ်ား"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"ဝက္ဘ္ဆိုက္/အက္ပ္ကို ဖြင့္ရန္ ႏွိပ္ပါ"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"အက္ပ္ ေဒါင္းလုဒ္လုပ္ေနပါသည္။"</string>
+    <string name="hiad_swipe_screen" priority="translator">"အေပၚသို႔ ပြတ္ဆြဲရန္"</string>
+    <string name="hiad_twist_screen" priority="translator">"ဖုန္းကို လႈပ္ရန္"</string>
+    <string name="hiad_whether_download" priority="LT">"ဤအက္ပ္အား ေဒါင္းလုဒ္လုပ္မည္လား။"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi မွတစ္ဆင့္ ၾကိဳတင္ ထည့္သြင္းလုပ္ေဆာင္ျပီး"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ၾကိဳတင္ထည့္သြင္းျပီး"</string>
+    <string name="no_browser_tips" priority="LT">"ဘေရာက္ဇာအက္ပ္တစ္ခုကို ဦးစြာထည့္သြင္းပါ။"</string>
+    <string name="opendevice_ad_info" priority="LT">"ေၾကာ္ျငာ အခ်က္အလက္"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Ads ႏွင့္ ကိုယ္ေရးအခ်က္အလက္ လုံျခံဳေရးအေၾကာင္း ထုတ္ျပန္ခ်က္"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"ေၾကာ္ျငာသူ အားလုံး"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"မလုပ္ပါ"</string>
+    <string name="opendevice_bt_reset" priority="LT">"ျပန္လည္ သတ္မွတ္မည္"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Ad-ID အသစ္ကို က်ပန္း သတ္မွတ္သြားပါလိမ့္မည္။"</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Ad-ID ျပန္သတ္မွတ္ရန္"</string>
+    <string name="opendevice_here" priority="LT">"ဤေနရာ"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"ေၾကာ္ျငာမ်ားႏွင့္ ကိုယ္ေရးအခ်က္အလက္ လုံျခံဳေရး"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Ads"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"သင့္ Ad-ID ကို သုံးသည့္ သင့္အၾကိဳက္ႏွင့္ ကိုက္ညီမည့္ ေၾကာ္ျငာမ်ားကို လက္ခံရရွိေနမႈမွ ဖယ္ရွားႏိုင္ပါသည္။ ဖယ္ရွားလိုက္ပါက ေၾကာ္ျငာမ်ားကို ဆက္လက္ရရွိေနမည္ ျဖစ္ေသာ္လည္း သင္ႏွင့္ ကိုက္ညီမႈ နည္းသြားပါလိမ့္မည္။ %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"ေဒတာ သုံးစြဲမႈႏွင့္ သင့္လုပ္ပိုင္ခြင့္မ်ားအေၾကာင္း ပိုမိုေလ့လာရန္"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Ad-ID အခ်က္အလက္ စုေဆာင္းမႈကို ပိတ္ရန္"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"ကၽြႏ္ုပ္တို႔၏ ဝန္ေဆာင္မႈမ်ား တိုးတက္လာေစရန္ သင္၏ ေၾကာ္ျငာ ID ကို အသုံးျပဳေသာ အက္ပ္မ်ားအေၾကာင္းႏွင့္ ဤဆက္တင္မ်ားအတြင္းတြင္ရွိေသာ သင္၏မ်က္ႏွာျပင္ေပၚရွိ လုပ္ေဆာင္ခ်က္မ်ားအေၾကာင္း အခ်က္အလက္မ်ားကို စုေဆာင္းသြားပါမည္။ ဤေဒတာမ်ားကို ကၽြႏ္ုပ္တို႔ အသုံးျပဳပုံႏွင့္ ပတ္သက္သည့္ ေနာက္ထပ္ အခ်က္အလက္မ်ားကို သိရွိရန္ %1$s ကို ႏွိပ္ပါ။"</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"ကၽြႏ္ုပ္တို႔၏ ဝန္ေဆာင္မႈမ်ားကို ပိုမိုေကာင္းမြန္ေအာင္ မြမ္းမံႏိုင္ရန္ ဤဆက္တင္ရွိ သင့္စက္မ်က္ႏွာျပင္ေပၚမွ လုပ္ေဆာင္မႈမ်ားႏွင့္ သင့္ Ad-ID ကို သုံးစြဲသည့္ အက္ပ္မ်ားအေၾကာင္း အခ်က္အလက္မ်ားကို စုေဆာင္းသြားပါမည္။"</string>
+    <string name="opendevice_item_more_settings" priority="LT">"ေနာက္ထပ္ အခ်က္အလက္မ်ား"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"သင့္ Ad-ID (OAID ဟုလည္း ေခၚသည္) သည္ သင့္အၾကိဳက္ႏွင့္ ကိုက္ညီသည့္ ေၾကာ္ျငာမ်ားကို ပံ့ပိုးေပးရန္အတြက္ သုံးစြဲသည့္ ယာယီ စက္အိုင္ဒီ ျဖစ္ပါသည္။"</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Ad-ID ျပန္သတ္မွတ္ရန္"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"သင့္ Ad-ID ကို သုံးသည့္ သင့္အၾကိဳက္ႏွင့္ ကိုက္ညီမည့္ ေၾကာ္ျငာမ်ားကို လက္ခံရရွိေနမႈမွ ဖယ္ရွားႏိုင္ပါသည္။ ဖယ္ရွားလိုက္ပါက ေၾကာ္ျငာမ်ားကို ဆက္လက္ရရွိေနမည္ ျဖစ္ေသာ္လည္း သင္ႏွင့္ ကိုက္ညီမႈ နည္းသြားပါလိမ့္မည္။"</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"သင့္ Ad-ID ကို သုံးသည့္ သင့္အၾကိဳက္ႏွင့္ ကိုက္ညီမည့္ ေၾကာ္ျငာမ်ားကို လက္ခံရရွိေနမႈမွ ဖယ္ရွားႏိုင္ပါသည္။ ဖယ္ရွားလိုက္ပါက ေၾကာ္ျငာမ်ားကို ဆက္လက္ရရွိေနမည္ ျဖစ္ေသာ္လည္း သင္ႏွင့္ ကိုက္ညီမႈ နည္းသြားပါလိမ့္မည္။"</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"သင့္ Ad-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"သင့္ Ad-ID (OAID ဟုလည္း ေခၚသည္) သည္ သင့္အၾကိဳက္ႏွင့္ ကိုက္ညီသည့္ ေၾကာ္ျငာမ်ားကို ပံ့ပိုးေပးရန္အတြက္ သုံးစြဲသည့္ ယာယီ စက္အိုင္ဒီ ျဖစ္ပါသည္။ ေနာက္ထပ္ အခ်က္အလက္မ်ားအတြက္ %1$s ကို ႏွိပ္ပါ။"</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"တစ္ဦးခ်င္းအၾကိဳက္ႏွင့္ ကိုက္ညီသည့္ ေၾကာ္ျငာမ်ားကို ပိတ္ျခင္း"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"ေနာက္ထပ္ ေလ့လာရန္"</string>
+    <string name="opendevice_network_no_available" priority="LT">"အင္တာနက္ ခ်ိတ္ဆက္မႈ မရွိပါ"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"တစ္ဦးခ်င္းအၾကိဳက္ႏွင့္ ကိုက္ညီသည့္ ေၾကာ္ျငာဝန္ေဆာင္မႈမ်ားသည္ သင္စိတ္ဝင္စားႏိုင္မည့္ အေၾကာင္းအရာမ်ားကို အၾကံျပဳေပးပါသည္။ သင့္ကိုယ္ေရးအခ်က္အလက္မ်ားကို အခ်ိန္တိုင္း ကာကြယ္ေပးသြားပါမည္။ ေနာက္ထပ္ အေသးစိတ္မ်ားအတြက္ %1$s ကို ေလ့လာၾကည့္ပါ။"</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"တစ္ဦးခ်င္းအၾကိဳက္ႏွင့္ ကိုက္ညီသည့္ ေၾကာ္ျငာဝန္ေဆာင္မႈမ်ားသည္ သင္စိတ္ဝင္စားႏိုင္မည့္ အေၾကာင္းအရာမ်ားကို အၾကံျပဳေပးပါသည္။ သင့္ကိုယ္ေရးအခ်က္အလက္မ်ားကို အခ်ိန္တိုင္း ကာကြယ္ေပးသြားပါမည္။ ေနာက္ထပ္ အခ်က္အလက္မ်ားအတြက္ ေဖာ္ျပပါကို ေလ့လာေပးပါ-"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI Ads ပလက္ေဖာင္းသည္ Huawei Mobile Services ႏွင့္ ျပင္ပအဖြဲ႕အစည္း အက္ပ္မ်ားအတြက္ ေၾကာ္ျငာဝန္ေဆာင္မႈကို ပံ့ပိုးေပးပါသည္။ တစ္ဦးခ်င္းအလိုက္ ကိုက္ညီမႈရွိသည့္ ေၾကာ္ျငာမ်ားကို ဖြင့္ထားပါက သင္ႏွင့္ သက္ဆိုင္မည့္ အသုံးဝင္ေသာ ေၾကာ္ျငာမ်ားကို ပံ့ပိုးေပးရန္အတြက္ သင့္ကိုယ္ေရးေဒတာမ်ားကို သုံးသြားႏိုင္ပါသည္။ သင့္ေဒတာမ်ား သုံးစြဲပုံႏွင့္ သင့္လုပ္ပိုင္ခြင့္မ်ားအေၾကာင္း ပိုမိုေလ့လာႏိုင္ရန္ %1$s ကို ကိုးကားေပးပါ-"</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI Ads ပလက္ေဖာင္းသည္ Huawei Mobile Services ႏွင့္ ျပင္ပအဖြဲ႕အစည္း အက္ပ္မ်ားအတြက္ ေၾကာ္ျငာဝန္ေဆာင္မႈကို ပံ့ပိုးေပးပါသည္။ တစ္ဦးခ်င္းအလိုက္ ကိုက္ညီမႈရွိသည့္ ေၾကာ္ျငာမ်ားကို ဖြင့္ထားပါက သင္ႏွင့္ သက္ဆိုင္မည့္ အသုံးဝင္ေသာ ေၾကာ္ျငာမ်ားကို ပံ့ပိုးေပးရန္အတြက္ သင့္ကိုယ္ေရးေဒတာမ်ားကို သုံးသြားႏိုင္ပါသည္။ သင့္ေဒတာမ်ား သုံးစြဲပုံႏွင့္ သင့္လုပ္ပိုင္ခြင့္မ်ားအေၾကာင္း ပိုမိုေလ့လာႏိုင္ရန္ ေဖာ္ျပပါကို ကိုးကားေပးပါ-"</string>
+    <string name="opendevice_setting_network" priority="LT">"ကြန္ရက္ ဆက္တင္မ်ား"</string>
+    <string name="opendevice_title_oaid" priority="LT">"စက္ ခြဲျခားသိရွိမႈ"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID အေၾကာင္း"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"ေၾကာ္ျငာ ID ကိန္းဂဏန္းအခ်က္လက္ ဆန္းစစ္ခ်က္အေၾကာင္း ေၾကညာခ်က္"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"ေၾကာ္ျငာ အခ်က္အလက္"</string>
+</resources>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/pangle/libs/anythink_network_pangle_nonchina.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c08074d7dfb97b3b8b6dd3a071c27454/jetified-anythink_network_pangle_nonchina/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c08074d7dfb97b3b8b6dd3a071c27454/jetified-anythink_network_pangle_nonchina/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c08074d7dfb97b3b8b6dd3a071c27454/jetified-anythink_network_pangle_nonchina/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c08074d7dfb97b3b8b6dd3a071c27454/jetified-anythink_network_pangle_nonchina/jars/libs/anythink_network_pangle_nonchina.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mintegral/libs/mbridge_reward.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7992cce29ee3c5104c7efa1b12471eb8/mbridge_reward/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7992cce29ee3c5104c7efa1b12471eb8/mbridge_reward/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7992cce29ee3c5104c7efa1b12471eb8/mbridge_reward/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7992cce29ee3c5104c7efa1b12471eb8/mbridge_reward/jars/libs/classes-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

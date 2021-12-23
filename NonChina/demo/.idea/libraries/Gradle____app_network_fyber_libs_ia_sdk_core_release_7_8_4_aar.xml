@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/fyber/libs/ia-sdk-core-release-7.8.4.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f054d88df2c14c72b7277c5b5e201d29/ia-sdk-core-release-7.8.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f054d88df2c14c72b7277c5b5e201d29/ia-sdk-core-release-7.8.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f054d88df2c14c72b7277c5b5e201d29/ia-sdk-core-release-7.8.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"विंडो %1$s सेकंड में बंद हो जाएगी।"</item>
+        <item priority="translator" quantity="other">"विंडो %1$s सेकंड में बंद हो जाएगी।"</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"विज्ञापन को %d सेकंड में बंद किया जा सकता है"</item>
+        <item priority="translator" quantity="other">"विज्ञापन को %d सेकंड में बंद किया जा सकता है"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"%1$s दिन के लिए पसंद याद रखें"</item>
+        <item priority="Reviewed" quantity="other">"%1$s दिनों के लिए पसंद याद रखें"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"%dसेकंड में पुरस्कार अर्जित करें"</item>
+        <item priority="translator" quantity="other">"%dसेकंड में पुरस्कार अर्जित करें"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"पुरस्कार जीतने के लिए %d सेकंड के लिए देखें।"</item>
+        <item priority="translator" quantity="other">"पुरस्कार जीतने हेतु %d सेकंड के लिए देखें।"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d सेकंड"</item>
+        <item priority="LT" quantity="other">"%1$d सेकंड"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"कोई नहीं"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"ट्रैक <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"ऑडियो ट्रैक"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"सामान्य"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"वीडियो चलाने की रफ़्तार"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"बंद"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"ट्रैक <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"ट्रैक <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"होम पेज पर जाएं"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"वापस जाएं"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"ज़्यादा विकल्प"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"हो गया"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"सभी देखें"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"कोई ऐप्लिकेशन चुनें"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"बंद"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"चालू"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"खोजें…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"क्‍वेरी हटाएं"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"सर्च क्वेरी"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"खोजें"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"क्वेरी सबमिट करें"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"बोलकर खोजें"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"इससे शेयर करें:"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> से शेयर करें"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"छोटा करें"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"चालू करें"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"जब तक आप Google Play सेवाएं चालू नहीं करते, <ns1:g id="APP_NAME">%1$s</ns1:g> काम नहीं करेगा."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play सेवाएं चालू करें"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"इंस्टॉल करें"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> उन Google Play सेवाओं के बिना नहीं चलेगा जो आपके डिवाइस में उपलब्ध नहीं हैं."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play सेवाएं इंस्टॉल करें"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play सेवाएं उपलब्ध हैं"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play सेवाओं से जुड़ी गड़बड़ी"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> को Google Play सेवाओं के साथ समस्या आ रही है. कृपया फिर से कोशिश करें."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> उन Google Play सेवाओं के बिना नहीं चलेगा, जो आपके डिवाइस पर काम नहीं करती हैं."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"अपडेट करें"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> तब तक नहीं चलेगा जब तक आप Google Play सेवाओं को अपडेट नहीं करते."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play सेवाओं को अपडेट करें"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> उन Google Play सेवाओं के बिना नहीं चलेगा जो अभी अपडेट हो रही हैं."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play सेवाओं के नए वर्शन की ज़रूरत है. यह जल्द ही अपने आप अपडेट हो जाएगा."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"फ़ोन पर खोलें"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"साइन इन करें"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google के ज़रिए साइन इन करें"</string>
+    <string msgid="3209159573327985035" name="copy">"कॉपी करें"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"अभी चल रहा है"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"बेहतर सेटिंग"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"विज्ञापन"</string>
+    <string name="hiad_app_detail_version" priority="LT">"संस्करण %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s स्थापित किया गया है"</string>
+    <string name="hiad_app_open_notification" priority="translator">"स्थापना पूर्ण हुई। खोलने के लिए टच करें|"</string>
+    <string name="hiad_app_permission" priority="LT">"अनुमतियां"</string>
+    <string name="hiad_calender_add" priority="LT">"ठीक"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"यह ईवेंट पहले ही मौजूद है।"</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"इस ईवेंट को अपने कैलेंडर में जोड़ें?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"ईवेंट जोड़ने में विफल रहा।"</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"ईवेंट जोड़ा गया।"</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"अपने कैलेंडर से यह ईवेंट हटाएँ?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ईवेंट हटाने में असमर्थ।"</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ईवेंट हटाया गया।"</string>
+    <string name="hiad_calender_delete" priority="LT">"हटाएँ"</string>
+    <string name="hiad_calender_description_new" priority="LT">"इसका उपयोग कैलेंडर अनुस्मारक बनाने या उन प्रचार संबंधी गतिविधियों के लिए ईवेंट बनाने के लिए किया जाता है जिनमें आप भाग लेने की योजना बना रहे हैं।"</string>
+    <string name="hiad_calender_dialog" priority="LT">"नोट"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"कैलेंडर ईवेंट्स बनाने के लिए इस ऐप को कैलेंडर अनुमति की आवश्यकता होती है। आप सेटिंग्स में यह अनुमति प्रदान कर सकते हैं।"</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"कैलेंडर ईवेंट्स हटाने के लिए इस ऐप को कैलेंडर अनुमति की आवश्यकता होती है। आप सेटिंग्स में यह अनुमति प्रदान कर सकते हैं।"</string>
+    <string name="hiad_calender_permission_description" priority="LT">"इसका उपयोग कैलेंडर अनुस्मारक बनाने में किया जाता है जिससे आप इवेंट्स के लिए अनुस्मारक सेट व प्राप्त कर सकें।"</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"अनुमति की आवश्यकता है"</string>
+    <string name="hiad_calender_set" priority="LT">"सेटिंग्स"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"इसका उपयोग AR सहभागी सेवाओं के लिए किया जाता है।"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"विज्ञापन छिपा दिया गया है"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"कोई रूचि नहीं है"</string>
+    <string name="hiad_choices_hide" priority="LT">"विज्ञापन छिपाएं"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"मुझे यह विज्ञापन क्यों दिखा?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"पुनः प्रयास करें"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"इस ऐप को स्थापित करें?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"मोबाइल नेटवर्क का उपयोग करने से %1$s डेटा का उपभोग होगा। जारी रखें?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"प्लेबैक मोबाइल डेटा का उपयोग करेगा। जारी रखें?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"मोबाइल कनेक्शन का उपयोग हो रहा है। देखने से %1$s मोबाइल डेटा का उपयोग होगा।"</string>
+    <string name="hiad_continue_download" priority="LT">"डाउनलोड करें"</string>
+    <string name="hiad_continue_download_new" priority="LT">"डाउनलोड करें"</string>
+    <string name="hiad_continue_to_play" priority="LT">"जारी रखें"</string>
+    <string name="hiad_copy_link" priority="LT">"लिंक कॉपी करें"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"ऐप"</string>
+    <string name="hiad_default_skip_text" priority="LT">"छोड़ें"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d में छोड़ें"</string>
+    <string name="hiad_detail" priority="LT">"विवरण"</string>
+    <string name="hiad_detail_download_now" priority="LT">"डाउनलोड करें"</string>
+    <string name="hiad_dialog_accept" priority="LT">"अनुमति दें"</string>
+    <string name="hiad_dialog_allow" priority="LT">"अनुमति दें"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"रद्द करें"</string>
+    <string name="hiad_dialog_close" priority="LT">"ठीक"</string>
+    <string name="hiad_dialog_continue" priority="LT">"डाउनलोड करें"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"मिल गया"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s को %2$s स्थापित करने की अनुमति दें?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"स्रोत: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"अनुमति दें"</string>
+    <string name="hiad_dialog_open" priority="LT">"खोलें"</string>
+    <string name="hiad_dialog_reject" priority="LT">"अस्वीकार करें"</string>
+    <string name="hiad_dialog_title" priority="LT">"मोबाइल डेटा का उपयोग करके डाउनलोड करें?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"नोट"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"मोबाइल डेटा का उपयोग करके डाउनलोड करें?"</string>
+    <string name="hiad_download_download" priority="LT">"स्थापित करें"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"डाउनलोड करें (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"डाउनलोड किया जा रहा है"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s को डाउनलोड करने के दौरान त्रुटि उत्पन्न हुई।"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"फ़ाइल दूषित है। कृपया पुनः डाउनलोड करें।"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"फ़ाइल मौजूद नहीं है। कृपया पुनः प्रयास करें।"</string>
+    <string name="hiad_download_install" priority="LT">"स्थापित करें"</string>
+    <string name="hiad_download_installing" priority="LT">"स्थापित किया जा रहा है"</string>
+    <string name="hiad_download_no_space" priority="LT">"अपर्याप्त संग्रहण। कुछ स्थान रिक्त करें और पुनः प्रयास करें।"</string>
+    <string name="hiad_download_open" priority="LT">"खोलें"</string>
+    <string name="hiad_download_resume" priority="LT">"जारी रखें"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s को डाउनलोड करने के दौरान एक त्रुटि उत्पन्न हुई। डाउनलोड पुनरारंभ होगा।"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"वर्तमान में आप Wi-Fi से कनेक्ट नहीं हैं। अभी डाउनलोड करने से %1$s मोबाइल डेटा का उपयोग होगा। फिर भी डाउनलोड करें?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"वर्तमान में आप WLAN से कनेक्ट नहीं हैं। अभी डाउनलोड करने से %1$s मोबाइल डेटा का उपयोग होगा। फिर भी डाउनलोड करें?"</string>
+    <string name="hiad_go_to_settings" priority="LT">"सेटिंग्स"</string>
+    <string name="hiad_install_completed" priority="LT">"पूर्ण"</string>
+    <string name="hiad_installed_description" priority="LT">"स्थापना सफल रही। खोलने के लिए टच करें।"</string>
+    <string name="hiad_jump_desc" priority="translator">"विवरण देखें या ऐप पर जाएँ"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"यह पृष्ठ %1$s खोलना चाहता है।"</string>
+    <string name="hiad_link_already_copied" priority="LT">"लिंक कॉपी किया गया।"</string>
+    <string name="hiad_loading_tips" priority="LT">"लोड हो रहा है…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"इस डाउनलोड में %1$s मोबाइल डेटा का उपयोग होगा।"</string>
+    <string name="hiad_net_error" priority="LT">"नेटवर्क कनेक्शन त्रुटि। कृपया पुनः प्रयास करें।"</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"कोई इंटरनेट कनेक्शन नहीं है। कृपया कनेक्ट करें और पुनः प्रयास करें।"</string>
+    <string name="hiad_network_error" priority="LT">"नेटवर्क कनेक्शन त्रुटि।"</string>
+    <string name="hiad_network_no_available" priority="LT">"कोई इंटरनेट कनेक्शन नहीं। कृपया अपनी नेटवर्क सेटिंग्स जाँचें।"</string>
+    <string name="hiad_no_more_remind" priority="LT">"मुझे पुनः अनुस्मारक न दें"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"कोई Wi-Fi कनेक्शन नहीं। अभी डाउनलोड करने से आपके मोबाइल डेटा का उपयोग होगा। डाउनलोड करें?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"कोई WLAN कनेक्शन नहीं। अभी डाउनलोड करने से आपके मोबाइल डेटा का उपयोग होगा। डाउनलोड करें?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ब्राउज़र में खोलें"</string>
+    <string name="hiad_page_load_failed" priority="LT">"पृष्ठ लोड करने में असमर्थ। कृपया पुनः प्रयास करें।"</string>
+    <string name="hiad_permission_camera" priority="LT">"इस सुविधा के लिए कैमरा अनुमति की आवश्यकता होती है। इसे सेटिंग्स में प्रदान करें।"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s को निम्नलिखित अनुमतियों की आवश्यकता है:"</string>
+    <string name="hiad_preorder_download" priority="LT">"पूर्व-ऑर्डर"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi की प्रतीक्षा करें"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"मोबाइल नेटवर्क का उपयोग करके डाउनलोड करें?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN की प्रतीक्षा करें"</string>
+    <string name="hiad_privacy_policy" priority="LT">"गोपनीयता"</string>
+    <string name="hiad_refresh" priority="LT">"रीफ़्रेश करें"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d MB से बड़े ऐप"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"रद्द करें"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"डेवलपर: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"संस्करण %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"छोड़ें"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"देखते रहें"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"रिवॉर्ड पाने के लिए इस विज्ञापन को अंत तक देखते रहें।"</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"स्थान-आधारित विज्ञापन"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"वेबसाइट/ऐप खोलने के लिए टच करें"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"ऐप डाउनलोड हो रहा है।"</string>
+    <string name="hiad_swipe_screen" priority="translator">"ऊपर की ओर स्वाइप करें"</string>
+    <string name="hiad_twist_screen" priority="translator">"फ़ोन शेक करें"</string>
+    <string name="hiad_whether_download" priority="LT">"इस ऐप को डाउनलोड करें?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi पर पहले से लोड किया गया"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"पहले से लोड किया हुआ"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"वापस जाएं"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"सबटाइटल बंद है. इसे दिखाने के लिए क्लिक करें."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"सबटाइटल चालू है. इसे छिपाने के लिए क्लिक करें."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"ठीक है"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"30 सेकंड आगे जाएं"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"फ़ुल-स्क्रीन"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"कलाकार का नाम नहीं पता"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"गाने का शीर्षक पता नहीं"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"अगला मीडिया"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"वीडियो का शीर्षक नहीं पता"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"बटन की पिछली सूची पर वापस जाएं"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"ज़्यादा बटन देखें"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"रोकें"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"चलाएं"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"वह वीडियाे नहीं चलाया जा सका जिसका आपने अनुरोध किया था"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"पिछला मीडिया"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"फिर से चलाएं"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"10 सेकंड पीछे ले जाएं"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"वीडियो चलने की प्रगति"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"सेटिंग"</string>
+    <string name="no_browser_tips" priority="LT">"सबसे पहले ब्राउज़र ऐप स्थापित करें।"</string>
+    <string name="no_thank_you">नहीं, धन्यवाद</string>
+    <string msgid="478774118347071097" name="not_set">"सेट नहीं है"</string>
+    <string name="offline_notification_text">विज्ञापन खोलने के लिए टैप करें</string>
+    <string name="offline_notification_title">वह विज्ञापन देखें जिसे आपने तब सेव किया था, जब आप ऑफ़लाइन थे</string>
+    <string name="offline_opt_in_confirm">ठीक है</string>
+    <string name="offline_opt_in_confirmation">वापस ऑनलाइन आने पर, आपको एक सूचना मिलेगी जिसमें लिंक होगा</string>
+    <string name="offline_opt_in_decline">रहने दें</string>
+    <string name="offline_opt_in_message">हम आपको एक सूचना भेजेंगे जिसमें विज्ञापन देने वाले की साइट का लिंक होगा.</string>
+    <string name="offline_opt_in_title">वापस ऑनलाइन आने पर, विज्ञापन खोलें.</string>
+    <string name="opendevice_ad_info" priority="LT">"विज्ञापन जानकारी"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"विज्ञापन और गोपनीयता के बारे में कथन"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"सभी विज्ञापनदाता"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"रद्द करें"</string>
+    <string name="opendevice_bt_reset" priority="LT">"रीसेट करें"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"एक नया विज्ञापन-ID यादृच्छिकता से निर्दिष्ट किया जाएगा।"</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"विज्ञापन-ID रीसेट करें"</string>
+    <string name="opendevice_here" priority="LT">"यहाँ"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"विज्ञापन और गोपनीयता"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"विज्ञापन"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"आप उन व्यक्तिगत विज्ञापनों को प्राप्त न करने का विकल्प चुन सकते हैं जो आपके विज्ञापन-ID का उपयोग करते हैं। अगर आप बाहर निकलते हैं, तब भी आपको विज्ञापन प्राप्त होंगे, लेकिन हो सकता है कि वे आपके लिए कम प्रासंगिक हों। %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"डेटा उपयोग और अपने अधिकारों के बारे में अधिक जानें"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"विज्ञापन-ID आँकड़े के संग्रह को अक्षम करें"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"अपनी सेवाओं को बेहतर बनाने के लिए हम इन सेटिंग्स में आपकी ऑनस्क्रीन क्रियाओं और ऐप्स जो आपके विज्ञापन-ID का उपयोग करते हैं उनके बारे में जानकारी एकत्रित करेंगे। हम इस डेटा का किस प्रकार उपयोग करते हैं इसके बारे में अधिक जानकारी के लिए कृपया %1$s टच करें।"</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"अपनी सेवाओं को बेहतर बनाने के लिए हम इन सेटिंग्स में आपकी ऑनस्क्रीन क्रियाओं और ऐप्स जो आपके विज्ञापन-ID का उपयोग करते हैं उनके बारे में जानकारी एकत्रित करेंगे।"</string>
+    <string name="opendevice_item_more_settings" priority="LT">"अधिक जानकारी"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"आपका विज्ञापन-ID (जिसे OAID के रूप में भी जाना जाता है), एक अस्थायी डिवाइस पहचानकर्ता है जिसका उपयोग आपको व्यक्तिगत विज्ञापन प्रदान करने के लिए किया जाता है।"</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"विज्ञापन-ID रीसेट करें"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"आप उन व्यक्तिगत विज्ञापनों को प्राप्त करने से मना कर सकते हैं जो आपके विज्ञापन-ID का उपयोग करते हैं। अगर आप बाहर निकलते हैं, तब भी आपको विज्ञापन प्राप्त होंगे, लेकिन वे आपके लिए कम प्रासंगिक होंगे।"</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"आप अपने Ad-ID का उपयोग करने वाले वैयक्तिकृत विज्ञापनों की प्राप्ति बंद करने का विकल्प चुन सकते हैं। अगर आप इसका चयन करते हैं, तो भी आपको विज्ञापन प्राप्त होंगे, लेकिन वे आपके लिए कम प्रासंगिक हो सकते हैं।"</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"आपका विज्ञापन-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"आपका विज्ञापन-ID (जिसे OAID के रूप में भी जाना जाता है) एक अस्थायी डिवाइस पहचानकर्ता है जिसका उपयोग आपको व्यक्तिगत विज्ञापन प्रदान करने के लिए किया जाता है। अधिक जानकारी के लिए, %1$s टच करें।"</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"वैयक्तिकृत विज्ञापन अक्षम करें"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"और अधिक जानें"</string>
+    <string name="opendevice_network_no_available" priority="LT">"कोई इंटरनेट कनेक्शन नहीं"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"व्यक्तिगत विज्ञापन सेवाएँ आपको उस सामग्री का सुझाव देती हैं जिसमें आपकी रूचि हो सकती है। आपकी गोपनीयता को हर समय सुरक्षित रखा जाएगा। अधिक जानकारी के लिए, कृपया %1$s देखें।"</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"व्यक्तिगत विज्ञापन सेवाएँ आपको उस सामग्री का सुझाव देती हैं जिसमें आपकी रुचि हो सकती है। आपकी गोपनीयता को हर समय सुरक्षित रखा जाएगा। अधिक जानकारी के लिए, कृपया निम्न देखें:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI विज्ञापन प्लेटफ़ॉर्म Huawei Mobile Services और तृतीय-पक्ष ऐप्स के लिए विज्ञापन सेवाएँ प्रदान करता है। अगर वैयक्तिकृत विज्ञापन सक्षम किए जाते हैं, तो आपके व्यक्तिगत डेटा का उपयोग आपको अधिक प्रासंगिक और उपयोगी विज्ञापन प्रदान करने के लिए किया जा सकता है। अपने अधिकारों और आपके डेटा का उपयोग किस प्रकार किया जाता है इसके बारे में अधिक जानने के लिए, कृपया %1$s का संदर्भ लें।"</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI विज्ञापन प्लेटफ़ॉर्म Huawei Mobile Services और तृतीय-पक्ष ऐप्स के लिए विज्ञापन सेवाएँ प्रदान करता है। यदि वैयक्तिकृत विज्ञापन सक्षम किए गए हैं, तो आपके व्यक्तिगत डेटा का उपयोग आपको अधिक प्रासंगिक और उपयोगी विज्ञापन प्रदान करने के लिए किया जा सकता है। आपका डेटा कैसे उपयोग किया जाता है और अपने अधिकारों के बारे में अधिक जानने के लिए, कृपया निम्न देखें:"</string>
+    <string name="opendevice_setting_network" priority="LT">"नेटवर्क सेटिंग्स"</string>
+    <string name="opendevice_title_oaid" priority="LT">"डिवाइस पहचानकर्ता"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID के बारे में"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"विज्ञापन-ID सांख्यिकीय विश्लेषण के बारे में कथन"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"विज्ञापन जानकारी"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"रोकें"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"चलाएं"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" क्लिपबोर्ड पर कॉपी किया गया."</string>
+    <string name="s1">इमेज सेव करें</string>
+    <string name="s2">विज्ञापन को तस्वीर गैलरी में इमेज सेव करने का अनुमति देना चाहते हैं?</string>
+    <string name="s3">मंज़ूरी दें</string>
+    <string name="s4">खारिज करें</string>
+    <string name="s5">कैलेंडर इवेंट बनाएं</string>
+    <string name="s6">विज्ञापन को कैलेंडर इवेंट बनाने दें?</string>
+    <string name="s7">जाँच विज्ञापन</string>
+    <string msgid="730395136688082741" name="search_menu_title">"खोजें"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"अगले आइटम पर जाएं"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"पिछले आइटम पर जाएं"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="tt_00_00">00:00</string>
+    <string name="tt_ad">विज्ञापन</string>
+    <string name="tt_ad_clicked_text">विज्ञापन पर क्लिक किया गया</string>
+    <string name="tt_ad_close_text">विज्ञापन बंद किया गया</string>
+    <string name="tt_ad_data_error">Response data error</string>
+    <string name="tt_ad_is_closed">विज्ञापन बंद</string>
+    <string name="tt_ad_logo_txt">AD</string>
+    <string name="tt_ad_showed_text">विज्ञापन दिखाया गया</string>
+    <string name="tt_adslot_empty">No request ad slot</string>
+    <string name="tt_adslot_id_error">Illegal ad slot id</string>
+    <string name="tt_adslot_size_empty">Empty ad slot size</string>
+    <string name="tt_adtype_not_match_rit">Ad slot id error</string>
+    <string name="tt_app_empty">No request app</string>
+    <string name="tt_app_name">tt_open_ad_sdk</string>
+    <string name="tt_auto_play_cancel_text">रद्द करें</string>
+    <string name="tt_banner_ad_load_image_error">Banner loading failed</string>
+    <string name="tt_cancel">रद्द करें</string>
+    <string name="tt_choose_language">hi</string>
+    <string name="tt_click_to_replay">देखना जारी रखें</string>
+    <string name="tt_comment_num">%1$s रेटिंग</string>
+    <string name="tt_comment_num_backup">%1$s रेटिंग</string>
+    <string name="tt_comment_score">मूल्यांकन</string>
+    <string name="tt_confirm_download">आप वाई-फ़ाई नेटवर्क से कनेक्ट नहीं है. क्या आप वाकई डाउनलोड करना चाहते हैं?</string>
+    <string name="tt_confirm_download_have_app_name">%s ऐप डाउनलोड करने की तैयारी की जा रही है</string>
+    <string name="tt_content_type">Http content type error</string>
+    <string name="tt_count_down_view">छोड़ें</string>
+    <string name="tt_dislike_header_tv_back">वापस जाएँ</string>
+    <string name="tt_dislike_header_tv_title">चुनें</string>
+    <string name="tt_error_access_method_pass">Illegal access method</string>
+    <string name="tt_error_ad_type">Illegal ad type</string>
+    <string name="tt_error_adtype_differ">Ad type error</string>
+    <string name="tt_error_apk_sign_check_error">Illegal apk sha1 value</string>
+    <string name="tt_error_code_adcount_error">Incorrect number of ad</string>
+    <string name="tt_error_code_click_event_error">Click event error</string>
+    <string name="tt_error_image_size">Illegal image size</string>
+    <string name="tt_error_media_id">Illegal media id</string>
+    <string name="tt_error_media_type">Illegal media type</string>
+    <string name="tt_error_new_register_limit">New ad slot exceeded daily request limit</string>
+    <string name="tt_error_origin_ad_error">Origin type error</string>
+    <string name="tt_error_package_name">Package name error</string>
+    <string name="tt_error_redirect">Redirect error</string>
+    <string name="tt_error_request_invalid">Invalid request</string>
+    <string name="tt_error_slot_id_app_id_differ">SlotId and AppId match error</string>
+    <string name="tt_error_splash_ad_type">Splash ad type error</string>
+    <string name="tt_error_union_os_error">Os type error</string>
+    <string name="tt_error_union_sdk_too_old">Sdk version too low</string>
+    <string name="tt_error_unknow">Unknown error</string>
+    <string name="tt_error_verify_reward">Reward verify error</string>
+    <string name="tt_feedback_experience_text">हम आपको बेहतर विज्ञापन अनुभव देने की कोशिश करते रहेंगे</string>
+    <string name="tt_feedback_submit_text">आप पहले ही फ़ीडबैक सबमिट कर चुके हैं.कृपया एक से अधिक बार न  सबमिट करें!</string>
+    <string name="tt_feedback_thank_text">आपके फ़ीडबैक के लिए धन्यवाद!</string>
+    <string name="tt_frequent_call_erroe">Ad requests are too frequent</string>
+    <string name="tt_full_screen_skip_tx">छोड़ें</string>
+    <string name="tt_get_reward">रिवॉर्ड दिया गया</string>
+    <string name="tt_insert_ad_load_image_error">Interstitial loading failed</string>
+    <string name="tt_label_cancel">रद्द करें</string>
+    <string name="tt_label_ok">ठीक</string>
+    <string name="tt_load_creative_icon_error">Icon loading failed</string>
+    <string name="tt_load_creative_icon_response_error">Icon loading error</string>
+    <string name="tt_load_failed_text">विज्ञापन लोड नहीं किया जा सका</string>
+    <string name="tt_load_success_text">विज्ञापन सफलतापूर्वक लोड किया गया</string>
+    <string name="tt_msgPlayable">रिवॉर्ड्स का दावा करने के लिए पूरा देखें</string>
+    <string name="tt_negtiveBtnBtnText">रिवॉर्ड्स छोड़ें</string>
+    <string name="tt_negtive_txt">रद्द करें</string>
+    <string name="tt_net_error">Network error</string>
+    <string name="tt_no_ad">No ad</string>
+    <string name="tt_no_ad_parse">Parsing data without ad</string>
+    <string name="tt_no_network">नेटवर्क कनेक्शन मौजूद नहीं, कृपया बाद में फिर से कोशिश करें.</string>
+    <string name="tt_parse_fail">Parsing error</string>
+    <string name="tt_permission_denied">आपने आवश्यक अनुमतियाँ अक्षम कर दी हैं. कृपया उन्हें सक्षम करें.</string>
+    <string name="tt_postiveBtnText">देखते रहें</string>
+    <string name="tt_postiveBtnTextPlayable">देखना जारी रखें</string>
+    <string name="tt_postive_txt">ठीक</string>
+    <string name="tt_reder_ad_load_timeout">Template loading timeout</string>
+    <string name="tt_render_diff_template_invalid">Template diff invalid</string>
+    <string name="tt_render_fail_meta_invalid">Template invalid</string>
+    <string name="tt_render_fail_template_parse_error">Template parsing error</string>
+    <string name="tt_render_fail_timeout">Render timeout</string>
+    <string name="tt_render_fail_unknown">Render failed unknown</string>
+    <string name="tt_render_main_template_invalid">Main template invalid</string>
+    <string name="tt_render_render_parse_error">Render parsing failed</string>
+    <string name="tt_request_body_error">Request entity is empty</string>
+    <string name="tt_request_pb_error">Http request pb error</string>
+    <string name="tt_request_permission_descript_external_storage">स्टोरेज़</string>
+    <string name="tt_request_permission_descript_location">स्थान</string>
+    <string name="tt_request_permission_descript_read_phone_state">फ़ोन</string>
+    <string name="tt_reward_feedback">फ़ीडबैक</string>
+    <string name="tt_reward_msg">रिवॉर्ड्स पाने के लिए पूरा वीडियो देखें</string>
+    <string name="tt_reward_screen_skip_tx">छोड़ें</string>
+    <string name="tt_reward_video_show_error">रिवॉर्ड वीडियो डिस्प्ले गड़बड़ी</string>
+    <string name="tt_ror_code_show_event_error">Show event error</string>
+    <string name="tt_skip_ad_time_text">%ds सेकंड के बाद छोड़ दें</string>
+    <string name="tt_splash_ad_load_image_error">Splash loading failed</string>
+    <string name="tt_splash_cache_expired_error">Cache expired</string>
+    <string name="tt_splash_cache_parse_error">Cache parsing failed</string>
+    <string name="tt_splash_not_have_cache_error">No splash cache</string>
+    <string name="tt_splash_skip_tv">3 सेकंड | छोड़ें</string>
+    <string name="tt_sys_error">System error</string>
+    <string name="tt_tip">प्रॉम्प्ट</string>
+    <string name="tt_toast_ad_on_rewarded">Ad on rewarded</string>
+    <string name="tt_toast_later_download">Download later</string>
+    <string name="tt_toast_no_ad">No Ad to Show, Please Load Ad</string>
+    <string name="tt_toast_start_loading">Start Loading</string>
+    <string name="tt_toast_tiktok_ad_failed">TikTok Ad Failed to load, error code is:</string>
+    <string name="tt_try_now">अब कोशिश करो</string>
+    <string name="tt_txt_skip">छोड़ें</string>
+    <string name="tt_unlike">रुचि नहीं</string>
+    <string name="tt_video_bytesize">डेटा</string>
+    <string name="tt_video_bytesize_M">M</string>
+    <string name="tt_video_bytesize_MB">MB</string>
+    <string name="tt_video_continue_play">देखना जारी रखें</string>
+    <string name="tt_video_dial_phone">अभी कॉल करें</string>
+    <string name="tt_video_download_apk">डाउनलोड करें</string>
+    <string name="tt_video_mobile_go_detail">देखें</string>
+    <string name="tt_video_retry_des">लोड नहीं किया जा सका. फिर से कोशिश करने के लिए क्लिक करें</string>
+    <string name="tt_video_retry_des_txt">लोड नहीं किया जा सका. कृपया फिर से कोशिश करें.</string>
+    <string name="tt_video_without_wifi_tips">इस सामग्री को चलाने पर %.2f MB डेटा का इस्तेमाल होगा</string>
+    <string name="tt_wap_empty">No request wap</string>
+    <string name="tt_web_title_default">विज्ञापन</string>
+    <string name="tt_will_play">वीडियो चलाया जाने वाला है</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"बंद"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"चालू"</string>
+    <string name="yes_i_agree">हाँ, मैं सहमत हूँ</string>
+</resources>

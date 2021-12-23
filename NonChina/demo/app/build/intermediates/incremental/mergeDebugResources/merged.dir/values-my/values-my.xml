@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"ဝင်းဒိုးသည် %1$s စက္ကန့်အကြာတွင် ပိတ်သွားပါလိမ့်မည်။"</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="other">"ကြော်ငြာကို %ds အကြာတွင် ပိတ်နိုင်ပါသည်"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="other">"ရွေးချယ်မှုအား %1$s ရက်ကြာ မှတ်ထားရန်"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="other">"%ds အကြာတွင် ဆုရယူရန်"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="other">"ဆု ရယူရန် %d စက္ကန့်စာ စောင့်ကြည့်ပါ။"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d စက္ကန့်"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"တစ်ခုမျှမဟုတ်"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"အပုဒ်‌ရေ <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"သီချင်း"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"ပုံမှန်"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"ဗီဒီယို အမြန်နှုန်း"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"ပိတ်ထားသည်"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"အပုဒ်ရေ <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"အပုဒ်ရေ <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"မူလနေရာကို ပြန်သွားရန်"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"အပေါ်သို့ ရွှေ့ရန်"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"နောက်ထပ် ရွေးစရာများ"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"ပြီးပြီ"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"အားလုံး ကြည့်ရန်"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"အက်ပ်တစ်ခုကို ရွေးရန်"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ပိတ်ရန်"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ဖွင့်ရန်"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"ရှာဖွေရန်…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ရှာဖွေမှုကို ဖယ်ရှားရန်"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"ရှာဖွေရန် မေးခွန်း"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"ရှာရန်"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ရှာဖွေစရာ အချက်အလက်ကို ပေးပို့ရန်"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"အသံဖြင့် ရှာရန်"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"နှင့် မျှဝေရန်"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> ဖြင့် မျှဝေရန်"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"လျှော့ပြရန်"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"ဖွင့်ရန်"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Google Play ဝန်ဆောင်မှုများကို မဖွင့်သ၍ <ns1:g id="APP_NAME">%1$s</ns1:g> သည်အလုပ်လုပ်မည်မဟုတ်ပါ။"</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play ဝန်ဆောင်မှုများ ဖွင့်ရန်"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"ထည့်သွင်းပါ"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"သင့်တက်ဘလက်တွင် Google Play ဝန်ဆောင်မှုများမရှိသောကြောင့် <ns1:g id="APP_NAME">%1$s</ns1:g> ကိုဖွင့်၍မရပါ။"</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play ဝန်ဆောင်မှုများရယူရန်"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play ဝန်ဆောင်မှုများ ရရှိနိုင်သည်"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play ဝန်ဆောင်မှုများ အမှား"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> သည် Google Play ဝန်ဆောင်မှုများနှင့် ပြဿနာအနည်းငယ် ရှိနေပါသည်။ ထပ်လုပ်ကြည့်ပါ။"</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Google Play ဝန်ဆောင်မှုများကို သင့်စက်ပစ္စည်းတွင် ပံ့ပိုးမထားသည့်အတွက် ၎င်းမရှိဘဲ <ns1:g id="APP_NAME">%1$s</ns1:g> ကို ဖွင့်၍မရပါ။"</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"အပ်ဒိတ်"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Google Play ဝန်ဆောင်မှုများအား အပ်ဒိတ်မလုပ်ပါက <ns1:g id="APP_NAME">%1$s</ns1:g> အလုပ်လုပ်မည် မဟုတ်ပါ။"</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play ဝန်ဆောင်မှုများကို အပ်ဒိတ်လုပ်ရန်"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Google Play ဝန်ဆောင်မှုများကို လက်ရှိအပ်ဒိတ်လုပ်နေသောကြောင့် <ns1:g id="APP_NAME">%1$s</ns1:g> ကိုဖွင့်၍ရမည်မဟုတ်ပါ။"</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play ဝန်ဆောင်မှုဗားရှင်းအသစ်များ လိုအပ်နေသည်။ အချိန်အနည်းငယ်အကြာတွင် ၎င်းကိုယ်တိုင်အပ်ဒိတ်လုပ်ပါ လိမ့်မည်။"</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"ဖုန်းပေါ်မှာ ဖွင့်ပါ"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"လက်မှတ်ထိုး ဝင်ရန်"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google ဖြင့် လက်မှတ်ထိုးဝင်ရေ"</string>
+    <string msgid="3209159573327985035" name="copy">"မိတ္တူကူးရန်"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"ယခုဖွင့်ထားသော"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"အဆင့်မြင့်"</string>
+    <string name="hiad_ad_label" priority="LT">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"ကြော်ငြာ"</string>
+    <string name="hiad_app_detail_version" priority="translator">"ဗားၡင်း %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s အား ထည့်သွင်းထားပြီးပါပြီ။"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ထည့်သွင်းမှု ပြီးဆုံးပါပြီ။ ဖွင့်ရန် နှိပ်ပါ။"</string>
+    <string name="hiad_app_permission" priority="LT">"ခွင့်ပြုချက်များ"</string>
+    <string name="hiad_calender_add" priority="LT">"အိုကေ"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"ဤပွဲစဉ်ဖြစ်ရပ်သည် ရှိနေပြီး ဖြစ်ပါသည်။"</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"ဤပွဲစဉ်ဖြစ်ရပ်ကို သင့်ပြက္ခဒိန်တွင် ပေါင်းထည့်မည်လား။"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"ပွဲစဉ်ဖြစ်ရပ်ကို ပေါင်းထည့်၍ မရနိုင်ပါ။"</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"ပွဲစဉ်ဖြစ်ရပ် ပေါင်းထည့်ပြီး။"</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"ဤပွဲစဉ်ဖြစ်ရပ်ကို သင့်ပြက္ခဒိန်မှ ဖျက်ပစ်မည်လား။"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"ပွဲစဉ်ဖြစ်ရပ်ကို ဖျက်၍ မရနိုင်ပါ။"</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"ပွဲစဉ်ဖြစ်ရပ် ဖျက်ပစ်ပြီး။"</string>
+    <string name="hiad_calender_delete" priority="LT">"ဖျက်ရန်"</string>
+    <string name="hiad_calender_description_new" priority="LT">"ပြက္ခဒိန် သတိပေးချက် ထုတ်ရန် သို့မဟုတ် သင်ပါဝင်ရန် စီစဉ်ထားသည့် ပရိုမိုးရှင်း လှုပ်ရှားမှုများအတွက် ပွဲစဉ်များ ဖန်တီးရန် ဤသည်ကို သုံးပါသည်။"</string>
+    <string name="hiad_calender_dialog" priority="LT">"မှတ်ချက်"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"ဤအက်ပ်သည် ပြက္ခဒိန် ပွဲစဉ်ဖြစ်ရပ်များကို ဖန်တီးရန် ပြက္ခဒိန် ခွင့်ပြုချက် လိုအပ်ပါသည်။ ဤခွင့်ပြုချက်ကို ဆက်တင်တွင် ခွင့်ပြုပေးနိုင်ပါသည်။"</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"ဤအက်ပ်သည် ပြက္ခဒိန် ပွဲစဉ်ဖြစ်ရပ်များကို ဖျက်ရန် ပြက္ခဒိန် ခွင့်ပြုချက် လိုအပ်ပါသည်။ ဤခွင့်ပြုချက်ကို ဆက်တင်တွင် ခွင့်ပြုပေးနိုင်ပါသည်။"</string>
+    <string name="hiad_calender_permission_description" priority="LT">"ပြက္ခဒိန် သတိပေးချက် ဖန်တီးရန် ဤသည်ကို သုံးပါသည်၊ သို့မှသာ ပွဲစဉ်ဖြစ်ရပ်များအတွက် သတိပေးချက်များ သတ်မှတ်ပြီး လက်ခံရရှိနိုင်မည် ဖြစ်ပါသည်။"</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"ခွင့်ပြုချက် လိုအပ်ပါသည်"</string>
+    <string name="hiad_calender_set" priority="LT">"ဆက်တင်"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"AR တုံ့ပြန်မှု ဝန်ဆောင်မှုများအတွက် ဤသည်ကို သုံးပါသည်။"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ကြော်ငြာ ဝှက်ထားပြီး"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"စိတ်မဝင်စား"</string>
+    <string name="hiad_choices_hide" priority="LT">"ကြော်ငြာ ဝှက်ရန်"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"အဘယ်ကြောင့် ဤကြော်ငြာကို မြင်ရသနည်း။"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"ပြန်ကြိုးစားရန်"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ဤအက်ပ်ကို ထည့်သွင်းမည်လား။"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"မိုဘိုင်း ကွန်ရက်အား အသုံးပြုခြင်းဖြင့် ဒေတာ ပမာဏ %1$s ကို သုံးစွဲသွားပါလိမ့်မည်။ ဆက်လက် လုပ်ဆောင်မည်လား။"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ပြန်ဖွင့်မှုအတွက် မိုဘိုင်းဒေတာအား သုံးပါလိမ့်မည်။ ဆက်လက် လုပ်ဆောင်မည်လား။"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="translator">"မိုဘိုင်းချိတ်ဆက်မှု သုံးနေပါသည်။ ကြည့်ရှုခြင်းဖြင့် မိုဘိုင်းဒေတာ %1$s ကို သုံးစွဲသွားပါလိမ့်မည်။"</string>
+    <string name="hiad_continue_download" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ဆက်လုပ်မည်"</string>
+    <string name="hiad_copy_link" priority="LT">"လင့်ခ်အား ကူးရန်"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"အက်ပ်"</string>
+    <string name="hiad_default_skip_text" priority="LT">"ကျော်မည်"</string>
+    <string name="hiad_default_skip_text_time" priority="translator">"%d အကြာတွင် ကျော်ရန်"</string>
+    <string name="hiad_detail" priority="LT">"အသေးစိတ် အချက်အလက်များ"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ပယ်ဖျက်မည်"</string>
+    <string name="hiad_dialog_close" priority="LT">"အိုကေ"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"သဘောပေါက်ပါပြီ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ကို ထည့်သွင်းရန် %1$s ကို ခွင့်ပြုမည်လား။"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"အရင်းအမြစ်- %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_open" priority="LT">"ဖွင့်မည်"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ခွင့်မပြုပါ"</string>
+    <string name="hiad_dialog_title" priority="LT">"မိုဘိုင်းဒေတာ သုံး၍ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"မှတ်ချက်"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"မိုဘိုင်းဒေတာ သုံး၍ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_download_download" priority="translator">"ထည့်သွင်းမည်"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ဒေါင်းလုဒ် (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"ဒေါင်းလုဒ်လုပ်နေဆဲ"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s အား ဒေါင်းလုဒ်လုပ်နေစဉ် ချို့ယွင်းချက် ရှိခဲ့ပါသည်။"</string>
+    <string name="hiad_download_file_corrupted" priority="LT">"ဖိုင် ပျက်နေပါသည်။ ဒေါင်းလုဒ် ထပ်ဆွဲပေးပါ။"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ဖိုင် ရှိမနေပါ။ ကျေးဇူးပြု၍ ထပ်မံ ကြိုးစားပါ။"</string>
+    <string name="hiad_download_install" priority="LT">"ထည့်သွင်းမည်"</string>
+    <string name="hiad_download_installing" priority="LT">"ထည့်သွင်းနေဆဲ"</string>
+    <string name="hiad_download_no_space" priority="LT">"သိုလှောင်မှုနေရာ မလုံလောက်ပါ။ နေရာလွတ် ရရှိစေရန် အချို့ဖိုင်များအား ရှင်းပစ်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။"</string>
+    <string name="hiad_download_open" priority="LT">"ဖွင့်မည်"</string>
+    <string name="hiad_download_resume" priority="LT">"ဆက်လုပ်မည်"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s အား ဒေါင်းလုဒ်လုပ်နေစဉ် ချို့ယွင်းချက် ရှိခဲ့ပါသည်။ ဒေါင်းလုဒ် လုပ်ဆောင်မှုအား အစမှ ပြန်စပါလိမ့်မည်။"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"လက်ရှိကာလတွင် သင်သည် Wi-Fi ချိတ်ဆက်ထားမှု မရှိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်း ဒေတာ %1$s ပမာဏကို သုံးစွဲရပါလိမ့်မည်။ မည်သို့ပင်ဖြစ်စေ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"လက်ၡိကာလတွင် သင်သည် WLAN ချိတ်ဆက်ထားမှု မၡိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်း ဒေတာ %1$s ပမာဏကို သုံးစွဲရပါလိမ့်မည်။ မည်သို့ပင်ဖြစ်စေ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_go_to_settings" priority="LT">"ဆက်တင်"</string>
+    <string name="hiad_install_completed" priority="LT">"လုပ်ပြီးပြီ"</string>
+    <string name="hiad_installed_description" priority="translator">"ထည့်သွင်းမှု အောင်မြင်ပါသည်။ ဖွင့်ရန် နှိပ်ပါ။"</string>
+    <string name="hiad_jump_desc" priority="translator">"အသေးစိတ် ကြည့်ရန် သို့မဟုတ် အက်ပ်သို့ သွားရန်"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ဤပေ့ခ်ျသည် %1$s အား ဖွင့်လိုပါသည်။"</string>
+    <string name="hiad_link_already_copied" priority="LT">"လင့်ခ် ကူးပြီး။"</string>
+    <string name="hiad_loading_tips" priority="LT">"လုပ်ဆောင်နေဆဲ..."</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ဤဒေါင်းလုဒ်လုပ်ဆောင်မှုသည် မိုဘိုင်းဒေတာ %1$s ကို သုံးစွဲသွားပါလိမ့်မည်။"</string>
+    <string name="hiad_net_error" priority="LT">"ကွန်ရက် ချိတ်ဆက်မှု ချို့ယွင်းချက်။ ကျေးဇူးပြု၍ ထပ်မံ ကြိုးစားပါ။"</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"အင်တာနက် ချိတ်ဆက်မှု မရှိပါ။ ချိတ်ဆက်ပြီး ထပ်မံ ကြိုးစားကြည့်ပါ။"</string>
+    <string name="hiad_network_error" priority="LT">"ကွန်ရက် ချိတ်ဆက်မှု ချို့ယွင်းချက်။"</string>
+    <string name="hiad_network_no_available" priority="LT">"အင်တာနက် ချိတ်ဆက်မှု မရှိပါ။ ကျေးဇူးပြု၍ သင့်ကွန်ရက်ဆက်တင်ကို စစ်ဆေးပါ။"</string>
+    <string name="hiad_no_more_remind" priority="LT">"နောက်ထပ် သတိမပေးပါနှင့်"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi ချိတ်ဆက်မှု မရှိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်းဒေတာကို သုံးစွဲသွားပါလိမ့်မည်။ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN ချိတ်ဆက်မှု မရှိပါ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်းဒေတာကို သုံးစွဲသွားပါလိမ့်မည်။ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ဘရောက်ဇာတွင် ဖွင့်ရန်"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ပေ့ခ်ျအား ဖွင့်၍ မရပါ။ ကျေးဇူးပြု၍ ထပ်မံ ကြိုးစားပါ။"</string>
+    <string name="hiad_permission_camera" priority="LT">"ဤလုပ်ဆောင်ချက်သည် ကင်မရာ ခွင့်ပြုချက် ရရန် လိုအပ်ပါသည်။ ၎င်းအား ဆက်တင်တွင် ခွင့်ပြုပေးနိုင်ပါသည်။"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s သည် ဖော်ပြပါ ခွင့်ပြုချက်များ လိုအပ်ပါသည်-"</string>
+    <string name="hiad_preorder_download" priority="LT">"အကြိုအော်ဒါ"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi အား စောင့်ရန်"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"မိုဘိုင်းကွန်ရက်မှတစ်ဆင့် ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN အား စောင့်ရန်"</string>
+    <string name="hiad_privacy_policy" priority="LT">"ကိုယ်ရေးအချက်အလက် လုံခြုံရေး"</string>
+    <string name="hiad_refresh" priority="LT">"ပြန်လည်လုပ်ဆောင်ရန်"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d MB အထက် အက်ပ်"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"မလုပ်ပါ"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"ဖန်တီးသူ- %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"ဗားရှင်း %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="translator">"ကျော်မည်"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"ဆက်ကြည့်မည်"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ဆုရယူရန် ဤကြော်ငြာကို အပြီးကြည့်ပေးပါ။"</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"တည်နေရာ အခြေပြု ကြော်ငြာများ"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"ဝက်ဘ်ဆိုက်/အက်ပ်ကို ဖွင့်ရန် နှိပ်ပါ"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"အက်ပ် ဒေါင်းလုဒ်လုပ်နေပါသည်။"</string>
+    <string name="hiad_swipe_screen" priority="translator">"အပေါ်သို့ ပွတ်ဆွဲရန်"</string>
+    <string name="hiad_twist_screen" priority="translator">"ဖုန်းကို လှုပ်ရန်"</string>
+    <string name="hiad_whether_download" priority="LT">"ဤအက်ပ်အား ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_wifi_loaded_already" priority="LT">"Wi-Fi မှတစ်ဆင့် ကြိုတင် ထည့်သွင်းလုပ်ဆောင်ပြီး"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ကြိုတင်ထည့်သွင်းပြီး"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"နောက်သို့"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"စာတန်းထိုးကို ပိတ်ထားသည်။ ၎င်းကိုကြည့်ရန် နှိပ်ပါ။"</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"စာတန်းထိုးကို ဖွင့်ထားသည်။ ၎င်းကိုဝှက်ရန် နှိပ်ပါ။"</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"အရှေ့သို့ စက္ကန့် ၃၀ ရစ်ရန်"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"မျက်နှာပြင်အပြည့်"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"အမည်မသိ အနုပညာရှင်"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"အမည်မသိ သီချင်းခေါင်းစဉ်"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"နောက်တစ်ခု"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"ဗီဒီယိုခေါင်းစဉ်ကို မသိပါ"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"ယခင်ခလုတ်စာရင်းသို့ ပြန်သွားရန်"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"နောက်ထပ်ခလုတ်များကို ကြည့်ရန်"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"ခဏရပ်ရန်"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"ဖွင့်ရန်"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"သင်တောင်းဆိုထားသည့်အရာကို ဖွင့်၍မရပါ"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"ပြီးခဲ့သည့်တစ်ခု"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"ပြန်ဖွင့်ရန်"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"နောက်သို့ ၁၀ စက္ကန့် ပြန်ရစ်ရန်"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"သီချင်းဖွင့်မှု အနေအထား"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"ဆက်တင်များ"</string>
+    <string name="no_browser_tips" priority="LT">"ဘရောက်ဇာအက်ပ်တစ်ခုကို ဦးစွာထည့်သွင်းပါ။"</string>
+    <string msgid="478774118347071097" name="not_set">"သတ်မှတ်မထားပါ"</string>
+    <string name="offline_notification_text">ကြော်ငြာဖွင့်ရန် တို့ပါ</string>
+    <string name="offline_notification_title">သင်အော့ဖ်လိုင်းရှိနေစဉ်တွင် သိမ်းထားခဲ့သော ကြော်ငြာကို ကြည့်ရှုပါ</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">သင်အွန်လိုင်းပြန်တက်သည့်အခါ လင့်ခ်ပါသော အကြောင်းအကြားချက်တစ်ခု ရရှိပါမည်</string>
+    <string name="offline_opt_in_decline">မလိုပါ</string>
+    <string name="offline_opt_in_message">ကြော်ငြာရှင်၏ဆိုက်သို့သွားသော လင့်ခ်တစ်ခုနှင့်အတူ အကြောင်းကြားချက်တစ်ခုကို ကျွန်ုပ်တို့ပို့ပေးပါမည်။</string>
+    <string name="offline_opt_in_title">သင်အွန်လိုင်းပြန်တက်သည့်အခါ ကြော်ငြာဖွင့်ပါ။</string>
+    <string name="opendevice_ad_info" priority="LT">"ကြော်ငြာ အချက်အလက်"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Ads နှင့် ကိုယ်ရေးအချက်အလက် လုံခြုံရေးအကြောင်း ထုတ်ပြန်ချက်"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"ကြော်ငြာသူ အားလုံး"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"မလုပ်ပါ"</string>
+    <string name="opendevice_bt_reset" priority="LT">"ပြန်လည် သတ်မှတ်မည်"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Ad-ID အသစ်ကို ကျပန်း သတ်မှတ်သွားပါလိမ့်မည်။"</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Ad-ID ပြန်သတ်မှတ်ရန်"</string>
+    <string name="opendevice_here" priority="LT">"ဤနေရာ"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"ကြော်ငြာများနှင့် ကိုယ်ရေးအချက်အလက် လုံခြုံရေး"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Ads"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"သင့် Ad-ID ကို သုံးသည့် သင့်အကြိုက်နှင့် ကိုက်ညီမည့် ကြော်ငြာများကို လက်ခံရရှိနေမှုမှ ဖယ်ရှားနိုင်ပါသည်။ ဖယ်ရှားလိုက်ပါက ကြော်ငြာများကို ဆက်လက်ရရှိနေမည် ဖြစ်သော်လည်း သင်နှင့် ကိုက်ညီမှု နည်းသွားပါလိမ့်မည်။ %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"ဒေတာ သုံးစွဲမှုနှင့် သင့်လုပ်ပိုင်ခွင့်များအကြောင်း ပိုမိုလေ့လာရန်"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Ad-ID အချက်အလက် စုဆောင်းမှုကို ပိတ်ရန်"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများ တိုးတက်လာစေရန် သင်၏ ကြော်ငြာ ID ကို အသုံးပြုသော အက်ပ်များအကြောင်းနှင့် ဤဆက်တင်များအတွင်းတွင်ရှိသော သင်၏မျက်နှာပြင်ပေါ်ရှိ လုပ်ဆောင်ချက်များအကြောင်း အချက်အလက်များကို စုဆောင်းသွားပါမည်။ ဤဒေတာများကို ကျွန်ုပ်တို့ အသုံးပြုပုံနှင့် ပတ်သက်သည့် နောက်ထပ် အချက်အလက်များကို သိရှိရန် %1$s ကို နှိပ်ပါ။"</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"ကျွန်ုပ်တို့၏ ဝန်ဆောင်မှုများကို ပိုမိုကောင်းမွန်အောင် မွမ်းမံနိုင်ရန် ဤဆက်တင်ရှိ သင့်စက်မျက်နှာပြင်ပေါ်မှ လုပ်ဆောင်မှုများနှင့် သင့် Ad-ID ကို သုံးစွဲသည့် အက်ပ်များအကြောင်း အချက်အလက်များကို စုဆောင်းသွားပါမည်။"</string>
+    <string name="opendevice_item_more_settings" priority="LT">"နောက်ထပ် အချက်အလက်များ"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"သင့် Ad-ID (OAID ဟုလည်း ခေါ်သည်) သည် သင့်အကြိုက်နှင့် ကိုက်ညီသည့် ကြော်ငြာများကို ပံ့ပိုးပေးရန်အတွက် သုံးစွဲသည့် ယာယီ စက်အိုင်ဒီ ဖြစ်ပါသည်။"</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Ad-ID ပြန်သတ်မှတ်ရန်"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"သင့် Ad-ID ကို သုံးသည့် သင့်အကြိုက်နှင့် ကိုက်ညီမည့် ကြော်ငြာများကို လက်ခံရရှိနေမှုမှ ဖယ်ရှားနိုင်ပါသည်။ ဖယ်ရှားလိုက်ပါက ကြော်ငြာများကို ဆက်လက်ရရှိနေမည် ဖြစ်သော်လည်း သင်နှင့် ကိုက်ညီမှု နည်းသွားပါလိမ့်မည်။"</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"သင့် Ad-ID ကို သုံးသည့် သင့်အကြိုက်နှင့် ကိုက်ညီမည့် ကြော်ငြာများကို လက်ခံရရှိနေမှုမှ ဖယ်ရှားနိုင်ပါသည်။ ဖယ်ရှားလိုက်ပါက ကြော်ငြာများကို ဆက်လက်ရရှိနေမည် ဖြစ်သော်လည်း သင်နှင့် ကိုက်ညီမှု နည်းသွားပါလိမ့်မည်။"</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"သင့် Ad-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"သင့် Ad-ID (OAID ဟုလည်း ခေါ်သည်) သည် သင့်အကြိုက်နှင့် ကိုက်ညီသည့် ကြော်ငြာများကို ပံ့ပိုးပေးရန်အတွက် သုံးစွဲသည့် ယာယီ စက်အိုင်ဒီ ဖြစ်ပါသည်။ နောက်ထပ် အချက်အလက်များအတွက် %1$s ကို နှိပ်ပါ။"</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"တစ်ဦးချင်းအကြိုက်နှင့် ကိုက်ညီသည့် ကြော်ငြာများကို ပိတ်ခြင်း"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"နောက်ထပ် လေ့လာရန်"</string>
+    <string name="opendevice_network_no_available" priority="LT">"အင်တာနက် ချိတ်ဆက်မှု မရှိပါ"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"တစ်ဦးချင်းအကြိုက်နှင့် ကိုက်ညီသည့် ကြော်ငြာဝန်ဆောင်မှုများသည် သင်စိတ်ဝင်စားနိုင်မည့် အကြောင်းအရာများကို အကြံပြုပေးပါသည်။ သင့်ကိုယ်ရေးအချက်အလက်များကို အချိန်တိုင်း ကာကွယ်ပေးသွားပါမည်။ နောက်ထပ် အသေးစိတ်များအတွက် %1$s ကို လေ့လာကြည့်ပါ။"</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"တစ်ဦးချင်းအကြိုက်နှင့် ကိုက်ညီသည့် ကြော်ငြာဝန်ဆောင်မှုများသည် သင်စိတ်ဝင်စားနိုင်မည့် အကြောင်းအရာများကို အကြံပြုပေးပါသည်။ သင့်ကိုယ်ရေးအချက်အလက်များကို အချိန်တိုင်း ကာကွယ်ပေးသွားပါမည်။ နောက်ထပ် အချက်အလက်များအတွက် ဖော်ပြပါကို လေ့လာပေးပါ-"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI Ads ပလက်ဖောင်းသည် Huawei Mobile Services နှင့် ပြင်ပအဖွဲ့အစည်း အက်ပ်များအတွက် ကြော်ငြာဝန်ဆောင်မှုကို ပံ့ပိုးပေးပါသည်။ တစ်ဦးချင်းအလိုက် ကိုက်ညီမှုရှိသည့် ကြော်ငြာများကို ဖွင့်ထားပါက သင်နှင့် သက်ဆိုင်မည့် အသုံးဝင်သော ကြော်ငြာများကို ပံ့ပိုးပေးရန်အတွက် သင့်ကိုယ်ရေးဒေတာများကို သုံးသွားနိုင်ပါသည်။ သင့်ဒေတာများ သုံးစွဲပုံနှင့် သင့်လုပ်ပိုင်ခွင့်များအကြောင်း ပိုမိုလေ့လာနိုင်ရန် %1$s ကို ကိုးကားပေးပါ-"</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI Ads ပလက်ဖောင်းသည် Huawei Mobile Services နှင့် ပြင်ပအဖွဲ့အစည်း အက်ပ်များအတွက် ကြော်ငြာဝန်ဆောင်မှုကို ပံ့ပိုးပေးပါသည်။ တစ်ဦးချင်းအလိုက် ကိုက်ညီမှုရှိသည့် ကြော်ငြာများကို ဖွင့်ထားပါက သင်နှင့် သက်ဆိုင်မည့် အသုံးဝင်သော ကြော်ငြာများကို ပံ့ပိုးပေးရန်အတွက် သင့်ကိုယ်ရေးဒေတာများကို သုံးသွားနိုင်ပါသည်။ သင့်ဒေတာများ သုံးစွဲပုံနှင့် သင့်လုပ်ပိုင်ခွင့်များအကြောင်း ပိုမိုလေ့လာနိုင်ရန် ဖော်ပြပါကို ကိုးကားပေးပါ-"</string>
+    <string name="opendevice_setting_network" priority="LT">"ကွန်ရက် ဆက်တင်များ"</string>
+    <string name="opendevice_title_oaid" priority="LT">"စက် ခွဲခြားသိရှိမှု"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID အကြောင်း"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"ကြော်ငြာ ID ကိန်းဂဏန်းအချက်လက် ဆန်းစစ်ချက်အကြောင်း ကြေညာချက်"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"ကြော်ငြာ အချက်အလက်"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"ခေတ္တရပ်ရန်"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"ဖွင့်ရန်"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ကို ကလစ်ဘုတ်သို့ မိတ္တူကူးယူပြီးပါပြီ။"</string>
+    <string name="s1">ဓာတ်ပုံကို သိမ်းရန်</string>
+    <string name="s2">ကြော်ငြာအား ဓာတ်ပုံပြခန်းတွင် ပုံကိုသိမ်းဆည်းခွင့် ပြုလိုပါသလား။</string>
+    <string name="s3">လက်ခံရန်</string>
+    <string name="s4">ငြင်းပယ်ရန်</string>
+    <string name="s5">ပြက္ခဒိန်တွင် အစီအစဉ်ထည့်သွင်းရန်</string>
+    <string name="s6">ကြော်ငြာအား ပြက္ခဒိန်တွင် အစီအစဉ်ထည့်သွင်းခွင့် ပြုပါသလား။</string>
+    <string name="s7">စမ်းသပ်ကြော်ငြာ</string>
+    <string msgid="730395136688082741" name="search_menu_title">"ရှာဖွေမှု"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"နောက်တစ်ခုသို့ ကျော်ရန်"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"ပြီးခဲ့သည့်တစ်ခုသို့ ပြန်သွားရန်"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"၉၉၉+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>၊ <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ပိတ်ရန်"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ဖွင့်ရန်"</string>
+</resources>

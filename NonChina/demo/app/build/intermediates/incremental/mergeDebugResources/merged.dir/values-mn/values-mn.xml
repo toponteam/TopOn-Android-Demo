@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Цонх %1$s секундын дараа хаагдана."</item>
+        <item priority="translator" quantity="other">"Цонх %1$s секундын дараа хаагдана."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Зарыг %d секундийн дараа хааж болно"</item>
+        <item priority="translator" quantity="other">"Зарыг %d секундийн дараа хааж болно"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Сонголтыг %1$s хоног хадгалах"</item>
+        <item priority="Reviewed" quantity="other">"Сонголтыг %1$s хоног хадгалах"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"%d секундийн дараа шагналаа авна уу"</item>
+        <item priority="translator" quantity="other">"%d секундийн дараа шагналаа авна уу"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Шагнал авахын тулд %d секунд үзнэ үү."</item>
+        <item priority="translator" quantity="other">"Шагнал авахын тулд %d секунд үзнэ үү."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d секунд"</item>
+        <item priority="LT" quantity="other">"%1$d секунд"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Хоосон"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Бичлэг <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Аудио зам"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Хэвийн"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Дахин тоглуулах хурд"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Унтраалттай"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Бичлэг <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Бичлэг <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Нүүр хуудас уруу шилжих"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Дээш шилжих"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Бусад сонголт"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Болсон"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Бүгдийг харах"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Аппыг сонгох"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ИДЭВХГҮЙ"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ИДЭВХТЭЙ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"устгах"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"оруулах"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Функц+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Мета+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Шифт+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"зай"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Цэс+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Хайх…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Асуулга арилгах"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Хайх асуулга"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Хайх"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Асуулга илгээх"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Дуут хайлт"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Дараахтай хуваалцах"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-тай хуваалцах"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Буулгах"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Идэвхжүүлэх"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нь Google Play үйлчилгээг идэвхжүүлэх хүртэл ажиллахгүй."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play үйлчилгээг идэвхжүүлэх"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Суулгах"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Таны төхөөрөмжид Google Play үйлчилгээ байхгүй тул <ns1:g id="APP_NAME">%1$s</ns1:g> ажиллахгүй."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play үйлчилгээг авах"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Google Play-н үйлчилгээнүүдийн боломжит байдал"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Наадаан үйлчилгээний алдаа"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>-г Google Play-н үйлчилгээгээр ашиглахад асуудал гарлаа. Дахин оролдоно уу."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Таны төхөөрөмж Google Play үйлчилгээг дэмждэггүй учир <ns1:g id="APP_NAME">%1$s</ns1:g> ажиллахгүй."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Шинэчлэх"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нь таныг Google Play үйлчилгээнүүдийг шинэчлэхээс нааш ажиллахгүй."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play үйлчилгээг шинэчлэх"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нь одоогоор шинэчилж буй Google Play үйлчилгээгүйгээр ажиллахгүй."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Google Play үйлчилгээний шинэ хувилбар хэрэгтэй. Энэ нь удахгүй өөрөө өөрийгөө шинэчлэх болно."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Утсаар нээх"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Нэвтрэх"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Google-р нэвтрэх:"</string>
+    <string msgid="3209159573327985035" name="copy">"Хуулах"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Now playing"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Дэлгэрэнгүй"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="translator">"Зар"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Хувилбар %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s суулгагдлаа"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Суулгаж дууслаа. Дараад нээнэ үү."</string>
+    <string name="hiad_app_permission" priority="LT">"Зөвшөөрөл"</string>
+    <string name="hiad_calender_add" priority="LT">"ОК"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Арга хэмжээ аль хэдийн байна."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Хуанли дээрээ энэ арга хэмжээг нэмэх үү?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Арга хэмжээ нэмэх боломжгүй байна."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Арга хэмжээг нэмсэн."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Энэ арга хэмжээг хуанлигаасаа устгах уу?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Арга хэмжээг устгах боломжгүй байна."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Арга хэмжээ устсан."</string>
+    <string name="hiad_calender_delete" priority="LT">"Устгах"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Үүнийг хуанлийн сануулагч үүсгэх, эсвэл таны оролцохоор төлөвлөж буй сурталчилгааны арга хэмжээг үүсгэхэд ашиглана."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Нэмэлт мэдээлэл"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Энэ апликэйшн нь Хуанлийн үйл явдлыг үүсгэхийн тулд Хуанлийн зөвшөөрлийг шаардана. Та энэ зөвшөөрлийг Тохиргоо дээрээс олгох боломжтой."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Энэ апликэйшн нь Хуанлийн үйл явдлыг устгахын тулд Хуанлийн зөвшөөрлийг шаардана. Та энэ зөвшөөрлийг Тохиргоо дээрээс олгох боломжтой."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Хуанлийн сануулагч үүсгэхэд үүнийг ашиглана, ингэснээр та арга хэмжээнд зориулсан сануулагчийг тохируулах болон хүлээж авах боломжтой."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Зөвшөөрөл шаардлагатай"</string>
+    <string name="hiad_calender_set" priority="LT">"Тохиргоо"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"AR интерактив үйлчилгээнд үүнийг ашиглана."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Зар нуугдсан"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Сонирхолгүй"</string>
+    <string name="hiad_choices_hide" priority="LT">"Зар нуух"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Би яагаад энэ зарыг харж байна вэ?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Дахин оролдох"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Энэ апликэйшнийг суулгах уу?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"Гар утасны сүлжээ ашиглавал датаны %1$s-г хэрэглэнэ. Үргэлжлүүлэх үү?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Дахин тоглуулахад гар утасны дата ашиглах болно. Үргэлжлүүлэх үү?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Гар утасны холболт ашиглаж байна. Үзвэл %1$s гар утасны дата ашиглах болно."</string>
+    <string name="hiad_continue_download" priority="LT">"Татах"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ТАТАХ"</string>
+    <string name="hiad_continue_to_play" priority="translator">"ҮРГЭЛЖЛҮҮЛЭХ"</string>
+    <string name="hiad_copy_link" priority="LT">"Холбоос хуулах"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s МБ"</string>
+    <string name="hiad_default_app_name" priority="LT">"Аппликэйшн"</string>
+    <string name="hiad_default_skip_text" priority="translator">"Алгасах"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d дотор алгасах"</string>
+    <string name="hiad_detail" priority="translator">"Дэлгэрэнгүй"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Татах"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ЗӨВШӨӨРӨХ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ЗӨВШӨӨРӨХ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ЦУЦЛАХ"</string>
+    <string name="hiad_dialog_close" priority="LT">"ОК"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ТАТАХ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ОЙЛГОЛОО"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s-д %2$s-г суулгахыг зөвшөөрөх үү?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Эх сурвалж: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ЗӨВШӨӨРӨХ"</string>
+    <string name="hiad_dialog_open" priority="LT">"НЭЭЛТТЭЙ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ТАТГАЛЗАХ"</string>
+    <string name="hiad_dialog_title" priority="LT">"гар утасны дата ашиглан татах уу?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Нэмэлт мэдээлэл"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Гар утасны датаг ашиглан татаж авах уу?"</string>
+    <string name="hiad_download_download" priority="LT">"СУУЛГАХ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ТАТАХ (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Татаж байна"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s-г татах явцад алдаа гарлаа."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Файл эвдэрсэн. Дахин татна уу."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Файл байхгүй. Дахин оролдоно уу."</string>
+    <string name="hiad_download_install" priority="LT">"СУУЛГАХ"</string>
+    <string name="hiad_download_installing" priority="LT">"Суулгаж байна"</string>
+    <string name="hiad_download_no_space" priority="LT">"Багтаамж хангалтгүй. Зай суллаад дахин оролдоно уу."</string>
+    <string name="hiad_download_open" priority="LT">"НЭЭХ"</string>
+    <string name="hiad_download_resume" priority="LT">"ҮРГЭЛЖЛҮҮЛЭХ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s-г татах явцад алдаа гарлаа. Шинээр татаж эхлэх болно."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Та одоогоор Wi-Fi-д холбогдоогүй байна. Одоо татснаар %1$s гар утасны дата ашиглана. Ямар ч байсан татах уу?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Та одоогоор WLAN-д холбогдоогүй байна. Одоо татснаар %1$s гар утасны дата ашиглана. Ямар ч байсан татах уу?"</string>
+    <string name="hiad_go_to_settings" priority="LT">"Тохиргоо"</string>
+    <string name="hiad_install_completed" priority="LT">"Боллоо"</string>
+    <string name="hiad_installed_description" priority="translator">"Амжилттай суулгалаа. Нээхийн тулд дарна уу."</string>
+    <string name="hiad_jump_desc" priority="translator">"Дэлгэрэнгүйг харах буюу апликэйшн рүү очно уу"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Энэ хуудас %1$s-г нээхийг хүсэж байна."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Холбоос хуулагдлаа."</string>
+    <string name="hiad_loading_tips" priority="LT">"Ачаалж байна…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Энэ татан авалт %1$s гар утасны дата ашиглах болно."</string>
+    <string name="hiad_net_error" priority="LT">"Сүлжээний холболтын алдаа. Дахин оролдоно уу."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Интернет холболт байхгүй байна. Холбоод дахин оролдоно уу."</string>
+    <string name="hiad_network_error" priority="translator">"Сүлжээний холболтын алдаа."</string>
+    <string name="hiad_network_no_available" priority="LT">"Интернет холболт байхгүй байна. Сүлжээнийхээ тохиргоог шалгана уу."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Надад дахин бүү сануул"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi холболт байхгүй. Одоо татаж авбал таны гар утасны датаг ашиглах болно. Татах?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN холболт байхгүй. Одоо татаж авбал таны гар утасны датаг ашиглах болно. Татах?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Хөтөч дотор нээх"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Хуудсыг ачаалах боломжгүй. Дахин оролдоно уу."</string>
+    <string name="hiad_permission_camera" priority="LT">"Энэ онцлог нь Камерын зөвшөөрөл шаарддаг. Тохиргоо дээрээс үүнийг олгоорой."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s-д дараах зөвшөөрлүүд шаардлагатай:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Урьдчилан захиалах"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi-г хүлээнэ үү"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Гар утасны сүлжээгээр татах уу?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN-г хүлээх"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Нууцлал"</string>
+    <string name="hiad_refresh" priority="LT">"Сэргээх"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d МB-с том аппликэйшн"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Цуцлах"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Хөгжүүлэгч: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Хувилбар %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Алгасах"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Үзсээр байх"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Энэ зарыг үзэж дуусгаад шагнал аваарай."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Байршилд суурилсан зар"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Вэбсайт/апликэйшнийг нээхийн тулд дарна уу"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Апликэйшн татаж авч байна."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Дээш зурах"</string>
+    <string name="hiad_twist_screen" priority="translator">"Утсыг сэгсэрнэ үү"</string>
+    <string name="hiad_whether_download" priority="LT">"Энэ аппликэйшнийг татах уу?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi-аар урьдчилан ачаалсан"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Урьдчилан ачаалсан"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Буцах"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Хадмал унтраалттай байна. Үүнийг харуулахын тулд товшино уу."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Хадмал асаалттай байна. Үүнийг нуухын тулд товшино уу."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"30 секундээр урагшлуулах"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Бүтэн дэлгэц"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Уран бүтээлч тодорхойгүй"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Дууны нэр тодорхойгүй"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Дараах медиа"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Видеоны нэр тодорхойгүй"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Өмнөх товчлуурын жагсаалт руу буцах"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Бусад товчлуурыг харах"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Түр зогсоох"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Тоглуулах"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Таны хүсэлт тавьсан зүйлийг тоглуулж чадсангүй"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Өмнөх медиа"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Дахин тоглуулах"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"10 секундээр ухраах"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Дахин тоглуулах явц"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Тохиргоо"</string>
+    <string name="no_browser_tips" priority="LT">"Эхлээд хөтчийн апликэйшнийг суулгана уу."</string>
+    <string msgid="478774118347071097" name="not_set">"Тохируулаагүй"</string>
+    <string name="offline_notification_text">Зарыг нээхийн тулд товшино уу</string>
+    <string name="offline_notification_title">Та офлайн байхдаа хадгалсан зараа үзэх</string>
+    <string name="offline_opt_in_confirm">ОК</string>
+    <string name="offline_opt_in_confirmation">Та буцаад онлайн болохдоо холбоос бүхий мэдэгдэл авна</string>
+    <string name="offline_opt_in_decline">Үгүй</string>
+    <string name="offline_opt_in_message">Бид сурталчлагчийн сайтын холбоос бүхий мэдэгдлийг тан руу илгээх болно.</string>
+    <string name="offline_opt_in_title">Та буцаад онлайн болохдоо зарыг нээнэ үү.</string>
+    <string name="opendevice_ad_info" priority="LT">"Сурталчилгааны мэдээлэл"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Ads болон Нууцлалын тухай мэдэгдэл"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Бүх сурталчилгаа гаргагч"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"ЦУЦЛАХ"</string>
+    <string name="opendevice_bt_reset" priority="LT">"ДАХИН ТОХИРУУЛАХ"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Шинэ Ad-ID-г санамсаргүйгээр онооно."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Ad-ID-г тохируулах"</string>
+    <string name="opendevice_here" priority="LT">"энд"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Зар болон нууцлал"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Ads"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Таны Зарын ID-г ашигладаг хувь хүнд тохируулсан зарыг хүлээн авахаас татгалзаж болно. Хэрэв та татгалзвал зар хүлээн авсаар байх ч тэд танд хамаарал багатай байх болно. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="translator">"Өгөгдөл ашиглалт болон эрхийнхээ талаар дэлгэрүүлж судална уу"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Зарын ID-н статистик цуглуулахыг идэвхгүй болгох"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Бид үйлчилгээнүүдээ сайжруулахын тулд эдгээр тохируулга дээрх таны дэлгэц дээрх үйлдлүүдийн болон таны Зарын ID-д ашигладаг апликэйшний тухай мэдээллийг цуглуулах болно. Бид энэ датаг хэрхэн ашигладаг талаар нэмэлт мэдээлэл авах бол %1$s дээр дарна уу."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Бид үйлчилгээгээ сайжруулахын тулд эдгээр тохиргооноос таны дэлгэц дээрх үйлдлүүдийн талаар болон таны Ad-ID-д ашигладаг апликэйшнүүдийн талаарх мэдээллийг цуглуулах болно."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Нэмэлт мэдээлэл"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Таны Зарын ID (өөрөөр OAID гэж нэрлэдэг) нь хувь хүнд тохируулсан зарыг үзүүлэхэд ашигладаг түр зуурын төхөөрөмжийн таних тэмдэг юм."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Ad-ID-г тохируулах"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Та Ad-ID-г тань ашигладаг хувь хүнд тохируулсан заруудыг хүлээж авахаас татгалзах боломжтой. Хэрэв та татгалзвал, та зар хүлээж авах ч тэдгээр нь танд ач холбогдол багатай байна."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Таны Зарын ID-г ашигладаг хувь хүнд тохируулсан зарыг хүлээж авахаас та татгалзах боломжтой. Хэрэв та татгалзвал зар хүлээн авсаар байх ч тэдгээр нь танд хамаарал багатай байна."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Таны зарын-ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Таны Ad-ID (мөн OAID гэх) нь танд хувь хүнд тохируулсан зарыг хүргэхэд ашигладаг түр зуурын төхөөрөмжийн таних тэмдэг юм. Дэлгэрэнгүй мэдээллийг авах бол %1$s дээр дарна уу."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Хувь хүнд тохируулсан заруудыг идэвхгүй болгох"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Дэлгэрүүлж мэдэх"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Интернэт холболт байхгүй байна"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Хувь хүнд тохируулсан зар сурталчилгааны үйлчилгээ нь таны сонирхож магадгүй контентыг санал болгодог. Таны нууцлалыг ямагт хамгаалах болно. Дэлгэрэнгүй мэдээллийг %1$s-с үзнэ үү."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Хувь хүнд тохируулсан сурталчилгааны үйлчилгээ нь таны сонирхож болох контентыг санал болгодог. Таны нууцлалыг үргэлж хамгаалах болно. Нэмэлт мэдээллийг дараахаас авна уу:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI Ads платформ нь Huawei Mobile Services болон гуравдагч этгээдийн апликэйшнүүдэд зарын үйлчилгээ үзүүлдэг. Хэрэв хувь хүнд тохируулсан зар идэвхэжсэн бол таны хувийн мэдээллийг ашиглаж танд илүү хамаатай, хэрэгтэй заруудыг нийлүүлэх болно. Таны өгөгдлийг хэрхэн ашиглаж байгаа болон эрхийнхээ талаар дэлгэрэнгүй мэдээлэл авах бол %1$s-с лавлана уу."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI Ads платформ нь Huawei Mobile Services болон гуравдагч этгээдийн апликэйшнүүдэд зар сурталчилгааны үйлчилгээ үзүүлдэг. Хэрэв хувь хүнд тохируулсан зар идэвхэжсэн бол танд илүү хамааралтай, хэрэгцээтэй зарыг өгөхийн тулд таны хувийн мэдээллийг ашиглаж болзошгүй. Таны өгөгдлийг хэрхэн ашигладаг болон эрхийнхээ талаар илүү ихийг мэдэхийг хүсвэл дараахаас лавлана уу:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Сүлжээний тохиргоо"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Төхөөрөмжийн таних тэмдэг"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"OAID-н тухай"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Зарын ID Статистикийн Дүн Шинжилгээний Тухай Мэдэгдэл"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Сурталчилгааны мэдээлэл"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Түр зогсоох"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Тоглох"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\"-г түр санах ойд хуулсан."</string>
+    <string name="s1">Зураг хадгалах</string>
+    <string name="s2">Зарыг Зургийн цомогт зураг хадгалахыг зөвшөөрөх үү?</string>
+    <string name="s3">Зөвшөөрөх</string>
+    <string name="s4">Татгалзах</string>
+    <string name="s5">Календарийн үйл явдал үүсгэх</string>
+    <string name="s6">Зарыг календарийн үйл явдал үүсгэхийг зөвшөөрөх үү?</string>
+    <string name="s7">Тест зар</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Хайх"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Дараагийн зүйл рүү очих"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Өмнөх зүйл рүү очих"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ИДЭВХГҮЙ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ИДЭВХТЭЙ"</string>
+</resources>

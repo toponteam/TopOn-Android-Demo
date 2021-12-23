@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Langas užsivers po %1$s sekundės."</item>
+        <item priority="translator" quantity="few">"Langas užsivers po %1$s sekundžių."</item>
+        <item priority="translator" quantity="many">"Langas užsivers po %1$s sekundžių."</item>
+        <item priority="translator" quantity="other">"Langas užsivers po %1$s sekundės."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Reklama gali būti užverta po %d sekundės"</item>
+        <item priority="translator" quantity="few">"Reklama gali būti užverta po %d sekundžių"</item>
+        <item priority="translator" quantity="many">"Reklama gali būti užverta po %d sekundės"</item>
+        <item priority="translator" quantity="other">"Reklama gali būti užverta po %d sekundžių"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"Įsiminti pasirinkimą %1$s dieną"</item>
+        <item priority="translator" quantity="few">"Įsiminti pasirinkimą %1$s dienas"</item>
+        <item priority="translator" quantity="many">"Įsiminti pasirinkimą %1$s dienų"</item>
+        <item priority="translator" quantity="other">"Įsiminti pasirinkimą %1$s dienos"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"Uždirbkite apdovanojimą po %d sek."</item>
+        <item priority="translator" quantity="few">"Uždirbkite apdovanojimą po %d sek."</item>
+        <item priority="translator" quantity="many">"Uždirbkite apdovanojimą po %d sek."</item>
+        <item priority="translator" quantity="other">"Uždirbkite apdovanojimą po %d sek."</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Norėdami uždirbti apdovanojimą žiūrėkite %d sekundę."</item>
+        <item priority="translator" quantity="few">"Norėdami uždirbti apdovanojimą žiūrėkite %d sekundes."</item>
+        <item priority="translator" quantity="many">"Norėdami uždirbti apdovanojimą žiūrėkite %d sekundės."</item>
+        <item priority="translator" quantity="other">"Norėdami uždirbti apdovanojimą žiūrėkite %d sekundžių."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d sek."</item>
+        <item priority="LT" quantity="few">"%1$d sek."</item>
+        <item priority="translator" quantity="many">"%1$d sek."</item>
+        <item priority="translator" quantity="other">"%1$d sek."</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Nėra"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"<ns1:g id="AUDIO_NUMBER">%1$d</ns1:g> takelis"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Garso takelis"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Įprasta"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Atkūrimo sparta"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Išjungti"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"<ns1:g id="TRACK_NUMBER">%1$d</ns1:g> takelis – <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"<ns1:g id="TRACK_NUMBER">%1$d</ns1:g> takelis"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Eiti į pagrindinį puslapį"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Naršyti aukštyn"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Daugiau parinkčių"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Atlikta"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Žr. viską"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Pasirinkite programą"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"IŠJUNGTI"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ĮJUNGTI"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"„Alt“ +"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"„Ctrl“ +"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"„delete“"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"„enter“"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"„Function“ +"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"„Meta“ +"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"„Shift“ +"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"„space“"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"„Sym“ +"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"„Menu“ +"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Ieškoti…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Išvalyti užklausą"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Paieškos užklausa"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Ieškoti"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Pateikti užklausą"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Paieška balsu"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Bendrinti su"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Bendrinti naudojant programą „<ns1:g id="APPLICATION_NAME">%s</ns1:g>“"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Sutraukti"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Įgalinti"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"„<ns1:g id="APP_NAME">%1$s</ns1:g>“ neveiks, jei neįgalinsite „Google Play“ paslaugų."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Įgalinkite „Google Play“ paslaugas"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Įdiegti"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Programa „<ns1:g id="APP_NAME">%1$s</ns1:g>“ nebus paleidžiama be „Google Play“ paslaugų, kurių nėra įrenginyje."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Gaukite „Google Play“ paslaugas"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"„Google Play“ paslaugų pasiekiamumas"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"„Google Play“ paslaugų klaida"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Naudojant programą „<ns1:g id="APP_NAME">%1$s</ns1:g>“ kilo problemų dėl „Google Play“ paslaugų. Bandykite dar kartą."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Programa „<ns1:g id="APP_NAME">%1$s</ns1:g>“ nebus paleidžiama be „Google Play“ paslaugų, kurių jūsų įrenginys nepalaiko."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Atnaujinti"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"„<ns1:g id="APP_NAME">%1$s</ns1:g>“ nebus paleidžiama, jei neatnaujinsite „Google Play“ paslaugų."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Atnaujinkite „Google Play“ paslaugas"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"„<ns1:g id="APP_NAME">%1$s</ns1:g>“ nebus paleidžiama be „Google Play“ paslaugų, kurios šiuo metu atnaujinamos."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Reikia naujos versijos „Google Play“ paslaugų. Jos netrukus bus atnaujintos."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Atidaryti telefone"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Prisijungti"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Prisijungti naudojant „Google“"</string>
+    <string msgid="3209159573327985035" name="copy">"Kopijuoti"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Dabar leidžiama"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Išplėstinė"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Reklama"</string>
+    <string name="hiad_app_detail_version" priority="LT">"%1$s versija"</string>
+    <string name="hiad_app_installed" priority="LT">"„%1$s“ įdiegta"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Įdiegta. Palieskite, kad atvertumėte."</string>
+    <string name="hiad_app_permission" priority="LT">"Leidimai"</string>
+    <string name="hiad_calender_add" priority="LT">"Gerai"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Toks įvykis jau yra."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Ar įtraukti šį įvykį į jūsų kalendorių?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Nepavyksta įtraukti įvykio."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Įvykis įtrauktas."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Ar panaikinti šį įvykį iš jūsų kalendoriaus?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Nepavyksta panaikinti įvykio."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Įvykis panaikintas."</string>
+    <string name="hiad_calender_delete" priority="LT">"Naikinti"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Naudojama siekiant generuoti kalendorių priminimus arba kurti reklaminės veiklos, kurioje ketinate dalyvauti, įvykius."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Pastaba"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Šiai programėlei reikia leidimo pasiekti Kalendorių, kad būtų galima kurti Kalendoriaus įvykius. Šį leidimą galite suteikti Nuostatose."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Šiai programėlei reikia leidimo pasiekti Kalendorių, kad būtų galima naikinti Kalendoriaus įvykius. Šį leidimą galite suteikti Nuostatose."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Naudojama siekiant kurti Kalendoriaus priminimus, kad galėtumėte nustatyti ir gauti įvykių priminimus."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Reikia leidimo"</string>
+    <string name="hiad_calender_set" priority="LT">"Nuostatos"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Naudojamas AR interaktyviosioms paslaugoms."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Reklama paslėpta"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Neįdomu"</string>
+    <string name="hiad_choices_hide" priority="translator">"Slėpti reklamą"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"Kodėl mačiau šią reklamą?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Bandyti vėl"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Ar įdiegti šią programėlę?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Naudojantis mobiliojo ryšio tinklu, bus perduota %1$s duomenų. Ar tęsti?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Atkūrimui bus naudojami mobilieji duomenys. Ar tęsti?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Naudojamas mobilusis ryšys. Žiūrint bus perduota %1$s mobiliojo ryšio duomenų."</string>
+    <string name="hiad_continue_download" priority="LT">"Atsisiųsti"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ATSISIŲSTI"</string>
+    <string name="hiad_continue_to_play" priority="LT">"TĘSTI"</string>
+    <string name="hiad_copy_link" priority="LT">"Kopijuoti nuorodą"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Programėlė"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Praleisti"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Praleisti po %d sek."</string>
+    <string name="hiad_detail" priority="LT">"Išsamiai"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Atsisiųsti"</string>
+    <string name="hiad_dialog_accept" priority="LT">"LEISTI"</string>
+    <string name="hiad_dialog_allow" priority="LT">"LEISTI"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ATŠAUKTI"</string>
+    <string name="hiad_dialog_close" priority="LT">"Gerai"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ATSISIŲSTI"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"SUPRATAU"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Ar leisti „%1$s“ diegti „%2$s“?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Šaltinis: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"LEISTI"</string>
+    <string name="hiad_dialog_open" priority="LT">"ATVERTI"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ATMESTI"</string>
+    <string name="hiad_dialog_title" priority="LT">"Atsisiųsti naudojant mobiliuosius duomenis?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Pastaba"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Ar atsisiųsti mobiliuoju duomenų ryšiu?"</string>
+    <string name="hiad_download_download" priority="LT">"DIEGTI"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ATSISIŲSTI (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Atsisiunčiama"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Įvyko klaida atsisiunčiant %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Failas sugadintas. Atsisiųskite dar kartą."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Tokio failo nėra. Bandykite dar kartą."</string>
+    <string name="hiad_download_install" priority="LT">"DIEGTI"</string>
+    <string name="hiad_download_installing" priority="LT">"Diegiama"</string>
+    <string name="hiad_download_no_space" priority="LT">"Nepakanka vietos atmintinėje. Atlaisvinkite vietos ir bandykite dar kartą."</string>
+    <string name="hiad_download_open" priority="LT">"ATVERTI"</string>
+    <string name="hiad_download_resume" priority="LT">"TĘSTI"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Įvyko klaida atsisiunčiant %1$s. Atsisiuntimas bus paleistas iš naujo."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Šiuo metu nesate prisijungę prie „Wi-Fi“. Atsisiunčiant dabar bus išnaudota %1$s mobiliųjų duomenų. Vis tiek atsiųsti?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Šiuo metu nesate prisijungę prie „WLAN“. Atsisiunčiant dabar bus išnaudota %1$s mobiliųjų duomenų. Vis tiek atsiųsti?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Nuostatos"</string>
+    <string name="hiad_install_completed" priority="LT">"Atlikta"</string>
+    <string name="hiad_installed_description" priority="translator">"Įdiegta sėkmingai. Norėdami atverti, palieskite."</string>
+    <string name="hiad_jump_desc" priority="translator">"Peržiūrėti išsamią informaciją arba eikite į programėlę"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Šis puslapis nori atidaryti %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Nuoroda nukopijuota."</string>
+    <string name="hiad_loading_tips" priority="LT">"Įkeliama…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Šio atsisiuntimo metu mobiliuoju ryšiu bus perduota %1$s duomenų."</string>
+    <string name="hiad_net_error" priority="LT">"Tinklo ryšio klaida. Bandykite dar kartą."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Nėra interneto ryšio. Prisijunkite ir bandykite vėl."</string>
+    <string name="hiad_network_error" priority="LT">"Tinklo ryšio klaida."</string>
+    <string name="hiad_network_no_available" priority="LT">"Nėra interneto ryšio. Patikrinkite savo tinklo nustatymus."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Daugiau nebepriminti"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Nėra „Wi-Fi“ ryšio. Jei atsisiųsite dabar, mobiliuoju ryšiu bus perduota duomenų. Ar atsisiųsti?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Nėra WLAN ryšio. Jei atsisiųsite dabar, mobiliuoju ryšiu bus perduota duomenų. Ar atsisiųsti?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Atidaryti naršyklėje"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Nepavyksta įkelti puslapio. Bandykite dar kartą."</string>
+    <string name="hiad_permission_camera" priority="LT">"Šiai funkcijai reikia leidimo pasiekti Kamerą. Suteikite jį Nuostatose."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"„%1$s“ reikia tokių leidimų:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Išankstinis užsakymas"</string>
+    <string name="hiad_prepare_download" priority="LT">"Laukti „Wi-Fi“"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Ar atsisiųsti mobiliojo ryšio tinklu?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"Laukti WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Privatumas"</string>
+    <string name="hiad_refresh" priority="LT">"Atnaujinti"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Programėlės dydis viršija %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Atšaukti"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Kūrėjas: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Versija %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Praleisti"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Žiūrėti toliau"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Baikite žiūrėti šią reklamą ir gaukite apdovanojimą."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Buvimo vietos informacija grindžiamos reklamos"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Norėdami atverti svetainę arba programėlę, palieskite"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Programėlė atsisiunčiama."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Perbraukite aukštyn"</string>
+    <string name="hiad_twist_screen" priority="translator">"Papurtykite telefoną"</string>
+    <string name="hiad_whether_download" priority="LT">"Ar atsisiųsti šią programėlę?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Įkelta iš anksto per „Wi-Fi“"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Įkelta iš anksto"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Atgal"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Subtitrai išjungti. Spustelėkite, kad jie būtų rodomi."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Subtitrai įjungti. Spustelėkite, kad jie būtų slepiami."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"Gerai"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Persukti pirmyn 30 sek."</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Visas ekranas"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Nežinomas atlikėjas"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Nežinomas dainos pavadinimas"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Kitas medijos elementas"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Nežinomas vaizdo įrašo pavadinimas"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Atgal į ankstesnių mygtukų sąrašas"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Žr. daugiau mygtukų"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Pristabdyti"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Leisti"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Nepavyko paleisti elemento, dėl kurio pateikėte užklausą"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Ankstesnis medijos elementas"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Pakartoti"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Atsukti atgal 10 sek."</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Atkūrimo eiga"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Nustatymai"</string>
+    <string name="no_browser_tips" priority="LT">"Pirmiausia įdiekite naršyklės programėlę."</string>
+    <string msgid="478774118347071097" name="not_set">"Nenustatyta"</string>
+    <string name="offline_notification_text">Palieskite, kad atidarytumėte skelbimą</string>
+    <string name="offline_notification_title">Peržiūrėkite skelbimą, kurį išsaugojote būdami neprisijungę</string>
+    <string name="offline_opt_in_confirm">Gerai</string>
+    <string name="offline_opt_in_confirmation">Gausite pranešimą su nuoroda, kai vėl prisijungsite</string>
+    <string name="offline_opt_in_decline">Ne, ačiū</string>
+    <string name="offline_opt_in_message">Atsiųsime jums pranešimą su nuoroda į reklamuotojo svetainę.</string>
+    <string name="offline_opt_in_title">Atidarykite skelbimą, kai vėl prisijungsite.</string>
+    <string name="opendevice_ad_info" priority="LT">"Informacija apie reklamas"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Pareiškimas dėl reklamų ir privatumo"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Visi reklamuotojai"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"ATŠAUKTI"</string>
+    <string name="opendevice_bt_reset" priority="LT">"NUSTATYTI IŠ NAUJO"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Bus atsitiktinai priskirtas naujas reklamos ID."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Nustatyti reklamos ID iš naujo"</string>
+    <string name="opendevice_here" priority="LT">"čia"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Reklamos ir privatumas"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Reklamos"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Galite atsisakyti individualizuotų reklamų, naudojančių jūsų reklamos ID. Jei atsisakysite, gausite reklamas ir toliau, tačiau jos gali būti jums mažiau aktualios. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"Sužinokite daugiau apie duomenų naudojimą ir savo teises"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Išjungti reklamos ID statistikos rinkimą"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Siekdami tobulinti teikiamas paslaugas, rinksime informaciją apie jūsų veiksmus ekrane (šiose nuostatose) ir apie programėles, kuriose naudojamas jūsų reklamos ID. Daugiau informacijos apie tai, kaip naudojame šiuos duomenis, rasite palietę %1$s."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Siekdami tobulinti teikiamas paslaugas, rinksime informaciją apie jūsų veiksmus ekrane (šiose nuostatose) ir apie programėles, kuriose naudojamas jūsų reklamos ID."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Daugiau informacijos"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Jūsų reklamos ID (dar vadinamas OAID) – tai laikinas įrenginio identifikatorius, naudojamas siekiant teikti jums individualizuotas reklamas."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Nustatyti reklamos ID iš naujo"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Galite atsisakyti individualizuotų reklamų, naudojančių jūsų reklamos ID. Jei atsisakysite, gausite reklamas ir toliau, tačiau jos gali būti jums mažiau aktualios."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Galite atsisakyti individualizuotų reklamų, kuriose naudojamas jūsų reklamos ID. Jei atsisakysite, reklamas gausite ir toliau, bet jos gali būti jums mažiau aktualios."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Jūsų reklamos ID"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Jūsų reklamos ID (dar vadinamas OAID) – tai laikinas įrenginio identifikatorius, naudojamas siekiant teikti jums individualizuotas reklamas. Jei reikia daugiau informacijos, palieskite %1$s."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Išjungti individualizuotas reklamas"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Sužinoti daugiau"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Nėra interneto ryšio"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Individualizuotos reklamos paslaugos rekomenduoja turinį, kuris jus gali sudominti. Jūsų privatumas bus nuolat saugomas. Daugiau informacijos rasite dokumente %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Individualizuotos reklamos paslaugos rekomenduoja turinį, kuris jus gali sudominti. Jūsų privatumas bus nuolat saugomas. Jei reikia daugiau informacijos, žr. tolesnį turinį:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"HUAWEI reklamų platforma „Huawei Mobile Services“ ir trečiųjų šalių programėlėms teikia reklamos paslaugas. Įjungus individualizuotas reklamas, jūsų asmeniniai duomenys gali būti naudojami siekiant rodyti jums aktualesnes ir naudingesnes reklamas. Siekdami sužinoti daugiau apie tai, kaip naudojami jūsų duomenys, ir apie savo teises, žr. dokumentą %1$s."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"HUAWEI reklamų platforma siūlo reklamos paslaugas „Huawei Mobile Services“ ir trečiųjų šalių programėlėms. Įjungus individualizuotas reklamas, jūsų asmeniniai duomenys gali būti naudojami siekiant teikti jums aktualesnes ir naudingesnes reklamas. Norėdami sužinoti daugiau apie tai, kaip naudojami jūsų duomenys, ir apie savo teises, žr. tolesnį turinį:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Tinklo nuostatos"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Įrenginio identifikatorius"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"Apie OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Pareiškimas dėl reklamos ID statistinės analizės"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Informacija apie reklamas"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Pristabdyti"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Leisti"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"Suvestinė „<ns1:g id="SUMMARY">%1$s</ns1:g>“ nukopijuota į iškarpinę."</string>
+    <string name="s1">Išsaugoti vaizdą</string>
+    <string name="s2">Leisti skelbimui išsaugoti vaizdą nuotraukų galerijoje?</string>
+    <string name="s3">Sutikti</string>
+    <string name="s4">Atmesti</string>
+    <string name="s5">Sukurti kalendoriaus įvykį</string>
+    <string name="s6">Leisti skelbimui sukurti kalendoriaus įvykį?</string>
+    <string name="s7">Bandomasis skelbimas</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Ieškoti"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Pereiti prie kito elemento"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Pereiti prie ankstesnio elemento"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"IŠJUNGTA"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ĮJUNGTA"</string>
+</resources>

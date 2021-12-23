@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/inmobi/extra/okio-1.15.0.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/network/inmobi/extra/okio-1.15.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

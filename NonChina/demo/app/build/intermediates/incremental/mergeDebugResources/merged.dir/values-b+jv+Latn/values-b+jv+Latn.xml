@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"Jendhela bakal nutup %1$s detik maneh."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="other">"Iklan bisa ditutup sawise %d d"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="other">"Eling-eling pilihan suwene %1$s dina"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="other">"Olehake hadiah sawise %d d"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="other">"Tonton %d detik suwene kanggo ngolehake hadiah."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d det"</item>
+    </plurals>
+    <string name="hiad_ad_label" priority="translator">"IKLAN"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Iklan"</string>
+    <string name="hiad_app_detail_version" priority="translator">"Versi %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s wis diinstal"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalasi rampung. Dumuk kanggo mbukak."</string>
+    <string name="hiad_app_permission" priority="LT">"Izin"</string>
+    <string name="hiad_calender_add" priority="LT">"OK"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Acara wis ana."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Tambahake acara iki menyang tanggalan?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Ora bisa nambahake acara."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Acara wis ditambahake."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Busak acara iki saka tanggalan?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Ora bisa mbusak acara."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Acara wis dibusak."</string>
+    <string name="hiad_calender_delete" priority="LT">"Busak"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Iki digunakake kanggo ngasilake pangeling tanggalan utawa nggawe acara kanggo aktivitas promosi sing sampeyan pengin melu."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Cathetan"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Apl iki mbutuhake izin Tanggalan kanggo nggawe Acara tanggalan. Sampeyan bisa menehi izin iki ing Setelan."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Apl iki mbutuhake izin Tanggalan kanggo mbusak Acara tanggalan. Sampeyan bisa menehi izin iki ing Setelan."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Iki digunakake kanggo nggawe pangeling Tanggalan supaya sampeyan bisa nyetel lan nampa pangeling kanggo acara."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Perlu izin"</string>
+    <string name="hiad_calender_set" priority="LT">"Setelan"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Iki digunakake kanggo layanan interaktif AR."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Iklan didhelikake"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Ora ketarik"</string>
+    <string name="hiad_choices_hide" priority="LT">"Dhelikake iklan"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Kena ngapa aku weruh iklan iki?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Coba maneh"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Instal apl iki?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Nggunakake jaringan seluler bakal nganggo %1$s data. Terusake?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Muter iki bakal nggunakake data seluler. Terusake?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Nggunakake sambungan seluler. Nonton bakal nggunakake %1$s data seluler."</string>
+    <string name="hiad_continue_download" priority="LT">"Undhuh"</string>
+    <string name="hiad_continue_download_new" priority="LT">"UNDHUH"</string>
+    <string name="hiad_continue_to_play" priority="LT">"TERUSAKE"</string>
+    <string name="hiad_copy_link" priority="LT">"Salin tautan"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Apl"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Lumpati"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Lumpati sawise %d"</string>
+    <string name="hiad_detail" priority="LT">"Rincian"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Undhuh"</string>
+    <string name="hiad_dialog_accept" priority="LT">"IDINI"</string>
+    <string name="hiad_dialog_allow" priority="LT">"IDINI"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"WURUNG"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"UNDHUH"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"MUDHENG"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Idini %1$s kanggo nginstal %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Sumber: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"IDINI"</string>
+    <string name="hiad_dialog_open" priority="LT">"BUKAK"</string>
+    <string name="hiad_dialog_reject" priority="LT">"TOLAK"</string>
+    <string name="hiad_dialog_title" priority="LT">"Undhuh nggunakake data seluler?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Cathetan"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Undhuh nganggo data seluler?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTAL"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"UNDHUH (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Ngundhuh"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Error nalika ngundhuh %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"File rusak. Undhuh maneh."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"File ora ana. Coba maneh."</string>
+    <string name="hiad_download_install" priority="LT">"INSTAL"</string>
+    <string name="hiad_download_installing" priority="LT">"Nginstal"</string>
+    <string name="hiad_download_no_space" priority="LT">"Simpenan ora cukup. Bebasake sawetara spasi lan coba maneh."</string>
+    <string name="hiad_download_open" priority="LT">"BUKAK"</string>
+    <string name="hiad_download_resume" priority="LT">"TERUSAKE"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Error nalika ngundhuh %1$s. Undhuhan bakal diwiwiti maneh."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Sampeyan saiki ora kasambung menyang jaringan Wi-Fi. Ngundhuh saiki nggunakake %1$s data seluler. Tetep undhuh?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Sampeyan saiki ora kasambung menyang jaringan WLAN. Ngundhuh saiki nggunakake %1$s data seluler. Tetep undhuh?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Setelan"</string>
+    <string name="hiad_install_completed" priority="LT">"Rampung"</string>
+    <string name="hiad_installed_description" priority="LT">"Instalasi kasil. Dumuk kanggo mbukak."</string>
+    <string name="hiad_jump_desc" priority="translator">"Deleng rincian utawa bukak apl"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Kaca iki pengin mbukak %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Tautan disalin."</string>
+    <string name="hiad_loading_tips" priority="LT">"Ngamot…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Undhuhan iki bakal nggunakake %1$s data seluler."</string>
+    <string name="hiad_net_error" priority="translator">"Sambungan jaringan error. Coba maneh."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Ora ana sambungan internet. Sambung lan coba maneh."</string>
+    <string name="hiad_network_error" priority="LT">"Sambungan jaringan error."</string>
+    <string name="hiad_network_no_available" priority="LT">"Ora ana sambungan internet. Priksa setelan jaringan sampeyan."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Aja elingake maneh"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Ora ana sambungan Wi-Fi. Ngundhuh saiki bakal nggunakake data seluler. Undhuh?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Ora ana sambungan WLAN. Ngundhuh saiki bakal nggunakake data seluler. Undhuh?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Bukak ing jlajah"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Ora bisa ngamot kaca. Coba maneh."</string>
+    <string name="hiad_permission_camera" priority="LT">"Fitur iki perlu mbutuhake izin Kamera. Wenehake izin ing Setelan."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s njaluk izin ing ngisor iki:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Pesen dhisik"</string>
+    <string name="hiad_prepare_download" priority="LT">"Enteni Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Undhuh liwat jaringan seluler?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Enteni WLAN"</string>
+    <string name="hiad_privacy_policy" priority="translator">"Privasi"</string>
+    <string name="hiad_refresh" priority="LT">"Bukak maneh"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Apl sing luwih gedhe saka %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Wurung"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Pangembang: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Versi %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Lumpati"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Terus nonton"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Deleng iklan iki nganti rampung kanggo ngentukake ganjaran."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Iklan adhedhasar lokasi"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Dumuk kanggo mbukak situs web/apl"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Apl lagi diundhuh."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Usap munggah"</string>
+    <string name="hiad_twist_screen" priority="translator">"Goyang ponsel"</string>
+    <string name="hiad_whether_download" priority="LT">"Undhuh apl iki?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Diundhuh sadurunge liwat Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Praunggah"</string>
+    <string name="no_browser_tips" priority="LT">"Instal apl peramban dhisik."</string>
+    <string name="opendevice_ad_info" priority="LT">"Informasi iklan"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Pranyatan Babagan Iklan lan Privasi"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Kabeh pangiklan"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"WURUNG"</string>
+    <string name="opendevice_bt_reset" priority="LT">"RESET"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"ID iklan anyar bakal ditemtokake kanthi acak."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Reset ID Iklan"</string>
+    <string name="opendevice_here" priority="LT">"ing kene"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Iklan lan privasi"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Iklan"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Sampeyan bisa ora milih nampa iklan sing dipersonalisasi sing nggunakake ID Iklan sampeyan. Yen ora milih, sampeyan tetep bakal nampa iklan, nanging iklane bisa uga kurang relevan. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"Sinaoni liyane babagan panggunaan data lan hak sampeyan"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Nonaktifake pangumpulan statistik ID Iklan"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Kita bakal ngumpulake informasi babagan tumindak ana ing layar ing setelan iki lan babagan apl sing nggunakake ID Iklan sampeyan supaya bisa ngapikake layanan. Kanggo informasi liyane babagan cara nggunakake data iki, dumuk %1$s."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Kita bakal ngumpulake informasi babagan tumindak ana ing layar ing setelan iki lan babagan apl sing nggunakake ID Iklan sampeyan supaya bisa ngapikake layanan."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Informasi liyane"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"ID Iklan (uga dingerteni minangka OAID) yaiku pangenal piranti sauntara sing digunakake kanggo nyedhiyakake iklan sing dipersonalisasi."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Reset ID Iklan"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Sampeyan bisa ora milih nampa iklan sing dipersonalisasi sing nggunakake ID Iklan sampeyan. Yen ora milih, sampeyan tetep bakal nampa iklan, nanging iklane bisa uga kurang relevan."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Sampeyan bisa ora milih nampa iklan sing dipersonalisasi sing nggunakake ID Iklan sampeyan. Yen ora milih, sampeyan tetep bakal nampa iklan, nanging iklane bisa uga kurang relevan."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"ID Iklan sampeyan"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"ID Iklan (uga dingerteni minangka OAID) yaiku pangenal piranti sauntara sing digunakake kanggo nyedhiyakake iklan sing dipersonalisasi. Kanggo informasi liyane, dumuk %1$s."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Nonaktifake iklan sing dipersonalisasi"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Info liyane"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Ora ana sambungan internet"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Layanan periklanan sing wis dipersonalisasi nyaranake konten sing sampeyan mungkin ketarik. Privasi bakal tansah diproteksi. Kanggo rincian liyane, deleng %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Layanan periklanan sing wis dipersonalisasi nyaranake konten sing sampeyan mungkin ketarik. Privasi bakal tansah diproteksi. Kanggo informasi liyane, wacanen bab ing ngisor iki:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"Platform Iklan HUAWEI nyedhiyakake layanan pangiklanan kanggo Huawei Mobile Services lan apl pihak katelu. Yen iklan sing wis dipersonalisasi diaktifake, data pribadi sampeyan bisa uga digunakake kanggo nyedhiyakake iklan sing luwih cocog lan migunani. Kanggo informasi liyane babagan carane data sampeyan digunakake, uga babagan hak sampeyan, ngrujuka %1$s."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"Platform Iklan HUAWEI nyedhiyakake layanan periklanan kanggo Huawei Mobile Services lan apl pihak katelu. Yen iklan sing wis dipersonalisasi wis diaktifake, data pribadi sampeyan bisa digunakake kanggo nyedhiyakake iklan sing luwih relevan lan migunani. Kanggo ngerteni luwih lengkap babagan kepriye data digunakake lan babagan hak sampeyan, wacanen bab ing ngisor iki:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Setelan jaringan"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Pangenal piranti"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"Babagan OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Pranyatan Babagan Analisis Statistik ID Iklan"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Informasi iklan"</string>
+</resources>

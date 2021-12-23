@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/ironsource/libs/anythink_network_ironsource.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e582da25b402393373659784153eddac/jetified-anythink_network_ironsource/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e582da25b402393373659784153eddac/jetified-anythink_network_ironsource/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e582da25b402393373659784153eddac/jetified-anythink_network_ironsource/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e582da25b402393373659784153eddac/jetified-anythink_network_ironsource/jars/libs/anythink_network_ironsource.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

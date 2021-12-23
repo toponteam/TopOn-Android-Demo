@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_interstitial.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b90df4dec3bca227d2591b0dd41125b6/jetified-anythink_interstitial/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b90df4dec3bca227d2591b0dd41125b6/jetified-anythink_interstitial/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b90df4dec3bca227d2591b0dd41125b6/jetified-anythink_interstitial/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b90df4dec3bca227d2591b0dd41125b6/jetified-anythink_interstitial/jars/libs/anythink_interstitial.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

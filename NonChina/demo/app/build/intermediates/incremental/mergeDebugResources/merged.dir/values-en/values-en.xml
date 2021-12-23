@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tt_full_screen_skip_tx">It can be skipped after 5 seconds</string>
+    <string name="tt_reward_feedback">feedback</string>
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Прозорецот ќе се затвори по %1$s секунда."</item>
+        <item priority="translator" quantity="other">"Прозорецот ќе се затвори по %1$s секунди."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Рекламата може да се затвори за %d секунда"</item>
+        <item priority="translator" quantity="other">"Рекламата може да се затвори за %d секунди"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Запомни го изборот %1$s ден"</item>
+        <item priority="Reviewed" quantity="other">"Запомни го изборот %1$s дена"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"Заработете награда за %d секунда"</item>
+        <item priority="translator" quantity="other">"Заработете награда за %d секунди"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Гледајте %d секунда за да заработите награда."</item>
+        <item priority="translator" quantity="other">"Гледајте %d секунди за да заработите награда."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d сек."</item>
+        <item priority="LT" quantity="other">"%1$d сек."</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Нема"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Песна <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Аудиозапис"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Нормално"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Брзина на репродукцијата"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Исклучено"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Песна <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Песна <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Движи се кон дома"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Движи се нагоре"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Повеќе опции"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Прикажи ги сите"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Избери апликација"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ИСКЛУЧЕНО"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ВКЛУЧЕНО"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"избриши"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"вселена"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Пребарување…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Исчисти барање"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Пребарај барање"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Пребарај"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Поднеси барање"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Гласовно пребарување"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Сподели со"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Сподели со <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Собери"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Овозможи"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нема да се извршува ако не овозможите услуги на Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Овозможи ги услугите на Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Инсталирај"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нема да се извршува без услугите на Google Play што ги нема на уредот."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Преземи ги услугите на Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Достапност на услугите на Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Грешка на услугите на Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> има проблеми со услугите на Google Play. Обидете се повторно."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нема да работи без услугите на Google Play, што не се поддржани од уредов."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Ажурирај"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нема да се извршува ако не ги ажурирате услугите на Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Ажурирај ги услугите на Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> нема да се извршува без услугите на Google Play што се ажурираат во моментов."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Потребна е нова верзија на услугите на Google Play. Таа наскоро самата ќе се ажурира."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Отвори на телефонот"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Најави се"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Најави се со Google"</string>
+    <string msgid="3209159573327985035" name="copy">"Копирај"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Сега се репродуцира"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Напредни"</string>
+    <string name="hiad_ad_label" priority="translator">"РЕКЛАМА"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Реклама"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Верзија %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s е инсталирана"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Инсталирањето заврши. Допрете за да отворите."</string>
+    <string name="hiad_app_permission" priority="LT">"Дозволи"</string>
+    <string name="hiad_calender_add" priority="LT">"ОК"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Настанот веќе постои."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Да се додаде овој настан во вашиот календар?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Настанот не може да се додаде."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Настанот е додаден."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Да се избрише овој настан од вашиот календар?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Настанот не може да се избрише."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Настанот е избришан."</string>
+    <string name="hiad_calender_delete" priority="LT">"Избриши"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Ова се користи за создавање потсетници од календарот или за создавање настани за промотивни активности во кои планирате да учествувате."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Белешка"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"За оваа апликација е потребна дозвола за Календар за да создаде настани во Календарот. Може да ја доделите оваа дозвола во Нагодување."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"За оваа апликација е потребна дозвола за Календар за да избрише настани од Календарот. Може да ја доделите оваа дозвола во Нагодување."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Ова се користи за создавање потсетници во Календарот за да може да поставите и да добивате потсетници за настани."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Потребна е дозвола"</string>
+    <string name="hiad_calender_set" priority="LT">"Нагодување"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Ова се користи за интерактивни услуги за проширена реалност."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Рекламата е скриена"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Не ме интересира"</string>
+    <string name="hiad_choices_hide" priority="LT">"Скриј ја рекламата"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Зошто ја гледав оваа реклама?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Обиди се повторно"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Да се инсталира оваа апликација?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Ако користите мобилна мрежа, ќе се потрошат %1$s податоци. Да се продолжи?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Репродуцирањето ќе потроши мобилни податоци. Да се продолжи?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Се користи мобилно поврзување. За гледањето ќе се искористат %1$s мобилни податоци."</string>
+    <string name="hiad_continue_download" priority="LT">"Преземи"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ПРЕЗЕМИ"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ПРОДОЛЖИ"</string>
+    <string name="hiad_copy_link" priority="LT">"Копирај ја врската"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Апликација"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Прескокни"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Прескокни за %d"</string>
+    <string name="hiad_detail" priority="LT">"Детали"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Преземи"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ДОЗВОЛИ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ДОЗВОЛИ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ОТКАЖИ"</string>
+    <string name="hiad_dialog_close" priority="LT">"ОК"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ПРЕЗЕМИ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"РАЗБРАВ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Да се дозволи %1$s да инсталира %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Извор: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ДОЗВОЛИ"</string>
+    <string name="hiad_dialog_open" priority="LT">"ОТВОРИ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ОДБИЈ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Да се преземе преку користење мобилни податоци?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Белешка"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Да се преземе преку користење мобилни податоци?"</string>
+    <string name="hiad_download_download" priority="LT">"ИНСТАЛИРАЈ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ПРЕЗЕМИ (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Преземање"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Се случи грешка при преземањето на %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Датотеката е оштетена. Преземете повторно."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Датотеката не постои. Обидете се повторно."</string>
+    <string name="hiad_download_install" priority="LT">"ИНСТАЛИРАЈ"</string>
+    <string name="hiad_download_installing" priority="LT">"Се инсталира"</string>
+    <string name="hiad_download_no_space" priority="LT">"Недоволно меморија. Ослободете простор и обидете се повторно."</string>
+    <string name="hiad_download_open" priority="LT">"ОТВОРИ"</string>
+    <string name="hiad_download_resume" priority="LT">"ПРОДОЛЖИ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Се случи грешка при преземањето на %1$s. Преземањето ќе започне повторно."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Не сте поврзани на Wi-Fi во моментов. Ако преземете сега, ќе се искористат %1$s мобилни податоци. Сепак да се преземе?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Не сте поврзани на WLAN во моментов. Ако преземете сега, ќе се искористат %1$s мобилни податоци. Сепак да се преземе?"</string>
+    <string name="hiad_go_to_settings" priority="LT">"Нагодување"</string>
+    <string name="hiad_install_completed" priority="LT">"Готово"</string>
+    <string name="hiad_installed_description" priority="translator">"Инсталирањето успеа. Допрете за да отворите."</string>
+    <string name="hiad_jump_desc" priority="translator">"Прегледајте ги деталните информации или одете до апликацијата"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Оваа страница сака да отвори %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Врската е копирана."</string>
+    <string name="hiad_loading_tips" priority="LT">"Се вчитува…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Ова преземање ќе потроши %1$s мобилни податоци."</string>
+    <string name="hiad_net_error" priority="LT">"Грешка во мрежното поврзување. Обидете се повторно."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Нема поврзување на интернет. Поврзете и обидете се повторно."</string>
+    <string name="hiad_network_error" priority="LT">"Грешка во мрежното поврзување."</string>
+    <string name="hiad_network_no_available" priority="LT">"Нема поврзување на интернет. Проверете ги поставките за мрежата."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Не потсетувај ме повторно"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Нема поврзување Wi-Fi. Ако преземете сега, ќе се користат мобилни податоци. Да се преземе?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Нема поврзување WLAN. Ако преземете сега, ќе се користат мобилни податоци. Да се преземе?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Отвори во прелистувач"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Не може да се вчита страницата. Обидете се повторно."</string>
+    <string name="hiad_permission_camera" priority="LT">"За оваа карактеристика е потребна дозволата за Камера. Доделете ја во Нагодување."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"За %1$s се потребни следниве дозволи:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Преднарачка"</string>
+    <string name="hiad_prepare_download" priority="LT">"Почекај Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Да се преземе преку мобилна мрежа?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Почекај WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Приватност"</string>
+    <string name="hiad_refresh" priority="LT">"Освежи"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Апликацијата е поголема од %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Откажи"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Програмер: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Верзија %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Прескокни"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Продолжи со гледање"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Догледајте ја оваа реклама за да добиете награда."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Реклами според локацијата"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Допрете за да ја отворите веб-локацијата/апликацијата"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Апликацијата се презема."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Поминете нагоре"</string>
+    <string name="hiad_twist_screen" priority="translator">"Затресете го телефонот"</string>
+    <string name="hiad_whether_download" priority="LT">"Да се преземе оваа апликација?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Вчитано претходно преку Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Претходно вчитано"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Назад"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Титлот е исклучен. Кликнете за да го прикажете."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Титлот е вклучен. Кликнете за да го скриете."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"Во ред"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Премотајте 30 секунди нанапред"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Цел екран"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Непознат изведувач"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Непознат наслов на песна"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Следна содржина"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Непознат наслов на видео"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Назад кон списокот со претходното копче"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Прикажи повеќе копчиња"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Пауза"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Пушти"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Не можеше да се пушти ставката што ја побаравте"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Претходни содржини"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Пушти повторно"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Премотајте 10 секунди наназад"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Напредок на репродукцијата"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Поставки"</string>
+    <string name="no_browser_tips" priority="LT">"Прво инсталирајте апликација за прелистувач."</string>
+    <string msgid="478774118347071097" name="not_set">"Не е поставено"</string>
+    <string name="offline_notification_text">Допрете за да ја отворите рекламата</string>
+    <string name="offline_notification_title">Прегледајте ја рекламата што ја зачувавте кога бевте офлајн</string>
+    <string name="offline_opt_in_confirm">Во ред</string>
+    <string name="offline_opt_in_confirmation">Ќе добиете известување со линк кога ќе бидете повторно онлајн</string>
+    <string name="offline_opt_in_decline">Не, фала</string>
+    <string name="offline_opt_in_message">Ќе ви испратиме известување со линк до сајтот на огласувачот.</string>
+    <string name="offline_opt_in_title">Отворете ја рекламата кога ќе бидете повторно онлајн.</string>
+    <string name="opendevice_ad_info" priority="LT">"Информации за реклами"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Изјава за Реклами и приватност"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Сите рекламирачи"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"ОТКАЖИ"</string>
+    <string name="opendevice_bt_reset" priority="LT">"РЕСЕТИРАЈ"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Нов идентитет за реклами ќе се додели по случаен избор."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Ресетирајте го идентитетот за реклами"</string>
+    <string name="opendevice_here" priority="LT">"овде"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Реклами и приватност"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Реклами"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Може да се откажете од добивање персонализирани реклами што го користат вашиот идентитет за реклами. Ако се откажете, ќе продолжите да добивате реклами, но може да не бидат толку релевантни за вас. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="translator">"Дознајте повеќе за користењето на податоците и за вашите права"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Оневозможете собирање статистика за Идентитет за реклами"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Ќе собираме информации за вашите дејства на екранот во овие поставки и за апликациите што го користат вашиот идентитет за реклами за да ги подобриме нашите услуги. За повеќе информации за тоа како ги користиме овие податоци, допрете %1$s."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Ќе собираме информации за вашите дејства на екранот во овие поставки и за апликациите што го користат вашиот идентитет за реклами за да ги подобриме нашите услуги."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Повеќе информации"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Вашиот идентитет за реклами (познат и како OAID) е привремен идентификатор на уредот што се користи за да ви се достават персонализирани реклами."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Ресетирајте го идентитетот за реклами"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Може да се откажете од добивање персонализирани реклами што го користат вашиот идентитет за реклами. Ако се откажете, ќе продолжите да добивате реклами, но може да не бидат толку релевантни за вас."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Може да се откажете од добивање персонализирани реклами што го користат вашиот идентитет за реклами. Ако се откажете, ќе продолжите да добивате реклами, но може да не бидат толку релевантни за вас."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Вашиот идентитет за реклами"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Вашиот идентитет за реклами (познат и како OAID) е привремен идентификатор на уредот што се користи за да ви се достават персонализирани реклами. За повеќе информации, допрете %1$s."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Оневозможете персонализирани реклами"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Дознајте повеќе"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Нема поврзување на интернет"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Персонализираните услуги за рекламирање ви препорачуваат содржина што можеби ќе ве интересира. Вашата приватност ќе биде заштитена секогаш. Подетални информации може да најдете во %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Персонализираните услуги за рекламирање ви препорачуваат содржина што можеби ќе ве интересира. Вашата приватност ќе биде заштитена секогаш. За повеќе информации, погледнете го следново:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"Платформата Реклами од HUAWEI обезбедува услуги за рекламирање за Huawei Mobile Services и апликации од други производители. Ако се овозможени персонализирани реклами, вашите лични податоци може да се користат за да ви се обезбедат порелевантни и покорисни реклами. За да дознаете повеќе за тоа како се користат вашите податоци, како и за вашите права, погледнете го документот %1$s."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"Платформата Реклами од HUAWEI обезбедува услуги за рекламирање за Huawei Mobile Services и апликации од други производители. Ако се овозможени персонализирани реклами, вашите лични податоци може да се користат за да ви се обезбедат порелевантни и покорисни реклами. За да дознаете повеќе за тоа како се користат вашите податоци, како и за вашите права, погледнете го следново:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Поставки за мрежата"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Идентификатор на уредот"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"За OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Изјава за Статистичка анализа на идентитетот за реклами"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Информации за реклами"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Паузирај"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Пушти"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>“ копирано во привремена меморија."</string>
+    <string name="s1">Зачувај ја сликата</string>
+    <string name="s2">Дали дозволувате рекламата да ја зачува сликата во „Галеријата со слики“?</string>
+    <string name="s3">Прифати</string>
+    <string name="s4">Одбиј</string>
+    <string name="s5">Создај настан во календарот</string>
+    <string name="s6">Дали дозволувате рекламата да создаде настан во календарот?</string>
+    <string name="s7">Тестирај ја рекламата</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Пребарај"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Скокни на следната ставка"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Скокни на претходната ставка"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ИСКЛУЧЕНО"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ВКЛУЧЕНО"</string>
+</resources>

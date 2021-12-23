@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/fyber/libs/ia-video-kit-release-7.8.4.aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90a3897b5ced90132a3102d994b9dfc/ia-video-kit-release-7.8.4/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90a3897b5ced90132a3102d994b9dfc/ia-video-kit-release-7.8.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90a3897b5ced90132a3102d994b9dfc/ia-video-kit-release-7.8.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90a3897b5ced90132a3102d994b9dfc/ia-video-kit-release-7.8.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

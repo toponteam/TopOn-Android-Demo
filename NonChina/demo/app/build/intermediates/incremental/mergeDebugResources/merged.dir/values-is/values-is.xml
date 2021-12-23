@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Engin"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Lag <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Hljóðrás"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Venjuleg"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Spilunarhraði"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Slökkt"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Lag <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Lag <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Fara heim"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Fara upp"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Fleiri valkostir"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Lokið"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Sjá allt"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Veldu forrit"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"SLÖKKT"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"KVEIKT"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"eyða"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Aðgerðarlykill+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"bilslá"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Valmynd+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Leita…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Hreinsa fyrirspurn"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Leitarfyrirspurn"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Leit"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Senda fyrirspurn"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Raddleit"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Deila með"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Deila með <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Minnka"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Kveikja"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> virkar ekki nema þú gerir þjónustu Google Play virka."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Virkja þjónustu Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Setja upp"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> getur ekki keyrt án þjónustu Google Play, sem vantar í tækið þitt."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Sækja þjónustu Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Staða þjónustu Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Villa í þjónustu Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> á í vandræðum með þjónustu Google Play. Reyndu aftur."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> getur ekki keyrt án þjónustu Google Play, sem er ekki studd af tækinu þínu."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Uppfæra"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> getur ekki keyrt nema þú uppfærir þjónustu Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Uppfæra þjónustu Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> getur ekki keyrt án þjónustu Google Play, sem verið er að uppfæra."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Nýja útgáfu af þjónustu Google Play vantar. Hún uppfærir sig sjálf innan skamms."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Opna í símanum"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Skrá inn"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Skrá inn með Google"</string>
+    <string msgid="3209159573327985035" name="copy">"Afrita"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Í spilun"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Ítarlegt"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Til baka"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Slökkt er á skjátexta. Smelltu til að birta hann."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Kveikt er á skjátexta. Smelltu til að fela hann."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"Í lagi"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Spóla áfram um 30 sekúndur"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Allur skjárinn"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Óþekktur flytjandi"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Óþekkt heiti lags"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Næsta efni"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Óþekktur titill myndskeiðs"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Aftur á fyrri hnappalista"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Sjá fleiri hnappa"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Hlé"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Spila"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Ekki tókst að spila það sem þú baðst um"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Fyrra efni"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Spila aftur"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Spóla til baka um 10 sekúndur"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Framvinda spilunar"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Stillingar"</string>
+    <string msgid="478774118347071097" name="not_set">"Ekki stillt"</string>
+    <string name="offline_notification_text">Pikkaðu til að opna auglýsingu</string>
+    <string name="offline_notification_title">Skoða auglýsinguna sem þú vistaðir án nettengingar</string>
+    <string name="offline_opt_in_confirm">Í lagi</string>
+    <string name="offline_opt_in_confirmation">Þú færð tilkynningu með tengli þegar þú tengist netinu aftur.</string>
+    <string name="offline_opt_in_decline">Nei, takk</string>
+    <string name="offline_opt_in_message">Við sendum þér tilkynningu með tengli á vefsvæði auglýsandans.</string>
+    <string name="offline_opt_in_title">Opna auglýsingu þegar þú tengist netinu aftur.</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Hlé"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Spila"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>“ afritað á klippiborðið."</string>
+    <string name="s1">Vista mynd</string>
+    <string name="s2">Leyfa auglýsingu að vista mynd í myndasafninu?</string>
+    <string name="s3">Samþykkja</string>
+    <string name="s4">Hafna</string>
+    <string name="s5">Búa til dagatalsviðburð</string>
+    <string name="s6">Leyfa auglýsingu að búa til dagatalsviðburð?</string>
+    <string name="s7">Prófa auglýsingu</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Leit"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Fara í næsta atriði"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Fara í fyrra atriði"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"SLÖKKT"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"KVEIKT"</string>
+</resources>

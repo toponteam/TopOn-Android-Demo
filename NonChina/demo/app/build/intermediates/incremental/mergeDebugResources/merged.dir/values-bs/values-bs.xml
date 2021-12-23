@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Prozor se zatvara za %1$s sekundu."</item>
+        <item priority="translator" quantity="few">"Prozor se zatvara za %1$s sekundi."</item>
+        <item priority="translator" quantity="other">"Prozor se zatvara za %1$s sekundi."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Oglas možete zatvoriti za %d s"</item>
+        <item priority="translator" quantity="few">"Oglas možete zatvoriti za %d s"</item>
+        <item priority="translator" quantity="other">"Oglas možete zatvoriti za %d s"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Pamti izbor tokom %1$s dana"</item>
+        <item priority="Reviewed" quantity="few">"Pamti izbor tokom %1$s dana"</item>
+        <item priority="Reviewed" quantity="other">"Pamti izbor tokom %1$s dana"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"Zaradite nagradu za %d s"</item>
+        <item priority="translator" quantity="few">"Zaradite nagradu za %d s"</item>
+        <item priority="translator" quantity="other">"Zaradite nagradu za %d s"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Gledajte %d s da zaradite nagradu."</item>
+        <item priority="translator" quantity="few">"Gledajte %d s da zaradite nagradu."</item>
+        <item priority="translator" quantity="other">"Gledajte %d s da zaradite nagradu."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d sek."</item>
+        <item priority="LT" quantity="few">"%1$d sek."</item>
+        <item priority="translator" quantity="other">"%1$d sek."</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Nema"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Numera <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Zvučni zapis"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normalno"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Brzina reprodukcije"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Isključi"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Numera <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> – <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Numera <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Vratite se na početnu stranicu"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Idi gore"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Više opcija"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Gotovo"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Prikaži sve"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Odaberite aplikaciju"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ISKLJUČENO"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"UKLJUČENO"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"razmak"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Pretražite..."</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Obriši upit"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Pretraži upit"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Pretraži"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Pošalji upit"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Glasovno pretraživanje"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Dijeli sa"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Dijeli putem aplikacije <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Suzi"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Omogući"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> neće raditi ako ne omogućite Google Play usluge."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Omogućite Google Play usluge"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Instaliraj"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> neće raditi bez Google Play usluga, kojih na vašem uređaju nema."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Nabavite Google Play usluge"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Dostupnost Google Play usluga"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Greška Google Play usluge"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> ima problema s Google Play uslugama. Pokušajte ponovo."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> neće raditi bez Google Play usluga, koje vaš uređaj ne podržava."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Ažuriraj"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> neće raditi ako ne ažurirate Google Play usluge."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Ažuriranje Google Play usluga"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Aplikacija <ns1:g id="APP_NAME">%1$s</ns1:g> neće raditi bez Google Play usluga, koje se trenutno ažuriraju."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Potrebna je nova verzija Google Play usluga. Ubrzo će se samo ažurirati."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Otvori na telefonu"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Prijava"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Prijavi se pomoću Googlea"</string>
+    <string msgid="3209159573327985035" name="copy">"Kopiraj"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Trenutno se reproducira"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Napredno"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Oglas"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Verzija %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s je instalirano"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalacija je završena. Dodirnite da otvorite."</string>
+    <string name="hiad_app_permission" priority="translator">"Dozvole"</string>
+    <string name="hiad_calender_add" priority="LT">"U redu"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"Događaj već postoji."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Dodati ovaj događaj u kalendar?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Nije moguće dodati događaj."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Događaj je dodat."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Izbrisati ovaj događaj iz kalendara?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Nije moguće izbrisati događaj."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Događaj je izbrisan."</string>
+    <string name="hiad_calender_delete" priority="LT">"Izbriši"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Koristi se za generiranje podsjetnika kalendara ili kreiranje događaja za promotivne aktivnosti u kojima planirate učestvovati."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Napomena"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Ova aplikacija zahtijeva dozvolu za Kalendar da bi kreirala događaje u Kalendaru. Tu dozvolu možete dodijeliti u Postavkama."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Ova aplikacija zahtijeva dozvolu za Kalendar da bi brisala događaje u Kalendaru. Tu dozvolu možete dodijeliti u Postavkama."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Koristi se za izradu podsjetnika za Kalendar da biste mogli postavljati i primati podsjetnike za događaje."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Potrebna dozvola"</string>
+    <string name="hiad_calender_set" priority="LT">"Postavke"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Koristi se za AR interaktivne usluge."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Oglas sakriven"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Ne zanima me"</string>
+    <string name="hiad_choices_hide" priority="translator">"Sakrij oglas"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"Zašto vidim ovaj oglas?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Pokušaj ponovo"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Instalirati ovu aplikaciju?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Korištenjem mobilne mreže bit će iskorišteno %1$s podataka. Nastaviti?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Za reprodukciju će se koristiti prijenos podataka. Nastaviti?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Koristi se mobilna veza. Gledanjem će se potrošiti %1$s prijenosa podataka."</string>
+    <string name="hiad_continue_download" priority="LT">"Preuzmi"</string>
+    <string name="hiad_continue_download_new" priority="LT">"PREUZMI"</string>
+    <string name="hiad_continue_to_play" priority="LT">"NASTAVI"</string>
+    <string name="hiad_copy_link" priority="LT">"Kopiraj vezu"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplikacija"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Preskoči"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Preskoči za %d"</string>
+    <string name="hiad_detail" priority="LT">"Detalji"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Preuzmi"</string>
+    <string name="hiad_dialog_accept" priority="LT">"DOZVOLI"</string>
+    <string name="hiad_dialog_allow" priority="LT">"DOZVOLI"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"OTKAŽI"</string>
+    <string name="hiad_dialog_close" priority="LT">"U redu"</string>
+    <string name="hiad_dialog_continue" priority="LT">"PREUZIMANJE"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"JASNO"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Dozvolite da %1$s instalira %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Izvor: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"DOZVOLI"</string>
+    <string name="hiad_dialog_open" priority="LT">"OTVORI"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ODBIJ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Preuzeti putem prijenosa podataka?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Napomena"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Preuzeti putem prijenosa podataka?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALIRAJ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"PREUZIMANJE (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Preuzimanje"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Došlo je do greške prilikom preuzimanja %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Datoteka oštećena. Preuzmite ponovno."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Datoteka ne postoji. Pokušajte ponovo."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALIRAJ"</string>
+    <string name="hiad_download_installing" priority="LT">"Instaliranje"</string>
+    <string name="hiad_download_no_space" priority="LT">"Nedovoljan prostor u pohrani. Oslobodite dio prostora i pokušajte ponovo."</string>
+    <string name="hiad_download_open" priority="LT">"OTVORI"</string>
+    <string name="hiad_download_resume" priority="LT">"NASTAVI"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Došlo je do greške prilikom preuzimanja %1$s. Preuzimanje će se ponovo pokrenuti."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Trenutno niste povezani na Wi-Fi mrežu. Za preuzimanje u ovom trenutku potreban je prijenos podataka od %1$s. Ipak preuzeti?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Trenutno niste povezani na WLAN mrežu. Za preuzimanje u ovom trenutku potreban je prijenos podataka od %1$s. Ipak preuzeti?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Postavke"</string>
+    <string name="hiad_install_completed" priority="LT">"Završeno"</string>
+    <string name="hiad_installed_description" priority="translator">"Instalacija je uspjela. Dodirnite da otvorite."</string>
+    <string name="hiad_jump_desc" priority="translator">"Pogledajte detalje ili idite u aplikaciju"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Stranica pokušava otvoriti %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Veza kopirana."</string>
+    <string name="hiad_loading_tips" priority="LT">"Učitavanje…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Ovo preuzimanje koristit će %1$s prijenosa podataka."</string>
+    <string name="hiad_net_error" priority="LT">"Greška mrežne veze. Pokušajte ponovo."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Nema internetske veze. Povežite se i pokušajte ponovo."</string>
+    <string name="hiad_network_error" priority="LT">"Greška mrežne veze."</string>
+    <string name="hiad_network_no_available" priority="LT">"Niste povezani na Internet. Provjerite svoje mrežne postavke."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Ne podsjećaj ponovo"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Nema Wi-Fi veze. Preuzimanje će sad koristiti vaš prijenos podataka. Preuzeti?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Nema WLAN veze. Preuzimanje će sad koristiti vaš prijenos podataka. Preuzeti?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Otvori u pregledniku"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Nije moguće učitati stranicu. Pokušajte ponovo."</string>
+    <string name="hiad_permission_camera" priority="LT">"Ova funkcija zahtijeva dodjelu dozvole za Fotoaparat. Odobrite je u Postavkama."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s zahtijeva dozvole navedene u nastavku:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Unaprijed naruči"</string>
+    <string name="hiad_prepare_download" priority="LT">"Pričekaj Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Preuzeti putem mobilne mreže?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Pričekaj WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Privatnost"</string>
+    <string name="hiad_refresh" priority="LT">"Osvježi"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Aplikacija veća od %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Otkaži"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Programer: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Verzija %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="translator">"Preskoči"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="translator">"Nastavi gledati"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Završite s gledanjem ove reklame da zaradite nagradu."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Oglasi na osnovu lokacije"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Dodirnite da otvorite web lokaciju/aplikaciju"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"Aplikacija se preuzima."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Prevucite prema gore"</string>
+    <string name="hiad_twist_screen" priority="translator">"Zatresite telefon"</string>
+    <string name="hiad_whether_download" priority="LT">"Preuzeti ovu aplikaciju?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Prethodno učitano putem Wi-Fi mreže"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Unaprijed učitano"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Nazad"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Titlovi su isključeni. Kliknite da ih prikažete."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Titlovi su uključeni. Kliknite da ih sakrijete."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"UREDU"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Idi naprijed 30 sekundi"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Cijeli ekran"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Nepoznat izvođač"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Nepoznat naziv pjesme"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Sljedeća medijska stavka"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Nepoznat naziv videozapisa"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Nazad na prethodni spisak dugmadi"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Prikaži više dugmadi"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Pauza"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Reproduciraj"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Reproduciranje stavke koju ste zatražili nije uspjelo"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Prethodna medijska stavka"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Ponovo reproduciraj"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Vrati nazad 10 sekundi"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Napredak reprodukcije"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Postavke"</string>
+    <string name="no_browser_tips" priority="LT">"Prvo instalirajte aplikaciju preglednika."</string>
+    <string msgid="478774118347071097" name="not_set">"Nije postavljeno"</string>
+    <string name="offline_notification_text">Dodirnite da otvorite oglas</string>
+    <string name="offline_notification_title">Pogledajte sačuvani oglas kada ponovo budete online</string>
+    <string name="offline_opt_in_confirm">UREDU</string>
+    <string name="offline_opt_in_confirmation">Dobit ćete obavještenje s linkom kada ponovo budete online</string>
+    <string name="offline_opt_in_decline">Ne, hvala</string>
+    <string name="offline_opt_in_message">Poslat ćemo vam obavještenje s linkom na web lokaciju oglašivača.</string>
+    <string name="offline_opt_in_title">Otvorite oglas kada ponovo budete online.</string>
+    <string name="opendevice_ad_info" priority="LT">"Informacije o oglasu"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Izjava o korištenju Oglasa i privatnosti"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Svi oglašivači"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"OTKAŽI"</string>
+    <string name="opendevice_bt_reset" priority="LT">"RESETIRAJ"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Novi ID oglasa će se nasumično dodijeliti."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Resetiraj ID oglasa"</string>
+    <string name="opendevice_here" priority="LT">"ovdje"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Oglasi i privatnost"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Oglasi"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"Možete otkazati primanje personaliziranih oglasa koji koriste vaš ID za oglašavanje. Ako otkažete ovu uslugu, i dalje ćete primati oglase, ali oni mogu biti manje relevantni za vas. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="LT">"Saznajte više o korištenju podataka i vašim pravima"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Onemogući prikupljanje statistike ID oglasa"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"Prikupljamo informacije o vašim radnjama na ekranu u ovim postavkama i aplikacijama koje koriste vaš ID oglasa kako bismo poboljšali naše usluge. Za više informacija o tom kako koristimo te podatke, dodirnite %1$s."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"Prikupljamo informacije o radnjama na ekranu u ovim postavkama i o aplikacijama koje koriste vaš ID oglasa u cilju poboljšanja usluga."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Više informacija"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Vaš ID za oglašavanje (poznat i kao OAID) je privremeni identifikator uređaja koji se koristi za pružanje personaliziranih oglasa."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Resetiraj ID oglasa"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"Možete se isključiti iz primanja personaliziranih oglasa koji koriste vaš ID oglasa. Ako se isključite i dalje ćete primati oglase, ali se može desiti da budu manje relevantni."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"Možete odustati od primanja personaliziranih oglasa koji koriste vaš ID za oglase. Ako odustanete, i dalje ćete primati oglase, ali oni mogu biti manje relevantni za vas."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Vaš ID za oglašavanje"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Vaš ID oglasa (poznat i kao OAID) je privremeni identifikator uređaja koji se koristi za pružanje personaliziranih oglasa. Za više informacija dodirnite %1$s."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Onemogući personalizirane oglase"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Saznajte više"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Nema internetske veze"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Personalizirane usluge oglašavanja preporučuju sadržaj koji bi vama mogao biti zanimljiv. Vaša privatnost će biti zaštićena u svakom trenutku. Za više detalje pogledajte dokument %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Usluge personaliziranog oglašavanja preporučuju sadržaj koji bi vas mogao zanimati. Privatnost je u svakom trenutku zaštićena. Za više informacija pogledajte sljedeće:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"Platforma HUAWEI oglasi pruža usluge oglašavanja za Huawei Mobile Services i aplikacije trećih strana. Ako su omogućeni personalizirani oglasi, vaši lični podaci se mogu koristiti za omogućavanje relevantnijih i korisnijih oglasa. Da saznate više o tome kako se podaci koriste za personaliziranje oglasa i o vašim pravima, pogledajte %1$s."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"Platforma HUAWEI oglasi pruža usluge oglašavanja za aplikaciju Huawei Mobile Services i aplikacije trećih strana. Ako su omogućeni personalizirani oglasi, vaši lični podaci se mogu koristiti za pružanje relevantnijih i korisnijih oglasa. Da saznate više o tome kako se podaci koriste i o vašim pravima, pogledajte sljedeće:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Postavke mreže"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Identifikator uređaja"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"Informacije o OAID-u"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Izjava o statističkoj analizi ID oglasa"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Informacije o oglasu"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Pauza"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Reproduciraj"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" kopirano u međuspremnik."</string>
+    <string name="s1">Sačuvaj sliku</string>
+    <string name="s2">Želite li dozvoliti oglasu da pohrani sliku u Galeriju slika?</string>
+    <string name="s3">Prihvati</string>
+    <string name="s4">Odbij</string>
+    <string name="s5">Kreiranje događaja u kalendaru</string>
+    <string name="s6">Želite li dozvoliti oglasu da kreira događaj u kalendaru?</string>
+    <string name="s7">Probni oglas</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Pretražite"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Preskoči na sljedeću stavku"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Preskoči na prethodnu stavku"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ISKLJUČENO"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"UKLJUČENO"</string>
+</resources>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Venster sluit over %1$s seconde."</item>
+        <item priority="translator" quantity="other">"Venster sluit over %1$s seconden."</item>
+    </plurals>
+    <plurals name="hiad_interstitial_time_countdown">
+        <item priority="translator" quantity="one">"Advertentie kan over %ds worden gesloten"</item>
+        <item priority="translator" quantity="other">"Advertentie kan over %ds worden gesloten"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"Keuze opslaan voor %1$s dag"</item>
+        <item priority="translator" quantity="other">"Keuze opslaan voor %1$s dagen"</item>
+    </plurals>
+    <plurals name="hiad_reward_before_rw_time_countdown">
+        <item priority="translator" quantity="one">"Over %ds een beloning verdienen"</item>
+        <item priority="translator" quantity="other">"Over %ds een beloning verdienen"</item>
+    </plurals>
+    <plurals name="hiad_reward_close_dialog_message">
+        <item priority="translator" quantity="one">"Kijk %d seconde om een beloning te verdienen."</item>
+        <item priority="translator" quantity="other">"Kijk %d seconden om een beloning te verdienen."</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d sec"</item>
+        <item priority="LT" quantity="other">"%1$d sec"</item>
+    </plurals>
+    <string msgid="549548876131348304" name="MediaControlView_audio_track_none_text">"Geen"</string>
+    <string msgid="4764598467753473351" name="MediaControlView_audio_track_number_text">"Track <ns1:g id="AUDIO_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="3532548952520840186" name="MediaControlView_audio_track_text">"Audiotrack"</string>
+    <string msgid="480754169449450083" name="MediaControlView_playback_speed_normal">"Normaal"</string>
+    <string msgid="8150324864582460559" name="MediaControlView_playback_speed_text">"Afspeelsnelheid"</string>
+    <string msgid="1845015629089301203" name="MediaControlView_subtitle_off_text">"Uit"</string>
+    <string msgid="4652664932814816449" name="MediaControlView_subtitle_track_number_and_lang_text">"Track <ns1:g id="TRACK_NUMBER">%1$d</ns1:g> - <ns1:g id="LANG">%2$s</ns1:g>"</string>
+    <string msgid="7764843500931103738" name="MediaControlView_subtitle_track_number_text">"Track <ns1:g id="TRACK_NUMBER">%1$d</ns1:g>"</string>
+    <string msgid="4037918370566028719" name="MediaControlView_time_placeholder">"00:00:00"</string>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Navigeren naar startpositie"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Omhoog navigeren"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Meer opties"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Gereed"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Alles weergeven"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Een app selecteren"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"UIT"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"AAN"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Functie +"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift +"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"spatie"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu +"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Zoeken…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Zoekopdracht wissen"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Zoekopdracht"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Zoeken"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Zoekopdracht verzenden"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Gesproken zoekopdracht"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Delen met"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Delen met <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Samenvouwen"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Inschakelen"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> werkt niet, tenzij je Google Play-services inschakelt."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-services inschakelen"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installeren"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die je nog niet op je apparaat hebt."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-services ophalen"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Beschikbaarheid van Google Play-services"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fout met Google Play-services"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> ondervindt problemen met Google Play-services. Probeer het opnieuw."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die niet worden ondersteund op je apparaat."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Updaten"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd, tenzij je Google Play-services updatet."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-services updaten"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> kan niet worden uitgevoerd zonder Google Play-services, die momenteel worden geüpdatet."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Er is een nieuwe versie van Google Play-services vereist. De update wordt binnenkort automatisch uitgevoerd."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"Openen op telefoon"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"Inloggen"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"Inloggen met Google"</string>
+    <string msgid="3209159573327985035" name="copy">"Kopiëren"</string>
+    <string msgid="3980628489251198480" name="default_notification_channel_name">"Wordt nu afgespeeld"</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Geavanceerd"</string>
+    <string name="hiad_ad_label" priority="translator">"ADVERTENTIE"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Advertentie"</string>
+    <string name="hiad_app_detail_version" priority="LT">"Versie %1$s"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s is geïnstalleerd"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Installatie is voltooid. Tik om te openen."</string>
+    <string name="hiad_app_permission" priority="LT">"Toestemmingen"</string>
+    <string name="hiad_calender_add" priority="LT">"OK"</string>
+    <string name="hiad_calender_already_appoint" priority="LT">"De afspraak bestaat al."</string>
+    <string name="hiad_calender_appoint_dialog_message" priority="LT">"Deze afspraak aan uw agenda toevoegen?"</string>
+    <string name="hiad_calender_appoint_failed" priority="LT">"Kan afspraak niet toevoegen."</string>
+    <string name="hiad_calender_appoint_success" priority="LT">"Afspraak toegevoegd."</string>
+    <string name="hiad_calender_cancel_dialog_message" priority="LT">"Deze afspraak uit uw agenda verwijderen?"</string>
+    <string name="hiad_calender_cancel_failed" priority="LT">"Kan afspraak niet verwijderen."</string>
+    <string name="hiad_calender_cancel_success" priority="LT">"Afspraak verwijderd."</string>
+    <string name="hiad_calender_delete" priority="LT">"Verwijderen"</string>
+    <string name="hiad_calender_description_new" priority="LT">"Dit wordt gebruikt om agendaherinneringen te genereren of evenementen aan te maken voor promotionele activiteiten waaraan u van plan bent deel te nemen."</string>
+    <string name="hiad_calender_dialog" priority="LT">"Opmerking"</string>
+    <string name="hiad_calender_permission_appoint_message" priority="LT">"Deze app vereist de toestemming voor Agenda om Agenda-afspraken aan te maken. U kunt deze toestemming verlenen in Instellingen."</string>
+    <string name="hiad_calender_permission_cancel_message" priority="LT">"Deze app vereist de toestemming voor Agenda om Agenda-afspraken te verwijderen. U kunt deze toestemming verlenen in Instellingen."</string>
+    <string name="hiad_calender_permission_description" priority="LT">"Dit wordt gebruikt om Agendaherinneringen aan te maken, zodat u herinneringen voor afspraken kunt instellen en ontvangen."</string>
+    <string name="hiad_calender_permission_dialog" priority="LT">"Toestemming vereist"</string>
+    <string name="hiad_calender_set" priority="LT">"Instellingen"</string>
+    <string name="hiad_camera_permission_description" priority="LT">"Dit wordt gebruikt voor interactieve AR-services."</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Advertentie verborgen"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Niet geïnteresseerd"</string>
+    <string name="hiad_choices_hide" priority="translator">"Advertentie verbergen"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"Waarom zie ik deze advertentie?"</string>
+    <string name="hiad_click_to_try_again" priority="LT">"Opnieuw proberen"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Deze app installeren?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Het gebruik van een mobiel netwerk zal %1$s aan data verbruiken. Doorgaan?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Afspelen zal mobiele data verbruiken. Doorgaan?"</string>
+    <string name="hiad_consuming_data_to_play_video" priority="LT">"Er wordt een mobiele verbinding gebruikt. Kijken gebruikt %1$s aan mobiele data."</string>
+    <string name="hiad_continue_download" priority="LT">"Downloaden"</string>
+    <string name="hiad_continue_download_new" priority="LT">"DOWNLOADEN"</string>
+    <string name="hiad_continue_to_play" priority="LT">"DOORGAAN"</string>
+    <string name="hiad_copy_link" priority="LT">"Link kopiëren"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"App"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Overslaan"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Overslaan binnen %d"</string>
+    <string name="hiad_detail" priority="LT">"Details"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Downloaden"</string>
+    <string name="hiad_dialog_accept" priority="LT">"TOESTAAN"</string>
+    <string name="hiad_dialog_allow" priority="LT">"TOESTAAN"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ANNULEREN"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"DOWNLOADEN"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"OK"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s toestaan om %2$s te installeren?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Bron: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"TOESTAAN"</string>
+    <string name="hiad_dialog_open" priority="LT">"OPENEN"</string>
+    <string name="hiad_dialog_reject" priority="LT">"WEIGEREN"</string>
+    <string name="hiad_dialog_title" priority="LT">"Downloaden via mobiele data?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Opmerking"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Downloaden met mobiele data?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALLEREN"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"DOWNLOADEN (%1$s)"</string>
+    <string name="hiad_download_downloading" priority="LT">"Bezig met downloaden"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Er is een fout opgetreden tijdens het downloaden van %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Bestand beschadigd. Download opnieuw."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Het bestand bestaat niet. Probeer het opnieuw."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALLEREN"</string>
+    <string name="hiad_download_installing" priority="LT">"Bezig met installeren"</string>
+    <string name="hiad_download_no_space" priority="LT">"Onvoldoende opslag. Maak wat ruimte vrij en probeer het opnieuw."</string>
+    <string name="hiad_download_open" priority="LT">"OPENEN"</string>
+    <string name="hiad_download_resume" priority="LT">"DOORGAAN"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Er is een fout opgetreden tijdens het downloaden van %1$s. Download zal opnieuw worden opgestart."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"U bent momenteel niet verbonden met wifi. Nu downloaden zal %1$s aan mobiele data kosten. Toch downloaden?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"U bent momenteel niet verbonden met WLAN. Nu downloaden zal %1$s aan mobiele data verbruiken. Toch downloaden?"</string>
+    <string name="hiad_go_to_settings" priority="translator">"Instellingen"</string>
+    <string name="hiad_install_completed" priority="LT">"Gereed"</string>
+    <string name="hiad_installed_description" priority="LT">"Installatie gelukt. Tik om te openen."</string>
+    <string name="hiad_jump_desc" priority="translator">"Bekijk de details of ga naar de app"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Deze pagina wil %1$s openen."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Link gekopieerd."</string>
+    <string name="hiad_loading_tips" priority="LT">"Bezig met laden…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Deze download gebruikt %1$s aan mobiele data."</string>
+    <string name="hiad_net_error" priority="LT">"Netwerkverbindingsfout. Probeer het opnieuw."</string>
+    <string name="hiad_network_disconnect_to_try" priority="LT">"Geen internetverbinding. Maak een verbinding en probeer het opnieuw."</string>
+    <string name="hiad_network_error" priority="LT">"Netwerkverbindingsfout."</string>
+    <string name="hiad_network_no_available" priority="LT">"Geen internetverbinding. Controleer uw netwerkinstellingen."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Niet opnieuw herinneren"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Geen wifiverbinding. Nu downloaden zal gebruik maken van uw mobiele data. Downloaden?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Geen WLAN-verbinding. Nu downloaden zal gebruik maken van uw mobiele data. Downloaden?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Openen in browser"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Kan pagina niet laden. Probeer het opnieuw."</string>
+    <string name="hiad_permission_camera" priority="LT">"Deze functie vereist de toestemming voor Camera. Verleen deze in Instellingen."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s vereist de volgende toestemmingen:"</string>
+    <string name="hiad_preorder_download" priority="LT">"Vooraf bestellen"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wachten op wifi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Downloaden via mobiel netwerk?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Wachten op WLAN"</string>
+    <string name="hiad_privacy_policy" priority="LT">"Privacy"</string>
+    <string name="hiad_refresh" priority="LT">"Vernieuwen"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"App groter dan %1$d MB"</string>
+    <string name="hiad_reward_abort_download" priority="LT">"Annuleren"</string>
+    <string name="hiad_reward_app_developer" priority="LT">"Ontwikkelaar: %1$s"</string>
+    <string name="hiad_reward_app_version" priority="LT">"Versie %1$s"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Overslaan"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Blijf kijken"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Bekijk deze advertentie helemaal om een beloning te winnen."</string>
+    <string name="hiad_setting_location_based_ad_new" priority="LT">"Op locatie gebaseerde advertenties"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Tik aan om de website/app te openen"</string>
+    <string name="hiad_start_ownload_failed_downloading" priority="LT">"App wordt gedownload."</string>
+    <string name="hiad_swipe_screen" priority="translator">"Omhoog vegen"</string>
+    <string name="hiad_twist_screen" priority="translator">"De telefoon schudden"</string>
+    <string name="hiad_whether_download" priority="LT">"Deze app downloaden?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Vooraf geladen via wifi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Vooraf geladen"</string>
+    <string msgid="5728972524527278943" name="mcv2_back_button_desc">"Terug"</string>
+    <string msgid="6888583680833967030" name="mcv2_cc_is_off">"Ondertiteling is uitgeschakeld. Klik om deze weer te geven."</string>
+    <string msgid="8890320846743698774" name="mcv2_cc_is_on">"Ondertiteling is ingeschakeld. Klik om deze te verbergen."</string>
+    <string msgid="1892680062375516133" name="mcv2_error_dialog_button">"OK"</string>
+    <string msgid="7189466356853482980" name="mcv2_ffwd_button_desc">"Dertig seconden vooruitgaan"</string>
+    <string msgid="6900438429115580036" name="mcv2_full_screen_button_desc">"Volledig scherm"</string>
+    <string msgid="1475333855817994058" name="mcv2_music_artist_unknown_text">"Artiest onbekend"</string>
+    <string msgid="6768779662371844918" name="mcv2_music_title_unknown_text">"Titel van nummer onbekend"</string>
+    <string msgid="4799850472802157220" name="mcv2_next_button_desc">"Volgende media"</string>
+    <string msgid="5414417081368449210" name="mcv2_non_music_title_unknown_text">"Titel van video onbekend"</string>
+    <string msgid="4619938179240477643" name="mcv2_overflow_left_button_desc">"Terug naar vorige lijst met knoppen"</string>
+    <string msgid="3959698281663418432" name="mcv2_overflow_right_button_desc">"Meer knoppen bekijken"</string>
+    <string msgid="997297527148989963" name="mcv2_pause_button_desc">"Onderbreken"</string>
+    <string msgid="1994649551115596877" name="mcv2_play_button_desc">"Afspelen"</string>
+    <string msgid="1201919666572302119" name="mcv2_playback_error_text">"Kan het gevraagde item niet afspelen"</string>
+    <string msgid="5367141424871007842" name="mcv2_previous_button_desc">"Vorige media"</string>
+    <string msgid="3498082316888662782" name="mcv2_replay_button_desc">"Opnieuw afspelen"</string>
+    <string msgid="5725552141091554735" name="mcv2_rewind_button_desc">"Tien seconden terugspoelen"</string>
+    <string msgid="2626125787370091731" name="mcv2_seek_bar_desc">"Afspeelvoortgang"</string>
+    <string msgid="8453746936008970620" name="mcv2_settings_button_desc">"Instellingen"</string>
+    <string name="no_browser_tips" priority="LT">"Installeer eerst een browser-app."</string>
+    <string msgid="478774118347071097" name="not_set">"Niet ingesteld"</string>
+    <string name="offline_notification_text">Tik om advertentie te openen</string>
+    <string name="offline_notification_title">De advertentie bekijken die je hebt opgeslagen toen je offline was</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Je krijgt een melding met de link als je weer online bent</string>
+    <string name="offline_opt_in_decline">Nee, bedankt</string>
+    <string name="offline_opt_in_message">We sturen je een melding met een link naar de site van de adverteerder.</string>
+    <string name="offline_opt_in_title">Advertentie openen als je weer online bent</string>
+    <string name="opendevice_ad_info" priority="LT">"Advertentie-informatie"</string>
+    <string name="opendevice_ad_privacy_statement" priority="LT">"Verklaring over Advertenties en privacy"</string>
+    <string name="opendevice_all_advertisers" priority="LT">"Alle adverteerders"</string>
+    <string name="opendevice_bt_cancel" priority="LT">"ANNULEREN"</string>
+    <string name="opendevice_bt_reset" priority="LT">"RESETTEN"</string>
+    <string name="opendevice_dlg_msg_ad_reset" priority="LT">"Er wordt willekeurig een nieuwe advertentie-id toegekend."</string>
+    <string name="opendevice_dlg_title_reset_ad" priority="LT">"Advertentie-id opnieuw instellen"</string>
+    <string name="opendevice_here" priority="LT">"hier"</string>
+    <string name="opendevice_hw_ad_service" priority="LT">"Advertenties en privacy"</string>
+    <string name="opendevice_hw_ad_service_new" priority="LT">"Advertenties"</string>
+    <string name="opendevice_item_ad_reset_desc" priority="LT">"U kunt uzelf afmelden voor de ontvangst van gepersonaliseerde advertenties die uw Ad-id gebruiken. Als u uzelf afmeldt, blijft u advertenties ontvangen, maar zijn deze mogelijk minder relevant voor u. %1$s"</string>
+    <string name="opendevice_item_collection_ad_desc_more_info" priority="translator">"Meer informatie over het gebruik van gegevens en uw rechten"</string>
+    <string name="opendevice_item_disable_collection_ad" priority="LT">"Het verzamelen van Ad-id-statistieken uitschakelen"</string>
+    <string name="opendevice_item_disable_collection_ad_desc" priority="LT">"We verzamelen informatie over uw acties op het scherm in deze instellingen en over apps die uw advertentie-id gebruiken om onze services te verbeteren. Tik %1$s voor meer informatie over hoe we deze gegevens gebruiken."</string>
+    <string name="opendevice_item_disable_collection_ad_desc_new" priority="LT">"We verzamelen informatie over uw acties op het scherm in deze instellingen en over apps die uw advertentie-id gebruiken om onze services te verbeteren."</string>
+    <string name="opendevice_item_more_settings" priority="LT">"Meer informatie"</string>
+    <string name="opendevice_item_oaid_desc" priority="LT">"Uw Ad-id (ook bekend als een OAID) is een tijdelijke apparaat-id die wordt gebruikt om u gepersonaliseerde advertenties aan te bieden."</string>
+    <string name="opendevice_item_reset_ad" priority="LT">"Advertentie-id opnieuw instellen"</string>
+    <string name="opendevice_item_reset_ad_des" priority="LT">"U kunt zich afmelden voor het ontvangen van gepersonaliseerde advertenties die uw advertentie-id gebruiken. Als u zich afmeldt, ontvangt u nog steeds advertenties, maar deze zijn mogelijk minder relevant voor u."</string>
+    <string name="opendevice_item_reset_ad_des_new" priority="LT">"U kunt zich afmelden voor het ontvangen van gepersonaliseerde advertenties die uw advertentie-id gebruiken. Als u zich afmeldt, ontvangt u nog steeds advertenties, maar deze zijn mogelijk minder relevant voor u."</string>
+    <string name="opendevice_item_your_oaid" priority="LT">"Uw advertentie-id"</string>
+    <string name="opendevice_item_your_oaid_desc" priority="LT">"Uw advertentie-id (ook bekend als een OAID) is een tijdelijke apparaat-id die wordt gebruikt om u gepersonaliseerde advertenties aan te bieden. Tik %1$s voor meer informatie."</string>
+    <string name="opendevice_limit_ad_tracking" priority="LT">"Gepersonaliseerde advertenties uitschakelen"</string>
+    <string name="opendevice_limit_ad_tracking_detail" priority="LT">"Meer info"</string>
+    <string name="opendevice_network_no_available" priority="LT">"Geen internetverbinding"</string>
+    <string name="opendevice_privacy_desc" priority="LT">"Gepersonaliseerde advertentiediensten bevelen inhoud aan waar u mogelijk in geïnteresseerd bent. Uw privacy blijft te allen tijde beschermd. Zie voor nadere details de %1$s."</string>
+    <string name="opendevice_privacy_desc_new" priority="LT">"Gepersonaliseerde advertentiediensten bevelen inhoud aan waar u mogelijk in geïnteresseerd bent. Uw privacy blijft te allen tijde beschermd. Raadpleeg het volgende voor meer informatie:"</string>
+    <string name="opendevice_privacy_oversea_desc" priority="translator">"Het HUAWEI-advertenties-platform biedt advertentieservices voor Huawei Mobile Services en apps van derden. Als gepersonaliseerde advertenties zijn ingeschakeld, kunnen uw persoonlijke gegevens worden gebruikt om u relevantere en nuttigere advertenties aan te bieden. Raadpleeg de %1$s voor meer informatie over hoe uw gegevens worden gebruikt en over uw rechten."</string>
+    <string name="opendevice_privacy_oversea_desc_new" priority="LT">"Het HUAWEI-advertenties-platform biedt advertentieservices voor Huawei Mobile Services en apps van derden. Als gepersonaliseerde advertenties zijn ingeschakeld, kunnen uw persoonlijke gegevens worden gebruikt om u relevantere en nuttigere advertenties te bieden. Raadpleeg het volgende voor meer informatie over hoe uw gegevens worden gebruikt en over uw rechten:"</string>
+    <string name="opendevice_setting_network" priority="LT">"Netwerkinstellingen"</string>
+    <string name="opendevice_title_oaid" priority="LT">"Apparaat-id"</string>
+    <string name="opendevice_title_oaid_statement" priority="LT">"Over OAID"</string>
+    <string name="opendevice_title_stattistics_statement" priority="LT">"Verklaring over statistische analyse van advertentie-id"</string>
+    <string name="opendevice_view_ad_info" priority="LT">"Advertentie-informatie"</string>
+    <string msgid="7844788760550939526" name="pause_button_content_description">"Pauzeren"</string>
+    <string msgid="5898492519310326971" name="play_button_content_description">"Afspelen"</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\'<ns1:g id="SUMMARY">%1$s</ns1:g>\' is gekopieerd naar het klembord."</string>
+    <string name="s1">Afbeelding opslaan</string>
+    <string name="s2">Advertentie toestaan om afbeelding op te slaan in fotogalerij?</string>
+    <string name="s3">Accepteren</string>
+    <string name="s4">Weigeren</string>
+    <string name="s5">Agenda-afspraak maken</string>
+    <string name="s6">Advertentie toestaan om een agenda-afspraak te maken?</string>
+    <string name="s7">Testadvertentie</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Zoeken"</string>
+    <string msgid="3508534122676007656" name="skip_to_next_item_button_content_description">"Overslaan en naar volgend item"</string>
+    <string msgid="250823119142607886" name="skip_to_previous_item_button_content_description">"Overslaan en naar vorig item"</string>
+    <string msgid="8106346172024741305" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"UIT"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"AAN"</string>
+</resources>
