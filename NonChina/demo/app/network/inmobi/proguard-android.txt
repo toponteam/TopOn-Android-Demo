@@ -1,3 +1,4 @@
+-keepattributes SourceFile,LineNumberTable
 -keep class com.inmobi.** { *; }
 -keep public class com.google.android.gms.**
 -dontwarn com.google.android.gms.**

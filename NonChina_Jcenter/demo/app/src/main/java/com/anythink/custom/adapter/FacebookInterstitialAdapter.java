@@ -57,13 +57,13 @@ public class FacebookInterstitialAdapter extends CustomInterstitialAdapter {
 
             @Override
             public void onLoggingImpression(Ad ad) {
-                if (mImpressListener != null) {
-                    mImpressListener.onInterstitialAdShow();
-                }
             }
 
             @Override
             public void onInterstitialDisplayed(Ad ad) {
+                if (mImpressListener != null) {
+                    mImpressListener.onInterstitialAdShow();
+                }
             }
 
             @Override
