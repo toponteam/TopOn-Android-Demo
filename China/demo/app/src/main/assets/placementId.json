@@ -9,10 +9,10 @@
         "Sigmob":"b5d7228c6c5d6a",
         "Huawei":"b5f353142ed321",
         "HeadBidding Ad":"b6063e598639f2",
-        "MyOffer":"b5db6c3764aea3",
         "Mimo":"b60f7e219cd7a9",
         "Klevin":"b613abebc2cb8c",
-        "Directly":"b61bfe68e6a30c"
+        "MyOffer":"b5db6c3764aea3",
+        "DirectOffer":"b61bfe68e6a30c"
     },
     "interstitial": {
         "All":"b5baca53984692",
@@ -26,10 +26,10 @@
         "Sigmob":"b5d7614ab30695",
         "Huawei":"b5f3531369a785",
         "HeadBidding Ad":"b6063e5c0cf5d9",
-        "MyOffer":"b5db6c39aed9c5",
         "Mimo":"b60f7e4fd22306",
         "Klevin":"b613ac4eeed2df",
-        "Directly":"b61bfe69f1e954"
+        "MyOffer":"b5db6c39aed9c5",
+        "DirectOffer":"b61bfe69f1e954"
     },
     "banner": {
         "All":"b5baca4f74c3d8",
@@ -39,9 +39,9 @@
         "Baidu":"b5c0508c4c073f",
         "Huawei":"b5f35312714b7f",
         "HeadBidding Ad":"b6063e5ab57832",
-        "MyOffer":"b5f33a1409b96b",
         "Mimo":"b60f7e686e98c1",
-        "Directly":"b61bfe6bce19b2"
+        "MyOffer":"b5f33a1409b96b",
+        "DirectOffer":"b61bfe6bce19b2"
     },
     "native": {
         "All":"b5aa1fa2cae775",
@@ -55,12 +55,12 @@
         "Kuaishou Draw":"b5e5dc4110310f",
         "Huawei":"b5f35311178efe",
         "HeadBidding Ad":"b6063e58cb39ee",
-        "MyOffer":"b5f33a12982b7f",
         "Mimo Native":"b60f7f6a904586",
         "Mimo Express":"b60f7f85abe72e",
         "Sigmob":"b616eba8608e3b",
         "Klevin":"b6172886482992",
-        "Directly":"b61bfe6b1e023a"
+        "MyOffer":"b5f33a12982b7f",
+        "DirectOffer":"b61bfe6b1e023a"
     },
     "splash": {
         "All":"b5bea7cc9a4497",
@@ -70,9 +70,9 @@
         "Mintegral":"b5ee8ae8611366",
         "Kuaishou":"b5f22758d9eae6",
         "Sigmob":"b5d76150bab3ad",
-        "MyOffer":"b5f33a1598fe94",
         "Mimo":"b60f7fa9eabe2e",
         "Klevin":"b613ac55f204b1",
-        "Directly":"b61bfe6a976167"
+        "MyOffer":"b5f33a1598fe94",
+        "DirectOffer":"b61bfe6a976167"
     }
 }

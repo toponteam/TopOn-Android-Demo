@@ -24,11 +24,9 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
-import com.anythink.network.klevin.KlevinATRequestInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
@@ -81,29 +79,31 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
         }
 
-        ATMediationRequestInfo atMediationRequestInfo = null;
 
-//        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");
-//        atMediationRequestInfo.setAdSourceId("71606");
-//
-//        atMediationRequestInfo = new GDTATRequestInfo("1101152570", "8863364436303842593");
-//        atMediationRequestInfo.setAdSourceId("71602");
-//
-//        atMediationRequestInfo = new TTATRequestInfo("5020321", "820321537", false);
-//        atMediationRequestInfo.setAdSourceId("71600");
+        String defaultConfig = "";
 
-//        atMediationRequestInfo = new SigmobiATRequestInfo("1282", "27531c7c64157934", "e04d1ac9231");
-//        atMediationRequestInfo.setAdSourceId("71608");
-//
-//        atMediationRequestInfo = new BaiduATRequestInfo("e866cfb0", "2058622");
-//        atMediationRequestInfo.setAdSourceId("71609");
+        //Mintegral
+//        defaultConfig = "{\"unit_id\":1333033,\"nw_firm_id\":6,\"adapter_class\":\"com.anythink.network.mintegral.MintegralATSplashAdapter\",\"content\":\"{\\\"placement_id\\\":\\\"210169\\\",\\\"unitid\\\":\\\"276803\\\",\\\"countdown\\\":\\\"5\\\",\\\"allows_skip\\\":\\\"1\\\",\\\"orientation\\\":\\\"1\\\",\\\"appkey\\\":\\\"ef13ef712aeb0f6eb3d698c4c08add96\\\",\\\"suport_video\\\":\\\"1\\\",\\\"appid\\\":\\\"100947\\\"}\"}";
 
-//        atMediationRequestInfo  = new KSATRequestInfo("501400010", "5014000234");
-//        atMediationRequestInfo.setAdSourceId("88377");
+        //Tencent Ads
+//        defaultConfig = "{\"unit_id\":1333176,\"nw_firm_id\":8,\"adapter_class\":\"com.anythink.network.gdt.GDTATSplashAdapter\",\"content\":\"{\\\"unit_id\\\":\\\"8863364436303842593\\\",\\\"zoomoutad_sw\\\":\\\"1\\\",\\\"app_id\\\":\\\"1101152570\\\"}\"}";
 
-//        atMediationRequestInfo  = new KlevinATRequestInfo("30008", "30029");
-//        atMediationRequestInfo.setAdSourceId("853445");
-        splashAd = new ATSplashAd(this, placementId, atMediationRequestInfo, this, 5000);
+        //CSJ
+//        defaultConfig = "{\"unit_id\":1333195,\"nw_firm_id\":15,\"adapter_class\":\"com.anythink.network.toutiao.TTATSplashAdapter\",\"content\":\"{\\\"personalized_template\\\":\\\"0\\\",\\\"zoomoutad_sw\\\":\\\"2\\\",\\\"button_type\\\":\\\"1\\\",\\\"dl_type\\\":\\\"2\\\",\\\"slot_id\\\":\\\"801121648\\\",\\\"app_id\\\":\\\"5001121\\\"}\"}";
+
+        //Sigmob
+//        defaultConfig = "{\"unit_id\":1333222,\"nw_firm_id\":29,\"adapter_class\":\"com.anythink.network.sigmob.SigmobATSplashAdapter\",\"content\":\"{\\\"placement_id\\\":\\\"ea1f8f21300\\\",\\\"app_id\\\":\\\"6878\\\",\\\"app_key\\\":\\\"8ebc1fd1c27e650c\\\"}\"}";
+
+        //Baidu
+//        defaultConfig = "{\"unit_id\":1329553,\"nw_firm_id\":22,\"adapter_class\":\"com.anythink.network.baidu.BaiduATSplashAdapter\",\"content\":\"{\\\"button_type\\\":\\\"0\\\",\\\"ad_place_id\\\":\\\"7854679\\\",\\\"app_id\\\":\\\"a7dd29d3\\\"}\"}";
+
+        //Kuaishou
+//        defaultConfig = "{\"unit_id\":1333246,\"nw_firm_id\":28,\"adapter_class\":\"com.anythink.network.ks.KSATSplashAdapter\",\"content\":\"{\\\"zoomoutad_sw\\\":\\\"1\\\",\\\"position_id\\\":\\\"4000000042\\\",\\\"app_id\\\":\\\"90009\\\",\\\"app_name\\\":\\\"90009\\\"}\"}";
+
+        //Klevin
+//        defaultConfig = "{\"unit_id\":1333253,\"nw_firm_id\":51,\"adapter_class\":\"com.anythink.network.klevin.KlevinATSplashAdapter\",\"content\":\"{\\\"pos_id\\\":\\\"30029\\\",\\\"app_id\\\":\\\"30008\\\"}\"}";
+
+        splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
 
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
@@ -113,6 +113,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
 
         splashAd.setLocalExtra(localMap);
+        ATSplashAd.entryAdScenario(placementId, "");
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
@@ -121,7 +122,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 public void run() {
                     splashAd.show(SplashAdShowActivity.this, container);
                 }
-            },10);
+            }, 10);
 
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
@@ -162,6 +163,18 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     public void onAdLoaded(boolean isTimeout) {
         Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
 
+        if (!inForeBackground) {
+            needShowSplashAd = true;
+            return;
+        }
+
+        if (!splashAd.isAdReady()) {
+            Log.e(TAG, "onAdLoaded: no cache" );
+            jumpToMainActivity();
+            return;
+        }
+
+
         if (isCustomSkipView) {
             showAdWithCustomSkipView();
         } else {
@@ -200,12 +213,15 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     boolean hasHandleJump = false;
-    boolean canJump;
+    boolean needJump;
+
+    boolean inForeBackground;
+    boolean needShowSplashAd;
 
     public void jumpToMainActivity() {
 
-        if (!canJump) {
-            canJump = true;
+        if (!needJump) {
+            needJump = true;
             return;
         }
 
@@ -237,18 +253,30 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     protected void onResume() {
         super.onResume();
 
-        if (canJump) {
+        inForeBackground = true;
+
+        if (needJump) {
             jumpToMainActivity();
         }
 
-        canJump = true;
+        needJump = true;
+
+        if (needShowSplashAd) {
+            needShowSplashAd = false;
+
+            if (splashAd.isAdReady()) {
+                splashAd.show(this, container);
+            }
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        canJump = false;
+        inForeBackground = false;
+
+        needJump = false;
     }
 
     @Override

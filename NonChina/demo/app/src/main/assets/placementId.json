@@ -26,7 +26,7 @@
         "Pangle":"b612f6ebfd1fa4",
         "HeadBidding Ad":"b6063e598639f2",
         "MyOffer":"b5db6c3764aea3",
-        "Directly":"b61bfe68e6a30c"
+        "DirectOffer":"b61bfe68e6a30c"
     },
     "interstitial": {
         "All":"b5baca53984692",
@@ -56,7 +56,7 @@
         "Pangle":"b612f6ee5b3d60",
         "HeadBidding Ad":"b6063e5c0cf5d9",
         "MyOffer":"b5db6c39aed9c5",
-        "Directly":"b61bfe69f1e954"
+        "DirectOffer":"b61bfe69f1e954"
     },
     "banner": {
         "All":"b5baca4f74c3d8",
@@ -81,7 +81,7 @@
         "Pangle":"b612f6ed9ba633",
         "HeadBidding Ad":"b6063e5ab57832",
         "MyOffer":"b5f33a1409b96b",
-        "Directly":"b61bfe6bce19b2"
+        "DirectOffer":"b61bfe6bce19b2"
     },
     "native": {
         "All":"b5aa1fa2cae775",
@@ -99,12 +99,12 @@
         "Pangle":"b612f6eb28dc91",
         "HeadBidding Ad":"b6063e58cb39ee",
         "MyOffer":"b5f33a12982b7f",
-        "Directly":"b61bfe6b1e023a"
+        "DirectOffer":"b61bfe6b1e023a"
     },
     "splash": {
         "Admob":"b5f73fe0c5db29",
         "Mintegral":"b5ee8ae8611366",
         "MyOffer":"b5f33a1598fe94",
-        "Directly":"b61bfe6a976167"
+        "DirectOffer":"b61bfe6a976167"
     }
 }
