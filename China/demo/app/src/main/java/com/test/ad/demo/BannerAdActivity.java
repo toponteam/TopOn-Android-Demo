@@ -219,6 +219,19 @@ public class BannerAdActivity extends Activity {
             }
         });
 
+        findViewById(R.id.hideAd_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mBannerView != null) {
+                    if(mBannerView.getVisibility() != View.VISIBLE){
+                        mBannerView.setVisibility(View.VISIBLE);
+                    } else {
+                        mBannerView.setVisibility(View.INVISIBLE);
+                    }
+
+                }
+            }
+        });
     }
 
     @Override
