@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.core.api.ATMediationRequestInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
@@ -64,15 +63,17 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
         }
 
-        ATMediationRequestInfo atMediationRequestInfo = null;
 
-//        atMediationRequestInfo = new MintegralATRequestInfo("100947", "ef13ef712aeb0f6eb3d698c4c08add96", "210169", "276803");
-//        atMediationRequestInfo.setAdSourceId("68188");
+        String defaultConfig = "";
 
-//        atMediationRequestInfo = new AdmobATRequestInfo("ca-app-pub-9488501426181082~6354662111", "ca-app-pub-3940256099942544/1033173712", AdmobATRequestInfo.ORIENTATION_PORTRAIT);
-//        atMediationRequestInfo.setAdSourceId("145022");
-        splashAd = new ATSplashAd(this, placementId, atMediationRequestInfo, this, 5000);
+        //Mintegral
+//        defaultConfig = "{\"unit_id\":1333033,\"nw_firm_id\":6,\"adapter_class\":\"com.anythink.network.mintegral.MintegralATSplashAdapter\",\"content\":\"{\\\"placement_id\\\":\\\"210169\\\",\\\"unitid\\\":\\\"276803\\\",\\\"countdown\\\":\\\"5\\\",\\\"allows_skip\\\":\\\"1\\\",\\\"orientation\\\":\\\"1\\\",\\\"appkey\\\":\\\"ef13ef712aeb0f6eb3d698c4c08add96\\\",\\\"suport_video\\\":\\\"1\\\",\\\"appid\\\":\\\"100947\\\"}\"}";
 
+        //Admob
+//        defaultConfig = "{\"unit_id\":1333299,\"nw_firm_id\":2,\"adapter_class\":\"com.anythink.network.admob.AdmobATSplashAdapter\",\"content\":\"{\\\"orientation\\\":\\\"1\\\",\\\"unit_id\\\":\\\"ca-app-pub-3940256099942544\\\\\\/1033173712\\\",\\\"app_id\\\":\\\"ca-app-pub-9488501426181082~6354662111\\\"}\"}";
+
+        splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
+        ATSplashAd.entryAdScenario(placementId, "");
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
@@ -101,6 +102,18 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     public void onAdLoaded(boolean isTimeout) {
         Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
+
+        if (!inForeBackground) {
+            needShowSplashAd = true;
+            return;
+        }
+
+        if (!splashAd.isAdReady()) {
+            Log.e(TAG, "onAdLoaded: no cache" );
+            jumpToMainActivity();
+            return;
+        }
+
         splashAd.show(this, container);
     }
 
@@ -115,7 +128,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         Log.i(TAG, "onNoAdError---------:" + adError.getFullErrorInfo());
         jumpToMainActivity();
     }
-
 
 
     @Override
@@ -135,12 +147,15 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     boolean hasHandleJump = false;
-    boolean canJump;
+    boolean needJump;
+
+    boolean inForeBackground;
+    boolean needShowSplashAd;
 
     public void jumpToMainActivity() {
 
-        if (!canJump) {
-            canJump = true;
+        if (!needJump) {
+            needJump = true;
             return;
         }
 
@@ -156,18 +171,30 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     protected void onResume() {
         super.onResume();
 
-        if (canJump) {
+        inForeBackground = true;
+
+        if (needJump) {
             jumpToMainActivity();
         }
 
-        canJump = true;
+        needJump = true;
+
+        if (needShowSplashAd) {
+            needShowSplashAd = false;
+
+            if (splashAd.isAdReady()) {
+                splashAd.show(this, container);
+            }
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        canJump = false;
+        inForeBackground = false;
+
+        needJump = false;
     }
 
     @Override

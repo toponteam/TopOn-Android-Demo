@@ -25,13 +25,22 @@
         android:layout_below="@id/banner_spinner"
         android:text="Banner Load Ad" />
 
+    <Button
+        android:id="@+id/hideAd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadAd_btn"
+        android:text="Show or hide Ad" />
+
 
     <FrameLayout
         android:id="@+id/adview_container"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_below="@id/loadAd_btn"
+        android:layout_below="@id/hideAd_btn"
         android:layout_marginTop="10dp"></FrameLayout>
+
+
 
 
 

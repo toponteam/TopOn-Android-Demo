@@ -54,6 +54,7 @@ public class DemoApplication extends MultiDexApplication {
         ATSDK.setSubChannel("testSubChannle");
 
         ATSDK.init(this, appid, appKey);
+
     }
 
 }
