@@ -60,6 +60,14 @@
             android:gravity="center"
             android:text="RewardedVideo Demo"
             android:textSize="15dp" />
+        <Button
+            android:id="@+id/rewardedVideoAutoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="RewardedVideo Auto Demo"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/bannerBtn"
@@ -77,6 +85,15 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:text="Interstitial Demo"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/interstitialAutoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Interstitial AutoDemo"
             android:textSize="15dp" />
 
         <Button
