@@ -84,6 +84,16 @@
             android:name="com.test.ad.demo.TestMainActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.test.ad.demo.InterstitalAutoActivity"
+            android:label="InterstitialAuto"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name="com.test.ad.demo.RewardVideoAutoActivity"
+            android:label="RewardVideoAuto"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light" />
 
         <provider
             android:name="com.qq.e.comm.GDTFileProvider"
