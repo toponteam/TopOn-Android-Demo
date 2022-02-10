@@ -94,7 +94,7 @@ dependencies {
     //Mintegral
     api "com.anythink.sdk:adapter-mintegral-nonchina:5.8.11"
     api "com.mbridge.msdk.oversea:reward:16.0.11"
-    api "com.mbridge.msdk.oversea:interstitialvideo:16.0.11"
+    api "com.mbridge.msdk.oversea:newinterstitial:16.0.11"
     api "com.mbridge.msdk.oversea:mbnative:16.0.11"
     api "com.mbridge.msdk.oversea:interstitial:16.0.11"
     api "com.mbridge.msdk.oversea:mbsplash:16.0.11"
