@@ -28,10 +28,10 @@ import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
+import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
-import com.anythink.splashad.api.IATSplashEyeAd;
 import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
@@ -206,9 +206,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     @Override
-    public void onAdDismiss(ATAdInfo entity, IATSplashEyeAd splashEyeAd) {
-        Log.i(TAG, "onAdDismiss:\n" + entity.toString());
-        SplashEyeAdHolder.splashEyeAd = splashEyeAd;
+    public void onAdDismiss(ATAdInfo entity, ATSplashAdExtraInfo splashAdExtraInfo) {
+        Log.i(TAG, "onAdDismiss type:" + splashAdExtraInfo.getDismissType() + "\n" + entity.toString());
+        SplashEyeAdHolder.splashEyeAd = splashAdExtraInfo.getAtSplashEyeAd();
         jumpToMainActivity();
     }
 

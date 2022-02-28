@@ -11,10 +11,10 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.anythink.core.api.ATGDPRAuthCallback;
 import com.anythink.core.api.ATSDK;
