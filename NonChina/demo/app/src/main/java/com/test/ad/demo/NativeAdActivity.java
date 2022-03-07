@@ -128,6 +128,10 @@ public class NativeAdActivity extends Activity {
                 // since v5.7.82
 //                localMap.put(AdmobATConst.AD_CHOICES_PLACEMENT, AdmobATConst.AD_CHOICES_PLACEMENT_TOP_RIGHT);
 
+                // since v5.8.13
+                localMap.put(ATAdConst.KEY.START_APP_PRIMARY_IMAGE_SIZE, ATAdConst.START_APP_IMAGE_SIZE.SIZE_340x340);
+                localMap.put(ATAdConst.KEY.START_APP_SECONDARY_IMAGE_SIZE, ATAdConst.START_APP_IMAGE_SIZE.SIZE_100x100);
+
                 atNatives[mCurrentSelectIndex].setLocalExtra(localMap);
 
                 atNatives[mCurrentSelectIndex].makeAdRequest();

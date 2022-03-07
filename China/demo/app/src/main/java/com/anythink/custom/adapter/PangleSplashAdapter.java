@@ -184,14 +184,14 @@ public class PangleSplashAdapter extends CustomSplashAdapter implements TTSplash
     @Override
     public void onAdSkip() {
         if (mImpressionListener != null) {
-            mImpressionListener.onSplashAdDismiss(ATAdConst.DISMISS_TYPE.SKIP);
+            mImpressionListener.onSplashAdDismiss();
         }
     }
 
     @Override
     public void onAdTimeOver() {
         if (mImpressionListener != null) {
-            mImpressionListener.onSplashAdDismiss(ATAdConst.DISMISS_TYPE.TIMEOVER);
+            mImpressionListener.onSplashAdDismiss();
         }
     }
 
