@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/huawei/libs/network-framework-compat-4.0.20.302.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/785dcf806df3258fb93facfd90a74fb9/network-framework-compat-4.0.20.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/785dcf806df3258fb93facfd90a74fb9/network-framework-compat-4.0.20.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/785dcf806df3258fb93facfd90a74fb9/network-framework-compat-4.0.20.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mintegral/libs/mbridge_same.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2120fce45181f2d2de766ac7cf87a4a6/jetified-mbridge_same/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2120fce45181f2d2de766ac7cf87a4a6/jetified-mbridge_same/jars/libs/classes-2.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2120fce45181f2d2de766ac7cf87a4a6/jetified-mbridge_same/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2120fce45181f2d2de766ac7cf87a4a6/jetified-mbridge_same/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

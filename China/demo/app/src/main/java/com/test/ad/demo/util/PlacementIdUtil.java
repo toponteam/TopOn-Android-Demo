@@ -25,7 +25,10 @@ public class PlacementIdUtil {
     private static final String placementIdJson = "placementId.json";
     private static Map<String, String> rewardedVideoPlacements;
     private static Map<String, String> interstitialPlacements;
+    private static Map<String, String> fullScreenPlacements;
     private static Map<String, String> nativePlacements;
+    private static Map<String, String> drawPlacements;
+    private static Map<String, String> patchPlacements;
     private static Map<String, String> bannerPlacements;
     private static Map<String, String> splashPlacements;
 
@@ -85,6 +88,13 @@ public class PlacementIdUtil {
         return interstitialPlacements;
     }
 
+    public static Map<String, String> getFullScreenPlacements(Context context) {
+        if (fullScreenPlacements == null) {
+            fullScreenPlacements = getPlacementIdMap(context, placementIdJson, "fullscreen");
+        }
+        return fullScreenPlacements;
+    }
+
     public static Map<String, String> getBannerPlacements(Context context) {
         if (bannerPlacements == null) {
             bannerPlacements = getPlacementIdMap(context, placementIdJson, "banner");
@@ -97,6 +107,20 @@ public class PlacementIdUtil {
             nativePlacements = getPlacementIdMap(context, placementIdJson, "native");
         }
         return nativePlacements;
+    }
+
+    public static Map<String, String> getDrawPlacements(Context context) {
+        if (drawPlacements == null) {
+            drawPlacements = getPlacementIdMap(context, placementIdJson, "draw");
+        }
+        return drawPlacements;
+    }
+
+    public static Map<String, String> getPatchPlacements(Context context) {
+        if (patchPlacements == null) {
+            patchPlacements = getPlacementIdMap(context, placementIdJson, "patch");
+        }
+        return patchPlacements;
     }
 
     public static Map<String, String> getSplashPlacements(Context context) {

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mintegral/libs/anythink_network_mintegral_nonchina.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fe3ac2b71de462a7215ae2e0b0b4b6/jetified-anythink_network_mintegral_nonchina/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fe3ac2b71de462a7215ae2e0b0b4b6/jetified-anythink_network_mintegral_nonchina/jars/libs/anythink_network_mintegral_nonchina.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fe3ac2b71de462a7215ae2e0b0b4b6/jetified-anythink_network_mintegral_nonchina/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fe3ac2b71de462a7215ae2e0b0b4b6/jetified-anythink_network_mintegral_nonchina/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

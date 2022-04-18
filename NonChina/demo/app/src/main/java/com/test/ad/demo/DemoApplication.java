@@ -3,7 +3,6 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
@@ -14,8 +13,9 @@ import android.webkit.WebView;
 
 import androidx.multidex.MultiDexApplication;
 
+import com.anythink.core.api.ATAdConst;
+import com.anythink.core.api.ATDetectionResultCallback;
 import com.anythink.core.api.ATSDK;
-import com.anythink.core.api.NetTrafficeCallback;
 import com.facebook.stetho.Stetho;
 
 import java.util.ArrayList;
@@ -31,11 +31,6 @@ public class DemoApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-
-//        JacocoHelper.Builder builder = new JacocoHelper.Builder();
-//        builder.setApplication(this).setDebuggable(true);
-//        JacocoHelper.initialize(builder.build());
-
         //Android 9 or above must be set
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             String processName = getProcessName();
@@ -46,49 +41,45 @@ public class DemoApplication extends MultiDexApplication {
 
         Stetho.initializeWithDefaults(getApplicationContext());
         ATSDK.setNetworkLogDebug(true);
-        ATSDK.integrationChecking(this);
+        ATSDK.integrationChecking(getApplicationContext());
 
-        ATSDK.checkIsEuTraffic(this, new NetTrafficeCallback() {
+        ATSDK.setChannel("testChannle");
+        ATSDK.setSubChannel("testSubChannle");
 
-            @Override
-            public void onResultCallback(boolean isEU) {
-                if (isEU && ATSDK.getGDPRDataLevel(DemoApplication.this) == ATSDK.UNKNOWN) {
-                    ATSDK.showGdprAuth(DemoApplication.this);
-                }
-
-                Log.i("Demoapplication", "onResultCallback:" + isEU);
-            }
-
-            @Override
-            public void onErrorCallback(String errorMsg) {
-                Log.i("Demoapplication", "onErrorCallback:" + errorMsg);
-            }
-        });
         List excludelist = new ArrayList();
         excludelist.add("com.exclude.myoffer1");
         excludelist.add("com.exclude.myoffer2");
-        ATSDK.setExcludeMyOfferPkgList(excludelist);
+        ATSDK.setExcludePackageList(excludelist);
 
         Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isCnSDK());
         Log.i("Demoapplication", "SDKVersionName:" + ATSDK.getSDKVersionName());
 
         Map<String, Object> custommap = new HashMap<String, Object>();
-        custommap.put("key1","initCustomMap1");
-        custommap.put("key2","initCustomMap2");
+        custommap.put("key1", "initCustomMap1");
+        custommap.put("key2", "initCustomMap2");
         ATSDK.initCustomMap(custommap);
 
         Map<String, Object> subcustommap = new HashMap<String, Object>();
-        subcustommap.put("key1","initPlacementCustomMap1");
-        subcustommap.put("key2","initPlacementCustomMap2");
-        ATSDK.initPlacementCustomMap("b5aa1fa4165ea3",subcustommap);//native  facebook
+        subcustommap.put("key1", "initPlacementCustomMap1");
+        subcustommap.put("key2", "initPlacementCustomMap2");
+        ATSDK.initPlacementCustomMap("b5aa1fa4165ea3", subcustommap);//native  facebook
 
+        ATSDK.setDetectionListener(new ATDetectionResultCallback() {
+            @Override
+            public void onSucess(String rdid) {
+                Log.i("Demoapplication", "Detection id:" + rdid);
+            }
 
-        ATSDK.setChannel("testChannle");
-        ATSDK.setSubChannel("testSubChannle");
-        ATSDK.init(DemoApplication.this, appid, appKey);
+            @Override
+            public void onError(String errorMsg) {
+                Log.e("Demoapplication", "Detection init error: " + errorMsg);
+            }
+        });
+        ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
+        ATSDK.init(this, appid, appKey);
 
+        ATSDK.testModeDeviceInfo(this, null);
 
     }
-
 
 }

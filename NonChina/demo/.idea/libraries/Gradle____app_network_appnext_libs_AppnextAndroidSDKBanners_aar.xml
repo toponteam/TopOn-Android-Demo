@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/appnext/libs/AppnextAndroidSDKBanners.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a8ca89fa0c49fd5691bd3e56c0aa13c/jetified-AppnextAndroidSDKBanners/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a8ca89fa0c49fd5691bd3e56c0aa13c/jetified-AppnextAndroidSDKBanners/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a8ca89fa0c49fd5691bd3e56c0aa13c/jetified-AppnextAndroidSDKBanners/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

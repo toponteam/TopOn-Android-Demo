@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mintegral/libs/mbridge_interstitial.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f32caa09cb608efc5b784d328a76aa49/mbridge_interstitial/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f32caa09cb608efc5b784d328a76aa49/mbridge_interstitial/jars/libs/classes-2.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f32caa09cb608efc5b784d328a76aa49/mbridge_interstitial/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f32caa09cb608efc5b784d328a76aa49/mbridge_interstitial/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

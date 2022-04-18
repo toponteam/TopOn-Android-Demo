@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/appnext/libs/AppnextAndroidSDKAds.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b97d4e20503822895079f98c9d39b543/jetified-AppnextAndroidSDKAds/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b97d4e20503822895079f98c9d39b543/jetified-AppnextAndroidSDKAds/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b97d4e20503822895079f98c9d39b543/jetified-AppnextAndroidSDKAds/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

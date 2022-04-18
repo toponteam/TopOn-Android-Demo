@@ -95,6 +95,12 @@ repositories{
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.6.0'
+    }
+}
+
 dependencies {
     api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/mopub/libs/anythink_network_mopub.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c508f49be30c4cbdfe6958509d69ac48/jetified-anythink_network_mopub/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c508f49be30c4cbdfe6958509d69ac48/jetified-anythink_network_mopub/jars/libs/anythink_network_mopub.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c508f49be30c4cbdfe6958509d69ac48/jetified-anythink_network_mopub/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c508f49be30c4cbdfe6958509d69ac48/jetified-anythink_network_mopub/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

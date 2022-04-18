@@ -19,8 +19,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
@@ -43,9 +41,8 @@ public class RewardVideoAutoActivity extends Activity {
     private static ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
         @Override
         public void onRewardVideoAutoLoaded(String placementId) {
-            Log.i(TAG, "PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
             initPlacementIdLocalExtra(placementId);
-
+            Log.i(TAG, "PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
         }
 
         @Override
@@ -122,7 +119,7 @@ public class RewardVideoAutoActivity extends Activity {
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_load);
 
@@ -193,7 +190,7 @@ public class RewardVideoAutoActivity extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                Toast.makeText(RewardVideoAutoActivity.this,
+                Toast.makeText(getApplicationContext(),
                         parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
                 mCurrentSelectIndex = position;
@@ -209,7 +206,7 @@ public class RewardVideoAutoActivity extends Activity {
             @Override
             public void onClick(View v) {
                 ATAdStatusInfo atAdStatusInfo = ATRewardVideoAutoAd.checkAdStatus(rewardvideoPlacementIdMap.get(rewardvideoPlacementName[mCurrentSelectIndex]));
-                Toast.makeText(RewardVideoAutoActivity.this, "rewardVideo ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "rewardVideo ad ready status:" + atAdStatusInfo.isReady(), Toast.LENGTH_SHORT).show();
             }
         });
 

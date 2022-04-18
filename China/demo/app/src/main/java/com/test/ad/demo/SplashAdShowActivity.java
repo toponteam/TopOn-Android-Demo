@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
@@ -115,6 +116,40 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         splashAd.setLocalExtra(localMap);
         ATSplashAd.entryAdScenario(placementId, "");
 
+        splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
+            @Override
+            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
+            }
+
+            @Override
+            public void onAdSourceAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
+            }
+        });
+
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
             mHandler.postDelayed(new Runnable() {
@@ -169,7 +204,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         }
 
         if (!splashAd.isAdReady()) {
-            Log.e(TAG, "onAdLoaded: no cache" );
+            Log.e(TAG, "onAdLoaded: no cache");
             jumpToMainActivity();
             return;
         }
@@ -185,7 +220,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     public void onAdLoadTimeout() {
         Log.i(TAG, "onAdLoadTimeout---------");
-        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
     }
 
 

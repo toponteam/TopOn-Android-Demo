@@ -3,7 +3,6 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
@@ -28,7 +27,6 @@ import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -61,11 +59,13 @@ public class NativeListActivity extends Activity {
 
         setContentView(R.layout.activity_native_list);
 
-        placementId = PlacementIdUtil.getNativePlacements(this).get("Admob");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Toutiao");
 //        placementId = PlacementIdUtil.getNativePlacements(this).get("All");
 //        placementId = PlacementIdUtil.getNativePlacements(this).get("Mintegral");
-//        placementId = PlacementIdUtil.getNativePlacements(this).get("Pangle");
-//        placementId = PlacementIdUtil.getNativePlacements(this).get("Pangle Draw");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("GDT");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Toutiao Draw");
+//        placementId = PlacementIdUtil.getNativePlacements(this).get("Baidu");
+        placementId = getIntent().getStringExtra("placementId");
 
 
         adViewWidth = getResources().getDisplayMetrics().widthPixels;
@@ -88,7 +88,7 @@ public class NativeListActivity extends Activity {
         rvNative.setLayoutManager(layoutManager);
         mAdapter = new NativeListAdapter(adViewWidth, adViewHeight, data, new NativeListAdapter.OnNativeListCallback() {
             @Override
-            public ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView,  ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
+            public ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
                 return fetchAd(nativeAd, atNativeAdView, atNativeAdRenderer);
             }
 
@@ -96,6 +96,8 @@ public class NativeListActivity extends Activity {
             public void onClickLoadMore() {
                 List<String> mockData = createMockData();
                 mAdapter.addData(mockData);
+                checkAndLoadAd();
+
             }
         });
         rvNative.setAdapter(mAdapter);
@@ -215,6 +217,11 @@ public class NativeListActivity extends Activity {
                 @Override
                 public void onNativeAdLoadFail(AdError adError) {
                     isLoadingAd = false;
+                    if (!isLoadSuccessful) {
+                        isLoadSuccessful = true;
+                        findViewById(R.id.rv_native).setVisibility(View.VISIBLE);
+                        findViewById(R.id.pb).setVisibility(View.GONE);
+                    }
                     Log.e(TAG, "native ad onNativeAdLoadFail------------- " + adError.getFullErrorInfo());
                 }
             });
@@ -241,7 +248,7 @@ public class NativeListActivity extends Activity {
         }
     }
 
-    private ATNativeAdView fetchAd(NativeAd nativeAd, ATNativeAdView atNativeAdView,  ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
+    private ATNativeAdView fetchAd(NativeAd nativeAd, ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
 
         if (nativeAd != null) {
             Log.i(TAG, "fetchAd: startRenderAd");
@@ -252,13 +259,11 @@ public class NativeListActivity extends Activity {
         return null;
     }
 
-    private void renderAd(final NativeAd nativeAd, final ATNativeAdView atNativeAdView,  ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
+    private void renderAd(final NativeAd nativeAd, final ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
         nativeAd.setNativeEventListener(new ATNativeEventListener() {
             @Override
             public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                 Log.i(TAG, "native ad onAdImpressed--------\n" + entity.toString());
-
-                checkAndLoadAd();
             }
 
             @Override
@@ -302,6 +307,7 @@ public class NativeListActivity extends Activity {
             Log.i(TAG, "native ad start to render ad------------- ");
             nativeAd.renderAdView(atNativeAdView, atNativeAdRenderer);
             nativeAd.prepare(atNativeAdView);
+            checkAndLoadAd();
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/maio/libs/anythink_network_maio.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/876ca8139291d6310f77f04e9bd61d54/jetified-anythink_network_maio/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/876ca8139291d6310f77f04e9bd61d54/jetified-anythink_network_maio/jars/libs/anythink_network_maio.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/876ca8139291d6310f77f04e9bd61d54/jetified-anythink_network_maio/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/876ca8139291d6310f77f04e9bd61d54/jetified-anythink_network_maio/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/unityads/libs/anythink_network_unityads.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1336d0bf2bc5441fe56aa26604df59b/jetified-anythink_network_unityads/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1336d0bf2bc5441fe56aa26604df59b/jetified-anythink_network_unityads/jars/libs/anythink_network_unityads.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1336d0bf2bc5441fe56aa26604df59b/jetified-anythink_network_unityads/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1336d0bf2bc5441fe56aa26604df59b/jetified-anythink_network_unityads/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

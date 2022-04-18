@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_banner.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41a637576a12d4c51f4548036c1c3c2f/jetified-anythink_banner/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41a637576a12d4c51f4548036c1c3c2f/jetified-anythink_banner/jars/libs/anythink_banner.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41a637576a12d4c51f4548036c1c3c2f/jetified-anythink_banner/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/41a637576a12d4c51f4548036c1c3c2f/jetified-anythink_banner/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

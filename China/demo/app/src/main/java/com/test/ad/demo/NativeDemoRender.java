@@ -52,6 +52,13 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
     View mDevelopView;
 
     int mNetworkFirmId;
+    String adType;
+
+    int mAdWidth;
+
+    public void setAdWidth(int adWidth) {
+        mAdWidth = adWidth;
+    }
 
     @Override
     public View createView(Context context, int networkFirmId) {
@@ -79,6 +86,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         View versionArea = view.findViewById(R.id.native_ad_version_area);
         TextView versionTextView = view.findViewById(R.id.native_ad_version);
         versionTextView.setText(Html.fromHtml("<u>" + "版本" + "</u>"));
+        versionArea.setVisibility(View.GONE);
 
 
         if (mNetworkFirmId == 8 && isSelfHandleDownloadConfirm) {
@@ -91,7 +99,6 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         //bind view to download directly(Only for Baidu, GDT)
         //(For GDT):If NativeAd call setDownloadConfirmListener, these views' click event will callback to NativeAd.DownloadConfirmListener.onDownloadConfirm and you must handle these event)
         customDownloadViews.add(ctaView);
-
         // bind close button
         CustomNativeAd.ExtraInfo extraInfo = new CustomNativeAd.ExtraInfo.Builder()
                 .setCloseView(mCloseView)
@@ -128,7 +135,8 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
 
         Log.i("NativeDemoRender", "Ad Interaction type:" + (ad.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOW"));
 
-        switch (ad.getAdType()) {
+        adType = ad.getAdType();
+        switch (adType) {
             case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
                 Log.i("NativeDemoRender", "Ad source type: Video" + ", video duration: " + ad.getVideoDuration());
                 break;
@@ -162,9 +170,12 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
             if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
-            versionArea.setVisibility(View.GONE);
+            int height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            if (mNetworkFirmId == 6) { //Mintegral express ad's height must be setted
+                height = mAdWidth * 3 / 4;
+            }
 
-            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT));
+            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height));
             return;
         }
 
@@ -199,30 +210,36 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         }
 
 
+        int height = mAdWidth * 600 / 1024;
+        height = height <= 0 ? FrameLayout.LayoutParams.WRAP_CONTENT : height;
         if (mediaView != null) {
             if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
 
-            contentArea.addView(mediaView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
+            params.gravity = Gravity.CENTER;
+            mediaView.setLayoutParams(params);
+            contentArea.addView(mediaView, params);
 
         } else {
             if (!TextUtils.isEmpty(ad.getVideoUrl())) {
                 View playerView = initializePlayer(mContext, ad.getVideoUrl());
-                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
                 params.gravity = Gravity.CENTER;
                 playerView.setLayoutParams(params);
                 contentArea.addView(playerView, params);
             } else {
                 ATNativeImageView imageView = new ATNativeImageView(mContext);
                 imageView.setImage(ad.getMainImageUrl());
-                ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+                ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
                 imageView.setLayoutParams(params);
                 contentArea.addView(imageView, params);
                 mClickView.add(imageView);
             }
 
         }
+
 
         titleView.setText(ad.getTitle());
         descView.setText(ad.getDescriptionText());

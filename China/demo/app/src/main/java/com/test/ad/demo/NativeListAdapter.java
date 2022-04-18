@@ -10,12 +10,12 @@ package com.test.ad.demo;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
 
 import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -99,11 +99,10 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     private AdViewHolder onCreateAdViewHolder(@NonNull ViewGroup viewGroup) {
-        Log.i(TAG, "onCreateAdViewHolder: 创建adView");
+        Log.i(TAG, "onCreateAdViewHolder: create adView");
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.native_list_ad_item, viewGroup, false);
         ATNativeAdView atNativeAdView = new ATNativeAdView(viewGroup.getContext());
-        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(mAdWidth, mAdHeight);
-        atNativeAdView.setLayoutParams(params);
-        return new AdViewHolder(atNativeAdView);
+        return new AdViewHolder(view,atNativeAdView,mAdWidth);
     }
 
     private DataViewHolder onCreateDataViewHolder(@NonNull ViewGroup viewGroup) {
@@ -155,8 +154,17 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 nativeAd = mNativeListHelper.popNativeAdCache();
             }
             Log.i(TAG, "onBindAdViewHolder: nativeAd: " + nativeAd + ",   " + position);
+            Log.i(TAG, "onBindAdViewHolder: isNativeExpress: " + nativeAd.isNativeExpress() + ",   " + position);
 
             if (nativeAd != null && mOnNativeListCallback != null) {
+                viewHolder.mATNativeAdView.removeAllViews();
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                params.gravity = Gravity.CENTER_HORIZONTAL;
+                viewHolder.mATNativeAdView.setLayoutParams(params);
+
+                if (viewHolder.mATNativeAdView.getParent() == null) {
+                    viewHolder.mAdContainer.addView(viewHolder.mATNativeAdView);
+                }
                 mOnNativeListCallback.onBindAdView(nativeAd, viewHolder.mATNativeAdView, viewHolder.nativeDemoRender);
                 mNativeListHelper.putNativeAd(position, nativeAd);
             }
@@ -175,7 +183,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     private void onBindMoreViewHoler(MoreViewHolder viewHolder) {
-        viewHolder.mTvMore.setOnClickListener(new View.OnClickListener() {
+        viewHolder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mOnNativeListCallback != null) {
@@ -231,12 +239,13 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         ViewGroup mAdContainer;
         NativeDemoRender nativeDemoRender;
 
-        AdViewHolder(@NonNull View itemView) {
+        AdViewHolder(@NonNull View itemView,ATNativeAdView atNativeAdView, int adWidth) {
             super(itemView);
 
-            mATNativeAdView = (ATNativeAdView) itemView;
-            mAdContainer = mATNativeAdView.findViewById(R.id.ad_container);
+            mATNativeAdView = atNativeAdView;
+            mAdContainer = itemView.findViewById(R.id.ad_container);
             nativeDemoRender = new NativeDemoRender(itemView.getContext());
+            nativeDemoRender.setAdWidth(adWidth);
         }
     }
 

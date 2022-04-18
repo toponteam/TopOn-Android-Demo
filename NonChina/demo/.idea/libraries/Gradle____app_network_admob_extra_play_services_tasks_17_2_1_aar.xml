@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/admob/extra/play-services-tasks-17.2.1.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3699c124a09e4c22b9b52561fc2d8a2a/play-services-tasks-17.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3699c124a09e4c22b9b52561fc2d8a2a/play-services-tasks-17.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3699c124a09e4c22b9b52561fc2d8a2a/play-services-tasks-17.2.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

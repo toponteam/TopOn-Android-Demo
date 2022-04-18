@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/network/inmobi/extra/picasso-2.71828.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d20f7c8cb20f6b7aaf2ca189854f40e2/jetified-picasso-2.71828/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d20f7c8cb20f6b7aaf2ca189854f40e2/jetified-picasso-2.71828/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d20f7c8cb20f6b7aaf2ca189854f40e2/jetified-picasso-2.71828/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
