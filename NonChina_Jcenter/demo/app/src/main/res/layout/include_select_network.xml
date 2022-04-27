@@ -33,7 +33,7 @@
             android:layout_marginLeft="@dimen/anythink_padding"
             android:layout_toRightOf="@id/line1"
             android:text="@string/anythink_select_network"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/anythink_title_size" />
 
     </RelativeLayout>
@@ -67,7 +67,7 @@
             android:visibility="gone"
             android:text="Auto Load"
             android:textSize="@dimen/anythink_title_size"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:theme="@style/style_checkBox"
             android:layout_margin="@dimen/anythink_12dp"
             android:layout_gravity="center"/>

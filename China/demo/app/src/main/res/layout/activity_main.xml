@@ -13,7 +13,7 @@
         android:id="@+id/rl_sdk_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@android:color/white"
         android:gravity="center"
         android:padding="@dimen/anythink_padding">
 
@@ -56,7 +56,7 @@
             android:paddingLeft="32dp"
             android:paddingRight="32dp"
             android:text="@string/anythink_click_to_copy_device_id"
-            android:textColor="@color/black" />
+            android:textColor="@android:color/black" />
 
         <TextView
             android:id="@+id/tv_version"
@@ -122,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/anythink_title_rewarded_video"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/anythink_title_size" />
 
                     <TextView
@@ -176,7 +176,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/anythink_title_interstitial"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/anythink_title_size" />
 
                     <TextView
@@ -230,7 +230,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/anythink_title_splash"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/anythink_title_size" />
 
                     <TextView
@@ -284,7 +284,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/anythink_title_banner"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/anythink_title_size" />
 
                     <TextView
@@ -338,7 +338,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/anythink_title_native"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/anythink_title_size" />
 
                     <TextView

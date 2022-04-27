@@ -206,6 +206,9 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
         if (!TextUtils.isEmpty(ad.getAdChoiceIconUrl())) {
             logoView.setImage(ad.getAdChoiceIconUrl());
         } else {
+            if (ad.getAdLogo() != null) {
+                logoView.setImageBitmap(ad.getAdLogo());
+            }
 //            logoView.setImageResource(R.drawable.ad_logo);
         }
 

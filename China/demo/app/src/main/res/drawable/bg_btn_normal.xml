@@ -11,7 +11,7 @@
     <item>
         <shape>
             <stroke android:width="@dimen/anythink_1dp" android:color="@color/anythink_0042DF"/>
-            <solid android:color="@color/white"/>
+            <solid android:color="@android:color/white"/>
             <corners android:radius="4dp"/>
         </shape>
     </item>

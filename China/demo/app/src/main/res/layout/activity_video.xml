@@ -35,7 +35,7 @@
                 android:layout_width="80dp"
                 android:layout_height="140dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/text_size_12"
+                android:layout_marginTop="@dimen/anythink_text_size_12"
                 android:src="@mipmap/ic_test_rewarded_video" />
 
             <TextView

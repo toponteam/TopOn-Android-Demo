@@ -1,0 +1,15 @@
+repositories {
+    //Mintegral
+    maven {
+        url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+    }
+
+}
+dependencies {
+    //Androidx (Necessary)
+    api "androidx.appcompat:appcompat:1.1.0"
+    api "androidx.browser:browser:1.0.0"
+
+    //Mintegral
+
+}

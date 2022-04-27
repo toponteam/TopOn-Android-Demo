@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+
 import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.NativeAd;
