@@ -17,17 +17,14 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.china.api.ATAppDownloadListener;
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
@@ -38,7 +35,6 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -294,6 +290,7 @@ public class BannerAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         if (mBannerView != null) {
             mBannerView.destroy();
         }

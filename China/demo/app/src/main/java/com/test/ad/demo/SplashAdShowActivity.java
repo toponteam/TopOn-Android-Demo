@@ -318,7 +318,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     protected void onDestroy() {
         super.onDestroy();
         if (splashAd != null) {
-            splashAd.onDestory();
+            splashAd.setAdListener(null);
+            splashAd.setAdDownloadListener(null);
+            splashAd.setAdSourceStatusListener(null);
         }
 
     }

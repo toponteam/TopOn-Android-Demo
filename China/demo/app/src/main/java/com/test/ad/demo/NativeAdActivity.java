@@ -242,13 +242,13 @@ public class NativeAdActivity extends Activity {
             @Override
             public void onNativeAdLoaded() {
                 Log.i(TAG, "onNativeAdLoaded");
-                ViewUtil.printLog(tvShowLog,"load success...");
+                ViewUtil.printLog(tvShowLog, "load success...");
             }
 
             @Override
             public void onNativeAdLoadFail(AdError adError) {
                 Log.i(TAG, "onNativeAdLoadFail, " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"load fail...：" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "load fail...：" + adError.getFullErrorInfo());
             }
         });
     }
@@ -270,7 +270,7 @@ public class NativeAdActivity extends Activity {
     private void isAdReady() {
         boolean isReady = mATNative.checkAdStatus().isReady();
         Log.i(TAG, "isAdReady: " + isReady);
-        ViewUtil.printLog(tvShowLog,"isAdReady：" + isReady);
+        ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
     }
 
     private void showAd(ViewGroup adContainer, int adViewWidth, int adViewHeight, NativeDemoRender anyThinkRender) {
@@ -297,31 +297,31 @@ public class NativeAdActivity extends Activity {
                 @Override
                 public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
-                    ViewUtil.printLog(tvShowLog,"onAdImpressed");
+                    ViewUtil.printLog(tvShowLog, "onAdImpressed");
                 }
 
                 @Override
                 public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdClicked:\n" + entity.toString());
-                    ViewUtil.printLog(tvShowLog,"onAdClicked");
+                    ViewUtil.printLog(tvShowLog, "onAdClicked");
                 }
 
                 @Override
                 public void onAdVideoStart(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoStart");
-                    ViewUtil.printLog(tvShowLog,"onAdVideoStart");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoStart");
                 }
 
                 @Override
                 public void onAdVideoEnd(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoEnd");
-                    ViewUtil.printLog(tvShowLog,"onAdVideoEnd");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoEnd");
                 }
 
                 @Override
                 public void onAdVideoProgress(ATNativeAdView view, int progress) {
                     Log.i(TAG, "native ad onAdVideoProgress:" + progress);
-                    ViewUtil.printLog(tvShowLog,"onAdVideoProgress");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoProgress");
                 }
             });
 
@@ -329,7 +329,7 @@ public class NativeAdActivity extends Activity {
                 @Override
                 public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdCloseButtonClick");
-                    ViewUtil.printLog(tvShowLog,"native ad onAdCloseButtonClick");
+                    ViewUtil.printLog(tvShowLog, "native ad onAdCloseButtonClick");
                     if (view.getParent() != null) {
                         ((ViewGroup) view.getParent()).removeView(view);
                         view.removeAllViews();
@@ -415,7 +415,7 @@ public class NativeAdActivity extends Activity {
             mPanel.setVisibility(View.VISIBLE);
             initPanelButtonList(anyThinkRender.adType);
         } else {
-            ViewUtil.printLog(tvShowLog,"this placement no cache!");
+            ViewUtil.printLog(tvShowLog, "this placement no cache!");
         }
     }
 
@@ -446,7 +446,12 @@ public class NativeAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         destroyAd();
+        if (mATNative != null) {
+            mATNative.setAdListener(null);
+            mATNative.setAdSourceStatusListener(null);
+        }
     }
 
     private void destroyAd() {
@@ -550,7 +555,7 @@ public class NativeAdActivity extends Activity {
         }
     }
 
-    private void exitNativePanel(){
+    private void exitNativePanel() {
         mData.clear();
         destroyAd();
         mPanel.setVisibility(View.GONE);
@@ -558,7 +563,7 @@ public class NativeAdActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode== KeyEvent.KEYCODE_BACK && mPanel.getVisibility() == View.VISIBLE) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && mPanel.getVisibility() == View.VISIBLE) {
             exitNativePanel();
             return true;
         }

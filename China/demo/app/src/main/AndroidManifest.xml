@@ -134,7 +134,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_sigmob_file_path" />
         </provider> <!-- source file: china/network_sdk/mimo/5.1.1/AndroidManifest.xml -->
-        <!-- source file: china/network_sdk/klevin/2.4.2.4/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/klevin/2.7.2.10/AndroidManifest.xml -->
         <provider
             android:name="com.tencent.klevin.utils.FileProvider"
             android:authorities="${applicationId}.klevin.fileProvider"

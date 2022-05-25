@@ -19,9 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
@@ -32,7 +30,6 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -90,7 +87,7 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
 
         Map<String, String> placementIdMap = PlacementIdUtil.getSplashPlacements(this);
         List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-        
+
         Spinner spinner = (Spinner) findViewById(R.id.spinner_1);
 //        CheckBox isCustomSkipViewCheckBox = findViewById(R.id.splash_is_custom_skip);
 
@@ -109,7 +106,7 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
                 mCurrentPlacementName = parent.getSelectedItem().toString();
 
                 String placementName = placementIdMap.get(mCurrentPlacementName);
-                init(placementName,defaultConfig);
+                init(placementName, defaultConfig);
 
 //                if (TextUtils.equals(mCurrentPlacementName, "MyOffer")
 //                        || TextUtils.equals(mCurrentPlacementName, "Adx(internal)")
@@ -173,14 +170,14 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
     private void isAdReady() {
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            ViewUtil.printLog(tvShowLog,"SplashAd is ready to show.");
+            ViewUtil.printLog(tvShowLog, "SplashAd is ready to show.");
         } else {
             Log.i(TAG, "SplashAd isn't ready to show.");
-            ViewUtil.printLog(tvShowLog,"SplashAd isn't ready to show.");
+            ViewUtil.printLog(tvShowLog, "SplashAd isn't ready to show.");
         }
     }
 
-    private void init(String placementId,String defaultConfig) {
+    private void init(String placementId, String defaultConfig) {
         splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
         ATSplashAd.entryAdScenario(placementId, "");
     }
@@ -188,19 +185,19 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
     @Override
     public void onAdLoaded(boolean isTimeout) {
         Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
-        ViewUtil.printLog(tvShowLog,"onAdLoaded---------isTimeout:" + isTimeout);
+        ViewUtil.printLog(tvShowLog, "onAdLoaded---------isTimeout:" + isTimeout);
     }
 
     @Override
     public void onAdLoadTimeout() {
         Log.i(TAG, "onAdLoadTimeout---------");
-        ViewUtil.printLog(tvShowLog,"onAdLoadTimeout---------");
+        ViewUtil.printLog(tvShowLog, "onAdLoadTimeout---------");
     }
 
     @Override
     public void onNoAdError(AdError adError) {
         Log.i(TAG, "onNoAdError---------:" + adError.getFullErrorInfo());
-        ViewUtil.printLog(tvShowLog,"onNoAdError---------:" + adError.getFullErrorInfo());
+        ViewUtil.printLog(tvShowLog, "onNoAdError---------:" + adError.getFullErrorInfo());
     }
 
     @Override
@@ -226,5 +223,16 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
     @Override
     public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        tvShowLog = null;
+        if (splashAd != null) {
+            splashAd.setAdListener(null);
+            splashAd.setAdDownloadListener(null);
+            splashAd.setAdSourceStatusListener(null);
+        }
+        super.onDestroy();
     }
 }

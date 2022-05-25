@@ -9,7 +9,6 @@ package com.test.ad.demo;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -19,12 +18,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
@@ -43,6 +39,7 @@ import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,6 +65,8 @@ public class InterstitialAdActivity extends Activity {
     private RelativeLayout rlInterstitial;
     private RelativeLayout rlfullscreen;
 
+    private static WeakReference<TextView> tvShowLogReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +87,7 @@ public class InterstitialAdActivity extends Activity {
 
         tvShowLog = findViewById(R.id.tv_show_log);
         tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+        tvShowLogReference = new WeakReference<>(tvShowLog);
         tvLoadAdBtn = findViewById(R.id.load_ad_btn);
         tvIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
         tvShowAdBtn = findViewById(R.id.show_ad_btn);
@@ -189,49 +189,49 @@ public class InterstitialAdActivity extends Activity {
             @Override
             public void onInterstitialAdLoaded() {
                 Log.i(TAG, "onInterstitialAdLoaded");
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdLoaded");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdLoaded");
             }
 
             @Override
             public void onInterstitialAdLoadFail(AdError adError) {
                 Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdLoadFail:" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdLoadFail:" + adError.getFullErrorInfo());
             }
 
             @Override
             public void onInterstitialAdClicked(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClicked:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdClicked");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdClicked");
             }
 
             @Override
             public void onInterstitialAdShow(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdShow:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdShow");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdShow");
             }
 
             @Override
             public void onInterstitialAdClose(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClose:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdClose");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdClose");
             }
 
             @Override
             public void onInterstitialAdVideoStart(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdVideoStart:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoStart");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoStart");
             }
 
             @Override
             public void onInterstitialAdVideoEnd(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdVideoEnd:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoEnd");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoEnd");
             }
 
             @Override
             public void onInterstitialAdVideoError(AdError adError) {
                 Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoError");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoError");
             }
 
         });
@@ -333,12 +333,12 @@ public class InterstitialAdActivity extends Activity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     isAutoLoad = true;
-                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName),true);
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), true);
                     ATInterstitialAutoAd.addPlacementId(mPlacementIdMap.get(mCurrentNetworkName));
                     tvLoadAdBtn.setVisibility(View.GONE);
                 } else {
                     isAutoLoad = false;
-                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName),false);
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), false);
                     ATInterstitialAutoAd.removePlacementId(mPlacementIdMap.get(mCurrentNetworkName));
                     tvLoadAdBtn.setVisibility(View.VISIBLE);
                 }
@@ -382,17 +382,23 @@ public class InterstitialAdActivity extends Activity {
         }
     }
 
-    private ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
+    private static ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
         @Override
         public void onInterstitialAutoLoaded(String placementId) {
-            Log.i(TAG,"PlacementId:" + placementId + ": onInterstitialAutoLoaded");
-            ViewUtil.printLog(tvShowLog,"PlacementId:" + placementId + ": onInterstitialAutoLoaded");
+            Log.i(TAG, "PlacementId:" + placementId + ": onInterstitialAutoLoaded");
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onInterstitialAutoLoaded");
+            }
         }
 
         @Override
         public void onInterstitialAutoLoadFail(String placementId, AdError adError) {
-            Log.i(TAG,"PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
-            ViewUtil.printLog(tvShowLog,"PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
+            Log.i(TAG, "PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
+            }
         }
 
     };
@@ -401,37 +407,37 @@ public class InterstitialAdActivity extends Activity {
         @Override
         public void onInterstitialAdClicked(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdClicked:" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdClicked:");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdClicked:");
         }
 
         @Override
         public void onInterstitialAdShow(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdShow:" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdShow");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdShow");
         }
 
         @Override
         public void onInterstitialAdClose(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdClose:" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdClose");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdClose");
         }
 
         @Override
         public void onInterstitialAdVideoStart(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdVideoStart:" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoStart");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoStart");
         }
 
         @Override
         public void onInterstitialAdVideoEnd(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdVideoEnd:" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoEnd");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoEnd");
         }
 
         @Override
         public void onInterstitialAdVideoError(AdError adError) {
             Log.i(TAG, "onInterstitialAdVideoError:" + adError.getFullErrorInfo());
-            ViewUtil.printLog(tvShowLog,"onInterstitialAdVideoError" + adError.getFullErrorInfo());
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoError" + adError.getFullErrorInfo());
         }
 
         public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
@@ -446,11 +452,15 @@ public class InterstitialAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (autoLoadListener != null) {
-            autoLoadListener = null;
-        }
+        tvShowLog = null;
         for (Map.Entry<String, Boolean> entry : mAutoLoadPlacementIdMap.entrySet()) {
             ATInterstitialAutoAd.removePlacementId(entry.getKey());
+        }
+
+        if (mInterstitialAd != null) {
+            mInterstitialAd.setAdSourceStatusListener(null);
+            mInterstitialAd.setAdDownloadListener(null);
+            mInterstitialAd.setAdListener(null);
         }
     }
 

@@ -225,6 +225,7 @@ public class BannerAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         if (mBannerView != null) {
             mBannerView.destroy();
         }

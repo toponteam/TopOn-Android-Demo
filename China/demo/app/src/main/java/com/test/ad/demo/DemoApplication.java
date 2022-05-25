@@ -104,6 +104,7 @@ public class DemoApplication extends MultiDexApplication {
             }
         });
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
+//        ATSDK.setUseHTTP(true);
         ATSDK.init(this, appid, appKey);
 
         ATSDK.testModeDeviceInfo(this, null);

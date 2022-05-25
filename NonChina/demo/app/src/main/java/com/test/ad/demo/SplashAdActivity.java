@@ -200,6 +200,7 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         ViewUtil.printLog(tvShowLog,"onNoAdError---------:" + adError.getFullErrorInfo());
     }
 
+
     @Override
     public void onAdShow(ATAdInfo entity) {
 
@@ -223,5 +224,16 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
     @Override
     public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        tvShowLog = null;
+        if (splashAd != null) {
+            splashAd.setAdListener(null);
+            splashAd.setAdDownloadListener(null);
+            splashAd.setAdSourceStatusListener(null);
+        }
+        super.onDestroy();
     }
 }

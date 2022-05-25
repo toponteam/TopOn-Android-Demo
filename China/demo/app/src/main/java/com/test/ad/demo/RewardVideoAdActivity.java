@@ -9,7 +9,6 @@ package com.test.ad.demo;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -19,11 +18,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
@@ -42,6 +38,7 @@ import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,13 +60,14 @@ public class RewardVideoAdActivity extends Activity {
     private TextView tvShowLog;
     private CheckBox ckAutoLoad;
 
+    public static WeakReference<TextView> tvShowLogReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_video);
-
         ATRewardVideoAutoAd.init(this, null, autoLoadListener);
 
         findViewById(R.id.rl_type).setSelected(true);
@@ -85,6 +83,7 @@ public class RewardVideoAdActivity extends Activity {
 
         tvShowLog = findViewById(R.id.tv_show_log);
         tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+        tvShowLogReference = new WeakReference<>(tvShowLog);
         tvLoadAdBtn = findViewById(R.id.load_ad_btn);
         tvIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
         tvShowAdBtn = findViewById(R.id.show_ad_btn);
@@ -186,80 +185,80 @@ public class RewardVideoAdActivity extends Activity {
             @Override
             public void onRewardedVideoAdAgainPlayStart(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdAgainPlayStart:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdAgainPlayStart");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayStart");
             }
 
             @Override
             public void onRewardedVideoAdAgainPlayEnd(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdAgainPlayEnd:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdAgainPlayEnd");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayEnd");
             }
 
             @Override
             public void onRewardedVideoAdAgainPlayFailed(AdError errorCode, ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdAgainPlayFailed error: " + errorCode.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdAgainPlayFailed:" + errorCode.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayFailed:" + errorCode.getFullErrorInfo());
             }
 
             @Override
             public void onRewardedVideoAdAgainPlayClicked(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdAgainPlayClicked: " + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdAgainPlayClicked");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayClicked");
             }
 
             @Override
             public void onAgainReward(ATAdInfo entity) {
                 Log.i(TAG, "onAgainReward:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onAgainReward");
+                ViewUtil.printLog(tvShowLog, "onAgainReward");
             }
             //-------------------------- Only for CSJ --------------------------
 
             @Override
             public void onRewardedVideoAdLoaded() {
                 Log.i(TAG, "onRewardedVideoAdLoaded");
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdLoaded");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdLoaded");
             }
 
             @Override
             public void onRewardedVideoAdFailed(AdError errorCode) {
                 Log.i(TAG, "onRewardedVideoAdFailed error:" + errorCode.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdFailed:" + errorCode.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdFailed:" + errorCode.getFullErrorInfo());
             }
 
             @Override
             public void onRewardedVideoAdPlayStart(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayStart:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdPlayStart");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayStart");
             }
 
             @Override
             public void onRewardedVideoAdPlayEnd(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayEnd:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdPlayEnd");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayEnd");
             }
 
             @Override
             public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayEnd:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdPlayFailed:" + errorCode.getFullErrorInfo());
+                Log.i(TAG, "onRewardedVideoAdPlayFailed:\n" + entity.toString());
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayFailed:" + errorCode.getFullErrorInfo());
             }
 
             @Override
             public void onRewardedVideoAdClosed(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdClosed:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdClosed");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdClosed");
             }
 
             @Override
             public void onRewardedVideoAdPlayClicked(ATAdInfo entity) {
                 Log.i(TAG, "onRewardedVideoAdPlayClicked:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onRewardedVideoAdPlayClicked");
+                ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayClicked");
             }
 
             @Override
             public void onReward(ATAdInfo entity) {
                 Log.e(TAG, "onReward:\n" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onReward");
+                ViewUtil.printLog(tvShowLog, "onReward");
             }
         });
 
@@ -283,7 +282,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                ViewUtil.printLog(tvShowLog,"ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
+                ViewUtil.printLog(tvShowLog, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
                         + "\ncurrBytes:" + currBytes
                         + "\nfileName:" + fileName
                         + "\nappName:" + appName);
@@ -356,12 +355,12 @@ public class RewardVideoAdActivity extends Activity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     isAutoLoad = true;
-                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName),true);
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), true);
                     ATRewardVideoAutoAd.addPlacementId(mPlacementIdMap.get(mCurrentNetworkName));
                     tvLoadAdBtn.setVisibility(View.GONE);
                 } else {
                     isAutoLoad = false;
-                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName),false);
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), false);
                     ATRewardVideoAutoAd.removePlacementId(mPlacementIdMap.get(mCurrentNetworkName));
                     tvLoadAdBtn.setVisibility(View.VISIBLE);
                 }
@@ -410,28 +409,39 @@ public class RewardVideoAdActivity extends Activity {
         }
     }
 
-    private ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
+    public static ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
         @Override
         public void onRewardVideoAutoLoaded(String placementId) {
             initPlacementIdLocalExtra(placementId);
-            Log.i(TAG,"PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
-            ViewUtil.printLog(tvShowLog,"PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
+            Log.i(TAG, "PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onRewardVideoAutoLoaded");
+            }
         }
 
         @Override
         public void onRewardVideoAutoLoadFail(String placementId, AdError adError) {
-            Log.i(TAG,"PlacementId:" + placementId + ": onRewardVideoAutoLoadFail:\n" + adError.getFullErrorInfo());
-            ViewUtil.printLog(tvShowLog,"PlacementId:" + placementId + ": onRewardVideoAutoLoadFail:\n" + adError.getFullErrorInfo());
+            Log.i(TAG, "PlacementId:" + placementId + ": onRewardVideoAutoLoadFail:\n" + adError.getFullErrorInfo());
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onRewardVideoAutoLoadFail:\n" + adError.getFullErrorInfo());
+            }
+        }
+
+        @Override
+        protected void finalize() throws Throwable {
+            super.finalize();
         }
     };
 
-    private void initPlacementIdLocalExtra(String placementId) {
+    public static void initPlacementIdLocalExtra(String placementId) {
         String userid = "test_userid_001";
         String userdata = "test_userdata_001_" + placementId + "_" + System.currentTimeMillis();
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.USER_ID, userid);
         localMap.put(ATAdConst.KEY.USER_CUSTOM_DATA, userdata);
-        Log.i(TAG,"Set PlacementId:" + placementId + ": UserId:" + userid + "| userdata:" + userdata);
+        Log.i(TAG, "Set PlacementId:" + placementId + ": UserId:" + userid + "| userdata:" + userdata);
         ATRewardVideoAutoAd.setLocalExtra(placementId, localMap);
     }
 
@@ -439,71 +449,71 @@ public class RewardVideoAdActivity extends Activity {
 
         @Override
         public void onRewardedVideoAdPlayStart(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdPlayStart:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdPlayStart:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayStart:");
         }
 
         @Override
         public void onRewardedVideoAdPlayEnd(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdPlayEnd:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdPlayEnd:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayEnd");
         }
 
         @Override
         public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdPlayFailed:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdPlayFailed:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayFailed");
         }
 
         @Override
         public void onRewardedVideoAdClosed(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdClosed:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdClosed:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdClosed");
         }
 
         @Override
         public void onRewardedVideoAdPlayClicked(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdPlayClicked:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdPlayClicked:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayClicked");
         }
 
         @Override
         public void onReward(ATAdInfo adInfo) {
             Log.e(TAG, "onReward:\n" + adInfo.toString());
-            ViewUtil.printLog(tvShowLog,"onReward");
+            ViewUtil.printLog(tvShowLog, "onReward");
         }
 
         public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
-            Log.i(TAG,"onDeeplinkCallback:\n" + adInfo.toString() + "| isSuccess:" + isSuccess);
+            Log.i(TAG, "onDeeplinkCallback:\n" + adInfo.toString() + "| isSuccess:" + isSuccess);
         }
 
         public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-            Log.i(TAG,"onDownloadConfirm:\n" + adInfo.toString());
+            Log.i(TAG, "onDownloadConfirm:\n" + adInfo.toString());
         }
 
         //again listener
         public void onRewardedVideoAdAgainPlayStart(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdAgainPlayStart:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdAgainPlayStart:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayStart");
         }
 
         public void onRewardedVideoAdAgainPlayEnd(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdAgainPlayEnd:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdAgainPlayEnd:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayEnd");
         }
 
         public void onRewardedVideoAdAgainPlayFailed(AdError adError, ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdAgainPlayFailed:\n" + adInfo.toString() + "｜error：" + adError.getFullErrorInfo());
+            Log.i(TAG, "onRewardedVideoAdAgainPlayFailed:\n" + adInfo.toString() + "｜error：" + adError.getFullErrorInfo());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayFailed");
         }
 
         public void onRewardedVideoAdAgainPlayClicked(ATAdInfo adInfo) {
-            Log.i(TAG,"onRewardedVideoAdAgainPlayClicked:\n" + adInfo.toString());
+            Log.i(TAG, "onRewardedVideoAdAgainPlayClicked:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onRewardedVideoAdAgainPlayClicked");
         }
 
         public void onAgainReward(ATAdInfo adInfo) {
-            Log.i(TAG,"onAgainReward:\n" + adInfo.toString());
+            Log.i(TAG, "onAgainReward:\n" + adInfo.toString());
             ViewUtil.printLog(tvShowLog, "onAgainReward");
         }
     };
@@ -511,11 +521,13 @@ public class RewardVideoAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (autoLoadListener != null) {
-            autoLoadListener = null;
-        }
         for (Map.Entry<String, Boolean> entry : mAutoLoadPlacementIdMap.entrySet()) {
             ATRewardVideoAutoAd.removePlacementId(entry.getKey());
+        }
+        if (mRewardVideoAd != null) {
+            mRewardVideoAd.setAdSourceStatusListener(null);
+            mRewardVideoAd.setAdDownloadListener(null);
+            mRewardVideoAd.setAdListener(null);
         }
     }
 

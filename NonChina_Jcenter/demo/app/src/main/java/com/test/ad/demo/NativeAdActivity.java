@@ -393,7 +393,12 @@ public class NativeAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         destroyAd();
+        if (mATNative != null) {
+            mATNative.setAdListener(null);
+            mATNative.setAdSourceStatusListener(null);
+        }
     }
 
     private void destroyAd() {
