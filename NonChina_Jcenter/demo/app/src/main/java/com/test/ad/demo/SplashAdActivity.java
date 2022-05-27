@@ -141,10 +141,13 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
+                if (splashAd.isAdReady()) {
+                    Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
+                    intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
 //                intent.putExtra("custom_skip_view", isCustomSkipViewCheckBox.isChecked());
-                startActivity(intent);
+                    startActivity(intent);
+                }
+
             }
         });
 

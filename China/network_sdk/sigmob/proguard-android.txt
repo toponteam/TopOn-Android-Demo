@@ -1,3 +1,6 @@
+# 优化 不优化输入的类文件
+-dontoptimize
+
 # androidx
 
 -keep class com.google.android.material.** {*;}
@@ -18,8 +21,10 @@
 # WindAd
 
 -keep class sun.misc.Unsafe { *; }
--dontwarn com.sigmob.**
 -keep class com.sigmob.**.**{*;}
+-keep interface com.sigmob.**.**{*;}
+-keep class com.czhj.**{*;}
+-keep interface com.czhj.**{*;}
 
 # miitmdid
 

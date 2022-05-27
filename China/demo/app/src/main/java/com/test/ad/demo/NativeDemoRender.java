@@ -171,7 +171,7 @@ public class NativeDemoRender implements ATNativeAdRenderer<CustomNativeAd> {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
             int height = ViewGroup.LayoutParams.WRAP_CONTENT;
-            if (mNetworkFirmId == 6) { //Mintegral express ad's height must be setted
+            if (mNetworkFirmId == 6 || mNetworkFirmId == 66) { //Mintegral express ad's height must be setted
                 height = mAdWidth * 3 / 4;
             }
 
