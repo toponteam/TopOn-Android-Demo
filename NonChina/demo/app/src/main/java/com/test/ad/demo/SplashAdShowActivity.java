@@ -108,11 +108,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
         splashAd.setLocalExtra(localMap);
-        ATSplashAd.entryAdScenario(placementId, "");
+        ATSplashAd.entryAdScenario(placementId, "f628c7999265cd");
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
@@ -154,6 +151,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 @Override
                 public void run() {
                     splashAd.show(SplashAdShowActivity.this, container);
+//                    splashAd.show(SplashAdShowActivity.this, container, "f628c7999265cd");
                 }
             }, 10);
 
@@ -190,6 +188,21 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 }
             }
         }));
+
+//        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
+//            @Override
+//            public void onAdTick(long duration, long remainder) {
+//                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
+//            }
+//
+//            @Override
+//            public void isSupportCustomSkipView(boolean isSupport) {
+//                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
+//                if (isSupport) {
+//                    skipView.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        }), "f628c7999265cd");
     }
 
     @Override
@@ -212,6 +225,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             showAdWithCustomSkipView();
         } else {
             splashAd.show(this, container);
+//            splashAd.show(this, container, "f628c7999265cd");
         }
     }
 
@@ -299,6 +313,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
             if (splashAd.isAdReady()) {
                 splashAd.show(this, container);
+//                splashAd.show(this, container, "f628c7999265cd");
             }
         }
     }
@@ -317,7 +332,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         super.onDestroy();
         if (splashAd != null) {
             splashAd.setAdListener(null);
-            splashAd.setAdDownloadListener(null);
             splashAd.setAdSourceStatusListener(null);
         }
 

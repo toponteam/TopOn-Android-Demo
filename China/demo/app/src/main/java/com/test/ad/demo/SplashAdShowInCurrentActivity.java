@@ -16,20 +16,17 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashEyeAdListener;
 import com.anythink.splashad.api.IATSplashEyeAd;
-import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
 import java.util.HashMap;
@@ -76,9 +73,6 @@ public class SplashAdShowInCurrentActivity extends Activity {
                 localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
                 localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
 
-                // Only for GDT (true: open download dialog, false: download directly)
-                localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
                 splashAd.setLocalExtra(localMap);
 
                 splashAd.loadAd();
@@ -105,20 +99,7 @@ public class SplashAdShowInCurrentActivity extends Activity {
 
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-                /**
-                 * Only for GDT
-                 */
-                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
-                    //Open Dialog view
-                    try {
-                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
-                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
-                    } catch (Throwable e) {
-                        if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
-                            ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
-                        }
-                    }
-                }
+
             }
 
 //            @Override

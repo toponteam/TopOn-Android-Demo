@@ -8,23 +8,27 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,8 +40,11 @@ import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventExListener;
+import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativeNetworkListener;
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.nativead.api.NativeAdInteractionType;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
@@ -54,12 +61,8 @@ public class NativeAdActivity extends Activity {
     ATNative mATNative;
     ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
+    ATNativePrepareInfo mNativePrepareInfo;
 
-    ImageView mCloseView;
-
-//    int mCurrentSelectIndex;
-//
-//    CheckBox mDownloadConfimCheckBox;
 
     private Spinner mSpinner;
     private ViewGroup mAdContainer;
@@ -117,7 +120,6 @@ public class NativeAdActivity extends Activity {
 
 
         mSpinner = (Spinner) findViewById(R.id.spinner_1);
-//        mDownloadConfimCheckBox = findViewById(R.id.download_listener_check);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
@@ -133,11 +135,6 @@ public class NativeAdActivity extends Activity {
 
                 ATNative.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "");
 
-//                if (TextUtils.equals(networkName, "GDT")) {
-//                    mDownloadConfimCheckBox.setVisibility(View.VISIBLE);
-//                } else {
-//                    mDownloadConfimCheckBox.setVisibility(View.GONE);
-//                }
                 init(mPlacementIdMap.get(mCurrentNetworkName));
             }
 
@@ -154,9 +151,6 @@ public class NativeAdActivity extends Activity {
         final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
         final int adViewHeight = containerHeight - 2 * padding;
 
-        initCloseView();
-        final NativeDemoRender anyThinkRender = new NativeDemoRender(this);
-        anyThinkRender.setCloseView(mCloseView);
 
         tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,7 +171,7 @@ public class NativeAdActivity extends Activity {
             public void onClick(View view) {
                 if (mType == TYPE_NATIVE) {
 
-                    showAd(mAdContainer, adViewWidth, adViewHeight, anyThinkRender);
+                    showAd(mAdContainer, adViewWidth, adViewHeight);
 
                 } else if (mType == TYPE_NATIVE_LIST) {
 
@@ -240,13 +234,13 @@ public class NativeAdActivity extends Activity {
             @Override
             public void onNativeAdLoaded() {
                 Log.i(TAG, "onNativeAdLoaded");
-                ViewUtil.printLog(tvShowLog,"load success...");
+                ViewUtil.printLog(tvShowLog, "load success...");
             }
 
             @Override
             public void onNativeAdLoadFail(AdError adError) {
                 Log.i(TAG, "onNativeAdLoadFail, " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"load fail...：" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "load fail...：" + adError.getFullErrorInfo());
             }
         });
     }
@@ -266,10 +260,10 @@ public class NativeAdActivity extends Activity {
     private void isAdReady() {
         boolean isReady = mATNative.checkAdStatus().isReady();
         Log.i(TAG, "isAdReady: " + isReady);
-        ViewUtil.printLog(tvShowLog,"isAdReady：" + isReady);
+        ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
     }
 
-    private void showAd(ViewGroup adContainer, int adViewWidth, int adViewHeight, NativeDemoRender anyThinkRender) {
+    private void showAd(ViewGroup adContainer, int adViewWidth, int adViewHeight) {
         if (adContainer == null) {
             Log.e(TAG, "showAd: adContainer = null");
             return;
@@ -282,7 +276,6 @@ public class NativeAdActivity extends Activity {
                 mNativeAd.destory();
             }
             mNativeAd = nativeAd;
-            mNativeAd.setManualImpressionTrack(true);
 
             mNativeAd.setNativeEventListener(new ATNativeEventExListener() {
                 @Override
@@ -293,31 +286,31 @@ public class NativeAdActivity extends Activity {
                 @Override
                 public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
-                    ViewUtil.printLog(tvShowLog,"onAdImpressed");
+                    ViewUtil.printLog(tvShowLog, "onAdImpressed");
                 }
 
                 @Override
                 public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdClicked:\n" + entity.toString());
-                    ViewUtil.printLog(tvShowLog,"onAdClicked");
+                    ViewUtil.printLog(tvShowLog, "onAdClicked");
                 }
 
                 @Override
                 public void onAdVideoStart(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoStart");
-                    ViewUtil.printLog(tvShowLog,"onAdVideoStart");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoStart");
                 }
 
                 @Override
                 public void onAdVideoEnd(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoEnd");
-                    ViewUtil.printLog(tvShowLog,"onAdVideoEnd");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoEnd");
                 }
 
                 @Override
                 public void onAdVideoProgress(ATNativeAdView view, int progress) {
                     Log.i(TAG, "native ad onAdVideoProgress:" + progress);
-                    ViewUtil.printLog(tvShowLog,"onAdVideoProgress");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoProgress");
                 }
             });
 
@@ -325,7 +318,7 @@ public class NativeAdActivity extends Activity {
                 @Override
                 public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdCloseButtonClick");
-                    ViewUtil.printLog(tvShowLog,"native ad onAdCloseButtonClick");
+                    ViewUtil.printLog(tvShowLog, "native ad onAdCloseButtonClick");
                     if (view.getParent() != null) {
                         ((ViewGroup) view.getParent()).removeView(view);
                         view.removeAllViews();
@@ -335,6 +328,7 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
+
             if (anyThinkNativeAdView == null) {
                 anyThinkNativeAdView = new ATNativeAdView(this);
             } else {
@@ -342,48 +336,89 @@ public class NativeAdActivity extends Activity {
             }
             if (anyThinkNativeAdView.getParent() == null) {
                 FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(adViewWidth, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(adViewWidth, adViewHeight);
                 layoutParams.gravity = Gravity.CENTER;
                 adContainer.addView(anyThinkNativeAdView, layoutParams);
             }
 
-            anyThinkRender.setAdWidth(adViewWidth);
+            //log
+            print(mNativeAd.getAdMaterial());
+
+
+            int height = adViewWidth * 600 / 1024;
+            height = height <= 0 ? FrameLayout.LayoutParams.WRAP_CONTENT : height;
+
+            mNativePrepareInfo = null;
+
             try {
-                mNativeAd.renderAdView(anyThinkNativeAdView, anyThinkRender);
+                if (mNativeAd.isNativeExpress()) {
+                    mNativeAd.renderAdContainer(anyThinkNativeAdView, null);
+                } else {
+                    View selfRenderView = LayoutInflater.from(this).inflate(R.layout.native_ad_item, null);
+                    mNativePrepareInfo = new ATNativePrepareInfo();
+
+                    SelfRenderViewUtil.bindSelfRenderView(this, mNativeAd.getAdMaterial(), selfRenderView, mNativePrepareInfo, height);
+
+                    mNativeAd.renderAdContainer(anyThinkNativeAdView, selfRenderView);
+
+                }
             } catch (Exception e) {
 
             }
 
-            anyThinkNativeAdView.addView(mCloseView);
+            mNativeAd.prepare(anyThinkNativeAdView, mNativePrepareInfo);
+
 
             anyThinkNativeAdView.setVisibility(View.VISIBLE);
-            mNativeAd.prepare(anyThinkNativeAdView, anyThinkRender.getClickView(), null);
-            mNativeAd.manualImpressionTrack();
 
             mPanel.setVisibility(View.VISIBLE);
-            initPanelButtonList(anyThinkRender.adType);
+            initPanelButtonList(mNativeAd.getAdMaterial().getAdType());
         } else {
-            ViewUtil.printLog(tvShowLog,"this placement no cache!");
+            ViewUtil.printLog(tvShowLog, "this placement no cache!");
         }
     }
 
-    private void initCloseView() {
-        if (mCloseView == null) {
-            mCloseView = new ImageView(this);
-            mCloseView.setImageResource(R.mipmap.ad_close);
-
-            int padding = dip2px(5);
-            mCloseView.setPadding(padding, padding, padding, padding);
-
-            int size = dip2px(30);
-            int margin = dip2px(2);
-
-            FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(size, size);
-            layoutParams.topMargin = margin;
-            layoutParams.rightMargin = margin;
-            layoutParams.gravity = Gravity.TOP | Gravity.RIGHT;
-
-            mCloseView.setLayoutParams(layoutParams);
+    private void print(ATNativeMaterial adMaterial) {
+        String adType = adMaterial.getAdType();
+        switch (adType) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                Log.i(TAG, "Ad source type: Video" + ", video duration: " + adMaterial.getVideoDuration());
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                Log.i(TAG, "Ad source type: Image");
+                break;
+            default:
+                Log.i(TAG, "Ad source type: Unknown");
+                break;
         }
+        switch (adMaterial.getNativeType()) {
+            case CustomNativeAd.NativeType.FEED:
+                Log.i(TAG, "Native type: Feed");
+                break;
+            case CustomNativeAd.NativeType.PATCH:
+                Log.i(TAG, "Native type: Patch");
+                break;
+        }
+
+        Log.i(TAG, "show native material:" +
+                "getTitle:" + adMaterial.getTitle() + "\n" +
+                "getDescriptionText:" + adMaterial.getDescriptionText() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdMediaView:" + adMaterial.getAdMediaView(anyThinkNativeAdView, anyThinkNativeAdView.getWidth()) + "\n" +
+                "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
+                "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
+                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
+                "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
+                "getStarRating:" + adMaterial.getStarRating() + "\n" +
+                "getVideoUrl:" + adMaterial.getVideoUrl() + "\n" +
+                "getAdChoiceIconUrl:" + adMaterial.getAdChoiceIconUrl() + "\n" +
+                "getAdFrom:" + adMaterial.getAdFrom() + "\n" +
+                "getImageUrlList:" + adMaterial.getImageUrlList() + "\n" +
+                "getNetworkInfoMap:" + adMaterial.getNetworkInfoMap() + "\n" +
+                "getAdAppInfo:" + adMaterial.getAdAppInfo() + "\n" +
+                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOWN") + "\n" +
+                "getVideoDuration:" + adMaterial.getVideoDuration()
+        );
     }
 
 //    public void changeBg(View view,boolean selected) {
@@ -502,7 +537,7 @@ public class NativeAdActivity extends Activity {
         }
     }
 
-    private void exitNativePanel(){
+    private void exitNativePanel() {
         mData.clear();
         destroyAd();
         mPanel.setVisibility(View.GONE);
@@ -510,7 +545,7 @@ public class NativeAdActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode== KeyEvent.KEYCODE_BACK && mPanel.getVisibility() == View.VISIBLE) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && mPanel.getVisibility() == View.VISIBLE) {
             exitNativePanel();
             return true;
         }

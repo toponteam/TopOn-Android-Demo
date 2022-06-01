@@ -94,6 +94,7 @@
         "GoogleAdManager":"b5f1ea92c46353",
         "Huawei":"b5f35311178efe",
         "Pangle":"b612f6eb28dc91",
+        "MyTarget":"b62541eb24001f",
         "HeadBidding Ad":"b6063e58cb39ee",
         "MyOffer":"b5f33a12982b7f",
         "DirectOffer":"b61bfe6b1e023a"
@@ -103,6 +104,7 @@
         "Admob":"b5f73fe0c5db29",
         "Mintegral":"b5ee8ae8611366",
         "MyOffer":"b5f33a1598fe94",
-        "DirectOffer":"b61bfe6a976167"
+        "DirectOffer":"b61bfe6a976167",
+        "Pangle": "b612f6ef1b0015"
     }
 }

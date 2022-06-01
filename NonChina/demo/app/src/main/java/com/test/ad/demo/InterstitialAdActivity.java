@@ -22,7 +22,6 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
@@ -284,9 +283,6 @@ public class InterstitialAdActivity extends Activity {
     private void loadAd() {
         Map<String, Object> localMap = new HashMap<>();
 
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
         mInterstitialAd.setLocalExtra(localMap);
         mInterstitialAd.load();
     }
@@ -393,7 +389,6 @@ public class InterstitialAdActivity extends Activity {
         }
         if (mInterstitialAd != null) {
             mInterstitialAd.setAdSourceStatusListener(null);
-            mInterstitialAd.setAdDownloadListener(null);
             mInterstitialAd.setAdListener(null);
         }
     }

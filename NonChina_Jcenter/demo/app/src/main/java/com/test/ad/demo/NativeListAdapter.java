@@ -18,10 +18,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 
 import java.util.List;
 
@@ -103,7 +101,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         Log.i(TAG, "onCreateAdViewHolder: create adView");
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.native_list_ad_item, viewGroup, false);
         ATNativeAdView atNativeAdView = new ATNativeAdView(viewGroup.getContext());
-        return new AdViewHolder(view,atNativeAdView,mAdWidth);
+        return new AdViewHolder(view, atNativeAdView);
     }
 
     private DataViewHolder onCreateDataViewHolder(@NonNull ViewGroup viewGroup) {
@@ -166,7 +164,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 if (viewHolder.mATNativeAdView.getParent() == null) {
                     viewHolder.mAdContainer.addView(viewHolder.mATNativeAdView);
                 }
-                mOnNativeListCallback.onBindAdView(nativeAd, viewHolder.mATNativeAdView, viewHolder.nativeDemoRender);
+                mOnNativeListCallback.onBindAdView(nativeAd, viewHolder.mATNativeAdView);
                 mNativeListHelper.putNativeAd(position, nativeAd);
             }
         }
@@ -238,15 +236,12 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         ATNativeAdView mATNativeAdView;
         ViewGroup mAdContainer;
-        NativeDemoRender nativeDemoRender;
 
-        AdViewHolder(@NonNull View itemView,ATNativeAdView atNativeAdView, int adWidth) {
+        AdViewHolder(@NonNull View itemView, ATNativeAdView atNativeAdView) {
             super(itemView);
 
             mATNativeAdView = atNativeAdView;
             mAdContainer = itemView.findViewById(R.id.ad_container);
-            nativeDemoRender = new NativeDemoRender(itemView.getContext());
-            nativeDemoRender.setAdWidth(adWidth);
         }
     }
 
@@ -315,7 +310,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
 
     public interface OnNativeListCallback {
-        ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer);
+        ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView);
 
         void onClickLoadMore();
     }

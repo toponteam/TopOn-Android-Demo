@@ -28,13 +28,11 @@ import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoAutoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoAutoEventListener;
 import com.anythink.rewardvideo.api.ATRewardVideoAutoLoadListener;
 import com.anythink.rewardvideo.api.ATRewardVideoExListener;
-import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
@@ -164,21 +162,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-                /**
-                 * Only for GDT
-                 */
-                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
-                    //Open Dialog view
-                    //Open Dialog view
-                    try {
-                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
-                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
-                    } catch (Throwable e) {
-                        if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
-                            ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
-                        }
-                    }
-                }
+
             }
 
             //-------------------------- Only for CSJ --------------------------
@@ -374,9 +358,6 @@ public class RewardVideoAdActivity extends Activity {
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.USER_ID, userid);
         localMap.put(ATAdConst.KEY.USER_CUSTOM_DATA, userdata);
-
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
 
         mRewardVideoAd.setLocalExtra(localMap);
         mRewardVideoAd.load();

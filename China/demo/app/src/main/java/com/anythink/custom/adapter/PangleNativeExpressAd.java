@@ -12,13 +12,11 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.bytedance.sdk.openadsdk.TTAdDislike;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
-
-import java.util.List;
 
 public class PangleNativeExpressAd extends CustomNativeAd {
     private static final String TAG = PangleNativeExpressAd.class.getSimpleName();
@@ -95,7 +93,7 @@ public class PangleNativeExpressAd extends CustomNativeAd {
     }
 
     @Override
-    public void prepare(final View view, FrameLayout.LayoutParams layoutParams) {
+    public void prepare(final View view, ATNativePrepareInfo nativePrepareInfo) {
 //        bindListener();
         if (view != null && view.getContext() instanceof Activity) {
             bindDislike((Activity) view.getContext());
@@ -105,16 +103,6 @@ public class PangleNativeExpressAd extends CustomNativeAd {
 //        }
     }
 
-    @Override
-    public void prepare(View view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) {
-
-        if (view != null && view.getContext() instanceof Activity) {
-            bindDislike((Activity) view.getContext());
-        }
-//        if (mTTNativeExpressAd != null) {
-//            mTTNativeExpressAd.render();
-//        }
-    }
 
     /**
      * Set ads dislike, developers can customize styles

@@ -13,19 +13,19 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
-import com.anythink.nativead.api.ATNativeAdRenderer;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.anythink.network.gdt.GDTATConst;
 import com.anythink.network.toutiao.TTATConst;
 
@@ -70,7 +70,7 @@ public class NativeListActivity extends Activity {
 
 
         adViewWidth = getResources().getDisplayMetrics().widthPixels;
-        adViewHeight = dip2px(340);
+        adViewHeight = (int) (adViewWidth * (3 / 4f));
         initRv();
 
         checkAndLoadAd();
@@ -89,8 +89,8 @@ public class NativeListActivity extends Activity {
         rvNative.setLayoutManager(layoutManager);
         mAdapter = new NativeListAdapter(adViewWidth, adViewHeight, data, new NativeListAdapter.OnNativeListCallback() {
             @Override
-            public ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
-                return fetchAd(nativeAd, atNativeAdView, atNativeAdRenderer);
+            public ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView) {
+                return fetchAd(nativeAd, atNativeAdView);
             }
 
             @Override
@@ -251,18 +251,18 @@ public class NativeListActivity extends Activity {
         }
     }
 
-    private ATNativeAdView fetchAd(NativeAd nativeAd, ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
+    private ATNativeAdView fetchAd(NativeAd nativeAd, ATNativeAdView atNativeAdView) {
 
         if (nativeAd != null) {
             Log.i(TAG, "fetchAd: startRenderAd");
-            renderAd(nativeAd, atNativeAdView, atNativeAdRenderer);
+            renderAd(nativeAd, atNativeAdView);
 
             return atNativeAdView;
         }
         return null;
     }
 
-    private void renderAd(final NativeAd nativeAd, final ATNativeAdView atNativeAdView, ATNativeAdRenderer<? extends CustomNativeAd> atNativeAdRenderer) {
+    private void renderAd(final NativeAd nativeAd, final ATNativeAdView atNativeAdView) {
         nativeAd.setNativeEventListener(new ATNativeEventListener() {
             @Override
             public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
@@ -308,9 +308,22 @@ public class NativeListActivity extends Activity {
 
         try {
             Log.i(TAG, "native ad start to render ad------------- ");
-            nativeAd.renderAdView(atNativeAdView, atNativeAdRenderer);
-            nativeAd.prepare(atNativeAdView);
-            checkAndLoadAd();
+
+            ATNativePrepareInfo nativePrepareInfo = null;
+
+            if (nativeAd.isNativeExpress()) {
+                nativeAd.renderAdContainer(atNativeAdView, null);
+            } else {
+                View selfRenderView = LayoutInflater.from(this).inflate(R.layout.native_ad_item, null);
+                nativePrepareInfo = new ATNativePrepareInfo();
+
+                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, adViewHeight);
+//                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+                nativeAd.renderAdContainer(atNativeAdView, selfRenderView);
+            }
+
+            nativeAd.prepare(atNativeAdView, nativePrepareInfo);
 
         } catch (Exception e) {
             e.printStackTrace();

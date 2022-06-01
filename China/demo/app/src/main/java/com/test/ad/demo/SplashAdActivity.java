@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
@@ -30,6 +31,7 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -182,6 +184,14 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
 
     private void init(String placementId, String defaultConfig) {
         splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
+        Map<String, Object> localMap = new HashMap<>();
+//        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
+//        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
+
+        // Only for GDT (true: open download dialog, false: download directly)
+        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
+
+        splashAd.setLocalExtra(localMap);
         ATSplashAd.entryAdScenario(placementId, "");
     }
 

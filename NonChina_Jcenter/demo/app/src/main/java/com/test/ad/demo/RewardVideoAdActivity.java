@@ -310,9 +310,6 @@ public class RewardVideoAdActivity extends Activity {
         localMap.put(ATAdConst.KEY.USER_ID, userid);
         localMap.put(ATAdConst.KEY.USER_CUSTOM_DATA, userdata);
 
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
         mRewardVideoAd.setLocalExtra(localMap);
         mRewardVideoAd.load();
     }

@@ -73,9 +73,6 @@ public class SplashAdShowInCurrentActivity extends Activity {
                 localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
                 localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
 
-                // Only for GDT (true: open download dialog, false: download directly)
-                localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
                 splashAd.setLocalExtra(localMap);
 
                 splashAd.loadAd();

@@ -34,8 +34,6 @@ import com.anythink.interstitial.api.ATInterstitialAutoAd;
 import com.anythink.interstitial.api.ATInterstitialAutoEventListener;
 import com.anythink.interstitial.api.ATInterstitialAutoLoadListener;
 import com.anythink.interstitial.api.ATInterstitialExListener;
-import com.anythink.network.gdt.GDTDownloadFirmInfo;
-import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
@@ -170,20 +168,7 @@ public class InterstitialAdActivity extends Activity {
 
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-                /**
-                 * Only for GDT
-                 */
-                if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
-                    //Open Dialog view
-                    try {
-                        new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
-                        Log.i(TAG, "nonDownloadConfirm open confirm dialog");
-                    } catch (Throwable e) {
-                        if (((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack != null) {
-                            ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack.onConfirm();
-                        }
-                    }
-                }
+
             }
 
             @Override
@@ -348,9 +333,6 @@ public class InterstitialAdActivity extends Activity {
 
     private void loadAd() {
         Map<String, Object> localMap = new HashMap<>();
-
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
 
         mInterstitialAd.setLocalExtra(localMap);
         mInterstitialAd.load();
