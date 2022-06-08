@@ -10,7 +10,6 @@ package com.anythink.custom.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
@@ -259,26 +258,20 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
 
     @Override
     public void show(Activity activity) {
-        try {
-            if (mttInterstitialAd != null && activity != null) {
-                mttInterstitialAd.setAdInteractionListener(interactionListener);
-                mttInterstitialAd.showInteractionAd(activity);
-            }
-
-            if (mTTFullScreenVideoAd != null && activity != null) {
-                mTTFullScreenVideoAd.setFullScreenVideoAdInteractionListener(ttFullScreenEventListener);
-                mTTFullScreenVideoAd.showFullScreenVideoAd(activity);
-            }
-
-            if (mTTNativeExpressAd != null && activity != null) {
-                mTTNativeExpressAd.setExpressInteractionListener(adExpressInteractionListener);
-                mTTNativeExpressAd.showInteractionExpressAd(activity);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (mttInterstitialAd != null && activity != null) {
+            mttInterstitialAd.setAdInteractionListener(interactionListener);
+            mttInterstitialAd.showInteractionAd(activity);
         }
 
+        if (mTTFullScreenVideoAd != null && activity != null) {
+            mTTFullScreenVideoAd.setFullScreenVideoAdInteractionListener(ttFullScreenEventListener);
+            mTTFullScreenVideoAd.showFullScreenVideoAd(activity);
+        }
+
+        if (mTTNativeExpressAd != null && activity != null) {
+            mTTNativeExpressAd.setExpressInteractionListener(adExpressInteractionListener);
+            mTTNativeExpressAd.showInteractionExpressAd(activity);
+        }
     }
 
     @Override

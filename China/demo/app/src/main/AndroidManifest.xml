@@ -53,21 +53,25 @@
         </activity>
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:label="Native"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:label="RewardedVideo"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:label="Interstitial"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:label="Banner"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
