@@ -55,11 +55,11 @@ dependencies {
 
     api 'androidx.multidex:multidex:2.0.1'
 
-    //ironSource
-    api 'org.jetbrains.kotlin:kotlin-stdlib:1.4.32'
-
     implementation ('androidx.preference:preference:1.1.1') {
         exclude module: 'recyclerview'
     }
+
+    //ironSource
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.4.32'
 
 }
