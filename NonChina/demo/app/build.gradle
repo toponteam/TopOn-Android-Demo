@@ -41,6 +41,7 @@ repositories{
 configurations.all {
     resolutionStrategy {
         force 'androidx.core:core:1.6.0'
+        force 'androidx.recyclerview:recyclerview:1.1.0'
     }
 }
 
@@ -60,6 +61,9 @@ dependencies {
     }
 
     //ironSource
-    api 'org.jetbrains.kotlin:kotlin-stdlib:1.4.32'
+    implementation ('org.jetbrains.kotlin:kotlin-stdlib:1.4.32')
 
+    implementation ('com.google.android.exoplayer:exoplayer:2.16.1'){
+        exclude module: 'recyclerview'
+    }
 }
