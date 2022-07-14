@@ -43,7 +43,6 @@ public class BannerAdActivity extends Activity {
     private static final String TAG = BannerAdActivity.class.getSimpleName();
 
     ATBannerView mBannerView;
-    Map<String, Object> localMap = new HashMap<>();
     private TextView tvLoadAdBtn;
     private TextView tvShowLog;
     private ScrollView scrollView;
@@ -107,8 +106,6 @@ public class BannerAdActivity extends Activity {
 //                        Toast.LENGTH_SHORT).show();
                 String placementName = parent.getSelectedItem().toString();
                 mBannerView.setPlacementId(placementIdMap.get(placementName));
-                localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
-                mBannerView.setLocalExtra(localMap);
                 mBannerView.setVisibility(View.VISIBLE);
 
             }
@@ -124,6 +121,13 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 frameLayout.setVisibility(View.VISIBLE);
+
+                int padding = dip2px(12);
+                Map<String, Object> localMap = new HashMap<>();
+                localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+                localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
+                mBannerView.setLocalExtra(localMap);
+
                 mBannerView.loadAd();
             }
         });
@@ -131,11 +135,8 @@ public class BannerAdActivity extends Activity {
     }
 
     private void init(String placementId) {
-        localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
-
         mBannerView = new ATBannerView(this);
         mBannerView.setPlacementId(placementId);
-        mBannerView.setLocalExtra(localMap);
 
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 

@@ -14,7 +14,11 @@ import android.webkit.WebView;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATDetectionResultCallback;
+import com.anythink.core.api.ATInitConfig;
+import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
+import com.anythink.network.gdt.GDTATInitConfig;
+import com.anythink.network.mintegral.MintegralATInitConfig;
 import com.facebook.stetho.Stetho;
 
 import java.util.ArrayList;
@@ -92,23 +96,29 @@ public class DemoApplication extends MultiDexApplication {
         subcustommap.put("key2", "initPlacementCustomMap2");
         ATSDK.initPlacementCustomMap("b5aa1fa4165ea3", subcustommap);//native  facebook
 
-        ATSDK.setDetectionListener(new ATDetectionResultCallback() {
-            @Override
-            public void onSucess(String rdid) {
-                Log.i("Demoapplication", "Detection id:" + rdid);
-            }
-
-            @Override
-            public void onError(String errorMsg) {
-                Log.e("Demoapplication", "Detection init error: " + errorMsg);
-            }
-        });
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
 //        ATSDK.setUseHTTP(true);
         ATSDK.init(this, appid, appKey);
 
+//        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
+//        ATSDK.init(this, appid, appKey, atNetworkConfig);
+
         ATSDK.testModeDeviceInfo(this, null);
 
+    }
+
+    private ATNetworkConfig getAtNetworkConfig() {
+        List<ATInitConfig> atInitConfigs = new ArrayList<>();
+
+//        ATInitConfig gdtatInitConfig = new GDTATInitConfig("1200028501");
+//        ATInitConfig mintegralATInitConfig = new MintegralATInitConfig("100947", "ef13ef712aeb0f6eb3d698c4c08add96");
+//
+//        atInitConfigs.add(gdtatInitConfig);
+//        atInitConfigs.add(mintegralATInitConfig);
+
+        ATNetworkConfig.Builder builder = new ATNetworkConfig.Builder();
+        builder.withInitConfigList(atInitConfigs);
+        return builder.build();
     }
 
 }

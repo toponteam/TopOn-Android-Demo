@@ -114,17 +114,13 @@ public class PangleNativeAdapter extends CustomNativeAdapter {
                 height = 150;
             } else {
                 try {
-                    if (widthObject instanceof Integer || widthObject instanceof String) {
-                        width = Integer.parseInt(widthObject.toString());
-                    }
-                } catch (Exception e) {
+                    width = (int) Double.parseDouble(widthObject.toString());
+                } catch (Throwable e) {
                     e.printStackTrace();
                 }
                 try {
-                    if (heightObject instanceof Integer || heightObject instanceof String) {
-                        height = Integer.parseInt(heightObject.toString());
-                    }
-                } catch (Exception e) {
+                    height = (int) Double.parseDouble(heightObject.toString());
+                } catch (Throwable e) {
                     e.printStackTrace();
                 }
             }

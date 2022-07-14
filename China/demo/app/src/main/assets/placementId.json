@@ -64,7 +64,7 @@
     },
     "splash": {
         "All":"b5bea7cc9a4497",
-        "gdt":"b5bea7bfd93f01",
+        "GDT":"b5bea7bfd93f01",
         "Toutiao":"b5bea7c1b653ef",
         "Baidu":"b5c05090192a58",
         "Mintegral":"b5ee8ae8611366",
@@ -74,6 +74,7 @@
         "Klevin":"b613ac55f204b1",
         "MyOffer":"b5f33a1598fe94",
         "DirectOffer":"b61bfe6a976167",
+        "Splash_HB":"b617bc2caba2a8",
         "SplashNative":"b622ff57c7306b",
         "SplashNative_TT":"b623a865a89065",
         "SplashNative_Sigmob":"b623a862dc1d6f",
