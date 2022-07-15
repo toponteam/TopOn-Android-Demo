@@ -334,9 +334,6 @@ public class InterstitialAdActivity extends Activity {
     private void loadAd() {
         Map<String, Object> localMap = new HashMap<>();
 
-//        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
-//        localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
-
         mInterstitialAd.setLocalExtra(localMap);
         mInterstitialAd.load();
     }

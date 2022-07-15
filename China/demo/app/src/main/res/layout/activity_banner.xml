@@ -86,8 +86,8 @@
                     android:layout_marginTop="@dimen/anythink_18dp"
                     android:text="@string/anythink_load_ad" />
 
-
             </RelativeLayout>
+
 
             <FrameLayout
                 android:id="@+id/adview_container"
@@ -97,6 +97,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="@dimen/anythink_10dp"
                 android:visibility="gone" />
+
         </LinearLayout>
 
 
