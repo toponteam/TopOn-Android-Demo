@@ -7,6 +7,8 @@
 
 package com.test.ad.demo;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 import android.webkit.WebView;
@@ -37,6 +39,10 @@ public class DemoApplication extends MultiDexApplication {
             if (!getPackageName().equals(processName)) {
                 WebView.setDataDirectorySuffix(processName);
             }
+        }
+
+        if (!isMainProcess(this)) {
+            return;
         }
 
         Stetho.initializeWithDefaults(getApplicationContext());
@@ -105,6 +111,32 @@ public class DemoApplication extends MultiDexApplication {
 
         ATSDK.testModeDeviceInfo(this, null);
 
+    }
+
+    public boolean isMainProcess(Context context) {
+        try {
+            if (null != context) {
+                return context.getPackageName().equals(getProcessName(context));
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
+    public String getProcessName(Context cxt) {
+        int pid = android.os.Process.myPid();
+        ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
+        if (runningApps == null) {
+            return null;
+        }
+        for (ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+            if (procInfo.pid == pid) {
+                return procInfo.processName;
+            }
+        }
+        return null;
     }
 
 }
