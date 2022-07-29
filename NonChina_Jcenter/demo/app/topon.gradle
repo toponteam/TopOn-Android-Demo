@@ -166,7 +166,7 @@ dependencies {
 
     //Huawei
     api "com.anythink.sdk:adapter-huawei-nonchina:5.9.90"
-    api "com.huawei.hms:ads:3.4.54.300"
+    api "com.huawei.hms:ads-lite:13.4.54.300"
 
     //Kidoz
     api "com.anythink.sdk:adapter-kidoz:5.9.90"
