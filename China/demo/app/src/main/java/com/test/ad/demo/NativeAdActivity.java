@@ -494,6 +494,8 @@ public class NativeAdActivity extends Activity {
                 "getAdMediaView:" + adMaterial.getAdMediaView(anyThinkNativeAdView, anyThinkNativeAdView.getWidth()) + "\n" +
                 "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
                 "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
+                "getMainImageWidth:" + adMaterial.getMainImageWidth() + "\n" +
+                "getMainImageHeight:" + adMaterial.getMainImageHeight() + "\n" +
                 "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
                 "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
                 "getStarRating:" + adMaterial.getStarRating() + "\n" +

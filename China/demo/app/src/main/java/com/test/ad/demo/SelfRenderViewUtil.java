@@ -123,6 +123,8 @@ public class SelfRenderViewUtil {
             } else {
                 ATNativeImageView imageView = new ATNativeImageView(context);
                 imageView.setImage(adMaterial.getMainImageUrl());
+                int mainIamgeWidth = adMaterial.getMainImageWidth();
+                int mainImageHeight = adMaterial.getMainImageHeight();
                 ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
                 imageView.setLayoutParams(params);
                 contentArea.addView(imageView, params);

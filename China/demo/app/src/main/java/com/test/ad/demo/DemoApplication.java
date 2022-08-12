@@ -7,6 +7,8 @@
 
 package com.test.ad.demo;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
@@ -44,6 +46,10 @@ public class DemoApplication extends MultiDexApplication {
             if (!getPackageName().equals(processName)) {
                 WebView.setDataDirectorySuffix(processName);
             }
+        }
+
+        if (!isMainProcess(this)) {
+            return;
         }
 
         Stetho.initializeWithDefaults(getApplicationContext());
@@ -89,6 +95,7 @@ public class DemoApplication extends MultiDexApplication {
         Map<String, Object> custommap = new HashMap<String, Object>();
         custommap.put("key1", "initCustomMap1");
         custommap.put("key2", "initCustomMap2");
+        custommap.put(ATAdConst.KEY.WECHAT_APPID, "wechat_app_id");
         ATSDK.initCustomMap(custommap);
 
         Map<String, Object> subcustommap = new HashMap<String, Object>();
@@ -119,6 +126,32 @@ public class DemoApplication extends MultiDexApplication {
         ATNetworkConfig.Builder builder = new ATNetworkConfig.Builder();
         builder.withInitConfigList(atInitConfigs);
         return builder.build();
+    }
+
+    public boolean isMainProcess(Context context) {
+        try {
+            if (null != context) {
+                return context.getPackageName().equals(getProcessName(context));
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
+
+    public String getProcessName(Context cxt) {
+        int pid = android.os.Process.myPid();
+        ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
+        if (runningApps == null) {
+            return null;
+        }
+        for (ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+            if (procInfo.pid == pid) {
+                return procInfo.processName;
+            }
+        }
+        return null;
     }
 
 }
