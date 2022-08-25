@@ -182,15 +182,9 @@ public class FacebookNativeAd extends CustomNativeAd implements NativeAdListener
 
     @Override
     public void clear(final View view) {
-        if (mMediaView != null) {
-            mMediaView.setListener(null);
-            mMediaView.destroy();
-            mMediaView = null;
-        }
         if (mFacebookNativeAd != null) {
             mFacebookNativeAd.unregisterView();
         }
-
     }
 
     @Override

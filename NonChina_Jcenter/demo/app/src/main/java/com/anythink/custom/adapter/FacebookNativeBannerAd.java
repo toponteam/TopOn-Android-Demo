@@ -67,7 +67,6 @@ public class FacebookNativeBannerAd extends CustomNativeAd implements NativeAdLi
         if (mFacebookNativeAd != null) {
             mFacebookNativeAd.unregisterView();
         }
-
     }
 
     @Override

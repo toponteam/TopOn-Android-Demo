@@ -1,25 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright © 2018-2020 TopOn. All rights reserved.
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <FrameLayout
+    <com.anythink.nativead.api.ATNativeAdView
         android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/anythink_8dp"/>
+        android:layout_marginTop="@dimen/anythink_8dp">
+
+        <include
+            android:id="@+id/self_render_view"
+            layout="@layout/native_ad_item"
+            android:visibility="gone" />
+    </com.anythink.nativead.api.ATNativeAdView>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/anythink_1dp"
-        android:background="@color/anythink_E8E8E8"
+        android:layout_gravity="bottom"
         android:layout_marginTop="@dimen/anythink_8dp"
-        android:layout_below="@+id/ad_container"/>
-</RelativeLayout>
+        android:background="@color/anythink_E8E8E8" />
+</FrameLayout>

@@ -52,11 +52,23 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.test.ad.demo.NativeMainActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.test.ad.demo.NativeAdActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:label="Native"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.test.ad.demo.NativeDrawVideoActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.test.ad.demo.NativePatchVideoActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
@@ -93,14 +105,20 @@
             android:name="com.test.ad.demo.NativeListActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
         <activity
             android:name="com.test.ad.demo.TestMainActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" /> <!-- Bugly -->
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-
+        <!-- Bugly -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="7c2efbb5d7" />
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
         <!-- source file: china/network_sdk/gdt/4.482.1352/AndroidManifest.xml -->
         <provider
             android:name="com.qq.e.comm.GDTFileProvider"

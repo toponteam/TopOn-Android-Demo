@@ -8,23 +8,16 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +26,6 @@ import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
-import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -61,17 +53,13 @@ public class NativeAdActivity extends Activity {
     private static final String TAG = NativeAdActivity.class.getSimpleName();
 
     ATNative mATNative;
-    ATNativeAdView anyThinkNativeAdView;
     NativeAd mNativeAd;
     ATNativePrepareInfo mNativePrepareInfo;
 
 
     private Spinner mSpinner;
-    private ViewGroup mAdContainer;
-
-    private RelativeLayout rlNative;
-    private RelativeLayout rlDraw;
-    private RelativeLayout rlPatch;
+    private ATNativeAdView mATNativeAdView;
+    private View mSelfRenderView;
 
     private TextView tvLoadAdBtn;
     private TextView tvIsAdReadyBtn;
@@ -80,9 +68,6 @@ public class NativeAdActivity extends Activity {
 
     private RecyclerView rvButtonList;
 
-    int mType;
-    final int TYPE_NATIVE = 0;
-    final int TYPE_NATIVE_LIST = 1;
     private View mPanel;
 
     private Map<String, String> mPlacementIdMap;
@@ -100,7 +85,7 @@ public class NativeAdActivity extends Activity {
         tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         TitleBar titleBar = (TitleBar) findViewById(R.id.title_bar);
-        titleBar.setTitle(R.string.anythink_title_native);
+        titleBar.setTitle(R.string.anythink_native_self);
         titleBar.setListener(new TitleBarClickListener() {
             @Override
             public void onBackClick(View v) {
@@ -108,20 +93,22 @@ public class NativeAdActivity extends Activity {
             }
         });
 
-        rlNative = findViewById(R.id.rl_native);
-        rlDraw = findViewById(R.id.rl_draw);
-        rlPatch = findViewById(R.id.rl_patch);
         tvLoadAdBtn = findViewById(R.id.load_ad_btn);
         tvIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
         tvShowAdBtn = findViewById(R.id.show_ad_btn);
+        mSpinner = findViewById(R.id.spinner_1);
 
-        initTypeSpinner();
+        String nativeType = getIntent().getStringExtra("native_type");
 
-        mPlacementIdMap = PlacementIdUtil.getNativePlacements(this);
+        if (nativeType.equals("1")) {
+            mPlacementIdMap = PlacementIdUtil.getNativeSelfrenderPlacements(this);
+            titleBar.setTitle(R.string.anythink_native_self);
+        } else {
+            mPlacementIdMap = PlacementIdUtil.getNativeExpressPlacements(this);
+            titleBar.setTitle(R.string.anythink_native_express);
+        }
+
         List<String> placementNameList = new ArrayList<>(mPlacementIdMap.keySet());
-
-
-        mSpinner = (Spinner) findViewById(R.id.spinner_1);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
@@ -148,6 +135,8 @@ public class NativeAdActivity extends Activity {
         mCurrentNetworkName = placementNameList.get(0);
         init(mPlacementIdMap.get(mCurrentNetworkName));
 
+        initPanel();
+
         int padding = dip2px(10);
         final int containerHeight = dip2px(340);
         final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
@@ -171,64 +160,46 @@ public class NativeAdActivity extends Activity {
         tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (mType == TYPE_NATIVE) {
-
-                    showAd(mAdContainer, adViewWidth, adViewHeight);
-
-                } else if (mType == TYPE_NATIVE_LIST) {
-
-                    Intent intent = new Intent(NativeAdActivity.this, NativeListActivity.class);
-                    intent.putExtra("placementId", mPlacementIdMap.get(mCurrentNetworkName));
-
-                    startActivity(intent);
-                }
+                showAd();
             }
         });
-
-//        findViewById(R.id.iv_close_panel).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mData.clear();
-//                destroyAd();
-//                mPanel.setVisibility(View.GONE);
-//            }
-//        });
-
-        initPanel();
     }
 
-    private void initTypeSpinner() {
-        Spinner typeSpinner = (Spinner) findViewById(R.id.spinner_2);
-        typeSpinner.setVisibility(View.VISIBLE);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                new String[]{
-                        "Native",
-                        "Native List"
-                });
-        typeSpinner.setAdapter(adapter);
-        typeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    private void initPanel() {
+        mPanel = findViewById(R.id.rl_panel);
+        mATNativeAdView = findViewById(R.id.native_ad_view);
+        mSelfRenderView = findViewById(R.id.native_selfrender_view);
+        rvButtonList = findViewById(R.id.rv_button);
+        GridLayoutManager manager = new GridLayoutManager(this, 2);
+        rvButtonList.setLayoutManager(manager);
 
+        final boolean isMute[] = new boolean[]{true};
+        NativeVideoButtonAdapter adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                String typeName = parent.getItemAtPosition(position).toString();
-//                Toast.makeText(NativeAdActivity.this, typeName, Toast.LENGTH_SHORT).show();
-
-                switch (position) {
-                    case 0:
-                        mType = TYPE_NATIVE;
-                        break;
-                    case 1:
-                        mType = TYPE_NATIVE_LIST;
-                        break;
+            public void onClick(String action) {
+                if (action == VideoAction.VOICE_CHANGE) {
+                    if (mNativeAd != null) {
+                        mNativeAd.setVideoMute(!isMute[0]);
+                        isMute[0] = !isMute[0];
+                    }
+                } else if (action == VideoAction.VIDEO_RESUME) {
+                    if (mNativeAd != null) {
+                        mNativeAd.resumeVideo();
+                    }
+                } else if (action == VideoAction.VIDEO_PAUSE) {
+                    if (mNativeAd != null) {
+                        mNativeAd.pauseVideo();
+                    }
+                } else if (action == VideoAction.VIDEO_PROGRESS) {
+                    if (mNativeAd != null) {
+                        String tips = "video duration: " + mNativeAd.getVideoDuration() + ", progress: " + mNativeAd.getVideoProgress();
+                        Log.i(TAG, tips);
+                        Toast.makeText(NativeAdActivity.this, tips, Toast.LENGTH_LONG).show();
+                    }
                 }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+        rvButtonList.setAdapter(adapter);
     }
 
     private void init(String placementId) {
@@ -301,12 +272,7 @@ public class NativeAdActivity extends Activity {
         ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
     }
 
-    private void showAd(ViewGroup adContainer, int adViewWidth, int adViewHeight) {
-        if (adContainer == null) {
-            Log.e(TAG, "showAd: adContainer = null");
-            return;
-        }
-
+    private void showAd() {
         NativeAd nativeAd = mATNative.getNativeAd();
         if (nativeAd != null) {
 
@@ -357,10 +323,6 @@ public class NativeAdActivity extends Activity {
                 public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdCloseButtonClick");
                     ViewUtil.printLog(tvShowLog, "native ad onAdCloseButtonClick");
-                    if (view.getParent() != null) {
-                        ((ViewGroup) view.getParent()).removeView(view);
-                        view.removeAllViews();
-                    }
 
                     exitNativePanel();
                 }
@@ -416,48 +378,28 @@ public class NativeAdActivity extends Activity {
             });
 
 
-            if (anyThinkNativeAdView == null) {
-                anyThinkNativeAdView = new ATNativeAdView(this);
-            } else {
-                anyThinkNativeAdView.removeAllViews();
-            }
-            if (anyThinkNativeAdView.getParent() == null) {
-                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(adViewWidth, ViewGroup.LayoutParams.WRAP_CONTENT);
-//                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(adViewWidth, adViewHeight);
-                layoutParams.gravity = Gravity.CENTER;
-                adContainer.addView(anyThinkNativeAdView, layoutParams);
-            }
-
+            mATNativeAdView.removeAllViews();
             //log
             print(mNativeAd.getAdMaterial());
-
-
-            int height = adViewWidth * 600 / 1024;
-            height = height <= 0 ? FrameLayout.LayoutParams.WRAP_CONTENT : height;
 
             mNativePrepareInfo = null;
 
             try {
+                mNativePrepareInfo = new ATNativePrepareExInfo();
+
                 if (mNativeAd.isNativeExpress()) {
-                    mNativeAd.renderAdContainer(anyThinkNativeAdView, null);
+                    mNativeAd.renderAdContainer(mATNativeAdView, null);
                 } else {
-                    View selfRenderView = LayoutInflater.from(this).inflate(R.layout.native_ad_item, null);
-                    mNativePrepareInfo = new ATNativePrepareExInfo();
-
-                    SelfRenderViewUtil.bindSelfRenderView(this, mNativeAd.getAdMaterial(), selfRenderView, mNativePrepareInfo, height);
-
-                    mNativeAd.renderAdContainer(anyThinkNativeAdView, selfRenderView);
-
+                    SelfRenderViewUtil.bindSelfRenderView(this, mNativeAd.getAdMaterial(), mSelfRenderView, mNativePrepareInfo);
+                    mNativeAd.renderAdContainer(mATNativeAdView, mSelfRenderView);
                 }
+
             } catch (Exception e) {
 
             }
 
-            mNativeAd.prepare(anyThinkNativeAdView, mNativePrepareInfo);
-
-
-            anyThinkNativeAdView.setVisibility(View.VISIBLE);
-
+            mNativeAd.prepare(mATNativeAdView, mNativePrepareInfo);
+            mATNativeAdView.setVisibility(View.VISIBLE);
             mPanel.setVisibility(View.VISIBLE);
             initPanelButtonList(mNativeAd.getAdMaterial().getAdType());
         } else {
@@ -487,16 +429,20 @@ public class NativeAdActivity extends Activity {
                 break;
         }
 
-        Log.i(TAG, "show native material:" +
+        Log.i(TAG, "show native material:" + "\n" +
                 "getTitle:" + adMaterial.getTitle() + "\n" +
                 "getDescriptionText:" + adMaterial.getDescriptionText() + "\n" +
                 "getNativeType:" + adMaterial.getNativeType() + "\n" +
-                "getAdMediaView:" + adMaterial.getAdMediaView(anyThinkNativeAdView, anyThinkNativeAdView.getWidth()) + "\n" +
+                "getAdMediaView:" + adMaterial.getAdMediaView() + "\n" +
                 "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
+                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
                 "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
                 "getMainImageWidth:" + adMaterial.getMainImageWidth() + "\n" +
                 "getMainImageHeight:" + adMaterial.getMainImageHeight() + "\n" +
-                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
+                "getVideoWidth:" + adMaterial.getVideoWidth() + "\n" +
+                "getVideoHeight:" + adMaterial.getVideoHeight() + "\n" +
+                "getAppPrice:" + adMaterial.getAppPrice() + "\n" +
+                "getAppCommentNum:" + adMaterial.getAppCommentNum() + "\n" +
                 "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
                 "getStarRating:" + adMaterial.getStarRating() + "\n" +
                 "getVideoUrl:" + adMaterial.getVideoUrl() + "\n" +
@@ -505,8 +451,17 @@ public class NativeAdActivity extends Activity {
                 "getImageUrlList:" + adMaterial.getImageUrlList() + "\n" +
                 "getNetworkInfoMap:" + adMaterial.getNetworkInfoMap() + "\n" +
                 "getAdAppInfo:" + adMaterial.getAdAppInfo() + "\n" +
-                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType() == NativeAdInteractionType.APP_TYPE ? "Application" : "UNKNOWN") + "\n" +
-                "getVideoDuration:" + adMaterial.getVideoDuration()
+                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType()) + "\n" +
+                "getVideoDuration:" + adMaterial.getVideoDuration() + "\n" +
+                "getAdvertiserName:" + adMaterial.getAdvertiserName() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdType:" + adMaterial.getAdType() + "\n" +
+                "getNativeCustomVideo:" + adMaterial.getNativeCustomVideo() + "\n" +
+                "getAdLogo:" + adMaterial.getAdLogo() + "\n" +
+                "getNativeExpressWidth:" + adMaterial.getNativeExpressWidth() + "\n" +
+                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
+
+
         );
     }
 
@@ -552,41 +507,6 @@ public class NativeAdActivity extends Activity {
         return (int) (dipValue * scale + 0.5f);
     }
 
-    private void initPanel() {
-        mPanel = findViewById(R.id.rl_panel);
-        mAdContainer = findViewById(R.id.ad_container);
-        rvButtonList = findViewById(R.id.rv_button);
-        GridLayoutManager manager = new GridLayoutManager(this, 2);
-        rvButtonList.setLayoutManager(manager);
-
-        final boolean isMute[] = new boolean[]{true};
-        NativeVideoButtonAdapter adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
-            @Override
-            public void onClick(String action) {
-                if (action == VideoAction.VOICE_CHANGE) {
-                    if (mNativeAd != null) {
-                        mNativeAd.setVideoMute(!isMute[0]);
-                        isMute[0] = !isMute[0];
-                    }
-                } else if (action == VideoAction.VIDEO_RESUME) {
-                    if (mNativeAd != null) {
-                        mNativeAd.resumeVideo();
-                    }
-                } else if (action == VideoAction.VIDEO_PAUSE) {
-                    if (mNativeAd != null) {
-                        mNativeAd.pauseVideo();
-                    }
-                } else if (action == VideoAction.VIDEO_PROGRESS) {
-                    if (mNativeAd != null) {
-                        String tips = "video duration: " + mNativeAd.getVideoDuration() + ", progress: " + mNativeAd.getVideoProgress();
-                        Log.i(TAG, tips);
-                        Toast.makeText(NativeAdActivity.this, tips, Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-        });
-        rvButtonList.setAdapter(adapter);
-    }
 
     private void initPanelButtonList(String adType) {
         if (adType == CustomNativeAd.NativeAdConst.VIDEO_TYPE) {

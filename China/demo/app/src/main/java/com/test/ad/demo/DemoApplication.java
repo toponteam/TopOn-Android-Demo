@@ -22,6 +22,7 @@ import com.anythink.core.api.ATSDK;
 import com.anythink.network.gdt.GDTATInitConfig;
 import com.anythink.network.mintegral.MintegralATInitConfig;
 import com.facebook.stetho.Stetho;
+import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,8 +31,6 @@ import java.util.Map;
 
 
 public class DemoApplication extends MultiDexApplication {
-    public static final String appid = "a5aa1f9deda26d";
-    public static final String appKey = "4f7b9ac17decb9babec83aac078742c7";
 
     @Override
     public void onCreate() {
@@ -105,7 +104,7 @@ public class DemoApplication extends MultiDexApplication {
 
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
 //        ATSDK.setUseHTTP(true);
-        ATSDK.init(this, appid, appKey);
+        ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
 
 //        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
 //        ATSDK.init(this, appid, appKey, atNetworkConfig);

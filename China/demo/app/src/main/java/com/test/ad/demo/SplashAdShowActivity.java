@@ -46,8 +46,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     ATSplashAd splashAd;
     FrameLayout container;
 
-    boolean isCustomSkipView;
-
     Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
@@ -57,7 +55,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         setContentView(R.layout.splash_ad_show);
 
         String placementId = getIntent().getStringExtra("placementId");
-        isCustomSkipView = getIntent().getBooleanExtra("custom_skip_view", false);
         container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         Configuration cf = getResources().getConfiguration();
@@ -152,6 +149,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 @Override
                 public void run() {
                     splashAd.show(SplashAdShowActivity.this, container);
+//                    showAdWithCustomSkipView();//show with customSkipView
 //                    splashAd.show(SplashAdShowActivity.this, container, "f628c7999265cd");
                 }
             }, 10);
@@ -221,13 +219,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             return;
         }
 
-
-        if (isCustomSkipView) {
-            showAdWithCustomSkipView();
-        } else {
-            splashAd.show(this, container);
+        splashAd.show(this, container);
+//        showAdWithCustomSkipView();//show with customSkipView
 //            splashAd.show(this, container, "f628c7999265cd");
-        }
     }
 
     @Override

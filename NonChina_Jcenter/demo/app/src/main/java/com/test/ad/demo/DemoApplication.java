@@ -16,18 +16,11 @@ import android.webkit.WebView;
 import androidx.multidex.MultiDexApplication;
 
 import com.anythink.core.api.ATAdConst;
-import com.anythink.core.api.ATCustomRuleKeys;
-import com.anythink.core.api.ATDetectionResultCallback;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
-import com.anythink.network.adcolony.AdColonyATInitConfig;
-import com.anythink.network.facebook.FacebookATInitConfig;
-import com.anythink.network.mintegral.MintegralATInitConfig;
-import com.anythink.network.mytarget.MyTargetATInitConfig;
-import com.anythink.network.pangle.PangleATInitConfig;
-import com.anythink.network.vungle.VungleATInitConfig;
 import com.facebook.stetho.Stetho;
+import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,12 +29,14 @@ import java.util.Map;
 
 
 public class DemoApplication extends MultiDexApplication {
-    public static final String appid = "a5aa1f9deda26d";
-    public static final String appKey = "4f7b9ac17decb9babec83aac078742c7";
 
     @Override
     public void onCreate() {
         super.onCreate();
+//        JacocoHelper.Builder builder = new JacocoHelper.Builder();
+//        builder.setApplication(this).setDebuggable(true);
+//        JacocoHelper.initialize(builder.build());
+
         //Android 9 or above must be set
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             String processName = getProcessName();
@@ -97,7 +92,6 @@ public class DemoApplication extends MultiDexApplication {
         Map<String, Object> custommap = new HashMap<String, Object>();
         custommap.put("key1", "initCustomMap1");
         custommap.put("key2", "initCustomMap2");
-//        custommap.put(ATCustomRuleKeys.AGE, 13);
         ATSDK.initCustomMap(custommap);
 
         Map<String, Object> subcustommap = new HashMap<String, Object>();
@@ -106,7 +100,8 @@ public class DemoApplication extends MultiDexApplication {
         ATSDK.initPlacementCustomMap("b5aa1fa4165ea3", subcustommap);//native  facebook
 
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
-        ATSDK.init(this, appid, appKey);
+//        ATSDK.setUseHTTP(true);
+        ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
 
 //        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
 //        ATSDK.init(this, appid, appKey, atNetworkConfig);
@@ -118,19 +113,11 @@ public class DemoApplication extends MultiDexApplication {
     private ATNetworkConfig getAtNetworkConfig() {
         List<ATInitConfig> atInitConfigs = new ArrayList<>();
 
-//        ATInitConfig pangleATInitConfig = new PangleATInitConfig("8025677");
+//        ATInitConfig gdtatInitConfig = new GDTATInitConfig("1200028501");
 //        ATInitConfig mintegralATInitConfig = new MintegralATInitConfig("100947", "ef13ef712aeb0f6eb3d698c4c08add96");
-//        ATInitConfig facebookATInitConfig = new FacebookATInitConfig();
-//        ATInitConfig vungleAtInitConfig = new VungleATInitConfig("5ad59a853d927044ac75263a");
-//        ATInitConfig adColonyATInitConfig = new AdColonyATInitConfig("app251236acbb494d48a8", "vz6ddfc996216e4c2b99", null);
-//        ATInitConfig myTargetATInitConfig = new MyTargetATInitConfig();
 //
-//        atInitConfigs.add(pangleATInitConfig);
+//        atInitConfigs.add(gdtatInitConfig);
 //        atInitConfigs.add(mintegralATInitConfig);
-//        atInitConfigs.add(facebookATInitConfig);
-//        atInitConfigs.add(vungleAtInitConfig);
-//        atInitConfigs.add(adColonyATInitConfig);
-//        atInitConfigs.add(myTargetATInitConfig);
 
         ATNetworkConfig.Builder builder = new ATNetworkConfig.Builder();
         builder.withInitConfigList(atInitConfigs);

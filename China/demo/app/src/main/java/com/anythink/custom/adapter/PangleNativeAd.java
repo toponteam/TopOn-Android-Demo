@@ -49,7 +49,9 @@ public class PangleNativeAd extends CustomNativeAd {
                 imageStringList.add(ttImage.getImageUrl());
             }
             TTImage mainImage = imageList.get(0);
-            setMainImageUrl(mainImage.getImageUrl(), mainImage.getWidth(), mainImage.getHeight());
+            setMainImageUrl(mainImage.getImageUrl());
+            setMainImageWidth(mainImage.getWidth());
+            setMainImageHeight( mainImage.getHeight());
         }
         setImageUrlList(imageStringList);
         setCallToActionText(mTTFeedAd.getButtonText());

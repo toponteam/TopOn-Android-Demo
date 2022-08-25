@@ -46,8 +46,8 @@
                 android:layout_marginTop="@dimen/anythink_10dp"
                 android:layout_marginBottom="@dimen/anythink_10dp"
                 android:text="@string/anythink_title_splash"
-                android:textSize="@dimen/anythink_desc_size"
-                android:textColor="@color/anythink_666666" />
+                android:textColor="@color/anythink_666666"
+                android:textSize="@dimen/anythink_desc_size" />
 
         </RelativeLayout>
 

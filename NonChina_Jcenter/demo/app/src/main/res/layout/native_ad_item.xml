@@ -8,9 +8,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffff"
-    android:orientation="vertical">
-
+    android:padding="5dp">
 
     <FrameLayout
         android:id="@+id/native_ad_content_image_area"
@@ -77,15 +75,6 @@
         android:layout_marginBottom="2dp"
         android:visibility="gone" />
 
-    <FrameLayout
-        android:id="@+id/native_ad_logo_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/native_ad_image"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="2dp"
-        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/native_self_adlogo"

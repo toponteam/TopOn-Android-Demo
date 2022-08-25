@@ -1,15 +1,13 @@
 package com.test.ad.demo;
 
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.net.Uri;
+import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
@@ -21,7 +19,9 @@ import java.util.List;
 
 public class SelfRenderViewUtil {
 
-    public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo, int height) {
+    public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo) {
+        int padding = dip2px(context, 5);
+        selfRenderView.setPadding(padding, padding, padding, padding);
         TextView titleView = (TextView) selfRenderView.findViewById(R.id.native_ad_title);
         TextView descView = (TextView) selfRenderView.findViewById(R.id.native_ad_desc);
         TextView ctaView = (TextView) selfRenderView.findViewById(R.id.native_ad_install_btn);
@@ -31,23 +31,6 @@ public class SelfRenderViewUtil {
         final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
 
-        titleView.setText("");
-        descView.setText("");
-        ctaView.setText("");
-        adFromView.setText("");
-        titleView.setText("");
-        contentArea.removeAllViews();
-        iconArea.removeAllViews();
-        logoView.setImageDrawable(null);
-
-        titleView.setVisibility(View.VISIBLE);
-        descView.setVisibility(View.VISIBLE);
-        ctaView.setVisibility(View.VISIBLE);
-        logoView.setVisibility(View.VISIBLE);
-        iconArea.setVisibility(View.VISIBLE);
-        closeView.setVisibility(View.VISIBLE);
-
-
         // bind view
         if (nativePrepareInfo == null) {
             nativePrepareInfo = new ATNativePrepareInfo();
@@ -56,135 +39,159 @@ public class SelfRenderViewUtil {
 
 
         String title = adMaterial.getTitle();
-        String descriptionText = adMaterial.getDescriptionText();
-        View adIconView = adMaterial.getAdIconView();
-        String iconImageUrl = adMaterial.getIconImageUrl();
-        String callToActionText = adMaterial.getCallToActionText();
-        View mediaView = adMaterial.getAdMediaView(contentArea);
-        String adChoiceIconUrl = adMaterial.getAdChoiceIconUrl();
-        String adFrom = adMaterial.getAdFrom();
-        View adLogoView = adMaterial.getAdLogoView();
-
         // title
-        titleView.setText(title);
-        nativePrepareInfo.setTitleView(titleView);//bind title
-        clickViewList.add(titleView);
-
-
-        // desc
-        descView.setText(descriptionText);
-        nativePrepareInfo.setDescView(descView);//bind desc
-        clickViewList.add(descView);
-
-
-        // cta button
-        if (!TextUtils.isEmpty(callToActionText)) {
-            ctaView.setText(callToActionText);
+        if (!TextUtils.isEmpty(title)) {
+            titleView.setText(title);
+            nativePrepareInfo.setTitleView(titleView);//bind title
+            clickViewList.add(titleView);
+            titleView.setVisibility(View.VISIBLE);
         } else {
-            ctaView.setVisibility(View.GONE);
+            titleView.setVisibility(View.GONE);
         }
-        nativePrepareInfo.setCtaView(ctaView);//bind cta button
-        clickViewList.add(ctaView);
 
+
+        String descriptionText = adMaterial.getDescriptionText();
+        if (!TextUtils.isEmpty(descriptionText)) {
+            // desc
+            descView.setText(descriptionText);
+            nativePrepareInfo.setDescView(descView);//bind desc
+            clickViewList.add(descView);
+            descView.setVisibility(View.VISIBLE);
+        } else {
+            descView.setVisibility(View.GONE);
+        }
 
         // icon
+        //TODO 优化
+        View adIconView = adMaterial.getAdIconView();
+        String iconImageUrl = adMaterial.getIconImageUrl();
+        iconArea.removeAllViews();
         final ATNativeImageView iconView = new ATNativeImageView(context);
-        if (adIconView == null) {
+        if (adIconView != null) {
+            iconArea.addView(adIconView);
+            nativePrepareInfo.setIconView(adIconView);//bind icon
+            clickViewList.add(adIconView);
+            iconArea.setVisibility(View.VISIBLE);
+        } else if (!TextUtils.isEmpty(iconImageUrl)) {
             iconArea.addView(iconView);
             iconView.setImage(iconImageUrl);
             nativePrepareInfo.setIconView(iconView);//bind icon
             clickViewList.add(iconView);
+            iconArea.setVisibility(View.VISIBLE);
         } else {
-            iconArea.addView(adIconView);
-            nativePrepareInfo.setIconView(adIconView);//bind icon
-            clickViewList.add(adIconView);
+            iconArea.setVisibility(View.INVISIBLE);
         }
 
+        // cta button
+        String callToActionText = adMaterial.getCallToActionText();
+        if (!TextUtils.isEmpty(callToActionText)) {
+            ctaView.setText(callToActionText);
+            nativePrepareInfo.setCtaView(ctaView);//bind cta button
+            clickViewList.add(ctaView);
+            ctaView.setVisibility(View.VISIBLE);
+        } else {
+            ctaView.setVisibility(View.GONE);
+        }
 
         // media view
+        View mediaView = adMaterial.getAdMediaView(contentArea);
+        int mainImageHeight = adMaterial.getMainImageHeight();
+        int mainImageWidth = adMaterial.getMainImageWidth();
+
+        int realMainImageWidth = context.getResources().getDisplayMetrics().widthPixels - dip2px(context, 10);
+        int realMainHeight = 0;
+
+        FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
+                , FrameLayout.LayoutParams.WRAP_CONTENT);
+        if (mainImageWidth > 0 && mainImageHeight > 0) {
+            realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+            mainImageParam.width = realMainImageWidth;
+            mainImageParam.height = realMainHeight;
+        } else {
+            mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+            mainImageParam.height = realMainImageWidth * 600 / 1024;
+        }
+
+        contentArea.removeAllViews();
         if (mediaView != null) {
             if (mediaView.getParent() != null) {
                 ((ViewGroup) mediaView.getParent()).removeView(mediaView);
             }
-
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
-            params.gravity = Gravity.CENTER;
-            mediaView.setLayoutParams(params);
-            contentArea.addView(mediaView, params);
+            mainImageParam.gravity = Gravity.CENTER;
+            mediaView.setLayoutParams(mainImageParam);
+            contentArea.addView(mediaView, mainImageParam);
             clickViewList.add(mediaView);
-        } else {
-            if (!TextUtils.isEmpty(adMaterial.getVideoUrl())) {
-                View playerView = initializePlayer(context, adMaterial.getVideoUrl());
-                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
-                params.gravity = Gravity.CENTER;
-                playerView.setLayoutParams(params);
-                contentArea.addView(playerView, params);
-                clickViewList.add(playerView);
-            } else {
-                ATNativeImageView imageView = new ATNativeImageView(context);
-                imageView.setImage(adMaterial.getMainImageUrl());
-                ViewGroup.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, height);
-                imageView.setLayoutParams(params);
-                contentArea.addView(imageView, params);
+            contentArea.setVisibility(View.VISIBLE);
+        } else if (!TextUtils.isEmpty(adMaterial.getMainImageUrl())) {
+            ATNativeImageView imageView = new ATNativeImageView(context);
+            imageView.setImage(adMaterial.getMainImageUrl());
+            imageView.setLayoutParams(mainImageParam);
+            contentArea.addView(imageView, mainImageParam);
 
-                nativePrepareInfo.setMainImageView(imageView);//bind main image
-                clickViewList.add(imageView);
-            }
+            nativePrepareInfo.setMainImageView(imageView);//bind main image
+            clickViewList.add(imageView);
+            contentArea.setVisibility(View.VISIBLE);
+        } else {
+            contentArea.removeAllViews();
+            contentArea.setVisibility(View.GONE);
         }
 
+
+        //Ad Logo
+        String adChoiceIconUrl = adMaterial.getAdChoiceIconUrl();
+        Bitmap adLogoBitmap = adMaterial.getAdLogo();
+        if (!TextUtils.isEmpty(adChoiceIconUrl)) {
+            logoView.setImage(adChoiceIconUrl);
+            nativePrepareInfo.setAdLogoView(logoView);//bind ad choice
+            logoView.setVisibility(View.VISIBLE);
+        } else if (adLogoBitmap != null) {
+            logoView.setImageBitmap(adLogoBitmap);
+            logoView.setVisibility(View.VISIBLE);
+        } else {
+            logoView.setImageBitmap(null);
+            logoView.setVisibility(View.GONE);
+        }
+
+        String adFrom = adMaterial.getAdFrom();
 
         // ad from
         if (!TextUtils.isEmpty(adFrom)) {
             adFromView.setText(adFrom);
+            adFromView.setVisibility(View.VISIBLE);
         } else {
             adFromView.setVisibility(View.GONE);
         }
         nativePrepareInfo.setAdFromView(adFromView);//bind ad from
 
 
-        // ad choice
-        if (!TextUtils.isEmpty(adChoiceIconUrl)) {
-            logoView.setImage(adChoiceIconUrl);
-            nativePrepareInfo.setAdLogoView(logoView);//bind ad choice
-        } else if (adLogoView != null) {
-            FrameLayout logoContainer = selfRenderView.findViewById(R.id.native_ad_logo_container);
-            if (logoContainer != null) {
-                logoContainer.setVisibility(View.VISIBLE);
-                logoContainer.addView(adLogoView);
-                nativePrepareInfo.setAdLogoView(adLogoView);//bind ad choice
-            }
-        }
-
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
         nativePrepareInfo.setChoiceViewLayoutParams(layoutParams);//bind layout params for ad choice
-
         nativePrepareInfo.setCloseView(closeView);//bind close button
-
 
         nativePrepareInfo.setClickViewList(clickViewList);//bind click view list
 
         if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
             List<View> creativeClickViewList = new ArrayList<>();//click views
-            creativeClickViewList.add(descView);
+            creativeClickViewList.add(ctaView);
             ((ATNativePrepareExInfo) nativePrepareInfo).setCreativeClickViewList(creativeClickViewList);//bind custom view list
         }
     }
 
-    private static View initializePlayer(Context context, String url) {
-        VideoView videoView = new VideoView(context);
-        videoView.setVideoURI(Uri.parse(url));
-        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-            }
-        });
-        videoView.start();
+//    private static View initializePlayer(Context context, String url) {
+//        VideoView videoView = new VideoView(context);
+//        videoView.setVideoURI(Uri.parse(url));
+//        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mediaPlayer) {
+//            }
+//        });
+//        videoView.start();
+//
+//        return videoView;
+//    }
 
-        return videoView;
-    }
-
-    private static int dip2px(Context context, float dipValue) {
+    public static int dip2px(Context context, float dipValue) {
         float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
     }

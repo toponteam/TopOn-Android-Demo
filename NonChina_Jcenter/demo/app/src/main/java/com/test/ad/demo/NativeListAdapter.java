@@ -13,20 +13,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeDislikeListener;
+import com.anythink.nativead.api.ATNativeEventListener;
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
+import com.test.ad.demo.bean.RecycleViewDataBean;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private String TAG = NativeListAdapter.class.getSimpleName();
-
     /**
      * data
      */
@@ -40,30 +49,32 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
      */
     private static final int TYPE_MORE = 2;
 
-    private int mShowAdInterval = 10;
 
-    private int mAdWidth;
-    private int mAdHeight;
-    private List<String> mData;
+    private List<RecycleViewDataBean> mData;
+
+    final int limitAdSize = 20;
+    private List<RecycleViewDataBean> mNativeAdBeanList;
 
     private OnNativeListCallback mOnNativeListCallback;
 
-    private NativeListHelper mNativeListHelper;
 
-    public NativeListAdapter(int width, int height, List<String> data, OnNativeListCallback onNativeListCallback) {
+    private ATNative mATNativeHandler;
 
-        this.mAdWidth = width;
-        this.mAdHeight = height;
+    ConcurrentHashMap<String, NativeAd> mImpressionAdMap;
+
+
+    public NativeListAdapter(List<RecycleViewDataBean> data, OnNativeListCallback onNativeListCallback) {
         this.mData = data;
+        this.mImpressionAdMap = new ConcurrentHashMap<>();
         this.mOnNativeListCallback = onNativeListCallback;
-        this.mNativeListHelper = new NativeListHelper(mShowAdInterval);
+        this.mNativeAdBeanList = new ArrayList<>(5);
     }
 
-    public int getIntervalAd() {
-        return this.mShowAdInterval;
+    public void setNativeAdHandler(ATNative nativeAdHandler) {
+        mATNativeHandler = nativeAdHandler;
     }
 
-    public void addData(List<String> data) {
+    public void addData(List<RecycleViewDataBean> data) {
         if (data != null) {
             int oldSize = mData.size();
             int InsertSize = data.size();
@@ -73,17 +84,9 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         }
     }
 
-    public void addCache(NativeAd nativeAd) {
-        if (this.mNativeListHelper != null) {
-            this.mNativeListHelper.addLoadedCache(nativeAd);
-        }
-    }
-
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int itemViewType) {
-
         switch (itemViewType) {
             case TYPE_AD:
                 return onCreateAdViewHolder(viewGroup);
@@ -100,8 +103,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private AdViewHolder onCreateAdViewHolder(@NonNull ViewGroup viewGroup) {
         Log.i(TAG, "onCreateAdViewHolder: create adView");
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.native_list_ad_item, viewGroup, false);
-        ATNativeAdView atNativeAdView = new ATNativeAdView(viewGroup.getContext());
-        return new AdViewHolder(view, atNativeAdView);
+        return new AdViewHolder(view);
     }
 
     private DataViewHolder onCreateDataViewHolder(@NonNull ViewGroup viewGroup) {
@@ -141,44 +143,141 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     /**
-     * bind ad view
+     * bind ad view,use nativeAd cache
      */
     private void onBindAdViewHolder(AdViewHolder viewHolder, int position) {
+        Log.i(TAG, "onBindAdViewHolder");
+        RecycleViewDataBean recycleViewDataBean = mData.get(position);
 
-        if (mNativeListHelper != null) {
+        boolean hasUseNewAd = false;
+        if (recycleViewDataBean.nativeAd == null) {
+            recycleViewDataBean.nativeAd = mATNativeHandler.getNativeAd();
+            hasUseNewAd = true;
+        }
 
-            NativeAd nativeAd = mNativeListHelper.getNativeAd(position);
+        if (hasUseNewAd || recycleViewDataBean.nativeAd == null) {
+            Log.i(TAG, "start to request new ad object.");
+            //TODO 判断如果已经获取到新的广告之后或者暂时获取不到广告的情况，马上发起广告加载
+            mATNativeHandler.makeAdRequest();
+        }
 
-            if (nativeAd == null) {
-                nativeAd = mNativeListHelper.popNativeAdCache();
-            }
-            Log.i(TAG, "onBindAdViewHolder: nativeAd: " + nativeAd + ",   " + position);
-            Log.i(TAG, "onBindAdViewHolder: isNativeExpress: " + nativeAd.isNativeExpress() + ",   " + position);
+        //Controll the Ad Cache Size
+        controlNativeAdCacheSize(recycleViewDataBean, hasUseNewAd);
 
-            if (nativeAd != null && mOnNativeListCallback != null) {
-                viewHolder.mATNativeAdView.removeAllViews();
-                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                params.gravity = Gravity.CENTER_HORIZONTAL;
-                viewHolder.mATNativeAdView.setLayoutParams(params);
+        if (recycleViewDataBean.nativeAd == null) {
+            //TODO 针对广告对象为空的情况下暂时隐藏item，等广告获取到之后再展示
+            Log.i(TAG, "onBindAdViewHolder: NativeAd is null, it would be gone now.");
+            RecyclerView.LayoutParams param = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
+            viewHolder.itemView.setVisibility(View.GONE);
+            param.height = 0;
+            param.width = 0;
+            viewHolder.itemView.setLayoutParams(param);
+        } else {
+            //TODO 展示广告
+            Log.i(TAG, "onBindAdViewHolder: NativeAd exist, start to render view.");
+            Log.i(TAG, "onBindAdViewHolder: RenderAd: " + recycleViewDataBean.nativeAd.getAdInfo().toString());
+            viewHolder.itemView.setVisibility(View.VISIBLE);
+            RecyclerView.LayoutParams param = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
+            param.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+            param.width = RelativeLayout.LayoutParams.MATCH_PARENT;
+            viewHolder.itemView.setLayoutParams(param);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.gravity = Gravity.CENTER_HORIZONTAL;
+            viewHolder.mATNativeAdView.setLayoutParams(params);
 
-                if (viewHolder.mATNativeAdView.getParent() == null) {
-                    viewHolder.mAdContainer.addView(viewHolder.mATNativeAdView);
-                }
-                mOnNativeListCallback.onBindAdView(nativeAd, viewHolder.mATNativeAdView);
-                mNativeListHelper.putNativeAd(position, nativeAd);
+            viewHolder.setCurrentRecycleViewDataBean(recycleViewDataBean);
+            mImpressionAdMap.put(String.valueOf(recycleViewDataBean.nativeAd.hashCode()), recycleViewDataBean.nativeAd);
+            renderAdView(recycleViewDataBean.nativeAd, viewHolder, position);
+        }
+    }
+
+    //TODO 简单实现在一个List里限制指定数量的广告缓存，避免内存过大
+    private void controlNativeAdCacheSize(RecycleViewDataBean recycleViewDataBean, boolean hasUseNewAd) {
+        if (hasUseNewAd) {
+            mNativeAdBeanList.add(recycleViewDataBean);
+        }
+
+        if (mNativeAdBeanList.size() > limitAdSize) {
+            RecycleViewDataBean removeBean = mNativeAdBeanList.get(0);
+            if (removeBean.nativeAd != null) {
+                //TODO 超出数量之后直接移除最旧的广告
+                mNativeAdBeanList.remove(0);
+                Log.i(TAG, "controlNativeAdCacheSize: Over Ad Size, Remove AD:" + removeBean.nativeAd.getAdInfo());
+                removeBean.nativeAd.destory();
+                removeBean.nativeAd = null;
             }
         }
     }
+
+    private void renderAdView(final NativeAd nativeAd, final AdViewHolder adViewHolder, int position) {
+        nativeAd.setNativeEventListener(new ATNativeEventListener() {
+            @Override
+            public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
+                Log.i(TAG, "native ad onAdImpressed--------\n" + entity.toString());
+            }
+
+            @Override
+            public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
+                Log.i(TAG, "native ad onAdClicked--------\n" + entity.toString());
+            }
+
+            @Override
+            public void onAdVideoStart(ATNativeAdView view) {
+                Log.i(TAG, "native ad onAdVideoStart--------");
+            }
+
+            @Override
+            public void onAdVideoEnd(ATNativeAdView view) {
+                Log.i(TAG, "native ad onAdVideoEnd--------");
+            }
+
+            @Override
+            public void onAdVideoProgress(ATNativeAdView view, int progress) {
+                Log.i(TAG, "native ad onAdVideoProgress--------:" + progress);
+            }
+        });
+
+        nativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
+            @Override
+            public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
+                Log.i(TAG, "onAdCloseButtonClick: remove " + position);
+                removeAdView(position);
+            }
+        });
+
+        try {
+            Log.i(TAG, "native ad start to render ad------------- ");
+
+            ATNativePrepareInfo nativePrepareInfo = null;
+            adViewHolder.mATNativeAdView.removeAllViews();
+
+            if (nativeAd.isNativeExpress()) {
+                //TODO 针对模版进行广告渲染
+                nativeAd.renderAdContainer(adViewHolder.mATNativeAdView, null);
+                adViewHolder.mSelfRenderView.setVisibility(View.GONE);
+            } else {
+                //TODO 针对自渲染类型进行广告渲染
+                nativePrepareInfo = new ATNativePrepareInfo();
+                adViewHolder.mSelfRenderView.setVisibility(View.VISIBLE);
+//                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, adViewHeight);
+                SelfRenderViewUtil.bindSelfRenderView(adViewHolder.mATNativeAdView.getContext(), nativeAd.getAdMaterial(), adViewHolder.mSelfRenderView, nativePrepareInfo);
+                nativeAd.renderAdContainer(adViewHolder.mATNativeAdView, adViewHolder.mSelfRenderView);
+            }
+
+            nativeAd.prepare(adViewHolder.mATNativeAdView, nativePrepareInfo);
+            nativeAd.onResume();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * bind mock data
      */
     private void onBindDataViewHolder(DataViewHolder viewHolder, int position) {
-        viewHolder.mTvData.setText(mData.get(position));
-
-//        if (mNativeListHelper != null) {
-//            mNativeListHelper.setCanShowAd(position);
-//        }
+        viewHolder.mTvData.setText(mData.get(position).content);
     }
 
     private void onBindMoreViewHoler(MoreViewHolder viewHolder) {
@@ -204,19 +303,15 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             return TYPE_MORE;
         }
 
-        if (mNativeListHelper != null && mNativeListHelper.canShowAd(position)) {
-            if (mNativeListHelper.hasBindAdCacheBy(position)) {
-                Log.i(TAG, "getItemViewType: adcache " + position);
+        RecycleViewDataBean recycleViewDataBean = mData.get(position);
+        switch (recycleViewDataBean.dataType) {
+            case RecycleViewDataBean.AD_DATA_TYPE:
                 return TYPE_AD;
-            }
-
-            if (mNativeListHelper.isAd(position) && mNativeListHelper.hasCache()) {
-                Log.i(TAG, "getItemViewType: cache  ad, no render " + position);
-                return TYPE_AD;
-            }
+            case RecycleViewDataBean.NORMAL_DATA_TYPE:
+            default:
+                return TYPE_DATA;
         }
-//        Log.i(TAG, "getItemViewType: data " + position);
-        return TYPE_DATA;
+
     }
 
     public static class DataViewHolder extends RecyclerView.ViewHolder {
@@ -235,13 +330,17 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public static class AdViewHolder extends RecyclerView.ViewHolder {
 
         ATNativeAdView mATNativeAdView;
-        ViewGroup mAdContainer;
+        View mSelfRenderView;
+        RecycleViewDataBean recycleViewDataBean;
 
-        AdViewHolder(@NonNull View itemView, ATNativeAdView atNativeAdView) {
+        AdViewHolder(@NonNull View itemView) {
             super(itemView);
+            mATNativeAdView = itemView.findViewById(R.id.ad_container);
+            mSelfRenderView = mATNativeAdView.findViewById(R.id.self_render_view);
+        }
 
-            mATNativeAdView = atNativeAdView;
-            mAdContainer = itemView.findViewById(R.id.ad_container);
+        protected void setCurrentRecycleViewDataBean(RecycleViewDataBean recycleViewDataBean) {
+            this.recycleViewDataBean = recycleViewDataBean;
         }
     }
 
@@ -259,31 +358,39 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     public void removeAdView(int position) {
-        if (mNativeListHelper != null && position != -1) {
-            mNativeListHelper.removeAdView(position);
-//            notifyItemRemoved(position);
+        mData.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void onResume() {
+        Iterator<NativeAd> iterator = mImpressionAdMap.values().iterator();
+        while (iterator.hasNext()) {
+            NativeAd nativeAd = iterator.next();
+            nativeAd.onResume();
+            Log.i(TAG, "Ad View onResume:" + nativeAd.toString());
         }
     }
 
-    public void onResume(int first, int last) {
-        if (mNativeListHelper != null) {
-            mNativeListHelper.onResume(first, last);
-        }
-    }
-
-    public void onPause(int first, int last) {
-        if (mNativeListHelper != null) {
-            mNativeListHelper.onPause(first, last);
+    public void onPause() {
+        Iterator<NativeAd> iterator = mImpressionAdMap.values().iterator();
+        while (iterator.hasNext()) {
+            NativeAd nativeAd = iterator.next();
+            nativeAd.onPause();
+            Log.i(TAG, "Ad View onPause:" + nativeAd.toString());
         }
     }
 
     public void onDestroy() {
-        if (mNativeListHelper != null) {
-            mNativeListHelper.onDestroy();
-            mNativeListHelper = null;
-        }
 
         if (mData != null) {
+            Log.i(TAG, "Recycle Destory:" + mData.size());
+            Iterator<RecycleViewDataBean> dataBeanIterator = mData.iterator();
+            while (dataBeanIterator.hasNext()) {
+                RecycleViewDataBean recycleViewDataBean = dataBeanIterator.next();
+                if (recycleViewDataBean.nativeAd != null) {
+                    recycleViewDataBean.nativeAd.destory();
+                }
+            }
             mData.clear();
             mData = null;
         }
@@ -293,25 +400,34 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public void onViewRecycled(@NonNull RecyclerView.ViewHolder holder) {
-        Log.i(TAG, "View recycled:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
         super.onViewRecycled(holder);
-        if (mNativeListHelper != null && holder instanceof AdViewHolder) {
-            mNativeListHelper.clearView(holder.getAdapterPosition(), ((AdViewHolder) holder).mATNativeAdView);
+
+        if (holder instanceof AdViewHolder) {
+            Log.i(TAG, "Ad View recycled:" + holder.getLayoutPosition() + "---holder:" + holder.toString());
+            RecycleViewDataBean recycleViewDataBean = ((AdViewHolder) holder).recycleViewDataBean;
+
+            if (recycleViewDataBean != null && recycleViewDataBean.nativeAd != null) {
+                mImpressionAdMap.remove(String.valueOf(recycleViewDataBean.nativeAd.hashCode()), recycleViewDataBean.nativeAd);
+                if (holder.getAdapterPosition() == -1) {
+                    recycleViewDataBean.nativeAd.destory();
+                    mNativeAdBeanList.remove(recycleViewDataBean);
+                } else {
+                    recycleViewDataBean.nativeAd.onPause();
+                }
+            }
         }
     }
-
-    public void onViewAttachedToWindow(@NonNull RecyclerView.ViewHolder holder) {
-        Log.i(TAG, "View onViewAttachedToWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
-    }
-
-    public void onViewDetachedFromWindow(@NonNull RecyclerView.ViewHolder holder) {
-        Log.i(TAG, "View onViewDetachedFromWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
-    }
+//
+//    public void onViewAttachedToWindow(@NonNull RecyclerView.ViewHolder holder) {
+//        Log.i(TAG, "View onViewAttachedToWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
+//    }
+//
+//    public void onViewDetachedFromWindow(@NonNull RecyclerView.ViewHolder holder) {
+//        Log.i(TAG, "View onViewDetachedFromWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
+//    }
 
 
     public interface OnNativeListCallback {
-        ATNativeAdView onBindAdView(NativeAd nativeAd, ATNativeAdView atNativeAdView);
-
         void onClickLoadMore();
     }
 }

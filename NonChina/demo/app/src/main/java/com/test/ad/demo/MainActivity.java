@@ -19,25 +19,25 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.anythink.core.api.ATSDK;
 import com.anythink.core.api.DeviceInfoCallback;
+import com.test.ad.demo.util.PlacementIdUtil;
 
 import org.json.JSONObject;
 
-
 public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ((TextView)findViewById(R.id.tv_sdk_demo)).setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        ((TextView) findViewById(R.id.tv_sdk_demo)).setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
         findViewById(R.id.nativeBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NativeAdActivity.class));
+                startActivity(new Intent(MainActivity.this, NativeMainActivity.class));
             }
         });
 
@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        ((TextView) findViewById(R.id.tv_version)).setText(getResources().getString(R.string.anythink_sdk_version, ATSDK.getSDKVersionName()));
+        ((TextView) findViewById(R.id.tv_version)).setText(getResources().getString(R.string.anythink_sdk_version, ATSDK.getSDKVersionName()) + PlacementIdUtil.MODE);
 
         ATSDK.testModeDeviceInfo(this, new DeviceInfoCallback() {
             @Override

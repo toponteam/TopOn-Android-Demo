@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
@@ -32,6 +33,7 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +42,6 @@ public class BannerAdActivity extends Activity {
     private static final String TAG = BannerAdActivity.class.getSimpleName();
 
     ATBannerView mBannerView;
-
     private TextView tvLoadAdBtn;
     private TextView tvShowLog;
     private ScrollView scrollView;
@@ -58,7 +59,7 @@ public class BannerAdActivity extends Activity {
         tvShowLog.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN ||motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN || motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
                     view.getParent().requestDisallowInterceptTouchEvent(true);
                 }
                 if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
@@ -119,6 +120,13 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onClick(View view) {
                 frameLayout.setVisibility(View.VISIBLE);
+
+                int padding = dip2px(12);
+                Map<String, Object> localMap = new HashMap<>();
+                localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+                localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
+                mBannerView.setLocalExtra(localMap);
+
                 mBannerView.loadAd();
             }
         });
@@ -144,7 +152,7 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onBannerLoaded() {
                 Log.i(TAG, "onBannerLoaded");
-                ViewUtil.printLog(tvShowLog,"onBannerLoaded");
+                ViewUtil.printLog(tvShowLog, "onBannerLoaded");
                 if (scrollView != null) {
                     scrollView.fullScroll(ScrollView.FOCUS_DOWN);
                 }
@@ -153,37 +161,37 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onBannerFailed(AdError adError) {
                 Log.i(TAG, "onBannerFailed: " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onBannerFailed" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "onBannerFailed" + adError.getFullErrorInfo());
             }
 
             @Override
             public void onBannerClicked(ATAdInfo entity) {
                 Log.i(TAG, "onBannerClicked:" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onBannerClicked");
+                ViewUtil.printLog(tvShowLog, "onBannerClicked");
             }
 
             @Override
             public void onBannerShow(ATAdInfo entity) {
                 Log.i(TAG, "onBannerShow:" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onBannerShow");
+                ViewUtil.printLog(tvShowLog, "onBannerShow");
             }
 
             @Override
             public void onBannerClose(ATAdInfo entity) {
                 Log.i(TAG, "onBannerClose:" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onBannerClose");
+                ViewUtil.printLog(tvShowLog, "onBannerClose");
             }
 
             @Override
             public void onBannerAutoRefreshed(ATAdInfo entity) {
                 Log.i(TAG, "onBannerAutoRefreshed:" + entity.toString());
-                ViewUtil.printLog(tvShowLog,"onBannerAutoRefreshed");
+                ViewUtil.printLog(tvShowLog, "onBannerAutoRefreshed");
             }
 
             @Override
             public void onBannerAutoRefreshFail(AdError adError) {
                 Log.i(TAG, "onBannerAutoRefreshFail: " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog,"onBannerAutoRefreshFail");
+                ViewUtil.printLog(tvShowLog, "onBannerAutoRefreshFail");
             }
         });
 

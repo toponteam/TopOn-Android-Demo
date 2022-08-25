@@ -21,6 +21,7 @@
     <dimen name="anythink_title_size">18sp</dimen>
     <dimen name="anythink_desc_size">14sp</dimen>
     <dimen name="anythink_name_size">16sp</dimen>
+    <dimen name="anythink_button_size">14sp</dimen>
     <dimen name="anythink_title_bar_text_size">20sp</dimen>
 
     <dimen name="anythink_line_width">2dp</dimen>

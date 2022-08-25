@@ -57,7 +57,7 @@ public class RewardVideoAdActivity extends Activity {
     private TextView tvShowLog;
     private CheckBox ckAutoLoad;
 
-    private static WeakReference<TextView> tvShowLogReference;
+    public static WeakReference<TextView> tvShowLogReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +65,6 @@ public class RewardVideoAdActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_video);
-
         ATRewardVideoAutoAd.init(this, null, autoLoadListener);
 
         findViewById(R.id.rl_type).setSelected(true);
@@ -223,7 +222,7 @@ public class RewardVideoAdActivity extends Activity {
 
             @Override
             public void onRewardedVideoAdPlayFailed(AdError errorCode, ATAdInfo entity) {
-                Log.i(TAG, "onRewardedVideoAdPlayEnd:\n" + entity.toString());
+                Log.i(TAG, "onRewardedVideoAdPlayFailed:\n" + entity.toString());
                 ViewUtil.printLog(tvShowLog, "onRewardedVideoAdPlayFailed:" + errorCode.getFullErrorInfo());
             }
 
@@ -341,7 +340,7 @@ public class RewardVideoAdActivity extends Activity {
         }
     }
 
-    private static ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
+    public static ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
         @Override
         public void onRewardVideoAutoLoaded(String placementId) {
             initPlacementIdLocalExtra(placementId);
@@ -360,9 +359,14 @@ public class RewardVideoAdActivity extends Activity {
                 ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onRewardVideoAutoLoadFail:\n" + adError.getFullErrorInfo());
             }
         }
+
+        @Override
+        protected void finalize() throws Throwable {
+            super.finalize();
+        }
     };
 
-    private static void initPlacementIdLocalExtra(String placementId) {
+    public static void initPlacementIdLocalExtra(String placementId) {
         String userid = "test_userid_001";
         String userdata = "test_userdata_001_" + placementId + "_" + System.currentTimeMillis();
         Map<String, Object> localMap = new HashMap<>();
@@ -448,7 +452,6 @@ public class RewardVideoAdActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        tvShowLog = null;
         for (Map.Entry<String, Boolean> entry : mAutoLoadPlacementIdMap.entrySet()) {
             ATRewardVideoAutoAd.removePlacementId(entry.getKey());
         }
