@@ -1,0 +1,10 @@
+repositories {
+}
+dependencies {
+    //Support (Necessary)
+    api "com.android.support:appcompat-v7:28.0.0"
+
+    //Kuaishou
+    api "com.android.support:design:28.0.0"
+
+}

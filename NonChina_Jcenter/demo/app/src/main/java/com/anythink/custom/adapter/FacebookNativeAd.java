@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
@@ -54,20 +55,33 @@ public class FacebookNativeAd extends CustomNativeAd implements NativeAdListener
 
     // Lifecycle Handlers
     @Override
-    public void prepare(final View view, FrameLayout.LayoutParams layoutParams) {
+    public void prepare(View view, ATNativePrepareInfo nativePrepareInfo) {
         if (view == null) {
             return;
         }
         try {
-            if (mContainer != null) {
-                mFacebookNativeAd.registerViewForInteraction(mContainer, mMediaView, mAdIconView);
+
+            List<View> clickViewList = nativePrepareInfo.getClickViewList();
+            FrameLayout.LayoutParams layoutParams = nativePrepareInfo.getChoiceViewLayoutParams();
+
+            if (clickViewList != null) {
+                if (mContainer != null) {
+                    mFacebookNativeAd.registerViewForInteraction(mContainer, mMediaView, mAdIconView, clickViewList);
+                } else {
+                    mFacebookNativeAd.registerViewForInteraction(view, mMediaView, mAdIconView, clickViewList);
+                }
             } else {
-                mFacebookNativeAd.registerViewForInteraction(view, mMediaView, mAdIconView);
+                if (mContainer != null) {
+                    mFacebookNativeAd.registerViewForInteraction(mContainer, mMediaView, mAdIconView);
+                } else {
+                    mFacebookNativeAd.registerViewForInteraction(view, mMediaView, mAdIconView);
+                }
             }
+
             prepareFacebookAdChoiceView(view, layoutParams);
 
-        } catch (Exception e) {
-
+        } catch (Throwable e) {
+            e.printStackTrace();
         }
     }
 
@@ -85,24 +99,6 @@ public class FacebookNativeAd extends CustomNativeAd implements NativeAdListener
         }
 
         mContainer.addView(adOptionsView, layoutParams);
-    }
-
-    @Override
-    public void prepare(View view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) {
-        if (view == null) {
-            return;
-        }
-        try {
-            if (mContainer != null) {
-                mFacebookNativeAd.registerViewForInteraction(mContainer, mMediaView, mAdIconView, clickViewList);
-            } else {
-                mFacebookNativeAd.registerViewForInteraction(view, mMediaView, mAdIconView, clickViewList);
-            }
-            prepareFacebookAdChoiceView(view, layoutParams);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     NativeAdLayout mContainer;
@@ -186,15 +182,9 @@ public class FacebookNativeAd extends CustomNativeAd implements NativeAdListener
 
     @Override
     public void clear(final View view) {
-        if (mMediaView != null) {
-            mMediaView.setListener(null);
-            mMediaView.destroy();
-            mMediaView = null;
-        }
         if (mFacebookNativeAd != null) {
             mFacebookNativeAd.unregisterView();
         }
-
     }
 
     @Override

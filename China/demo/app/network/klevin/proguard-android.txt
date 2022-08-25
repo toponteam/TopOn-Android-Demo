@@ -1,3 +1,0 @@
-# klevinAd
--keep class com.tencent.tgpa.**{*;}
--keep class com.tencent.klevin.**{*;}

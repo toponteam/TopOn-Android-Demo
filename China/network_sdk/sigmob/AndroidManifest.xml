@@ -28,19 +28,6 @@
 
 
     <application>
-
-        <!-- targetSDKVersion >= 24时才需要添加这个provider。
-       provider的authorities属性的值为${applicationId}.sigprovider -->
-        <provider
-            android:name="com.sigmob.sdk.SigmobFileProvider"
-            android:authorities="${applicationId}.sigprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_sigmob_file_path"/>
-        </provider>
-
     </application>
 
 

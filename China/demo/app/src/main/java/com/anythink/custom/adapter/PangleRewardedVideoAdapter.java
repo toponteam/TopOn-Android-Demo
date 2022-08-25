@@ -9,6 +9,7 @@ package com.anythink.custom.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -109,6 +110,11 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
 
         @Override
         public void onRewardVerify(boolean rewardVerify, int rewardAmount, String rewardName, int errorCode, String errorMsg) {
+
+        }
+
+        @Override
+        public void onRewardArrived(boolean b, int i, Bundle bundle) {
 
         }
     };

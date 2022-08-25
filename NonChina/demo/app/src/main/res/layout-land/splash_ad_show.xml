@@ -4,7 +4,6 @@
   ~ https://www.toponad.com
   ~ Licensed under the TopOn SDK License Agreement
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
-  ~
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -41,5 +40,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_toLeftOf="@id/logo_area"></FrameLayout>
+
+
+    <TextView
+        android:id="@+id/splash_ad_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/splash_ad_container"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/splash_bg_custom_skip_view"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
@@ -66,12 +67,11 @@ public class FacebookNativeBannerAd extends CustomNativeAd implements NativeAdLi
         if (mFacebookNativeAd != null) {
             mFacebookNativeAd.unregisterView();
         }
-
     }
 
     @Override
-    public void prepare(View view, FrameLayout.LayoutParams layoutParams) {
-        super.prepare(view, layoutParams);
+    public void prepare(View view, ATNativePrepareInfo nativePrepareInfo) {
+
     }
 
     @Override

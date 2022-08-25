@@ -33,6 +33,7 @@ public class SplashZoomOutManager {
     private int decorViewHeight;
 
     private static SplashZoomOutManager instance;
+    private ViewGroup zoomOutView;
 
     public interface AnimationCallBack {
         void animationStart(int animationTime);
@@ -56,6 +57,12 @@ public class SplashZoomOutManager {
         zoomOutMarginBottom = PxUtils.dpToPx(context, 100);
         zoomOutPos = RIGHT;
         zoomOutAnimationTime = 300;
+
+        zoomOutView = new SplashZoomOutLayout(context, zoomOutMargin);
+    }
+
+    public ViewGroup getZoomOutView() {
+        return zoomOutView;
     }
 
     /**
@@ -173,7 +180,7 @@ public class SplashZoomOutManager {
         FrameLayout.LayoutParams animationParams = new FrameLayout.LayoutParams(fromWidth, fromHeight);
         animationContainer.addView(splash, animationParams);
 
-        final ViewGroup zoomOutView = new SplashZoomOutLayout(context, zoomOutMargin);
+        zoomOutView.removeAllViews();
 
         splash.setPivotX(0);
         splash.setPivotY(0);
@@ -212,6 +219,11 @@ public class SplashZoomOutManager {
                                 FrameLayout.LayoutParams.MATCH_PARENT);
                         FrameLayout.LayoutParams zoomOutParams = new FrameLayout.LayoutParams(zoomOutWidth,
                                 zoomOutHeight);
+
+                        if (zoomOutView.getParent() != null) {
+                            ((ViewGroup) zoomOutView.getParent()).removeView(zoomOutView);
+                        }
+
                         zoomOutContainer.addView(zoomOutView, zoomOutParams);
                         zoomOutView.setTranslationX(distX);
                         zoomOutView.setTranslationY(distY);

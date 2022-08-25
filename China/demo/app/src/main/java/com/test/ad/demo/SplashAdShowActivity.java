@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.network.gdt.GDTDownloadFirmInfo;
@@ -32,7 +33,6 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
-import com.test.ad.demo.gdt.DownloadApkConfirmDialogWebView;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
@@ -46,8 +46,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     ATSplashAd splashAd;
     FrameLayout container;
 
-    boolean isCustomSkipView;
-
     Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
@@ -57,7 +55,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         setContentView(R.layout.splash_ad_show);
 
         String placementId = getIntent().getStringExtra("placementId");
-        isCustomSkipView = getIntent().getBooleanExtra("custom_skip_view", false);
         container = findViewById(R.id.splash_ad_container);
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         Configuration cf = getResources().getConfiguration();
@@ -109,11 +106,42 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
         splashAd.setLocalExtra(localMap);
-        ATSplashAd.entryAdScenario(placementId, "");
+        ATSplashAd.entryAdScenario(placementId, "f628c7999265cd");
+
+        splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
+            @Override
+            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
+            }
+
+            @Override
+            public void onAdSourceAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
+            }
+        });
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
@@ -121,6 +149,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 @Override
                 public void run() {
                     splashAd.show(SplashAdShowActivity.this, container);
+//                    showAdWithCustomSkipView();//show with customSkipView
+//                    splashAd.show(SplashAdShowActivity.this, container, "f628c7999265cd");
                 }
             }, 10);
 
@@ -157,6 +187,21 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 }
             }
         }));
+
+//        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
+//            @Override
+//            public void onAdTick(long duration, long remainder) {
+//                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
+//            }
+//
+//            @Override
+//            public void isSupportCustomSkipView(boolean isSupport) {
+//                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
+//                if (isSupport) {
+//                    skipView.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        }), "f628c7999265cd");
     }
 
     @Override
@@ -169,23 +214,20 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         }
 
         if (!splashAd.isAdReady()) {
-            Log.e(TAG, "onAdLoaded: no cache" );
+            Log.e(TAG, "onAdLoaded: no cache");
             jumpToMainActivity();
             return;
         }
 
-
-        if (isCustomSkipView) {
-            showAdWithCustomSkipView();
-        } else {
-            splashAd.show(this, container);
-        }
+        splashAd.show(this, container);
+//        showAdWithCustomSkipView();//show with customSkipView
+//            splashAd.show(this, container, "f628c7999265cd");
     }
 
     @Override
     public void onAdLoadTimeout() {
         Log.i(TAG, "onAdLoadTimeout---------");
-        Toast.makeText(SplashAdShowActivity.this, "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "onAdLoadTimeout", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -266,6 +308,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
             if (splashAd.isAdReady()) {
                 splashAd.show(this, container);
+//                splashAd.show(this, container, "f628c7999265cd");
             }
         }
     }
@@ -283,21 +326,16 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     protected void onDestroy() {
         super.onDestroy();
         if (splashAd != null) {
-            splashAd.onDestory();
+            splashAd.setAdListener(null);
+            splashAd.setAdDownloadListener(null);
+            splashAd.setAdSourceStatusListener(null);
         }
 
     }
 
     @Override
     public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-        /**
-         * Only for GDT
-         */
-        if (networkConfirmInfo instanceof GDTDownloadFirmInfo) {
-            //Open Dialog view
-            new DownloadApkConfirmDialogWebView(context, ((GDTDownloadFirmInfo) networkConfirmInfo).appInfoUrl, ((GDTDownloadFirmInfo) networkConfirmInfo).confirmCallBack).show();
-            Log.i(TAG, "nonDownloadConfirm open confirm dialog");
-        }
+
     }
 
 }

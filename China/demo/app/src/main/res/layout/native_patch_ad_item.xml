@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/native_ad_content_image_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/native_ad_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:padding="5dp"
+        android:src="@mipmap/ad_close" />
+
+</RelativeLayout>

@@ -3,49 +3,41 @@
  * https://www.toponad.com
  * Licensed under the TopOn SDK License Agreement
  * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- *
  */
 
 package com.test.ad.demo;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-
-import com.anythink.core.api.ATGDPRAuthCallback;
 import com.anythink.core.api.ATSDK;
+import com.anythink.core.api.DeviceInfoCallback;
+import com.test.ad.demo.util.PlacementIdUtil;
+
+import org.json.JSONObject;
 
 public class MainActivity extends Activity {
 
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.gdprBtn).setOnClickListener(new View.OnClickListener() {
+
+        ((TextView) findViewById(R.id.tv_sdk_demo)).setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        findViewById(R.id.nativeBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ATSDK.showGdprAuth(MainActivity.this, new ATGDPRAuthCallback() {
-                    @Override
-                    public void onAuthResult(int level) {
-                        ATSDK.setGDPRUploadDataLevel(MainActivity.this, level);
-                    }
-
-                    @Override
-                    public void onPageLoadFail() {
-                        Log.i("MainActivity", "page load fail");
-                    }
-                });
-            }
-        });
-
-        findViewById(R.id.nativeAdBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NativeAdActivity.class));
+                startActivity(new Intent(MainActivity.this, NativeMainActivity.class));
             }
         });
 
@@ -77,39 +69,45 @@ public class MainActivity extends Activity {
             }
         });
 
-        findViewById(R.id.nativeBannerAdBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NativeBannerActivity.class));
-            }
-        });
+        ((TextView) findViewById(R.id.tv_version)).setText(getResources().getString(R.string.anythink_sdk_version, ATSDK.getSDKVersionName()) + PlacementIdUtil.MODE);
 
-        findViewById(R.id.nativeSplashAdBtn).setOnClickListener(new View.OnClickListener() {
+        ATSDK.testModeDeviceInfo(this, new DeviceInfoCallback() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NativeSplashActivity.class));
-            }
-        });
+            public void deviceInfo(String deviceInfo) {
+                if (!TextUtils.isEmpty(deviceInfo)) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(deviceInfo);
+                        String androidID = jsonObject.optString("AndroidID");
 
-        findViewById(R.id.nativeListBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NativeListActivity.class));
-            }
-        });
+                        MainActivity.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
 
-        findViewById(R.id.rewardedVideoAutoBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RewardVideoAutoActivity.class));
-            }
-        });
+                                TextView deviceIdTextView = (TextView) findViewById(R.id.tv_device_id);
+                                deviceIdTextView.setText(getResources().getString(R.string.anythink_click_to_copy_device_id, androidID));
+                                deviceIdTextView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        copyContentToClipboard(MainActivity.this, androidID);
 
-        findViewById(R.id.interstitialAutoBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, InterstitalAutoActivity.class));
+                                        Toast.makeText(MainActivity.this, "AndroidID：" + androidID, Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+                        });
+
+                    } catch (Throwable e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }
+
+    public void copyContentToClipboard(Context context, String content) {
+        ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData mClipData = ClipData.newPlainText("Label", content);
+        cm.setPrimaryClip(mClipData);
+    }
+
 }

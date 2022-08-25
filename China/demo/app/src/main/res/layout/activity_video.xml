@@ -7,46 +7,57 @@
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
   -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="horizontal">
+    android:layout_height="match_parent"
+    android:background="@color/anythink_F5F5F5">
+
+    <com.test.ad.demo.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="0dp"
+        android:padding="@dimen/anythink_padding">
 
-        <RadioGroup
-            android:id="@+id/placement_select_group"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/rl_type"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp"></RadioGroup>
+            android:background="@drawable/selector_bg_ad_type">
 
-        <Button
-            android:id="@+id/loadAd_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/placement_select_group"
-            android:layout_toRightOf="@id/placement_select_group"
-            android:text="Load Video Ad" />
+            <ImageView
+                android:id="@+id/iv_format"
+                android:layout_width="80dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/anythink_text_size_12"
+                android:src="@mipmap/ic_test_rewarded_video" />
 
-        <Button
-            android:id="@+id/is_ad_ready_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/loadAd_btn"
-            android:layout_toRightOf="@id/placement_select_group"
-            android:text="Is Video Ad Ready" />
+            <TextView
+                android:id="@+id/tv_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_format"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/anythink_10dp"
+                android:layout_marginBottom="@dimen/anythink_10dp"
+                android:text="@string/anythink_title_rewarded_video"
+                android:textSize="@dimen/anythink_desc_size"
+                android:textColor="@color/anythink_666666" />
 
-        <Button
-            android:id="@+id/show_ad_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/is_ad_ready_btn"
-            android:layout_toRightOf="@id/placement_select_group"
-            android:text="Show Video Ad" />
+        </RelativeLayout>
 
+        <include layout="@layout/include_select_network" />
+
+        <include layout="@layout/include_log_area" />
+
+        <include layout="@layout/include_btn" />
 
     </RelativeLayout>
-</ScrollView>
+
+</RelativeLayout>

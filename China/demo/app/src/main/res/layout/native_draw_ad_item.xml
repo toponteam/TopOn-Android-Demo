@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaaaaa">
+
+    <com.anythink.nativead.api.ATNativeAdView
+        android:id="@+id/native_draw_ad_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/native_draw_selfrender_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/native_draw_main_image_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/draw_ad_info_bg"
+                android:padding="10dp">
+
+                <com.anythink.nativead.api.ATNativeImageView
+                    android:id="@+id/icon_view"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/icon_view"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/icon_view"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="title"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/icon_view"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/icon_view"
+                    android:maxLines="1"
+                    android:text="desc"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/button_creative"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/icon_view"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/anythink_0042DF"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/native_self_adlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="AD"
+                android:textSize="11dp"
+                android:textColor="@color/anythink_0042DF"
+                android:background="@drawable/bg_btn_normal" />
+        </RelativeLayout>
+
+    </com.anythink.nativead.api.ATNativeAdView>
+</FrameLayout>

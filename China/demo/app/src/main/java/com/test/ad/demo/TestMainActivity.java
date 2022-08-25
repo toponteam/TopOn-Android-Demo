@@ -60,22 +60,28 @@ public class TestMainActivity extends Activity {
             return;
         }
 
+        SplashZoomOutManager zoomOutManager = SplashZoomOutManager.getInstance(getApplicationContext());
+
+        final int[] suggestedSize = SplashEyeAdHolder.splashEyeAd.getSuggestedSize(getApplicationContext());
+        if (suggestedSize != null) {
+            zoomOutManager.setSplashEyeAdViewSize(suggestedSize[0], suggestedSize[1]);
+        }
+
+        //for CSJ
+        ViewGroup eyeAdContainer = zoomOutManager.getZoomOutView();
+        SplashEyeAdHolder.splashEyeAd.setEyeAdContainer(eyeAdContainer);
+
+
         SplashEyeAdHolder.splashEyeAd.show(TestMainActivity.this, null, new ATSplashEyeAdListener() {
             @Override
             public void onAnimationStart(View splashView) {
-                SplashZoomOutManager zoomOutManager = SplashZoomOutManager.getInstance(getApplicationContext());
 
-
-                int[] suggestedSize = SplashEyeAdHolder.splashEyeAd.getSuggestedSize(getApplicationContext());
-                if (suggestedSize != null) {
-                    zoomOutManager.setSplashEyeAdViewSize(suggestedSize[0], suggestedSize[1]);
-                }
                 zoomOutManager.startZoomOut((ViewGroup) getWindow().getDecorView(),
                         findViewById(android.R.id.content), new SplashZoomOutManager.AnimationCallBack() {
 
                             @Override
                             public void animationStart(int animationTime) {
-
+                                Log.i(TAG, "animationStart---------: eye");
                             }
 
                             @Override

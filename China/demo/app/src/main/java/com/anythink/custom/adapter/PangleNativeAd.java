@@ -12,11 +12,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 
+import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.bytedance.sdk.openadsdk.TTAdDislike;
-import com.bytedance.sdk.openadsdk.TTDrawFeedAd;
 import com.bytedance.sdk.openadsdk.TTFeedAd;
 import com.bytedance.sdk.openadsdk.TTImage;
 import com.bytedance.sdk.openadsdk.TTNativeAd;
@@ -49,7 +48,10 @@ public class PangleNativeAd extends CustomNativeAd {
             for (TTImage ttImage : imageList) {
                 imageStringList.add(ttImage.getImageUrl());
             }
-            setMainImageUrl(imageStringList.get(0));
+            TTImage mainImage = imageList.get(0);
+            setMainImageUrl(mainImage.getImageUrl());
+            setMainImageWidth(mainImage.getWidth());
+            setMainImageHeight( mainImage.getHeight());
         }
         setImageUrlList(imageStringList);
         setCallToActionText(mTTFeedAd.getButtonText());
@@ -107,37 +109,15 @@ public class PangleNativeAd extends CustomNativeAd {
     }
 
     @Override
-    public void prepare(final View view, FrameLayout.LayoutParams layoutParams) {
+    public void prepare(final View view, ATNativePrepareInfo nativePrepareInfo) {
 
-        List<View> childViews = new ArrayList<>();
-        getChildView(childViews, view);
-        mTTFeedAd.registerViewForInteraction((ViewGroup) view, childViews, childViews, new TTNativeAd.AdInteractionListener() {
-            @Override
-            public void onAdClicked(View view, TTNativeAd ttNativeAd) {
-                notifyAdClicked();
-            }
+        List<View> clickViewList = nativePrepareInfo.getClickViewList();
 
-            @Override
-            public void onAdCreativeClick(View view, TTNativeAd ttNativeAd) {
-                notifyAdClicked();
-            }
-
-            @Override
-            public void onAdShow(TTNativeAd ttNativeAd) {
-
-            }
-        });
-
-        if(view.getContext() instanceof Activity) {
-            mTTFeedAd.setActivityForDownloadApp(((Activity) view.getContext()));
-
-            bindDislike(((Activity) view.getContext()));
+        if (clickViewList == null) {
+            clickViewList = new ArrayList<>();
+            getChildView(clickViewList, view);
         }
 
-    }
-
-    @Override
-    public void prepare(View view, List<View> clickViewList, FrameLayout.LayoutParams layoutParams) {
         mTTFeedAd.registerViewForInteraction((ViewGroup) view, clickViewList, clickViewList, new TTNativeAd.AdInteractionListener() {
             @Override
             public void onAdClicked(View view, TTNativeAd ttNativeAd) {
@@ -154,57 +134,56 @@ public class PangleNativeAd extends CustomNativeAd {
 
             }
         });
-        if(view.getContext() instanceof Activity) {
+
+        if (view.getContext() instanceof Activity) {
             mTTFeedAd.setActivityForDownloadApp(((Activity) view.getContext()));
 
             bindDislike(((Activity) view.getContext()));
         }
+
     }
 
 
     private void bindDislike(final Activity activity) {
-        ExtraInfo extraInfo = getExtraInfo();
-        if (extraInfo != null) {
-            View closeView = extraInfo.getCloseView();
-            if (closeView != null) {
+        bindDislikeListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mTTFeedAd == null) {
+                    return;
+                }
 
-                closeView.setOnClickListener(new View.OnClickListener() {
+                TTAdDislike dislikeDialog = mTTFeedAd.getDislikeDialog(activity);
+                dislikeDialog.setDislikeInteractionCallback(new TTAdDislike.DislikeInteractionCallback() {
                     @Override
-                    public void onClick(View v) {
-                        TTAdDislike dislikeDialog = mTTFeedAd.getDislikeDialog(activity);
-                        dislikeDialog.setDislikeInteractionCallback(new TTAdDislike.DislikeInteractionCallback() {
-                            @Override
-                            public void onShow() {
+                    public void onShow() {
 
-                            }
+                    }
 
-                            @Override
-                            public void onSelected(int i, String s, boolean b) {
-                                notifyAdDislikeClick();
-                            }
+                    @Override
+                    public void onSelected(int i, String s, boolean b) {
+                        notifyAdDislikeClick();
+                    }
 
-                            @Deprecated
-                            public void onSelected(int i, String s) {
-                                notifyAdDislikeClick();
-                            }
+                    @Deprecated
+                    public void onSelected(int i, String s) {
+                        notifyAdDislikeClick();
+                    }
 
-                            @Override
-                            public void onCancel() {
+                    @Override
+                    public void onCancel() {
 
-                            }
+                    }
 
-                            @Deprecated
-                            public void onRefuse() {
+                    @Deprecated
+                    public void onRefuse() {
 
-                            }
-                        });
-                        if (!dislikeDialog.isShow()) {
-                            dislikeDialog.showDislikeDialog();
-                        }
                     }
                 });
+                if (!dislikeDialog.isShow()) {
+                    dislikeDialog.showDislikeDialog();
+                }
             }
-        }
+        });
     }
 
 

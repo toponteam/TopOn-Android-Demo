@@ -266,8 +266,8 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
         mBannerHeight = bannerHeight;
 
         //If BannerView has been configured for width, then use it directly in the template
-        int viewWidth = (mATBannerView != null && mATBannerView.getLayoutParams() != null) ? (int) (mATBannerView.getLayoutParams().width / activity.getResources().getDisplayMetrics().density) : 0;
-        int viewHeight = (mATBannerView != null && mATBannerView.getLayoutParams() != null) ? (int) (mATBannerView.getLayoutParams().height / activity.getResources().getDisplayMetrics().density) : 0;
+        int viewWidth = 0;
+        int viewHeight = 0;
 
         TTAdNative mTTAdNative = ttAdManager.createAdNative(activity);//baseContext is recommended for Activity
         AdSlot.Builder adSlotBuilder = new AdSlot.Builder().setCodeId(slotId);

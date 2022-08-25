@@ -10,11 +10,35 @@
     android:layout_height="match_parent"
     android:background="#ffffff">
 
+    <LinearLayout
+        android:id="@+id/logo_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_app" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="@string/app_name"
+            android:textColor="#000000"/>
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/splash_ad_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@id/logo_area"></FrameLayout>
 
     <TextView
         android:id="@+id/splash_ad_skip"
@@ -30,30 +54,4 @@
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:visibility="gone" />
-
-    <LinearLayout
-        android:id="@+id/logo_area"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:padding="20dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_below="@id/splash_ad_container"
-        >
-        <ImageView
-            android:id="@+id/app_logo"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@mipmap/ic_launcher"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="18dp"
-            android:text="@string/app_name"
-            android:textColor="#000000"/>
-    </LinearLayout>
 </RelativeLayout>
