@@ -137,10 +137,8 @@ public class NativeAdActivity extends Activity {
 
         initPanel();
 
-        int padding = dip2px(10);
-        final int containerHeight = dip2px(340);
-        final int adViewWidth = getResources().getDisplayMetrics().widthPixels - 2 * padding;
-        final int adViewHeight = containerHeight - 2 * padding;
+        final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
+        final int adViewHeight = adViewWidth * 3 / 4;
 
 
         tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
