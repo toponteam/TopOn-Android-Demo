@@ -20,15 +20,18 @@ import java.util.Map;
 public class FacebookInitManager extends ATInitMediation {
 
     private boolean mIsInit;
-    private static FacebookInitManager sInstance;
+    private volatile static FacebookInitManager sInstance;
 
     private FacebookInitManager() {
 
     }
 
-    public synchronized static FacebookInitManager getInstance() {
+    public static FacebookInitManager getInstance() {
         if (sInstance == null) {
-            sInstance = new FacebookInitManager();
+            synchronized (FacebookInitManager.class) {
+                if (sInstance == null)
+                    sInstance = new FacebookInitManager();
+            }
         }
         return sInstance;
     }

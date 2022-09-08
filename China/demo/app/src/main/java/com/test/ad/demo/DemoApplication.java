@@ -11,11 +11,9 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
-import android.util.Log;
 import android.webkit.WebView;
 
 import com.anythink.core.api.ATAdConst;
-import com.anythink.core.api.ATDetectionResultCallback;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
@@ -25,9 +23,7 @@ import com.facebook.stetho.Stetho;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class DemoApplication extends MultiDexApplication {

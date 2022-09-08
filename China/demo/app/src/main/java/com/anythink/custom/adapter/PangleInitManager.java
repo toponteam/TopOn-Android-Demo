@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class PangleInitManager extends ATInitMediation {
     public static final String TAG = PangleInitManager.class.getSimpleName();
 
-    private static PangleInitManager sInstance;
+    private volatile static PangleInitManager sInstance;
     private Handler mHandler;
     private boolean mIsOpenDirectDownload;
 
@@ -41,9 +41,12 @@ public class PangleInitManager extends ATInitMediation {
         mIsIniting = new AtomicBoolean(false);
     }
 
-    public synchronized static PangleInitManager getInstance() {
+    public static PangleInitManager getInstance() {
         if (sInstance == null) {
-            sInstance = new PangleInitManager();
+            synchronized (PangleInitManager.class) {
+                if (sInstance == null)
+                    sInstance = new PangleInitManager();
+            }
         }
         return sInstance;
     }

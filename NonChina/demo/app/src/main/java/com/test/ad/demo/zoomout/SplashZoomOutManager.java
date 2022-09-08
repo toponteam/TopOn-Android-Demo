@@ -32,7 +32,7 @@ public class SplashZoomOutManager {
     private int decorViewWidth;
     private int decorViewHeight;
 
-    private static SplashZoomOutManager instance;
+    private volatile static SplashZoomOutManager instance;
 
     public interface AnimationCallBack {
         void animationStart(int animationTime);
@@ -40,9 +40,12 @@ public class SplashZoomOutManager {
         void animationEnd();
     }
 
-    public static synchronized SplashZoomOutManager getInstance(Context context) {
+    public static SplashZoomOutManager getInstance(Context context) {
         if (instance == null) {
-            instance = new SplashZoomOutManager(context);
+            synchronized (SplashZoomOutManager.class) {
+                if (instance == null)
+                    instance = new SplashZoomOutManager(context);
+            }
         }
         return instance;
     }
