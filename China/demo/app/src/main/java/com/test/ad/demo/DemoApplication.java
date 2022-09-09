@@ -11,11 +11,9 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
-import android.util.Log;
 import android.webkit.WebView;
 
 import com.anythink.core.api.ATAdConst;
-import com.anythink.core.api.ATDetectionResultCallback;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
@@ -25,9 +23,7 @@ import com.facebook.stetho.Stetho;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 public class DemoApplication extends MultiDexApplication {
@@ -79,37 +75,12 @@ public class DemoApplication extends MultiDexApplication {
 //
 //        );
 
-
-        ATSDK.setChannel("testChannle");
-        ATSDK.setSubChannel("testSubChannle");
-
-        List excludelist = new ArrayList();
-        excludelist.add("com.exclude.myoffer1");
-        excludelist.add("com.exclude.myoffer2");
-        ATSDK.setExcludePackageList(excludelist);
-
-        Log.i("Demoapplication", "isChinaSDK:" + ATSDK.isCnSDK());
-        Log.i("Demoapplication", "SDKVersionName:" + ATSDK.getSDKVersionName());
-
-        Map<String, Object> custommap = new HashMap<String, Object>();
-        custommap.put("key1", "initCustomMap1");
-        custommap.put("key2", "initCustomMap2");
-        custommap.put(ATAdConst.KEY.WECHAT_APPID, "wechat_app_id");
-        ATSDK.initCustomMap(custommap);
-
-        Map<String, Object> subcustommap = new HashMap<String, Object>();
-        subcustommap.put("key1", "initPlacementCustomMap1");
-        subcustommap.put("key2", "initPlacementCustomMap2");
-        ATSDK.initPlacementCustomMap("b5aa1fa4165ea3", subcustommap);//native  facebook
-
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
-//        ATSDK.setUseHTTP(true);
         ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
 
 //        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
 //        ATSDK.init(this, appid, appKey, atNetworkConfig);
 
-        ATSDK.testModeDeviceInfo(this, null);
 
     }
 

@@ -128,7 +128,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_gdt_file_path" />
-        </provider> <!-- source file: china/network_sdk/pangle/4.7.0.8/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/pangle/4.7.1.2/AndroidManifest.xml -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
