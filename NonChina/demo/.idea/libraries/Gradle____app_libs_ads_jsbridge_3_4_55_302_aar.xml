@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/ads-jsbridge-3.4.55.302.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12e5cc6ef779f6bdf365a9123ca67bf5/jetified-ads-jsbridge-3.4.55.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12e5cc6ef779f6bdf365a9123ca67bf5/jetified-ads-jsbridge-3.4.55.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12e5cc6ef779f6bdf365a9123ca67bf5/jetified-ads-jsbridge-3.4.55.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

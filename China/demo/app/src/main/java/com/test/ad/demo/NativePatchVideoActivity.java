@@ -33,7 +33,7 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import java.util.HashMap;
 import java.util.Map;
 
-//TODO 贴片广告尽量使用自渲染广告，可控制广告关闭时间
+//Use self-rendering ads as much as possible for patch ads, which can control the closing time of ads
 public class NativePatchVideoActivity extends Activity {
 
     public final String TAG = getClass().getSimpleName();

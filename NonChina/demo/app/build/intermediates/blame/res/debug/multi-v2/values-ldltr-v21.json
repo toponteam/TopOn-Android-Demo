@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-2/files-2.1/7dbedd01c0e1c9e559273369599829d9/appcompat-1.1.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

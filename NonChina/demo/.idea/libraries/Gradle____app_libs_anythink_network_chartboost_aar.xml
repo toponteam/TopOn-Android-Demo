@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_network_chartboost.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c385f434faa626fb74a3ad3ac3fd2156/jetified-anythink_network_chartboost/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c385f434faa626fb74a3ad3ac3fd2156/jetified-anythink_network_chartboost/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c385f434faa626fb74a3ad3ac3fd2156/jetified-anythink_network_chartboost/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c385f434faa626fb74a3ad3ac3fd2156/jetified-anythink_network_chartboost/jars/libs/anythink_network_chartboost.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

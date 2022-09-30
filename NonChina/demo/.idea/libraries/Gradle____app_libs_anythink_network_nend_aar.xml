@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_network_nend.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c4d7583d7157dab2429a468fb62c452b/jetified-anythink_network_nend/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c4d7583d7157dab2429a468fb62c452b/jetified-anythink_network_nend/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c4d7583d7157dab2429a468fb62c452b/jetified-anythink_network_nend/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c4d7583d7157dab2429a468fb62c452b/jetified-anythink_network_nend/jars/libs/anythink_network_nend.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

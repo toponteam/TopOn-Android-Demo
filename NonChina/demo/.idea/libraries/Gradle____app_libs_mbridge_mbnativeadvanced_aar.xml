@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/mbridge_mbnativeadvanced.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1dbcd9f26f74bf00f590a97cfecbc7c/mbridge_mbnativeadvanced/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1dbcd9f26f74bf00f590a97cfecbc7c/mbridge_mbnativeadvanced/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1dbcd9f26f74bf00f590a97cfecbc7c/mbridge_mbnativeadvanced/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1dbcd9f26f74bf00f590a97cfecbc7c/mbridge_mbnativeadvanced/jars/libs/classes-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

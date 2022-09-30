@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_network_vungle.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7604c3a6f4aea4d560a09f50c75a95b/jetified-anythink_network_vungle/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7604c3a6f4aea4d560a09f50c75a95b/jetified-anythink_network_vungle/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7604c3a6f4aea4d560a09f50c75a95b/jetified-anythink_network_vungle/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7604c3a6f4aea4d560a09f50c75a95b/jetified-anythink_network_vungle/jars/libs/anythink_network_vungle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

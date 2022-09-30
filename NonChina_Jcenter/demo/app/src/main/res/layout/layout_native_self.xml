@@ -6,6 +6,7 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffffff"
@@ -52,7 +53,8 @@
         android:maxLines="1"
         android:textColor="#000000"
         android:textSize="15dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:text="ad title" />
 
     <TextView
         android:id="@+id/native_ad_desc"
@@ -64,8 +66,40 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textColor="#777777"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        tools:text="ad description"/>
 
+    <TextView
+        android:id="@+id/native_ad_domain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/native_ad_desc"
+        android:layout_alignStart="@id/native_ad_desc"
+        android:layout_toLeftOf="@id/native_ad_install_btn"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12dp"
+        android:textColor="#777777"
+        android:visibility="gone"
+        tools:text="ad domain"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/native_ad_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/native_ad_domain"
+        android:layout_alignStart="@id/native_ad_desc"
+        android:layout_toLeftOf="@id/native_ad_install_btn"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12dp"
+        android:textColor="#777777"
+        android:visibility="gone"
+        tools:text="warning"
+        tools:visibility="visible"/>
 
     <com.anythink.nativead.api.ATNativeImageView
         android:id="@+id/native_ad_logo"

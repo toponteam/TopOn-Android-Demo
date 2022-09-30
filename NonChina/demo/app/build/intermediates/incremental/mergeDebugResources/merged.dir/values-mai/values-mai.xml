@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+        <item priority="translator" quantity="zero">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+        <item priority="translator" quantity="two">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+        <item priority="translator" quantity="few">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+        <item priority="translator" quantity="many">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+        <item priority="translator" quantity="other">"विंडो %1$s सेकेंड मे बंद भए जायत।"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+        <item priority="translator" quantity="zero">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+        <item priority="Reviewed" quantity="two">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+        <item priority="Reviewed" quantity="few">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+        <item priority="translator" quantity="many">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+        <item priority="Reviewed" quantity="other">"पसिन्न कयल गेल केँ %1$s दिन धरि स्मरण राखू"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="translator" quantity="one">"%1$d सेकेंड"</item>
+        <item priority="translator" quantity="zero">"%1$d सेकेंड"</item>
+        <item priority="translator" quantity="two">"%1$d सेकेंड"</item>
+        <item priority="translator" quantity="few">"%1$d सेकेंड"</item>
+        <item priority="translator" quantity="many">"%1$d सेकेंड"</item>
+        <item priority="translator" quantity="other">"%1$d सेकेंड"</item>
+    </plurals>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"विज्ञापन"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s इंस्टॉल कए देल गेल अछि"</string>
+    <string name="hiad_app_open_notification" priority="translator">"इंस्टॉलेशन भए गेल। खोलबाक लेल छुबू।"</string>
+    <string name="hiad_app_permission" priority="LT">"अनुमति सभ"</string>
+    <string name="hiad_app_preorder" priority="LT">"प्री-ऑर्डर"</string>
+    <string name="hiad_app_preordered" priority="LT">"प्री-ऑर्डर कयल अछि"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"छोड़बाक लेल पाछू जाउ केँ दबाउ"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"विज्ञापन नुकाओल गेल"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"कोनो रुचि नहि"</string>
+    <string name="hiad_choices_hide" priority="LT">"विज्ञापन केँ नुकाउ"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"हम किएक ई विज्ञापन देखलहुँ?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"एहि एप केँ इंस्टॉल करी?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"मोबाइल नेटवर्कक उपयोग कयलासँ %1$s डाटा खर्च होयत। जारी राखू?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"प्लेबैक मोबाइल डाटाक उपयोग करत. जारी राखू?"</string>
+    <string name="hiad_continue_download" priority="LT">"डाउनलोड करू"</string>
+    <string name="hiad_continue_download_new" priority="LT">"डाउनलोड करू"</string>
+    <string name="hiad_continue_to_play" priority="translator">"जारी राखू"</string>
+    <string name="hiad_copy_link" priority="LT">"लिंक केँ कॉपी करू"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"एप"</string>
+    <string name="hiad_default_skip_text" priority="translator">"छोड़ू"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d मे छोड़ू"</string>
+    <string name="hiad_detail" priority="translator">"विवरण सब"</string>
+    <string name="hiad_detail_download_now" priority="LT">"डाउनलोड करू"</string>
+    <string name="hiad_dialog_accept" priority="LT">"अनुमति दिअ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"अनुमति दिअ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"रद्द करू"</string>
+    <string name="hiad_dialog_close" priority="LT">"ठीक अछि"</string>
+    <string name="hiad_dialog_continue" priority="LT">"डाउनलोड करू"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"बुझलहुँ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s केँ %2$s इंस्टॉल करबाक अनुमति दी?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"स्रोत: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"अनुमति दिअ"</string>
+    <string name="hiad_dialog_open" priority="LT">"खोलू"</string>
+    <string name="hiad_dialog_reject" priority="LT">"मना करू"</string>
+    <string name="hiad_dialog_title" priority="LT">"मोबाइल डेटाक उपयोग कए डाउनलोड करू?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"नोट करू"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"मोबाइल डेटाक उपयोग कए डाउनलोड करी?"</string>
+    <string name="hiad_download_download" priority="LT">"इंस्टॉल करू"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"डाउनलोड (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s केँ डाउनलोड करबाक काल मे एकटा त्रुटि आबि गेल।"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"फाइल करप्ट भए गेल। कृपाकय पुन:डाउनलोड करू।"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"फाइल अस्तित्व मे नहि अछि। कृपा कए पुन: प्रयास करू।"</string>
+    <string name="hiad_download_install" priority="LT">"स्थापित करू"</string>
+    <string name="hiad_download_installing" priority="LT">"इंस्टॉल कए रहल अछि"</string>
+    <string name="hiad_download_no_space" priority="LT">"अपर्याप्त भंडारण। किछु जगह खाली करू आ पुनः प्रयास करू।"</string>
+    <string name="hiad_download_open" priority="LT">"खोलू"</string>
+    <string name="hiad_download_resume" priority="LT">"जारी राखू"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s केँ डाउनलोड करबाक काल मे एकटा त्रुटि आबि गेल। डाउनलोड पुन: प्रारंभ होयत।"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"अहाँ एखन Wi-Fiसँ जुड़ल नहि छी। %1$s मोबाइल डेटाक उपयोग करैत आब डाउनलोड करत। ओहुना सेहो डाउनलोड करू?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"अहाँ एखन WLAN सँ कनेक्ट नहि छी। एखन डाउनलोड करब त’ %1$s मोबाइल डेटाक उपयोग करत। तैयो डाउनलोड करी?"</string>
+    <string name="hiad_install_completed" priority="LT">"कएल गेल"</string>
+    <string name="hiad_installed_description" priority="LT">"इंस्टॉलेशन सफल भेल। खोलबाक लेल छुबू।"</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"इंस्टॉल कयल गेल"</string>
+    <string name="hiad_jump_desc" priority="LT">"विवरण देखू वा एप मे जाउ"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ई पेज %1$s केँ खोलय चाहैत अछि।"</string>
+    <string name="hiad_link_already_copied" priority="LT">"लिंक कॉपी कयल गेल।"</string>
+    <string name="hiad_loading_tips" priority="LT">"लोड भए रहल अछि…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ई डाउनलोड %1$s मोबाइल डेटा उपयोग करत।"</string>
+    <string name="hiad_net_error" priority="LT">"नेटवर्क कनेक्‍शनक त्रुटि। कृपाकए पुनः प्रयास करू।"</string>
+    <string name="hiad_network_error" priority="translator">"नेटवर्कक संपर्क केर त्रुटि।"</string>
+    <string name="hiad_network_no_available" priority="LT">"कोनो इंटरनेट सम्पर्क नहि। कृपा कए अपन नेटवर्क सेटिंग सभक जाँच करू।"</string>
+    <string name="hiad_no_more_remind" priority="LT">"हमरा फेरसँ याद नहि दिआउ"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"कोनो Wi-Fi कनेक्शन नहि। अहांक मोबाइल डेटाक उपयोग कए आब डाउनलोड करत। डाउनलोड करी?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"कोनो WLAN कनेक्शन नहि। अहांक मोबाइल डेटाक उपयोग कए आब डाउनलोड करत। डाउनलोड करी?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ब्राउजरमे खोलू"</string>
+    <string name="hiad_page_load_failed" priority="LT">"पेज लोड करबा मे अक्षम। कृपा कए पुन: प्रयास करू।"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s केँ निम्नलिखित अनुमति सभक आवश्यकता होइत अछि:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi लेल प्रतीक्षा करू"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"मोबाइल नेटवर्कक माध्यम सँ डाउनलोड करी?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN लेल प्रतीक्षा करू"</string>
+    <string name="hiad_refresh" priority="LT">"ताजा करू"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d MB सँ नम्हर एप"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"छोड़ू"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"देखैत रहू"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"इनाम अर्जित करबाक लेल एहि विज्ञापन केँ अंत धरि देखू।"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"वेबसाइट/एप खोलबाक लेल छुबू"</string>
+    <string name="hiad_swipe_screen" priority="LT">"स्वाइप करू"</string>
+    <string name="hiad_twist_screen" priority="LT">"फोन केँ शेक करू"</string>
+    <string name="hiad_whether_download" priority="LT">"ई एप डाउनलोड करी?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi सँ पहिनुका लोड कयल"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"पहिने सँ लोड कयल गेल"</string>
+</resources>

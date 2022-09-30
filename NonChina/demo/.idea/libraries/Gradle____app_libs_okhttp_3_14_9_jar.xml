@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/okhttp-3.14.9.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/okhttp-3.14.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

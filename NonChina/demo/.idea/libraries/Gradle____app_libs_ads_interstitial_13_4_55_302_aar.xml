@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/ads-interstitial-13.4.55.302.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31f1bf94d82c80a4c8c9d5ba382d7f9f/ads-interstitial-13.4.55.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31f1bf94d82c80a4c8c9d5ba382d7f9f/ads-interstitial-13.4.55.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/31f1bf94d82c80a4c8c9d5ba382d7f9f/ads-interstitial-13.4.55.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

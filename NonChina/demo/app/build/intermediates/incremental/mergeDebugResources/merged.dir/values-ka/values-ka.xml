@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">წინ გადახვევა %d წამით</item>
+    <item quantity="other">წინ გადახვევა %d წამით</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">უკან გადახვევა %d წამით</item>
+    <item quantity="other">უკან გადახვევა %d წამით</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"ვინდოუსი დაიხურება %1$s წამში."</item>
+        <item priority="translator" quantity="other">"ვინდოუსი დაიხურება %1$s წამში."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"დაიმახსოვრეთ არჩევანი %1$s დღისთვის"</item>
+        <item priority="Reviewed" quantity="other">"დაიმახსოვრეთ არჩევანი %1$s დღისთვის"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d წმ"</item>
+        <item priority="LT" quantity="other">"%1$d წმ"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"მთავარზე გადასვლა"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"ზემოთ გადასვლა"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"სხვა ვარიანტები"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"მზადაა"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"ყველას ნახვა"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"აირჩიეთ აპი"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"გამორთვა"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ჩართვა"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"შორისი"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"ძიება…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"მოთხოვნის გასუფთავება"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"მოთხოვნის ძიება"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"ძიება"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"მოთხოვნის გადაგზავნა"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"ხმოვანი ძიება"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"გაზიარება:"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-ით გაზიარება"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ჩაკეცვა"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">ჩართვა</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s ვერ იმუშავებს Google Play Services-ის ჩართვამდე.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play Services-ის ჩართვა</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ინსტალაცია</string>
+    <string name="common_google_play_services_install_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომელიც აკლია თქვენს მოწყობილობას.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play Services-ის ჩამოტვირთვა</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services-ის ხელმისაწვდომობა</string>
+    <string name="common_google_play_services_notification_ticker">Google Play Services-ის შეცდომა</string>
+    <string name="common_google_play_services_unknown_issue">%1$s-ს Google Play Services-თან პრობლემა შეექმნა. გთხოვთ, ცადოთ ხელახლა.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომლებიც მხარდაუჭერელია თქვენი მოწყობილობის მიერ.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">განახლება</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s ვერ გაეშვება, თუ Google Play სერვისებს არ განაახლებთ.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">განაახლეთ Google Play Services</string>
+    <string name="common_google_play_services_updating_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომელთა განახლებაც ამჟამად მიმდინარეობს.</string>
+    <string name="common_google_play_services_wear_update_text">საჭიროა Google Play Services-ის ახალი ვერსია. ის მალე განახლდება.</string>
+    <string name="common_open_on_phone">ტელეფონში გახსნა</string>
+    <string name="common_signin_button_text">შესვლა</string>
+    <string name="common_signin_button_text_long">Google-ით შესვლა</string>
+    <string msgid="3209159573327985035" name="copy">"კოპირება"</string>
+    <string name="exo_controls_cc_disabled_description">სუბტიტრების ჩართვა</string>
+    <string name="exo_controls_cc_enabled_description">სუბტიტრების გათიშვა</string>
+    <string name="exo_controls_fastforward_description">წინ გადახვევა</string>
+    <string name="exo_controls_fullscreen_enter_description">სრულეკრანიან რეჟიმში შესვლა</string>
+    <string name="exo_controls_fullscreen_exit_description">სრულეკრანიანი რეჟიმიდან გამოსვლა</string>
+    <string name="exo_controls_hide">დამკვრელის სამართავი ღილაკების დამალვა</string>
+    <string name="exo_controls_next_description">შემდეგ</string>
+    <string name="exo_controls_overflow_hide_description">დამატებითი პარამეტრების დამალვა</string>
+    <string name="exo_controls_overflow_show_description">დამატებითი პარამეტრების ჩვენება</string>
+    <string name="exo_controls_pause_description">პაუზა</string>
+    <string name="exo_controls_play_description">დაკვრა</string>
+    <string name="exo_controls_playback_speed">სიჩქარე</string>
+    <string name="exo_controls_playback_speed_normal">ჩვეულებრივი</string>
+    <string name="exo_controls_previous_description">წინა</string>
+    <string name="exo_controls_repeat_all_description">ყველას გამეორება</string>
+    <string name="exo_controls_repeat_off_description">არცერთის გამეორება</string>
+    <string name="exo_controls_repeat_one_description">ერთის გამეორება</string>
+    <string name="exo_controls_rewind_description">უკან გადახვევა</string>
+    <string name="exo_controls_seek_bar_description">დაკვრის პროგრესი</string>
+    <string name="exo_controls_settings_description">პარამეტრები</string>
+    <string name="exo_controls_show">დამკვრელის სამართავი ღილაკების ჩვენება</string>
+    <string name="exo_controls_shuffle_off_description">არეულად დაკვრა გამორთულია</string>
+    <string name="exo_controls_shuffle_on_description">არეულად დაკვრა ჩართულია</string>
+    <string name="exo_controls_stop_description">შეწყვეტა</string>
+    <string name="exo_controls_vr_description">VR რეჟიმი</string>
+    <string name="exo_download_completed">ჩამოტვირთვა დასრულდა</string>
+    <string name="exo_download_description">ჩამოტვირთვა</string>
+    <string name="exo_download_downloading">მიმდინარეობს ჩამოტვირთვა</string>
+    <string name="exo_download_failed">ჩამოტვირთვა ვერ მოხერხდა</string>
+    <string name="exo_download_notification_channel_name">ჩამოტვირთვები</string>
+    <string name="exo_download_paused">ჩამოტვირთვები დაპაუზებულია</string>
+    <string name="exo_download_paused_for_network">ჩამოტვირთვები ქსელს ელოდება</string>
+    <string name="exo_download_paused_for_wifi">ჩამოტვირთვები Wi-Fi-ს ელოდება</string>
+    <string name="exo_download_removing">მიმდინარეობს ჩამოტვირთვების ამოშლა</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f მბიტ/წმ</string>
+    <string name="exo_track_mono">მონო</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">ალტერნატიული</string>
+    <string name="exo_track_role_closed_captions">დახურული სუბტიტრები</string>
+    <string name="exo_track_role_commentary">კომენტარი</string>
+    <string name="exo_track_role_supplementary">დამატებითი</string>
+    <string name="exo_track_selection_auto">ავტომატური</string>
+    <string name="exo_track_selection_none">არცერთი</string>
+    <string name="exo_track_selection_title_audio">აუდიო</string>
+    <string name="exo_track_selection_title_text">ტექსტი</string>
+    <string name="exo_track_selection_title_video">ვიდეო</string>
+    <string name="exo_track_stereo">სტერეო</string>
+    <string name="exo_track_surround">მოცულობითი ხმა</string>
+    <string name="exo_track_surround_5_point_1">5.1 მოცულობითი ხმა</string>
+    <string name="exo_track_surround_7_point_1">7.1 მოცულობითი ხმა</string>
+    <string name="exo_track_unknown">უცნობი</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"დამატებით"</string>
+    <string name="hiad_ad_label" priority="translator">"რეკლამა"</string>
+    <string name="hiad_ad_label_new" priority="LT">"რეკლამა"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s დაინსტალირდა"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ინსტალაცია დასრულებულია. შეეხეთ გასახსნელად."</string>
+    <string name="hiad_app_permission" priority="LT">"ნებართვები"</string>
+    <string name="hiad_app_preorder" priority="LT">"წინასწარი შეკვეთა"</string>
+    <string name="hiad_app_preordered" priority="LT">"წინასწარ შეკვეთილი"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"გამოსატოვებლად დააჭირეთ ღილაკს „უკან“"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"რეკლამა დამალულია"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"არ მაინტერესებს"</string>
+    <string name="hiad_choices_hide" priority="LT">"რეკლამის დამალვა"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"რატომ ვნახე ეს რეკლამა?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"დავაინსტალიროთ ეს აპი?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"მობილური ქსელის გამოყენება მოიხმარს %1$s-ის რაოდენობის მონაცემებს. გავაგრძელოთ?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"დაკვრა გამოიყენებს მობილურ მონაცემებს. გავაგრძელოთ?"</string>
+    <string name="hiad_continue_download" priority="LT">"ჩამოტვირთვა"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ჩამოტვირთვა"</string>
+    <string name="hiad_continue_to_play" priority="LT">"გაგრძელება"</string>
+    <string name="hiad_copy_link" priority="LT">"ბმულის კოპირება"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"აპი"</string>
+    <string name="hiad_default_skip_text" priority="LT">"გამოტოვება"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"გამოტოვეთ %d-ში"</string>
+    <string name="hiad_detail" priority="LT">"დეტალები"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ჩამოტვირთვა"</string>
+    <string name="hiad_dialog_accept" priority="LT">"დაშვება"</string>
+    <string name="hiad_dialog_allow" priority="LT">"უფლების მიცემა"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"გაუქმება"</string>
+    <string name="hiad_dialog_close" priority="LT">"კარგი"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ჩამოტვირთვა"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"გასაგებია"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"მივცეთ %1$s-ს %2$s-ის დაინსტალირების ნება?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"წყარო: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"დაშვება"</string>
+    <string name="hiad_dialog_open" priority="LT">"გახსნა"</string>
+    <string name="hiad_dialog_reject" priority="LT">"უარყოფა"</string>
+    <string name="hiad_dialog_title" priority="LT">"ჩამოიტვირთოს მობილური მონაცემების გამოყენებით?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"შენიშვნა"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"ჩამოვტვირთოთ მობილური მონაცემების გამოყენებით?"</string>
+    <string name="hiad_download_download" priority="LT">"ინსტალირება"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ჩამოტვირთვა (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"შეცდომა მოხდა %1$s-ის ჩამოტვირთვის დროს."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ფაილი დაზიანებულია. გთხოვთ, თავიდან ჩამოტვირთოთ."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ფაილი არ არსებობს. გთხოვთ, კიდევ სცადოთ."</string>
+    <string name="hiad_download_install" priority="LT">"ინსტალაცია"</string>
+    <string name="hiad_download_installing" priority="LT">"ინსტალირება"</string>
+    <string name="hiad_download_no_space" priority="LT">"არასაკმარისი მეხსიერება. გაათავისუფლეთ სივრცე და კიდევ სცადეთ."</string>
+    <string name="hiad_download_open" priority="LT">"გახსნა"</string>
+    <string name="hiad_download_resume" priority="LT">"გაგრძელება"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"შეცდომა მოხდა %1$s-ის ჩამოტვირთვის დროს. ჩამოტვირთვა გადაიტვირთება."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"ამჟამად Wi-Fi-სთან არ გაქვთ კავშირი. ჩამოსატვირთად გამოიყენებთ %1$s-ის მობილურ მონაცემებს. მაინც ჩამოვტვირთოთ?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"ამჟამად WLAN-თან არ ხართ დაკავშირებული. ჩამოტვირთვა გამოიყენებს მობილური მონაცემების %1$s-ს. მაინც ჩამოვტვირთოთ?"</string>
+    <string name="hiad_install_completed" priority="LT">"შესრულებულია"</string>
+    <string name="hiad_installed_description" priority="translator">"ინსტალაცია წარმატებით განხორციელდა. შეეხეთ გასახსნელად."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"დაინსტალირებული"</string>
+    <string name="hiad_jump_desc" priority="LT">"ნახეთ დეტალები ან გადადით აპში"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ამ გვერდს სურს %1$s-ის გახსნა."</string>
+    <string name="hiad_link_already_copied" priority="LT">"ბმული კოპირებულია."</string>
+    <string name="hiad_loading_tips" priority="LT">"იტვირთება…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ეს ჩამოტვირთვა გამოიყენებს მობილური მონაცემების %1$s-ს."</string>
+    <string name="hiad_net_error" priority="LT">"ქსელის კავშირის შეცდომა. სცადეთ ხელახლა."</string>
+    <string name="hiad_network_error" priority="LT">"ქსელის კავშირის შეცდომა."</string>
+    <string name="hiad_network_no_available" priority="LT">"არ არის ინტერნეტ კავშირი. გთხოვთ, შეამოწმეთ თქვენი ქსელის პარამეტრები."</string>
+    <string name="hiad_no_more_remind" priority="LT">"აღარ შემახსენო"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi კავშირი არ არის. ახლა ჩამოტვირთვა გამოიყენებს მობილურ მონაცემებს. ჩამოვტვირთოთ?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN კავშირი არ არის. ახლა ჩამოტვირთვა გამოიყენებს მობილურ მონაცემებს. ჩამოვტვირთოთ?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ბრაუზერში გახსნა"</string>
+    <string name="hiad_page_load_failed" priority="LT">"გვერდის ჩატვირთვა შეუძლებელია. გთხოვთ, კიდევ სცადოთ."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s მოითხოვს შემდეგ ნებართვებს:"</string>
+    <string name="hiad_prepare_download" priority="LT">"დაველოდოთ Wi-Fi-ს"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"ჩამოვტვირთოთ მობილური ქსელის მეშვეობით?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"დაველოდოთ WLAN-ს"</string>
+    <string name="hiad_refresh" priority="LT">"განახლება"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d მბ-ზე დიდი აპი"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"გამოტოვება"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"ყურების გაგრძელება"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"დაასრულეთ ამ რეკლამის ყურება ჯილდოს მისაღებად."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"შეეხეთ, რომ გახსნათ ვებსაიტი/აპი"</string>
+    <string name="hiad_swipe_screen" priority="LT">"გადასმა"</string>
+    <string name="hiad_twist_screen" priority="LT">"შეარხიეთ ტელეფონი"</string>
+    <string name="hiad_whether_download" priority="LT">"ჩამოიტვირთოს ეს აპი?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"წინასწარ დატვირთული Wi-Fi-ის მეშვეობით"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"წინასწარ ჩატვირთული"</string>
+    <string msgid="478774118347071097" name="not_set">"არ არის დაყენებული"</string>
+    <string name="offline_notification_text">შეეხეთ რეკლამის გასახსნელად</string>
+    <string name="offline_notification_title">ნახეთ თქვენ მიერ ხაზგარეშე ყოფნისას შენახული რეკლამა</string>
+    <string name="offline_opt_in_confirm">კარგი</string>
+    <string name="offline_opt_in_confirmation">თქვენ მიიღებთ შეტყობინებას ბმულით, როდესაც ონლაინ დაბრუნდებით</string>
+    <string name="offline_opt_in_decline">არა, გმადლობთ</string>
+    <string name="offline_opt_in_message">ჩვენ გამოგიგზავნით შეტყობინებას რეკლამის განმთავსების საიტის ბმულით.</string>
+    <string name="offline_opt_in_title">გახსენით რეკლამა, როდესაც ონლაინ დაბრუნდებით.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>“ კოპირებულია გაცვლის ბუფერში."</string>
+    <string name="s1">სურათის შენახვა</string>
+    <string name="s2">აძლევთ ნებას რეკლამას, შეინახოს სურათი გალერეაში?</string>
+    <string name="s3">მიღება</string>
+    <string name="s4">უარყოფა</string>
+    <string name="s5">კალენდარში მოვლენის შექმნა</string>
+    <string name="s6">აძლევთ ნებას რეკლამას, შექმნას მოვლენა კალენდარში?</string>
+    <string name="s7">სატესტო რეკლამა</string>
+    <string msgid="730395136688082741" name="search_menu_title">"ძიება"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"გამორთული"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ჩართული"</string>
+</resources>

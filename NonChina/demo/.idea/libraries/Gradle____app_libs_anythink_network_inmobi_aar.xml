@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_network_inmobi.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc219d3c897612e3cc73608d838e89d8/jetified-anythink_network_inmobi/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc219d3c897612e3cc73608d838e89d8/jetified-anythink_network_inmobi/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc219d3c897612e3cc73608d838e89d8/jetified-anythink_network_inmobi/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc219d3c897612e3cc73608d838e89d8/jetified-anythink_network_inmobi/jars/libs/anythink_network_inmobi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

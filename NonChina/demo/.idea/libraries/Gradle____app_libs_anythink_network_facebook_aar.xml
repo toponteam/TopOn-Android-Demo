@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/anythink_network_facebook.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cde0daad32d3cd6f38610e116d24ddb6/jetified-anythink_network_facebook/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cde0daad32d3cd6f38610e116d24ddb6/jetified-anythink_network_facebook/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cde0daad32d3cd6f38610e116d24ddb6/jetified-anythink_network_facebook/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cde0daad32d3cd6f38610e116d24ddb6/jetified-anythink_network_facebook/jars/libs/anythink_network_facebook.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

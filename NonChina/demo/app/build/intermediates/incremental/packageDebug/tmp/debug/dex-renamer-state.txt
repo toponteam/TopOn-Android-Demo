@@ -1,0 +1,19 @@
+#Thu Sep 29 22:27:09 CST 2022
+path.4=classes4.dex
+path.3=classes3.dex
+path.2=classes2.dex
+path.1=classes.dex
+path.5=classes5.dex
+path.0=classes.dex
+base.4=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes4.dex
+base.3=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes3.dex
+base.2=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes2.dex
+base.1=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+base.0=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+base.5=/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.1.30_release_202209292110/NonChina/demo/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes5.dex

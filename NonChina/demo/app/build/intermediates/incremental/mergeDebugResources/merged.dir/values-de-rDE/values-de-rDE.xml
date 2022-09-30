@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mbridge_reward_heat_count_unit">w</string>
+    <string name="mbridge_reward_viewed_text_str">Gesehener Inhalt</string>
+</resources>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/ads-splash-13.4.55.302.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/278bf21e8ae76dc18c735dc170bc6508/ads-splash-13.4.55.302/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/278bf21e8ae76dc18c735dc170bc6508/ads-splash-13.4.55.302/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/278bf21e8ae76dc18c735dc170bc6508/ads-splash-13.4.55.302/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

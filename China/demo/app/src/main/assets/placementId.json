@@ -17,7 +17,10 @@
     "Mimo": "b62b02524dab62",
     "Klevin": "b62b0233897bfa",
     "MyOffer": "b62b030e265690",
-    "DirectOffer": "b62b020d835e52"
+    "DirectOffer": "b62b020d835e52",
+    "adx": "b62ecb800e1f84",
+    "on": "b62b0270622092",
+    "gr": "b62b02603cde0b"
   },
   "interstitial": {
     "All": "b62b014563dc89",
@@ -34,7 +37,8 @@
     "Mimo": "b62b0250533998",
     "Klevin": "b62b022dcb5306",
     "MyOffer": "b62b030c27e5e2",
-    "DirectOffer": "b62b020c51ded7"
+    "DirectOffer": "b62b020c51ded7",
+    "gt": "b62b025f616e9a"
   },
   "banner": {
     "All": "b62b01a4cd4853",
@@ -46,7 +50,8 @@
     "HeadBidding Ad": "b62b0254532922",
     "Mimo": "b62b024ef7631a",
     "MyOffer": "b62b02db13611f",
-    "DirectOffer": "b62b02097a0ff6"
+    "DirectOffer": "b62b02097a0ff6",
+    "gr": "b62b025e880821"
   },
   "splash": {
     "All": "b62b035d8cb432",
@@ -66,7 +71,9 @@
     "SplashNative_Sigmob": "b62b0312667030",
     "SplashNative_BaiDu": "b62b01f3b38c1a",
     "SplashNative_KuaiShou": "b62b01f54eec97",
-    "SplashNative_GDT": "b62b01fb7469b6"
+    "SplashNative_GDT": "b62b01fb7469b6",
+    "adx": "b62b0272f8762f",
+    "gr": "b62b025a680194"
   },
   "native-express": {
     "All": "b62fb58d8c6474",
@@ -92,6 +99,8 @@
     "Sigmob": "b62b02267d9a79",
     "Klevin": "b62ea67b6d1204",
     "MyOffer": "b62b02dbf0d8c3",
-    "DirectOffer": "b62b020a582e5a"
+    "DirectOffer": "b62b020a582e5a",
+    "adx": "b6305efb12d408",
+    "gr": "b62b02591d41f4"
   }
 }

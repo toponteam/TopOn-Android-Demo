@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hiad_dismiss_dilaog">
+    <item priority="translator" quantity="other">"ဝင်းဒိုးသည် %1$s စက္ကန့်အကြာတွင် ပိတ်သွားပါလိမ့်မည်။"</item>
+</plurals>
+    <plurals name="hiad_no_prompt_in_days">
+    <item priority="translator" quantity="other">"ရွေးချယ်မှုအား %1$s ရက်ကြာ မှတ်ထားရန်"</item>
+</plurals>
+    <plurals name="hiad_reward_countdown">
+    <item priority="translator" quantity="other">"%1$s စက္ကန့်"</item>
+</plurals>
+    <string name="hiad_ad_label" priority="LT">"AD"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s အား ထည့်သွင်းထားပြီးပါပြီ။"</string>
+    <string name="hiad_app_permission" priority="LT">"ခွင့်ပြုချက်များ"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"မိုဘိုင်း ကွန်ရက်အား အသုံးပြုခြင်းဖြင့် ဒေတာ ပမာဏ %1$s ကို သုံးစွဲသွားပါလိမ့်မည်။ ဆက်လက် လုပ်ဆောင်မည်လား။"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ပြန်ဖွင့်မှုအတွက် မိုဘိုင်းဒေတာအား သုံးပါလိမ့်မည်။ ဆက်လက် လုပ်ဆောင်မည်လား။"</string>
+    <string name="hiad_continue_download" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ဆက်လုပ်မည်"</string>
+    <string name="hiad_copy_link" priority="LT">"လင့်ခ်အား ကူးရန်"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"အက်ပ်"</string>
+    <string name="hiad_default_skip_text" priority="LT">"ကျော်မည်"</string>
+    <string name="hiad_default_skip_text_time" priority="translator">"ကျော်ရန် %d"</string>
+    <string name="hiad_detail" priority="LT">"အသေးစိတ် အချက်အလက်များ"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ပယ်ဖျက်မည်"</string>
+    <string name="hiad_dialog_close" priority="LT">"အိုကေ"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"သဘောပေါက်ပါပြီ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ကို ထည့်သွင်းရန် %1$s ကို ခွင့်ပြုမည်လား။"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"အရင်းအမြစ်- %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ခွင့်ပြုမည်"</string>
+    <string name="hiad_dialog_open" priority="LT">"ဖွင့်မည်"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ခွင့်မပြုပါ"</string>
+    <string name="hiad_dialog_title" priority="LT">"မိုဘိုင်းဒေတာ သုံး၍ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"မှတ်ချက်"</string>
+    <string name="hiad_download_download" priority="translator">"ဒေါင်းလုဒ်"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ဒေါင်းလုဒ် (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s အား ဒေါင်းလုဒ်လုပ်နေစဉ် ချို့ယွင်းချက် ရှိခဲ့ပါသည်။"</string>
+    <string name="hiad_download_file_corrupted" priority="LT">"ဖိုင် ပျက်နေပါသည်။ ဒေါင်းလုဒ် ထပ်ဆွဲပေးပါ။"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ဖိုင် ရှိမနေပါ။ ကျေးဇူးပြု၍ ထပ်မံ ကြိုးစားပါ။"</string>
+    <string name="hiad_download_install" priority="LT">"ထည့်သွင်းမည်"</string>
+    <string name="hiad_download_installing" priority="LT">"ထည့်သွင်းနေပါသည်"</string>
+    <string name="hiad_download_no_space" priority="LT">"သိုလှောင်မှုနေရာ မလုံလောက်ပါ။ နေရာလွတ် ရရှိစေရန် အချို့ဖိုင်များအား ရှင်းပစ်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။"</string>
+    <string name="hiad_download_open" priority="LT">"ဖွင့်မည်"</string>
+    <string name="hiad_download_resume" priority="LT">"ဆက်လုပ်မည်"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s အား ဒေါင်းလုဒ်လုပ်နေစဉ် ချို့ယွင်းချက် ရှိခဲ့ပါသည်။ ဒေါင်းလုဒ် လုပ်ဆောင်မှုအား အစမှ ပြန်စပါလိမ့်မည်။"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"လက်ရှိကာလတွင် သင်သည် Wi-Fi ချိတ်ဆက်ထားမှု မရှိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်း ဒေတာ %1$s ပမာဏကို သုံးစွဲရပါလိမ့်မည်။ မည်သို့ပင်ဖြစ်စေ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"လက်ၡိကာလတွင် သင်သည် WLAN ချိတ်ဆက်ထားမှု မၡိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်း ဒေတာ %1$s ပမာဏကို သုံးစွဲရပါလိမ့်မည်။ မည်သို့ပင်ဖြစ်စေ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ဤပေ့ခ်ျသည် %1$s အား ဖွင့်လိုပါသည်။"</string>
+    <string name="hiad_link_already_copied" priority="LT">"လင့်ခ် ကူးပြီး။"</string>
+    <string name="hiad_network_error" priority="LT">"ကွန်ရက် ချိတ်ဆက်မှု ချို့ယွင်းချက်။"</string>
+    <string name="hiad_network_no_available" priority="LT">"အင်တာနက် ချိတ်ဆက်မှု မရှိပါ။ ကျေးဇူးပြု၍ သင့်ကွန်ရက်ဆက်တင်ကို စစ်ဆေးပါ။"</string>
+    <string name="hiad_no_more_remind" priority="LT">"နောက်ထပ် သတိမပေးပါနှင့်"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi ချိတ်ဆက်မှု မရှိပါ။ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်းဒေတာကို သုံးစွဲသွားပါလိမ့်မည်။ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN ချိတ်ဆက်မှု မရှိပါ ယခု ဒေါင်းလုဒ်လုပ်ခြင်းဖြင့် မိုဘိုင်းဒေတာကို သုံးစွဲသွားပါလိမ့်မည်။ ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ဘရောက်ဇာတွင် ဖွင့်ရန်"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ပေ့ခ်ျအား ဖွင့်၍ မရပါ။ ကျေးဇူးပြု၍ ထပ်မံ ကြိုးစားပါ။"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s သည် ဖော်ပြပါ ခွင့်ပြုချက်များ လိုအပ်ပါသည်-"</string>
+    <string name="hiad_refresh" priority="LT">"ပြန်လည်လုပ်ဆောင်ရန်"</string>
+    <string name="hiad_reward_close_dialog_close" priority="translator">"ပိတ်ရန်"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="translator">"ဆက်လုပ်မည်"</string>
+    <string name="hiad_reward_close_dialog_message" priority="translator">"ဆုရယူရန် ဤကြော်ငြာကို အပြီးကြည့်ပေးပါ။"</string>
+    <string name="hiad_whether_download" priority="LT">"ဤအက်ပ်အား ဒေါင်းလုဒ်လုပ်မည်လား။"</string>
+    <string name="hiad_wifi_loaded_already" priority="LT">"Wi-Fi မှတစ်ဆင့် ကြိုတင် ထည့်သွင်းလုပ်ဆောင်ပြီး"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ကြိုတင်ထည့်သွင်းပြီး"</string>
+</resources>

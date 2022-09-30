@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/mbridge_mbsplash.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f1690c79938b20c3d3191ac8fc1f07e/mbridge_mbsplash/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f1690c79938b20c3d3191ac8fc1f07e/mbridge_mbsplash/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f1690c79938b20c3d3191ac8fc1f07e/mbridge_mbsplash/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f1690c79938b20c3d3191ac8fc1f07e/mbridge_mbsplash/jars/libs/classes-2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

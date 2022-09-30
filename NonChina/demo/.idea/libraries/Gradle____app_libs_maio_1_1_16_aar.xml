@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/maio-1.1.16.aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b6cf06dbf30cb357ba5912460e2f779/maio-1.1.16/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b6cf06dbf30cb357ba5912460e2f779/maio-1.1.16/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b6cf06dbf30cb357ba5912460e2f779/maio-1.1.16/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

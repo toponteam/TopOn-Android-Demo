@@ -22,21 +22,22 @@ public class SelfRenderViewUtil {
     public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo) {
         int padding = dip2px(context, 5);
         selfRenderView.setPadding(padding, padding, padding, padding);
-        TextView titleView = (TextView) selfRenderView.findViewById(R.id.native_ad_title);
-        TextView descView = (TextView) selfRenderView.findViewById(R.id.native_ad_desc);
-        TextView ctaView = (TextView) selfRenderView.findViewById(R.id.native_ad_install_btn);
-        TextView adFromView = (TextView) selfRenderView.findViewById(R.id.native_ad_from);
-        FrameLayout iconArea = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_image);
-        FrameLayout contentArea = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_content_image_area);
-        final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
+        TextView titleView = selfRenderView.findViewById(R.id.native_ad_title);
+        TextView descView = selfRenderView.findViewById(R.id.native_ad_desc);
+        TextView ctaView = selfRenderView.findViewById(R.id.native_ad_install_btn);
+        TextView adFromView = selfRenderView.findViewById(R.id.native_ad_from);
+        FrameLayout iconArea = selfRenderView.findViewById(R.id.native_ad_image);
+        FrameLayout contentArea = selfRenderView.findViewById(R.id.native_ad_content_image_area);
+        final ATNativeImageView logoView = selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
+        TextView domainView = selfRenderView.findViewById(R.id.native_ad_domain);   //(v6.1.20+) Yandex domain
+        TextView warningView = selfRenderView.findViewById(R.id.native_ad_warning); //(v6.1.20+) Yandex warning
 
         // bind view
         if (nativePrepareInfo == null) {
             nativePrepareInfo = new ATNativePrepareInfo();
         }
         List<View> clickViewList = new ArrayList<>();//click views
-
 
         String title = adMaterial.getTitle();
         // title
@@ -48,7 +49,6 @@ public class SelfRenderViewUtil {
         } else {
             titleView.setVisibility(View.GONE);
         }
-
 
         String descriptionText = adMaterial.getDescriptionText();
         if (!TextUtils.isEmpty(descriptionText)) {
@@ -62,7 +62,6 @@ public class SelfRenderViewUtil {
         }
 
         // icon
-        //TODO 优化
         View adIconView = adMaterial.getAdIconView();
         String iconImageUrl = adMaterial.getIconImageUrl();
         iconArea.removeAllViews();
@@ -168,6 +167,26 @@ public class SelfRenderViewUtil {
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
         nativePrepareInfo.setChoiceViewLayoutParams(layoutParams);//bind layout params for ad choice
         nativePrepareInfo.setCloseView(closeView);//bind close button
+
+        String domain = adMaterial.getDomain(); //(v6.1.20+) Yandex domain
+        if (!TextUtils.isEmpty(domain)) {
+            domainView.setVisibility(View.VISIBLE);
+            domainView.setText(domain);
+            clickViewList.add(domainView);
+            nativePrepareInfo.setDomainView(domainView);
+        } else {
+            domainView.setVisibility(View.GONE);
+        }
+
+        String warning = adMaterial.getWarning(); //(v6.1.20+) Yandex warning
+        if (!TextUtils.isEmpty(warning)) {
+            warningView.setVisibility(View.VISIBLE);
+            warningView.setText(warning);
+            clickViewList.add(warningView);
+            nativePrepareInfo.setWarningView(warningView);
+        } else {
+            warningView.setVisibility(View.GONE);
+        }
 
         nativePrepareInfo.setClickViewList(clickViewList);//bind click view list
 

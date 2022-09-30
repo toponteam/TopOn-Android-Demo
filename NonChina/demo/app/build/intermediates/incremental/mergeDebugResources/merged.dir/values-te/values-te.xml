@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">%d సెకండ్ వేగంగా ఫార్వర్డ్ చేయండి</item>
+    <item quantity="other">%d సెకన్లు వేగంగా ఫార్వర్డ్ చేయండి</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">%d సెకండ్ రివైండ్ చేయండి</item>
+    <item quantity="other">%d సెకన్లు రివైండ్ చేయండి</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"విండో %1$s సెకనులో మూసివేయబడుతుంది."</item>
+        <item priority="translator" quantity="other">"విండో %1$s సెకన్లలో మూసివేయబడుతుంది."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"%1$s రోజుకు ఎంపికను గుర్తుంచుకోండి"</item>
+        <item priority="Reviewed" quantity="other">"%1$s రోజులకు ఎంపికను గుర్తుంచుకోండి"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d సెక"</item>
+        <item priority="LT" quantity="other">"%1$d సెక"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"హోమ్‌కు నావిగేట్ చేస్తుంది"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"పైకి నావిగేట్ చేస్తుంది"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"మరిన్ని ఎంపికలు"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"పూర్తయింది"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"అన్నీ చూడండి"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"యాప్‌ను ఎంచుకోండి"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ఆఫ్"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ఆన్"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"స్పేస్"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"వెతకండి…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ప్రశ్నను తీసివేస్తుంది"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"శోధన ప్రశ్న"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"శోధన"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ప్రశ్నని సమర్పిస్తుంది"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"వాయిస్ శోధన"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"వీరితో షేర్ చేస్తుంది"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>తో షేర్ చేస్తుంది"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"కుదిస్తుంది"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">ప్రారంభించు</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">మీరు Google Play సేవలను ప్రారంభిస్తే మినహా %1$s పని చేయదు.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play సేవలను ప్రారంభించండి</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ఇన్‌స్టాల్ చేయి</string>
+    <string name="common_google_play_services_install_text">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఆ సేవలు మీ పరికరంలో లేవు.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play సేవలను పొందండి</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play సేవల లభ్యత</string>
+    <string name="common_google_play_services_notification_ticker">Google Play సేవల ఎర్రర్</string>
+    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఈ సేవలకు మీ పరికరంలో మద్దతు లేదు.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">అప్‌డేట్ చేయి</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">మీరు Google Play సేవలను నవీకరిస్తే మినహా %1$s అమలు కాదు.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play సేవలను అప్‌డేట్ చేయండి</string>
+    <string name="common_google_play_services_updating_text">%1$s Google Play సేవలు లేకుండా అమలు కాదు, ఆ సేవలు ప్రస్తుతం నవీకరించబడుతున్నాయి.</string>
+    <string name="common_google_play_services_wear_update_text">కొత్త Google Play సేవల వెర్షన్ అవసరం. అది కొద్ది సేపట్లో దానంతట అదే అప్‌డేట్ చేయబడుతుంది.</string>
+    <string name="common_open_on_phone">ఫోన్‌లో తెరువు</string>
+    <string name="common_signin_button_text">సైన్ ఇన్ చేయండి</string>
+    <string name="common_signin_button_text_long">Googleతో సైన్ ఇన్ చేయి</string>
+    <string msgid="3209159573327985035" name="copy">"కాపీ చేయి"</string>
+    <string name="exo_controls_cc_disabled_description">ఉప శీర్షికలను ఎనేబుల్ చేయి</string>
+    <string name="exo_controls_cc_enabled_description">ఉప శీర్షికలను డిజేబుల్ చేయి</string>
+    <string name="exo_controls_fastforward_description">వేగంగా ఫార్వార్డ్ చేయండి</string>
+    <string name="exo_controls_fullscreen_enter_description">ఫుల్ స్క్రీన్‌లోకి ప్రవేశించు</string>
+    <string name="exo_controls_fullscreen_exit_description">ఫుల్ స్క్రీన్ నుండి నిష్క్రమించు</string>
+    <string name="exo_controls_hide">ప్లేయర్ నియంత్రణలను దాచిపెట్టు</string>
+    <string name="exo_controls_next_description">తర్వాత</string>
+    <string name="exo_controls_overflow_hide_description">అదనపు సెట్టింగ్‌లను దాచు</string>
+    <string name="exo_controls_overflow_show_description">అదనపు సెట్టింగ్‌లను చూపు</string>
+    <string name="exo_controls_pause_description">పాజ్ చేయండి</string>
+    <string name="exo_controls_play_description">ప్లే చేయండి</string>
+    <string name="exo_controls_playback_speed">వేగం</string>
+    <string name="exo_controls_playback_speed_normal">సాధారణం</string>
+    <string name="exo_controls_previous_description">మునుపటి</string>
+    <string name="exo_controls_repeat_all_description">అన్నింటినీ పునరావృతం చేయండి</string>
+    <string name="exo_controls_repeat_off_description">దేన్నీ పునరావృతం చేయకండి</string>
+    <string name="exo_controls_repeat_one_description">ఒకదాన్ని పునరావృతం చేయండి</string>
+    <string name="exo_controls_rewind_description">రివైండ్ చేయండి</string>
+    <string name="exo_controls_seek_bar_description">ప్లేబ్యాక్ ప్రోగ్రెస్</string>
+    <string name="exo_controls_settings_description">సెట్టింగ్‌లు</string>
+    <string name="exo_controls_show">ప్లేయర్ నియంత్రణలను చూపు</string>
+    <string name="exo_controls_shuffle_off_description">షఫుల్‌ను ఆఫ్ చేస్తుంది</string>
+    <string name="exo_controls_shuffle_on_description">షఫుల్‌ను ఆన్ చేస్తుంది</string>
+    <string name="exo_controls_stop_description">ఆపండి</string>
+    <string name="exo_controls_vr_description">వర్చువల్ రియాలిటీ మోడ్</string>
+    <string name="exo_download_completed">డౌన్‌లోడ్ పూర్తయింది</string>
+    <string name="exo_download_description">డౌన్‌లోడ్ చేయి</string>
+    <string name="exo_download_downloading">డౌన్‌లోడ్ చేస్తోంది</string>
+    <string name="exo_download_failed">డౌన్‌లోడ్ విఫలమైంది</string>
+    <string name="exo_download_notification_channel_name">డౌన్‌లోడ్‌లు</string>
+    <string name="exo_download_paused">డౌన్‌లోడ్‌లు పాజ్ చేయబడ్డాయి</string>
+    <string name="exo_download_paused_for_network">డౌన్‌లోడ్స్ నెట్‌వర్క్ కోసం చూస్తున్నాయి</string>
+    <string name="exo_download_paused_for_wifi">డౌన్‌లోడ్‌లు WiFi కోసం చూస్తున్నాయి</string>
+    <string name="exo_download_removing">డౌన్‌లోడ్‌లను తీసివేస్తోంది</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">మోనో</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">ప్రత్యామ్నాయం</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">వ్యాఖ్యానం</string>
+    <string name="exo_track_role_supplementary">అనుబంధితం</string>
+    <string name="exo_track_selection_auto">స్వీయ</string>
+    <string name="exo_track_selection_none">ఏదీ కాదు</string>
+    <string name="exo_track_selection_title_audio">ఆడియో</string>
+    <string name="exo_track_selection_title_text">వచనం</string>
+    <string name="exo_track_selection_title_video">వీడియో</string>
+    <string name="exo_track_stereo">స్టీరియో</string>
+    <string name="exo_track_surround">సరౌండ్ ధ్వని</string>
+    <string name="exo_track_surround_5_point_1">5.1 సరౌండ్ ధ్వని</string>
+    <string name="exo_track_surround_7_point_1">7.1 సరౌండ్ ధ్వని</string>
+    <string name="exo_track_unknown">తెలియదు</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"అధునాతనం"</string>
+    <string name="hiad_ad_label" priority="translator">"ప్రకటన"</string>
+    <string name="hiad_ad_label_new" priority="LT">"ప్రకటన"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ఇన్‌స్టాల్ చేయబడింది"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ఇన్‌స్టాలేషన్ పూర్తయ్యింది. తెరవడం కోసం నొక్కండి."</string>
+    <string name="hiad_app_permission" priority="LT">"అనుమతులు"</string>
+    <string name="hiad_app_preorder" priority="LT">"ప్రీ-ఆర్డర్"</string>
+    <string name="hiad_app_preordered" priority="translator">"ప్రీ ఆర్డర్ చేయబడింది"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"దాటవేయడానికి వెనుకకు నొక్కండి"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ప్రకటన దాచబడింది"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"ఆసక్తి లేదు"</string>
+    <string name="hiad_choices_hide" priority="LT">"ప్రకటనను దాచు"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"నాకు ఈ ప్రకటన ఎందుకు కనిపిస్తుంది?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ఈ అప్లికేషన్‌ను ఇన్‌స్టాల్ చేయాలా?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"మొబైల్ నెట్‌వర్క్‌ని ఉపయోగించడం వల్ల %1$s డేటా ఉపయోగించబడుతుంది. కొనసాగించాలా?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ప్లేబ్యాక్ కోసం మొబైల్ డేటా ఉపయోగించబడుతుంది. కొనసాగించాలా?"</string>
+    <string name="hiad_continue_download" priority="LT">"డౌన్‌లోడ్ చేయి"</string>
+    <string name="hiad_continue_download_new" priority="LT">"డౌన్‌లోడ్ చేయి"</string>
+    <string name="hiad_continue_to_play" priority="translator">"కొనసాగించు"</string>
+    <string name="hiad_copy_link" priority="LT">"లింక్‌ని కాపీ చేయి"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"అప్లికేషన్"</string>
+    <string name="hiad_default_skip_text" priority="translator">"దాటవేయి"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%dలో దాటవేయి"</string>
+    <string name="hiad_detail" priority="translator">"వివరాలు"</string>
+    <string name="hiad_detail_download_now" priority="LT">"డౌన్‌లోడ్ చేయి"</string>
+    <string name="hiad_dialog_accept" priority="LT">"అనుమతించండి"</string>
+    <string name="hiad_dialog_allow" priority="LT">"అనుమతించు"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"రద్దు చేయి"</string>
+    <string name="hiad_dialog_close" priority="LT">"సరే"</string>
+    <string name="hiad_dialog_continue" priority="LT">"డౌన్‌లోడ్ చేయి"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"అర్థమైంది"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ఇన్‌స్టాల్ చేయడానికి %1$s అనుమతించాలా?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"మూలం: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"అనుమతించండి"</string>
+    <string name="hiad_dialog_open" priority="LT">"తెరువు"</string>
+    <string name="hiad_dialog_reject" priority="LT">"నిరాకరించు"</string>
+    <string name="hiad_dialog_title" priority="LT">"మొబైల్ డేటాను ఉపయోగించి డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"గమనిక"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"మొబైల్ డేటా ఉపయోగించి డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_download_download" priority="LT">"ఇన్‌స్టాల్ చేయి"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"డౌన్‌లోడ్ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$sని డౌన్‌లోడ్ చేస్తున్నప్పుడు లోపం సంభవించింది."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ఫైల్ పాడైంది. దయచేసి మళ్లీ డౌన్‌లోడ్ చేయండి."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ఫైల్ ఉనికిలో లేదు. దయచేసి మళ్లీ ప్రయత్నించండి."</string>
+    <string name="hiad_download_install" priority="LT">"ఇన్‌స్టాల్ చేయి"</string>
+    <string name="hiad_download_installing" priority="LT">"ఇన్‌స్టాల్ చేస్తోంది"</string>
+    <string name="hiad_download_no_space" priority="LT">"తగినంత నిల్వ స్థలం ఖాళీగా లేదు. కొంత స్థలాన్ని ఖాళీ చేసి, మళ్లీ ప్రయత్నించండి."</string>
+    <string name="hiad_download_open" priority="LT">"తెరువు"</string>
+    <string name="hiad_download_resume" priority="LT">"కొనసాగించు"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$sని డౌన్‌లోడ్ చేస్తున్నప్పుడు లోపం సంభవించింది. డౌన్‌లోడ్ పునఃప్రారంభించబడుతుంది."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"మీరు ప్రస్తుతం WLANకు కనెక్ట్ చేయబడలేదు. ఇప్పుడు డౌన్‌లోడ్ చేయడం వలన %1$s మొబైల్ డేటా ఉపయోగించబడుతుంది. ఏమైనప్పటికీ డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"మీరు ప్రస్తుతం WLANకు కనెక్ట్ చేయబడలేదు. ఇప్పుడు డౌన్‌లోడ్ చేయడం వలన %1$s మొబైల్ డేటా ఉపయోగించబడుతుంది. ఏమైనప్పటికీ డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_install_completed" priority="LT">"పూర్తయింది"</string>
+    <string name="hiad_installed_description" priority="LT">"ఇన్‌స్టాలేషన్ విజయవంతం అయింది. తెరవడం కోసం నొక్కండి."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"ఇన్‌స్టాల్ చేయబడింది"</string>
+    <string name="hiad_jump_desc" priority="LT">"వివరాలు వీక్షించండి లేదా అప్లికేషన్‌కు వెళ్లండి"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ఈ పేజీ %1$sని తెరవాలనుకుంటోంది."</string>
+    <string name="hiad_link_already_copied" priority="LT">"లింక్ కాపీ చేయబడింది."</string>
+    <string name="hiad_loading_tips" priority="LT">"లోడ్ అవుతోంది…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ఈ డౌన్‌లోడ్ %1$s మొబైల్ డేటా ఉపయోగిస్తుంది."</string>
+    <string name="hiad_net_error" priority="LT">"నెట్‌వర్క్ కనెక్షన్ లోపం ఏర్పడింది. దయచేసి మళ్లీ ప్రయత్నించండి."</string>
+    <string name="hiad_network_error" priority="translator">"నెట్‌వర్క్ కనెక్షన్ లోపం ఏర్పడింది."</string>
+    <string name="hiad_network_no_available" priority="LT">"ఇంటర్నెట్ కనెక్షన్ లేదు. దయచేసి మీ నెట్‌వర్క్ సెట్టింగ్‌లను తనిఖీ చేయండి."</string>
+    <string name="hiad_no_more_remind" priority="LT">"నాకు మళ్లీ గుర్తు చేయవద్దు"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi కనెక్షన్ లేదు. ఇప్పుడు డౌన్‌లోడ్ చేయడం వలన మీ మొబైల్ డేటా ఉపయోగించబడుతుంది. డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN కనెక్షన్ లేదు. ఇప్పుడు డౌన్‌లోడ్ చేయడం వలన మీ మొబైల్ డేటా ఉపయోగించబడుతుంది. డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"బ్రౌజర్‌లో తెరువు"</string>
+    <string name="hiad_page_load_failed" priority="LT">"పేజీని లోడ్ చేయడం సాధ్యం కాదు. దయచేసి మళ్లీ ప్రయత్నించండి."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$sకి కింది అనుమతులు అవసరం:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi కోసం వేచి ఉండు"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"మొబైల్ నెట్‌వర్క్ ద్వారా డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN కోసం వేచి ఉండు"</string>
+    <string name="hiad_refresh" priority="LT">"రీఫ్రెష్ చేయి"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"అప్లికేషన్ %1$d MB కంటే పెద్దగా ఉంది"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"దాటవేయి"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"చూస్తూ ఉండండి"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"రివార్డ్ పొందడానికి ఈ ప్రకటనను పూర్తిగా చూడండి."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"వెబ్‌సైట్/అప్లికేషన్‌ను తెరవడానికి నొక్కండి"</string>
+    <string name="hiad_swipe_screen" priority="LT">"స్వైప్ చేయండి"</string>
+    <string name="hiad_twist_screen" priority="LT">"ఫోన్‌ను ఊపండి"</string>
+    <string name="hiad_whether_download" priority="LT">"ఈ అప్లికేషన్‌ను డౌన్‌లోడ్ చేయాలా?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi ద్వారా ముందే లోడ్ చేయబడింది"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ముందే లోడ్ చేయబడినవి"</string>
+    <string msgid="478774118347071097" name="not_set">"సెట్ చేయలేదు"</string>
+    <string name="offline_notification_text">యాడ్‌ను తెరవడానికి ట్యాప్ చేయండి</string>
+    <string name="offline_notification_title">మీరు ఆఫ్‌లైన్‌లో ఉన్నప్పుడు కూడా, సేవ్ చేసిన యాడ్‌ను చూడండి</string>
+    <string name="offline_opt_in_confirm">సరే</string>
+    <string name="offline_opt_in_confirmation">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు, లింక్ కలిగిన నోటిఫికేషన్ మీకు అందుతుంది</string>
+    <string name="offline_opt_in_decline">వద్దు</string>
+    <string name="offline_opt_in_message">అడ్వర్టైజర్ సైట్‌కు లింక్‌ను మేము మీకు నోటిఫికేషన్‌గా పంపుతాము.</string>
+    <string name="offline_opt_in_title">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు యాడ్ తెరవబడుతుంది.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది."</string>
+    <string name="s1">చిత్రాన్ని సేవ్ చేయి</string>
+    <string name="s2">చిత్ర గ్యాలరీలో చిత్రాన్ని నిల్వ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s3">అనుమతించు</string>
+    <string name="s4">తిరస్కరించు</string>
+    <string name="s5">క్యాలెండర్ ఈవెంట్‌ను క్రియేట్ చేయండి</string>
+    <string name="s6">క్యాలెండర్ ఈవెంట్‌ను క్రియేట్ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s7">ప్రకటనను పరీక్షించండి</string>
+    <string msgid="730395136688082741" name="search_menu_title">"శోధన"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ఆఫ్ చేయండి"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ఆన్ చేయండి"</string>
+</resources>
