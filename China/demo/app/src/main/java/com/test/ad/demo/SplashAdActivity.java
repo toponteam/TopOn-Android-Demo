@@ -144,9 +144,20 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/zh-cn/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "isAdReady".
+                 * 3、Call "show" to show AD view.
+                 */
+                String placementId = placementIdMap.get(mCurrentPlacementName);
+                ATSplashAd.entryAdScenario(placementId, "");
                 if (splashAd.isAdReady()) {
                     Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                    intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
+                    intent.putExtra("placementId", placementId);
 //                intent.putExtra("custom_skip_view", isCustomSkipViewCheckBox.isChecked());
                     startActivity(intent);
                 }
@@ -193,7 +204,6 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
 
         splashAd.setLocalExtra(localMap);
-        ATSplashAd.entryAdScenario(placementId, "");
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override

@@ -92,14 +92,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-        <!-- Bugly -->
-        <meta-data
-            android:name="BUGLY_APPID"
-            android:value="7c2efbb5d7" />
-        <meta-data
-            android:name="BUGLY_ENABLE_DEBUG"
-            android:value="true" />
-        <!-- source file: nonchina_jcenter/network_sdk/admob/21.1.0/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/admob/21.2.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"

@@ -148,7 +148,20 @@ public class InterstitialAdActivity extends Activity {
         tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAd();
+                /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "isAdReady".
+                 * 3、Call "show" to show AD view.
+                 * (Note the difference between auto and manual)
+                 */
+                ATInterstitial.entryAdScenario(placementId, "f5e54937b0483d");
+                if(mInterstitialAd.isAdReady()){
+                    showAd();
+                }
+
             }
         });
 
@@ -157,7 +170,6 @@ public class InterstitialAdActivity extends Activity {
 
     private void init(String placementId) {
         mInterstitialAd = new ATInterstitial(this, placementId);
-        ATInterstitial.entryAdScenario(placementId, "f5e54937b0483d");
 
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
 

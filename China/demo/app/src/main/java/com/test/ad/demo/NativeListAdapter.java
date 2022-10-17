@@ -158,7 +158,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         if (hasUseNewAd || recycleViewDataBean.nativeAd == null) {
             Log.i(TAG, "start to request new ad object.");
-            //TODO 判断如果已经获取到新的广告之后或者暂时获取不到广告的情况，马上发起广告加载
+            //It is judged that if a new Ad has been obtained or the advertisement cannot be obtained temporarily, the Ad will be loaded immediately
             mATNativeHandler.makeAdRequest();
         }
 
@@ -166,7 +166,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         controlNativeAdCacheSize(recycleViewDataBean, hasUseNewAd);
 
         if (recycleViewDataBean.nativeAd == null) {
-            //TODO 针对广告对象为空的情况下暂时隐藏item，等广告获取到之后再展示
+            //Temporarily hide the item when the ad object is empty, and display it after the Ad is obtained
             Log.i(TAG, "onBindAdViewHolder: NativeAd is null, it would be gone now.");
             RecyclerView.LayoutParams param = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
             viewHolder.itemView.setVisibility(View.GONE);
@@ -174,7 +174,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             param.width = 0;
             viewHolder.itemView.setLayoutParams(param);
         } else {
-            //TODO 展示广告
+            //Show Ad
             Log.i(TAG, "onBindAdViewHolder: NativeAd exist, start to render view.");
             Log.i(TAG, "onBindAdViewHolder: RenderAd: " + recycleViewDataBean.nativeAd.getAdInfo().toString());
             viewHolder.itemView.setVisibility(View.VISIBLE);
@@ -192,7 +192,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         }
     }
 
-    //TODO 简单实现在一个List里限制指定数量的广告缓存，避免内存过大
+    //Simple implementation to limit the specified number of advertisement caches in a List to avoid excessive memory
     private void controlNativeAdCacheSize(RecycleViewDataBean recycleViewDataBean, boolean hasUseNewAd) {
         if (hasUseNewAd) {
             mNativeAdBeanList.add(recycleViewDataBean);
@@ -201,7 +201,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         if (mNativeAdBeanList.size() > limitAdSize) {
             RecycleViewDataBean removeBean = mNativeAdBeanList.get(0);
             if (removeBean.nativeAd != null) {
-                //TODO 超出数量之后直接移除最旧的广告
+                //Remove the oldest Ad directly after the number is exceeded
                 mNativeAdBeanList.remove(0);
                 Log.i(TAG, "controlNativeAdCacheSize: Over Ad Size, Remove AD:" + removeBean.nativeAd.getAdInfo());
                 removeBean.nativeAd.destory();
@@ -253,11 +253,11 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             adViewHolder.mATNativeAdView.removeAllViews();
 
             if (nativeAd.isNativeExpress()) {
-                //TODO 针对模版进行广告渲染
+                //Ad rendering for templates
                 nativeAd.renderAdContainer(adViewHolder.mATNativeAdView, null);
                 adViewHolder.mSelfRenderView.setVisibility(View.GONE);
             } else {
-                //TODO 针对自渲染类型进行广告渲染
+                //Ad rendering for self-render
                 nativePrepareInfo = new ATNativePrepareInfo();
                 adViewHolder.mSelfRenderView.setVisibility(View.VISIBLE);
 //                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, adViewHeight);

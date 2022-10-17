@@ -18,12 +18,6 @@ import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
-import com.anythink.network.adcolony.AdColonyATInitConfig;
-import com.anythink.network.facebook.FacebookATInitConfig;
-import com.anythink.network.mintegral.MintegralATInitConfig;
-import com.anythink.network.mytarget.MyTargetATInitConfig;
-import com.anythink.network.pangle.PangleATInitConfig;
-import com.anythink.network.vungle.VungleATInitConfig;
 import com.facebook.stetho.Stetho;
 import com.test.ad.demo.util.PlacementIdUtil;
 

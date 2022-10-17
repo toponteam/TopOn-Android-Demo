@@ -19,10 +19,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.AdError;
@@ -35,12 +34,11 @@ import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.nativead.api.NativeAdInteractionType;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -117,8 +115,6 @@ public class NativeAdActivity extends Activity {
                 mCurrentNetworkName = parent.getItemAtPosition(position).toString();
 //                Toast.makeText(getApplicationContext(), mCurrentNetworkName, Toast.LENGTH_SHORT).show();
 
-                ATNative.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "");
-
                 init(mPlacementIdMap.get(mCurrentNetworkName));
             }
 
@@ -153,7 +149,18 @@ public class NativeAdActivity extends Activity {
         tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAd();
+               /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "ATNative#checkAdStatus#isReady".
+                 * 3、Call "getNativeAd" to show AD view.
+                 */
+                ATNative.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "");
+                if(isAdReady()){
+                    showAd();
+                }
             }
         });
     }
@@ -246,13 +253,19 @@ public class NativeAdActivity extends Activity {
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
+        Map<String, Object> localExtra = new HashMap<>();
+        localExtra.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
+        localExtra.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
+
+        mATNative.setLocalExtra(localExtra);
         mATNative.makeAdRequest();
     }
 
-    private void isAdReady() {
+    private boolean isAdReady() {
         boolean isReady = mATNative.checkAdStatus().isReady();
         Log.i(TAG, "isAdReady: " + isReady);
         ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
+        return isReady;
     }
 
     private void showAd() {
