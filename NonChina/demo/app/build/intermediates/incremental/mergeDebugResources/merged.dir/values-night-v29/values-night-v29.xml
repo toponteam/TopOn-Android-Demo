@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="hiad_activie_app_desc_color">#80FFFFFF</color>
-    <color name="hiad_open_btn_normal_bg">#1AFFFFFF</color>
-    <color name="hiad_open_btn_pressed_bg">#2E2E2E</color>
-    <color name="hiad_whythisad_root_bg">#FFFFFF</color>
-</resources>

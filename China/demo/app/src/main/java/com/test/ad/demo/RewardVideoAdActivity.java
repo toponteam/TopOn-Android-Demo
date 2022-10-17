@@ -27,6 +27,7 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
+import com.anythink.core.api.ATSDK;
 import com.anythink.core.api.AdError;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoAutoAd;
@@ -143,7 +144,20 @@ public class RewardVideoAdActivity extends Activity {
         tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAd();
+
+                /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "isAdReady".
+                 * 3、Call "show" to show AD view.
+                 * (Note the difference between auto and manual)
+                 */
+                ATRewardVideoAd.entryAdScenario(placementId, "f5e5492eca9668");
+                if(mRewardVideoAd.isAdReady()){
+                    showAd();
+                }
             }
         });
 
@@ -151,7 +165,6 @@ public class RewardVideoAdActivity extends Activity {
 
     private void init(String placementId) {
         mRewardVideoAd = new ATRewardVideoAd(this, placementId);
-        ATRewardVideoAd.entryAdScenario(placementId, "f5e5492eca9668");
 
         mRewardVideoAd.setAdListener(new ATRewardVideoExListener() {
 
