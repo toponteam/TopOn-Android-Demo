@@ -1,0 +1,3 @@
+-keepattributes Signature
+-keep class net.pubnative.** { *; }
+-keep class com.iab.omid.library.pubnativenet.** { *; }

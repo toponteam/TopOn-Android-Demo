@@ -24,6 +24,15 @@
         android:layout_marginRight="10dp"
         android:scaleType="fitCenter" />
 
+    <FrameLayout
+        android:id="@+id/native_ad_shake_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/native_ad_content_image_area"
+        android:layout_alignBottom="@id/native_ad_content_image_area"
+        android:visibility="gone"/>
+
 
     <TextView
         android:id="@+id/native_ad_install_btn"

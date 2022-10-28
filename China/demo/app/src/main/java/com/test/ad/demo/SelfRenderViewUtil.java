@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.anythink.core.api.ATShakeViewListener;
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
@@ -30,6 +31,7 @@ public class SelfRenderViewUtil {
         FrameLayout contentArea = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_content_image_area);
         final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
+        FrameLayout shakeViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_shake_view_container);
 
         // bind view
         if (nativePrepareInfo == null) {
@@ -162,6 +164,21 @@ public class SelfRenderViewUtil {
         }
         nativePrepareInfo.setAdFromView(adFromView);//bind ad from
 
+        // get the shakeView if the ad platform support, width or height at least 80dp.
+        int shakeViewWidth = dip2px(context, 100), shakeViewHeight = dip2px(context, 100);
+        View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
+            @Override
+            public void onDismiss() {
+
+            }
+        });
+        if (shakeView != null && shakeViewContainer != null) {
+            shakeViewContainer.setVisibility(View.VISIBLE);
+            shakeViewContainer.removeAllViews();
+            FrameLayout.LayoutParams shakeViewLayoutParams = new FrameLayout.LayoutParams(shakeViewWidth, shakeViewHeight);
+            shakeViewLayoutParams.gravity = Gravity.CENTER;
+            shakeViewContainer.addView(shakeView, shakeViewLayoutParams);
+        }
 
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
