@@ -1,6 +1,6 @@
 {
-  "app_id": "a617774bd12faa",
-  "app_key": "4f7b9ac17decb9babec83aac078742c7",
+  "app_id": "a62b013be01931",
+  "app_key": "c3d0d2a9a9d451b07e62b509659f7c97",
   "draw_placement_id": "b62fc9ea810718",
   "patch_placement_id": "b62ea11215c342",
   "list_placement_id": "b62fb58f6b79e7",
@@ -35,9 +35,7 @@
     "Mimo": "b62b0250533998",
     "Klevin": "b62b022dcb5306",
     "MyOffer": "b62b030c27e5e2",
-    "DirectOffer": "b62b020c51ded7",
-    "adx": "b61f23111049c6",
-    "全屏": "b617775b7065d3"
+    "DirectOffer": "b62b020c51ded7"
   },
   "banner": {
     "All": "b62b01a4cd4853",
