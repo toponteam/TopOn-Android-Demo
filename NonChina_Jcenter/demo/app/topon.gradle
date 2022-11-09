@@ -180,7 +180,7 @@ dependencies {
     api "com.google.android.gms:play-services-ads-identifier:17.0.0"
 
     //Huawei
-    api "com.anythink.sdk:adapter-huawei-nonchina:6.1.40"
+    api "com.anythink.sdk:adapter-huawei-nonchina:6.1.40.2"
     api "com.huawei.hms:ads-lite:13.4.56.302"
 
     //Kidoz
