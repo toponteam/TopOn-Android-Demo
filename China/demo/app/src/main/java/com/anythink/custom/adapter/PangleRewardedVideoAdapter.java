@@ -42,6 +42,7 @@ public class PangleRewardedVideoAdapter extends CustomRewardVideoAdapter {
         //Callback of cached video file resources to local after video ad loading
         /** @deprecated in ver3.8.0.0,need to remove after sdk update*/
         @Override
+        @Deprecated
         public void onRewardVideoCached() {
         }
 

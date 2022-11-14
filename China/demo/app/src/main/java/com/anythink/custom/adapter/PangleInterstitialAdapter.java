@@ -98,6 +98,7 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
         }
 
         /** @deprecated in ver3.8.0.0,need to remove after sdk update*/
+        @Deprecated
         @Override
         public void onFullScreenVideoCached() {
         }
