@@ -517,7 +517,7 @@ public class NativeAdActivity extends Activity {
 
 
     private void initPanelButtonList(String adType) {
-        if (adType == CustomNativeAd.NativeAdConst.VIDEO_TYPE) {
+        if (adType.equals(CustomNativeAd.NativeAdConst.VIDEO_TYPE)) {
             boolean isNativeExpress = true;
             if (mNativeAd != null) {
                 isNativeExpress = mNativeAd.isNativeExpress();
