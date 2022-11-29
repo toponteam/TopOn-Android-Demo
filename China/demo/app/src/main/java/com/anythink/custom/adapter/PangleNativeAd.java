@@ -65,6 +65,7 @@ public class PangleNativeAd extends CustomNativeAd {
 
                 @Override
                 public void onVideoError(int i, int i1) {
+                    notifyAdVideoVideoPlayFail("" + i, "" + i1);
                 }
 
                 @Override

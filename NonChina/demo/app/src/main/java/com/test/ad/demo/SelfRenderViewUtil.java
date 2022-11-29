@@ -13,6 +13,7 @@ import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
+import com.huawei.hms.ads.AppDownloadButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +91,18 @@ public class SelfRenderViewUtil {
             ctaView.setVisibility(View.VISIBLE);
         } else {
             ctaView.setVisibility(View.GONE);
+        }
+
+        // AppDownloadButton(Only Huawei Ads support)
+        View appDownloadButton = adMaterial.getAppDownloadButton();
+        if (appDownloadButton != null) {
+            if (appDownloadButton instanceof AppDownloadButton) {
+                ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
+            }
+            ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
+            ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
+            appDownloadButton.setVisibility(View.VISIBLE);
+            ctaView.setVisibility(View.INVISIBLE);
         }
 
         // media view

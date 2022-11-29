@@ -57,6 +57,7 @@ public class PangleNativeExpressAd extends CustomNativeAd {
                 public void onVideoError(int i, int i1) {
                     Log.i(TAG, String.format("onVideoError, errorCode: %d, errorMsg: %s",
                             i, i1 + ""));
+                    notifyAdVideoVideoPlayFail("" + i, "" + i1);
                 }
 
                 @Override
