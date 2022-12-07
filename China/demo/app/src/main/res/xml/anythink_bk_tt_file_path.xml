@@ -12,5 +12,4 @@
     <external-files-path name="tt_external_files_download" path="Download" />
     <files-path name="tt_internal_file_download" path="Download" />
     <cache-path name="tt_internal_cache_download" path="Download" />
-    <root-path name="root" path="" />
 </paths>

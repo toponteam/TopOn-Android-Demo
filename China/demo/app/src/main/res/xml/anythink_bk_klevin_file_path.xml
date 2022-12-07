@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
 <paths>
-    <external-path
-        name="external_files"
-        path="." />
-    <external-path
-        name="external_files"
-        path="Download/" />
-    <external-files-path
-        name="share_image"
-        path="temp/"/>
-    <external-files-path
-        name="external_file_root"
-        path="."/>
-    <root-path
-        name="root_path"
-        path="."/>
+    <cache-path
+        name="klevin_cache"
+        path="klevin/"/>
+    <external-cache-path
+        name="klevin_external_cache"
+        path="klevin/"/>
 </paths>

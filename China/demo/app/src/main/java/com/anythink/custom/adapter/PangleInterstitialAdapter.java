@@ -35,26 +35,6 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
     private TTFullScreenVideoAd mTTFullScreenVideoAd;
     private TTNativeExpressAd mTTNativeExpressAd;
 
-
-    //TT Ad load listener
-    TTAdNative.InteractionAdListener ttInterstitialAdListener = new TTAdNative.InteractionAdListener() {
-        @Override
-        public void onError(int code, String message) {
-            if (mLoadListener != null) {
-                mLoadListener.onAdLoadError(String.valueOf(code), message);
-            }
-        }
-
-        @Override
-        public void onInteractionAdLoad(TTInteractionAd ttInteractionAd) {
-            mttInterstitialAd = ttInteractionAd;
-            if (mLoadListener != null) {
-                mLoadListener.onAdCacheLoaded();
-            }
-        }
-
-    };
-
     //TT Advertising event listener
     TTInteractionAd.AdInteractionListener interactionListener = new TTInteractionAd.AdInteractionListener() {
 
@@ -151,25 +131,6 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
     };
 
 
-    TTAdNative.NativeExpressAdListener expressAdListener = new TTAdNative.NativeExpressAdListener() {
-        @Override
-        public void onError(int i, String s) {
-            if (mLoadListener != null) {
-                mLoadListener.onAdLoadError(String.valueOf(i), s);
-            }
-        }
-
-        @Override
-        public void onNativeExpressAdLoad(List<TTNativeExpressAd> list) {
-            mTTNativeExpressAd = list.get(0);
-            mTTNativeExpressAd.render();
-            if (mLoadListener != null) {
-                mLoadListener.onAdCacheLoaded();
-            }
-        }
-    };
-
-
     TTNativeExpressAd.AdInteractionListener adExpressInteractionListener = new TTNativeExpressAd.AdInteractionListener() {
         @Override
         public void onAdDismiss() {
@@ -236,19 +197,6 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
 
             AdSlot adSlot = adSlotBuilder.build();
             mTTAdNative.loadFullScreenVideoAd(adSlot, ttFullScrenAdListener);
-        } else {
-            if (layoutType == 1) { //Native Express Interstitial
-                float density = context.getResources().getDisplayMetrics().density;
-                /**If developer width is set to 0, the default width is used**/
-                int expressWidth = developerSetExpressWidth <= 0 ? (int) ((Math.min(width, height) - 30 * density) / density) : (int) (developerSetExpressWidth / density);
-                adSlotBuilder.setExpressViewAcceptedSize(expressWidth, 0);
-                AdSlot adSlot = adSlotBuilder.build();
-                mTTAdNative.loadInteractionExpressAd(adSlot, expressAdListener);
-            } else {
-                AdSlot adSlot = adSlotBuilder.build();
-                mTTAdNative.loadInteractionAd(adSlot, ttInterstitialAdListener);
-            }
-
         }
     }
 
@@ -341,10 +289,8 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
         }
 
         interactionListener = null;
-        ttInterstitialAdListener = null;
         ttFullScreenEventListener = null;
         ttFullScrenAdListener = null;
-        expressAdListener = null;
         adExpressInteractionListener = null;
     }
 

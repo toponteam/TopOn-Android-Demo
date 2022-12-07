@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright © 2018-2020 TopOn. All rights reserved.
   ~ https://www.toponad.com
@@ -5,9 +6,7 @@
   ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
   -->
 
-<paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <external-path name="gdt_sdk_download_path" path="GDTDOWNLOAD" />
-    <root-path name="root" path="" />
+<paths>
     <external-cache-path
         name="gdt_sdk_download_path1"
         path="com_qq_e_download" />
