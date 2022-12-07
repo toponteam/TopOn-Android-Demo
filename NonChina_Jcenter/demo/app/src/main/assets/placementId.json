@@ -29,7 +29,8 @@
     "Yandex": "b63072408cfbd4",
     "HeadBidding Ad": "b62b0256712e3b",
     "MyOffer": "b62b030e265690",
-    "DirectOffer": "b62b020d835e52"
+    "DirectOffer": "b62b020d835e52",
+    "Bigo": "b6390830fd8271"
   },
   "interstitial": {
     "All": "b62b014563dc89",
@@ -59,7 +60,8 @@
     "Yandex": "b6307242a4fbc8",
     "HeadBidding Ad": "b62b0253426727",
     "MyOffer": "b62b030c27e5e2",
-    "DirectOffer": "b62b020c51ded7"
+    "DirectOffer": "b62b020c51ded7",
+    "Bigo": "b6390832276256"
   },
   "banner": {
     "All": "b62b01a4cd4853",
@@ -84,7 +86,8 @@
     "Yandex": "b630724544f94f",
     "HeadBidding Ad": "b62b0254532922",
     "MyOffer": "b62b02db13611f",
-    "DirectOffer": "b62b02097a0ff6"
+    "DirectOffer": "b62b02097a0ff6",
+    "Bigo": "b639082701e48f"
   },
   "native-express": {
     "All": "b62fb58d8c6474",
@@ -110,7 +113,8 @@
     "HeadBidding Ad": "b62b025753b5a6",
     "MyOffer": "b62b02dbf0d8c3",
     "DirectOffer": "b62ea65fef3ef3",
-    "Yandex": "b63231347b6f34"
+    "Yandex": "b63231347b6f34",
+    "Bigo": "b639082d6b4d10"
   },
   "splash": {
     "All": "b62b035d8cb432",
@@ -119,6 +123,7 @@
     "Pangle": "b62b023453afba",
     "MyOffer": "b62b02a2646a16",
     "DirectOffer": "b62b020b584867",
-    "Splash_HB": "b62b021d966a87"
+    "Splash_HB": "b62b021d966a87",
+    "Bigo": "b6390852b5e71f"
   }
 }
