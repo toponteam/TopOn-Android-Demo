@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <com.anythink.nativead.api.ATNativeView
+    <com.anythink.nativead.api.ATNativeAdView
         android:id="@+id/patch_native_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                 android:textSize="8dp" />
         </RelativeLayout>
 
-    </com.anythink.nativead.api.ATNativeView>
+    </com.anythink.nativead.api.ATNativeAdView>
 
     <TextView
         android:id="@+id/patch_count_down_text"

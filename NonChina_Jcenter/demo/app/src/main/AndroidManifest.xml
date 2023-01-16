@@ -92,7 +92,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-        <!-- source file: nonchina_jcenter/network_sdk/admob/21.4.0/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/admob/21.3.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"

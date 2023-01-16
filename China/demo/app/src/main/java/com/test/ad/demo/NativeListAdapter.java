@@ -25,11 +25,11 @@ import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativePrepareInfo;
-import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.RecycleViewDataBean;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -184,7 +184,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             viewHolder.itemView.setLayoutParams(param);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params.gravity = Gravity.CENTER_HORIZONTAL;
-            viewHolder.mATNativeView.setLayoutParams(params);
+            viewHolder.mATNativeAdView.setLayoutParams(params);
 
             viewHolder.setCurrentRecycleViewDataBean(recycleViewDataBean);
             mImpressionAdMap.put(String.valueOf(recycleViewDataBean.nativeAd.hashCode()), recycleViewDataBean.nativeAd);
@@ -250,22 +250,22 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             Log.i(TAG, "native ad start to render ad------------- ");
 
             ATNativePrepareInfo nativePrepareInfo = null;
-            adViewHolder.mATNativeView.removeAllViews();
+            adViewHolder.mATNativeAdView.removeAllViews();
 
             if (nativeAd.isNativeExpress()) {
                 //Ad rendering for templates
-                nativeAd.renderAdContainer(adViewHolder.mATNativeView, null);
+                nativeAd.renderAdContainer(adViewHolder.mATNativeAdView, null);
                 adViewHolder.mSelfRenderView.setVisibility(View.GONE);
             } else {
                 //Ad rendering for self-render
                 nativePrepareInfo = new ATNativePrepareInfo();
                 adViewHolder.mSelfRenderView.setVisibility(View.VISIBLE);
 //                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, adViewHeight);
-                SelfRenderViewUtil.bindSelfRenderView(adViewHolder.mATNativeView.getContext(), nativeAd.getAdMaterial(), adViewHolder.mSelfRenderView, nativePrepareInfo);
-                nativeAd.renderAdContainer(adViewHolder.mATNativeView, adViewHolder.mSelfRenderView);
+                SelfRenderViewUtil.bindSelfRenderView(adViewHolder.mATNativeAdView.getContext(), nativeAd.getAdMaterial(), adViewHolder.mSelfRenderView, nativePrepareInfo);
+                nativeAd.renderAdContainer(adViewHolder.mATNativeAdView, adViewHolder.mSelfRenderView);
             }
 
-            nativeAd.prepare(adViewHolder.mATNativeView, nativePrepareInfo);
+            nativeAd.prepare(adViewHolder.mATNativeAdView, nativePrepareInfo);
             nativeAd.onResume();
 
         } catch (Exception e) {
@@ -330,14 +330,14 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     public static class AdViewHolder extends RecyclerView.ViewHolder {
 
-        ATNativeView mATNativeView;
+        ATNativeAdView mATNativeAdView;
         View mSelfRenderView;
         RecycleViewDataBean recycleViewDataBean;
 
         AdViewHolder(@NonNull View itemView) {
             super(itemView);
-            mATNativeView = itemView.findViewById(R.id.ad_container);
-            mSelfRenderView = mATNativeView.findViewById(R.id.self_render_view);
+            mATNativeAdView = itemView.findViewById(R.id.ad_container);
+            mSelfRenderView = mATNativeAdView.findViewById(R.id.self_render_view);
         }
 
         protected void setCurrentRecycleViewDataBean(RecycleViewDataBean recycleViewDataBean) {

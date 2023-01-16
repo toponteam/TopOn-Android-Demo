@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.anythink.nativead.api.ATNativeView
+    <com.anythink.nativead.api.ATNativeAdView
         android:id="@+id/ad_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
             android:id="@+id/self_render_view"
             layout="@layout/native_ad_item"
             android:visibility="gone" />
-    </com.anythink.nativead.api.ATNativeView>
+    </com.anythink.nativead.api.ATNativeAdView>
 
     <View
         android:layout_width="match_parent"

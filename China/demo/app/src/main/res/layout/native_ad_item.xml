@@ -28,10 +28,10 @@
         android:id="@+id/native_ad_shake_view_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/native_ad_content_image_area"
         android:layout_alignBottom="@id/native_ad_content_image_area"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
 
     <TextView
@@ -96,10 +96,10 @@
         android:id="@+id/native_ad_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/native_self_adlogo"
+        android:layout_alignTop="@id/native_ad_logo"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:layout_toRightOf="@id/native_self_adlogo"
+        android:layout_toLeftOf="@id/native_self_adlogo"
         android:background="#888888"
         android:gravity="center"
         android:paddingLeft="2dp"

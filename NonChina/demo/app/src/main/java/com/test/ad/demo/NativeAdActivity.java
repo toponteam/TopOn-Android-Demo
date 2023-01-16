@@ -33,7 +33,6 @@ import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
-import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.util.PlacementIdUtil;
@@ -53,7 +52,7 @@ public class NativeAdActivity extends Activity {
 
 
     private Spinner mSpinner;
-    private ATNativeView mATNativeView;
+    private ATNativeAdView mATNativeAdView;
     private View mSelfRenderView;
 
     private TextView tvLoadAdBtn;
@@ -168,7 +167,7 @@ public class NativeAdActivity extends Activity {
 
     private void initPanel() {
         mPanel = findViewById(R.id.rl_panel);
-        mATNativeView = findViewById(R.id.native_ad_view);
+        mATNativeAdView = findViewById(R.id.native_ad_view);
         mSelfRenderView = findViewById(R.id.native_selfrender_view);
         rvButtonList = findViewById(R.id.rv_button);
         GridLayoutManager manager = new GridLayoutManager(this, 2);
@@ -325,7 +324,7 @@ public class NativeAdActivity extends Activity {
                 }
             });
 
-            mATNativeView.removeAllViews();
+            mATNativeAdView.removeAllViews();
             //log
             print(mNativeAd.getAdMaterial());
 
@@ -335,18 +334,18 @@ public class NativeAdActivity extends Activity {
                 mNativePrepareInfo = new ATNativePrepareExInfo();
 
                 if (mNativeAd.isNativeExpress()) {
-                    mNativeAd.renderAdContainer(mATNativeView, null);
+                    mNativeAd.renderAdContainer(mATNativeAdView, null);
                 } else {
                     SelfRenderViewUtil.bindSelfRenderView(this, mNativeAd.getAdMaterial(), mSelfRenderView, mNativePrepareInfo);
-                    mNativeAd.renderAdContainer(mATNativeView, mSelfRenderView);
+                    mNativeAd.renderAdContainer(mATNativeAdView, mSelfRenderView);
                 }
 
             } catch (Exception e) {
 
             }
 
-            mNativeAd.prepare(mATNativeView, mNativePrepareInfo);
-            mATNativeView.setVisibility(View.VISIBLE);
+            mNativeAd.prepare(mATNativeAdView, mNativePrepareInfo);
+            mATNativeAdView.setVisibility(View.VISIBLE);
             mPanel.setVisibility(View.VISIBLE);
             initPanelButtonList(mNativeAd.getAdMaterial().getAdType());
         } else {

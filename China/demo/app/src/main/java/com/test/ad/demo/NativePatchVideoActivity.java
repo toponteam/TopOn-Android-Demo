@@ -26,7 +26,6 @@ import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
-import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.network.gdt.GDTATConst;
 import com.test.ad.demo.util.PlacementIdUtil;
@@ -42,7 +41,7 @@ public class NativePatchVideoActivity extends Activity {
     private String placementId;
     VideoView videoView;
     private ATNative mATNative;
-    private ATNativeView anyThinkNativeView;
+    private ATNativeAdView anyThinkNativeAdView;
     private View mSelfRenderView;
     private View mAdLogoView;
     private TextView mAdTitleView;
@@ -90,7 +89,7 @@ public class NativePatchVideoActivity extends Activity {
         });
 
         mPatchCountDownView = findViewById(R.id.patch_count_down_text);
-        anyThinkNativeView = findViewById(R.id.patch_native_view);
+        anyThinkNativeAdView = findViewById(R.id.patch_native_view);
         mSelfRenderView = findViewById(R.id.patch_self_render_view);
         mAdLogoView = findViewById(R.id.patch_ad_logo);
         mAdTitleView = mSelfRenderView.findViewById(R.id.patch_title);
@@ -176,21 +175,21 @@ public class NativePatchVideoActivity extends Activity {
         try {
             if (nativeAd.isNativeExpress()) {
                 mSelfRenderView.setVisibility(View.GONE);
-                anyThinkNativeView.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
-                nativeAd.renderAdContainer(anyThinkNativeView, null);
+                anyThinkNativeAdView.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
+                nativeAd.renderAdContainer(anyThinkNativeAdView, null);
             } else {
-                anyThinkNativeView.getLayoutParams().height = adViewHeight;
+                anyThinkNativeAdView.getLayoutParams().height = adViewHeight;
                 mNativePrepareInfo = new ATNativePrepareExInfo();
                 mSelfRenderView.setVisibility(View.VISIBLE);
 
                 bindSelfRenderView(nativeAd.getAdMaterial());
-                nativeAd.renderAdContainer(anyThinkNativeView, mSelfRenderView);
+                nativeAd.renderAdContainer(anyThinkNativeAdView, mSelfRenderView);
             }
         } catch (Exception e) {
 
         }
-        nativeAd.prepare(anyThinkNativeView, mNativePrepareInfo);
-        anyThinkNativeView.setVisibility(View.VISIBLE);
+        nativeAd.prepare(anyThinkNativeAdView, mNativePrepareInfo);
+        anyThinkNativeAdView.setVisibility(View.VISIBLE);
 
         startAdDismissCountdown(nativeAd);
     }
@@ -211,7 +210,7 @@ public class NativePatchVideoActivity extends Activity {
 
             @Override
             public void onFinish() {
-                anyThinkNativeView.setVisibility(View.GONE);
+                anyThinkNativeAdView.setVisibility(View.GONE);
                 if (impressionNativeAd != null) {
                     impressionNativeAd.destory();
                     impressionNativeAd = null;
