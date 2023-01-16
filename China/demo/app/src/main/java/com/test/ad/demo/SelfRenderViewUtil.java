@@ -97,6 +97,11 @@ public class SelfRenderViewUtil {
         }
 
         // AppDownloadButton(Only Huawei Ads support)
+        View lastView = ((ViewGroup) selfRenderView).getChildAt(((ViewGroup) selfRenderView).getChildCount() - 1);
+        // Remove AppDownloadButton since last time added
+        if (lastView instanceof AppDownloadButton) {
+            ((ViewGroup) selfRenderView).removeView(lastView);
+        }
         View appDownloadButton = adMaterial.getAppDownloadButton();
         if (appDownloadButton != null) {
             if (appDownloadButton instanceof AppDownloadButton) {
@@ -160,7 +165,7 @@ public class SelfRenderViewUtil {
             adLogoContainer.addView(adLogoView);
         } else {
             adLogoContainer.setVisibility(View.GONE);
-            
+
             String adChoiceIconUrl = adMaterial.getAdChoiceIconUrl();
             Bitmap adLogoBitmap = adMaterial.getAdLogo();
             if (!TextUtils.isEmpty(adChoiceIconUrl)) {
