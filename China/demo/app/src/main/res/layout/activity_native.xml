@@ -147,7 +147,7 @@
         android:visibility="gone">
 
 
-        <com.anythink.nativead.api.ATNativeAdView
+        <com.anythink.nativead.api.ATNativeView
             android:id="@+id/native_ad_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -156,7 +156,7 @@
             <include
                 android:id="@+id/native_selfrender_view"
                 layout="@layout/layout_native_self" />
-        </com.anythink.nativead.api.ATNativeAdView>
+        </com.anythink.nativead.api.ATNativeView>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_button"

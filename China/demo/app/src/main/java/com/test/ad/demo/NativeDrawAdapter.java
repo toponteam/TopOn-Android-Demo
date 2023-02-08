@@ -26,6 +26,7 @@ import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
+import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.NativeDrawItem;
 import com.test.ad.demo.view.FullScreenVideoView;
@@ -119,21 +120,21 @@ public class NativeDrawAdapter extends RecyclerView.Adapter<NativeDrawAdapter.Vi
             }
         });
 
-        adViewHolder.nativeAdView.removeAllViews();
+        adViewHolder.atNativeView.removeAllViews();
 
         try {
             Log.i(TAG, "native ad start to render ad------------- ");
 
             ATNativePrepareInfo nativePrepareInfo = null;
             if (nativeAd.isNativeExpress()) {
-                adViewHolder.nativeAdView.getLayoutParams().height = FrameLayout.LayoutParams.WRAP_CONTENT;
-                nativeAd.renderAdContainer(adViewHolder.nativeAdView, null);
+                adViewHolder.atNativeView.getLayoutParams().height = FrameLayout.LayoutParams.WRAP_CONTENT;
+                nativeAd.renderAdContainer(adViewHolder.atNativeView, null);
             } else {
-                adViewHolder.nativeAdView.getLayoutParams().height = FrameLayout.LayoutParams.MATCH_PARENT;
+                adViewHolder.atNativeView.getLayoutParams().height = FrameLayout.LayoutParams.MATCH_PARENT;
                 nativePrepareInfo = new ATNativePrepareInfo();
 
                 bindSelfRenderView(nativeAd.getAdMaterial(), adViewHolder.selfRenderView, nativePrepareInfo);
-                nativeAd.renderAdContainer(adViewHolder.nativeAdView, adViewHolder.selfRenderView);
+                nativeAd.renderAdContainer(adViewHolder.atNativeView, adViewHolder.selfRenderView);
             }
             nativeAd.setDislikeCallbackListener(new ATNativeDislikeListener() {
                 @Override
@@ -143,7 +144,7 @@ public class NativeDrawAdapter extends RecyclerView.Adapter<NativeDrawAdapter.Vi
                     nativeAd.destory();
                 }
             });
-            nativeAd.prepare(adViewHolder.nativeAdView, nativePrepareInfo);
+            nativeAd.prepare(adViewHolder.atNativeView, nativePrepareInfo);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -281,12 +282,12 @@ public class NativeDrawAdapter extends RecyclerView.Adapter<NativeDrawAdapter.Vi
     }
 
     protected class AdViewHolder extends NativeDrawAdapter.ViewHolder {
-        protected ATNativeAdView nativeAdView;
+        protected ATNativeView atNativeView;
         protected View selfRenderView;
 
         public AdViewHolder(View itemView) {
             super(itemView);
-            nativeAdView = (ATNativeAdView) itemView.findViewById(R.id.native_draw_ad_view);
+            atNativeView = (ATNativeView) itemView.findViewById(R.id.native_draw_ad_view);
             selfRenderView = itemView.findViewById(R.id.native_draw_selfrender_view);
         }
 
