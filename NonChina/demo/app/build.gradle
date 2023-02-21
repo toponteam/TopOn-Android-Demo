@@ -37,6 +37,7 @@ android {
     //Helium
     packagingOptions {
         merge "META-INF/com.android.tools/proguard/coroutines.pro"
+        exclude "META-INF/*.kotlin_module"
     }
 
 }
