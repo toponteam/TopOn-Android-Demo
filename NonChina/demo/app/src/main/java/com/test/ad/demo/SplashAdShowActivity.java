@@ -42,19 +42,25 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     private static final String TAG = SplashAdShowActivity.class.getSimpleName();
 
-    ATSplashAd splashAd;
-    FrameLayout container;
+    private ATSplashAd splashAd;
+    private FrameLayout container;
 
-    Handler mHandler = new Handler(Looper.getMainLooper());
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.splash_ad_show);
+        initView();
+        initData();
+    }
 
-        String placementId = getIntent().getStringExtra("placementId");
+    private void initView() {
         container = findViewById(R.id.splash_ad_container);
+    }
+
+    private void initData() {
         ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
         Configuration cf = getResources().getConfiguration();
 
@@ -74,7 +80,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             layoutParams.width = getResources().getDisplayMetrics().widthPixels;
             layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
         }
-
 
         String defaultConfig = "";
 
@@ -98,7 +103,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         //Klevin
 //        defaultConfig = "{\"unit_id\":1333253,\"nw_firm_id\":51,\"adapter_class\":\"com.anythink.network.klevin.KlevinATSplashAdapter\",\"content\":\"{\\\"pos_id\\\":\\\"30029\\\",\\\"app_id\\\":\\\"30008\\\"}\"}";
-
+        String placementId = getIntent().getStringExtra("placementId");
         splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
 
         Map<String, Object> localMap = new HashMap<>();
@@ -152,12 +157,10 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 //                    splashAd.show(SplashAdShowActivity.this, container, "f628c7999265cd");
                 }
             }, 10);
-
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();
         }
-
     }
 
     @Override
@@ -315,9 +318,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     protected void onPause() {
         super.onPause();
-
         inForeBackground = false;
-
         needJump = false;
     }
 
@@ -329,7 +330,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             splashAd.setAdDownloadListener(null);
             splashAd.setAdSourceStatusListener(null);
         }
-
     }
 
     @Override
