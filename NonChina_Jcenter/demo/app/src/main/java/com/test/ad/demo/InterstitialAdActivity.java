@@ -7,16 +7,23 @@
 
 package com.test.ad.demo;
 
-import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
@@ -25,75 +32,140 @@ import com.anythink.interstitial.api.ATInterstitialAutoAd;
 import com.anythink.interstitial.api.ATInterstitialAutoEventListener;
 import com.anythink.interstitial.api.ATInterstitialAutoLoadListener;
 import com.anythink.interstitial.api.ATInterstitialExListener;
-import com.test.ad.demo.base.BaseActivity;
-import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.PlacementIdUtil;
+import com.test.ad.demo.utils.ViewUtil;
 
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InterstitialAdActivity extends BaseActivity implements View.OnClickListener {
+public class InterstitialAdActivity extends Activity {
 
     private static final String TAG = InterstitialAdActivity.class.getSimpleName();
 
-    private ATInterstitial mInterstitialAd;
-    private boolean mIsAutoLoad;
-    private final Map<String, Boolean> mAutoLoadPlacementIdMap = new HashMap<>();
+    ATInterstitial mInterstitialAd;
+    private String mCurrentNetworkName;
+    private Map<String, String> mPlacementIdMap;
+    private Map<String, Boolean> mAutoLoadPlacementIdMap = new HashMap<>();
+    private boolean isAutoLoad;
 
-    private CheckBox mCBAutoLoad;
-    private TextView mTVLoadAdBtn;
-    private TextView mTVIsAdReadyBtn;
-    private TextView mTVShowAdBtn;
+    private Spinner mSpinner;
+    private CheckBox ckAutoLoad;
+    private TextView tvLoadAdBtn;
+    private TextView tvIsAdReadyBtn;
+    private TextView tvShowAdBtn;
+    private TextView tvShowLog;
 
-    @Override
-    protected int getContentViewId() {
-        return R.layout.activity_interstitial;
-    }
+    private RelativeLayout rlInterstitial;
+    private RelativeLayout rlfullscreen;
 
-    @Override
-    protected int getAdType() {
-        return ATAdConst.ATMixedFormatAdType.INTERSTITIAL;
-    }
-
-    @Override
-    protected void onSelectPlacementId(String placementId) {
-        boolean isAutoLoad = Boolean.TRUE.equals(mAutoLoadPlacementIdMap.get(placementId));
-        if (mCBAutoLoad != null) {
-            mCBAutoLoad.setChecked(isAutoLoad);
-        }
-        initInterstitialAd(placementId);
-    }
+    private static WeakReference<TextView> tvShowLogReference;
 
     @Override
-    protected CommonViewBean getCommonViewBean() {
-        final CommonViewBean commonViewBean = new CommonViewBean();
-        commonViewBean.setTitleBar(findViewById(R.id.title_bar));
-        commonViewBean.setSpinnerSelectPlacement(findViewById(R.id.spinner_1));
-        commonViewBean.setTvLogView(findViewById(R.id.tv_show_log));
-        commonViewBean.setTitleResId(R.string.anythink_title_interstitial);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        return commonViewBean;
-    }
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_interstitial);
 
-    @Override
-    protected void initView() {
-        super.initView();
-        mTVLoadAdBtn = findViewById(R.id.load_ad_btn);
-        mTVIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
-        mTVShowAdBtn = findViewById(R.id.show_ad_btn);
+        ATInterstitialAutoAd.init(this, null, autoLoadListener);
+
+        TitleBar titleBar = (TitleBar) findViewById(R.id.title_bar);
+        titleBar.setTitle(R.string.anythink_title_interstitial);
+        titleBar.setListener(new TitleBarClickListener() {
+            @Override
+            public void onBackClick(View v) {
+                finish();
+            }
+        });
+
+        tvShowLog = findViewById(R.id.tv_show_log);
+        tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+        tvShowLogReference = new WeakReference<>(tvShowLog);
+        tvLoadAdBtn = findViewById(R.id.load_ad_btn);
+        tvIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
+        tvShowAdBtn = findViewById(R.id.show_ad_btn);
+        rlInterstitial = findViewById(R.id.rl_interstitial);
+        rlfullscreen = findViewById(R.id.rl_fullscreen);
+
+        mPlacementIdMap = PlacementIdUtil.getInterstitialPlacements(this);
+        List<String> placementNameList = new ArrayList<>(mPlacementIdMap.keySet());
+        mCurrentNetworkName = placementNameList.get(0);
+
+        mSpinner = (Spinner) findViewById(R.id.spinner_1);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,
+                placementNameList);
+        mSpinner.setAdapter(adapter);
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+
+//                Toast.makeText(InterstitialAdActivity.this,
+//                        parent.getItemAtPosition(position).toString(),
+//                        Toast.LENGTH_SHORT).show();
+
+                mCurrentNetworkName = parent.getSelectedItem().toString();
+                String placementId = mPlacementIdMap.get(mCurrentNetworkName);
+                init(placementId);
+                if (mAutoLoadPlacementIdMap.get(placementId) != null && mAutoLoadPlacementIdMap.get(placementId)) {
+                    ckAutoLoad.setChecked(true);
+                } else {
+                    ckAutoLoad.setChecked(false);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
 
         initAutoLoad();
+
+        String placementId = mPlacementIdMap.get(mCurrentNetworkName);
+        init(placementId);
+
+        tvIsAdReadyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isAdReady();
+            }
+        });
+
+        tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadAd();
+            }
+        });
+
+        tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "isAdReady".
+                 * 3、Call "show" to show AD view.
+                 * (Note the difference between auto and manual)
+                 */
+                ATInterstitial.entryAdScenario(placementId, "f5e54937b0483d");
+                if(mInterstitialAd.isAdReady()){
+                    showAd();
+                }
+            }
+        });
+
     }
 
-    @Override
-    protected void initListener() {
-        super.initListener();
-        mTVLoadAdBtn.setOnClickListener(this);
-        mTVIsAdReadyBtn.setOnClickListener(this);
-        mTVShowAdBtn.setOnClickListener(this);
-    }
 
-    private void initInterstitialAd(String placementId) {
+    private void init(String placementId) {
         mInterstitialAd = new ATInterstitial(this, placementId);
 
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
@@ -101,101 +173,126 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
             @Override
             public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
                 Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
-                printLogOnUI("onDeeplinkCallback");
             }
 
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-                Log.i(TAG, "onDownloadConfirm: adInfo=" + adInfo.toString());
-                printLogOnUI("onDownloadConfirm");
+
             }
 
             @Override
             public void onInterstitialAdLoaded() {
                 Log.i(TAG, "onInterstitialAdLoaded");
-                printLogOnUI("onInterstitialAdLoaded");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdLoaded");
             }
 
             @Override
             public void onInterstitialAdLoadFail(AdError adError) {
                 Log.i(TAG, "onInterstitialAdLoadFail:\n" + adError.getFullErrorInfo());
-                printLogOnUI("onInterstitialAdLoadFail:" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdLoadFail:" + adError.getFullErrorInfo());
             }
 
             @Override
             public void onInterstitialAdClicked(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClicked:\n" + entity.toString());
-                printLogOnUI("onInterstitialAdClicked");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdClicked");
             }
 
             @Override
             public void onInterstitialAdShow(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdShow:\n" + entity.toString());
-                printLogOnUI("onInterstitialAdShow");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdShow");
             }
 
             @Override
             public void onInterstitialAdClose(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdClose:\n" + entity.toString());
-                printLogOnUI("onInterstitialAdClose");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdClose");
             }
 
             @Override
             public void onInterstitialAdVideoStart(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdVideoStart:\n" + entity.toString());
-                printLogOnUI("onInterstitialAdVideoStart");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoStart");
             }
 
             @Override
             public void onInterstitialAdVideoEnd(ATAdInfo entity) {
                 Log.i(TAG, "onInterstitialAdVideoEnd:\n" + entity.toString());
-                printLogOnUI("onInterstitialAdVideoEnd");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoEnd");
             }
 
             @Override
             public void onInterstitialAdVideoError(AdError adError) {
                 Log.i(TAG, "onInterstitialAdVideoError:\n" + adError.getFullErrorInfo());
-                printLogOnUI("onInterstitialAdVideoError");
+                ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoError");
             }
 
         });
 
-        mInterstitialAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+
+        mInterstitialAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
+            @Override
+            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
+            }
+
+            @Override
+            public void onAdSourceAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
+            }
+        });
+
     }
 
+//    public void changeBg(View view,boolean selected) {
+//        view.setBackgroundResource(selected ? R.drawable.bg_white_selected : R.drawable.bg_white);
+//    }
+
     private void initAutoLoad() {
-        ATInterstitialAutoAd.init(this, null, autoLoadListener);
-        mCBAutoLoad = findViewById(R.id.ck_auto_load);
-        mCBAutoLoad.setVisibility(View.VISIBLE);
-        mCBAutoLoad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        ckAutoLoad = findViewById(R.id.ck_auto_load);
+        ckAutoLoad.setVisibility(View.VISIBLE);
+        ckAutoLoad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    mIsAutoLoad = true;
-
-                    final String curPlacementId = mCurrentPlacementId;
-                    mAutoLoadPlacementIdMap.put(curPlacementId, true);
-                    ATInterstitialAutoAd.addPlacementId(curPlacementId);
-                    mTVLoadAdBtn.setVisibility(View.GONE);
+                    isAutoLoad = true;
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), true);
+                    ATInterstitialAutoAd.addPlacementId(mPlacementIdMap.get(mCurrentNetworkName));
+                    tvLoadAdBtn.setVisibility(View.GONE);
                 } else {
-                    mIsAutoLoad = false;
-
-                    final String curPlacementId = mCurrentPlacementId;
-                    mAutoLoadPlacementIdMap.put(curPlacementId, false);
-                    ATInterstitialAutoAd.removePlacementId(curPlacementId);
-                    mTVLoadAdBtn.setVisibility(View.VISIBLE);
+                    isAutoLoad = false;
+                    mAutoLoadPlacementIdMap.put(mPlacementIdMap.get(mCurrentNetworkName), false);
+                    ATInterstitialAutoAd.removePlacementId(mPlacementIdMap.get(mCurrentNetworkName));
+                    tvLoadAdBtn.setVisibility(View.VISIBLE);
                 }
             }
         });
     }
 
     private void loadAd() {
-        if (mInterstitialAd == null) {
-            printLogOnUI("ATInterstitial is not init.");
-            return;
-        }
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
-
         Map<String, Object> localMap = new HashMap<>();
 
 //        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
@@ -206,12 +303,12 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     }
 
     private void isAdReady() {
-        if (mIsAutoLoad) {
-            printLogOnUI("interstitial auto load ad ready status:" + ATInterstitialAutoAd.isAdReady(mCurrentPlacementId));
+        if (isAutoLoad) {
+            ViewUtil.printLog(tvShowLog, "interstitial auto load ad ready status:" + ATInterstitialAutoAd.isAdReady(mPlacementIdMap.get(mCurrentNetworkName)));
         } else {
 //         boolean isReady = mInterstitialAd.isAdReady();
             ATAdStatusInfo atAdStatusInfo = mInterstitialAd.checkAdStatus();
-            printLogOnUI("interstitial ad ready status:" + atAdStatusInfo.isReady());
+            ViewUtil.printLog(tvShowLog, "interstitial ad ready status:" + atAdStatusInfo.isReady());
             List<ATAdInfo> atAdInfoList = mInterstitialAd.checkValidAdCaches();
             Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
             if (atAdInfoList != null) {
@@ -223,81 +320,85 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     }
 
     private void showAd() {
-        if (mIsAutoLoad) {
-            ATInterstitialAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-//            ATInterstitialAutoAd.show(this, mCurrentPlacementId, "", autoEventListener);
+        if (isAutoLoad) {
+            ATInterstitialAutoAd.show(this, mPlacementIdMap.get(mCurrentNetworkName), autoEventListener);
         } else {
             mInterstitialAd.show(InterstitialAdActivity.this);
 //        mInterstitialAd.show(InterstitialAdActivity.this, "f5e54937b0483d");
         }
     }
 
-    private final ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
+    private static ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
         @Override
         public void onInterstitialAutoLoaded(String placementId) {
             Log.i(TAG, "PlacementId:" + placementId + ": onInterstitialAutoLoaded");
-            printLogOnUI("PlacementId:" + placementId + ": onInterstitialAutoLoaded");
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onInterstitialAutoLoaded");
+            }
         }
 
         @Override
         public void onInterstitialAutoLoadFail(String placementId, AdError adError) {
             Log.i(TAG, "PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
-            printLogOnUI("PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
+            TextView tvLog = tvShowLogReference != null ? tvShowLogReference.get() : null;
+            if (tvLog != null) {
+                ViewUtil.printLog(tvLog, "PlacementId:" + placementId + ": onInterstitialAutoLoadFail:\n" + adError.getFullErrorInfo());
+            }
         }
 
     };
 
-    private final ATInterstitialAutoEventListener autoEventListener = new ATInterstitialAutoEventListener() {
+    ATInterstitialAutoEventListener autoEventListener = new ATInterstitialAutoEventListener() {
         @Override
         public void onInterstitialAdClicked(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdClicked:" + adInfo.toString());
-            printLogOnUI("onInterstitialAdClicked:");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdClicked:");
         }
 
         @Override
         public void onInterstitialAdShow(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdShow:" + adInfo.toString());
-            printLogOnUI("onInterstitialAdShow");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdShow");
         }
 
         @Override
         public void onInterstitialAdClose(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdClose:" + adInfo.toString());
-            printLogOnUI("onInterstitialAdClose");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdClose");
         }
 
         @Override
         public void onInterstitialAdVideoStart(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdVideoStart:" + adInfo.toString());
-            printLogOnUI("onInterstitialAdVideoStart");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoStart");
         }
 
         @Override
         public void onInterstitialAdVideoEnd(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdVideoEnd:" + adInfo.toString());
-            printLogOnUI("onInterstitialAdVideoEnd");
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoEnd");
         }
 
         @Override
         public void onInterstitialAdVideoError(AdError adError) {
             Log.i(TAG, "onInterstitialAdVideoError:" + adError.getFullErrorInfo());
-            printLogOnUI("onInterstitialAdVideoError:" + adError.getFullErrorInfo());
+            ViewUtil.printLog(tvShowLog, "onInterstitialAdVideoError" + adError.getFullErrorInfo());
         }
 
         public void onDeeplinkCallback(ATAdInfo adInfo, boolean isSuccess) {
             Log.i(TAG, "onDeeplinkCallback:\n" + adInfo.toString() + "| isSuccess:" + isSuccess);
-            printLogOnUI("onDeeplinkCallback: isSuccess=" + isSuccess);
         }
 
         public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
             Log.i(TAG, "onDownloadConfirm:\n" + adInfo.toString());
-            printLogOnUI("onDownloadConfirm");
         }
     };
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         for (Map.Entry<String, Boolean> entry : mAutoLoadPlacementIdMap.entrySet()) {
             ATInterstitialAutoAd.removePlacementId(entry.getKey());
         }
@@ -309,33 +410,5 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
         }
     }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        if (v == null) return;
-        switch (v.getId()) {
-            case R.id.load_ad_btn:
-                loadAd();
-                break;
-            case R.id.is_ad_ready_btn:
-                isAdReady();
-                break;
-            case R.id.show_ad_btn:
-                /*
-                 * To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
-                 * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
-                 * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
-                 * 1、Call "entryAdScenario" to report the arrival of the scene.
-                 * 2、Call "isAdReady".
-                 * 3、Call "show" to show AD view.
-                 * (Note the difference between auto and manual)
-                 */
-                ATInterstitial.entryAdScenario(mCurrentPlacementId, "f5e54937b0483d");
-                if (mInterstitialAd.isAdReady()) {
-                    showAd();
-                }
-                break;
-        }
-    }
 }
 

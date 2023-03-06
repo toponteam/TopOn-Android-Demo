@@ -44,6 +44,4 @@
 
     <string name="anythink_click_to_copy_device_id">Copy AndroidID: %s</string>
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
-    <string name="anythink_ad_status_loading">loadAd</string>
-    <string name="anythink_ad_status_not_load">ad is not load.</string>
 </resources>

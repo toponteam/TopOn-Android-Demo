@@ -1,6 +1,5 @@
 package com.test.ad.demo.utils;
 
-import android.content.Context;
 import android.widget.TextView;
 
 public class ViewUtil {
@@ -17,10 +16,4 @@ public class ViewUtil {
         }
     }
 
-    public static int dip2px(Context context, int dipValue) {
-        if (context == null) return 0;
-
-        float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dipValue * scale + 0.5f);
-    }
 }

@@ -144,8 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/anythink_F5F5F5"
-        android:visibility="gone"
-        tools:visibility="gone">
+        android:visibility="gone">
 
 
         <com.anythink.nativead.api.ATNativeView

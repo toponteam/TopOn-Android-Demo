@@ -7,18 +7,23 @@
 
 package com.test.ad.demo;
 
-import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -31,116 +36,162 @@ import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.test.ad.demo.base.BaseActivity;
-import com.test.ad.demo.bean.CommonViewBean;
-
+import com.test.ad.demo.util.PlacementIdUtil;
+import com.test.ad.demo.utils.ViewUtil;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
-public class NativeAdActivity extends BaseActivity implements View.OnClickListener {
+public class NativeAdActivity extends Activity {
 
     private static final String TAG = NativeAdActivity.class.getSimpleName();
-    public static final String NATIVE_SELF_RENDER_TYPE = "1";
-    public static final String NATIVE_EXPRESS_TYPE = "2";
 
-    private final List<String> mData = new ArrayList<>();
+    ATNative mATNative;
+    NativeAd mNativeAd;
+    ATNativePrepareInfo mNativePrepareInfo;
 
-    private ATNative mATNative;
-    private NativeAd mNativeAd;
 
+    private Spinner mSpinner;
     private ATNativeView mATNativeView;
     private View mSelfRenderView;
-    private TextView mTVLoadAdBtn;
-    private TextView mTVIsAdReadyBtn;
-    private TextView mTVShowAdBtn;
+
+    private TextView tvLoadAdBtn;
+    private TextView tvIsAdReadyBtn;
+    private TextView tvShowAdBtn;
+    private TextView tvShowLog;
+
+    private RecyclerView rvButtonList;
+
     private View mPanel;
 
-    @Override
-    protected int getContentViewId() {
-        return R.layout.activity_native;
-    }
+    private Map<String, String> mPlacementIdMap;
+    private String mCurrentNetworkName;
+    private List<String> mData = new ArrayList<>();
 
     @Override
-    protected int getAdType() {
-        return ATAdConst.ATMixedFormatAdType.NATIVE;
-    }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    @Override
-    protected void onSelectPlacementId(String placementId) {
-        initATNativeAd(placementId);
-    }
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_native);
 
-    @Override
-    protected CommonViewBean getCommonViewBean() {
-        final CommonViewBean commonViewBean = new CommonViewBean();
-        commonViewBean.setTitleBar(findViewById(R.id.title_bar));
-        commonViewBean.setTvLogView(findViewById(R.id.tv_show_log));
-        commonViewBean.setSpinnerSelectPlacement(findViewById(R.id.spinner_1));
+        tvShowLog = findViewById(R.id.tv_show_log);
+        tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
 
-        String nativeType = getNativeAdTypeFromIntent();
-        if (nativeType.equals(NATIVE_SELF_RENDER_TYPE)) {
-            commonViewBean.setTitleResId(R.string.anythink_native_self);
+        TitleBar titleBar = (TitleBar) findViewById(R.id.title_bar);
+        titleBar.setListener(new TitleBarClickListener() {
+            @Override
+            public void onBackClick(View v) {
+                finish();
+            }
+        });
+
+        tvLoadAdBtn = findViewById(R.id.load_ad_btn);
+        tvIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
+        tvShowAdBtn = findViewById(R.id.show_ad_btn);
+        mSpinner = findViewById(R.id.spinner_1);
+
+        String nativeType = getIntent().getStringExtra("native_type");
+
+        if (nativeType.equals("1")) {
+            mPlacementIdMap = PlacementIdUtil.getNativeSelfrenderPlacements(this);
+            titleBar.setTitle(R.string.anythink_native_self);
         } else {
-            commonViewBean.setTitleResId(R.string.anythink_native_express);
+            mPlacementIdMap = PlacementIdUtil.getNativeExpressPlacements(this);
+            titleBar.setTitle(R.string.anythink_native_express);
         }
-        return commonViewBean;
-    }
 
-    @Override
-    protected String getNativeAdType() {
-        return getNativeAdTypeFromIntent();
-    }
+        List<String> placementNameList = new ArrayList<>(mPlacementIdMap.keySet());
 
-    private String getNativeAdTypeFromIntent() {
-        return getIntent().getStringExtra("native_type");
-    }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                NativeAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
+                placementNameList);
+        mSpinner.setAdapter(adapter);
+        mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-    @Override
-    protected void initView() {
-        super.initView();
-        mTVLoadAdBtn = findViewById(R.id.load_ad_btn);
-        mTVIsAdReadyBtn = findViewById(R.id.is_ad_ready_btn);
-        mTVShowAdBtn = findViewById(R.id.show_ad_btn);
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                mCurrentNetworkName = parent.getItemAtPosition(position).toString();
+//                Toast.makeText(getApplicationContext(), mCurrentNetworkName, Toast.LENGTH_SHORT).show();
+
+                init(mPlacementIdMap.get(mCurrentNetworkName));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        mCurrentNetworkName = placementNameList.get(0);
+        init(mPlacementIdMap.get(mCurrentNetworkName));
+
         initPanel();
-    }
 
-    @Override
-    protected void initListener() {
-        super.initListener();
-        mTVLoadAdBtn.setOnClickListener(this);
-        mTVIsAdReadyBtn.setOnClickListener(this);
-        mTVShowAdBtn.setOnClickListener(this);
+        final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
+        final int adViewHeight = adViewWidth * 3 / 4;
+
+
+        tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadAd(adViewWidth, adViewHeight);
+            }
+        });
+
+        tvIsAdReadyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                isAdReady();
+            }
+        });
+
+        tvShowAdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               /*
+                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "ATNative#checkAdStatus#isReady".
+                 * 3、Call "getNativeAd" to show AD view.
+                 */
+                ATNative.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "");
+                if(isAdReady()){
+                    showAd();
+                }
+            }
+        });
     }
 
     private void initPanel() {
         mPanel = findViewById(R.id.rl_panel);
         mATNativeView = findViewById(R.id.native_ad_view);
         mSelfRenderView = findViewById(R.id.native_selfrender_view);
-        RecyclerView rvButtonList = findViewById(R.id.rv_button);
+        rvButtonList = findViewById(R.id.rv_button);
         GridLayoutManager manager = new GridLayoutManager(this, 2);
         rvButtonList.setLayoutManager(manager);
 
-        final boolean[] isMute = new boolean[]{true};
+        final boolean isMute[] = new boolean[]{true};
         NativeVideoButtonAdapter adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
             @Override
             public void onClick(String action) {
-                if (action.equals(VideoAction.VOICE_CHANGE)) {
+                if (action == VideoAction.VOICE_CHANGE) {
                     if (mNativeAd != null) {
                         mNativeAd.setVideoMute(!isMute[0]);
                         isMute[0] = !isMute[0];
                     }
-                } else if (action.equals(VideoAction.VIDEO_RESUME)) {
+                } else if (action == VideoAction.VIDEO_RESUME) {
                     if (mNativeAd != null) {
                         mNativeAd.resumeVideo();
                     }
-                } else if (action.equals(VideoAction.VIDEO_PAUSE)) {
+                } else if (action == VideoAction.VIDEO_PAUSE) {
                     if (mNativeAd != null) {
                         mNativeAd.pauseVideo();
                     }
-                } else if (action.equals(VideoAction.VIDEO_PROGRESS)) {
+                } else if (action == VideoAction.VIDEO_PROGRESS) {
                     if (mNativeAd != null) {
                         String tips = "video duration: " + mNativeAd.getVideoDuration() + ", progress: " + mNativeAd.getVideoProgress();
                         Log.i(TAG, tips);
@@ -152,22 +203,54 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         rvButtonList.setAdapter(adapter);
     }
 
-    private void initATNativeAd(String placementId) {
+    private void init(String placementId) {
         mATNative = new ATNative(this, placementId, new ATNativeNetworkListener() {
             @Override
             public void onNativeAdLoaded() {
                 Log.i(TAG, "onNativeAdLoaded");
-                printLogOnUI("load success...");
+                ViewUtil.printLog(tvShowLog, "load success...");
             }
 
             @Override
             public void onNativeAdLoadFail(AdError adError) {
                 Log.i(TAG, "onNativeAdLoadFail, " + adError.getFullErrorInfo());
-                printLogOnUI("load fail...：" + adError.getFullErrorInfo());
+                ViewUtil.printLog(tvShowLog, "load fail...：" + adError.getFullErrorInfo());
             }
         });
 
-        mATNative.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+        mATNative.setAdSourceStatusListener(new ATAdSourceStatusListener() {
+            @Override
+            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
+            }
+
+            @Override
+            public void onAdSourceAttempt(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
+            }
+
+            @Override
+            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
+                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
+                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
+            }
+        });
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
@@ -182,7 +265,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     private boolean isAdReady() {
         boolean isReady = mATNative.checkAdStatus().isReady();
         Log.i(TAG, "isAdReady: " + isReady);
-        printLogOnUI("isAdReady：" + isReady);
+        ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
         return isReady;
     }
 
@@ -199,37 +282,36 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 @Override
                 public void onDeeplinkCallback(ATNativeAdView view, ATAdInfo adInfo, boolean isSuccess) {
                     Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
-                    printLogOnUI("onDeeplinkCallback");
                 }
 
                 @Override
                 public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
-                    printLogOnUI("onAdImpressed");
+                    ViewUtil.printLog(tvShowLog, "onAdImpressed");
                 }
 
                 @Override
                 public void onAdClicked(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdClicked:\n" + entity.toString());
-                    printLogOnUI("onAdClicked");
+                    ViewUtil.printLog(tvShowLog, "onAdClicked");
                 }
 
                 @Override
                 public void onAdVideoStart(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoStart");
-                    printLogOnUI("onAdVideoStart");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoStart");
                 }
 
                 @Override
                 public void onAdVideoEnd(ATNativeAdView view) {
                     Log.i(TAG, "native ad onAdVideoEnd");
-                    printLogOnUI("onAdVideoEnd");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoEnd");
                 }
 
                 @Override
                 public void onAdVideoProgress(ATNativeAdView view, int progress) {
                     Log.i(TAG, "native ad onAdVideoProgress:" + progress);
-                    printLogOnUI("onAdVideoProgress");
+                    ViewUtil.printLog(tvShowLog, "onAdVideoProgress");
                 }
             });
 
@@ -237,7 +319,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 @Override
                 public void onAdCloseButtonClick(ATNativeAdView view, ATAdInfo entity) {
                     Log.i(TAG, "native ad onAdCloseButtonClick");
-                    printLogOnUI("native ad onAdCloseButtonClick");
+                    ViewUtil.printLog(tvShowLog, "native ad onAdCloseButtonClick");
 
                     exitNativePanel();
                 }
@@ -245,9 +327,9 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
             mATNativeView.removeAllViews();
             //log
-            printNativeAdMaterial(mNativeAd.getAdMaterial());
+            print(mNativeAd.getAdMaterial());
 
-            ATNativePrepareInfo mNativePrepareInfo = null;
+            mNativePrepareInfo = null;
 
             try {
                 mNativePrepareInfo = new ATNativePrepareExInfo();
@@ -258,8 +340,9 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                     SelfRenderViewUtil.bindSelfRenderView(this, mNativeAd.getAdMaterial(), mSelfRenderView, mNativePrepareInfo);
                     mNativeAd.renderAdContainer(mATNativeView, mSelfRenderView);
                 }
+
             } catch (Exception e) {
-                e.printStackTrace();
+
             }
 
             mNativeAd.prepare(mATNativeView, mNativePrepareInfo);
@@ -267,13 +350,11 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             mPanel.setVisibility(View.VISIBLE);
             initPanelButtonList(mNativeAd.getAdMaterial().getAdType());
         } else {
-            printLogOnUI("this placement no cache!");
+            ViewUtil.printLog(tvShowLog, "this placement no cache!");
         }
     }
 
-    private void printNativeAdMaterial(ATNativeMaterial adMaterial) {
-        if (adMaterial == null) return;
-
+    private void print(ATNativeMaterial adMaterial) {
         String adType = adMaterial.getAdType();
         switch (adType) {
             case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
@@ -336,6 +417,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        tvShowLog = null;
         destroyAd();
         if (mATNative != null) {
             mATNative.setAdListener(null);
@@ -365,8 +447,14 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         super.onResume();
     }
 
+    public int dip2px(float dipValue) {
+        float scale = this.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
+    }
+
+
     private void initPanelButtonList(String adType) {
-        if (Objects.equals(adType, CustomNativeAd.NativeAdConst.VIDEO_TYPE)) {
+        if (adType == CustomNativeAd.NativeAdConst.VIDEO_TYPE) {
             boolean isNativeExpress = true;
             if (mNativeAd != null) {
                 isNativeExpress = mNativeAd.isNativeExpress();
@@ -380,7 +468,8 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             int networkId = atAdInfo.getNetworkFirmId();
 
             switch (networkId) {
-                case 8: //for GDT
+                case 8:
+                    //for GDT
                     mData.add(VideoAction.VOICE_CHANGE);
                     mData.add(VideoAction.VIDEO_RESUME);
                     mData.add(VideoAction.VIDEO_PAUSE);
@@ -390,8 +479,12 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 //                    //for CSJ
 //                    mData.add(VideoAction.VOICE_CHANGE);
 //                    break;
-                case 22:    //for BaiDu
-                case 28:    //for KuaiShou
+                case 22:
+                    //for BaiDu
+                    mData.add(VideoAction.VIDEO_PROGRESS);
+                    break;
+                case 28:
+                    //for KuaiShou
                     mData.add(VideoAction.VIDEO_PROGRESS);
                     break;
             }
@@ -413,34 +506,4 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         return super.onKeyDown(keyCode, event);
     }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        if (v == null) return;
-
-        switch (v.getId()) {
-            case R.id.load_ad_btn:
-                final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
-                final int adViewHeight = adViewWidth * 3 / 4;
-                loadAd(adViewWidth, adViewHeight);
-                break;
-            case R.id.is_ad_ready_btn:
-                isAdReady();
-                break;
-            case R.id.show_ad_btn:
-                /*
-                 * To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
-                 * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
-                 * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
-                 * 1、Call "entryAdScenario" to report the arrival of the scene.
-                 * 2、Call "ATNative#checkAdStatus#isReady".
-                 * 3、Call "getNativeAd" to show AD view.
-                 */
-                ATNative.entryAdScenario(mCurrentPlacementId, "");
-                if (isAdReady()) {
-                    showAd();
-                }
-                break;
-        }
-    }
 }
