@@ -1,5 +1,6 @@
 package com.test.ad.demo;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +9,6 @@ import android.view.Window;
 import android.widget.RelativeLayout;
 
 public class NativeMainActivity extends Activity implements View.OnClickListener {
-
-    private RelativeLayout nativeBtn;
-    private RelativeLayout nativeExpressBtn;
-    private RelativeLayout nativeListBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,26 +29,27 @@ public class NativeMainActivity extends Activity implements View.OnClickListener
             }
         });
 
-        nativeBtn = findViewById(R.id.nativeBtn);
-        nativeExpressBtn = findViewById(R.id.nativeExpressBtn);
-        nativeListBtn = findViewById(R.id.nativeListBtn);
+        RelativeLayout nativeBtn = findViewById(R.id.nativeBtn);
+        RelativeLayout nativeExpressBtn = findViewById(R.id.nativeExpressBtn);
+        RelativeLayout nativeListBtn = findViewById(R.id.nativeListBtn);
 
         nativeBtn.setOnClickListener(this);
         nativeExpressBtn.setOnClickListener(this);
         nativeListBtn.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.nativeBtn:
                 Intent intent1 = new Intent(NativeMainActivity.this, NativeAdActivity.class);
-                intent1.putExtra("native_type", "1");
+                intent1.putExtra("native_type", NativeAdActivity.NATIVE_SELF_RENDER_TYPE);
                 startActivity(intent1);
                 break;
             case R.id.nativeExpressBtn:
                 Intent intent2 = new Intent(NativeMainActivity.this, NativeAdActivity.class);
-                intent2.putExtra("native_type", "2");
+                intent2.putExtra("native_type", NativeAdActivity.NATIVE_EXPRESS_TYPE);
                 startActivity(intent2);
                 break;
             case R.id.nativeListBtn:

@@ -190,5 +190,4 @@ public class PlacementIdUtil {
         }
         return splashPlacements;
     }
-
 }
