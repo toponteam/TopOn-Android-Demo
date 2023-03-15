@@ -76,10 +76,4 @@ dependencies {
     implementation ('com.google.android.exoplayer:exoplayer:2.16.1'){
         exclude module: 'recyclerview'
     }
-
-    //Yandex
-    implementation 'com.google.dagger:dagger:2.38'
-    implementation('androidx.viewpager2:viewpager2:1.0.0') {
-        exclude module:'recyclerview'
-    }
 }
