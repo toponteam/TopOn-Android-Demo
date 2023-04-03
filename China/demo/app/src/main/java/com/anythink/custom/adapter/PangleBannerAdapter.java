@@ -37,66 +37,6 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
     int mBannerHeight;
     int mRefreshTime;
 
-    //TT Ad load listener
-    TTAdNative.BannerAdListener ttBannerAdListener = new TTAdNative.BannerAdListener() {
-        @Override
-        public void onError(int i, String s) {
-            if (mLoadListener != null) {
-                mLoadListener.onAdLoadError(i + "", s);
-            }
-        }
-
-        @Override
-        public void onBannerAdLoad(TTBannerAd ttBannerAd) {
-            if (ttBannerAd == null) {
-                if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError("", "TTAD is null!");
-                }
-                return;
-            }
-            View bannerView = ttBannerAd.getBannerView();
-            if (bannerView == null) {
-                if (mLoadListener != null) {
-                    mLoadListener.onAdLoadError("", "TTBannerView is null!");
-                }
-                return;
-            }
-
-            mBannerView = bannerView;
-            mBannerView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-                @Override
-                public boolean onPreDraw() {
-                    try {
-                        if (mBannerView != null && mBannerView.getParent() != null) {
-                            int width = ((ViewGroup) mBannerView.getParent()).getMeasuredWidth();
-                            int height = ((ViewGroup) mBannerView.getParent()).getMeasuredHeight();
-
-                            if (mBannerView.getLayoutParams().width != width) {
-                                mBannerView.getLayoutParams().width = width;
-                                mBannerView.getLayoutParams().height = width * mBannerHeight / mBannerWidth;
-                                if (mBannerView.getLayoutParams().height > height) {
-                                    mBannerView.getLayoutParams().height = height;
-                                    mBannerView.getLayoutParams().width = height * mBannerWidth / mBannerHeight;
-                                }
-                                ((ViewGroup) mBannerView.getParent()).requestLayout();
-                            }
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                    return true;
-                }
-            });
-
-            ttBannerAd.setBannerInteractionListener(interactionListener);
-
-            if (mLoadListener != null) {
-                mLoadListener.onAdCacheLoaded();
-            }
-        }
-    };
-
     //TT Advertising event monitoring
     TTBannerAd.AdInteractionListener interactionListener = new TTBannerAd.AdInteractionListener() {
 
@@ -279,9 +219,6 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
             adSlotBuilder.setExpressViewAcceptedSize(viewWidth <= 0 ? bannerWidth / 2 : viewWidth, viewHeight <= 0 ? 0 : viewHeight);
             AdSlot adSlot = adSlotBuilder.build();
             mTTAdNative.loadBannerExpressAd(adSlot, expressAdListener);
-        } else {
-            AdSlot adSlot = adSlotBuilder.build();
-            mTTAdNative.loadBannerAd(adSlot, ttBannerAdListener);
         }
     }
 
@@ -385,7 +322,6 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
         }
 
         interactionListener = null;
-        ttBannerAdListener = null;
         expressAdInteractionListener = null;
         expressAdListener = null;
         mActivity = null;

@@ -14,6 +14,7 @@ import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
+import com.huawei.hms.ads.AppDownloadButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class SelfRenderViewUtil {
         final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
         FrameLayout shakeViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_shake_view_container);
+        FrameLayout adLogoContainer = selfRenderView.findViewById(R.id.native_ad_logo_container);   //v6.1.52+
 
         // bind view
         if (nativePrepareInfo == null) {
@@ -94,6 +96,23 @@ public class SelfRenderViewUtil {
             ctaView.setVisibility(View.GONE);
         }
 
+        // AppDownloadButton(Only Huawei Ads support)
+        View lastView = ((ViewGroup) selfRenderView).getChildAt(((ViewGroup) selfRenderView).getChildCount() - 1);
+        // Remove AppDownloadButton since last time added
+        if (lastView instanceof AppDownloadButton) {
+            ((ViewGroup) selfRenderView).removeView(lastView);
+        }
+        View appDownloadButton = adMaterial.getAppDownloadButton();
+        if (appDownloadButton != null) {
+            if (appDownloadButton instanceof AppDownloadButton) {
+                ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
+            }
+            ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
+            ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
+            appDownloadButton.setVisibility(View.VISIBLE);
+            ctaView.setVisibility(View.INVISIBLE);
+        }
+
         // media view
         View mediaView = adMaterial.getAdMediaView(contentArea);
         int mainImageHeight = adMaterial.getMainImageHeight();
@@ -139,18 +158,27 @@ public class SelfRenderViewUtil {
 
 
         //Ad Logo
-        String adChoiceIconUrl = adMaterial.getAdChoiceIconUrl();
-        Bitmap adLogoBitmap = adMaterial.getAdLogo();
-        if (!TextUtils.isEmpty(adChoiceIconUrl)) {
-            logoView.setImage(adChoiceIconUrl);
-            nativePrepareInfo.setAdLogoView(logoView);//bind ad choice
-            logoView.setVisibility(View.VISIBLE);
-        } else if (adLogoBitmap != null) {
-            logoView.setImageBitmap(adLogoBitmap);
-            logoView.setVisibility(View.VISIBLE);
+        View adLogoView = adMaterial.getAdLogoView();
+        if (adLogoView != null) {
+            adLogoContainer.setVisibility(View.VISIBLE);
+            adLogoContainer.removeAllViews();
+            adLogoContainer.addView(adLogoView);
         } else {
-            logoView.setImageBitmap(null);
-            logoView.setVisibility(View.GONE);
+            adLogoContainer.setVisibility(View.GONE);
+
+            String adChoiceIconUrl = adMaterial.getAdChoiceIconUrl();
+            Bitmap adLogoBitmap = adMaterial.getAdLogo();
+            if (!TextUtils.isEmpty(adChoiceIconUrl)) {
+                logoView.setImage(adChoiceIconUrl);
+                nativePrepareInfo.setAdLogoView(logoView);//bind ad choice
+                logoView.setVisibility(View.VISIBLE);
+            } else if (adLogoBitmap != null) {
+                logoView.setImageBitmap(adLogoBitmap);
+                logoView.setVisibility(View.VISIBLE);
+            } else {
+                logoView.setImageBitmap(null);
+                logoView.setVisibility(View.GONE);
+            }
         }
 
         String adFrom = adMaterial.getAdFrom();
