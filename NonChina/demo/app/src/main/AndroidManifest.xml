@@ -9,6 +9,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test.ad.demo" >
 
+    <uses-sdk tools:overrideLibrary="com.chartboost.heliumsdk" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -32,6 +34,7 @@
 
         <activity
             android:name="com.test.ad.demo.MainActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" >
             <intent-filter>
@@ -92,7 +95,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-        <!-- source file: nonchina/network_sdk/admob/21.5.0/AndroidManifest.xml -->
+        <!-- source file: nonchina/network_sdk/admob/22.0.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
