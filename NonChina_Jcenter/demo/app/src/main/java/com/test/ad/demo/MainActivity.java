@@ -69,20 +69,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 if (!TextUtils.isEmpty(deviceInfo)) {
                     try {
                         JSONObject jsonObject = new JSONObject(deviceInfo);
-                        String androidID = jsonObject.optString("AndroidID");
+                        String gaid = jsonObject.optString("GAID");
 
                         MainActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
 
                                 TextView deviceIdTextView = (TextView) findViewById(R.id.tv_device_id);
-                                deviceIdTextView.setText(getResources().getString(R.string.anythink_click_to_copy_device_id, androidID));
+                                deviceIdTextView.setText(getResources().getString(R.string.anythink_click_to_copy_device_id, gaid));
                                 deviceIdTextView.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        copyContentToClipboard(MainActivity.this, androidID);
+                                        copyContentToClipboard(MainActivity.this, gaid);
 
-                                        Toast.makeText(MainActivity.this, "AndroidID：" + androidID, Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(MainActivity.this, "Gaid：" + gaid, Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }

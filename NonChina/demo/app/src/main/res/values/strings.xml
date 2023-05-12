@@ -42,7 +42,7 @@
     <string name="anythink_show_ad">Show Ad</string>
     <string name="anythink_select_network">Select Network</string>
 
-    <string name="anythink_click_to_copy_device_id">Copy AndroidID: %s</string>
+    <string name="anythink_click_to_copy_device_id">Copy Gaid: %s</string>
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
     <string name="anythink_ad_status_loading">loadAd</string>
     <string name="anythink_ad_status_not_load">ad is not load.</string>

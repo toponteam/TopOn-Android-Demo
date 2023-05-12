@@ -31,7 +31,7 @@
     <string name="anythink_show_ad">Show Ad</string>
     <string name="anythink_select_network">Select Network</string>
 
-    <string name="anythink_click_to_copy_device_id">复制 AndroidID: %s</string>
+    <string name="anythink_click_to_copy_device_id">复制 Gaid: %s</string>
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
 
 </resources>
