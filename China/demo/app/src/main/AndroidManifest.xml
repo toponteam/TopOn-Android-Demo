@@ -117,7 +117,7 @@
             android:name="hw_ads_sdk_type"
             android:value="3"
             tools:node="replace" />
-        <!-- source file: china/network_sdk/gdt/4.520.1390/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/gdt/4.530.1400/AndroidManifest.xml -->
         <provider
             android:name="com.qq.e.comm.GDTFileProvider"
             android:authorities="${applicationId}.gdt.fileprovider"
@@ -126,7 +126,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_gdt_file_path" />
-        </provider> <!-- source file: china/network_sdk/csj/5.3.0.3/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/csj/5.3.0.5/AndroidManifest.xml -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
