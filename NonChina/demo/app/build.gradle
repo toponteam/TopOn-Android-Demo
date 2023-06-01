@@ -4,11 +4,11 @@ apply from: 'topon.gradle'
 
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.anythink.sdk.demo"
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled = true
@@ -79,6 +79,7 @@ dependencies {
     //Unity Ads
     implementation 'androidx.startup:startup-runtime:1.1.1'
     implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
+    implementation 'androidx.webkit:webkit:1.6.1'
 
     implementation ('com.google.android.exoplayer:exoplayer:2.16.1'){
         exclude module: 'recyclerview'

@@ -15,6 +15,7 @@ import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
@@ -24,6 +25,7 @@ import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SplashAdActivity extends BaseActivity implements View.OnClickListener {
@@ -137,12 +139,21 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void isAdReady() {
-        if (mSplashAd.isAdReady()) {
+        ATAdStatusInfo atAdStatusInfo = mSplashAd.checkAdStatus();
+        if (atAdStatusInfo.isReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
             printLogOnUI( "SplashAd is ready to show.");
         } else {
             Log.i(TAG, "SplashAd isn't ready to show.");
             printLogOnUI( "SplashAd isn't ready to show.");
+        }
+
+        List<ATAdInfo> atAdInfoList = mSplashAd.checkValidAdCaches();
+        Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
+        if (atAdInfoList != null) {
+            for (ATAdInfo adInfo : atAdInfoList) {
+                Log.i(TAG, "\nCahce detail:" + adInfo.toString());
+            }
         }
     }
 

@@ -154,7 +154,7 @@ public class RewardVideoAdActivity extends Activity {
                  * 3、Call "show" to show AD view.
                  * (Note the difference between auto and manual)
                  */
-                ATRewardVideoAd.entryAdScenario(placementId, "f5e5492eca9668");
+                ATRewardVideoAd.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "f5e5492eca9668");
                 if(mRewardVideoAd.isAdReady()){
                     showAd();
                 }

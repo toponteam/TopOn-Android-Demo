@@ -277,6 +277,15 @@ public class NativeAdActivity extends Activity {
         boolean isReady = mATNative.checkAdStatus().isReady();
         Log.i(TAG, "isAdReady: " + isReady);
         ViewUtil.printLog(tvShowLog, "isAdReady：" + isReady);
+
+        List<ATAdInfo> atAdInfoList = mATNative.checkValidAdCaches();
+        Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
+        if (atAdInfoList != null) {
+            for (ATAdInfo adInfo : atAdInfoList) {
+                Log.i(TAG, "\nCahce detail:" + adInfo.toString());
+            }
+        }
+
         return isReady;
     }
 

@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
+import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
@@ -185,12 +186,21 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
     }
 
     private void isAdReady() {
-        if (splashAd.isAdReady()) {
+        ATAdStatusInfo atAdStatusInfo = splashAd.checkAdStatus();
+        if (atAdStatusInfo.isReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
             ViewUtil.printLog(tvShowLog, "SplashAd is ready to show.");
         } else {
             Log.i(TAG, "SplashAd isn't ready to show.");
             ViewUtil.printLog(tvShowLog, "SplashAd isn't ready to show.");
+        }
+
+        List<ATAdInfo> atAdInfoList = splashAd.checkValidAdCaches();
+        Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
+        if (atAdInfoList != null) {
+            for (ATAdInfo adInfo : atAdInfoList) {
+                Log.i(TAG, "\nCahce detail:" + adInfo.toString());
+            }
         }
     }
 

@@ -157,7 +157,7 @@ public class InterstitialAdActivity extends Activity {
                  * 3、Call "show" to show AD view.
                  * (Note the difference between auto and manual)
                  */
-                ATInterstitial.entryAdScenario(placementId, "f5e54937b0483d");
+                ATInterstitial.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "f5e54937b0483d");
                 if(mInterstitialAd.isAdReady()){
                     showAd();
                 }
