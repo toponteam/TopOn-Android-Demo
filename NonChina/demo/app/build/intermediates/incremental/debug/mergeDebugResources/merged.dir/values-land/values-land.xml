@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="nend_full_board_ad_text">@android:color/white</color>
+    <dimen name="abc_action_bar_default_height_material">48dp</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12dp</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14dp</dimen>
+    <dimen name="applovin_sdk_consentFlowGdprControlsViewHeight">120dp</dimen>
+    <dimen name="applovin_sdk_consentFlowGdprPartnersControlViewHeight">80dp</dimen>
+    <dimen name="nend_full_board_ad_promotion_text_size">22dp</dimen>
+    <style name="TextView.NendAd.FullBoard.Promotion" parent="android:Widget.TextView">
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/nend_full_board_ad_promotion_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nend_full_board_ad_text</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">@integer/nend_full_board_ad_shadow_delta</item>
+        <item name="android:shadowDy">@integer/nend_full_board_ad_shadow_delta</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+</resources>

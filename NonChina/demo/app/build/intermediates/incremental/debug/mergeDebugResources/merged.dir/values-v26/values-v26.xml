@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <style name="Base.Theme.AppCompat" parent="Base.V26.Theme.AppCompat"/>
+    <style name="Base.Theme.AppCompat.Light" parent="Base.V26.Theme.AppCompat.Light"/>
+    <style name="Base.V26.Theme.AppCompat" parent="Base.V23.Theme.AppCompat">
+        
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Theme.AppCompat.Light" parent="Base.V23.Theme.AppCompat.Light">
+        
+        <item name="colorError">?android:attr/colorError</item>
+    </style>
+    <style name="Base.V26.Widget.AppCompat.Toolbar" parent="Base.V7.Widget.AppCompat.Toolbar">
+        <item name="android:touchscreenBlocksFocus">true</item>
+        <item name="android:keyboardNavigationCluster">true</item>
+    </style>
+    <style name="Base.Widget.AppCompat.Toolbar" parent="Base.V26.Widget.AppCompat.Toolbar"/>
+    <style name="mbridge_common_activity_style" parent="@android:style/Theme.Translucent.NoTitleBar"/>
+    <style name="mbridge_reward_theme" parent="@android:style/Theme.NoTitleBar.Fullscreen"/>
+    <style name="mbridge_transparent_common_activity_style" parent="mbridge_common_activity_style">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+    <style name="mbridge_transparent_theme" parent="mbridge_reward_theme">
+            <item name="android:windowIsTranslucent">false</item>
+            <item name="android:windowContentOverlay">@null</item>
+            <item name="android:windowTranslucentStatus" ns1:targetApi="kitkat">true</item>
+            <item name="android:windowFullscreen">true</item>
+            <item name="android:statusBarColor" ns1:targetApi="lollipop">@android:color/transparent</item>
+            <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+            <item name="android:backgroundDimEnabled">false</item>
+            <item name="android:windowBackground">@android:color/transparent</item>
+            <item name="android:windowNoTitle">true</item>
+            <item name="android:windowActionBar" ns1:targetApi="honeycomb">false</item>
+        </style>
+</resources>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">%d секунд алға айналдыру</item>
+    <item quantity="other">%d секунд алға айналдыру</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">%d секунд артқа айналдыру</item>
+    <item quantity="other">%d секунд артқа айналдыру</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Терезе %1$s секунд ішінде жабылады."</item>
+        <item priority="translator" quantity="other">"Терезе %1$s секунд ішінде жабылады."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"%1$s күн таңдауын есте сақтау"</item>
+        <item priority="translator" quantity="other">"%1$s күн таңдауын есте сақтау"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d сек"</item>
+        <item priority="LT" quantity="other">"%1$d сек"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Негізгі бетке өту"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Жоғары қарай өту"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Басқа опциялар"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Дайын"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Барлығын көру"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Қолданбаны таңдау"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ӨШІРУ"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ҚОСУ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"бос орын"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Іздеу…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Сұрауды өшіру"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Іздеу сұрауы"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Іздеу"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Сұрауды жіберу"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Дауыспен іздеу"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Бөлісу"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> қолданбасымен бөлісу"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Жию"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Қосу</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play қызметтерін қоспасаңыз, %1$s жұмыс істемейді.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play қызметтерін қосу</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Орнату</string>
+    <string name="common_google_play_services_install_text">Google Play қызметтері құрылғыда болмағандықтан, %1$s іске қосылмайды.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play қызметтерін алу</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play қызметтерінің қолжетімділігі</string>
+    <string name="common_google_play_services_notification_ticker">Google Play қызметтерінің қатесі</string>
+    <string name="common_google_play_services_unknown_issue">%1$s қолданбасында Google Play қызметіне байланысты белгісіз қате шықты. Әрекетті қайталаңыз.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s қолданбасы құрылғыңызда қолдау көрсетілмейтін Google Play қызметінсіз жұмыс істемейді.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Жаңарту</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Google Play қызметтерін жаңартпасаңыз, %1$s іске қосылмайды.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play қызметтерін жаңарту</string>
+    <string name="common_google_play_services_updating_text">Қазіргі уақытта жаңартылып жатқан Google Play қызметтерінсіз %1$s іске қосылмайды.</string>
+    <string name="common_google_play_services_wear_update_text">Google Play қызметтерінің жаңа нұсқасы қажет. Ол қысқа уақыттан кейін өзі жаңарады.</string>
+    <string name="common_open_on_phone">Телефонда ашу</string>
+    <string name="common_signin_button_text">Кіру</string>
+    <string name="common_signin_button_text_long">Google арқылы кіру</string>
+    <string msgid="3209159573327985035" name="copy">"Көшіру"</string>
+    <string name="exo_controls_cc_disabled_description">Субтитрді қосу</string>
+    <string name="exo_controls_cc_enabled_description">Субтитрді өшіру</string>
+    <string name="exo_controls_fastforward_description">Жылдам алға айналдыру</string>
+    <string name="exo_controls_fullscreen_enter_description">Толық экранды режимге кіру</string>
+    <string name="exo_controls_fullscreen_exit_description">Толық экранды режимнен шығу</string>
+    <string name="exo_controls_hide">Ойнатқышты басқару элементтерін жасыру</string>
+    <string name="exo_controls_next_description">Келесі</string>
+    <string name="exo_controls_overflow_hide_description">Қосымша параметрлерді жасыру</string>
+    <string name="exo_controls_overflow_show_description">Қосымша параметрлерді көрсету</string>
+    <string name="exo_controls_pause_description">Кідірту</string>
+    <string name="exo_controls_play_description">Ойнату</string>
+    <string name="exo_controls_playback_speed">Жылдамдық</string>
+    <string name="exo_controls_playback_speed_normal">Қалыпты</string>
+    <string name="exo_controls_previous_description">Алдыңғы</string>
+    <string name="exo_controls_repeat_all_description">Барлығын қайталау</string>
+    <string name="exo_controls_repeat_off_description">Ешқайсысын қайталамау</string>
+    <string name="exo_controls_repeat_one_description">Біреуін қайталау</string>
+    <string name="exo_controls_rewind_description">Артқа айналдыру</string>
+    <string name="exo_controls_seek_bar_description">Ойнату барысы</string>
+    <string name="exo_controls_settings_description">Параметрлер</string>
+    <string name="exo_controls_show">Ойнатқышты басқару элементтерін көрсету</string>
+    <string name="exo_controls_shuffle_off_description">Араластыру режимі өшірулі.</string>
+    <string name="exo_controls_shuffle_on_description">Араластыру режимі қосулы.</string>
+    <string name="exo_controls_stop_description">Тоқтату</string>
+    <string name="exo_controls_vr_description">VR режимі</string>
+    <string name="exo_download_completed">Жүктеп алынды</string>
+    <string name="exo_download_description">Жүктеп алу</string>
+    <string name="exo_download_downloading">Жүктеп алынуда</string>
+    <string name="exo_download_failed">Жүктеп алынбады</string>
+    <string name="exo_download_notification_channel_name">Жүктеп алынғандар</string>
+    <string name="exo_download_paused">Жүктеп алу процестері уақытша тоқтады.</string>
+    <string name="exo_download_paused_for_network">Жүктеп алу үшін желіге қосылу керек.</string>
+    <string name="exo_download_paused_for_wifi">Жүктеп алу үшін Wi-Fi-ға қосылу керек.</string>
+    <string name="exo_download_removing">Жүктеп алынғандар өшірілуде</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f МБ/сек</string>
+    <string name="exo_track_mono">Моно</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Балама</string>
+    <string name="exo_track_role_closed_captions">Субтитр</string>
+    <string name="exo_track_role_commentary">Түсіндірме</string>
+    <string name="exo_track_role_supplementary">Қосымша</string>
+    <string name="exo_track_selection_auto">Автоматты</string>
+    <string name="exo_track_selection_none">Жоқ</string>
+    <string name="exo_track_selection_title_audio">Aудиомазмұн</string>
+    <string name="exo_track_selection_title_text">Мәтін</string>
+    <string name="exo_track_selection_title_video">Бейне</string>
+    <string name="exo_track_stereo">Стерео</string>
+    <string name="exo_track_surround">Көлемді дыбыс</string>
+    <string name="exo_track_surround_5_point_1">5.1 көлемді дыбыс жүйесі</string>
+    <string name="exo_track_surround_7_point_1">7.1 көлемді дыбыс жүйесі</string>
+    <string name="exo_track_unknown">Белгісіз</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Қосымша"</string>
+    <string name="hiad_ad_label" priority="translator">"ЖАРНАМА"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Жарнама"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s орнатылды"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Орнату аяқталды. Ашу үшін түртіңіз."</string>
+    <string name="hiad_app_permission" priority="LT">"Рұқсаттар"</string>
+    <string name="hiad_app_preorder" priority="LT">"Алдын ала тапсырыс беру"</string>
+    <string name="hiad_app_preordered" priority="translator">"АЛДЫН АЛА ТАПСЫРЫС БЕРУ"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Өткізіп жіберу үшін «Кері» түймесін басыңыз"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Жарнама жасырылды"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Қызықпаймын"</string>
+    <string name="hiad_choices_hide" priority="LT">"Жарнаманы жасыру"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Неліктен бұл жарнаманы көрдім?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Осы қолданбаны орнату керек пе?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Мобильді желіні пайдаланғанда деректердің %1$s мөлшері тұтынылады. Жалғастыру керек пе?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Ойнату кезінде мобильді деректер пайдаланылады. Жалғастыру керек пе?"</string>
+    <string name="hiad_continue_download" priority="LT">"Жүктеп алу"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ЖҮКТЕП АЛУ"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ЖАЛҒАСТЫРУ"</string>
+    <string name="hiad_copy_link" priority="LT">"Сілтемені көшіру"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s МБ"</string>
+    <string name="hiad_default_app_name" priority="LT">"Қолданба"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Өткізіп жіберу"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d өткізіп жіберу"</string>
+    <string name="hiad_detail" priority="LT">"Мәліметтер"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Жүктеп алу"</string>
+    <string name="hiad_dialog_accept" priority="LT">"РҰҚСАТ ЕТУ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"РҰҚСАТ ЕТУ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"БАС ТАРТУ"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ЖҮКТЕУ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ТҮСІНДІМ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s үшін %2$s орнату рұқсат етілсін бе?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Көзі: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"РҰҚСАТ ЕТУ"</string>
+    <string name="hiad_dialog_open" priority="LT">"АШУ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ТЫЙЫМ САЛУ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Мобильді деректер арқылы жүктеу керек пе?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Ескертпе"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Мобильді трафик арқылы жүктеп алу керек пе?"</string>
+    <string name="hiad_download_download" priority="LT">"ОРНАТУ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ЖҮКТЕУ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s жүктеп алу кезінде қате орын алды."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Файл бүлінген. Қайта жүктеңіз."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Файл жоқ. Әрекетті қайталаңыз."</string>
+    <string name="hiad_download_install" priority="LT">"ОРНАТУ"</string>
+    <string name="hiad_download_installing" priority="LT">"Орнатылуда"</string>
+    <string name="hiad_download_no_space" priority="LT">"Қойма орны жеткіліксіз. Біраз орын босатып, әрекетті қайталаңыз."</string>
+    <string name="hiad_download_open" priority="LT">"АШУ"</string>
+    <string name="hiad_download_resume" priority="LT">"ЖАЛҒАСТЫРУ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s жүктеп алу кезінде қате орын алды. Жүктеп алу қайта іске қосылады."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Қазіргі уақытта Wi-Fi желісіне қосылмағансыз. Жүктеу кезінде %1$s мобильді деректер пайдаланылады. Сонда да жүктеу керек пе?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Қазіргі уақытта WLAN желісіне қосылмағансыз. Жүктеу кезінде %1$s мобильді деректер пайдаланылады. Сонда да жүктеу керек пе?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Бұл жарнама жайлы хабарлау"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Пікіріңіз үшін рақмет."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Біз мұндай мазмұнды азырақ ұсынамыз."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Бұл жарнама туралы не ойладыңыз?"</string>
+    <string name="hiad_install_completed" priority="LT">"Дайын"</string>
+    <string name="hiad_installed_description" priority="LT">"Орнату сәтті болды. Ашу үшін түртіңіз."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Орнатылған"</string>
+    <string name="hiad_jump_desc" priority="LT">"Мәліметтерді көру немесе қолданбаға өту"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Бұл бет %1$s ашады."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Сілтеме көшірілді."</string>
+    <string name="hiad_loading_tips" priority="LT">"Жүктелуде…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Бұл жүктеп алуда %1$s мобильді деректер пайдаланылады."</string>
+    <string name="hiad_net_error" priority="LT">"Желі байланысы қатесі. Қайталап көріңіз."</string>
+    <string name="hiad_network_error" priority="LT">"Желілік байланыс қатесі."</string>
+    <string name="hiad_network_no_available" priority="LT">"Интернет байланысы жоқ. Желі параметрлерін тексеріңіз."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Қайта еске салмау"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi байланысы жоқ. Қазір жүктеп алатын болсаңыз, мобильді трафик пайдаланылады. Жүктеп алу керек пе?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN байланысы жоқ. Қазір жүктеп алатын болсаңыз, мобильді трафик пайдаланылады. Жүктеп алу керек пе?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Браузерде ашу"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Бетті жүктеу мүмкін емес. Әрекетті қайталаңыз."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s қолданбасы келесі рұқсаттарды талап етеді:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi желісін күту"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Мобильді желі арқылы жүктеп алу керек пе?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"WLAN желісін күту"</string>
+    <string name="hiad_refresh" priority="LT">"Жаңарту"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d МБ-тан үлкен қолданба"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Өткізіп жіберу"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Қарауды жалғастыру"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Сыйақы алу үшін осы жарнаманы соңына дейін қараңыз."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Веб-сайтты/қолданбаны ашу үшін түртіңіз"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Жанап өту"</string>
+    <string name="hiad_twist_screen" priority="LT">"Телефонды шайқау"</string>
+    <string name="hiad_whether_download" priority="LT">"Бұл қолданбаны жүктеп алу керек пе?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi арқылы алдын ала жүктелген"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Алдын ала жүктелген"</string>
+    <string name="native_body">Негізгі мәтіні</string>
+    <string name="native_headline">Тақырыбы</string>
+    <string name="native_media_view">Медиа көрінісі</string>
+    <string msgid="478774118347071097" name="not_set">"Орнатылмаған"</string>
+    <string name="offline_notification_text">Жарнаманы ашу үшін түртіңіз.</string>
+    <string name="offline_notification_title">Офлайн режимге өткенде, сақталған жарнамаңызды көріңіз</string>
+    <string name="offline_opt_in_confirm">Жарайды</string>
+    <string name="offline_opt_in_confirmation">Онлайн режимге оралғанда, сілтемесі бар хабарландыру аласыз.</string>
+    <string name="offline_opt_in_decline">Жоқ, рақмет</string>
+    <string name="offline_opt_in_message">Сізге жарнама беруші сайтына сілтемесі бар хабарландыру жібереміз.</string>
+    <string name="offline_opt_in_title">Онлайн режимге оралғанда, жарнаманы ашыңыз</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" қорытындысы буферге көшірілді"</string>
+    <string name="s1">Кескінді сақтау</string>
+    <string name="s2">Жарнамаға кескінді сурет галереясында сақтауға рұқсат берілсін бе?</string>
+    <string name="s3">Қабылдау</string>
+    <string name="s4">Қабылдамау</string>
+    <string name="s5">Күнтізбе оқиғасын жасау</string>
+    <string name="s6">Жарнамаға күнтізбе оқиғасын жасауға рұқсат берілсін бе?</string>
+    <string name="s7">Сынақ жарнама</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Іздеу"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ӨШІРУЛІ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ҚОСУЛЫ"</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>

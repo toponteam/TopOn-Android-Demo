@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="applovin_agree_message">如果您選擇開始使用我們的應用，請點擊\"繼續\"</string>
+    <string name="applovin_continue_button_text">繼續</string>
+    <string name="applovin_gdpr_advertising_partners_screen_message">如同我们在隐私政策中所表述的，在您同意的前提下，我们可能将此数据分享给以下的合作伙伴，以帮助他们提供个性化广告和内容：</string>
+    <string name="applovin_gdpr_advertising_partners_screen_title">個性化廣告和內容</string>
+    <string name="applovin_gdpr_analytics_partners_screen_message">如同我們在隱私政策中所表述的，在您同意的前提下，我們可能將此數據分享給以下的合作夥伴，用於產品表現監測以及改進我們的產品和服務。</string>
+    <string name="applovin_gdpr_analytics_partners_screen_title">產品表現監測和產品優化</string>
+    <string name="applovin_gdpr_are_you_sure_screen_message">請允許我們和我們的合作夥伴使用此數據，以為您提供個性化的廣告和內容，以及我們在隱私政策中列明的其他用途。\n\n\u2022 為您提供個性化的體驗，廣告和內容。\n\n\u2022 請支持我們的產品優化和開發\n\n\u2022 這將允許您參加我們的應用內促銷活動</string>
+    <string name="applovin_gdpr_are_you_sure_screen_title">您是否確定？</string>
+    <string name="applovin_gdpr_back_button_text">返回</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_1">請支持我們的免費應用！</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_2">這會為您提供更個性化的體驗，包括個性化廣告和內容</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_3">請支持我們的產品優化和開發</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_4">這將允許您參加我們的應用內促銷活動</string>
+    <string name="applovin_gdpr_learn_more_screen_message_1">感謝您下載我們的應用！我們能為您提供更獨一無二的應用內體驗，如果您允許我們和我們的合作夥伴使用以下這些數據：</string>
+    <string name="applovin_gdpr_learn_more_screen_message_2">您有權隨時變更您的選擇。如果您決定停止分享數據，您仍然可以使用應用，並且您仍然會看到廣告，但廣告內容會與您的興趣匹配度下降。</string>
+    <string name="applovin_gdpr_main_screen_analytics_purposes_switch_text">產品表現監測和產品優化</string>
+    <string name="applovin_gdpr_main_screen_learn_more_button_text">了解更多</string>
+    <string name="applovin_gdpr_main_screen_message">如同我們在隱私政策中所表述的，在您同意的前提下，我們會收集您設備的相關信息，比如IP地址和廣告標識符。該數據將允許我們和我們的合作夥伴為您提供個性化的廣告和內容，以及持續改善您的體驗。\n\n您可以選擇允許我們和我們的合作夥伴出於下列目的使用此數據</string>
+    <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">個性化的廣告內容</string>
+    <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">我確認本人已滿16周歲並已知悉和理解該隱私政策。</string>
+    <string name="applovin_gdpr_main_screen_title">感謝您下載 \n%s!</string>
+    <string name="applovin_gdpr_understand_and_continue_button_text">我理解並同意</string>
+    <string name="applovin_learn_more_screen_title">幫助我們繼續保持%s免費並為您帶來更多樂趣！</string>
+    <string name="applovin_pp_and_tos_title">使用%s之前, 您必須同意我们的服務條款，並確認您已經閱讀並知悉我們的隱私政策。</string>
+    <string name="applovin_pp_title">使用%s之前, 您必須確認您已經閱讀並知悉我們的隱私政策.</string>
+    <string name="applovin_privacy_policy_text">隱私政策</string>
+    <string name="applovin_terms_of_service_text">服務條款</string>
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Mundar laju %d saat</item>
+    <item quantity="other">Mundar laju %d saat</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Mandir %d saat</item>
+    <item quantity="other">Mandir %d saat</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"Tetingkap akan ditutup selepas %1$s saat."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="other">"Ingat pilihan selama %1$s hari"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d saat"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Navigasi laman utama"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Navigasi ke atas"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Lagi pilihan"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Selesai"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Lihat semua"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Pilih apl"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"MATI"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"HIDUP"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Fungsi+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"ruang"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Cari…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Kosongkan pertanyaan"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Pertanyaan carian"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Cari"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Serah pertanyaan"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Carian suara"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Kongsi dengan"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Kongsi dengan <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Runtuhkan"</string>
+    <string name="bigo_ad_about_app_default">Mengenai aplikasi ini</string>
+    <string name="bigo_ad_click_to_try">Klik untuk mencuba?</string>
+    <string name="bigo_ad_comment_num_text">Ulasan</string>
+    <string name="bigo_ad_cta_default">Lihat selanjutnya</string>
+    <string name="bigo_ad_cta_download_default">Pasang</string>
+    <string name="bigo_ad_description_default">Akses percuma sekarang!</string>
+    <string name="bigo_ad_download_num_text">Muat turun</string>
+    <string name="bigo_ad_lose_reward">Anda akan kehilangan ganjaran anda.</string>
+    <string name="bigo_ad_resume">Sambung semula</string>
+    <string name="bigo_ad_skip">Langkau</string>
+    <string name="bigo_ad_skip_video">Langkau video?</string>
+    <string name="bigo_ad_title_default">Menakjubkan dan menarik</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Dayakan</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s tidak akan berfungsi melainkan anda mendayakan perkhidmatan Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Dayakan perkhidmatan Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Pasang</string>
+    <string name="common_google_play_services_install_text">%1$s tidak akan berfungsi tanpa perkhidmatan Google Play dan perkhidmatan ini tiada pada peranti anda.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Dapatkan perkhidmatan Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Ketersediaan perkhidmatan Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Ralat perkhidmatan Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s menghadapi masalah berhubung perkhidmatan Google Play. Sila cuba lagi.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s tidak akan berfungsi tanpa perkhidmatan Google Play dan perkhidmatan ini tidak disokong oleh peranti anda.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Kemas kini</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s tidak akan berfungsi kecuali anda mengemas kini perkhidmatan Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Kemaskinikan perkhidmatan Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s tidak akan berfungsi tanpa perkhidmatan Google Play dan perkhidmatan ini sedang dikemaskinikan.</string>
+    <string name="common_google_play_services_wear_update_text">Versi baharu perkhidmatan Google Play diperlukan. Kemas kini automatik akan dijalankan sebentar lagi.</string>
+    <string name="common_open_on_phone">Buka pada telefon</string>
+    <string name="common_signin_button_text">Log masuk</string>
+    <string name="common_signin_button_text_long">Log masuk dengan Google</string>
+    <string msgid="3209159573327985035" name="copy">"Salin"</string>
+    <string name="exo_controls_cc_disabled_description">Dayakan sari kata</string>
+    <string name="exo_controls_cc_enabled_description">Lumpuhkan sari kata</string>
+    <string name="exo_controls_fastforward_description">Mundar laju</string>
+    <string name="exo_controls_fullscreen_enter_description">Masuk ke skrin penuh</string>
+    <string name="exo_controls_fullscreen_exit_description">Keluar dari skrin penuh</string>
+    <string name="exo_controls_hide">Sembunyikan kawalan pemain</string>
+    <string name="exo_controls_next_description">Seterusnya</string>
+    <string name="exo_controls_overflow_hide_description">Sembunyikan tetapan tambahan</string>
+    <string name="exo_controls_overflow_show_description">Tunjukkan tetapan tambahan</string>
+    <string name="exo_controls_pause_description">Jeda</string>
+    <string name="exo_controls_play_description">Main</string>
+    <string name="exo_controls_playback_speed">Kelajuan</string>
+    <string name="exo_controls_playback_speed_normal">Biasa</string>
+    <string name="exo_controls_previous_description">Sebelumnya</string>
+    <string name="exo_controls_repeat_all_description">Ulang semua</string>
+    <string name="exo_controls_repeat_off_description">Jangan ulang</string>
+    <string name="exo_controls_repeat_one_description">Ulang satu</string>
+    <string name="exo_controls_rewind_description">Mandir</string>
+    <string name="exo_controls_seek_bar_description">Kemajuan main balik</string>
+    <string name="exo_controls_settings_description">Tetapan</string>
+    <string name="exo_controls_show">Tunjukkan kawalan pemain</string>
+    <string name="exo_controls_shuffle_off_description">Matikan rombak</string>
+    <string name="exo_controls_shuffle_on_description">Hidupkan rombak</string>
+    <string name="exo_controls_stop_description">Berhenti</string>
+    <string name="exo_controls_vr_description">Mod VR</string>
+    <string name="exo_download_completed">Muat turun selesai</string>
+    <string name="exo_download_description">Muat turun</string>
+    <string name="exo_download_downloading">Memuat turun</string>
+    <string name="exo_download_failed">Muat turun gagal</string>
+    <string name="exo_download_notification_channel_name">Muat turun</string>
+    <string name="exo_download_paused">Muat turun dijeda</string>
+    <string name="exo_download_paused_for_network">Muat turun menunggu rangkaian</string>
+    <string name="exo_download_paused_for_wifi">Muat turun menunggu Wi-Fi</string>
+    <string name="exo_download_removing">Mengalih keluar muat turun</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternatif</string>
+    <string name="exo_track_role_closed_captions">SK</string>
+    <string name="exo_track_role_commentary">Ulasan</string>
+    <string name="exo_track_role_supplementary">Tambahan</string>
+    <string name="exo_track_selection_auto">Automatik</string>
+    <string name="exo_track_selection_none">Tiada</string>
+    <string name="exo_track_selection_title_audio">Audio</string>
+    <string name="exo_track_selection_title_text">Teks</string>
+    <string name="exo_track_selection_title_video">Video</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Bunyi keliling</string>
+    <string name="exo_track_surround_5_point_1">Bunyi keliling 5.1</string>
+    <string name="exo_track_surround_7_point_1">Bunyi keliling 7.1</string>
+    <string name="exo_track_unknown">Tidak diketahui</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Terperinci"</string>
+    <string name="hiad_ad_label" priority="translator">"IKLAN"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Iklan"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s telah dipasang"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Pemasangan selesai. Sentuh untuk membuka."</string>
+    <string name="hiad_app_permission" priority="LT">"Kebenaran"</string>
+    <string name="hiad_app_preorder" priority="LT">"Prapesan"</string>
+    <string name="hiad_app_preordered" priority="translator">"DIPRAPESAN"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Tekan Kembali untuk melangkau"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Iklan tersembunyi"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Tidak minat"</string>
+    <string name="hiad_choices_hide" priority="LT">"Sembunyikan iklan"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Mengapakah saya melihat iklan ini?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Pasang aplikasi ini?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Menggunakan rangkaian mudah alih akan menggunakan %1$s data. Teruskan?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Main balik akan menggunakan data mudah alih. Teruskan?"</string>
+    <string name="hiad_continue_download" priority="LT">"Muat turun"</string>
+    <string name="hiad_continue_download_new" priority="LT">"MUAT TURUN"</string>
+    <string name="hiad_continue_to_play" priority="LT">"TERUSKAN"</string>
+    <string name="hiad_copy_link" priority="LT">"Salin pautan"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplikasi"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Langkau"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Langkau selepas %d"</string>
+    <string name="hiad_detail" priority="LT">"Butiran"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Muat turun"</string>
+    <string name="hiad_dialog_accept" priority="LT">"BENARKAN"</string>
+    <string name="hiad_dialog_allow" priority="LT">"BENARKAN"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"BATALKAN"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"MUAT TURUN"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"OK"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Benarkan %1$s memasang %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Sumber: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"BENARKAN"</string>
+    <string name="hiad_dialog_open" priority="LT">"BUKA"</string>
+    <string name="hiad_dialog_reject" priority="LT">"TOLAK"</string>
+    <string name="hiad_dialog_title" priority="LT">"Muat turun dengan data mudah alih?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Nota"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Muat turun dengan data mudah alih?"</string>
+    <string name="hiad_download_download" priority="LT">"PASANG"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"MUAT TURUN (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Ralat berlaku apabila memuat turun %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Fail rosak. Sila muat turun lagi."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Fail tidak wujud. Sila cuba lagi."</string>
+    <string name="hiad_download_install" priority="LT">"PASANG"</string>
+    <string name="hiad_download_installing" priority="LT">"Memasang"</string>
+    <string name="hiad_download_no_space" priority="LT">"Storan tidak cukup. Kosongkan sebahagian ruang dan cuba lagi."</string>
+    <string name="hiad_download_open" priority="LT">"BUKA"</string>
+    <string name="hiad_download_resume" priority="LT">"TERUSKAN"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Ralat berlaku apabila memuat turun %1$s. Muat turun akan dimulakan semula."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Sekarang anda tidak disambungkan ke Wi-Fi. Memuat turun sekarang akan menggunakan %1$s data mudah alih. Muat turun juga?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Sekarang anda tidak disambungkan ke WLAN. Memuat turun sekarang akan menggunakan %1$s data mudah alih. Muat turun juga?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Laporkan iklan ini"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Terima kasih atas maklum balas anda."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Kami akan mengurangkan cadangan kandungan seperti ini."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Apakah pendapat anda terhadap iklan ini?"</string>
+    <string name="hiad_install_completed" priority="LT">"Selesai"</string>
+    <string name="hiad_installed_description" priority="LT">"Pemasangan berjaya. Sentuh &amp; buka."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Dipasang"</string>
+    <string name="hiad_jump_desc" priority="LT">"Lihat butiran atau pergi ke aplikasi"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Laman ini ingin membuka %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Pautan disalin."</string>
+    <string name="hiad_loading_tips" priority="LT">"Memuat..."</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Muat turun ini akan menggunakan %1$s data mudah alih."</string>
+    <string name="hiad_net_error" priority="LT">"Ralat sambungan rangkaian. Sila cuba lagi."</string>
+    <string name="hiad_network_error" priority="LT">"Ralat sambungan rangkaian."</string>
+    <string name="hiad_network_no_available" priority="LT">"Tiada sambungan Internet. Sila periksa tetapan rangkaian anda."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Jangan ingatkan saya lagi"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Tiada sambungan Wi-Fi. Memuat turun sekarang akan menggunakan data mudah alih anda. Muat turun?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Tiada sambungan WLAN. Memuat turun sekarang akan menggunakan data mudah alih anda. Muat turun?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Buka dalam pelayar"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Tidak dapat memuat laman. Sila cuba lagi."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s memerlukan kebenaran yang berikut:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Tunggu Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Muat turun melalui rangkaian mudah alih?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Tunggu WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"Segarkan"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Aplikasi melebihi %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Langkau"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Teruskan tontonan"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Habiskan tontonan iklan ini untuk mendapat ganjaran."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Sentuh &amp; buka tapak web/apl"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Leret"</string>
+    <string name="hiad_twist_screen" priority="LT">"Goncang telefon"</string>
+    <string name="hiad_whether_download" priority="LT">"Muat turun aplikasi ini?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Dipramuat melalui Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Dipramuat"</string>
+    <string name="native_body">Kandungan</string>
+    <string name="native_headline">Tajuk</string>
+    <string name="native_media_view">Paparan Media</string>
+    <string msgid="478774118347071097" name="not_set">"Tidak ditetapkan"</string>
+    <string name="offline_notification_text">Ketik untuk membuka iklan</string>
+    <string name="offline_notification_title">Lihat iklan yang anda simpan apabila anda di luar talian</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Anda akan menerima pemberitahuan dengan pautan apabila anda kembali ke dalam talian</string>
+    <string name="offline_opt_in_decline">Tidak</string>
+    <string name="offline_opt_in_message">Kami akan menghantar pemberitahuan dengan pautan ke tapak pengiklan kepada anda.</string>
+    <string name="offline_opt_in_title">Buka iklan apabila anda kembali ke dalam talian.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" disalin ke papan keratan."</string>
+    <string name="s1">Simpan imej</string>
+    <string name="s2">Benarkan Iklan menyimpan imej dalam galeri Gambar?</string>
+    <string name="s3">Terima</string>
+    <string name="s4">Tolak</string>
+    <string name="s5">Buat acara kalendar</string>
+    <string name="s6">Benarkan Iklan membuat acara kalendar?</string>
+    <string name="s7">Iklan Ujian</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Cari"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="tt_choose_language">ms</string>
+    <string name="tt_reward_full_skip">Langkau selepas %1$ss</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"MATI"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"HIDUP"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

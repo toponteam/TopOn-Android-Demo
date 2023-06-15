@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">%d সেকেন্ড ফাস্ট ফরওয়ার্ড করুন</item>
+    <item quantity="other">%d সেকেন্ড ফাস্ট ফরওয়ার্ড করুন</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">%d সেকেন্ড রিওয়াইন্ড করুন</item>
+    <item quantity="other">%d সেকেন্ড রিওয়াইন্ড করুন</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"%1$s সেকেন্ডের মধ্যে উইন্ডো বন্ধ হয়ে যাবে।"</item>
+        <item priority="translator" quantity="other">"%1$s সেকেন্ডের মধ্যে উইন্ডো বন্ধ হয়ে যাবে।"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"%1$s দিনের জন্য পছন্দ মনে রাখুন"</item>
+        <item priority="translator" quantity="other">"%1$s দিনের জন্য পছন্দ মনে রাখুন"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="translator" quantity="one">"%1$d সেকেন্ড"</item>
+        <item priority="translator" quantity="other">"%1$d সেকেন্ড"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"হোমে নেভিগেট করুন"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"উপরে নেভিগেট করুন"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"আরও বিকল্প"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"হয়ে গেছে"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"সবগুলি দেখুন"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"একটি অ্যাপ বেছে নিন"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"বন্ধ আছে"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"চালু করুন"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"মুছুন"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"সার্চ করুন…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"কোয়েরি মুছে ফেলুন"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"সার্চ কোয়েরি"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"সার্চ করুন"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"কোয়েরি জমা দিন"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"ভয়েস সার্চ করুন"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"শেয়ার করুন"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-এর সাথে শেয়ার করুন"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"সঙ্কুচিত করুন"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">সক্ষম করুন</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">আপনি Google Play পরিষেবা সক্ষম না করা পর্যন্ত %1$s কাজ করবে না।</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play পরিষেবা সক্ষম করুন</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ইনস্টল করুন</string>
+    <string name="common_google_play_services_install_text">Google Play পরিষেবা ছাড়া %1$s চলবে না, যা আপনার ডিভাইসে অনুপস্থিত।</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play পরিষেবা পান</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play পরিষেবার উপলভ্যতা</string>
+    <string name="common_google_play_services_notification_ticker">Google Play পরিষেবার ত্রুটি</string>
+    <string name="common_google_play_services_unknown_issue">Google Play পরিষেবাগুলির সাথে %1$s এর সমস্যা হচ্ছে৷ অনুগ্রহ করে আবার চেষ্টা করুন৷</string>
+    <string name="common_google_play_services_unsupported_text">Google Play পরিষেবা ছাড়া %1$s চলবে না, যেটি আপনার ডিভাইসে সমর্থিত নয়৷</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">আপডেট করুন</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">আপনি Google Play পরিষেবা আপডেট না করা পর্যন্ত %1$s চলবে না।</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play পরিষেবা আপডেট করুন</string>
+    <string name="common_google_play_services_updating_text">Google Play পরিষেবা ছাড়া %1$s চলবে না যা বর্তমানে আপডেট হচ্ছে।</string>
+    <string name="common_google_play_services_wear_update_text">Google Play পরিষেবার নতুন ভার্সন প্রয়োজন৷ খুব শীঘ্রই এটা নিজেই আপডেট হবে৷</string>
+    <string name="common_open_on_phone">ফোনে খুলুন</string>
+    <string name="common_signin_button_text">সাইন-ইন করুন</string>
+    <string name="common_signin_button_text_long">Google এর মাধ্যমে সাইন-ইন করুন</string>
+    <string msgid="3209159573327985035" name="copy">"কপি করুন"</string>
+    <string name="exo_controls_cc_disabled_description">সাবটাইটেল চালু করুন</string>
+    <string name="exo_controls_cc_enabled_description">সাবটাইটেল বন্ধ করুন</string>
+    <string name="exo_controls_fastforward_description">দ্রুত এগিয়ে যান</string>
+    <string name="exo_controls_fullscreen_enter_description">ফুল-স্ক্রিন মোডে দেখুন</string>
+    <string name="exo_controls_fullscreen_exit_description">ফুল-স্ক্রিন মোড ছেড়ে বেরোন</string>
+    <string name="exo_controls_hide">প্লেয়ার নিয়ন্ত্রণগুলি লুকান</string>
+    <string name="exo_controls_next_description">পরবর্তী</string>
+    <string name="exo_controls_overflow_hide_description">অতিরিক্ত সেটিংস লুকান</string>
+    <string name="exo_controls_overflow_show_description">অতিরিক্ত সেটিংস দেখুন</string>
+    <string name="exo_controls_pause_description">পজ করুন</string>
+    <string name="exo_controls_play_description">চালান</string>
+    <string name="exo_controls_playback_speed">স্পিড</string>
+    <string name="exo_controls_playback_speed_normal">সাধারণ</string>
+    <string name="exo_controls_previous_description">পূর্ববর্তী</string>
+    <string name="exo_controls_repeat_all_description">সবগুলি আইটেম আবার চালান</string>
+    <string name="exo_controls_repeat_off_description">কোনও আইটেম আবার চালাবেন না</string>
+    <string name="exo_controls_repeat_one_description">একটি আইটেম আবার চালান</string>
+    <string name="exo_controls_rewind_description">পিছিয়ে যান</string>
+    <string name="exo_controls_seek_bar_description">কতটা প্লেব্যাক হয়েছে</string>
+    <string name="exo_controls_settings_description">সেটিংস</string>
+    <string name="exo_controls_show">প্লেয়ার নিয়ন্ত্রণগুলি দেখুন</string>
+    <string name="exo_controls_shuffle_off_description">শাফেল মোড বন্ধ করা হয়েছে</string>
+    <string name="exo_controls_shuffle_on_description">শাফেল মোড চালু করা হয়েছে</string>
+    <string name="exo_controls_stop_description">থামান</string>
+    <string name="exo_controls_vr_description">ভিআর মোড</string>
+    <string name="exo_download_completed">ডাউনলোড হয়ে গেছে</string>
+    <string name="exo_download_description">ডাউনলোড করুন</string>
+    <string name="exo_download_downloading">ডাউনলোড হচ্ছে</string>
+    <string name="exo_download_failed">ডাউনলোড করা যায়নি</string>
+    <string name="exo_download_notification_channel_name">ডাউনলোড</string>
+    <string name="exo_download_paused">ডাউনলোড পজ করা আছে</string>
+    <string name="exo_download_paused_for_network">ডাউনলোড চালু করার জন্য নেটওয়ার্কের সাথে কানেক্ট হওয়ার অপেক্ষা করা হচ্ছে</string>
+    <string name="exo_download_paused_for_wifi">ডাউনলোড চালু করার জন্য ওয়াই-ফাইয়ের সাথে কানেক্ট হওয়ার অপেক্ষা করা হচ্ছে</string>
+    <string name="exo_download_removing">ডাউনলোড করা কন্টেন্ট সরিয়ে দেওয়া হচ্ছে</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f এমবিপিএস</string>
+    <string name="exo_track_mono">মোনো</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">বিকল্প</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">ধারাভাষ্য</string>
+    <string name="exo_track_role_supplementary">অতিরিক্ত</string>
+    <string name="exo_track_selection_auto">অটো</string>
+    <string name="exo_track_selection_none">কোনওটিই নয়</string>
+    <string name="exo_track_selection_title_audio">অডিও</string>
+    <string name="exo_track_selection_title_text">টেক্সট</string>
+    <string name="exo_track_selection_title_video">ভিডিও</string>
+    <string name="exo_track_stereo">স্টিরিও</string>
+    <string name="exo_track_surround">সারাউন্ড সাউন্ড</string>
+    <string name="exo_track_surround_5_point_1">5.1 সারাউন্ড সাউন্ড</string>
+    <string name="exo_track_surround_7_point_1">7.1 সারাউন্ড সাউন্ড</string>
+    <string name="exo_track_unknown">অজানা</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"উন্নত"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"বিজ্ঞাপন"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ইনস্টল করা হয়েছে"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ইনস্টলেশন সম্পন্ন। খুলতে স্পর্শ করুন।"</string>
+    <string name="hiad_app_permission" priority="LT">"অনুমতিগুলি"</string>
+    <string name="hiad_app_preorder" priority="LT">"প্রি-অর্ডার"</string>
+    <string name="hiad_app_preordered" priority="LT">"প্রি-অর্ডারড"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"এড়িয়ে যেতে পিছনে চাপুন"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"বিজ্ঞাপন লুকানো"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"আগ্রহী নই"</string>
+    <string name="hiad_choices_hide" priority="LT">"বিজ্ঞাপন লুকান"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"আমি এই বিজ্ঞাপনটি কেন দেখলাম?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"এই অ্যাপটি ইনস্টল করবেন?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"একটি মোবাইল নেটওয়ার্কের ব্যবহার ডেটার %1$s খরচ করবে। অবিরত রাখবেন?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"প্লেব্যাকে মোবাইল ডেটা ব্যবহৃত হবে। অবিরত রাখবেন?"</string>
+    <string name="hiad_continue_download" priority="LT">"ডাউনলোড"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ডাউনলোড করুন"</string>
+    <string name="hiad_continue_to_play" priority="LT">"অবিরত রাখুন"</string>
+    <string name="hiad_copy_link" priority="LT">"লিঙ্ক অনুলিপি করুন"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"অ্যাপ"</string>
+    <string name="hiad_default_skip_text" priority="LT">"এড়িয়ে যান"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d সেকেন্ডে এড়িয়ে যান"</string>
+    <string name="hiad_detail" priority="LT">"বিস্তারিত"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ডাউনলোড করুন"</string>
+    <string name="hiad_dialog_accept" priority="LT">"অনুমতি দিন"</string>
+    <string name="hiad_dialog_allow" priority="LT">"অনুমতি দিন"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"বাতিল করুন"</string>
+    <string name="hiad_dialog_close" priority="LT">"ঠিক আছে"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ডাউনলোড করুন"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"বুঝেছি"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ইনস্টল করতে %1$s কে অনুমতি দিবেন?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"উৎস: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"অনুমতি দিন"</string>
+    <string name="hiad_dialog_open" priority="LT">"খুলুন"</string>
+    <string name="hiad_dialog_reject" priority="LT">"প্রত্যাখ্যান করুন"</string>
+    <string name="hiad_dialog_title" priority="LT">"মোবাইল ডেটা ব্যবহার করে ডাউনলোড করবেন?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"নোট"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"মোবাইল ডেটা ব্যবহার করে ডাউনলোড করবেন?"</string>
+    <string name="hiad_download_download" priority="LT">"ইনস্টল করুন"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ডাউনলোড করুন (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s ডাউনলোড করার সময়ে একটি সমস্যা দেখা দিয়েছে।"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ফাইল নষ্ট হয়ে গেছে। অনুগ্রহ করে আবার ডাউনলোড করুন।"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ফাইলের অস্তিত্ব নেই। অনুগ্রহ করে আবার চেষ্টা করুন।"</string>
+    <string name="hiad_download_install" priority="LT">"ইনস্টল করুন"</string>
+    <string name="hiad_download_installing" priority="LT">"ইনস্টল হচ্ছে"</string>
+    <string name="hiad_download_no_space" priority="LT">"অপর্যাপ্ত সঞ্চয়স্থান। অনুগ্রহ করে কিছু জায়গা খালি করে আবার চেষ্টা করুন।"</string>
+    <string name="hiad_download_open" priority="LT">"খুলুন"</string>
+    <string name="hiad_download_resume" priority="LT">"অবিরত রাখুন"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s ডাউনলোড করার সময়ে একটি সমস্যা দেখা দিয়েছে। ডাউনলোড রিস্টার্ট করা হবে।"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"বর্তমানে আপনি Wi-Fi এ সংযুক্ত নন। এখন ডাউনলোড করলে তা %1$s মোবাইল ডেটা ব্যবহার করবে। তবুও ডাউনলোড করবেন?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"বর্তমানে আপনি WLAN এ সংযুক্ত নন। এখন ডাউনলোড করলে তা %1$s মোবাইল ডেটা ব্যবহার করবে। তবুও ডাউনলোড করবেন?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"এই বিজ্ঞাপন রিপোর্ট করুন"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"আপনার প্রতিক্রিয়ার জন্য ধন্যবাদ।"</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"আমরা এই ধরনের বিষয়বস্তু কম সুপারিশ করব।"</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"আপনি এই বিজ্ঞাপন সম্পর্কে কী মনে করেন?"</string>
+    <string name="hiad_install_completed" priority="LT">"সম্পন্ন"</string>
+    <string name="hiad_installed_description" priority="translator">"সফলভাবে ইনস্টল করা হয়েছে। খোলার জন্য স্পর্শ করুন।"</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"ইনস্টল হয়েছে"</string>
+    <string name="hiad_jump_desc" priority="LT">"বিস্তারিত দেখুন বা অ্যাপে যান"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"এই পৃষ্ঠাটি %1$s কে খুলতে চাইছে।"</string>
+    <string name="hiad_link_already_copied" priority="LT">"লিঙ্ক কপি করা হয়েছে।"</string>
+    <string name="hiad_loading_tips" priority="LT">"লোড হচ্ছে…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"এই ডাউনলোডটি %1$s মোবাইল ডেটা ব্যবহার করবে।"</string>
+    <string name="hiad_net_error" priority="LT">"নেটওয়ার্ক সংযোগের ত্রুটি। অনুগ্রহ করে আবার চেষ্টা করুন।"</string>
+    <string name="hiad_network_error" priority="LT">"নেটওয়ার্ক সংযোগের ত্রুটি।"</string>
+    <string name="hiad_network_no_available" priority="LT">"কোনো ইন্টারনেট সংযোগ নেই। অনুগ্রহ করে আপনার নেটওয়ার্ক সেটিংস পরীক্ষা করুন।"</string>
+    <string name="hiad_no_more_remind" priority="LT">"আমাকে আর মনে করাবেন না"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"কোনো Wi-Fi সংযোগ নেই। এখন ডাউনলোড করলে আপনার মোবাইল ডেটা ব্যবহার করবে। ডাউনলোড করবেন?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"কোনো WLAN সংযোগ নেই। এখন ডাউনলোড করলে আপনার মোবাইল ডেটা ব্যবহার করবে। ডাউনলোড করবেন?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ব্রাউজারে খুলুন"</string>
+    <string name="hiad_page_load_failed" priority="LT">"পৃষ্ঠা লোড করতে অক্ষম। অনুগ্রহ করে আবার চেষ্টা করুন।"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s এর নিম্নলিখিত অনুমতিগুলি প্রয়োজন:"</string>
+    <string name="hiad_prepare_download" priority="translator">"Wi-Fi এর জন্য অপেক্ষা করুন"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"মোবাইল নেটওয়ার্ক ব্যবহার করে ডাউনলোড করবেন?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"WLAN এর জন্য অপেক্ষা করুন"</string>
+    <string name="hiad_refresh" priority="LT">"রিফ্রেশ করুন"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"অ্যাপ %1$d MB এর চেয়ে বড়"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"এড়িয়ে যান"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"দেখতে থাকুন"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"একটি পুরস্কার অর্জন করতে এই বিজ্ঞাপন দেখা সম্পন্ন করুন।"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"ওয়েবসাইট/অ্যাপ খোলার জন্য স্পর্শ করুন"</string>
+    <string name="hiad_swipe_screen" priority="LT">"সোয়াইপ করুন"</string>
+    <string name="hiad_twist_screen" priority="LT">"ফোনটি ঝাঁকান"</string>
+    <string name="hiad_whether_download" priority="LT">"এই অ্যাপটি ডাউনলোড করতে চান?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi এর মাধ্যমে আগে থেকেই লোড করা"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"আগে থেকে লোড করা"</string>
+    <string name="native_body">মূল অংশ</string>
+    <string name="native_headline">শীর্ষক</string>
+    <string name="native_media_view">মিডিয়া ভিউ</string>
+    <string msgid="478774118347071097" name="not_set">"সেট করা হয়নি"</string>
+    <string name="offline_notification_text">বিজ্ঞাপন খোলার জন্য ট্যাপ করুন</string>
+    <string name="offline_notification_title">অফলাইন থাকাকালীন আপনার সেভ করা বিজ্ঞাপন দেখুন</string>
+    <string name="offline_opt_in_confirm">বুঝেছি</string>
+    <string name="offline_opt_in_confirmation">আপনি আবার অনলাইন হলে লিঙ্ক সহ বিজ্ঞপ্তি পাবেন</string>
+    <string name="offline_opt_in_decline">না থাক</string>
+    <string name="offline_opt_in_message">আমরা বিজ্ঞাপনদাতার সাইটে লিঙ্ক সহ একটি বিজ্ঞপ্তি পাঠাব।</string>
+    <string name="offline_opt_in_title">আপনি আবার যখন অনলাইন হবেন তখন বিজ্ঞাপনে ক্লিক করুন।</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ক্লিপবোর্ডে লিঙ্কটি কপি করা হয়েছে।"</string>
+    <string name="s1">ছবি সেভ করুন</string>
+    <string name="s2">বিজ্ঞাপনকে ছবির গ্যালারিতে ছবি সংরক্ষণ করার অনুমতি দেবেন?</string>
+    <string name="s3">গ্রহণ করুন</string>
+    <string name="s4">প্রত্যাখ্যান করুন</string>
+    <string name="s5">ক্যালেন্ডার ইভেন্ট তৈরি করুন</string>
+    <string name="s6">বিজ্ঞাপনকে একটি ক্যালেন্ডার ইভেন্ট তৈরি করার অনুমতি দেবেন?</string>
+    <string name="s7">পরীক্ষামূলক বিজ্ঞাপন</string>
+    <string msgid="730395136688082741" name="search_menu_title">"সার্চ করুন"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"৯৯৯+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"বন্ধ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"চালু"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

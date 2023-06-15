@@ -1,0 +1,110 @@
+<rl
+    id="native_big_view"
+    layout_width="match_parent"
+    layout_height="wrap_content"
+    layout_centerInParent="true"
+    background="#FFFFFF"
+    orientation="vertical">
+
+    <native_pps_video
+        id="ad_media"
+        layout_width="match_parent"
+        layout_height="wrap_content"
+        layout_centerHorizontal="true" />
+
+    <rl
+        id="bottom_view"
+        layout_width="match_parent"
+        layout_height="wrap_content"
+        layout_below="ad_media"
+        layout_marginStart="24dp"
+        layout_marginEnd="24dp">
+
+        <rl
+            id="right_bottom_view"
+            layout_width="110dp"
+            layout_height="wrap_content"
+            layout_alignParentEnd="true">
+
+            <image
+                id="unlike_iv"
+                layout_width="24dp"
+                layout_height="24dp"
+                layout_alignParentEnd="true"
+                layout_marginTop="24dp"
+                padding="7dp"
+                scaleType="centerInside"
+                src="@drawable/ic_icon_delete"
+                clickEvent="dislike_ad" />
+
+            <native_pps_button
+                id="ad_call_to_action"
+                layout_width="72dp"
+                layout_height="26dp"
+                layout_marginTop="23dp"
+                layout_marginBottom="23dp"
+                layout_toStartOf="unlike_iv"
+                background="{&quot;normal&quot;:{&quot;strokeWidth&quot;:&quot;1dp&quot;,&quot;strokeColor&quot;:&quot;#214EF3&quot;,&quot;cornerRadius&quot;:&quot;20dp&quot;,&quot;fillColor&quot;:&quot;#214EF3&quot;}}"
+                fontFamily="sans-serif-medium"
+                textColor="#FFFFFF"
+                textSize="10dp"
+                fixedWidth="true" />
+        </rl>
+
+        <rl
+            id="left_bottom_view"
+            layout_width="wrap_content"
+            layout_height="wrap_content"
+            layout_alignParentStart="true"
+            layout_toStartOf="right_bottom_view">
+
+            <text
+                id="ad_title"
+                layout_width="wrap_content"
+                layout_height="wrap_content"
+                layout_marginTop="16dp"
+                alpha="1"
+                ellipsize="end"
+                fontFamily="sans-serif-medium"
+                maxLines="1"
+                text="#{title}"
+                textColor="#000000"
+                textSize="16dp" />
+
+            <ll
+                layout_width="wrap_content"
+                layout_height="wrap_content"
+                layout_below="ad_title"
+                layout_marginTop="2dp"
+                orientation="horizontal">
+
+                <text
+                    id="ad_source"
+                    layout_width="0dp"
+                    layout_height="wrap_content"
+                    layout_weight="1"
+                    alpha="0.6"
+                    ellipsize="end"
+                    fontFamily="sans-serif"
+                    maxLines="1"
+                    text="#{label}"
+                    textColor="#666666"
+                    textSize="14dp"
+                    typeface="monospace" />
+
+                <text
+                    id="ad_flag"
+                    layout_width="20dp"
+                    layout_height="14dp"
+                    layout_gravity="center_vertical"
+                    layout_marginStart="8dp"
+                    background="{&quot;normal&quot;:{&quot;strokeWidth&quot;:&quot;1dp&quot;,&quot;strokeColor&quot;:&quot;#CCCCCC&quot;,&quot;cornerRadius&quot;:&quot;2dp&quot;,&quot;fillColor&quot;:&quot;#CCCCCC&quot;}}"
+                    fontFamily="sans-serif"
+                    gravity="center"
+                    text="@strings/hiad_ad_label_new"
+                    textColor="#FFFFFF"
+                    textSize="9dp" />
+            </ll>
+        </rl>
+    </rl>
+</rl>
