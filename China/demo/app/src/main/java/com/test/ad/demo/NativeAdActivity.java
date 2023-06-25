@@ -135,13 +135,11 @@ public class NativeAdActivity extends Activity {
 
         initPanel();
 
-        final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
-        final int adViewHeight = adViewWidth * 3 / 4;
-
-
         tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final int adViewWidth = mATNativeView.getWidth() != 0 ? mATNativeView.getWidth() : getResources().getDisplayMetrics().widthPixels;
+                final int adViewHeight = adViewWidth * 3 / 4;
                 loadAd(adViewWidth, adViewHeight);
             }
         });
@@ -165,23 +163,25 @@ public class NativeAdActivity extends Activity {
                  * 3、Call "getNativeAd" to show AD view.
                  */
                 ATNative.entryAdScenario(mPlacementIdMap.get(mCurrentNetworkName), "");
-                if(isAdReady()){
+                if (isAdReady()) {
                     showAd();
                 }
             }
         });
     }
 
+    NativeVideoButtonAdapter adapter;
+
     private void initPanel() {
         mPanel = findViewById(R.id.rl_panel);
         mATNativeView = findViewById(R.id.native_ad_view);
         mSelfRenderView = findViewById(R.id.native_selfrender_view);
         rvButtonList = findViewById(R.id.rv_button);
-        GridLayoutManager manager = new GridLayoutManager(this, 2);
+        GridLayoutManager manager = new GridLayoutManager(this, getResources().getInteger(R.integer.anythink_native_button_col));
         rvButtonList.setLayoutManager(manager);
 
         final boolean isMute[] = new boolean[]{true};
-        NativeVideoButtonAdapter adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
+        adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
             @Override
             public void onClick(String action) {
                 if (action == VideoAction.VOICE_CHANGE) {
@@ -526,6 +526,7 @@ public class NativeAdActivity extends Activity {
 
 
     private void initPanelButtonList(String adType) {
+        mData.clear();
         if (adType.equals(CustomNativeAd.NativeAdConst.VIDEO_TYPE)) {
             boolean isNativeExpress = true;
             if (mNativeAd != null) {
@@ -538,7 +539,6 @@ public class NativeAdActivity extends Activity {
 
             ATAdInfo atAdInfo = mNativeAd.getAdInfo();
             int networkId = atAdInfo.getNetworkFirmId();
-
             switch (networkId) {
                 case 8:
                     //for GDT
@@ -560,7 +560,9 @@ public class NativeAdActivity extends Activity {
                     mData.add(VideoAction.VIDEO_PROGRESS);
                     break;
             }
+
         }
+        adapter.notifyDataSetChanged();
     }
 
     private void exitNativePanel() {

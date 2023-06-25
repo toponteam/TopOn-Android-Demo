@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Előretekerés %d másodperccel</item>
+    <item quantity="other">Előretekerés %d másodperccel</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Visszatekerés %d másodperccel</item>
+    <item quantity="other">Visszatekerés %d másodperccel</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Az ablak %1$s másodperc múlva bezáródik."</item>
+        <item priority="translator" quantity="other">"Az ablak %1$s másodperc múlva bezáródik."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Választás megjegyzése %1$s napig"</item>
+        <item priority="Reviewed" quantity="other">"Választás megjegyzése %1$s napig"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d másodperc"</item>
+        <item priority="LT" quantity="other">"%1$d másodperc"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Ugrás a főoldalra"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Fel"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"További lehetőségek"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Kész"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Az összes megtekintése"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Válasszon alkalmazást"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"KI"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"BE"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"Szóköz"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Keresés…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Lekérdezés törlése"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Keresési lekérdezés"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Keresés"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Lekérdezés küldése"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Hangalapú keresés"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Megosztás a következővel:"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Megosztás a következő alkalmazással: <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Összecsukás"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Engedélyezés</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">A(z) %1$s alkalmazás csak akkor működik, ha  engedélyezi a Google Play-szolgáltatásokat.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play-szolgáltatások engedélyezése</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Telepítés</string>
+    <string name="common_google_play_services_install_text">A(z) %1$s alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek hiányoznak az eszközről.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">A Google Play-szolgáltatások beszerzése</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play-szolgáltatások elérhetősége</string>
+    <string name="common_google_play_services_notification_ticker">Google Play-szolgáltatások – hiba</string>
+    <string name="common_google_play_services_unknown_issue">A(z) %1$s alkalmazás problémába ütközött a Google Play-szolgáltatások használata során. Próbálkozzon újra.</string>
+    <string name="common_google_play_services_unsupported_text">A(z) %1$s alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyeket eszköze nem támogat.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Frissítés</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">A(z) %1$s alkalmazás csak akkor fog működni, ha frissíti a Google Play-szolgáltatásokat.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">A Google Play-szolgáltatások frissítése</string>
+    <string name="common_google_play_services_updating_text">A(z) %1$s alkalmazás nem fut a Google Play-szolgáltatások nélkül, amelyek frissítése folyamatban van.</string>
+    <string name="common_google_play_services_wear_update_text">A Google Play-szolgáltatások új verziójára van szükség. A szolgáltatás hamarosan frissíti önmagát.</string>
+    <string name="common_open_on_phone">Megnyitás a telefonon</string>
+    <string name="common_signin_button_text">Bejelentkezés</string>
+    <string name="common_signin_button_text_long">Bejelentkezés Google-fiókkal</string>
+    <string msgid="3209159573327985035" name="copy">"Másolás"</string>
+    <string name="exo_controls_cc_disabled_description">Feliratok bekapcsolása</string>
+    <string name="exo_controls_cc_enabled_description">Feliratok kikapcsolása</string>
+    <string name="exo_controls_fastforward_description">Előretekerés</string>
+    <string name="exo_controls_fullscreen_enter_description">Teljes képernyő</string>
+    <string name="exo_controls_fullscreen_exit_description">Kilépés a teljes képernyős módból</string>
+    <string name="exo_controls_hide">Lejátszásvezérlők elrejtése</string>
+    <string name="exo_controls_next_description">Következő</string>
+    <string name="exo_controls_overflow_hide_description">További beállítások elrejtése</string>
+    <string name="exo_controls_overflow_show_description">További beállítások megjelenítése</string>
+    <string name="exo_controls_pause_description">Szüneteltetés</string>
+    <string name="exo_controls_play_description">Lejátszás</string>
+    <string name="exo_controls_playback_speed">Sebesség</string>
+    <string name="exo_controls_playback_speed_normal">Normál</string>
+    <string name="exo_controls_previous_description">Előző</string>
+    <string name="exo_controls_repeat_all_description">Összes szám ismétlése</string>
+    <string name="exo_controls_repeat_off_description">Nincs ismétlés</string>
+    <string name="exo_controls_repeat_one_description">Egy szám ismétlése</string>
+    <string name="exo_controls_rewind_description">Visszatekerés</string>
+    <string name="exo_controls_seek_bar_description">Lejátszási folyamat</string>
+    <string name="exo_controls_settings_description">Beállítások</string>
+    <string name="exo_controls_show">Lejátszásvezérlők mutatása</string>
+    <string name="exo_controls_shuffle_off_description">Keverés kikapcsolva</string>
+    <string name="exo_controls_shuffle_on_description">Keverés bekapcsolva</string>
+    <string name="exo_controls_stop_description">Leállítás</string>
+    <string name="exo_controls_vr_description">VR-mód</string>
+    <string name="exo_download_completed">A letöltés befejeződött</string>
+    <string name="exo_download_description">Letöltés</string>
+    <string name="exo_download_downloading">Letöltés folyamatban</string>
+    <string name="exo_download_failed">Nem sikerült a letöltés</string>
+    <string name="exo_download_notification_channel_name">Letöltések</string>
+    <string name="exo_download_paused">Letöltések szüneteltetve</string>
+    <string name="exo_download_paused_for_network">A letöltések hálózatra várakoznak</string>
+    <string name="exo_download_paused_for_wifi">A letöltések Wi-Fi-re várakoznak</string>
+    <string name="exo_download_removing">Letöltések törlése folyamatban</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Monó</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternatív</string>
+    <string name="exo_track_role_closed_captions">Felirat</string>
+    <string name="exo_track_role_commentary">Kommentár</string>
+    <string name="exo_track_role_supplementary">Kiegészítő</string>
+    <string name="exo_track_selection_auto">Automatikus</string>
+    <string name="exo_track_selection_none">Nincs</string>
+    <string name="exo_track_selection_title_audio">Hang</string>
+    <string name="exo_track_selection_title_text">Szöveg</string>
+    <string name="exo_track_selection_title_video">Videó</string>
+    <string name="exo_track_stereo">Sztereó</string>
+    <string name="exo_track_surround">Térhatású hangzás</string>
+    <string name="exo_track_surround_5_point_1">5.1-es térhatású hangzás</string>
+    <string name="exo_track_surround_7_point_1">7.1-es térhatású hangzás</string>
+    <string name="exo_track_unknown">Ismeretlen</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Speciális"</string>
+    <string name="hiad_ad_label" priority="translator">"REKLÁM"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Reklám"</string>
+    <string name="hiad_app_installed" priority="LT">"A(z) %1$s telepítve van"</string>
+    <string name="hiad_app_open_notification" priority="translator">"A telepítés befejeződött. Érintse meg a megnyitáshoz."</string>
+    <string name="hiad_app_permission" priority="LT">"Jogosultságok"</string>
+    <string name="hiad_app_preorder" priority="LT">"Előrendelés"</string>
+    <string name="hiad_app_preordered" priority="LT">"ELŐRENDELT"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"A kihagyáshoz nyomja meg a Vissza gombot"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Hirdetés elrejtve"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Nem érdekel"</string>
+    <string name="hiad_choices_hide" priority="LT">"Hirdetés elrejtése"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Miért láttam ezt a hirdetést?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Telepíti ezt az alkalmazást?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Mobilhálózat használata %1$s adatforgalmat generál. Folytatja?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"A lejátszás mobiladatot használ. Folytatja?"</string>
+    <string name="hiad_continue_download" priority="LT">"Letöltés"</string>
+    <string name="hiad_continue_download_new" priority="LT">"LETÖLTÉS"</string>
+    <string name="hiad_continue_to_play" priority="LT">"FOLYTATÁS"</string>
+    <string name="hiad_copy_link" priority="LT">"Hivatkozás másolása"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Alkalmazás"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Átugrás"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Átugorható: %d"</string>
+    <string name="hiad_detail" priority="LT">"Részletek"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Letöltés"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ENGEDÉLYEZÉS"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ENGEDÉLYEZÉS"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"MÉGSE"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"LETÖLTÉS"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ÉRTEM"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Engedélyezi %1$s számára, hogy telepítse ezt: %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Forrás: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ENGEDÉLYEZÉS"</string>
+    <string name="hiad_dialog_open" priority="LT">"MEGNYITÁS"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ELUTASÍT"</string>
+    <string name="hiad_dialog_title" priority="LT">"Letölti mobiladat használatával?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Megjegyzés"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Letöltés mobil adatforgalommal?"</string>
+    <string name="hiad_download_download" priority="LT">"TELEPÍTÉS"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"LETÖLTÉS (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Hiba lépett fel a(z) %1$s letöltésekor."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Fájl megsérült. Töltse le újra."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"A fájl nem létezik. Próbálja újra."</string>
+    <string name="hiad_download_install" priority="LT">"TELEPÍTÉS"</string>
+    <string name="hiad_download_installing" priority="LT">"Telepítés"</string>
+    <string name="hiad_download_no_space" priority="LT">"Nincs elegendő tárhely. Szabadítson fel helyet, és próbálja újra."</string>
+    <string name="hiad_download_open" priority="LT">"MEGNYITÁS"</string>
+    <string name="hiad_download_resume" priority="LT">"FOLYTATÁS"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Hiba lépett fel a(z) %1$s letöltésekor. A letöltés újraindul."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Jelenleg nem csatlakozik Wi-Fi-re. Az azonnali letöltés %1$s mobiladat forgalommal jár. Mégis letölti?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Jelenleg nem csatlakozik WLAN-re. Az azonnali letöltés %1$s mobiladat forgalommal jár. Mégis letölti?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Reklám bejelentése"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Köszönjük a visszajelzését."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Kevesebb ehhez hasonló tartalmat fogunk ajánlani."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Mit gondol erről a reklámról?"</string>
+    <string name="hiad_install_completed" priority="LT">"Kész"</string>
+    <string name="hiad_installed_description" priority="translator">"A telepítés sikerült. Érintse meg a megnyitáshoz."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Telepített"</string>
+    <string name="hiad_jump_desc" priority="LT">"Részletek megtekintése, vagy az alkalmazás megnyitása"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Az oldal meg akarja nyitni a(z) %1$s alkalmazást."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Hivatkozás másolva."</string>
+    <string name="hiad_loading_tips" priority="LT">"Betöltés..."</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Ez a letöltés %1$s mennyiségű mobiladatot használ fel."</string>
+    <string name="hiad_net_error" priority="LT">"Hálózati kapcsolat hiba. Próbálkozzon újra."</string>
+    <string name="hiad_network_error" priority="LT">"Hálózati kapcsolat hiba."</string>
+    <string name="hiad_network_no_available" priority="LT">"Nincs internetkapcsolat. Ellenőrizze a hálózati beállításait."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Ne emlékeztessen újra"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Nincs Wi-Fi kapcsolat. Ha most tölti le, akkor mobiladatot fog használni. Letölti?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Nincs WLAN kapcsolat. Ha most tölti le, akkor mobiladatot fog használni. Letölti?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Megnyitás böngészőben"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Oldal betöltése sikertelen. Próbálja újra."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"A(z) %1$s az alábbi jogosultságokat igényli:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Várakozás a Wi-Fi-re"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Letöltés mobilhálózaton keresztül?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Várakozás a WLAN-ra"</string>
+    <string name="hiad_refresh" priority="LT">"Frissítés"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"%1$d MB-nál nagyobb alkalmazás"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Kihagyás"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Tovább nézem"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Nézze végig ezt a reklámot a jutalomért."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Érintse meg a webhely/alkalmazás megnyitásához"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Lapozás"</string>
+    <string name="hiad_twist_screen" priority="LT">"Rázza meg a telefont"</string>
+    <string name="hiad_whether_download" priority="LT">"Letölti ezt az alkalmazást?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Előtöltés Wi-Fi-n"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Előzetesen betöltve"</string>
+    <string name="native_body">Törzs</string>
+    <string name="native_headline">Címsor</string>
+    <string name="native_media_view">Médianézet</string>
+    <string msgid="478774118347071097" name="not_set">"Nincs beállítva"</string>
+    <string name="offline_notification_text">Koppintson a hirdetés megnyitásához</string>
+    <string name="offline_notification_title">Az offline mentett hirdetés megtekintése</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Linket tartalmazó értesítést kap, amikor újra online lesz</string>
+    <string name="offline_opt_in_decline">Nem</string>
+    <string name="offline_opt_in_message">Értesítést küldünk, amelyben a hirdető webhelyére mutató link szerepel.</string>
+    <string name="offline_opt_in_title">Megnyithatja a hirdetést akkor, amikor újra online lesz.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>” a vágólapra lett másolva."</string>
+    <string name="s1">Kép mentése</string>
+    <string name="s2">Engedélyezi a hirdetés számára a kép tárolását a Képgalériában?</string>
+    <string name="s3">Elfogadás</string>
+    <string name="s4">Elutasítás</string>
+    <string name="s5">Naptáresemény létrehozása</string>
+    <string name="s6">Engedélyezi a hirdetés számára naptáresemény létrehozását?</string>
+    <string name="s7">Teszthirdetés</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Keresés"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"KI"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"BE"</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>

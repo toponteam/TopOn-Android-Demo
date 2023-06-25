@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -118,19 +119,28 @@ public class SelfRenderViewUtil {
         int mainImageHeight = adMaterial.getMainImageHeight();
         int mainImageWidth = adMaterial.getMainImageWidth();
 
-        int realMainImageWidth = context.getResources().getDisplayMetrics().widthPixels - dip2px(context, 10);
-        int realMainHeight = 0;
-
         FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
                 , FrameLayout.LayoutParams.WRAP_CONTENT);
-        if (mainImageWidth > 0 && mainImageHeight > 0) {
-            realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
-            mainImageParam.width = realMainImageWidth;
-            mainImageParam.height = realMainHeight;
-        } else {
-            mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-            mainImageParam.height = realMainImageWidth * 600 / 1024;
-        }
+        ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                // 移除监听器
+                selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+                int realMainImageWidth = selfRenderView.getWidth() - dip2px(context, 10);
+                int realMainHeight = 0;
+
+                if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                    realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+                    mainImageParam.width = realMainImageWidth;
+                    mainImageParam.height = realMainHeight;
+                } else {
+                    mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                    mainImageParam.height = realMainImageWidth * 600 / 1024;
+                }
+            }
+        });
 
         contentArea.removeAllViews();
         if (mediaView != null) {

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style>
+        .play-button-hack {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            z-index: 99999999;
+            background-color: transparent;
+            display: block !important;
+        }
+        .unmute-hack {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            z-index: 99999999;
+            background-color: transparent;
+            display: block !important;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="play-button-hack" >
+
+</div>
+
+<div class="unmute-hack" >
+
+</div>
+
+<div id='spotIdTemplate'></div>
+
+<script>
+    var iaTag = iaTag || {};
+    iaTag.appId = 'appIdTemplate';
+    iaTag.appConfig = appConfigTemplate;
+</script>
+
+<script>
+    iaTag.spotsSettings = iaTag.spotsSettings || [];
+    iaTag.spotsSettings.push(spotsSettingsTemplate);
+</script>
+
+<script type="text/javascript" src="mraid.js"></script>
+
+<script>
+<!-- IAVPAIDWrapper Native <-> Tag Bridge, ver. 0.4 -->
+IAVPAIDWrapper = function() {
+	if (typeof getVPAIDAd === 'function') {
+		this._creative = getVPAIDAd();
+	} else {
+		console.error('No Global getVPAID Ad function exists from creative.');
+	}
+
+	<!-- Native SDK runs on init -->
+	IAVPAIDWrapper.prototype.setVpaidClient = function(vpiadClient) {
+		this._vpaidClient = vpiadClient;
+	};
+
+    <!-- Changed to loadCreative. TODO: Remove function -->
+	IAVPAIDWrapper.prototype.initAd = function(tagApi, spotId) {
+		this.loadCreative(tagApi, spotId);
+	}
+
+	IAVPAIDWrapper.prototype.loadCreative = function(tagApi, spotId) {
+		var wrapper = this;
+
+		tagApi.emit('IAVPAIDBridgeReady', {}, spotId);
+
+		<!-- Callback for requestFullScreen
+		tagApi.on('requestFullscreen', function(){
+			wrapper._vpaidClient.requestFullScreen();
+		}, spotId);
+
+		<!-- Callback for exitFullScreen
+		tagApi.on('exitFullScreen', function(){
+			wrapper._vpaidClient.exitFullScreen();
+		}, spotId);
+
+        <!-- For initializing native SDKs skippable state. -->
+		<!-- this.onAdSkippableStateChange(); -->
+	};
+
+	<!-- Start playing the VPaid ad. Ad should be ready for play -->
+    IAVPAIDWrapper.prototype.startPlaying = function(tagApi, spotId) {
+		tagApi.emit('IAVPAIDStartAd', {}, spotId);
+	};
+
+	<!-- Play the vpaid ad in mute state IASDKMute -->
+	IAVPAIDWrapper.prototype.onAdMute = function() {
+		console.log("onAdMute");
+		iaTag.api().emit('IASDKMute', {}, 'spotIdTemplate');
+	};
+
+	<!-- Pass through for getAdDuration -->
+	IAVPAIDWrapper.prototype.getAdDuration = function() {
+		console.log("getAdDuration");
+		return this._creative._creative.getAdDuration();
+	};
+
+	IAVPAIDWrapper.prototype.VPAIDclickWasDone = function(tagApi, spotId) {
+		tagApi.emit('IAVPAIDBridgeClickApprovedByNativeSDK', {}, spotId);
+	};
+
+	<!-- Pass through for getAdRemainingTime -->
+	IAVPAIDWrapper.prototype.getAdRemainingTime = function() {
+		return this._creative._creative.getAdRemainingTime();
+	};
+
+	<!-- Passthrough for setAdVolume. -->
+	IAVPAIDWrapper.prototype.setAdVolume = function(val) {
+		this._creative.setAdVolume(val);
+	};
+
+	<!-- Passthrough for getAdVolume. -->
+	IAVPAIDWrapper.prototype.getAdVolume = function() {
+		return this._creative._creative.getAdVolume();
+	};
+
+	<!-- Pass through for skipAd() -->
+	IAVPAIDWrapper.prototype.skipAd = function() {
+		this._creative.skipAd();
+	};
+
+	<!-- Pass through for stopAd() -->
+	IAVPAIDWrapper.prototype.stopAd = function() {
+		this._creative.stopAd();
+	};
+
+	<!-- Passthrough for resizeAd -->
+	IAVPAIDWrapper.prototype.resizeAd = function(width, height, viewMode) {
+		this._creative.resizeAd(width, height, viewMode);
+	};
+
+	<!-- Passthrough for pauseAd() -->
+	IAVPAIDWrapper.prototype.pauseAd = function() {
+		this._creative.pauseAd();
+	};
+
+	<!-- Passthrough for resumeAd() -->
+	IAVPAIDWrapper.prototype.resumeAd = function() {
+		this._creative.resumeAd();
+	};
+
+	<!-- Passthrough for expandAd() -->
+	IAVPAIDWrapper.prototype.expandAd = function() {
+		this._creative.expandAd();
+	};
+
+	<!-- Passthrough for collapseAd() -->
+	IAVPAIDWrapper.prototype.collapseAd = function() {
+		this._creative.collapseAd();
+	};
+
+	<!-- Pass through for getAdExpanded -->
+	IAVPAIDWrapper.prototype.getAdExpanded = function() {
+		console.log("getAdExpanded");
+		return this._creative._creative.getAdExpanded();
+	};
+
+	<!-- Pass through for getAdSkippableState -->
+	IAVPAIDWrapper.prototype.getAdSkippableState = function() {
+		console.log("getAdSkippableState");
+		return this._creative._creative.getAdSkippableState();
+	};
+
+	<!-- Callback for AdLoaded - initial handshake from tag. -->
+	IAVPAIDWrapper.prototype.onAdLoaded = function() {
+		console.log("ad has been loaded");
+		this._vpaidClient.vpaidAdLoaded();
+	};
+
+	<!-- Callback for StartAd(). -->
+	IAVPAIDWrapper.prototype.onAdStarted = function() {
+		console.log("Ad has started");
+		this._vpaidClient.vpaidAdStarted();
+	};
+
+	<!-- Callback for AdPaused -->
+	IAVPAIDWrapper.prototype.onAdPaused = function() {
+		console.log("onAdPaused");
+		var wrapper = this;
+		wrapper._vpaidClient.vpaidAdPaused();
+	};
+
+	<!-- Callback for AdPlaying -->
+	IAVPAIDWrapper.prototype.onAdPlaying = function() {
+		console.log("onAdPlaying");
+		this._vpaidClient.vpaidAdPlaying(this._creative._creative.getAdDuration());
+	};
+
+	<!-- Callback for AdError -->
+	IAVPAIDWrapper.prototype.onAdError = function(message) {
+		console.log("onAdError: " + message);
+		this._vpaidClient.vpaidAdError(message);
+	};
+
+	<!-- Callback for AdLog -->
+	IAVPAIDWrapper.prototype.onAdLog = function(message) {
+		console.log("onAdLog: " + message);
+		this._vpaidClient.vpaidAdLog(message);
+	};
+
+	<!-- Callback for AdUserAcceptInvitation -->
+	IAVPAIDWrapper.prototype.onAdUserAcceptInvitation = function() {
+		console.log("onAdUserAcceptInvitation");
+		this._vpaidClient.vpaidAdUserAcceptInvitation();
+	};
+
+	<!-- Callback for AdUserMinimize -->
+	IAVPAIDWrapper.prototype.onAdUserMinimize = function() {
+		console.log("onAdUserMinimize");
+		this._vpaidClient.vpaidAdUserMinimize();
+	};
+
+	<!-- Callback for AdUserClose -->
+	IAVPAIDWrapper.prototype.onAdUserClose = function() {
+		console.log("onAdUserClose");
+		this._vpaidClient.vpaidAdUserClose();
+	};
+
+	<!-- Special case - Android back button was pressed and the SDK decided to collapse the Ad -->
+	IAVPAIDWrapper.prototype.onAndroidBackPressed = function(spotId, unitDisplayType) {
+		console.log("onAndroidBackPressed");
+		iaTag.api().emit('IAVPAIDAndroidBackPressed', {"unitDisplayType" : unitDisplayType}, spotId);
+	};
+
+	<!-- Callback for onAdSkippableStateChange -->
+	IAVPAIDWrapper.prototype.onAdSkippableStateChange = function() {
+		console.log("Ad Skippable State Changed to: " + this._creative._creative.getAdSkippableState());
+		this._vpaidClient.vpaidAdSkippableStateChange(this._creative._creative.getAdSkippableState());
+	};
+
+	<!-- Callback for onAdExpandedChange -->
+	IAVPAIDWrapper.prototype.onAdExpandedChange = function() {
+		console.log("Ad Expanded Changed to: " + this._creative._creative.getAdExpanded());
+		this._vpaidClient.vpaidAdExpandedChange();
+	};
+
+	<!-- Callback for AdSizeChange -->
+	IAVPAIDWrapper.prototype.onAdSizeChange = function() {
+		console.log("Ad size changed to: w=" + this._creative._creative.getAdWidth() + " h=" + this._creative._creative.getAdHeight());
+		this._vpaidClient.vpaidAdSizeChange();
+	};
+
+	<!-- Callback for AdDurationChange -->
+	IAVPAIDWrapper.prototype.onAdDurationChange = function() {
+		console.log("Duration changed to: " + this._creative._creative.getAdDuration())
+		this._vpaidClient.vpaidAdDurationChange(this._creative._creative.getAdDuration());
+	};
+
+	<!-- Callback for AdRemainingTimeChange -->
+	IAVPAIDWrapper.prototype.onAdRemainingTimeChange = function() {
+		console.log("Ad Remaining Time Changed to: " + this._creative._creative.getAdRemainingTime());
+		this._vpaidClient.vpaidAdRemainingTimeChange(this._creative._creative.getAdRemainingTime());
+	};
+
+	<!-- Callback for AdImpression -->
+	IAVPAIDWrapper.prototype.onAdImpression = function() {
+		console.log("Ad Impression");
+		this._vpaidClient.vpaidAdImpression();
+	};
+
+	<!-- Callback for AdClickThru -->
+	IAVPAIDWrapper.prototype.onAdClickThru = function(url, id, playerHandles) {
+		console.log("Clickthrough portion of the ad was clicked. Native SDKs should listen for redirections and open in internal browser");
+		this._vpaidClient.adWasClicked();
+	};
+
+	<!-- Callback for AdInteraction -->
+	IAVPAIDWrapper.prototype.onAdInteraction = function(id) {
+		console.log("A non-clickthrough event has occured");
+		this._vpaidClient.vpaidAdInteraction(id);
+	};
+
+
+	<!-- Callback for onAdVideoStart -->
+	IAVPAIDWrapper.prototype.onAdVideoStart = function() {
+		console.log("Video 0% completed");
+		this._vpaidClient.vpaidAdVideoStart(this._creative._creative.getAdDuration());
+	};
+
+	<!-- Callback for vpaidAdVideoFirstQuartile -->
+	IAVPAIDWrapper.prototype.onAdVideoFirstQuartile = function() {
+		console.log("Video 25% completed");
+		this._vpaidClient.vpaidAdVideoFirstQuartile();
+	};
+
+	<!-- Callback for vpaidAdVideoMidpoint -->
+	IAVPAIDWrapper.prototype.onAdVideoMidpoint = function() {
+		console.log("Video 50% completed");
+		this._vpaidClient.vpaidAdVideoMidpoint();
+	};
+
+	<!-- Callback for vpaidAdVideoThirdQuartile -->
+	IAVPAIDWrapper.prototype.onAdVideoThirdQuartile = function() {
+		console.log("Video 75% completed");
+		this._vpaidClient.vpaidAdVideoThirdQuartile();
+	};
+
+	<!-- Callback for AdVideoComplete -->
+	IAVPAIDWrapper.prototype.onAdVideoComplete = function() {
+		console.log("Video 100% completed");
+		this._vpaidClient.vpaidAdVideoComplete();
+	};
+
+	<!-- Callback for AdLinearChange -->
+	IAVPAIDWrapper.prototype.onAdLinearChange = function() {
+		console.log("Ad linear has changed: " + this._creative._creative.getAdLinear());
+		this._vpaidClient.vpaidAdLinearChange();
+	};
+
+	<!-- Callback for onAdStopped -->
+	IAVPAIDWrapper.prototype.onAdStopped = function() {
+		console.log("Ad has stopped");
+		this._vpaidClient.vpaidAdStopped();
+	};
+
+	<!-- Callback for onAdSkipped. -->
+	IAVPAIDWrapper.prototype.onAdSkipped = function() {
+		console.log("Ad was skipped");
+		this._vpaidClient.vpaidAdSkipped();
+	};
+
+	<!-- Callback for AdVolumeChange -->
+	IAVPAIDWrapper.prototype.onAdVolumeChange = function() {
+		console.log("Ad Volume has changed to - " + this._creative._creative.getAdVolume());
+		this._vpaidClient.vpaidAdVolumeChanged(this._creative._creative.getAdVolume());
+	};
+
+	<!-- This function registers the callbacks of each of the events -->
+	IAVPAIDWrapper.prototype.setCallbacksForCreative = function() {
+		<!-- The key of the object is the event name and the value is a reference to the callback function that is registered with the creative -->
+		var callbacks = {
+			'AdStarted' : this.onAdStarted,
+			'AdStopped' : this.onAdStopped,
+			'AdSkipped' : this.onAdSkipped,
+			'AdLoaded' : this.onAdLoaded,
+			'AdLinearChange' : this.onAdLinearChange,
+			'AdSizeChange' : this.onAdSizeChange,
+			'AdExpandedChange' : this.onAdExpandedChange,
+			'AdSkippableStateChange' : this.onAdSkippableStateChange,
+			'AdDurationChange' : this.onAdDurationChange,
+			'AdRemainingTimeChange' : this.onAdRemainingTimeChange,
+			'AdVolumeChange' : this.onAdVolumeChange,
+			'AdImpression' : this.onAdImpression,
+			'AdClickThru' : this.onAdClickThru,
+			'AdInteraction' : this.onAdInteraction,
+			'AdVideoStart' : this.onAdVideoStart,
+			'AdVideoFirstQuartile' : this.onAdVideoFirstQuartile,
+			'AdVideoMidpoint' : this.onAdVideoMidpoint,
+			'AdVideoThirdQuartile' : this.onAdVideoThirdQuartile,
+			'AdVideoComplete' : this.onAdVideoComplete,
+			'AdUserAcceptInvitation' : this.onAdUserAcceptInvitation,
+			'AdUserMinimize' : this.onAdUserMinimize,
+			'AdUserClose' : this.onAdUserClose,
+			'AdPaused' : this.onAdPaused,
+			'AdPlaying' : this.onAdPlaying,
+			'AdError' : this.onAdError,
+			'AdLog' : this.onAdLog,
+		};
+
+		<!-- Looping through the object and registering each of the callbacks with the creative -->
+		for (var eventName in callbacks) {
+			if (this._creative) {
+				this._creative.subscribe(callbacks[eventName], eventName, this);
+			}
+		}
+	};
+};
+</script>
+<!-- <script type="text/javascript" src="https://cdn2.inner-active.mobi/IA-JSTag/Production/ia-tag-native-sdk.min.js?_t=timestampTemplate"></script> -->
+<script type="text/javascript" src="tagUrlTemplate"></script>
+<script>
+
+    function fyberGenerateCallbackIframe() {
+        var ifr = document.createElement('iframe');
+        var container = document.body || document.documentElement;
+        container.appendChild(ifr);
+        ifr.setAttribute('sandbox', '');
+        ifr.setAttribute('style', 'position: fixed; bottom: -20px; border: none; visibility: hidden; height: 20px; z-index: -99999');
+        return ifr;
+    }
+
+    function injectScript(scriptToInject, loadHandler) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = scriptToInject;
+        script.onload = loadHandler;
+        var firstScript = document.getElementsByTagName('script')[0]; firstScript.parentNode.insertBefore(script, firstScript);
+    }
+
+    iaTag.spotsSettings.push(function () {
+        <!--When the ad is ready, create the Client VPaid wrapper, and notify the client -->
+        iaTag.api().on('IAVPAIDAdReady', function() {
+            console.log('IAVPAIDAdReady');
+
+            <!-- Create wrapper instance and give it the Java vpaid client object -->
+            IAVPAIDWrapperInstance = new IAVPAIDWrapper();
+            IAVPAIDWrapperInstance.setCallbacksForCreative();
+            console.log('---IAVPAIDWrapperInstance----', IAVPAIDWrapperInstance);
+            IAVPAIDWrapperInstance.setVpaidClient(vpaidClient);
+
+            var ifrReady = fyberGenerateCallbackIframe();
+            ifrReady.setAttribute('src', 'IAVPAIDBridgeReady://');
+        }, 'spotIdTemplate');
+
+        <!-- When the creative finishes loading, notify client -->
+        iaTag.api().on('IAVPAIDAdLoaded', function() {
+            var ifrLoaded = fyberGenerateCallbackIframe();
+            ifrLoaded.setAttribute('src', 'IAVPAIDAdLoaded://');
+        }, 'spotIdTemplate');
+
+        <!-- When ad is skippable, notify the client -->
+        iaTag.api().on('iaVpaidAdIsSkippable', function() {
+            console.log("--- iaVpaidAdIsSkippable arrived");
+            vpaidClient.vpaidAdIsSkippable();
+        }, 'spotIdTemplate');
+
+        <!-- When back button is enabled from end card, notify the client -->
+        iaTag.api().on('IAVPAIDAndroidEnableBackBtn', function() {
+            console.log("--- IAVPAIDAndroidEnableBackBtn arrived");
+            vpaidClient.vpaidEnableBackBtn();
+        }, 'spotIdTemplate');
+
+        <!-- When there is an error, notify the client -->
+        iaTag.api().on('IAVPAIDError', function(data) {
+            console.log("--- IAVPAIDError arrived with: " + data.code);
+            vpaidClient.onVPaidPlayerError(data.message, data.code);
+        }, 'spotIdTemplate');
+
+
+        <!-- When ad is replayed, notify the client -->
+        iaTag.api().on('endCardResume', function() {
+            console.log("--- endCardResume arrived");
+            vpaidClient.endCardResume();
+        }, 'spotIdTemplate');
+
+        });
+
+    iaTag.spotsSettings.push(function () {
+            iaTag.api().on('IAVPAIDAutoPlay', function(data) {
+                console.log('Template got IAVPAIDAutoPlay with: ' + data.autoplay);
+
+                var playBtn = document.querySelector('.play-button-hack');
+
+                if (data.autoplay) {
+                    playBtn.remove();
+                } else {
+                  function onPlayClick(event) {
+                      iaTag.api().emit('IAVPAIDStartAd', {}, 'spotIdTemplate');
+                      playBtn.remove();
+                  }
+
+                  playBtn.addEventListener('click', onPlayClick, {once: true});
+                  playBtn.addEventListener('touchstart', onPlayClick, {once: true});
+
+                  vpaidClient.canNotAutoplay();
+                }
+
+                playBtn = null;
+
+                var soundToggleHack = document.querySelector('.unmute-hack');
+                function toggleSound() {
+                    iaTag.api().emit('IAVPAIDUnMute', {}, 'spotIdTemplate');;
+                    var soundToggleHack = document.querySelector('.unmute-hack');
+                    soundToggleHack.remove();
+                }
+                soundToggleHack.addEventListener('click', toggleSound, {once: true});
+                soundToggleHack.addEventListener('touchstart', toggleSound, {once: true});
+                soundToggleHack = null;
+
+            }, 'global');
+    });
+
+</script>
+
+<div id='iaScriptBr'>
+    mraidTemplate
+    <script language='javascript' type='text/javascript'>mraidbridge.windowLoaded = true;</script>
+</div>
+
+</body>
+</html>

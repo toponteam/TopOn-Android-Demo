@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-v19/values-v19.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/98e7b32629aa309fefe19ba362dcaa8f/transformed/jetified-anythink_core/res/values-v19/values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "222"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Γρήγορη προώθηση κατά %d δευτερόλεπτο</item>
+    <item quantity="other">Γρήγορη προώθηση κατά %d δευτερόλεπτα</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτο</item>
+    <item quantity="other">Μετάβαση προς τα πίσω κατά %d δευτερόλεπτα</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Το παράθυρο θα κλείσει σε %1$s δευτερόλεπτο."</item>
+        <item priority="translator" quantity="other">"Το παράθυρο θα κλείσει σε %1$s δευτερόλεπτα."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Απομνημόνευση επιλογής για %1$s ημέρα"</item>
+        <item priority="Reviewed" quantity="other">"Απομνημόνευση επιλογής για %1$s ημέρες"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d δευτ."</item>
+        <item priority="LT" quantity="other">"%1$d δευτ."</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Πλοήγηση στην αρχική σελίδα"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Πλοήγηση προς τα επάνω"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Περισσότερες επιλογές"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Τέλος"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Εμφάνιση όλων"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Επιλέξτε μια εφαρμογή"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ΕΝΕΡΓΟΠΟΙΗΣΗ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"διάστημα"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Αναζήτηση…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Διαγραφή ερωτήματος"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Ερώτημα αναζήτησης"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Αναζήτηση"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Υποβολή ερωτήματος"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Φωνητική αναζήτηση"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Κοινοποίηση σε"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Κοινοποίηση στην εφαρμογή <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Σύμπτυξη"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Ενεργοποίηση</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Η εφαρμογή %1$s δεν θα λειτουργήσει εάν δεν έχετε ενεργοποιήσει τις υπηρεσίες Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Ενεργοποίηση υπηρεσιών Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Εγκατάσταση</string>
+    <string name="common_google_play_services_install_text">Η εφαρμογή %1$s δεν μπορεί να εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες λείπουν από τη συσκευή σας.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Λήψη υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Διαθεσιμότητα υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Σφάλμα Υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Η εφαρμογή %1$s αντιμετωπίζει κάποιο πρόβλημα με τις υπηρεσίες Google Play. Προσπαθήστε ξανά.</string>
+    <string name="common_google_play_services_unsupported_text">Η εφαρμογή %1$s δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες δεν υποστηρίζονται από τη συσκευή σας.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Ενημέρωση</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Η εφαρμογή %1$s θα εκτελεστεί αφού ενημερώσετε τις Υπηρεσίες Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Ενημέρωση υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_updating_text">Η εφαρμογή %1$s δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες ενημερώνονται αυτήν τη στιγμή.</string>
+    <string name="common_google_play_services_wear_update_text">Απαιτείται νέα έκδοση των υπηρεσιών Google Play. Θα ενημερωθεί σύντομα.</string>
+    <string name="common_open_on_phone">Άνοιγμα σε τηλέφωνο</string>
+    <string name="common_signin_button_text">Σύνδεση</string>
+    <string name="common_signin_button_text_long">Συνδεθείτε με το Google</string>
+    <string msgid="3209159573327985035" name="copy">"Αντιγραφή"</string>
+    <string name="exo_controls_cc_disabled_description">Ενεργοποίηση υπότιτλων</string>
+    <string name="exo_controls_cc_enabled_description">Απενεργοποίηση υπότιτλων</string>
+    <string name="exo_controls_fastforward_description">Γρήγορη προώθηση</string>
+    <string name="exo_controls_fullscreen_enter_description">Πλήρης οθόνη</string>
+    <string name="exo_controls_fullscreen_exit_description">Έξοδος από πλήρη οθόνη</string>
+    <string name="exo_controls_hide">Απόκρ. στοιχείων ελέγχου προγράμματος αναπαραγωγής</string>
+    <string name="exo_controls_next_description">Επόμενο</string>
+    <string name="exo_controls_overflow_hide_description">Απόκρυψη πρόσθετων ρυθμίσεων</string>
+    <string name="exo_controls_overflow_show_description">Εμφάνιση πρόσθετων ρυθμίσεων</string>
+    <string name="exo_controls_pause_description">Παύση</string>
+    <string name="exo_controls_play_description">Αναπαραγωγή</string>
+    <string name="exo_controls_playback_speed">Ταχύτητα</string>
+    <string name="exo_controls_playback_speed_normal">Κανονική</string>
+    <string name="exo_controls_previous_description">Προηγούμενο</string>
+    <string name="exo_controls_repeat_all_description">Επανάληψη όλων</string>
+    <string name="exo_controls_repeat_off_description">Καμία επανάληψη</string>
+    <string name="exo_controls_repeat_one_description">Επανάληψη ενός κομματιού</string>
+    <string name="exo_controls_rewind_description">Επαναφορά</string>
+    <string name="exo_controls_seek_bar_description">Πρόοδος αναπαραγωγής</string>
+    <string name="exo_controls_settings_description">Ρυθμίσεις</string>
+    <string name="exo_controls_show">Εμφάν. στοιχείων ελέγχου προγράμματος αναπαραγωγής</string>
+    <string name="exo_controls_shuffle_off_description">Τυχαία αναπαραγωγή: Ανενεργή</string>
+    <string name="exo_controls_shuffle_on_description">Τυχαία αναπαραγωγή: Ενεργή</string>
+    <string name="exo_controls_stop_description">Διακοπή</string>
+    <string name="exo_controls_vr_description">Λειτουργία VR mode</string>
+    <string name="exo_download_completed">Η λήψη ολοκληρώθηκε</string>
+    <string name="exo_download_description">Λήψη</string>
+    <string name="exo_download_downloading">Λήψη</string>
+    <string name="exo_download_failed">Η λήψη απέτυχε</string>
+    <string name="exo_download_notification_channel_name">Λήψεις</string>
+    <string name="exo_download_paused">Οι λήψεις τέθηκαν σε παύση.</string>
+    <string name="exo_download_paused_for_network">Οι λήψεις είναι σε αναμονή για δίκτυο.</string>
+    <string name="exo_download_paused_for_wifi">Οι λήψεις είναι σε αναμονή για Wi-Fi.</string>
+    <string name="exo_download_removing">Κατάργηση λήψεων</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Μονοφωνικό</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Εναλλακτικό</string>
+    <string name="exo_track_role_closed_captions">Υπότιτλοι</string>
+    <string name="exo_track_role_commentary">Σχολιασμός</string>
+    <string name="exo_track_role_supplementary">Συμπληρωματικό</string>
+    <string name="exo_track_selection_auto">Αυτόματο</string>
+    <string name="exo_track_selection_none">Κανένα</string>
+    <string name="exo_track_selection_title_audio">Ήχος</string>
+    <string name="exo_track_selection_title_text">Κείμενο</string>
+    <string name="exo_track_selection_title_video">Βίντεο</string>
+    <string name="exo_track_stereo">Στερεοφωνικό</string>
+    <string name="exo_track_surround">Περιφερειακός ήχος</string>
+    <string name="exo_track_surround_5_point_1">Περιφερειακός ήχος 5.1</string>
+    <string name="exo_track_surround_7_point_1">Περιφερειακός ήχος 7.1</string>
+    <string name="exo_track_unknown">Άγνωστο</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Σύνθετες"</string>
+    <string name="hiad_ad_label" priority="translator">"ΔΙΑΦΗΜΙΣΗ"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Διαφήμιση"</string>
+    <string name="hiad_app_installed" priority="LT">"Η εγκατάσταση της εφαρμογής %1$s έχει ολοκληρωθεί."</string>
+    <string name="hiad_app_open_notification" priority="translator">"Η εγκατάσταση ολοκληρώθηκε. Αγγίξτε για άνοιγμα."</string>
+    <string name="hiad_app_permission" priority="LT">"Άδειες"</string>
+    <string name="hiad_app_preorder" priority="LT">"Προπαραγγελία"</string>
+    <string name="hiad_app_preordered" priority="LT">"ΜΕ ΠΡΟΠΑΡΑΓΓΕΛΙΑ"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Πατήστε Πίσω για παράλειψη"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Κρυφή διαφήμιση"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Δεν ενδιαφέρομαι"</string>
+    <string name="hiad_choices_hide" priority="LT">"Απόκρυψη διαφήμισης"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Γιατί είδα τη διαφήμιση;"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Εγκατάσταση αυτής της εφαρμογής;"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Αν χρησιμοποιήσετε δίκτυο κινητής τηλεφωνίας, θα καταναλωθούν %1$s από τα δεδομένα. Συνέχεια;"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Για την αναπαραγωγή θα χρησιμοποιηθούν δεδομένα κινητής τηλεφωνίας. Συνέχεια;"</string>
+    <string name="hiad_continue_download" priority="LT">"Λήψη"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ΛΗΨΗ"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ΣΥΝΕΧΕΙΑ"</string>
+    <string name="hiad_copy_link" priority="LT">"Αντιγραφή συνδέσμου"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Εφαρμογή"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Παράλειψη"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Παράλειψη σε %d"</string>
+    <string name="hiad_detail" priority="LT">"Λεπτομέρειες"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Λήψη"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ΝΑ ΕΠΙΤΡΑΠΕΙ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ΝΑ ΕΠΙΤΡΑΠΕΙ."</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ΑΚΥΡΩΣΗ"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ΛΗΨΗ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ΚΑΤΑΛΑΒΑ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Να επιτραπεί στην εφαρμογή %1$s να εγκαταστήσει την εφαρμογή %2$s;"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Πηγή: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ΝΑ ΕΠΙΤΡΑΠΕΙ"</string>
+    <string name="hiad_dialog_open" priority="LT">"ΑΝΟΙΓΜΑ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ΑΡΝΗΣΗ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Λήψη με χρήση δεδομένων κινητής τηλεφωνίας;"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Σημείωση"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Λήψη με χρήση δεδομένων κινητής τηλεφωνίας;"</string>
+    <string name="hiad_download_download" priority="translator">"ΕΓΚΑΤΑΣΤΑΣΗ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ΛΗΨΗ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Προέκυψε σφάλμα κατά τη λήψη του αρχείου %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Το αρχείο είναι αλλοιωμένο. Επαναλάβετε τη λήψη."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Το αρχείο δεν υπάρχει. Προσπαθήστε ξανά."</string>
+    <string name="hiad_download_install" priority="LT">"ΕΓΚΑΤΑΣΤΑΣΗ"</string>
+    <string name="hiad_download_installing" priority="LT">"Εγκατάσταση"</string>
+    <string name="hiad_download_no_space" priority="LT">"Ανεπαρκής χώρος αποθήκευσης. Ελευθερώστε λίγο χώρο και προσπαθήστε ξανά."</string>
+    <string name="hiad_download_open" priority="LT">"ΑΝΟΙΓΜΑ"</string>
+    <string name="hiad_download_resume" priority="LT">"ΣΥΝΕΧΕΙΑ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Προέκυψε σφάλμα κατά τη λήψη του αρχείου %1$s. Η λήψη θα αρχίσει ξανά."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Αυτή τη στιγμή η συσκευή σας δεν είναι συνδεδεμένη σε Wi-Fi. Αν προχωρήσετε στη λήψη τώρα, θα χρησιμοποιηθούν %1$s δεδομένων κινητής τηλεφωνίας. Λήψη οπωσδήποτε;"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Αυτή τη στιγμή η συσκευή σας δεν είναι συνδεδεμένη σε WLAN. Αν προχωρήσετε στη λήψη τώρα, θα χρησιμοποιηθούν %1$s δεδομένων κινητής τηλεφωνίας. Λήψη οπωσδήποτε;"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Αναφορά αυτής της διαφήμισης"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Σας ευχαριστούμε για τα σχόλιά σας."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Θα προτείνουμε λιγότερο περιεχόμενο σαν αυτό."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Πώς σας φάνηκε αυτή η διαφήμιση;"</string>
+    <string name="hiad_install_completed" priority="LT">"Τέλος"</string>
+    <string name="hiad_installed_description" priority="translator">"Επιτυχής εγκατάσταση. Αγγίξτε για άνοιγμα."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Εγκατεστημένη"</string>
+    <string name="hiad_jump_desc" priority="LT">"Προβάλετε λεπτομέρειες ή μεταβείτε στην εφαρμογή"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Η σελίδα αυτή θέλει να ανοίξει την εφαρμογή %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Ο σύνδεσμος αντιγράφτηκε."</string>
+    <string name="hiad_loading_tips" priority="LT">"Φόρτωση…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Αυτή η λήψη θα χρησιμοποιήσει %1$s δεδομένων κινητής τηλεφωνίας."</string>
+    <string name="hiad_net_error" priority="LT">"Σφάλμα σύνδεσης δικτύου. Προσπαθήστε ξανά."</string>
+    <string name="hiad_network_error" priority="LT">"Σφάλμα σύνδεσης δικτύου"</string>
+    <string name="hiad_network_no_available" priority="LT">"Δεν έχετε συνδεθεί στο Ίντερνετ. Ελέγξτε τις ρυθμίσεις του δικτύου σας."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Όχι άλλη υπενθύμιση"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Δεν υπάρχει σύνδεση Wi-Fi. Αν πραγματοποιήσετε λήψη τώρα, θα χρησιμοποιηθούν δεδομένα κινητής τηλεφωνίας. Να γίνει λήψη;"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Δεν υπάρχει σύνδεση WLAN. Αν πραγματοποιήσετε λήψη τώρα, θα χρησιμοποιηθούν δεδομένα κινητής τηλεφωνίας. Να γίνει λήψη;"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Άνοιγμα σε πρόγραμμα περιήγησης"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Δεν είναι δυνατή η φόρτωση της σελίδας. Προσπαθήστε ξανά."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"Η εφαρμογή %1$s απαιτεί τις ακόλουθες άδειες:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Αναμονή για Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Λήψη μέσω δικτύου κινητής τηλεφωνίας;"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Αναμονή για WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"Ανανέωση"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Εφαρμογή μεγαλύτερη από %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Παράλειψη"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Συνέχιση παρακολούθησης"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Παρακολουθήστε αυτή τη διαφήμιση μέχρι το τέλος για να κερδίσετε μια ανταμοιβή."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Αγγίξτε για να ανοίξει ο ιστότοπος/η εφαρμογή"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Σύρετε"</string>
+    <string name="hiad_twist_screen" priority="LT">"Κουνήστε το τηλέφωνο"</string>
+    <string name="hiad_whether_download" priority="LT">"Να γίνει λήψη αυτής της εφαρμογής;"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Προφορτώθηκε μέσω του Wi-Fi."</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Προφορτωμένο"</string>
+    <string name="native_body">Σώμα</string>
+    <string name="native_headline">Τίτλος</string>
+    <string name="native_media_view">Προβολή μέσων</string>
+    <string msgid="478774118347071097" name="not_set">"Δεν έχει οριστεί"</string>
+    <string name="offline_notification_text">Πατήστε για να ανοίξετε τη διαφήμιση.</string>
+    <string name="offline_notification_title">Δείτε τη διαφήμιση που αποθηκεύσατε ενώ ήσασταν εκτός σύνδεσης</string>
+    <string name="offline_opt_in_confirm">ΟΚ</string>
+    <string name="offline_opt_in_confirmation">Θα λάβετε μια ειδοποίηση με έναν σύνδεσμο όταν συνδεθείτε ξανά στο διαδίκτυο.</string>
+    <string name="offline_opt_in_decline">Όχι</string>
+    <string name="offline_opt_in_message">Θα σας στείλουμε μια ειδοποίηση με έναν σύνδεσμο στον ιστότοπο του διαφημιζόμενου.</string>
+    <string name="offline_opt_in_title">Άνοιγμα της διαφήμισης όταν συνδεθείτε ξανά στο διαδίκτυο</string>
+    <string msgid="7961817945132860002" name="preference_copied">"Το \"<ns1:g id="SUMMARY">%1$s</ns1:g>\" αντιγράφηκε στο πρόχειρο."</string>
+    <string name="s1">Αποθήκευση εικόνας</string>
+    <string name="s2">Να επιτραπεί στη διαφήμιση να αποθηκεύσει την εικόνα στο gallery φωτογραφιών;</string>
+    <string name="s3">Αποδοχή</string>
+    <string name="s4">Απόρριψη</string>
+    <string name="s5">Δημιουργία συμβάντος ημερολογίου</string>
+    <string name="s6">Να επιτραπεί στη διαφήμιση να δημιουργήσει ένα συμβάν ημερολογίου;</string>
+    <string name="s7">Δοκιμαστική διαφήμιση</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Αναζήτηση"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ΑΝΕΝΕΡΓΗ"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ΕΝΕΡΓΗ"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>
