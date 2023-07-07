@@ -90,7 +90,7 @@ public class BannerAdActivity extends Activity {
         String placementName = placementNameList.get(0);
         init(placementIdMap.get(placementName));
 
-        frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, frameLayout.getLayoutParams().height));
+        frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 BannerAdActivity.this, android.R.layout.simple_spinner_dropdown_item,

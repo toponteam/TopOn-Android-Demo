@@ -27,7 +27,6 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
-import com.anythink.network.gdt.GDTDownloadFirmInfo;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
@@ -69,11 +68,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         } else if (ori == Configuration.ORIENTATION_PORTRAIT) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
             layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.9);
         } else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
             layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.9);
         }
 
 

@@ -44,6 +44,4 @@
 
     <string name="anythink_click_to_copy_device_id">Copy AndroidID: %s</string>
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
-
-    <integer name="anythink_native_button_col">2</integer>
 </resources>

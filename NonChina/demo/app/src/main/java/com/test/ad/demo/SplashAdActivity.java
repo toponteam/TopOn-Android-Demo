@@ -111,7 +111,6 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd() {
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
         if (mSplashAd != null) {
             mSplashAd.loadAd();
         }

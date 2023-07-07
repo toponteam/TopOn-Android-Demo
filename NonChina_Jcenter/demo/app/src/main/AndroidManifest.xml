@@ -50,26 +50,41 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Native" />
+            android:label="Native"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="RewardedVideo" />
+            android:label="RewardedVideo"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Interstitial" />
+            android:label="Interstitial"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Banner" />
+            android:label="Banner"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdActivity"
-            android:exported="false" />
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowInCurrentActivity"

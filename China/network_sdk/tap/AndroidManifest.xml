@@ -1,0 +1,27 @@
+<!--
+  ~ Copyright © 2018-2020 TopOn. All rights reserved.
+  ~ https://www.toponad.com
+  ~ Licensed under the TopOn SDK License Agreement
+  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.anythink.tap">
+    <!-- 广告SDK已添加的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 为了获取更精准的推送数据、建议游戏加上的权限 -->
+    <!--<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
+    <!--<uses-permission android:name="android.permission.BLUETOOTH" />-->
+    <!-- targetVersion 31 及以上 建议游戏加上这个权限 -->
+    <!--<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />-->
+    <!-- 为了获取更好的广告体验，建议游戏加上以下权限来获取用户信息 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!-- 加上下列权限可以提高广告的转化率 -->
+    <!-- <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />-->
+</manifest>
