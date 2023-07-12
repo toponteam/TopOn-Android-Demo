@@ -111,6 +111,7 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd() {
+        printLogOnUI(getString(R.string.anythink_ad_status_loading));
         if (mSplashAd != null) {
             mSplashAd.loadAd();
         }
@@ -184,17 +185,17 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
         }
     }
 
-    private class ATSplashExListenerImpl implements ATSplashExListener {
+    private static class ATSplashExListenerImpl implements ATSplashExListener {
         @Override
         public void onAdLoaded(boolean isTimeout) {
             Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
-            printLogOnUI( "onAdLoaded---------isTimeout:" + isTimeout);
+            printLogOnUI("onAdLoaded---------isTimeout:" + isTimeout);
         }
 
         @Override
         public void onAdLoadTimeout() {
             Log.i(TAG, "onAdLoadTimeout---------");
-            printLogOnUI( "onAdLoadTimeout---------");
+            printLogOnUI("onAdLoadTimeout---------");
         }
 
         @Override

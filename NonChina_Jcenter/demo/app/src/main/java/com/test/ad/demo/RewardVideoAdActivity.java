@@ -265,7 +265,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
         }
     }
 
-    public final ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
+    public static final ATRewardVideoAutoLoadListener autoLoadListener = new ATRewardVideoAutoLoadListener() {
         @Override
         public void onRewardVideoAutoLoaded(String placementId) {
             initPlacementIdLocalExtra(placementId);
@@ -290,7 +290,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
         ATRewardVideoAutoAd.setLocalExtra(placementId, localMap);
     }
 
-    final ATRewardVideoAutoEventListener autoEventListener = new ATRewardVideoAutoEventListener() {
+    private static final ATRewardVideoAutoEventListener autoEventListener = new ATRewardVideoAutoEventListener() {
 
         @Override
         public void onRewardedVideoAdPlayStart(ATAdInfo adInfo) {

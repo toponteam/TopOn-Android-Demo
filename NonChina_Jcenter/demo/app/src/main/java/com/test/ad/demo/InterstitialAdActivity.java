@@ -232,7 +232,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
         }
     }
 
-    private final ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
+    private static final ATInterstitialAutoLoadListener autoLoadListener = new ATInterstitialAutoLoadListener() {
         @Override
         public void onInterstitialAutoLoaded(String placementId) {
             Log.i(TAG, "PlacementId:" + placementId + ": onInterstitialAutoLoaded");
@@ -247,7 +247,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
 
     };
 
-    private final ATInterstitialAutoEventListener autoEventListener = new ATInterstitialAutoEventListener() {
+    private static final ATInterstitialAutoEventListener autoEventListener = new ATInterstitialAutoEventListener() {
         @Override
         public void onInterstitialAdClicked(ATAdInfo adInfo) {
             Log.i(TAG, "onInterstitialAdClicked:" + adInfo.toString());

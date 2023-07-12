@@ -21,12 +21,12 @@ import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.TitleBar;
-import com.test.ad.demo.TitleBarClickListener;
 import com.test.ad.demo.bean.AnnotationAdType;
 import com.test.ad.demo.bean.CommonViewBean;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.utils.ViewUtil;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -38,6 +38,8 @@ public abstract class BaseActivity extends Activity {
     private CommonViewBean mCommonViewBean;
 
     protected TextView mTVShowLog;
+    private static WeakReference<TextView> mTVShowLogWR;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,18 +79,10 @@ public abstract class BaseActivity extends Activity {
         return null;
     }
 
-    private void initViewWithCommonView(CommonViewBean commonViewBean) {
-        mCommonViewBean = commonViewBean;
-        if (commonViewBean != null) {
-            TitleBar titleBar = commonViewBean.getTitleBar();
-            if (titleBar != null) {
-                setTitleBar(titleBar, commonViewBean.getTitleResId());
-            }
-            mTVShowLog = commonViewBean.getTvLogView();
-            if (mTVShowLog != null) {
-                mTVShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
-            }
-        }
+    protected static void printLogOnUI(String msg) {
+        if (mTVShowLogWR == null || mTVShowLogWR.get() == null || TextUtils.isEmpty(msg)) return;
+
+        ViewUtil.printLog(mTVShowLogWR.get(), msg);
     }
 
     private void setTitleBar(TitleBar titleBar, int titleResId) {
@@ -100,10 +94,19 @@ public abstract class BaseActivity extends Activity {
         }
     }
 
-    protected void printLogOnUI(String msg) {
-        if (mTVShowLog == null || TextUtils.isEmpty(msg)) return;
-
-        ViewUtil.printLog(mTVShowLog, msg);
+    private void initViewWithCommonView(CommonViewBean commonViewBean) {
+        mCommonViewBean = commonViewBean;
+        if (commonViewBean != null) {
+            TitleBar titleBar = commonViewBean.getTitleBar();
+            if (titleBar != null) {
+                setTitleBar(titleBar, commonViewBean.getTitleResId());
+            }
+            mTVShowLog = commonViewBean.getTvLogView();
+            if (mTVShowLog != null) {
+                mTVShowLogWR = new WeakReference<>(mTVShowLog);
+                mTVShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+            }
+        }
     }
 
     protected String getNativeAdType() {

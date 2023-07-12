@@ -287,7 +287,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
                 overridePendingTransition(0, 0);
             }
-            Toast.makeText(this, "start your MainActivity.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.getApplicationContext(), "start your MainActivity.", Toast.LENGTH_SHORT).show();
             finish();
         }
 
