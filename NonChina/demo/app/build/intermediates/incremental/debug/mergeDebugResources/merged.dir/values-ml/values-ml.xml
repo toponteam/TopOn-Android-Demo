@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">വേഗത്തിൽ %d സെക്കൻഡ് മുന്നോട്ട് നീക്കുക</item>
+    <item quantity="other">വേഗത്തിൽ %d സെക്കൻഡ് മുന്നോട്ട് നീക്കുക</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">%d സെക്കൻഡ് പിന്നോട്ട് നീക്കുക</item>
+    <item quantity="other">%d സെക്കൻഡ് പിന്നോട്ട് നീക്കുക</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"%1$s സെക്കന്റിൽ വിൻഡോ അടയ്ക്കും."</item>
+        <item priority="translator" quantity="other">"%1$s സെക്കന്റിൽ വിൻഡോ അടയ്ക്കും."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"%1$s ദിവസത്തിനുള്ള തിരഞ്ഞെടുക്കൽ ഓർമ്മിക്കുക"</item>
+        <item priority="Reviewed" quantity="other">"%1$s ദിവസത്തിനുള്ള തിരഞ്ഞെടുക്കൽ ഓർമ്മിക്കുക"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d സെ"</item>
+        <item priority="LT" quantity="other">"%1$d സെ"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"ഹോമിലേക്ക് പോവുക"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"മുകളിലേക്ക് പോവുക"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"കൂടുതൽ ഓപ്ഷനുകൾ"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"പൂർത്തിയായി"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"എല്ലാം കാണുക"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"ആപ്പ് തിരഞ്ഞെടുക്കുക"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ഓഫ്"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ഓൺ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"ഇല്ലാതാക്കുക"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"ഫംഗ്ഷന്‍+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"മെറ്റ+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"സ്‌പെയ്‌സ്"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"മെനു+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"തിരയുക…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ചോദ്യം മായ്‌ക്കുക"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"ചോദ്യം തിരയുക"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"തിരയുക"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ചോദ്യം സമർപ്പിക്കുക"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"സംസാരത്തിലൂടെ തിരയുക"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"ഇനിപ്പറയുന്നതുമായി പങ്കിടുക"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g> എന്നതുമായി പങ്കിടുക"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ചുരുക്കുക"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">നിങ്ങൾ Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുന്നില്ലെങ്കിൽ %1$s പ്രവർത്തിക്കില്ല.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play സേവനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ഇന്‍സ്റ്റാള്‍ ചെയ്യുക</string>
+    <string name="common_google_play_services_install_text">Google Play സേവനങ്ങളില്ലാതെ %1$s പ്രവർത്തിക്കില്ല, ഈ സേവനങ്ങളാകട്ടെ നിങ്ങളുടെ ഉപകരണത്തിൽ ഇല്ല.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play സേവനങ്ങൾ നേടുക</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play സേവന ലഭ്യത</string>
+    <string name="common_google_play_services_notification_ticker">Google Play സേവനങ്ങളിലെ പിശക്</string>
+    <string name="common_google_play_services_unknown_issue">Google Play സേവനങ്ങളുമായി ബന്ധപ്പെട്ട് %1$s ആപ്പിനെന്തോ പ്രശ്നമുണ്ട്. വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play സേവനങ്ങളില്ലാതെ %1$s പ്രവർത്തിക്കില്ല, സേവനങ്ങളെയാകട്ടെ നിങ്ങളുടെ ഉപകരണം പിന്തുണയ്ക്കുന്നുമില്ല.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">നിങ്ങൾ Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്‌തില്ലെങ്കിൽ %1$s പ്രവർത്തിക്കില്ല.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play സേവനങ്ങൾ അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string name="common_google_play_services_updating_text">നിലവിൽ അപ്‌ഡേറ്റുചെയ്യുന്ന Google Play സേവനങ്ങൾ ഇല്ലാതെ %1$s പ്രവർത്തിക്കില്ല.</string>
+    <string name="common_google_play_services_wear_update_text">Google Play സേവനങ്ങളുടെ പുതിയ പതിപ്പ് ആവശ്യമാണ്. താമസിയാതെ ഇത് സ്വയം അപ്‌ഡേറ്റുചെയ്യും.</string>
+    <string name="common_open_on_phone">ഫോണിൽ തുറക്കുക</string>
+    <string name="common_signin_button_text">സൈൻ ഇൻ ചെയ്യുക</string>
+    <string name="common_signin_button_text_long">Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക</string>
+    <string msgid="3209159573327985035" name="copy">"പകർത്തുക"</string>
+    <string name="exo_controls_cc_disabled_description">സബ്‌ടൈറ്റിലുകൾ പ്രവർത്തനക്ഷമമാക്കുക</string>
+    <string name="exo_controls_cc_enabled_description">സബ്‌ടൈറ്റിലുകൾ പ്രവർത്തനരഹിതമാക്കുക</string>
+    <string name="exo_controls_fastforward_description">വേഗത്തിൽ മുന്നോട്ട് പോവുക</string>
+    <string name="exo_controls_fullscreen_enter_description">പൂർണ്ണ സ്‌ക്രീൻ ആക്കുക</string>
+    <string name="exo_controls_fullscreen_exit_description">പൂർണ്ണ സ്‌ക്രീനിൽ നിന്ന് പുറത്തുകടക്കുക</string>
+    <string name="exo_controls_hide">പ്ലേയർ നിയന്ത്രണങ്ങൾ മറയ്ക്കുക</string>
+    <string name="exo_controls_next_description">അടുത്തത്</string>
+    <string name="exo_controls_overflow_hide_description">അധിക ക്രമീകരണം മറയ്ക്കുക</string>
+    <string name="exo_controls_overflow_show_description">അധിക ക്രമീകരണം കാണിക്കുക</string>
+    <string name="exo_controls_pause_description">തൽക്കാലം നിർത്തുക</string>
+    <string name="exo_controls_play_description">പ്ലേ ചെയ്യുക</string>
+    <string name="exo_controls_playback_speed">വേഗത</string>
+    <string name="exo_controls_playback_speed_normal">സാധാരണം</string>
+    <string name="exo_controls_previous_description">മുമ്പത്തേത്</string>
+    <string name="exo_controls_repeat_all_description">എല്ലാം ആവർത്തിക്കുക</string>
+    <string name="exo_controls_repeat_off_description">ഒന്നും ആവർത്തിക്കരുത്</string>
+    <string name="exo_controls_repeat_one_description">ഒരെണ്ണം ആവർത്തിക്കുക</string>
+    <string name="exo_controls_rewind_description">പിന്നിലേക്ക് പോവുക</string>
+    <string name="exo_controls_seek_bar_description">പ്ലേബാക്ക് പുരോഗതി</string>
+    <string name="exo_controls_settings_description">ക്രമീകരണം</string>
+    <string name="exo_controls_show">പ്ലേയർ നിയന്ത്രണങ്ങൾ കാണിക്കുക</string>
+    <string name="exo_controls_shuffle_off_description">ഇടകലർത്തൽ ഓഫാക്കുക</string>
+    <string name="exo_controls_shuffle_on_description">ഇടകലർത്തൽ ഓണാക്കുക</string>
+    <string name="exo_controls_stop_description">നിര്‍ത്തുക</string>
+    <string name="exo_controls_vr_description">VR മോഡ്</string>
+    <string name="exo_download_completed">ഡൗൺലോഡ് പൂർത്തിയായി</string>
+    <string name="exo_download_description">ഡൗൺലോഡ്</string>
+    <string name="exo_download_downloading">ഡൗൺലോഡ് ചെയ്യുന്നു</string>
+    <string name="exo_download_failed">ഡൗൺലോഡ് പരാജയപ്പെട്ടു</string>
+    <string name="exo_download_notification_channel_name">ഡൗൺലോഡുകൾ</string>
+    <string name="exo_download_paused">ഡൗൺലോഡുകൾ താൽക്കാലികമായി നിർത്തി</string>
+    <string name="exo_download_paused_for_network">ഡൗൺലോഡുകൾ നെറ്റ്‌വർക്കിന് കാത്തിരിക്കുന്നു</string>
+    <string name="exo_download_paused_for_wifi">ഡൗൺലോഡുകൾ വൈഫൈയ്ക്കായി കാത്തിരിക്കുന്നു</string>
+    <string name="exo_download_removing">ഡൗൺലോഡുകൾ നീക്കം ചെയ്യുന്നു</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">മോണോ</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">ഇതര ട്രാക്ക്</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">വിവരണം</string>
+    <string name="exo_track_role_supplementary">സപ്ലിമെന്ററി</string>
+    <string name="exo_track_selection_auto">സ്വമേധയാ</string>
+    <string name="exo_track_selection_none">ഒന്നുമില്ല</string>
+    <string name="exo_track_selection_title_audio">ഓഡിയോ</string>
+    <string name="exo_track_selection_title_text">ടെക്‌സ്റ്റ്</string>
+    <string name="exo_track_selection_title_video">വീഡിയോ</string>
+    <string name="exo_track_stereo">സ്റ്റീരിയോ</string>
+    <string name="exo_track_surround">സറൗണ്ട് സൗണ്ട്</string>
+    <string name="exo_track_surround_5_point_1">5.1 സറൗണ്ട് സൗണ്ട്</string>
+    <string name="exo_track_surround_7_point_1">7.1 സറൗണ്ട് സൗണ്ട്</string>
+    <string name="exo_track_unknown">അജ്ഞാതം</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"വിപുലമായത്"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"പരസ്യം"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ഇൻസ്റ്റാൾ ചെയ്തു"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ഇൻസ്റ്റാളേഷൻ പൂർത്തിയായി. തുറക്കാൻ, സ്പർശിക്കുക."</string>
+    <string name="hiad_app_permission" priority="LT">"അനുമതികൾ"</string>
+    <string name="hiad_app_preorder" priority="LT">"പ്രീ-ഓർഡർ"</string>
+    <string name="hiad_app_preordered" priority="translator">"പ്രീ-ഓർഡർ ചെയ്തു"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"ഒഴിവാക്കാൻ \'മടങ്ങുക\' അമർത്തുക"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"പരസ്യം മറച്ചിരിക്കുന്നു"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"താൽപ്പര്യമില്ല"</string>
+    <string name="hiad_choices_hide" priority="LT">"പരസ്യം മറയ്‌ക്കുക"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"എന്തുകൊണ്ടാണ് ഞാൻ ഈ പരസ്യം കണ്ടത്?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ഈ ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യണോ?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"ഒരു മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിക്കുന്നത് %1$s ഡാറ്റ ഉപയോഗിക്കും. തുടരണോ?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"പ്ലേബാക്കിന് മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. തുടരണോ?"</string>
+    <string name="hiad_continue_download" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_continue_to_play" priority="translator">"തുടരുക"</string>
+    <string name="hiad_copy_link" priority="LT">"ലിങ്ക് പകർത്തുക"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"ആപ്പ്"</string>
+    <string name="hiad_default_skip_text" priority="translator">"ഒഴിവാക്കുക"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"%d-ൽ ഒഴിവാക്കുക"</string>
+    <string name="hiad_detail" priority="translator">"വിശദാംശങ്ങൾ"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_dialog_accept" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_allow" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"റദ്ദാക്കുക"</string>
+    <string name="hiad_dialog_close" priority="LT">"ശരി"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"മനസ്സിലായി"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%2$s ഇൻസ്റ്റാൾ ചെയ്യാൻ %1$s എന്നതിനെ അനുവദിക്കണോ?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"ഉറവിടം: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"അനുവദിക്കുക"</string>
+    <string name="hiad_dialog_open" priority="LT">"തുറക്കുക"</string>
+    <string name="hiad_dialog_reject" priority="LT">"നിഷേധിക്കുക"</string>
+    <string name="hiad_dialog_title" priority="LT">"മൊബൈൽ ഡാറ്റ ഉപയോഗിച്ച് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"ശ്രദ്ധിക്കുക"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"മൊബൈൽ ഡാറ്റ ഉപയോഗിച്ച് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_download_download" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ഡൗൺലോഡ് ചെയ്യുക (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s ഡൗൺലോഡ് ചെയ്യുന്ന സമയത്ത് ഒരു പിശക് സംഭവിച്ചു."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ഫയൽ കേടായി. വീണ്ടും ഡൗൺലോഡ് ചെയ്യുക."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ഫയൽ നിലവിലില്ല. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_download_install" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുക"</string>
+    <string name="hiad_download_installing" priority="LT">"ഇൻസ്റ്റാൾ ചെയ്യുന്നു"</string>
+    <string name="hiad_download_no_space" priority="LT">"അപര്യാപ്തമായ സ്റ്റോറേജ്. കുറച്ച് സ്പെയ്സ് സ്വതന്ത്രമാക്കി വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_download_open" priority="LT">"തുറക്കുക"</string>
+    <string name="hiad_download_resume" priority="LT">"തുടരുക"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s ഡൗൺലോഡ് ചെയ്യുന്ന സമയത്ത് ഒരു പിശക് സംഭവിച്ചു. ഡൗൺലോഡ് പുനരാരംഭിക്കും."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"നിങ്ങൾ നിലവിൽ Wi-Fi-യിൽ കണക്റ്റ് ചെയ്തിട്ടില്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നതിന് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. എന്തായാലും ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"നിങ്ങൾ നിലവിൽ WLAN-ൽ കണക്റ്റ് ചെയ്തിട്ടില്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നതിന് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും. എന്തായാലും ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"ഈ പരസ്യം റിപ്പോർട്ട് ചെയ്യുക"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"നിങ്ങളുടെ ഫീഡ്ബാക്കിന് നന്ദി."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"ഞങ്ങൾ ഇതുപോലുള്ള ഉള്ളടക്കം ശുപാർശ ചെയ്യുന്നത് കുറയ്‌ക്കും."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"ഈ പരസ്യത്തെക്കുറിച്ച് നിങ്ങൾ എന്താണ് കരുതുന്നത്?"</string>
+    <string name="hiad_install_completed" priority="LT">"ചെയ്തു"</string>
+    <string name="hiad_installed_description" priority="translator">"ഇൻസ്റ്റാളേഷൻ വിജയകരം. തുറക്കാൻ സ്‌പർശിക്കുക."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"ഇൻസ്റ്റാൾ ചെയ്തു"</string>
+    <string name="hiad_jump_desc" priority="LT">"വിശദാംശങ്ങൾ കാണുക, അല്ലെങ്കിൽ ആപ്പിലേക്ക് പോകുക"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ഈ പേജ് %1$s തുറക്കാൻ താൽപ്പര്യപ്പെടുന്നു."</string>
+    <string name="hiad_link_already_copied" priority="LT">"ലിങ്ക് പകർത്തി."</string>
+    <string name="hiad_loading_tips" priority="LT">"ലോഡ് ചെയ്യുന്നു…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ഈ ഡൗൺലോഡ് %1$s മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കും."</string>
+    <string name="hiad_net_error" priority="LT">"നെറ്റ്‌വർക്ക് കണക്ഷൻ പിശക്. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_network_error" priority="translator">"നെറ്റ്‌വർക്ക് കണക്ഷൻ പിശക്."</string>
+    <string name="hiad_network_no_available" priority="LT">"ഇന്‍റർനെറ്റ് കണക്ഷൻ ഇല്ല. നിങ്ങളുടെ നെറ്റ്‌വർക്ക് ക്രമീകരണം പരിശോധിക്കുക."</string>
+    <string name="hiad_no_more_remind" priority="LT">"എന്നെ വീണ്ടും ഓർമ്മിപ്പിക്കരുത്"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Wi-Fi കണക്ഷൻ ഇല്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നത്, മൊബൈൽ ഡാറ്റാ ഉപയോഗത്തിന് ഇടയാക്കും. ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"WLAN കണക്ഷൻ ഇല്ല. ഇപ്പോൾ ഡൗൺലോഡ് ചെയ്യുന്നത്, മൊബൈൽ ഡാറ്റാ ഉപയോഗത്തിന് ഇടയാക്കും. ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"ബ്രൗസറിൽ തുറക്കുക"</string>
+    <string name="hiad_page_load_failed" priority="LT">"പേജ് ലോഡ് ചെയ്യാനാകുന്നില്ല. വീണ്ടും ശ്രമിക്കുക."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s-ന് ഇനിപ്പറയുന്ന അനുമതികൾ ആവശ്യമാണ്:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Wi-Fi യ്ക്കായി കാത്തിരിക്കുക"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"മൊബൈൽ നെറ്റ്‌വർക്ക് മുഖേന ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLAN-നായി കാത്തിരിക്കുക"</string>
+    <string name="hiad_refresh" priority="LT">"റിഫ്രഷ് ചെയ്യുക"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"ആപ്പ് %1$d MB-യിലും വലുതാണ്"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ഒഴിവാക്കുക"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"കണ്ടുകൊണ്ടിരിക്കുക"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ഒരു റിവാർഡ് കരസ്ഥമാക്കാൻ ഈ പരസ്യം കാണുന്നത് പൂർത്തിയാക്കുക."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"വെബ്‌സൈറ്റ്/ആപ്പ് തുറക്കാൻ സ്‌പർശിക്കുക"</string>
+    <string name="hiad_swipe_screen" priority="LT">"സ്വൈപ്പ് ചെയ്യുക"</string>
+    <string name="hiad_twist_screen" priority="LT">"ഫോൺ കുലുക്കുക"</string>
+    <string name="hiad_whether_download" priority="LT">"ഈ ആപ്പ് ഡൗൺലോഡ് ചെയ്യണോ?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Wi-Fi-യിൽ മുൻകൂർ ലോഡ് ചെയ്തു"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"പ്രീലോഡ് ചെയ്‌തത്"</string>
+    <string name="native_body">ബോഡി</string>
+    <string name="native_headline">തലക്കെട്ട്</string>
+    <string name="native_media_view">മീഡിയ വ്യൂ</string>
+    <string msgid="478774118347071097" name="not_set">"സജ്ജീകരിച്ചിട്ടില്ല"</string>
+    <string name="notifications_permission_confirm">അനുവദിക്കുക</string>
+    <string name="notifications_permission_decline">അനുവദിക്കരുത്</string>
+    <string name="notifications_permission_title">നിങ്ങൾക്ക് അറിയിപ്പുകൾ അയയ്‌ക്കാൻ ആപ്പിനെ അനുവദിക്കണോ?</string>
+    <string name="offline_notification_text">പരസ്യം തുറക്കാൻ ടാപ്പ് ചെയ്യുക</string>
+    <string name="offline_notification_title">നിങ്ങൾ ഓഫ്‌ലൈനിൽ ആയിരുന്നപ്പോൾ സംരക്ഷിച്ച പരസ്യം കാണുക</string>
+    <string name="offline_opt_in_confirm">ശരി</string>
+    <string name="offline_opt_in_confirmation">ഓൺലൈനിൽ തിരിച്ചെത്തുമ്പോൾ ലിങ്ക് അടങ്ങിയ അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കും</string>
+    <string name="offline_opt_in_decline">വേണ്ട</string>
+    <string name="offline_opt_in_message">പരസ്യദാതാവിന്റെ സൈറ്റിലേക്കുള്ള ലിങ്ക് അടങ്ങിയ അറിയിപ്പ് ഞങ്ങൾ നിങ്ങൾക്ക് അയയ്‌ക്കും</string>
+    <string name="offline_opt_in_title">നിങ്ങൾ ഓൺലൈനിൽ തിരിച്ചെത്തുമ്പോൾ പരസ്യം തുറക്കുക.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്തി."</string>
+    <string name="s1">ചിത്രം സംരക്ഷിക്കുക</string>
+    <string name="s2">\'ചിത്ര ഗാലറി\'യിൽ ചിത്രം സംഭരിക്കാൻ പരസ്യത്തെ അനുവദിക്കണോ?</string>
+    <string name="s3">അംഗീകരിക്കുക</string>
+    <string name="s4">നിരസിക്കുക</string>
+    <string name="s5">കലണ്ടർ ഇവന്റ് സൃഷ്ടിക്കുക</string>
+    <string name="s6">കലണ്ടർ ഇവന്റ് സൃഷ്ടിക്കാൻ പരസ്യത്തെ അനുവദിക്കണോ?</string>
+    <string name="s7">പരസ്യം പരീക്ഷിക്കുക</string>
+    <string msgid="730395136688082741" name="search_menu_title">"തിരയുക"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ഓഫാണ്"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ഓൺ"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

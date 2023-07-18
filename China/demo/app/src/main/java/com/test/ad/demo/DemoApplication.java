@@ -78,6 +78,7 @@ public class DemoApplication extends MultiDexApplication {
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
         ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
 
+
 //        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
 //        ATSDK.init(this, appid, appKey, atNetworkConfig);
 

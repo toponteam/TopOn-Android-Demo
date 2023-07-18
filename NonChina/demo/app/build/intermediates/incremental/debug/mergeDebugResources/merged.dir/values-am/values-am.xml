@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">በ%d ሰከንዶች በፍጥነት ወደፊት ያሳልፉ</item>
+    <item quantity="other">በ%d ሰከንዶች በፍጥነት ወደፊት ያሳልፉ</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
+    <item quantity="other">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"መስኮት በ%1$s ሰከንድ ውስጥ ይዘጋል።"</item>
+        <item priority="translator" quantity="other">"መስኮት በ%1$s ሰከንዶች ውስጥ ይዘጋል።"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"ለ%1$s ቀን ምርጫን አስታውስ"</item>
+        <item priority="Reviewed" quantity="other">"ለ%1$s ቀናት ምርጫን አስታውስ"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d ሰከ"</item>
+        <item priority="LT" quantity="other">"%1$d ሰከ"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"መነሻ ዳስስ"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"ወደ ላይ ያስሱ"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"ተጨማሪ አማራጮች"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"ተከናውኗል"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"ሁሉንም ይመልከቱ"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"አንድ መተግበሪያ ይምረጡ"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"አጥፋ"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"አብራ"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"ሰርዝ"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"ክፍተት"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"ይፈልጉ…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"መጠይቅ አጽዳ"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"የፍለጋ መጠይቅ"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"ፍለጋ"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"መጠይቅ አስገባ"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"የድምጽ ፍለጋ"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"አጋራ በ"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"ለ<ns1:g id="APPLICATION_NAME">%s</ns1:g> አጋራ"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ሰብስብ"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">አንቃ</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play አገልግሎቶችን ካላነቁ በስተቀር %1$s አይሰራም።</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play አገልግሎቶችን ያንቁ</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ጫን</string>
+    <string name="common_google_play_services_install_text">%1$s ያለ Google Play አገልግሎቶች አይሰራም፣ እነሱ ደግሞ በመሣሪያዎ ላይ የሉም።</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play አገልግሎቶችን ያግኙ</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play አገልግሎቶች ተገኝነት</string>
+    <string name="common_google_play_services_notification_ticker">የGoogle Play አገልግሎቶች ስህተት</string>
+    <string name="common_google_play_services_unknown_issue">%1$s በGoogle Play አገልግሎቶች ላይ ችግሮች እያጋጠሙት ነው። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ያለGoogle Play አገልግሎቶች አይሄድም፣ እነዚህም በመሣሪያዎ አይደገፉም።</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">ያዘምኑ</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Google Play አገልግሎቶችን ካላዘመኑ በስተቀር ድረስ %1$s አይሰራም።</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play አገልግሎቶችን ያዘምኑ</string>
+    <string name="common_google_play_services_updating_text">%1$s ያለ Google Play አገልግሎቶች አይሰራም፣ እነሱ ደግሞ በአሁኑ ጊዜ በመዘመን ላይ ናቸው።</string>
+    <string name="common_google_play_services_wear_update_text">አዲስ የGoogle Play አገልግሎቶች ስሪት ያስፈልጋል። በቅርቡ እራሱን ያዘምናል።</string>
+    <string name="common_open_on_phone">ስልክ ላይ ክፈት</string>
+    <string name="common_signin_button_text">ግባ</string>
+    <string name="common_signin_button_text_long">በGoogle ይግቡ</string>
+    <string msgid="3209159573327985035" name="copy">"ቅዳ"</string>
+    <string name="exo_controls_cc_disabled_description">የግርጌ ጽሑፎችን አንቃ</string>
+    <string name="exo_controls_cc_enabled_description">የግርጌ ጽሑፎችን አሰናክል</string>
+    <string name="exo_controls_fastforward_description">በፍጥነት አሳልፍ</string>
+    <string name="exo_controls_fullscreen_enter_description">ወደ ሙሉ ማያ ገጽ ግባ</string>
+    <string name="exo_controls_fullscreen_exit_description">ከሙሉ ማያገጽ ውጣ</string>
+    <string name="exo_controls_hide">የተጫዋች መቆጣጠሪያዎችን ደብቅ</string>
+    <string name="exo_controls_next_description">ቀጣይ</string>
+    <string name="exo_controls_overflow_hide_description">ተጨማሪ ቅንብሮችን ይደብቁ</string>
+    <string name="exo_controls_overflow_show_description">ተጨማሪ ቅንብሮችን ያሳዩ</string>
+    <string name="exo_controls_pause_description">ላፍታ አቁም</string>
+    <string name="exo_controls_play_description">አጫውት</string>
+    <string name="exo_controls_playback_speed">ፍጥነት</string>
+    <string name="exo_controls_playback_speed_normal">መደበኛ</string>
+    <string name="exo_controls_previous_description">ቀዳሚ</string>
+    <string name="exo_controls_repeat_all_description">ሁሉንም ድገም</string>
+    <string name="exo_controls_repeat_off_description">ምንም አትድገም</string>
+    <string name="exo_controls_repeat_one_description">አንድ ድገም</string>
+    <string name="exo_controls_rewind_description">ወደኋላ መልስ</string>
+    <string name="exo_controls_seek_bar_description">የመልሶ ማጫወት ሂደት</string>
+    <string name="exo_controls_settings_description">ቅንብሮች</string>
+    <string name="exo_controls_show">የተጫዋች መቆጣጠሪያዎችን አሳይ</string>
+    <string name="exo_controls_shuffle_off_description">መበወዝ ጠፍቷል</string>
+    <string name="exo_controls_shuffle_on_description">መበወዝ በርቷል</string>
+    <string name="exo_controls_stop_description">አቁም</string>
+    <string name="exo_controls_vr_description">የቪአር ሁነታ</string>
+    <string name="exo_download_completed">ማውረድ ተጠናቋል</string>
+    <string name="exo_download_description">አውርድ</string>
+    <string name="exo_download_downloading">በማውረድ ላይ</string>
+    <string name="exo_download_failed">ማውረድ አልተሳካም</string>
+    <string name="exo_download_notification_channel_name">የወረዱ</string>
+    <string name="exo_download_paused">ውርዶች ባሉበት ቆመዋል</string>
+    <string name="exo_download_paused_for_network">አውታረ መረቦችን በመጠባበቅ ላይ ያሉ ውርዶች</string>
+    <string name="exo_download_paused_for_wifi">WiFiን በመጠባበቅ ላይ ያሉ ውርዶች</string>
+    <string name="exo_download_removing">ውርዶችን በማስወገድ ላይ</string>
+    <string name="exo_item_list">%1$s፣ %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f ሜብስ</string>
+    <string name="exo_track_mono">ሞኖ</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">ተለዋጭ</string>
+    <string name="exo_track_role_closed_captions">የተዘጉ የመግለጫ ጽሑፎች</string>
+    <string name="exo_track_role_commentary">ጥናታዊ</string>
+    <string name="exo_track_role_supplementary">ተጨማሪ</string>
+    <string name="exo_track_selection_auto">ራስ-ሰር</string>
+    <string name="exo_track_selection_none">ምንም</string>
+    <string name="exo_track_selection_title_audio">ኦዲዮ</string>
+    <string name="exo_track_selection_title_text">ጽሑፍ</string>
+    <string name="exo_track_selection_title_video">ቪዲዮ</string>
+    <string name="exo_track_stereo">ስቲሪዮ</string>
+    <string name="exo_track_surround">የዙሪያ ድምፅ</string>
+    <string name="exo_track_surround_5_point_1">5.1 የዙሪያ ድምፅ</string>
+    <string name="exo_track_surround_7_point_1">7.1 የዙሪያ ድምፅ</string>
+    <string name="exo_track_unknown">ያልታወቀ</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"የላቀ"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"ማስታወቂያ"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s ተጭኗል"</string>
+    <string name="hiad_app_open_notification" priority="translator">"መጫን ተጠናቅቋል። ለመክፈት ይንኩ።"</string>
+    <string name="hiad_app_permission" priority="LT">"ፈቃዶች"</string>
+    <string name="hiad_app_preorder" priority="LT">"ቅድሚያ እዘዝ"</string>
+    <string name="hiad_app_preordered" priority="LT">"ቅድሚያ ታዝዟል"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"ለማለፍ ወደኋላ ተመለስን ይጫኑ"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"ማስታወቂያ ተደብቋል"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"ፍላጎት የለኝም"</string>
+    <string name="hiad_choices_hide" priority="LT">"ማስታወቂያን ደብቅ"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"ይህን ማስታወቂያ ያየሁት ለምንድነው?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"ይህ መተግበሪያ ይጫን?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"የስልክ አውታረ መረብን መጠቀም ከውሂብ %1$s ያክሉን ይጠቀማል። ይቀጥል?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"መልሶ ማጫወት የሞባይል ውሂብ ይጠቀማል። ቀጥል?"</string>
+    <string name="hiad_continue_download" priority="LT">"አውርድ"</string>
+    <string name="hiad_continue_download_new" priority="LT">"አውርድ"</string>
+    <string name="hiad_continue_to_play" priority="translator">"ቀጥል"</string>
+    <string name="hiad_copy_link" priority="LT">"ሊንኩን ቅዳ"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s ሜባ"</string>
+    <string name="hiad_default_app_name" priority="LT">"መተግበሪያ"</string>
+    <string name="hiad_default_skip_text" priority="translator">"ዝለል"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"በ%d ውስጥ የሚያልፍ"</string>
+    <string name="hiad_detail" priority="translator">"ዝርዝሮች"</string>
+    <string name="hiad_detail_download_now" priority="LT">"አውርድ"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ፍቀድ"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ፍቀድ"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ሰርዝ"</string>
+    <string name="hiad_dialog_close" priority="LT">"እሺ"</string>
+    <string name="hiad_dialog_continue" priority="LT">"አውርድ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ገባኝ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"%1$s %2$sን እንዲጭን ይፈቀድለት?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"ምንጭ፦ %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ፍቀድ"</string>
+    <string name="hiad_dialog_open" priority="LT">"ክፈት"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ከልክል"</string>
+    <string name="hiad_dialog_title" priority="LT">"የሞባይል ውሂብ በመጠቀም አውርድ?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"ማስታወሻ"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"የሞባይል ውሂብን በመጠቀም ይውረድ?"</string>
+    <string name="hiad_download_download" priority="LT">"ጫን"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"አውርድ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"%1$s ን በማውረድ ላይ ብልሽት ተፈጥረዋል።"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ፋይሉ ተበላሽተዋል። እባክዎን እንደገና ያውርዱ።"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ፋይሉ ያለ አይደለም። እባክዎን እንደገና ይሞክሩ።"</string>
+    <string name="hiad_download_install" priority="LT">"ጫን"</string>
+    <string name="hiad_download_installing" priority="LT">"በመጫን ላይ"</string>
+    <string name="hiad_download_no_space" priority="LT">"በቂ ያልሆነ ማከማቻ የተወሰነ ቦታ ነፃ ያድርጉ እና እንደገና ይሞክሩ።"</string>
+    <string name="hiad_download_open" priority="LT">"ክፈት"</string>
+    <string name="hiad_download_resume" priority="translator">"ቀጥል"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"%1$s ን በማውረድ ላይ ብልሽት ተፈጥረዋል። ማውረድ ዳግም ይጀምራል።"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"አሁን ከ Wi-Fi ጋር ግንኙነት አላረጉም። ማውረድ %1$s የሞባይል ውሂብ ይጠቀማል። ቢሆንም አውርድ?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"አሁን ከ WLAN ጋር ግንኙነት አላረጉም።አሁን ማውረድ %1$s የሞባይል ውሂብ ይጠቀማል። ቢሆንም አውርድ?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"ይህን ማስታወቂያ ሪፖርት ያድርጉ"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"ለሰጡን ግብረመልስ እናመሰግናለን።"</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"እንዲህ ያለ ይዘትን ባነሰ መልኩ እንመክራለን።"</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"ስለዚህ ማስታወቂያ ምን ያስባሉ?"</string>
+    <string name="hiad_install_completed" priority="LT">"ተከናውኗል"</string>
+    <string name="hiad_installed_description" priority="LT">"መጫን ተሳክቷል። ለመክፈት ይንኩ።"</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"ተጭኗል"</string>
+    <string name="hiad_jump_desc" priority="LT">"ዝርዝሮችን ይመልከቱ ወይም ወደ መተግበሪያው ይሂዱ"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"ይህ ገጽ %1$sን መክፈት ይፈልጋል።"</string>
+    <string name="hiad_link_already_copied" priority="LT">"ሊንኩ ተቀድቷል።"</string>
+    <string name="hiad_loading_tips" priority="LT">"በመጫን ላይ…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"ይህ ውርድ %1$s የሞባይል ውሂብ ይጠቀማል።"</string>
+    <string name="hiad_net_error" priority="LT">"የአውታረ መረብ ግንኙነት ስህተት። እባክዎ እንደገና ይሞክሩ።"</string>
+    <string name="hiad_network_error" priority="translator">"የአውታረ መረብ ግንኙነት ስህተት።"</string>
+    <string name="hiad_network_no_available" priority="LT">"የበይነ መረብ ግኑኙነት የለም። እባክዎን የአውታረ መረብ ቅንብሮችን ይፈትሹ።"</string>
+    <string name="hiad_no_more_remind" priority="LT">"ከአሁን በኋላ አታስታውሰኝ"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"ምንም የWi-Fi ግንኙነት የለም። አሁን ማውረድ የሞባይል ውሂብ ይፈጃል። ይውረድ?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"ምንም የWLAN ግንኙነት የለም። አሁን ማውረድ የሞባይል ውሂብ ይፈጃል። ይውረድ?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"መዳሰሻ ውስጥ ክፈት"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ገፁን መጫን አልተቻለም። እባክዎን እንደገና ይሞክሩ።"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s የሚከተሉት ፈቃዶች ያስፈልጉታል፦"</string>
+    <string name="hiad_prepare_download" priority="LT">"WI-FIን ይጠብቁ"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"በሞባይል አውታረ መረብ ላይ ይውረድ?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"WLANን ይጠብቁ"</string>
+    <string name="hiad_refresh" priority="LT">"አድስ"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"መተግበሪያ ከ%1$d ሜባ በላይ ነው"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"እለፍ"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"መመልከቱን ይቀጥሉ"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"ሽልማት ለማግኘት ይህን ማስታወቂያ አይተው ይጨርሱ።"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"ድር ጣቢያውን/መተግበሪያውን ለመክፈት ይንኩ"</string>
+    <string name="hiad_swipe_screen" priority="LT">"ይጥረጉ"</string>
+    <string name="hiad_twist_screen" priority="LT">"ስልኩን ይነቅንቁ"</string>
+    <string name="hiad_whether_download" priority="LT">"ይህ መተግበሪያ ይውረድ?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"በ Wi-Fi ቀድሞ ተጭነዋል"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"ቅድሚያ ተጭኗል"</string>
+    <string name="native_body">አካል</string>
+    <string name="native_headline">ዋና ርዕስ</string>
+    <string name="native_media_view">የሚዲያ እይታ</string>
+    <string msgid="478774118347071097" name="not_set">"አልተዘጋጀም"</string>
+    <string name="notifications_permission_confirm">ፍቀድ</string>
+    <string name="notifications_permission_decline">አትፍቀድ</string>
+    <string name="notifications_permission_title">መተግበሪያ ማሳወቂያዎችን እንዲልክልዎ ይፈቀድ?</string>
+    <string name="offline_notification_text">ማስታወቂያን ለመክፈት መታ ያድርጉ</string>
+    <string name="offline_notification_title">ከመስመር ውጭ ሲሆኑ ያስቀመጡትን ማስታወቂያ ይመልከቱ</string>
+    <string name="offline_opt_in_confirm">እሺ</string>
+    <string name="offline_opt_in_confirmation">ወደ መስመር ላይ ሲመለሱ ከአገናኙ ጋር አንድ ማሳወቂያ ይደርስዎታል</string>
+    <string name="offline_opt_in_decline">አይ አመሰግናለሁ</string>
+    <string name="offline_opt_in_message">ወደ ማስታወቂያ አስነጋሪ ጣቢያው ከሚወስድ አገናኝ ጋር አንድ ማሳወቂያ እንልክልዎታለን።</string>
+    <string name="offline_opt_in_title">መስመር ላይ ሲመለሱ ማስታወቂያ ይክፈቱ።</string>
+    <string msgid="7961817945132860002" name="preference_copied">"«<ns1:g id="SUMMARY">%1$s</ns1:g>» ወደ የቅንጥብ ሰሌዳ ተቀድቷል።"</string>
+    <string name="s1">ምስል አስቀምጥ</string>
+    <string name="s2">ማስታወቂያ ምስሉን በስዕል ማእከለ-ሥዕላት ውስጥ እንዲያከማች ይፈቀድለት?</string>
+    <string name="s3">ተቀበል</string>
+    <string name="s4">ውድቅ አድርግ</string>
+    <string name="s5">የቀን መቁጠሪያ ክስተት ፍጠር</string>
+    <string name="s6">ማስታወቂያ የቀን መቁጠሪያ ክስተት እንዲፈጥር ይፈቀድለት?</string>
+    <string name="s7">የሙከራ ማስታወቂያ</string>
+    <string msgid="730395136688082741" name="search_menu_title">"ፍለጋ"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>፣ <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ጠፍቷል"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"በርቷል"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

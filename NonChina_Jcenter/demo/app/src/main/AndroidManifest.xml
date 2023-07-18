@@ -9,7 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test.ad.demo" >
 
-    <uses-sdk tools:overrideLibrary="com.chartboost.heliumsdk" />
+    <uses-sdk tools:overrideLibrary="com.chartboost.heliumsdk,com.yandex.div.core.logging,com.yandex.div.core.views,com.yandex.div.core.assertion,com.chartboost.mediation.chartboostadapter" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -90,7 +90,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-        <!-- source file: nonchina_jcenter/network_sdk/admob/22.1.0/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/admob/22.2.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
