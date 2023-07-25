@@ -171,8 +171,6 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
-
         Map<String, Object> localExtra = new HashMap<>();
         localExtra.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
         localExtra.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
@@ -431,7 +429,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
         switch (v.getId()) {
             case R.id.load_ad_btn:
-                final int adViewWidth = mATNativeView.getWidth() != 0 ? mATNativeView.getWidth() : getResources().getDisplayMetrics().widthPixels;
+                final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
                 final int adViewHeight = adViewWidth * 3 / 4;
                 loadAd(adViewWidth, adViewHeight);
                 break;

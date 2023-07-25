@@ -18,7 +18,6 @@ import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
-import com.chartboost.heliumsdk.HeliumSdk;
 import com.facebook.stetho.Stetho;
 import com.test.ad.demo.util.PlacementIdUtil;
 
@@ -78,7 +77,6 @@ public class DemoApplication extends MultiDexApplication {
         ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
 //        ATSDK.setUseHTTP(true);
         ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
-
 
 //        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
 //        ATSDK.init(this, appid, appKey, atNetworkConfig);
