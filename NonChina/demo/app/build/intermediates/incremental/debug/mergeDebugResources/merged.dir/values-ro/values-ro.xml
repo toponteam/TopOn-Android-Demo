@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Derulează rapid înainte cu %d secundă</item>
+    <item quantity="few">Derulează rapid înainte cu %d secunde</item>
+    <item quantity="other">Derulează rapid înainte cu %d de secunde</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Derulează înapoi cu %d secundă</item>
+    <item quantity="few">Derulează înapoi cu %d secunde</item>
+    <item quantity="other">Derulează înapoi cu %d de secunde</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Fereastra se va închide în %1$s secundă."</item>
+        <item priority="translator" quantity="few">"Fereastra se va închide în %1$s secunde."</item>
+        <item priority="translator" quantity="other">"Fereastra se va închide în %1$s secunde."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"Rețineți alegerea timp de %1$s zi"</item>
+        <item priority="translator" quantity="few">"Rețineți alegerea timp de %1$s zile"</item>
+        <item priority="translator" quantity="other">"Rețineți alegerea timp de %1$s zile"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d s"</item>
+        <item priority="LT" quantity="few">"%1$d s"</item>
+        <item priority="translator" quantity="other">"%1$d s"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Navigați la ecranul de pornire"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Navigați în sus"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Mai multe opțiuni"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Gata"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Afișați tot"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Alegeți o aplicație"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"DEZACTIVAT"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ACTIVAT"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Meniu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Căutați…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Ștergeți interogarea"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Termen de căutare"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Căutați"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Trimiteți interogarea"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Căutare vocală"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Trimiteți la"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Trimiteți folosind <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Restrângeți"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Activați</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s nu va funcționa decât dacă activați serviciile Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Activați serviciile Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalați</string>
+    <string name="common_google_play_services_install_text">%1$s nu va rula fără serviciile Google Play, care lipsesc de pe dispozitivul dvs.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Descărcați serviciile Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Disponibilitatea serviciilor Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Eroare a serviciilor Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încercați din nou.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s nu va rula fără serviciile Google Play, care nu sunt acceptate de dispozitivul dvs.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Actualizați</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s nu va rula decât dacă actualizați serviciile Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Actualizați serviciile Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s nu va rula fără serviciile Google Play, care momentan se actualizează.</string>
+    <string name="common_google_play_services_wear_update_text">Este necesară o nouă versiune a serviciilor Google Play. Se vor actualiza automat în curând.</string>
+    <string name="common_open_on_phone">Deschideți pe telefon</string>
+    <string name="common_signin_button_text">Conectați-vă</string>
+    <string name="common_signin_button_text_long">Conectați-vă cu Google</string>
+    <string msgid="3209159573327985035" name="copy">"Copiați"</string>
+    <string name="exo_controls_cc_disabled_description">Activați subtitrările</string>
+    <string name="exo_controls_cc_enabled_description">Dezactivați subtitrările</string>
+    <string name="exo_controls_fastforward_description">Derulați rapid înainte</string>
+    <string name="exo_controls_fullscreen_enter_description">Accesați în ecran complet</string>
+    <string name="exo_controls_fullscreen_exit_description">Ieșiți din ecranul complet</string>
+    <string name="exo_controls_hide">Ascunde comenzile playerului</string>
+    <string name="exo_controls_next_description">Înainte</string>
+    <string name="exo_controls_overflow_hide_description">Ascundeți setările suplimentare</string>
+    <string name="exo_controls_overflow_show_description">Afișați setările suplimentare</string>
+    <string name="exo_controls_pause_description">Întrerupeți</string>
+    <string name="exo_controls_play_description">Redați</string>
+    <string name="exo_controls_playback_speed">Viteză</string>
+    <string name="exo_controls_playback_speed_normal">Normală</string>
+    <string name="exo_controls_previous_description">Înapoi</string>
+    <string name="exo_controls_repeat_all_description">Repetați-le pe toate</string>
+    <string name="exo_controls_repeat_off_description">Nu repetați niciunul</string>
+    <string name="exo_controls_repeat_one_description">Repetați unul</string>
+    <string name="exo_controls_rewind_description">Derulați înapoi</string>
+    <string name="exo_controls_seek_bar_description">Progresul redării</string>
+    <string name="exo_controls_settings_description">Setări</string>
+    <string name="exo_controls_show">Afișează comenzile playerului</string>
+    <string name="exo_controls_shuffle_off_description">Redare aleatorie dezactivată</string>
+    <string name="exo_controls_shuffle_on_description">Redare aleatorie activată</string>
+    <string name="exo_controls_stop_description">Opriți</string>
+    <string name="exo_controls_vr_description">Mod RV</string>
+    <string name="exo_download_completed">Descărcarea a fost finalizată</string>
+    <string name="exo_download_description">Descărcați</string>
+    <string name="exo_download_downloading">Se descarcă</string>
+    <string name="exo_download_failed">Descărcarea nu a reușit</string>
+    <string name="exo_download_notification_channel_name">Descărcări</string>
+    <string name="exo_download_paused">Descărcările au fost întrerupte</string>
+    <string name="exo_download_paused_for_network">Descărcările așteaptă rețeaua</string>
+    <string name="exo_download_paused_for_wifi">Descărcările așteaptă rețeaua Wi-Fi</string>
+    <string name="exo_download_removing">Se elimină descărcările</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternativ</string>
+    <string name="exo_track_role_closed_captions">Subtitrări</string>
+    <string name="exo_track_role_commentary">Comentarii</string>
+    <string name="exo_track_role_supplementary">Suplimentar</string>
+    <string name="exo_track_selection_auto">Automat</string>
+    <string name="exo_track_selection_none">Fără</string>
+    <string name="exo_track_selection_title_audio">Audio</string>
+    <string name="exo_track_selection_title_text">Text</string>
+    <string name="exo_track_selection_title_video">Video</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Sunet surround</string>
+    <string name="exo_track_surround_5_point_1">Sunet surround 5.1</string>
+    <string name="exo_track_surround_7_point_1">Sunet surround 7.1</string>
+    <string name="exo_track_unknown">Necunoscut</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Avansat"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Anunț"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s a fost instalat"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalare finalizată. Atingeți pentru a deschide."</string>
+    <string name="hiad_app_permission" priority="LT">"Permisiuni"</string>
+    <string name="hiad_app_preorder" priority="LT">"Pre-comandă"</string>
+    <string name="hiad_app_preordered" priority="translator">"PRE-COMANDAT"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Apăsați Înapoi pentru a omite"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Anunț ascuns"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Nu mă interesează"</string>
+    <string name="hiad_choices_hide" priority="translator">"Ascundeți anunțul"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"De ce am văzut acest anunț?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Instalați această aplicație?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Utilizarea unei rețele mobile va determina consumarea a %1$s din traficul de date. Continuați?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Redarea va utiliza date mobile. Continuați?"</string>
+    <string name="hiad_continue_download" priority="LT">"Descărcare"</string>
+    <string name="hiad_continue_download_new" priority="LT">"DESCĂRCARE"</string>
+    <string name="hiad_continue_to_play" priority="LT">"CONTINUARE"</string>
+    <string name="hiad_copy_link" priority="LT">"Copiere link"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplicație"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Omitere"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Omitere în %d"</string>
+    <string name="hiad_detail" priority="LT">"Detalii"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Descărcare"</string>
+    <string name="hiad_dialog_accept" priority="LT">"PERMITEȚI"</string>
+    <string name="hiad_dialog_allow" priority="LT">"PERMIT"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ANULARE"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"DESCĂRCARE"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"AM ÎNȚELES"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Permiteți %1$s să instaleze %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Sursă: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"PERMITERE"</string>
+    <string name="hiad_dialog_open" priority="LT">"DESCHIDEȚI"</string>
+    <string name="hiad_dialog_reject" priority="LT">"REFUZ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Descărcați prin conexiunea de date mobile?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Notă"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Descărcați utilizând conexiunea de date mobile?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALARE"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"DESCĂRCARE (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"A apărut o eroare în timpul descărcării %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Fișier corupt. Descărcați-l din nou."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Fișierul nu există. Încercați din nou."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALARE"</string>
+    <string name="hiad_download_installing" priority="LT">"Se instalează"</string>
+    <string name="hiad_download_no_space" priority="LT">"Spațiu de stocare insuficient. Eliberați spațiu și încercați din nou."</string>
+    <string name="hiad_download_open" priority="LT">"DESCHIDERE"</string>
+    <string name="hiad_download_resume" priority="LT">"CONTINUARE"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"A apărut o eroare în timpul descărcării %1$s. Descărcarea va reporni."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Nu sunteți conectat la Wi-Fi. Dacă descărcați acum, veți utiliza %1$s din abonamentul de date mobile. Descărcați oricum?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Nu sunteți conectat la WLAN. Dacă descărcați acum, veți utiliza %1$s din abonamentul de date mobile. Descărcați oricum?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Raportați această reclamă"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Mulțumim pentru feedback."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Vom recomanda mai puțin conținut de acest fel."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Cum vi s-a părut această reclamă?"</string>
+    <string name="hiad_install_completed" priority="LT">"Terminat"</string>
+    <string name="hiad_installed_description" priority="translator">"Instalare reușită. Atingeți pentru a deschide."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Instalat"</string>
+    <string name="hiad_jump_desc" priority="LT">"Vizualizați detaliile sau mergeți la aplicație"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Această pagină dorește să deschidă %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Link copiat."</string>
+    <string name="hiad_loading_tips" priority="LT">"Se încarcă…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Această descărcare va utiliza %1$s de date mobile."</string>
+    <string name="hiad_net_error" priority="LT">"Eroare de conexiune la rețea. Încercați din nou."</string>
+    <string name="hiad_network_error" priority="LT">"Eroare de conectare la rețea."</string>
+    <string name="hiad_network_no_available" priority="LT">"Nu există conexiune la Internet. Verificați setările de rețea."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Nu îmi mai aminti"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Nu există conexiune Wi-Fi. Dacă descărcați acum, veți utiliza datele dvs. mobile. Descărcați?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Nu există conexiune WLAN. Dacă descărcați acum, veți utiliza datele dvs. mobile. Descărcați?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Deschidere în browser"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Pagina nu poate fi încărcată. Încercați din nou."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s solicită următoarele permisiuni:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Așteptați pentru Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Descărcați prin rețeaua mobilă?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"Așteptați pentru WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"Reîmprospătare"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Aplicația depășește %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Omitere"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Continuați să urmăriți"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Vizionați această reclamă până la capăt pentru a câștiga o recompensă."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Atingeți pentru a deschide site-ul web/aplicația"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Treceți cu degetul"</string>
+    <string name="hiad_twist_screen" priority="LT">"Scuturați telefonul"</string>
+    <string name="hiad_whether_download" priority="LT">"Descărcați această aplicație?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Preîncărcat prin Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Preîncărcat"</string>
+    <string name="native_body">Conținut</string>
+    <string name="native_headline">Titlu</string>
+    <string name="native_media_view">Afișarea fișierului media</string>
+    <string msgid="478774118347071097" name="not_set">"Nesetată"</string>
+    <string name="notifications_permission_confirm">Permite</string>
+    <string name="notifications_permission_decline">Nu permite</string>
+    <string name="notifications_permission_title">Permiți aplicației să îți trimită notificări?</string>
+    <string name="offline_notification_text">Atinge pentru a deschide anunțul</string>
+    <string name="offline_notification_title">Vezi anunțul salvat când erai offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Vei primi o notificare cu linkul când revii online</string>
+    <string name="offline_opt_in_decline">Nu</string>
+    <string name="offline_opt_in_message">Îți vom trimite o notificare cu un link la site-ul advertiserului.</string>
+    <string name="offline_opt_in_title">Deschide anunțul când revii online.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>” a fost copiat în clipboard."</string>
+    <string name="s1">Salvează imaginea</string>
+    <string name="s2">Permiți ca anunțul să stocheze imaginea în Galeria de fotografii?</string>
+    <string name="s3">Acceptă</string>
+    <string name="s4">Refuză</string>
+    <string name="s5">Creează un eveniment în calendar</string>
+    <string name="s6">Permiți ca anunțul să creeze un eveniment în calendar?</string>
+    <string name="s7">Anunț de probă</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Căutați"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"DEZACTIVAT"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ACTIVAT"</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>
