@@ -220,9 +220,6 @@
     <string name="native_headline">Nadpis</string>
     <string name="native_media_view">Zobrazenie média</string>
     <string msgid="478774118347071097" name="not_set">"Nenastavené"</string>
-    <string name="notifications_permission_confirm">Povoliť</string>
-    <string name="notifications_permission_decline">Nepovoliť</string>
-    <string name="notifications_permission_title">Chcete povoliť aplikácii posielať vám upozornenia?</string>
     <string name="offline_notification_text">Klepnutím otvoriť reklamu</string>
     <string name="offline_notification_title">Zobrazte si reklamu, ktorú ste uložili v režime offline</string>
     <string name="offline_opt_in_confirm">OK</string>

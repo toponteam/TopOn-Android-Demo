@@ -214,9 +214,6 @@
     <string name="native_headline">ਸੁਰਖੀ</string>
     <string name="native_media_view">ਮੀਡੀਆ ਵਿਊ</string>
     <string msgid="478774118347071097" name="not_set">"ਸੈੱਟ ਨਹੀਂ"</string>
-    <string name="notifications_permission_confirm">ਆਗਿਆ ਦਿਓ</string>
-    <string name="notifications_permission_decline">ਆਗਿਆ ਨਾ ਦਿਓ</string>
-    <string name="notifications_permission_title">ਕੀ ਐਪ ਨੂੰ ਤੁਹਾਨੂੰ ਸੂਚਨਾਵਾਂ ਭੇਜਣ ਦੀ ਆਗਿਆ ਦੇਣੀ ਹੈ?</string>
     <string name="offline_notification_text">ਵਿਗਿਆਪਨ ਖੋਲ੍ਹਣ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="offline_notification_title">ਤੁਹਾਡੇ ਵੱਲੋਂ ਆਫ਼ਲਾਈਨ ਹੋਣ ਦੌਰਾਨ ਰੱਖਿਅਤ ਕੀਤੇ ਵਿਗਿਆਪਨ ਦੇਖੋ</string>
     <string name="offline_opt_in_confirm">ਠੀਕ ਹੈ</string>

@@ -232,9 +232,6 @@
     <string name="native_headline">Заголовок</string>
     <string name="native_media_view">Просмотр мультимедиа</string>
     <string msgid="478774118347071097" name="not_set">"Не указано"</string>
-    <string name="notifications_permission_confirm">Разрешить</string>
-    <string name="notifications_permission_decline">Запретить</string>
-    <string name="notifications_permission_title">Разрешить приложению отправлять уведомления?</string>
     <string name="offline_notification_text">Чтобы открыть его, нажмите на уведомление.</string>
     <string name="offline_notification_title">Вы хотели посмотреть объявление, когда были офлайн</string>
     <string name="offline_opt_in_confirm">ОК</string>

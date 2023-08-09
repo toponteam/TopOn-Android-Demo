@@ -17,6 +17,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--
+        https://support.google.com/googleplay/android-developer/answer/6048248?hl=en#zippy=%2Ctargeting-devices-without-an-advertising-id%2Cadvertising-id-violations%2Chow-to-opt-out-of-personalized-ads%2Cpersistent-identifiers-including-android-id
+        For publishers: Some Google Play policies, such as the Families Policy, require that apps not
+        use the Ad ID. If your app uses SDKs, like the Google Mobile Ads SDK, that declares the AD_ID
+        permission in their library manifests, you must prevent the permission from getting merged into
+        your app by including the following element in your manifest.
+        <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+    -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <queries>
@@ -26,9 +36,6 @@
             <category android:name="android.intent.category.BROWSABLE" />
 
             <data android:scheme="https" />
-        </intent>
-        <intent>
-            <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
         </intent>
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService" />
@@ -63,10 +70,12 @@
         <package android:name="com.amazon.venezia" />
         <package android:name="com.sec.android.app.samsungapps" />
         <package android:name="com.huawei.appmarket" />
+
+        <intent>
+            <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
+        </intent>
     </queries>
 
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
@@ -76,6 +85,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
 
     <application
         android:name="com.test.ad.demo.DemoApplication"
@@ -116,26 +126,41 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Native" />
+            android:label="Native"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="RewardedVideo" />
+            android:label="RewardedVideo"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Interstitial" />
+            android:label="Interstitial"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Banner" />
+            android:label="Banner"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdActivity"
-            android:exported="false" />
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowInCurrentActivity"
@@ -156,12 +181,18 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 
-        <!-- source file: nonchina/network_sdk/admob/22.2.0/AndroidManifest.xml -->
+        <!-- source file: nonchina/network_sdk/admob/22.1.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
-        <!-- 下面的activity和service必须注册 -->
+
+        <activity
+            android:name="com.chartboost_helium.sdk.view.CBImpressionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /> <!-- 下面的activity和service必须注册 -->
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -255,77 +286,7 @@
         <receiver
             android:name="net.pubnative.lite.sdk.receiver.VolumeChangedActionReceiver"
             android:exported="true" >
-        </receiver>
-
-        <provider
-            android:name="com.applovin.sdk.AppLovinInitProvider"
-            android:authorities="com.anythink.sdk.demo.applovininitprovider"
-            android:exported="false"
-            android:initOrder="101" /> <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
-        <activity
-            android:name="com.applovin.adview.AppLovinFullscreenActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:exported="false"
-            android:hardwareAccelerated="true"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind" />
-        <activity
-            android:name="com.applovin.sdk.AppLovinWebViewActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" /> <!-- Hybrid Ad Activities -->
-        <activity
-            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
-        <activity
-            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" /> <!-- Mediation Debugger Activities -->
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.mediation.MaxDebuggerWaterfallKeywordsActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
-        <activity
-            android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" /> <!-- Services -->
-        <service
-            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
-            android:exported="false"
-            android:stopWithTask="false" /> <!-- Yandex Mobile Metrica Analytics: common service -->
+        </receiver> <!-- Yandex Mobile Metrica Analytics: common service -->
         <service
             android:name="com.yandex.metrica.MetricaService"
             android:enabled="true"
@@ -396,49 +357,25 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:exported="false"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:exported="false"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
-            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
-            android:exported="false"
-            android:hardwareAccelerated="false"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:ads-interstitial"
+            android:value="ads-interstitial:13.4.62.302" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.anythink.sdk.demo.androidx-startup"
             android:exported="false" >
             <meta-data
+                android:name="com.unity3d.services.identifiers.UnitySharedLibraryInitializer"
+                android:value="androidx.startup" />
+            <meta-data
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
             <meta-data
                 android:name="com.unity3d.services.core.configuration.AdsSdkInitializer"
                 android:value="androidx.startup" />
-            <meta-data
-                android:name="com.unity3d.services.identifiers.UnitySharedLibraryInitializer"
-                android:value="androidx.startup" />
         </provider>
-
-        <meta-data
-            android:name="com.huawei.hms.client.service.name:ads-interstitial"
-            android:value="ads-interstitial:13.4.62.302" />
 
         <activity
             android:name="com.mbridge.msdk.reward.player.MBRewardVideoActivity"
@@ -470,16 +407,6 @@
             android:name="net.pubnative.lite.sdk.rewarded.activity.VastRewardedActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="behind" />
-        <activity
-            android:name="com.yandex.mobile.ads.common.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@style/YandexAdsInternal.AdActivity" />
-
-        <provider
-            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider"
-            android:authorities="com.anythink.sdk.demo.MobileAdsInitializeProvider"
-            android:exported="false" />
-
         <activity
             android:name="com.anythink.core.activity.AnyThinkGdprAuthActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -699,6 +626,30 @@
             android:exported="false" />
 
         <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
             android:name="com.ogury.cm.ConsentActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -816,7 +767,37 @@
             android:name="com.tapjoy.TJContentActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- suppress AndroidDomInspection -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.yandex.mobile.ads.common.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider"
+            android:authorities="com.anythink.sdk.demo.MobileAdsInitializeProvider"
+            android:exported="false" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:authorities="com.anythink.sdk.demo.mobileadsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <service
+            android:name="com.google.android.gms.ads.AdService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.google.android.gms.ads.OutOfContextTestingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false" /> <!-- suppress AndroidDomInspection -->
         <activity
             android:name="com.my.target.common.MyTargetActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
@@ -826,6 +807,30 @@
             android:authorities="com.anythink.sdk.demo.mytargetcontentprovider"
             android:enabled="true"
             android:exported="false" />
+
+        <activity
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.ironsource.sdk.controller.InterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <provider
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+            android:authorities="com.anythink.sdk.demo.IronsourceLifecycleProvider" />
 
         <activity
             android:name="com.vungle.warren.ui.VungleActivity"
@@ -860,9 +865,6 @@
         <meta-data
             android:name="com.huawei.hms.client.service.name:ads-jsbridge"
             android:value="ads-jsbridge:3.4.62.302" />
-        <meta-data
-            android:name="com.huawei.hms.client.service.name:ads-instream"
-            android:value="ads-instream:13.4.62.302" />
 
         <activity
             android:name="com.chartboost.sdk.view.CBImpressionActivity"
@@ -870,6 +872,77 @@
             android:excludeFromRecents="true"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:ads-instream"
+            android:value="ads-instream:13.4.62.302" />
+
+        <provider
+            android:name="com.applovin.sdk.AppLovinInitProvider"
+            android:authorities="com.anythink.sdk.demo.applovininitprovider"
+            android:exported="false"
+            android:initOrder="101" /> <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" /> <!-- Hybrid Ad Activities -->
+        <activity
+            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" /> <!-- Mediation Debugger Activities -->
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme" /> <!-- Services -->
+        <service
+            android:name="com.applovin.impl.sdk.utils.AppKilledService"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
         <activity
             android:name="net.nend.android.internal.ui.activities.fullboard.NendAdFullBoardActivity"
             android:hardwareAccelerated="true"
@@ -909,50 +982,6 @@
             android:hardwareAccelerated="true"
             android:screenOrientation="user"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.ironsource.sdk.controller.ControllerActivity"
-            android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true" />
-        <activity
-            android:name="com.ironsource.sdk.controller.InterstitialActivity"
-            android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent" />
-        <activity
-            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
-            android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.Translucent" />
-        <activity
-            android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity"
-            android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true"
-            android:theme="@android:style/Theme.NoTitleBar" />
-
-        <provider
-            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-            android:authorities="com.anythink.sdk.demo.IronsourceLifecycleProvider" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
-        <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent" />
-
-        <provider
-            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="com.anythink.sdk.demo.mobileadsinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
-
-        <service
-            android:name="com.google.android.gms.ads.AdService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <activity
-            android:name="com.google.android.gms.ads.OutOfContextTestingActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:exported="false" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

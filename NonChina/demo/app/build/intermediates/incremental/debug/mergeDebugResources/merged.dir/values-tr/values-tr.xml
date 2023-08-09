@@ -222,9 +222,6 @@
     <string name="native_headline">Başlık</string>
     <string name="native_media_view">Medya Görünümü</string>
     <string msgid="478774118347071097" name="not_set">"Ayarlanmadı"</string>
-    <string name="notifications_permission_confirm">İzin ver</string>
-    <string name="notifications_permission_decline">İzin verme</string>
-    <string name="notifications_permission_title">Uygulamanın size bildirim göndermesine izin verilsin mi?</string>
     <string name="offline_notification_text">Reklamı açmak için dokunun</string>
     <string name="offline_notification_title">Kaydettiğiniz reklamı internet bağlantınız yokken görüntüleyin</string>
     <string name="offline_opt_in_confirm">Tamam</string>

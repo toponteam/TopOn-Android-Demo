@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-v21/values-v21.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/0892ab513abfaace27d796b93ef0c56e/transformed/jetified-applovin-sdk-11.10.1/res/values-v21/values-v21.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/f2419a4926007f9ada03dbf2b47b9a59/transformed/jetified-applovin-sdk-11.9.0/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,9,12,19,25,28",
                         "startColumns": "4,4,4,4,4,4",
@@ -61,25 +61,6 @@
                     }
                 },
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,5,8,11",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,253,453,661",
-                        "endLines": "4,7,10,16",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "248,448,656,1130"
-                    },
-                    "to": {
-                        "startLines": "309,312,315,318",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "21459,21657,21857,22065",
-                        "endLines": "311,314,317,323",
-                        "endColumns": "12,12,12,12",
-                        "endOffsets": "21652,21852,22060,22534"
-                    }
-                },
-                {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/d5fcabf09e29d347472db02fc788ff89/transformed/preference-1.1.1/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,7",
@@ -118,22 +99,22 @@
                     }
                 },
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/2b017e8bd571789abdb868fed1b0e0ba/transformed/jetified-exoplayer-ui-2.16.1/res/values-v21/values-v21.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/af1951461be2b7ee8364e3a97c57a70e/transformed/jetified-mobileads-5.7.0/res/values-v21/values-v21.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,114",
-                        "endLines": "2,7",
-                        "endColumns": "58,10",
-                        "endOffsets": "109,396"
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,253,453,661",
+                        "endLines": "4,7,10,16",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "248,448,656,1130"
                     },
                     "to": {
-                        "startLines": "3,228",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,16627",
-                        "endLines": "3,232",
-                        "endColumns": "58,10",
-                        "endOffsets": "227,16909"
+                        "startLines": "309,312,315,318",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "21459,21657,21857,22065",
+                        "endLines": "311,314,317,323",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "21652,21852,22060,22534"
                     }
                 },
                 {
@@ -153,6 +134,25 @@
                         "endLines": "239",
                         "endColumns": "12",
                         "endOffsets": "17228"
+                    }
+                },
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/cbcee7e51ed7899dbb9e40dc2de5a8af/transformed/jetified-exoplayer-ui-2.16.1/res/values-v21/values-v21.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,114",
+                        "endLines": "2,7",
+                        "endColumns": "58,10",
+                        "endOffsets": "109,396"
+                    },
+                    "to": {
+                        "startLines": "3,228",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,16627",
+                        "endLines": "3,232",
+                        "endColumns": "58,10",
+                        "endOffsets": "227,16909"
                     }
                 }
             ]

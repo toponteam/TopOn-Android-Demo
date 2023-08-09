@@ -111,9 +111,6 @@
     <string name="native_headline">Titulli</string>
     <string name="native_media_view">Pamja e medias</string>
     <string msgid="478774118347071097" name="not_set">"Nuk është caktuar"</string>
-    <string name="notifications_permission_confirm">Lejo</string>
-    <string name="notifications_permission_decline">Mos lejo</string>
-    <string name="notifications_permission_title">Të lejohet aplikacioni të të dërgojë njoftime?</string>
     <string name="offline_notification_text">Trokit për të hapur reklamën</string>
     <string name="offline_notification_title">Shiko reklamën që ruajte kur ishe jashtë linje</string>
     <string name="offline_opt_in_confirm">Në rregull</string>

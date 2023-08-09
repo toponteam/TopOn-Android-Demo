@@ -7,7 +7,6 @@
     <dimen name="applovin_sdk_consentFlowGdprControlsViewHeight">120dp</dimen>
     <dimen name="applovin_sdk_consentFlowGdprPartnersControlViewHeight">80dp</dimen>
     <dimen name="nend_full_board_ad_promotion_text_size">22dp</dimen>
-    <integer name="anythink_native_button_col">1</integer>
     <style name="TextView.NendAd.FullBoard.Promotion" parent="android:Widget.TextView">
         <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>

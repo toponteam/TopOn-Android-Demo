@@ -111,9 +111,6 @@
     <string name="native_headline">Opskrif</string>
     <string name="native_media_view">Media-aansig</string>
     <string msgid="478774118347071097" name="not_set">"Nie gestel nie"</string>
-    <string name="notifications_permission_confirm">Laat toe</string>
-    <string name="notifications_permission_decline">Moenie toelaat nie</string>
-    <string name="notifications_permission_title">Laat app toe om vir jou kennisgewings te stuur?</string>
     <string name="offline_notification_text">Tik om advertensie oop te maak</string>
     <string name="offline_notification_title">Bekyk die advertensie wat jy gestoor het toe jy vanlyn was</string>
     <string name="offline_opt_in_confirm">OK</string>

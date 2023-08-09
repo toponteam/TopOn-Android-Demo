@@ -210,9 +210,6 @@
     <string name="native_headline">ዋና ርዕስ</string>
     <string name="native_media_view">የሚዲያ እይታ</string>
     <string msgid="478774118347071097" name="not_set">"አልተዘጋጀም"</string>
-    <string name="notifications_permission_confirm">ፍቀድ</string>
-    <string name="notifications_permission_decline">አትፍቀድ</string>
-    <string name="notifications_permission_title">መተግበሪያ ማሳወቂያዎችን እንዲልክልዎ ይፈቀድ?</string>
     <string name="offline_notification_text">ማስታወቂያን ለመክፈት መታ ያድርጉ</string>
     <string name="offline_notification_title">ከመስመር ውጭ ሲሆኑ ያስቀመጡትን ማስታወቂያ ይመልከቱ</string>
     <string name="offline_opt_in_confirm">እሺ</string>

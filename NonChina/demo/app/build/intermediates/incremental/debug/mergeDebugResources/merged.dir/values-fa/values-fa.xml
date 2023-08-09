@@ -222,9 +222,6 @@
     <string name="native_headline">سرخط</string>
     <string name="native_media_view">بازدید از رسانه</string>
     <string msgid="478774118347071097" name="not_set">"تنظیم نشده است"</string>
-    <string name="notifications_permission_confirm">اجازه دادن</string>
-    <string name="notifications_permission_decline">اجازه ندادن</string>
-    <string name="notifications_permission_title">به برنامه اجازه می‌دهید برای شما اعلان ارسال کند؟</string>
     <string name="offline_notification_text">برای باز کردن آگهی، ضربه بزنید</string>
     <string name="offline_notification_title">مشاهده آگهی‌ای که هنگام آفلاین بودن ذخیره کردید</string>
     <string name="offline_opt_in_confirm">تأیید</string>

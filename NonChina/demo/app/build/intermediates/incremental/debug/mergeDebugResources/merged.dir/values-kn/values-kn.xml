@@ -214,9 +214,6 @@
     <string name="native_headline">ಶೀರ್ಷಿಕೆ</string>
     <string name="native_media_view">ಮಾಧ್ಯಮ ವೀಕ್ಷಣೆ</string>
     <string msgid="478774118347071097" name="not_set">"ಹೊಂದಿಸಿಲ್ಲ"</string>
-    <string name="notifications_permission_confirm">ಅನುಮತಿಸಿ</string>
-    <string name="notifications_permission_decline">ಅನುಮತಿಸಬೇಡಿ</string>
-    <string name="notifications_permission_title">ನಿಮಗೆ ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸಲು ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುವುದೇ?</string>
     <string name="offline_notification_text">ಜಾಹೀರಾತನ್ನು ತೆರೆಯಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="offline_notification_title">ನೀವು ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿದ್ದಾಗ ನೀವು ಉಳಿಸಿದ ಜಾಹೀರಾತನ್ನು ವೀಕ್ಷಿಸಿ</string>
     <string name="offline_opt_in_confirm">ಸರಿ</string>

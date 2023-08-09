@@ -45,7 +45,6 @@
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>과(와) 공유"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"접기"</string>
     <string name="applovin_agree_message">앱 사용을 시작하려면 \"계속하기\"을 누르십시오.</string>
-    <string name="applovin_alt_privacy_policy_text"/>
     <string name="applovin_continue_button_text">계속하기</string>
     <string name="applovin_gdpr_advertising_partners_screen_message">개인 정보 보호 정책에 설명된 대로 귀하의 동의 하에 당사는 이 데이터를 다음 파트너와 공유하여 개인화된 광고 또는 콘텐츠를 제공할 수 있도록 할 수 있습니다.</string>
     <string name="applovin_gdpr_advertising_partners_screen_title">개인화된 광고 및 콘텐츠</string>
@@ -64,7 +63,6 @@
     <string name="applovin_gdpr_main_screen_learn_more_button_text">더 알아보기</string>
     <string name="applovin_gdpr_main_screen_message">당사의 개인 정보 보호 정책에 설명된 바와 같이 귀하의 동의하에 당사는 IP 주소 및 광고 식별자와 같은 귀하의 장치와 관련된 특정 정보를 수집합니다. 이 데이터를 통해 당사와 당사 파트너는 개인화된 광고 및 콘텐츠를 제공하고 개선할 수 있습니다.\n\n아래에서 귀하는 당사 및/또는 당사 파트너가 다음 목적을 위해 이 데이터를 사용하도록 허용할 수 있습니다.</string>
     <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">개인화된 광고 및 콘텐츠</string>
-    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">본인은 16세 이상이며 이용 약관에 동의하고 개인 정보 보호 정책이 적용됨을 인정합니다.</string>
     <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">본인은 16세 이상이며 개인 정보 보호 정책을 읽고 이해했음을 확인합니다.</string>
     <string name="applovin_gdpr_main_screen_title">%s을(를) 다운로드해 주셔서 감사합니다!</string>
     <string name="applovin_gdpr_understand_and_continue_button_text">이해하고 확인합니다</string>
@@ -73,7 +71,6 @@
     <string name="applovin_pp_title">%s을(를) 사용하려면 당사의 개인 정보 보호 정책을 검토하고 인정했음을 확인해야 합니다.</string>
     <string name="applovin_privacy_policy_text">개인 정보 보호 정책</string>
     <string name="applovin_terms_of_service_text">이용 약관</string>
-    <string name="applovin_terms_of_use_text">이용 약관</string>
     <string name="bigo_ad_about_app_default">이 앱 정보</string>
     <string name="bigo_ad_click_to_try">시도하려면 클릭하시겠습니까?</string>
     <string name="bigo_ad_comment_num_text">리뷰</string>
@@ -245,9 +242,6 @@
     <string name="native_headline">광고 제목</string>
     <string name="native_media_view">미디어 보기</string>
     <string msgid="478774118347071097" name="not_set">"설정되지 않음"</string>
-    <string name="notifications_permission_confirm">허용</string>
-    <string name="notifications_permission_decline">허용 안함</string>
-    <string name="notifications_permission_title">앱에서 알림을 보내도록 허용하시겠습니까?</string>
     <string name="offline_notification_text">광고를 열려면 탭하세요.</string>
     <string name="offline_notification_title">오프라인 상태에서 저장한 광고 보기</string>
     <string name="offline_opt_in_confirm">확인</string>

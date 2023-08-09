@@ -210,9 +210,6 @@
     <string name="native_headline">Тақырыбы</string>
     <string name="native_media_view">Медиа көрінісі</string>
     <string msgid="478774118347071097" name="not_set">"Орнатылмаған"</string>
-    <string name="notifications_permission_confirm">Рұқсат беру</string>
-    <string name="notifications_permission_decline">Рұқсат бермеу</string>
-    <string name="notifications_permission_title">Қолданбаның хабарландырулар жіберуіне рұқсат берілсін бе?</string>
     <string name="offline_notification_text">Жарнаманы ашу үшін түртіңіз.</string>
     <string name="offline_notification_title">Офлайн режимге өткенде, сақталған жарнамаңызды көріңіз</string>
     <string name="offline_opt_in_confirm">Жарайды</string>

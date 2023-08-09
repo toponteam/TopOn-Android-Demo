@@ -210,9 +210,6 @@
     <string name="native_headline">Başlıq</string>
     <string name="native_media_view">Media Paneli</string>
     <string msgid="478774118347071097" name="not_set">"Ayarlanmayıb"</string>
-    <string name="notifications_permission_confirm">İcazə verin</string>
-    <string name="notifications_permission_decline">İcazə verməyin</string>
-    <string name="notifications_permission_title">Tətbiqə sizə bildirişlər göndərmək icazəsi verilsin?</string>
     <string name="offline_notification_text">Reklamı açmaq üçün toxunun</string>
     <string name="offline_notification_title">Oflayn olduqda yadda saxladığınız reklama baxın</string>
     <string name="offline_opt_in_confirm">OK</string>

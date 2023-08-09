@@ -210,9 +210,6 @@
     <string name="native_headline">Título</string>
     <string name="native_media_view">Vista del contenido multimedia</string>
     <string msgid="478774118347071097" name="not_set">"Sin definir"</string>
-    <string name="notifications_permission_confirm">Permitir</string>
-    <string name="notifications_permission_decline">No permitir</string>
-    <string name="notifications_permission_title">¿Quieres permitir que la app te envíe notificaciones?</string>
     <string name="offline_notification_text">Presiona para abrir el anuncio</string>
     <string name="offline_notification_title">Mira el anuncio que guardaste cuando no tenías conexión</string>
     <string name="offline_opt_in_confirm">Aceptar</string>

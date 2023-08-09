@@ -211,9 +211,6 @@
     <string name="native_headline">ခေါင်းစဉ်</string>
     <string name="native_media_view">မီဒီယာမြင်ကွင်း</string>
     <string msgid="478774118347071097" name="not_set">"သတ်မှတ်မထားပါ"</string>
-    <string name="notifications_permission_confirm">ခွင့်ပြုရန်</string>
-    <string name="notifications_permission_decline">ခွင့်မပြုပါ</string>
-    <string name="notifications_permission_title">အက်ပ်ကို သင့်ထံ အကြောင်းကြားချက် ပို့ခွင့်ပြုမလား။</string>
     <string name="offline_notification_text">ကြော်ငြာဖွင့်ရန် တို့ပါ</string>
     <string name="offline_notification_title">သင်အော့ဖ်လိုင်းရှိနေစဉ်တွင် သိမ်းထားခဲ့သော ကြော်ငြာကို ကြည့်ရှုပါ</string>
     <string name="offline_opt_in_confirm">OK</string>

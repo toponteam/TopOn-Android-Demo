@@ -214,9 +214,6 @@
     <string name="native_headline">தலைப்பு</string>
     <string name="native_media_view">மீடியா காட்சி</string>
     <string msgid="478774118347071097" name="not_set">"அமைக்கப்படவில்லை"</string>
-    <string name="notifications_permission_confirm">அனுமதி</string>
-    <string name="notifications_permission_decline">அனுமதிக்க வேண்டாம்</string>
-    <string name="notifications_permission_title">உங்களுக்கு அறிவிப்புகளை அனுப்ப ஆப்ஸை அனுமதிக்கவா?</string>
     <string name="offline_notification_text">விளம்பரத்தைத் திறக்க தட்டுக</string>
     <string name="offline_notification_title">ஆஃப்லைனில் இருந்தபோது சேமிக்கப்பட்ட விளம்பரத்தைக் காண்க</string>
     <string name="offline_opt_in_confirm">சரி</string>

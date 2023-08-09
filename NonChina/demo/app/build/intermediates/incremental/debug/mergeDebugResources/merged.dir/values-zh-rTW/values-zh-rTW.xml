@@ -45,7 +45,6 @@
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"與「<ns1:g id="APPLICATION_NAME">%s</ns1:g>」分享"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"收合"</string>
     <string name="applovin_agree_message">如果您選擇開始使用我們的應用，請點擊\"繼續\"</string>
-    <string name="applovin_alt_privacy_policy_text"/>
     <string name="applovin_continue_button_text">繼續</string>
     <string name="applovin_gdpr_advertising_partners_screen_message">如同我们在隐私政策中所表述的，在您同意的前提下，我们可能将此数据分享给以下的合作伙伴，以帮助他们提供个性化广告和内容：</string>
     <string name="applovin_gdpr_advertising_partners_screen_title">個性化廣告和內容</string>
@@ -64,7 +63,6 @@
     <string name="applovin_gdpr_main_screen_learn_more_button_text">了解更多</string>
     <string name="applovin_gdpr_main_screen_message">如同我們在隱私政策中所表述的，在您同意的前提下，我們會收集您設備的相關信息，比如IP地址和廣告標識符。該數據將允許我們和我們的合作夥伴為您提供個性化的廣告和內容，以及持續改善您的體驗。\n\n您可以選擇允許我們和我們的合作夥伴出於下列目的使用此數據</string>
     <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">個性化的廣告內容</string>
-    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">我年滿16周歲，接受使用條款並知悉隱私政策應用於此。</string>
     <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">我確認本人已滿16周歲並已知悉和理解該隱私政策。</string>
     <string name="applovin_gdpr_main_screen_title">感謝您下載 \n%s!</string>
     <string name="applovin_gdpr_understand_and_continue_button_text">我理解並同意</string>
@@ -73,7 +71,6 @@
     <string name="applovin_pp_title">使用%s之前, 您必須確認您已經閱讀並知悉我們的隱私政策.</string>
     <string name="applovin_privacy_policy_text">隱私政策</string>
     <string name="applovin_terms_of_service_text">服務條款</string>
-    <string name="applovin_terms_of_use_text">使用條款</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">啟用</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text">您必須啟用 Google Play 服務，才能執行「%1$s」。</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">啟用 Google Play 服務</string>
@@ -241,9 +238,6 @@
     <string name="native_headline">標題</string>
     <string name="native_media_view">媒體檢視</string>
     <string msgid="478774118347071097" name="not_set">"未設定"</string>
-    <string name="notifications_permission_confirm">允許</string>
-    <string name="notifications_permission_decline">不允許</string>
-    <string name="notifications_permission_title">允許應用程式傳送通知給你嗎？</string>
     <string name="offline_notification_text">輕觸即可開啟廣告</string>
     <string name="offline_notification_title">查看你在離線時儲存的廣告</string>
     <string name="offline_opt_in_confirm">確定</string>

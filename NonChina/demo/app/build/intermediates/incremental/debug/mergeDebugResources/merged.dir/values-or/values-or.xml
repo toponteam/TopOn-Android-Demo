@@ -150,12 +150,9 @@
     <string name="native_headline">ହେଡଲାଇନ</string>
     <string name="native_media_view">ମିଡିଆ ଭ୍ୟୁ</string>
     <string msgid="478774118347071097" name="not_set">"ସେଟ୍ ହୋଇନାହିଁ"</string>
-    <string name="notifications_permission_confirm">ଅନୁମତି ଦିଅନ୍ତୁ</string>
-    <string name="notifications_permission_decline">ଅନୁମତି ଦିଅନ୍ତୁ ନାହିଁ</string>
-    <string name="notifications_permission_title">ଆପଣଙ୍କୁ ବିଜ୍ଞପ୍ତି ପଠାଇବାକୁ ଆପକୁ ଅନୁମତି ଦେବେ?</string>
     <string name="offline_notification_text">ବିଜ୍ଞାପନ ଖୋଲିବାକୁ ଟାପ୍ କରନ୍ତୁ</string>
     <string name="offline_notification_title">ଆପଣ ଅଫଲାଇନ୍ ଥିବା ସମୟରେ ସେଭ୍ କରିଥିବା ବିଜ୍ଞାପନ ଦେଖନ୍ତୁ</string>
-    <string name="offline_opt_in_confirm">ଠିକ ଅଛି</string>
+    <string name="offline_opt_in_confirm">ଠିକ୍ ଅଛି</string>
     <string name="offline_opt_in_confirmation">ଆପଣ ପୁଣି ଅନଲାଇନ୍ ହେଲେ ଲିଙ୍କ୍ ସହ ଏକ ବିଜ୍ଞପ୍ତି ପାଇବେ</string>
     <string name="offline_opt_in_decline">ନାଁ, ଥାଉ</string>
     <string name="offline_opt_in_message">ବିଜ୍ଞାପନଦାତାଙ୍କ ସାଇଟର ଏକ ଲିଙ୍କ୍ ସହ ଆମେ ଆପଣଙ୍କୁ ଏକ ବିଜ୍ଞପ୍ତି ପଠାଇବୁ।</string>

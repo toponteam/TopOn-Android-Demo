@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-b+jv+Latn/values-b+jv+Latn.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-b+jv+Latn/values-b+jv+Latn.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/7219359416f5da79ac046167fdb9fa51/transformed/jetified-ads-lang-13.4.62.302/res/values-b+jv+Latn/values-b+jv+Latn.xml",

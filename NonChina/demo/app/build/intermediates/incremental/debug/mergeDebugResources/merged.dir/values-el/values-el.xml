@@ -210,9 +210,6 @@
     <string name="native_headline">Τίτλος</string>
     <string name="native_media_view">Προβολή μέσων</string>
     <string msgid="478774118347071097" name="not_set">"Δεν έχει οριστεί"</string>
-    <string name="notifications_permission_confirm">Να επιτρέπεται</string>
-    <string name="notifications_permission_decline">Να μην επιτρέπεται</string>
-    <string name="notifications_permission_title">Να επιτρέπεται στην εφαρμογή να σας στέλνει ειδοποιήσεις;</string>
     <string name="offline_notification_text">Πατήστε για να ανοίξετε τη διαφήμιση.</string>
     <string name="offline_notification_title">Δείτε τη διαφήμιση που αποθηκεύσατε ενώ ήσασταν εκτός σύνδεσης</string>
     <string name="offline_opt_in_confirm">ΟΚ</string>

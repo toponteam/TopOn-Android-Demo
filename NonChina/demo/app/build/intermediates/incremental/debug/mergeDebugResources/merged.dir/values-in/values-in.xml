@@ -211,9 +211,6 @@
     <string name="native_headline">Judul</string>
     <string name="native_media_view">Tampilan Media</string>
     <string msgid="478774118347071097" name="not_set">"Belum disetel"</string>
-    <string name="notifications_permission_confirm">Izinkan</string>
-    <string name="notifications_permission_decline">Jangan izinkan</string>
-    <string name="notifications_permission_title">Izinkan aplikasi mengirim notifikasi kepada Anda?</string>
     <string name="offline_notification_text">Ketuk untuk membuka iklan</string>
     <string name="offline_notification_title">Lihat iklan yang Anda simpan ketika offline</string>
     <string name="offline_opt_in_confirm">Oke</string>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-port/values-port.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/ccdb1279abedd37a64fa6a06b39ebd31/transformed/appcompat-1.1.0/res/values-port/values-port.xml",

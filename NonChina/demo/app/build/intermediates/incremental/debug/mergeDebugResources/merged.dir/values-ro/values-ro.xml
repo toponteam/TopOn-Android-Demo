@@ -215,9 +215,6 @@
     <string name="native_headline">Titlu</string>
     <string name="native_media_view">Afișarea fișierului media</string>
     <string msgid="478774118347071097" name="not_set">"Nesetată"</string>
-    <string name="notifications_permission_confirm">Permite</string>
-    <string name="notifications_permission_decline">Nu permite</string>
-    <string name="notifications_permission_title">Permiți aplicației să îți trimită notificări?</string>
     <string name="offline_notification_text">Atinge pentru a deschide anunțul</string>
     <string name="offline_notification_title">Vezi anunțul salvat când erai offline</string>
     <string name="offline_opt_in_confirm">OK</string>

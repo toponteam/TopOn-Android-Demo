@@ -210,9 +210,6 @@
     <string name="native_headline">Titulua</string>
     <string name="native_media_view">Multimedia-edukiaren ikuspegia</string>
     <string msgid="478774118347071097" name="not_set">"Ez da ezarri"</string>
-    <string name="notifications_permission_confirm">Eman baimena</string>
-    <string name="notifications_permission_decline">Ez eman baimenik</string>
-    <string name="notifications_permission_title">Zuri jakinarazpenak bidaltzeko baimena eman nahi diozu aplikazioari?</string>
     <string name="offline_notification_text">Sakatu hau iragarkia irekitzeko</string>
     <string name="offline_notification_title">Ikusi gorde duzun iragarkia berriro konektatzen zarenean</string>
     <string name="offline_opt_in_confirm">Ados</string>

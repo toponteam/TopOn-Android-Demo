@@ -214,9 +214,6 @@
     <string name="native_headline">હેડલાઇન</string>
     <string name="native_media_view">મીડિયા વ્યૂ</string>
     <string msgid="478774118347071097" name="not_set">"સેટ કર્યું નથી"</string>
-    <string name="notifications_permission_confirm">મંજૂરી આપો</string>
-    <string name="notifications_permission_decline">મંજૂરી આપશો નહીં</string>
-    <string name="notifications_permission_title">શું ઍપને તમને નોટિફિકેશન મોકલવાની મંજૂરી આપીએ?</string>
     <string name="offline_notification_text">જાહેરાત ખોલવા માટે ટૅપ કરો</string>
     <string name="offline_notification_title">તમે ઑફલાઇન હતા, ત્યારે તમે સાચવેલી જાહેરાત જુઓ</string>
     <string name="offline_opt_in_confirm">ઓકે</string>

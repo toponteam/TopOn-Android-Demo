@@ -214,9 +214,6 @@
     <string name="native_headline">Headline</string>
     <string name="native_media_view">View ng Media</string>
     <string msgid="478774118347071097" name="not_set">"Hindi nakatakda"</string>
-    <string name="notifications_permission_confirm">Payagan</string>
-    <string name="notifications_permission_decline">Huwag payagan</string>
-    <string name="notifications_permission_title">Payagan ang app na magpadala sa iyo ng mga notification?</string>
     <string name="offline_notification_text">I-tap para buksan ang ad</string>
     <string name="offline_notification_title">Tingnan ang ad na na-save mo noong offline ka</string>
     <string name="offline_opt_in_confirm">OK</string>

@@ -214,9 +214,6 @@
     <string name="native_headline">Titolo</string>
     <string name="native_media_view">Pannello multimediale</string>
     <string msgid="478774118347071097" name="not_set">"Non impostato"</string>
-    <string name="notifications_permission_confirm">Consenti</string>
-    <string name="notifications_permission_decline">Non consentire</string>
-    <string name="notifications_permission_title">Consentire all\'app di inviarti notifiche?</string>
     <string name="offline_notification_text">Tocca per aprire l\'annuncio</string>
     <string name="offline_notification_title">Visualizza l\'annuncio salvato quando eri offline</string>
     <string name="offline_opt_in_confirm">OK</string>

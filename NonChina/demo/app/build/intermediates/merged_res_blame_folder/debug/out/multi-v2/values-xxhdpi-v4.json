@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/214690006a8ecf04d66dbe49de207f36/transformed/jetified-nendSDK-7.0.3/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",

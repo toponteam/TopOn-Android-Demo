@@ -111,9 +111,6 @@
     <string name="native_headline">Fyrirsögn</string>
     <string name="native_media_view">Myndskoðun</string>
     <string msgid="478774118347071097" name="not_set">"Ekki stillt"</string>
-    <string name="notifications_permission_confirm">Leyfa</string>
-    <string name="notifications_permission_decline">Ekki leyfa</string>
-    <string name="notifications_permission_title">Leyfa forriti að senda þér tilkynningar?</string>
     <string name="offline_notification_text">Pikkaðu til að opna auglýsingu</string>
     <string name="offline_notification_title">Skoða auglýsinguna sem þú vistaðir án nettengingar</string>
     <string name="offline_opt_in_confirm">Í lagi</string>

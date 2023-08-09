@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-de-rDE/values-de-rDE.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-de-rDE/values-de-rDE.xml",
             "map": [
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/19aaf720d7ee7b8e1c5d6e88156f49c0/transformed/jetified-mbridge_dycreator/res/values-de-rDE/values-de-rDE.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/4b3f7324c6545ae6fc4efd7e27373c38/transformed/jetified-mbridge_dycreator/res/values-de-rDE/values-de-rDE.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-bn-rIN/values-bn-rIN.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-bn-rIN/values-bn-rIN.xml",
             "map": [
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/49a3b22facd8b306ecdde1ce179849dd/transformed/jetified-bigo-ads-3.0.3/res/values-bn-rIN/values-bn-rIN.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/834543cfcf9085fe3604a834e5aaa461/transformed/jetified-bigo-ads-3.0.3/res/values-bn-rIN/values-bn-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

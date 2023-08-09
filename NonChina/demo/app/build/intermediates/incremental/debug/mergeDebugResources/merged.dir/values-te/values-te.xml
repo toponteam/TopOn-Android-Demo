@@ -214,19 +214,16 @@
     <string name="native_headline">హెడ్‌లైన్</string>
     <string name="native_media_view">మీడియా వ్యూ</string>
     <string msgid="478774118347071097" name="not_set">"సెట్ చేయలేదు"</string>
-    <string name="notifications_permission_confirm">అనుమతించు</string>
-    <string name="notifications_permission_decline">అనుమతించవద్దు</string>
-    <string name="notifications_permission_title">మీకు నోటిఫికేషన్‌లను పంపడానికి యాప్‌ను అనుమతించాలా?</string>
     <string name="offline_notification_text">యాడ్‌ను తెరవడానికి ట్యాప్ చేయండి</string>
     <string name="offline_notification_title">మీరు ఆఫ్‌లైన్‌లో ఉన్నప్పుడు కూడా, సేవ్ చేసిన యాడ్‌ను చూడండి</string>
     <string name="offline_opt_in_confirm">సరే</string>
     <string name="offline_opt_in_confirmation">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు, లింక్ కలిగిన నోటిఫికేషన్ మీకు అందుతుంది</string>
-    <string name="offline_opt_in_decline">వద్దు, ధన్యవాదాలు</string>
+    <string name="offline_opt_in_decline">వద్దు</string>
     <string name="offline_opt_in_message">అడ్వర్టైజర్ సైట్‌కు లింక్‌ను మేము మీకు నోటిఫికేషన్‌గా పంపుతాము.</string>
     <string name="offline_opt_in_title">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు యాడ్ తెరవబడుతుంది.</string>
     <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది."</string>
     <string name="s1">చిత్రాన్ని సేవ్ చేయండి</string>
-    <string name="s2">చిత్ర గ్యాలరీలో చిత్రాన్ని స్టోరేజ్‌ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s2">చిత్ర గ్యాలరీలో చిత్రాన్ని నిల్వ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
     <string name="s3">అంగీకరించండి</string>
     <string name="s4">తిరస్కరించు</string>
     <string name="s5">క్యాలెండర్ ఈవెంట్‌ను క్రియేట్ చేయండి</string>

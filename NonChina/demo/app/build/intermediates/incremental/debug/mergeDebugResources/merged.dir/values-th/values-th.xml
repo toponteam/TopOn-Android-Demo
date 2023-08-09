@@ -215,9 +215,6 @@
     <string name="native_headline">บรรทัดแรก</string>
     <string name="native_media_view">มุมมองสื่อ</string>
     <string msgid="478774118347071097" name="not_set">"ไม่ได้ตั้งค่า"</string>
-    <string name="notifications_permission_confirm">อนุญาต</string>
-    <string name="notifications_permission_decline">ไม่อนุญาต</string>
-    <string name="notifications_permission_title">อนุญาตให้แอปส่งการแจ้งเตือนถึงคุณไหม</string>
     <string name="offline_notification_text">แตะเพื่อเปิดโฆษณา</string>
     <string name="offline_notification_title">ดูโฆษณาที่คุณบันทึกไว้ขณะออฟไลน์</string>
     <string name="offline_opt_in_confirm">ตกลง</string>

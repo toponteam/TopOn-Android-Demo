@@ -214,9 +214,6 @@
     <string name="native_headline">ठळक शीर्षक</string>
     <string name="native_media_view">मीडिया व्ह्यू</string>
     <string msgid="478774118347071097" name="not_set">"सेट केलेले नाही"</string>
-    <string name="notifications_permission_confirm">अनुमती द्या</string>
-    <string name="notifications_permission_decline">अनुमती देऊ नका</string>
-    <string name="notifications_permission_title">अ‍ॅपला तुम्हाला सूचना पाठवण्याची अनुमती द्यायची आहे का?</string>
     <string name="offline_notification_text">जाहिरात उघडण्यासाठी टॅप करा</string>
     <string name="offline_notification_title">तुम्ही ऑफलाइन असताना तुम्ही सेव्ह केलेली जाहिरात पहा</string>
     <string name="offline_opt_in_confirm">ओके</string>

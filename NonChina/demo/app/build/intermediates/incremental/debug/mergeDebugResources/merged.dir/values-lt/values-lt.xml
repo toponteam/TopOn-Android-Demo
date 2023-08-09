@@ -220,9 +220,6 @@
     <string name="native_headline">Antraštė</string>
     <string name="native_media_view">Medijos rodinys</string>
     <string msgid="478774118347071097" name="not_set">"Nenustatyta"</string>
-    <string name="notifications_permission_confirm">Leisti</string>
-    <string name="notifications_permission_decline">Neleisti</string>
-    <string name="notifications_permission_title">Leisti programai siųsti jums pranešimus?</string>
     <string name="offline_notification_text">Palieskite, kad atidarytumėte skelbimą</string>
     <string name="offline_notification_title">Peržiūrėkite skelbimą, kurį išsaugojote būdami neprisijungę</string>
     <string name="offline_opt_in_confirm">Gerai</string>

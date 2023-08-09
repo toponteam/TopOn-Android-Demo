@@ -210,9 +210,6 @@
     <string name="native_headline">শীর্ষক</string>
     <string name="native_media_view">মিডিয়া ভিউ</string>
     <string msgid="478774118347071097" name="not_set">"সেট করা হয়নি"</string>
-    <string name="notifications_permission_confirm">অনুমতি দিন</string>
-    <string name="notifications_permission_decline">অনুমতি দেবেন না</string>
-    <string name="notifications_permission_title">আপনাকে বিজ্ঞপ্তি পাঠানোর জন্য অ্যাপকে অনুমতি দেবেন?</string>
     <string name="offline_notification_text">বিজ্ঞাপন খোলার জন্য ট্যাপ করুন</string>
     <string name="offline_notification_title">অফলাইন থাকাকালীন আপনার সেভ করা বিজ্ঞাপন দেখুন</string>
     <string name="offline_opt_in_confirm">বুঝেছি</string>

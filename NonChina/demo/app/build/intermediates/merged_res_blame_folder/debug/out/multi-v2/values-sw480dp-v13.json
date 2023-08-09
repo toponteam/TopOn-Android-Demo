@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-sw480dp-v13/values-sw480dp-v13.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-sw480dp-v13/values-sw480dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/5fb021601b5b73c3b1ffe12a5213686f/transformed/jetified-anythink_core/res/values-sw480dp-v13/values-sw480dp-v13.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/87c69ded1cacbfe7cc109fd8efdbd75a/transformed/jetified-anythink_core/res/values-sw480dp-v13/values-sw480dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

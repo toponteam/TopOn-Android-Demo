@@ -210,9 +210,6 @@
     <string name="native_headline">სათაური</string>
     <string name="native_media_view">მედიაპანელი</string>
     <string msgid="478774118347071097" name="not_set">"არ არის დაყენებული"</string>
-    <string name="notifications_permission_confirm">დაშვება</string>
-    <string name="notifications_permission_decline">უარყოფა</string>
-    <string name="notifications_permission_title">ნებას დართავთ აპს, გამოგიგზავნოთ შეტყობინებები?</string>
     <string name="offline_notification_text">შეეხეთ რეკლამის გასახსნელად</string>
     <string name="offline_notification_title">ნახეთ თქვენ მიერ ხაზგარეშე ყოფნისას შენახული რეკლამა</string>
     <string name="offline_opt_in_confirm">კარგი</string>

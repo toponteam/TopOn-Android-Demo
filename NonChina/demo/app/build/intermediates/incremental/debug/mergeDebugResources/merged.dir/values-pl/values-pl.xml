@@ -220,9 +220,6 @@
     <string name="native_headline">Nagłówek</string>
     <string name="native_media_view">Widok multimediów</string>
     <string msgid="478774118347071097" name="not_set">"Nie ustawiono"</string>
-    <string name="notifications_permission_confirm">Zezwól</string>
-    <string name="notifications_permission_decline">Nie zezwalaj</string>
-    <string name="notifications_permission_title">Zezwolić aplikacji na wysyłanie powiadomień?</string>
     <string name="offline_notification_text">Kliknij, by otworzyć reklamę</string>
     <string name="offline_notification_title">Wyświetl reklamę zapisaną w trybie offline</string>
     <string name="offline_opt_in_confirm">OK</string>

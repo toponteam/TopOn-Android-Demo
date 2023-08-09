@@ -215,9 +215,6 @@
     <string name="native_headline">Naslov</string>
     <string name="native_media_view">Prikaz medija</string>
     <string msgid="478774118347071097" name="not_set">"Nije podešeno"</string>
-    <string name="notifications_permission_confirm">Dozvoli</string>
-    <string name="notifications_permission_decline">Ne dozvoli</string>
-    <string name="notifications_permission_title">Želite da dozvolite aplikaciji da vam šalje obaveštenja?</string>
     <string name="offline_notification_text">Dodirnite da biste otvorili oglas</string>
     <string name="offline_notification_title">Pregledajte oglas koji ste sačuvali dok ste bili oflajn</string>
     <string name="offline_opt_in_confirm">Potvrdi</string>

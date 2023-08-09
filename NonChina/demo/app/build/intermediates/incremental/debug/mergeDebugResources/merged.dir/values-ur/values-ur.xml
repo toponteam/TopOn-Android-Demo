@@ -214,9 +214,6 @@
     <string name="native_headline">ہیڈ لائن</string>
     <string name="native_media_view">میڈیا منظر</string>
     <string msgid="478774118347071097" name="not_set">"سیٹ نہیں ہے"</string>
-    <string name="notifications_permission_confirm">اجازت دیں</string>
-    <string name="notifications_permission_decline">اجازت نہ دیں</string>
-    <string name="notifications_permission_title">آپ کو اطلاعات بھیجنے کیلئے ایپ کو اجازت دیں؟</string>
     <string name="offline_notification_text">اشتہار کھولنے کیلئے تھپتھپائیں</string>
     <string name="offline_notification_title">جب آپ آف لائن تھے تب آپ نے جس اشتہار کو محفوظ کیا تھا اس کا ملاحظہ کریں</string>
     <string name="offline_opt_in_confirm">ٹھیک ہے</string>

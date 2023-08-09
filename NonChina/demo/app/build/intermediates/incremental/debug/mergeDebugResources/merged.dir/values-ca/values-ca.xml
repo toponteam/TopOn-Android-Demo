@@ -210,9 +210,6 @@
     <string name="native_headline">Títol</string>
     <string name="native_media_view">Visualització del contingut multimèdia</string>
     <string msgid="478774118347071097" name="not_set">"Sense definir"</string>
-    <string name="notifications_permission_confirm">Permet</string>
-    <string name="notifications_permission_decline">No permetis</string>
-    <string name="notifications_permission_title">Vols permetre que l\'aplicació t\'enviï notificacions?</string>
     <string name="offline_notification_text">Toca per obrir l\'anunci</string>
     <string name="offline_notification_title">Mira l\'anunci que has desat sense connexió</string>
     <string name="offline_opt_in_confirm">D\'acord</string>

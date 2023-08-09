@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/eecf25f7f451521950cac257199b7769/transformed/jetified-maio-1.1.16/res/values-w820dp-v13/values-w820dp-v13.xml",

@@ -215,9 +215,6 @@
     <string name="native_headline">Virsraksts</string>
     <string name="native_media_view">Multivides skats</string>
     <string msgid="478774118347071097" name="not_set">"Nav iestatīts"</string>
-    <string name="notifications_permission_confirm">Atļaut</string>
-    <string name="notifications_permission_decline">Neatļaut</string>
-    <string name="notifications_permission_title">Vai atļaut lietotnei sūtīt paziņojumus?</string>
     <string name="offline_notification_text">Pieskarieties, lai atvērtu reklāmu</string>
     <string name="offline_notification_title">Skatiet reklāmu, ko saglabājāt bezsaistē</string>
     <string name="offline_opt_in_confirm">Labi</string>

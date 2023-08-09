@@ -7,7 +7,6 @@
 
 package com.test.ad.demo;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -17,7 +16,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,62 +25,72 @@ import com.test.ad.demo.util.PlacementIdUtil;
 
 import org.json.JSONObject;
 
-public class MainActivity extends Activity implements View.OnClickListener {
-    private RelativeLayout mRlNativeAd;
-    private RelativeLayout mRlRewardVideoAd;
-    private RelativeLayout mRlInterstitialAd;
-    private RelativeLayout mRlBannerAd;
-    private RelativeLayout mRlSplashAd;
+public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initView();
-        initListener();
-        initData();
-    }
-
-    private void initView() {
-        ((TextView) findViewById(R.id.tv_version)).setText(getResources().getString(R.string.anythink_sdk_version, ATSDK.getSDKVersionName()) + PlacementIdUtil.MODE);
         ((TextView) findViewById(R.id.tv_sdk_demo)).setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-        mRlNativeAd = findViewById(R.id.nativeBtn);
-        mRlSplashAd = findViewById(R.id.splashBtn);
-        mRlBannerAd = findViewById(R.id.bannerBtn);
-        mRlInterstitialAd = findViewById(R.id.interstitialBtn);
-        mRlRewardVideoAd = findViewById(R.id.rewardedVideoBtn);
-    }
+        findViewById(R.id.nativeBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NativeMainActivity.class));
+            }
+        });
 
-    private void initListener() {
-        mRlNativeAd.setOnClickListener(this);
-        mRlSplashAd.setOnClickListener(this);
-        mRlBannerAd.setOnClickListener(this);
-        mRlInterstitialAd.setOnClickListener(this);
-        mRlRewardVideoAd.setOnClickListener(this);
-    }
+        findViewById(R.id.rewardedVideoBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RewardVideoAdActivity.class));
+            }
+        });
 
-    private void initData() {
+        findViewById(R.id.interstitialBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, InterstitialAdActivity.class));
+            }
+        });
+
+        findViewById(R.id.bannerBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BannerAdActivity.class));
+            }
+        });
+
+        findViewById(R.id.splashBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SplashAdActivity.class));
+            }
+        });
+
+        ((TextView) findViewById(R.id.tv_version)).setText(getResources().getString(R.string.anythink_sdk_version, ATSDK.getSDKVersionName()) + PlacementIdUtil.MODE);
+
         ATSDK.testModeDeviceInfo(this, new DeviceInfoCallback() {
             @Override
             public void deviceInfo(String deviceInfo) {
                 if (!TextUtils.isEmpty(deviceInfo)) {
                     try {
                         JSONObject jsonObject = new JSONObject(deviceInfo);
-                        String androidId = jsonObject.optString("AndroidID");
+                        String androidID = jsonObject.optString("AndroidID");
 
                         MainActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
 
                                 TextView deviceIdTextView = (TextView) findViewById(R.id.tv_device_id);
-                                deviceIdTextView.setText(getResources().getString(R.string.anythink_click_to_copy_device_id, androidId));
+                                deviceIdTextView.setText(getResources().getString(R.string.anythink_click_to_copy_device_id, androidID));
                                 deviceIdTextView.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        copyContentToClipboard(MainActivity.this, androidId);
+                                        copyContentToClipboard(MainActivity.this, androidID);
 
-                                        Toast.makeText(MainActivity.this, "AndroidId：" + androidId, Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(MainActivity.this, "AndroidID：" + androidID, Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             }
@@ -96,37 +104,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         });
     }
 
-    private void startAdPage(Class<?> adPageClass) {
-        startActivity(new Intent(MainActivity.this, adPageClass));
-    }
-
     public void copyContentToClipboard(Context context, String content) {
         ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData mClipData = ClipData.newPlainText("Label", content);
         cm.setPrimaryClip(mClipData);
     }
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View v) {
-        Class<?> adPageClass = null;
-        switch (v.getId()) {
-            case R.id.nativeBtn:
-                adPageClass = NativeMainActivity.class;
-                break;
-            case R.id.splashBtn:
-                adPageClass = SplashAdActivity.class;
-                break;
-            case R.id.interstitialBtn:
-                adPageClass = InterstitialAdActivity.class;
-                break;
-            case R.id.bannerBtn:
-                adPageClass = BannerAdActivity.class;
-                break;
-            case R.id.rewardedVideoBtn:
-                adPageClass = RewardVideoAdActivity.class;
-                break;
-        }
-        startAdPage(adPageClass);
-    }
 }

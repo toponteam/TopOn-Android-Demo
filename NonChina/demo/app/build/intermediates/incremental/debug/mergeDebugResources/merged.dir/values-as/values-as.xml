@@ -150,9 +150,6 @@
     <string name="native_headline">শিৰোনাম</string>
     <string name="native_media_view">মিডিয়া ভিউ</string>
     <string msgid="478774118347071097" name="not_set">"ছেট কৰা হোৱা নাই"</string>
-    <string name="notifications_permission_confirm">অনুমতি দিয়ক</string>
-    <string name="notifications_permission_decline">অনুমতি নিদিব</string>
-    <string name="notifications_permission_title">এপক আপোনালৈ জাননী পঠিয়াবলৈ অনুমতি দিবনে?</string>
     <string name="offline_notification_text">বিজ্ঞাপন খুলিবলৈ টিপক</string>
     <string name="offline_notification_title">আপুনি অফলাইন হৈ থাকোঁতে ছেভ কৰা বিজ্ঞাপনটো চাওক</string>
     <string name="offline_opt_in_confirm">ঠিক আছে</string>

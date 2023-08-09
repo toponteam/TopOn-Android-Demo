@@ -210,9 +210,6 @@
     <string name="native_headline">Kichwa</string>
     <string name="native_media_view">Mwonekano wa Maudhui</string>
     <string msgid="478774118347071097" name="not_set">"Haijawekwa"</string>
-    <string name="notifications_permission_confirm">Ruhusu</string>
-    <string name="notifications_permission_decline">Usiruhusu</string>
-    <string name="notifications_permission_title">Ungependa kuruhusu programu ikutumie arifa?</string>
     <string name="offline_notification_text">Gusa ili ufungue tangazo</string>
     <string name="offline_notification_title">Angalia tangazo ulilohifadhi ulipokuwa nje ya mtandao</string>
     <string name="offline_opt_in_confirm">Sawa</string>

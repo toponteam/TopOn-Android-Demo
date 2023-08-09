@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/c710f486a970e7a5e2d51e4281423a28/transformed/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",

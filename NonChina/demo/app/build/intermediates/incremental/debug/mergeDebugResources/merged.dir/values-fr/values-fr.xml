@@ -48,7 +48,6 @@
     <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Partager avec <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Réduire"</string>
     <string name="applovin_agree_message">Cliquez sur \"Continuer\" afin d\'utiliser notre application.</string>
-    <string name="applovin_alt_privacy_policy_text"/>
     <string name="applovin_continue_button_text">Continuer</string>
     <string name="applovin_gdpr_advertising_partners_screen_message">Comme détaillé dans notre politique de confidentialité et avec votre accord nous pourrions partager ces données avec les partenaires suivant pour leur permettre de diffuser des publicités personnalisés:</string>
     <string name="applovin_gdpr_advertising_partners_screen_title">Du contenu et des publicités personnalisé</string>
@@ -67,7 +66,6 @@
     <string name="applovin_gdpr_main_screen_learn_more_button_text">En savoir plus</string>
     <string name="applovin_gdpr_main_screen_message">Comme expliqué dans notre politique de confidentialité, avec votre autorisation nous collectons certaines informations de votre téléphone telles que l\'adresse IP et les identifiants annonceurs. Ces données nous permettent ainsi qu\'à nos partenaires d\'afficher des contenus publicitaires plus pertinents.\n\nCi-dessous vous pouvez autoriser nous et nos partenaires a utiliser ces données pour les besoins suivants:</string>
     <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">Contenus et publicités personnalisés</string>
-    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">J\'ai plus de 16 ans, j\'accepte les termes et conditions, et je reconnais que la politique de confidentialité s\'applique.</string>
     <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">Je confirme être âgé de plus de seize ans ainsi qu\'avoir lu et compris la politique de confidentialité.</string>
     <string name="applovin_gdpr_main_screen_title">Merci d\'avoir téléchargé \n%s!</string>
     <string name="applovin_gdpr_understand_and_continue_button_text">J\'ai lu et j\'accepte</string>
@@ -76,7 +74,6 @@
     <string name="applovin_pp_title">Pour utiliser %s vous devez confirmer avoir lu et accepté notre politique de confidentialité.</string>
     <string name="applovin_privacy_policy_text">politique de confidentialité</string>
     <string name="applovin_terms_of_service_text">termes et conditions</string>
-    <string name="applovin_terms_of_use_text">termes et conditions</string>
     <string name="bigo_ad_about_app_default">À propos de cette application</string>
     <string name="bigo_ad_click_to_try">Cliquez pour l\'essayer ?</string>
     <string name="bigo_ad_comment_num_text">Commentaires</string>
@@ -252,9 +249,6 @@
     <string name="native_headline">Titre</string>
     <string name="native_media_view">Vue multimédia</string>
     <string msgid="478774118347071097" name="not_set">"Non définie"</string>
-    <string name="notifications_permission_confirm">Autoriser</string>
-    <string name="notifications_permission_decline">Ne pas autoriser</string>
-    <string name="notifications_permission_title">Autoriser l\'appli à vous envoyer des notifications ?</string>
     <string name="offline_notification_text">Appuyez pour ouvrir l\'annonce</string>
     <string name="offline_notification_title">Afficher l\'annonce que vous avez enregistrée lorsque vous n\'aviez pas accès à Internet</string>
     <string name="offline_opt_in_confirm">OK</string>

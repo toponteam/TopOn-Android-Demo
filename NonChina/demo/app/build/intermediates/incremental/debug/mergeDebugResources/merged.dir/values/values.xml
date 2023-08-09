@@ -1060,7 +1060,7 @@
     <dimen name="anythink_7dp">7dp</dimen>
     <dimen name="anythink_8dp">8dp</dimen>
     <dimen name="anythink_95dp">95dp</dimen>
-    <dimen name="anythink_button_size">13dp</dimen>
+    <dimen name="anythink_button_size">14sp</dimen>
     <dimen name="anythink_desc_margin_top">4dp</dimen>
     <dimen name="anythink_desc_size">14sp</dimen>
     <dimen name="anythink_format_pic_height">165dp</dimen>
@@ -1077,8 +1077,6 @@
     <dimen name="anythink_myoffer_half_screen_icon_size">45dp</dimen>
     <dimen name="anythink_myoffer_half_screen_title_size_landscape">12sp</dimen>
     <dimen name="anythink_myoffer_half_screen_title_size_portrait">14sp</dimen>
-    <dimen name="anythink_myoffer_landscape_banner_cta_max_width">150dp</dimen>
-    <dimen name="anythink_myoffer_landscape_banner_cta_padding_horizontal">12dp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_large">13sp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_middle">12sp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_small">10sp</dimen>
@@ -1809,6 +1807,7 @@
     <item name="bitmap_load_references_tag" type="id"/>
     <item name="controller" type="id"/>
     <item name="div_additional_background_layer_tag" type="id"/>
+    <item name="div_buttons" type="id"/>
     <item name="div_custom_tag" type="id"/>
     <item name="div_default_background_list_tag" type="id"/>
     <item name="div_focused_background_list_tag" type="id"/>
@@ -1973,7 +1972,6 @@
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="al_exo_media_button_opacity_percentage_disabled">33</integer>
     <integer name="al_exo_media_button_opacity_percentage_enabled">100</integer>
-    <integer name="anythink_native_button_col">2</integer>
     <integer name="birth_year_min">1900</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="chat_text_length_max">140</integer>
@@ -2199,17 +2197,7 @@
     <string name="anythink_myoffer_feedback_video_freeze">Video Freeze</string>
     <string name="anythink_myoffer_feedback_violation_of_laws">Illegal</string>
     <string name="anythink_myoffer_feedback_vulgar_porn">Vulgar porn</string>
-    <string name="anythink_myoffer_g2c_hint_text">You can click the content below or the button to get more details</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_hint_text1">Ignore ads to view details</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_hint_text2">continue when you return</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_ignore">Ignore</string>
-    <string name="anythink_myoffer_g2c_question_dialog_default_answer">AD</string>
-    <string name="anythink_myoffer_g2c_question_dialog_hint">Note: Please select and browse the relevant content</string>
-    <string name="anythink_myoffer_g2c_question_dialog_title">Which option does the video content relate to?</string>
-    <string name="anythink_myoffer_g2c_seek_to_click">Drag to complete the puzzle</string>
-    <string name="anythink_myoffer_g2c_slide_to_click">Swipe to view more</string>
     <string name="anythink_myoffer_give_up">Cancel</string>
-    <string name="anythink_myoffer_next_step">Next</string>
     <string name="anythink_myoffer_panel_permission">Permission</string>
     <string name="anythink_myoffer_panel_privacy">Privacy</string>
     <string name="anythink_myoffer_panel_version">v%s</string>
@@ -2227,7 +2215,6 @@
     <string name="anythink_myoffer_special_note_delay_click">Jump after &lt;font color="#FFFFFF">%d&lt;/font> s</string>
     <string name="anythink_myoffer_special_note_delay_click_simple">Jump after &lt;font color="#FFFFFF">%d&lt;/font> s</string>
     <string name="anythink_myoffer_splash_skip_text">Skip</string>
-    <string name="anythink_myoffer_tap_for_detail">Tap for details</string>
     <string name="anythink_myoffer_webview_reload">Reload Ad.</string>
     <string name="anythink_native_draw">Vertical Draw Video</string>
     <string name="anythink_native_express">Native Express</string>
@@ -2264,7 +2251,6 @@
     <string name="anythink_title_splash">Splash</string>
     <string name="app_name">TopOn SDK Demo</string>
     <string name="applovin_agree_message">Please press \"Continue\" if you choose to start using our app.</string>
-    <string name="applovin_alt_privacy_policy_text"/>
     <string name="applovin_continue_button_text">Continue</string>
     <string name="applovin_creative_debugger_disabled_text" translatable="false">Enable the Creative Debugger SDK settings in order to view recent ads.</string>
     <string name="applovin_creative_debugger_no_ads_text" translatable="false">No recently displayed ads found.</string>
@@ -2285,7 +2271,6 @@
     <string name="applovin_gdpr_main_screen_learn_more_button_text">Learn More</string>
     <string name="applovin_gdpr_main_screen_message">As explained in our Privacy Policy, with your consent, we collect certain information concerning your device, such as IP address and advertising identifiers. This data allows us and our partners to serve personalized ads and content and make improvements.\n\nBelow you can choose to allow us and/or our partners to use this data for the following purposes:</string>
     <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">Personalized ads and content</string>
-    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">I am over the age of sixteen, accept the Terms of Use, and acknowledge the Privacy Policy applies.</string>
     <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">I certify that I am over the age of sixteen and that I have read and understood the Privacy Policy.</string>
     <string name="applovin_gdpr_main_screen_title">Thank you for downloading \n%s!</string>
     <string name="applovin_gdpr_understand_and_continue_button_text">I understand and confirm</string>
@@ -2295,7 +2280,6 @@
     <string name="applovin_pp_title">To use %s you must affirm that you have reviewed and acknowledged our Privacy Policy.</string>
     <string name="applovin_privacy_policy_text">Privacy Policy</string>
     <string name="applovin_terms_of_service_text">Terms \u0026 Conditions</string>
-    <string name="applovin_terms_of_use_text">Terms of Use</string>
     <string name="bigo_ad_about_app_default">About this app</string>
     <string name="bigo_ad_click_to_try">Click to try?</string>
     <string name="bigo_ad_comment_num_text">Reviews</string>
@@ -2573,12 +2557,6 @@
     <string name="nend_full_board_ad_action_button_text">詳細をみる</string>
     <string name="no">No</string>
     <string name="not_set">Not set</string>
-    <string description="Label on the button to go to settings. [CHAR_LIMIT=20]" name="notifications_permission_confirm">
-      Allow</string>
-    <string description="Label on the button to decline going to settings. [CHAR_LIMIT=20]" name="notifications_permission_decline">
-      Don\'t allow</string>
-    <string description="Body of the dialog presented when an ad wants to grant notifications permission. [CHAR_LIMIT=NONE]" name="notifications_permission_title">
-      Allow app to send you notifications?</string>
     <string description="Text of the notification which directs the user to the landing page of the ad. [CHAR_LIMIT=NONE]" name="offline_notification_text">
       Tap to open ad</string>
     <string description="Title of the notification which directs the user to the landing page of the ad. [CHAR_LIMIT=NONE]" name="offline_notification_title">
@@ -5049,9 +5027,6 @@
         <item name="statusBarBackground">#000000</item>
     </style>
     <style name="YandexAdsInternal"/>
-    <style name="YandexAdsInternal.AdActivity" parent="android:Theme.Translucent.NoTitleBar">
-        <item name="android:forceDarkAllowed" ns2:targetApi="q">false</item>
-    </style>
     <style name="YandexAdsInternal.BaseCallToAction" parent="android:Widget">
         <item name="android:textAppearance">@style/YandexAdsInternal.CallToActionTextAppearance</item>
         <item name="android:minHeight">@dimen/yandex_ads_internal_button_min_height</item>
@@ -6435,14 +6410,11 @@
         
         <attr name="selectableItemBackground"/>
     </declare-styleable>
-    <declare-styleable name="Banner">
-        <attr format="string" name="location"/>
-        <attr format="enum" name="size">
+    <declare-styleable name="Banner"><attr format="string" name="location"/><attr format="enum" name="size">
             <enum name="STANDARD" value="0"/>
             <enum name="MEDIUM" value="1"/>
             <enum name="LEADERBOARD" value="2"/>
-        </attr>
-    </declare-styleable>
+        </attr></declare-styleable>
     <declare-styleable name="BannerLayout">
         <attr format="enum" name="bannerAdSize">
             <enum name="MPU_300x250" value="250"/>
@@ -6781,6 +6753,13 @@
     <declare-styleable name="GridContainer">
         <attr name="android:columnCount"/>
         <attr name="android:gravity"/>
+    </declare-styleable>
+    <declare-styleable name="GridContainer_Layout">
+        <attr name="android:layout_gravity"/>
+        <attr name="android:layout_columnSpan"/>
+        <attr name="android:layout_rowSpan"/>
+        <attr name="android:layout_columnWeight"/>
+        <attr name="android:layout_rowWeight"/>
     </declare-styleable>
     <declare-styleable name="HeliumBannerAd">
         <attr format="string" name="heliumPlacementName"/>
@@ -7842,6 +7821,9 @@
                  result to valid color values. Saturate(S + D) -->
             <enum name="add" value="16"/>
         </attr>
+    </declare-styleable>
+    <declare-styleable name="ViewPager2">
+        <attr name="android:orientation"/>
     </declare-styleable>
     <declare-styleable name="ViewPagerFixedSizeLayout">
         <attr format="dimension" name="collapsiblePaddingBottom"/>

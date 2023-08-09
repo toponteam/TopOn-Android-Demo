@@ -207,9 +207,6 @@
     <string name="native_headline">ចំណង​ជើង</string>
     <string name="native_media_view">ទិដ្ឋភាពមេឌៀ</string>
     <string msgid="478774118347071097" name="not_set">"មិនបានកំណត់"</string>
-    <string name="notifications_permission_confirm">អនុញ្ញាត</string>
-    <string name="notifications_permission_decline">កុំអនុញ្ញាត</string>
-    <string name="notifications_permission_title">អនុញ្ញាតឱ្យកម្មវិធីផ្ញើការ​ជូនដំណឹងឱ្យអ្នកឬ?</string>
     <string name="offline_notification_text">ចុចដើម្បីបើក​ការផ្សាយពាណិជ្ជកម្ម</string>
     <string name="offline_notification_title">មើល​ការផ្សាយពាណិជ្ជកម្ម​ដែលអ្នកបានរក្សាទុក នៅពេលអ្នកគ្មានអ៊ីនធឺណិត</string>
     <string name="offline_opt_in_confirm">យល់ព្រម</string>

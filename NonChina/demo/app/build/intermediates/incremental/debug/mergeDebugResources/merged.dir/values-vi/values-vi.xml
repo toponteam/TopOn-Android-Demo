@@ -215,9 +215,6 @@
     <string name="native_headline">Tiêu đề</string>
     <string name="native_media_view">Nội dung nghe nhìn</string>
     <string msgid="478774118347071097" name="not_set">"Chưa đặt"</string>
-    <string name="notifications_permission_confirm">Cho phép</string>
-    <string name="notifications_permission_decline">Không cho phép</string>
-    <string name="notifications_permission_title">Cho phép ứng dụng gửi thông báo cho bạn?</string>
     <string name="offline_notification_text">Nhấn để mở quảng cáo</string>
     <string name="offline_notification_title">Xem quảng cáo đã lưu khi bạn không có kết nối mạng</string>
     <string name="offline_opt_in_confirm">OK</string>

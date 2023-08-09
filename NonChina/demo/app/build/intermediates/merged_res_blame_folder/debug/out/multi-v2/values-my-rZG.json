@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-my-rZG/values-my-rZG.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-my-rZG/values-my-rZG.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/7219359416f5da79ac046167fdb9fa51/transformed/jetified-ads-lang-13.4.62.302/res/values-my-rZG/values-my-rZG.xml",

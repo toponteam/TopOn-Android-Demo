@@ -210,9 +210,6 @@
     <string name="native_headline">തലക്കെട്ട്</string>
     <string name="native_media_view">മീഡിയ വ്യൂ</string>
     <string msgid="478774118347071097" name="not_set">"സജ്ജീകരിച്ചിട്ടില്ല"</string>
-    <string name="notifications_permission_confirm">അനുവദിക്കുക</string>
-    <string name="notifications_permission_decline">അനുവദിക്കരുത്</string>
-    <string name="notifications_permission_title">നിങ്ങൾക്ക് അറിയിപ്പുകൾ അയയ്‌ക്കാൻ ആപ്പിനെ അനുവദിക്കണോ?</string>
     <string name="offline_notification_text">പരസ്യം തുറക്കാൻ ടാപ്പ് ചെയ്യുക</string>
     <string name="offline_notification_title">നിങ്ങൾ ഓഫ്‌ലൈനിൽ ആയിരുന്നപ്പോൾ സംരക്ഷിച്ച പരസ്യം കാണുക</string>
     <string name="offline_opt_in_confirm">ശരി</string>

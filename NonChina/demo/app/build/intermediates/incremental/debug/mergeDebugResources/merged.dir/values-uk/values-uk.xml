@@ -220,9 +220,6 @@
     <string name="native_headline">Заголовок</string>
     <string name="native_media_view">Графічний контент</string>
     <string msgid="478774118347071097" name="not_set">"Не налаштовано"</string>
-    <string name="notifications_permission_confirm">Дозволити</string>
-    <string name="notifications_permission_decline">Не дозволяти</string>
-    <string name="notifications_permission_title">Дозволити додатку надсилати вам сповіщення?</string>
     <string name="offline_notification_text">Натисніть, щоб відкрити оголошення</string>
     <string name="offline_notification_title">Перегляньте оголошення, яке ви зберегли в режимі офлайн</string>
     <string name="offline_opt_in_confirm">OK</string>

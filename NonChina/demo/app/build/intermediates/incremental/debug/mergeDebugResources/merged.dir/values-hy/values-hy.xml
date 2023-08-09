@@ -111,9 +111,6 @@
     <string name="native_headline">Վերնագիր</string>
     <string name="native_media_view">Մեդիա տեսք</string>
     <string msgid="478774118347071097" name="not_set">"Կարգավորված չէ"</string>
-    <string name="notifications_permission_confirm">Թույլատրել</string>
-    <string name="notifications_permission_decline">Չթույլատրել</string>
-    <string name="notifications_permission_title">Թույլատրե՞լ հավելվածին, որ ձեզ ծանուցումներ ուղարկի։</string>
     <string name="offline_notification_text">Հպեք՝ հայտարարությունը բացելու համար</string>
     <string name="offline_notification_title">Դիտեք հայտարարությունը, որը պահել եք անցանց ռեժիմում</string>
     <string name="offline_opt_in_confirm">Եղավ</string>

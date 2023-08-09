@@ -61,8 +61,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.NativeAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Native" />
+            android:label="Native"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.NativeDrawVideoActivity"
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
@@ -76,23 +78,35 @@
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
             android:name="com.test.ad.demo.RewardVideoAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="RewardedVideo" />
+            android:label="RewardedVideo"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.InterstitialAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Interstitial" />
+            android:label="Interstitial"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.BannerAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Banner" />
+            android:label="Banner"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
-            android:label="Splash" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowInCurrentActivity"
@@ -140,7 +154,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_tt_file_path" />
-        </provider> <!-- source file: china/network_sdk/baidu/9.31/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/baidu/9.29/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/sigmob/4.9.0/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/mimo/5.2.1/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/klevin/2.11.0.3/AndroidManifest.xml -->

@@ -111,9 +111,6 @@
     <string name="native_headline">Башкы сап</string>
     <string name="native_media_view">Мультимедия борбору</string>
     <string msgid="478774118347071097" name="not_set">"Коюлган эмес"</string>
-    <string name="notifications_permission_confirm">Уруксат берүү</string>
-    <string name="notifications_permission_decline">Тыюу салуу</string>
-    <string name="notifications_permission_title">Колдонмого билдирмелерди жөнөтүүгө уруксат бересизби?</string>
     <string name="offline_notification_text">Жарнаманы ачуу үчүн таптаңыз</string>
     <string name="offline_notification_title">Оффлайн режиминде сактаган жарнамаңызды көрүңүз</string>
     <string name="offline_opt_in_confirm">ЖАРАЙТ</string>

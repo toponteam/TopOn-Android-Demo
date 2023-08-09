@@ -210,9 +210,6 @@
     <string name="native_headline">Título</string>
     <string name="native_media_view">Controis multimedia</string>
     <string msgid="478774118347071097" name="not_set">"Sen configurar"</string>
-    <string name="notifications_permission_confirm">Permitir</string>
-    <string name="notifications_permission_decline">Non permitir</string>
-    <string name="notifications_permission_title">Queres permitir que a aplicación che envíe notificacións?</string>
     <string name="offline_notification_text">Toca para abrir o anuncio</string>
     <string name="offline_notification_title">Mira o anuncio que gardaches cando estabas sen conexión</string>
     <string name="offline_opt_in_confirm">Si</string>

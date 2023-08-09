@@ -69,17 +69,7 @@
     <string name="anythink_myoffer_feedback_video_freeze">广告卡顿</string>
     <string name="anythink_myoffer_feedback_violation_of_laws">违规违法</string>
     <string name="anythink_myoffer_feedback_vulgar_porn">内容低俗</string>
-    <string name="anythink_myoffer_g2c_hint_text">你可以通过点击下方内容或按钮，查看更详细的信息。</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_hint_text1">可以选择忽略当前广告</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_hint_text2">浏览详情 返回可继续播放</string>
-    <string name="anythink_myoffer_g2c_jump_confirm_ignore">忽略</string>
-    <string name="anythink_myoffer_g2c_question_dialog_default_answer">广告</string>
-    <string name="anythink_myoffer_g2c_question_dialog_hint">规则说明：请选择后浏览答案相关内容</string>
-    <string name="anythink_myoffer_g2c_question_dialog_title">播放内容与下面哪个选项相关？</string>
-    <string name="anythink_myoffer_g2c_seek_to_click">向右拖动滑块完成拼图</string>
-    <string name="anythink_myoffer_g2c_slide_to_click">滑动后查看更多</string>
     <string name="anythink_myoffer_give_up">取 消</string>
-    <string name="anythink_myoffer_next_step">下一步</string>
     <string name="anythink_myoffer_panel_permission">权限</string>
     <string name="anythink_myoffer_panel_privacy">隐私</string>
     <string name="anythink_myoffer_reward_exit_confirm_continue">继续观看视频</string>
@@ -96,7 +86,6 @@
     <string name="anythink_myoffer_special_note_delay_click">&lt;font color="#FFFFFF">%d&lt;/font> 秒后跳转详情</string>
     <string name="anythink_myoffer_special_note_delay_click_simple">&lt;font color="#FFFFFF">%d&lt;/font> 秒后跳转</string>
     <string name="anythink_myoffer_splash_skip_text">跳过</string>
-    <string name="anythink_myoffer_tap_for_detail">点击查看详情</string>
     <string name="anythink_myoffer_webview_reload">重新加载广告</string>
     <string name="anythink_reward_appdesc">app desc</string>
     <string name="anythink_reward_apptitle">app title</string>
@@ -123,7 +112,6 @@
     <string name="anythink_title_splash">Splash</string>
     <string name="app_name">TopOn SDK Demo</string>
     <string name="applovin_agree_message">如果您选择开始使用我们的应用，请点击\"继续\"</string>
-    <string name="applovin_alt_privacy_policy_text"/>
     <string name="applovin_continue_button_text">继续</string>
     <string name="applovin_gdpr_advertising_partners_screen_message">如同我们在隐私政策中所表述的，在您同意的前提下，我们可能将此数据分享给以下的合作伙伴，以帮助他们提供个性化广告和内容：</string>
     <string name="applovin_gdpr_advertising_partners_screen_title">个性化广告和内容</string>
@@ -142,7 +130,6 @@
     <string name="applovin_gdpr_main_screen_learn_more_button_text">了解更多</string>
     <string name="applovin_gdpr_main_screen_message">如同我们在隐私政策中所表述的，在您同意的前提下，我们会收集您设备的相关信息，比如IP地址和广告标识符。该数据将允许我们和我们的合作伙伴为您提供个性化的广告和内容，以及持续改善您的体验。\n\n您可以选择允许我们和我们的合作伙伴出于下列目的使用此数据</string>
     <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">个性化的广告内容</string>
-    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">我年满16周岁，接受使用条款并知悉隐私政策应用于此。</string>
     <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">我确认本人已满16周岁并已知悉和理解该隐私政策。</string>
     <string name="applovin_gdpr_main_screen_title">感谢您下载 \n%s!</string>
     <string name="applovin_gdpr_understand_and_continue_button_text">我理解并同意</string>
@@ -151,7 +138,6 @@
     <string name="applovin_pp_title">使用%s之前, 您必须确认您已经阅读并知悉我们的隐私政策.</string>
     <string name="applovin_privacy_policy_text">隐私政策</string>
     <string name="applovin_terms_of_service_text">服务条款</string>
-    <string name="applovin_terms_of_use_text">使用条款</string>
     <string name="mbridge_cm_feedback_btn_text">反馈</string>
     <string name="mbridge_cm_feedback_dialog_close_close">关闭</string>
     <string name="mbridge_cm_feedback_dialog_close_submit">提交</string>

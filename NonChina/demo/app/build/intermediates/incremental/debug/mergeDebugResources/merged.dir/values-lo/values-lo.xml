@@ -207,9 +207,6 @@
     <string name="native_headline">ຫົວຂໍ້</string>
     <string name="native_media_view">ມຸມມອງມີເດຍ</string>
     <string msgid="478774118347071097" name="not_set">"ບໍ່ໄດ້ຕັ້ງຄ່າ"</string>
-    <string name="notifications_permission_confirm">ອະນຸຍາດ</string>
-    <string name="notifications_permission_decline">ບໍ່ອະນຸຍາດ</string>
-    <string name="notifications_permission_title">ອະນຸຍາດໃຫ້ແອັບສົ່ງການແຈ້ງເຕືອນໃຫ້ທ່ານບໍ?</string>
     <string name="offline_notification_text">ແຕະເພື່ອເປີດໂຄສະນາ</string>
     <string name="offline_notification_title">ເບິ່ງໂຄສະນາທີ່ທ່ານບັນທຶກໄວ້ຕອນທ່ານອອບລາຍ</string>
     <string name="offline_opt_in_confirm">ຕົກລົງ</string>

@@ -222,9 +222,6 @@
     <string name="native_headline">हेडलाइन</string>
     <string name="native_media_view">मीडिया व्यू</string>
     <string msgid="478774118347071097" name="not_set">"सेट नहीं है"</string>
-    <string name="notifications_permission_confirm">अनुमति दें</string>
-    <string name="notifications_permission_decline">अनुमति न दें</string>
-    <string name="notifications_permission_title">ऐप्लिकेशन को सूचनाएं भेजने की अनुमति देनी है?</string>
     <string name="offline_notification_text">विज्ञापन खोलने के लिए टैप करें</string>
     <string name="offline_notification_title">वह विज्ञापन देखें जिसे आपने तब सेव किया था, जब आप ऑफ़लाइन थे</string>
     <string name="offline_opt_in_confirm">ठीक है</string>

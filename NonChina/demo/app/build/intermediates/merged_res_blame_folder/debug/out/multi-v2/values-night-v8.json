@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-64:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-67:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/developertopon/.gradle/caches/transforms-3/0892ab513abfaace27d796b93ef0c56e/transformed/jetified-applovin-sdk-11.10.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/f2419a4926007f9ada03dbf2b47b9a59/transformed/jetified-applovin-sdk-11.9.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

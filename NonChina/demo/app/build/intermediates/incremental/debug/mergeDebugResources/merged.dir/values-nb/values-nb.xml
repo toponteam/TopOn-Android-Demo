@@ -210,9 +210,6 @@
     <string name="native_headline">Overskrift</string>
     <string name="native_media_view">Medieinnhold</string>
     <string msgid="478774118347071097" name="not_set">"Ikke angitt"</string>
-    <string name="notifications_permission_confirm">Tillat</string>
-    <string name="notifications_permission_decline">Ikke tillat</string>
-    <string name="notifications_permission_title">Vil du la appen sende deg varsler?</string>
     <string name="offline_notification_text">Trykk for å åpne annonsen</string>
     <string name="offline_notification_title">Se annonsen du lagret mens du var uten nett</string>
     <string name="offline_opt_in_confirm">OK</string>
