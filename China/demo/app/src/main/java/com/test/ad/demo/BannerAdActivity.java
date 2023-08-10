@@ -7,137 +7,103 @@
 
 package com.test.ad.demo;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
-import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
-import com.test.ad.demo.util.PlacementIdUtil;
-import com.test.ad.demo.utils.ViewUtil;
+import com.test.ad.demo.base.BaseActivity;
+import com.test.ad.demo.bean.CommonViewBean;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-public class BannerAdActivity extends Activity {
+public class BannerAdActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = BannerAdActivity.class.getSimpleName();
 
-    ATBannerView mBannerView;
+    private ATBannerView mBannerView;
     private TextView tvLoadAdBtn;
-    private TextView tvShowLog;
     private ScrollView scrollView;
+    private FrameLayout mBannerViewContainer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getContentViewId() {
+        return R.layout.activity_banner;
+    }
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_banner);
+    @Override
+    protected int getAdType() {
+        return ATAdConst.ATMixedFormatAdType.BANNER;
+    }
 
+    @Override
+    protected void onSelectPlacementId(String placementId) {
+        mBannerView.setPlacementId(placementId);
+        ATBannerView.entryAdScenario(placementId, AdConst.SCENARIO_ID.BANNER_AD_SCENARIO);
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
         findViewById(R.id.rl_type).setSelected(true);
-        tvShowLog = findViewById(R.id.tv_show_log);
-        tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
-        tvShowLog.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN || motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
-                    view.getParent().requestDisallowInterceptTouchEvent(true);
-                }
-                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    view.getParent().requestDisallowInterceptTouchEvent(false);
-                }
-                return false;
-            }
-        });
-
-        TitleBar titleBar = (TitleBar) findViewById(R.id.title_bar);
-        titleBar.setTitle(R.string.anythink_title_banner);
-        titleBar.setListener(new TitleBarClickListener() {
-            @Override
-            public void onBackClick(View v) {
-                finish();
-            }
-        });
-
         tvLoadAdBtn = findViewById(R.id.banner_load_ad_btn);
+        mBannerViewContainer = findViewById(R.id.adview_container);
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getBannerPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner_1);
-        final FrameLayout frameLayout = findViewById(R.id.adview_container);
-
-        String placementName = placementNameList.get(0);
-        init(placementIdMap.get(placementName));
-
-        frameLayout.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                BannerAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-//                Toast.makeText(getApplicationContext(),
-//                        parent.getItemAtPosition(position).toString(),
-//                        Toast.LENGTH_SHORT).show();
-                String placementName = parent.getSelectedItem().toString();
-                mBannerView.setPlacementId(placementIdMap.get(placementName));
-                mBannerView.setVisibility(View.VISIBLE);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
+        //Loading and displaying ads should keep the container and BannerView visible all the time
+        mBannerViewContainer.setVisibility(View.VISIBLE);
 
         scrollView = findViewById(R.id.scroll_view);
 
-        tvLoadAdBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                frameLayout.setVisibility(View.VISIBLE);
-
-                int padding = dip2px(12);
-                Map<String, Object> localMap = new HashMap<>();
-                localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
-                localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
-                mBannerView.setLocalExtra(localMap);
-
-                mBannerView.loadAd();
-            }
-        });
-
+        initBannerView();
+        addBannerViewToContainer();
     }
 
-    private void init(String placementId) {
-        mBannerView = new ATBannerView(this);
-        mBannerView.setPlacementId(placementId);
+    @Override
+    protected CommonViewBean getCommonViewBean() {
+        CommonViewBean commonViewBean = new CommonViewBean();
+        commonViewBean.setTitleBar(findViewById(R.id.title_bar));
+        commonViewBean.setTvLogView(findViewById(R.id.tv_show_log));
+        commonViewBean.setSpinnerSelectPlacement(findViewById(R.id.spinner_1));
+        commonViewBean.setTitleResId(R.string.anythink_title_banner);
+        return commonViewBean;
+    }
 
+    @SuppressLint("ClickableViewAccessibility")
+    @Override
+    protected void initListener() {
+        super.initListener();
+        if (mTVShowLog != null) {
+            mTVShowLog.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    if (motionEvent.getAction() == MotionEvent.ACTION_DOWN || motionEvent.getAction() == MotionEvent.ACTION_MOVE) {
+                        view.getParent().requestDisallowInterceptTouchEvent(true);
+                    }
+                    if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                        view.getParent().requestDisallowInterceptTouchEvent(false);
+                    }
+                    return false;
+                }
+            });
+        }
+        tvLoadAdBtn.setOnClickListener(this);
+    }
+
+    private void initBannerView() {
+        mBannerView = new ATBannerView(this);
+        //Loading and displaying ads should keep the container and BannerView visible all the time
+        mBannerView.setVisibility(View.VISIBLE);
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
             @Override
@@ -147,13 +113,13 @@ public class BannerAdActivity extends Activity {
 
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-
+                Log.i(TAG, "onDownloadConfirm:" + adInfo.toString() + " networkConfirmInfo:" + networkConfirmInfo);
             }
 
             @Override
             public void onBannerLoaded() {
                 Log.i(TAG, "onBannerLoaded");
-                ViewUtil.printLog(tvShowLog, "onBannerLoaded");
+                printLogOnUI("onBannerLoaded");
                 if (scrollView != null) {
                     scrollView.fullScroll(ScrollView.FOCUS_DOWN);
                 }
@@ -162,131 +128,73 @@ public class BannerAdActivity extends Activity {
             @Override
             public void onBannerFailed(AdError adError) {
                 Log.i(TAG, "onBannerFailed: " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog, "onBannerFailed" + adError.getFullErrorInfo());
+                printLogOnUI("onBannerFailed" + adError.getFullErrorInfo());
             }
 
             @Override
             public void onBannerClicked(ATAdInfo entity) {
                 Log.i(TAG, "onBannerClicked:" + entity.toString());
-                ViewUtil.printLog(tvShowLog, "onBannerClicked");
+                printLogOnUI("onBannerClicked");
             }
 
             @Override
             public void onBannerShow(ATAdInfo entity) {
                 Log.i(TAG, "onBannerShow:" + entity.toString());
-                ViewUtil.printLog(tvShowLog, "onBannerShow");
+                printLogOnUI("onBannerShow");
             }
 
             @Override
             public void onBannerClose(ATAdInfo entity) {
                 Log.i(TAG, "onBannerClose:" + entity.toString());
-                ViewUtil.printLog(tvShowLog, "onBannerClose");
+                printLogOnUI("onBannerClose");
             }
 
             @Override
             public void onBannerAutoRefreshed(ATAdInfo entity) {
                 Log.i(TAG, "onBannerAutoRefreshed:" + entity.toString());
-                ViewUtil.printLog(tvShowLog, "onBannerAutoRefreshed");
+                printLogOnUI("onBannerAutoRefreshed");
             }
 
             @Override
             public void onBannerAutoRefreshFail(AdError adError) {
                 Log.i(TAG, "onBannerAutoRefreshFail: " + adError.getFullErrorInfo());
-                ViewUtil.printLog(tvShowLog, "onBannerAutoRefreshFail");
+                printLogOnUI("onBannerAutoRefreshFail");
             }
         });
 
-        mBannerView.setAdDownloadListener(new ATAppDownloadListener() {
+        mBannerView.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+    }
 
-            @Override
-            public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadStart: totalBytes: " + totalBytes
-                        + "\ncurrBytes:" + currBytes
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
+    private void loadAd() {
+        printLogOnUI(getString(R.string.anythink_ad_status_loading));
+        //Loading and displaying ads should keep the container and BannerView visible all the time
+        mBannerView.setVisibility(View.VISIBLE);
+        mBannerViewContainer.setVisibility(View.VISIBLE);
 
-            @Override
-            public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadUpdate: totalBytes: " + totalBytes
-                        + "\ncurrBytes:" + currBytes
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
+        int padding = dip2px(12);
+        Map<String, Object> localMap = new HashMap<>();
+        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
+        localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
+        mBannerView.setLocalExtra(localMap);
 
-            @Override
-            public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadPause: totalBytes: " + totalBytes
-                        + "\ncurrBytes:" + currBytes
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
+        mBannerView.loadAd();
+    }
 
-            @Override
-            public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFinish: totalBytes: " + totalBytes
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
-
-            @Override
-            public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onDownloadFail: totalBytes: " + totalBytes
-                        + "\ncurrBytes:" + currBytes
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
-
-            @Override
-            public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
-                Log.i(TAG, "ATAdInfo:" + adInfo.toString() + "\n" + "onInstalled:"
-                        + "\nfileName:" + fileName
-                        + "\nappName:" + appName);
-            }
-        });
-
-        mBannerView.setAdSourceStatusListener(new ATAdSourceStatusListener() {
-            @Override
-            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
-                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
-                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
-            }
-
-            @Override
-            public void onAdSourceAttempt(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
-                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
-                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
-            }
-        });
+    private void addBannerViewToContainer() {
+        if (mBannerViewContainer != null && mBannerView != null) {
+            mBannerViewContainer.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, mBannerViewContainer.getLayoutParams().height));
+        }
     }
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
-        tvShowLog = null;
+        if (mBannerViewContainer != null) {
+            mBannerViewContainer.removeAllViews();
+        }
         if (mBannerView != null) {
             mBannerView.destroy();
         }
+        super.onDestroy();
     }
 
     public int dip2px(float dipValue) {
@@ -294,4 +202,12 @@ public class BannerAdActivity extends Activity {
         return (int) (dipValue * scale + 0.5f);
     }
 
+    @Override
+    public void onClick(View v) {
+        if (v == null) return;
+
+        if (v.getId() == R.id.banner_load_ad_btn) {
+            loadAd();
+        }
+    }
 }

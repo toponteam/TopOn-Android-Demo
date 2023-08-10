@@ -182,7 +182,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             param.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
             param.width = RelativeLayout.LayoutParams.MATCH_PARENT;
             viewHolder.itemView.setLayoutParams(param);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params.gravity = Gravity.CENTER_HORIZONTAL;
             viewHolder.mATNativeView.setLayoutParams(params);
 
@@ -254,10 +254,12 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
             if (nativeAd.isNativeExpress()) {
                 //Ad rendering for templates
+                adViewHolder.mATNativeView.getLayoutParams().height = SelfRenderViewUtil.dip2px(adViewHolder.mATNativeView.getContext(), 300);
                 nativeAd.renderAdContainer(adViewHolder.mATNativeView, null);
                 adViewHolder.mSelfRenderView.setVisibility(View.GONE);
             } else {
                 //Ad rendering for self-render
+                adViewHolder.mATNativeView.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
                 nativePrepareInfo = new ATNativePrepareInfo();
                 adViewHolder.mSelfRenderView.setVisibility(View.VISIBLE);
 //                SelfRenderViewUtil.bindSelfRenderView(this, nativeAd.getAdMaterial(), selfRenderView, nativePrepareInfo, adViewHeight);

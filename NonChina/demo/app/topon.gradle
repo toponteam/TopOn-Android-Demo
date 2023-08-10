@@ -25,7 +25,5 @@ dependencies {
     api "androidx.recyclerview:recyclerview:1.1.0"
 
     //Yandex
-    api "com.google.dagger:dagger:2.38"
-    api "androidx.viewpager2:viewpager2:1.0.0"
 
 }

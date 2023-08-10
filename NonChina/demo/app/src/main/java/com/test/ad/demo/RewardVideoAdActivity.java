@@ -257,11 +257,11 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
 
     private void showAd() {
         if (mIsAutoLoad) {
-            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-//            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, "", autoEventListener);
+//            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, autoEventListener);
+            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO, autoEventListener);
         } else {
-            mRewardVideoAd.show(RewardVideoAdActivity.this);
-//        mRewardVideoAd.show(RewardVideoAdActivity.this, "f5e5492eca9668");
+//            mRewardVideoAd.show(RewardVideoAdActivity.this);
+            mRewardVideoAd.show(RewardVideoAdActivity.this, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO);
         }
     }
 
@@ -389,16 +389,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
                 isAdReady();
                 break;
             case R.id.show_ad_btn:
-                /*
-                 * To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
-                 * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
-                 * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
-                 * 1、Call "entryAdScenario" to report the arrival of the scene.
-                 * 2、Call "isAdReady".
-                 * 3、Call "show" to show AD view.
-                 * (Note the difference between auto and manual)
-                 */
-                ATRewardVideoAd.entryAdScenario(mCurrentPlacementId, "f5e5492eca9668");
+                ATRewardVideoAd.entryAdScenario(mCurrentPlacementId, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO);
                 if (mRewardVideoAd != null && mRewardVideoAd.isAdReady()) {
                     showAd();
                 } else {

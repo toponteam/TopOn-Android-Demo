@@ -3,9 +3,11 @@ package com.test.ad.demo;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -14,14 +16,20 @@ import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
+import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.huawei.hms.ads.AppDownloadButton;
+import com.test.ad.demo.view.MutiImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SelfRenderViewUtil {
+    private static final String TAG = SelfRenderViewUtil.class.getSimpleName();
 
     public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo) {
+        //log
+        printNativeAdMaterial(adMaterial);
+
         int padding = dip2px(context, 5);
         selfRenderView.setPadding(padding, padding, padding, padding);
         TextView titleView = (TextView) selfRenderView.findViewById(R.id.native_ad_title);
@@ -117,20 +125,31 @@ public class SelfRenderViewUtil {
         View mediaView = adMaterial.getAdMediaView(contentArea);
         int mainImageHeight = adMaterial.getMainImageHeight();
         int mainImageWidth = adMaterial.getMainImageWidth();
-
-        int realMainImageWidth = context.getResources().getDisplayMetrics().widthPixels - dip2px(context, 10);
-        int realMainHeight = 0;
-
         FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
                 , FrameLayout.LayoutParams.WRAP_CONTENT);
-        if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
-            realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
-            mainImageParam.width = realMainImageWidth;
-            mainImageParam.height = realMainHeight;
-        } else {
-            mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-            mainImageParam.height = realMainImageWidth * 600 / 1024;
-        }
+
+        ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                // 移除监听器
+                selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+                int realMainImageWidth = selfRenderView.getWidth() - dip2px(context, 10);
+                int realMainHeight = 0;
+
+                if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                    realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+                    mainImageParam.width = realMainImageWidth;
+                    mainImageParam.height = realMainHeight;
+                } else {
+                    mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                    mainImageParam.height = realMainImageWidth * 600 / 1024;
+                }
+            }
+        });
+
+        List<String> imageList = adMaterial.getImageUrlList();
 
         contentArea.removeAllViews();
         if (mediaView != null) {
@@ -142,6 +161,12 @@ public class SelfRenderViewUtil {
             contentArea.addView(mediaView, mainImageParam);
             clickViewList.add(mediaView);
             contentArea.setVisibility(View.VISIBLE);
+        } else if (imageList != null && imageList.size() > 1) {
+            MutiImageView mutiImageView = new MutiImageView(context);
+            mutiImageView.setImageList(imageList, mainImageWidth, mainImageHeight);
+            nativePrepareInfo.setMainImageView(mutiImageView);//bind main image
+            contentArea.addView(mutiImageView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            clickViewList.add(mutiImageView);
         } else if (!TextUtils.isEmpty(adMaterial.getMainImageUrl())) {
             ATNativeImageView imageView = new ATNativeImageView(context);
             imageView.setImage(adMaterial.getMainImageUrl());
@@ -240,5 +265,63 @@ public class SelfRenderViewUtil {
         return (int) (dipValue * scale + 0.5f);
     }
 
+    private static void printNativeAdMaterial(ATNativeMaterial adMaterial) {
+        if (adMaterial == null) return;
+
+        String adType = adMaterial.getAdType();
+        switch (adType) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                Log.i(TAG, "Ad source type: Video" + ", video duration: " + adMaterial.getVideoDuration());
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                Log.i(TAG, "Ad source type: Image");
+                break;
+            default:
+                Log.i(TAG, "Ad source type: Unknown");
+                break;
+        }
+        switch (adMaterial.getNativeType()) {
+            case CustomNativeAd.NativeType.FEED:
+                Log.i(TAG, "Native type: Feed");
+                break;
+            case CustomNativeAd.NativeType.PATCH:
+                Log.i(TAG, "Native type: Patch");
+                break;
+        }
+
+        Log.i(TAG, "show native material:" + "\n" +
+                "adMaterial: " + adMaterial + "\n" +
+                "getTitle:" + adMaterial.getTitle() + "\n" +
+                "getDescriptionText:" + adMaterial.getDescriptionText() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdMediaView:" + adMaterial.getAdMediaView() + "\n" +
+                "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
+                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
+                "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
+                "getMainImageWidth:" + adMaterial.getMainImageWidth() + "\n" +
+                "getMainImageHeight:" + adMaterial.getMainImageHeight() + "\n" +
+                "getVideoWidth:" + adMaterial.getVideoWidth() + "\n" +
+                "getVideoHeight:" + adMaterial.getVideoHeight() + "\n" +
+                "getAppPrice:" + adMaterial.getAppPrice() + "\n" +
+                "getAppCommentNum:" + adMaterial.getAppCommentNum() + "\n" +
+                "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
+                "getStarRating:" + adMaterial.getStarRating() + "\n" +
+                "getVideoUrl:" + adMaterial.getVideoUrl() + "\n" +
+                "getAdChoiceIconUrl:" + adMaterial.getAdChoiceIconUrl() + "\n" +
+                "getAdFrom:" + adMaterial.getAdFrom() + "\n" +
+                "getImageUrlList:" + adMaterial.getImageUrlList() + "\n" +
+                "getNetworkInfoMap:" + adMaterial.getNetworkInfoMap() + "\n" +
+                "getAdAppInfo:" + adMaterial.getAdAppInfo() + "\n" +
+                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType()) + "\n" +
+                "getVideoDuration:" + adMaterial.getVideoDuration() + "\n" +
+                "getAdvertiserName:" + adMaterial.getAdvertiserName() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdType:" + adMaterial.getAdType() + "\n" +
+                "getNativeCustomVideo:" + adMaterial.getNativeCustomVideo() + "\n" +
+                "getAdLogo:" + adMaterial.getAdLogo() + "\n" +
+                "getNativeExpressWidth:" + adMaterial.getNativeExpressWidth() + "\n" +
+                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
+        );
+    }
 
 }

@@ -17,7 +17,7 @@
 
         <include
             android:id="@+id/self_render_view"
-            layout="@layout/native_ad_item"
+            layout="@layout/layout_native_self"
             android:visibility="gone" />
     </com.anythink.nativead.api.ATNativeView>
 

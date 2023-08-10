@@ -7,67 +7,76 @@
 
 package com.test.ad.demo;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
-import com.test.ad.demo.util.PlacementIdUtil;
-import com.test.ad.demo.utils.ViewUtil;
+import com.test.ad.demo.base.BaseActivity;
+import com.test.ad.demo.bean.CommonViewBean;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SplashAdActivity extends Activity implements ATSplashExListener {
+public class SplashAdActivity extends BaseActivity implements View.OnClickListener {
 
-    private static final String TAG = SplashAdActivity.class.getSimpleName();
+    private static final String TAG = "SplashAdActivity";
 
-    String mCurrentPlacementName;
-    ATSplashAd splashAd;
+    private ATSplashAd mSplashAd;
 
-    private TextView tvShowLog;
+
+//    private Spinner mSpinnerPlacementId;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public int getContentViewId() {
+        return R.layout.activity_splash;
+    }
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_splash);
+    @Override
+    protected int getAdType() {
+        return ATAdConst.ATMixedFormatAdType.SPLASH;
+    }
 
+    @Override
+    public void initView() {
+        super.initView();
         findViewById(R.id.rl_type).setSelected(true);
-        tvShowLog = findViewById(R.id.tv_show_log);
-        tvShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+    }
 
-        TitleBar titleBar = (TitleBar) findViewById(R.id.title_bar);
-        titleBar.setTitle(R.string.anythink_title_splash);
-        titleBar.setListener(new TitleBarClickListener() {
-            @Override
-            public void onBackClick(View v) {
-                finish();
-            }
-        });
+    @Override
+    protected CommonViewBean getCommonViewBean() {
+        CommonViewBean commonViewBean = new CommonViewBean();
+        commonViewBean.setTitleBar(findViewById(R.id.title_bar));
+        commonViewBean.setTvLogView(findViewById(R.id.tv_show_log));
+        commonViewBean.setSpinnerSelectPlacement(findViewById(R.id.spinner_1));
+        commonViewBean.setTitleResId(R.string.anythink_title_splash);
+        return commonViewBean;
+    }
 
+    @Override
+    protected void initListener() {
+        findViewById(R.id.is_ad_ready_btn).setOnClickListener(this);
+        findViewById(R.id.load_ad_btn).setOnClickListener(this);
+        findViewById(R.id.show_ad_btn).setOnClickListener(this);
+    }
+
+    @Override
+    protected void onSelectPlacementId(String placementId) {
+        initSplashAd(placementId);
+    }
+
+    private void initSplashAd(String placementId) {
         String defaultConfig = "";
-
         //Mintegral
 //        defaultConfig = "{\"unit_id\":1333033,\"nw_firm_id\":6,\"adapter_class\":\"com.anythink.network.mintegral.MintegralATSplashAdapter\",\"content\":\"{\\\"placement_id\\\":\\\"210169\\\",\\\"unitid\\\":\\\"276803\\\",\\\"countdown\\\":\\\"5\\\",\\\"allows_skip\\\":\\\"1\\\",\\\"orientation\\\":\\\"1\\\",\\\"appkey\\\":\\\"ef13ef712aeb0f6eb3d698c4c08add96\\\",\\\"suport_video\\\":\\\"1\\\",\\\"appid\\\":\\\"100947\\\"}\"}";
 
@@ -89,113 +98,47 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         //Klevin
 //        defaultConfig = "{\"unit_id\":1333253,\"nw_firm_id\":51,\"adapter_class\":\"com.anythink.network.klevin.KlevinATSplashAdapter\",\"content\":\"{\\\"pos_id\\\":\\\"30029\\\",\\\"app_id\\\":\\\"30008\\\"}\"}";
 
-        Map<String, String> placementIdMap = PlacementIdUtil.getSplashPlacements(this);
-        List<String> placementNameList = new ArrayList<>(placementIdMap.keySet());
+        mSplashAd = new ATSplashAd(this, placementId, new ATSplashExListenerImpl(), 5000, defaultConfig);
+        Map<String, Object> localMap = new HashMap<>();
+//        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
+//        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner_1);
-//        CheckBox isCustomSkipViewCheckBox = findViewById(R.id.splash_is_custom_skip);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                SplashAdActivity.this, android.R.layout.simple_spinner_dropdown_item,
-                placementNameList);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-//                Toast.makeText(getApplicationContext(),
-//                        parent.getItemAtPosition(position).toString(),
-//                        Toast.LENGTH_SHORT).show();
-                mCurrentPlacementName = parent.getSelectedItem().toString();
-
-                String placementName = placementIdMap.get(mCurrentPlacementName);
-                init(placementName, defaultConfig);
-
-//                if (TextUtils.equals(mCurrentPlacementName, "MyOffer")
-//                        || TextUtils.equals(mCurrentPlacementName, "Adx(internal)")
-//                        || TextUtils.equals(mCurrentPlacementName, "OnlineApi(internal)")
-//                        || TextUtils.equals(mCurrentPlacementName, "Toutiao")) {
-//                    isCustomSkipViewCheckBox.setVisibility(View.VISIBLE);
-//                } else {
-//                    isCustomSkipViewCheckBox.setVisibility(View.GONE);
-//                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
-
-        findViewById(R.id.is_ad_ready_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isAdReady();
-            }
-        });
-
-        findViewById(R.id.load_ad_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadAd();
-            }
-        });
-
-        findViewById(R.id.show_ad_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                /*
-                 To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/zh-cn/android/NetworkAccess/scenario/scenario"
-                 Call the "Enter AD scene" method when an AD trigger condition is met, such as:
-                 ** The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
-                 * 1、Call "entryAdScenario" to report the arrival of the scene.
-                 * 2、Call "isAdReady".
-                 * 3、Call "show" to show AD view.
-                 */
-                String placementId = placementIdMap.get(mCurrentPlacementName);
-                ATSplashAd.entryAdScenario(placementId, "");
-                if (splashAd.isAdReady()) {
-                    Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
-                    intent.putExtra("placementId", placementId);
-//                intent.putExtra("custom_skip_view", isCustomSkipViewCheckBox.isChecked());
-                    startActivity(intent);
-                }
-
-            }
-        });
-
-//        findViewById(R.id.show_in_current_btn).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(SplashAdActivity.this, SplashAdShowInCurrentActivity.class);
-//                intent.putExtra("placementId", placementIdMap.get(mCurrentPlacementName));
-//                startActivity(intent);
-//            }
-//        });
-
-
-//        mCurrentPlacementName = placementNameList.get(0);
-//        String placementName = placementIdMap.get(mCurrentPlacementName);
-//        init(placementName,defaultConfig);
+        mSplashAd.setLocalExtra(localMap);
+        mSplashAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
     }
 
     private void loadAd() {
-        splashAd.loadAd();
+        printLogOnUI(getString(R.string.anythink_ad_status_loading));
+        if (mSplashAd != null) {
+            mSplashAd.loadAd();
+        }
+    }
+
+    private void showAd() {
+        if (mSplashAd == null) {
+            return;
+        }
+        final String placementId = mCurrentPlacementId;
+        ATSplashAd.entryAdScenario(placementId, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        if (mSplashAd.isAdReady()) {
+            Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
+            intent.putExtra("placementId", placementId);
+//                intent.putExtra("custom_skip_view", isCustomSkipViewCheckBox.isChecked());
+            startActivity(intent);
+        }
     }
 
     private void isAdReady() {
-        ATAdStatusInfo atAdStatusInfo = splashAd.checkAdStatus();
+        ATAdStatusInfo atAdStatusInfo = mSplashAd.checkAdStatus();
         if (atAdStatusInfo.isReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            ViewUtil.printLog(tvShowLog, "SplashAd is ready to show.");
+            printLogOnUI("SplashAd is ready to show.");
         } else {
             Log.i(TAG, "SplashAd isn't ready to show.");
-            ViewUtil.printLog(tvShowLog, "SplashAd isn't ready to show.");
+            printLogOnUI("SplashAd isn't ready to show.");
         }
 
-        List<ATAdInfo> atAdInfoList = splashAd.checkValidAdCaches();
+        List<ATAdInfo> atAdInfoList = mSplashAd.checkValidAdCaches();
         Log.i(TAG, "Valid Cahce size:" + (atAdInfoList != null ? atAdInfoList.size() : 0));
         if (atAdInfoList != null) {
             for (ATAdInfo adInfo : atAdInfoList) {
@@ -204,103 +147,80 @@ public class SplashAdActivity extends Activity implements ATSplashExListener {
         }
     }
 
-    private void init(String placementId, String defaultConfig) {
-        splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
-        Map<String, Object> localMap = new HashMap<>();
-//        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
-//        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
-
-        // Only for GDT (true: open download dialog, false: download directly)
-        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
-
-        splashAd.setLocalExtra(localMap);
-
-        splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
-            @Override
-            public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceBiddingAttempt: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceBiddingFilled(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceBiddingFilled: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceBiddingFail(ATAdInfo adInfo, AdError adError) {
-                Log.i(TAG, "onAdSourceBiddingFail Info: " + adInfo.toString());
-                Log.i(TAG, "onAdSourceBiddingFail error: " + adError.getFullErrorInfo());
-            }
-
-            @Override
-            public void onAdSourceAttempt(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceAttempt: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceLoadFilled(ATAdInfo adInfo) {
-                Log.i(TAG, "onAdSourceLoadFilled: " + adInfo.toString());
-            }
-
-            @Override
-            public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
-                Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
-                Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
-            }
-        });
-    }
-
-    @Override
-    public void onAdLoaded(boolean isTimeout) {
-        Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
-        ViewUtil.printLog(tvShowLog, "onAdLoaded---------isTimeout:" + isTimeout);
-    }
-
-    @Override
-    public void onAdLoadTimeout() {
-        Log.i(TAG, "onAdLoadTimeout---------");
-        ViewUtil.printLog(tvShowLog, "onAdLoadTimeout---------");
-    }
-
-    @Override
-    public void onNoAdError(AdError adError) {
-        Log.i(TAG, "onNoAdError---------:" + adError.getFullErrorInfo());
-        ViewUtil.printLog(tvShowLog, "onNoAdError---------:" + adError.getFullErrorInfo());
-    }
-
-    @Override
-    public void onAdShow(ATAdInfo entity) {
-
-    }
-
-    @Override
-    public void onAdClick(ATAdInfo entity) {
-
-    }
-
-    @Override
-    public void onAdDismiss(ATAdInfo entity, ATSplashAdExtraInfo splashAdExtraInfo) {
-
-    }
-
-    @Override
-    public void onDeeplinkCallback(ATAdInfo entity, boolean isSuccess) {
-
-    }
-
-    @Override
-    public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
-
-    }
-
     @Override
     protected void onDestroy() {
-        tvShowLog = null;
-        if (splashAd != null) {
-            splashAd.setAdListener(null);
-            splashAd.setAdDownloadListener(null);
-            splashAd.setAdSourceStatusListener(null);
+        if (mSplashAd != null) {
+            mSplashAd.setAdListener(null);
+            mSplashAd.setAdDownloadListener(null);
+            mSplashAd.setAdSourceStatusListener(null);
         }
         super.onDestroy();
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View v) {
+        if (v == null) return;
+        switch (v.getId()) {
+            case R.id.is_ad_ready_btn:
+                isAdReady();
+                break;
+            case R.id.load_ad_btn:
+                loadAd();
+                break;
+            case R.id.show_ad_btn:
+                showAd();
+                break;
+        }
+    }
+
+    private class ATSplashExListenerImpl implements ATSplashExListener {
+        @Override
+        public void onAdLoaded(boolean isTimeout) {
+            Log.i(TAG, "onAdLoaded---------isTimeout:" + isTimeout);
+            printLogOnUI("onAdLoaded---------isTimeout:" + isTimeout);
+        }
+
+        @Override
+        public void onAdLoadTimeout() {
+            Log.i(TAG, "onAdLoadTimeout---------");
+            printLogOnUI("onAdLoadTimeout---------");
+        }
+
+        @Override
+        public void onNoAdError(AdError adError) {
+            Log.i(TAG, "onNoAdError---------:" + adError.getFullErrorInfo());
+            printLogOnUI("onNoAdError---------:" + adError.getFullErrorInfo());
+        }
+
+        @Override
+        public void onAdShow(ATAdInfo entity) {
+            Log.i(TAG, "onAdShow---------:" + entity.toString());
+            printLogOnUI("onAdShow---------");
+        }
+
+        @Override
+        public void onAdClick(ATAdInfo entity) {
+            Log.i(TAG, "onAdClick---------:" + entity.toString());
+            printLogOnUI("onAdClick---------");
+        }
+
+        @Override
+        public void onAdDismiss(ATAdInfo entity, ATSplashAdExtraInfo splashAdExtraInfo) {
+            Log.i(TAG, "onAdDismiss---------:" + entity.toString());
+            printLogOnUI("onAdDismiss---------");
+        }
+
+        @Override
+        public void onDeeplinkCallback(ATAdInfo entity, boolean isSuccess) {
+            Log.i(TAG, "onDeeplinkCallback---------：" + entity.toString() + " isSuccess = " + isSuccess);
+            printLogOnUI("onDeeplinkCallback---------");
+        }
+
+        @Override
+        public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
+            Log.i(TAG, "onDownloadConfirm--------- entity = " + adInfo.toString());
+            printLogOnUI("onDownloadConfirm---------");
+        }
     }
 }
