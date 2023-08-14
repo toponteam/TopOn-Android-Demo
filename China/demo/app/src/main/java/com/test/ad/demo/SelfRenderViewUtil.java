@@ -1,7 +1,9 @@
 package com.test.ad.demo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -11,6 +13,7 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.anythink.core.api.ATAdAppInfo;
 import com.anythink.core.api.ATShakeViewListener;
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
@@ -245,6 +248,69 @@ public class SelfRenderViewUtil {
             creativeClickViewList.add(ctaView);
             ((ATNativePrepareExInfo) nativePrepareInfo).setCreativeClickViewList(creativeClickViewList);//bind custom view list
         }
+
+        View sixInfoView = selfRenderView.findViewById(R.id.six_info);
+        ATAdAppInfo adAppInfo = adMaterial.getAdAppInfo();
+        if (adAppInfo != null) {
+            sixInfoView.setVisibility(View.VISIBLE);
+            TextView functionTextView = sixInfoView.findViewById(R.id.function_test);
+            TextView developerTextView = sixInfoView.findViewById(R.id.developer_test);
+            TextView versionTextView = sixInfoView.findViewById(R.id.version_test);
+            TextView privacyTextView = sixInfoView.findViewById(R.id.privacy_test);
+            TextView permissionTextView = sixInfoView.findViewById(R.id.permission_test);
+
+            developerTextView.setText(TextUtils.isEmpty(adAppInfo.getPublisher()) ? "" : adAppInfo.getPublisher());
+            versionTextView.setText(TextUtils.isEmpty(adAppInfo.getAppVersion()) ? "" : adAppInfo.getAppVersion());
+
+
+            if (!TextUtils.isEmpty(adAppInfo.getFunctionUrl())) {
+                functionTextView.setVisibility(View.VISIBLE);
+                setOpenUrlClickListener(functionTextView, adAppInfo.getFunctionUrl());
+            } else {
+                functionTextView.setOnClickListener(null);
+                functionTextView.setVisibility(View.GONE);
+            }
+
+            if (!TextUtils.isEmpty(adAppInfo.getAppPrivacyUrl())) {
+                privacyTextView.setVisibility(View.VISIBLE);
+                setOpenUrlClickListener(privacyTextView, adAppInfo.getAppPrivacyUrl());
+            } else {
+                privacyTextView.setVisibility(View.GONE);
+                privacyTextView.setOnClickListener(null);
+            }
+
+            if (!TextUtils.isEmpty(adAppInfo.getAppPermissonUrl())) {
+                permissionTextView.setVisibility(View.VISIBLE);
+                setOpenUrlClickListener(permissionTextView, adAppInfo.getAppPermissonUrl());
+            } else {
+                permissionTextView.setVisibility(View.GONE);
+                permissionTextView.setOnClickListener(null);
+            }
+
+        } else {
+            sixInfoView.setVisibility(View.GONE);
+        }
+    }
+
+    private static void setOpenUrlClickListener(View view, final String url) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(url));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    Context context = view.getContext();
+                    if (context != null) {
+                        context.startActivity(intent);
+                    }
+                } catch (Throwable e2) {
+                    e2.printStackTrace();
+                }
+            }
+        });
+
     }
 
 //    private static View initializePlayer(Context context, String url) {
