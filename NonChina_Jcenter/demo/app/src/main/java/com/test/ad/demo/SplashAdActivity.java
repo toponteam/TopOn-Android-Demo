@@ -103,12 +103,14 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
 //        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
 //        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
+        // Only for GDT (true: open download dialog, false: download directly)
+        localMap.put(ATAdConst.KEY.AD_CLICK_CONFIRM_STATUS, true);
+
         mSplashAd.setLocalExtra(localMap);
         mSplashAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
     }
 
     private void loadAd() {
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
         if (mSplashAd != null) {
             mSplashAd.loadAd();
         }
@@ -118,8 +120,16 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
         if (mSplashAd == null) {
             return;
         }
+        /*
+         * To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+         * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+         * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+         * 1、Call "entryAdScenario" to report the arrival of the scene.
+         * 2、Call "isAdReady".
+         * 3、Call "show" to show AD view.
+         */
         final String placementId = mCurrentPlacementId;
-        ATSplashAd.entryAdScenario(placementId, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        ATSplashAd.entryAdScenario(placementId, "f628c7999265cd");
         if (mSplashAd.isAdReady()) {
             Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
             intent.putExtra("placementId", placementId);

@@ -24,7 +24,7 @@ import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
-import com.test.ad.demo.util.ViewUtil;
+import com.test.ad.demo.utils.ViewUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +51,6 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onSelectPlacementId(String placementId) {
         mBannerView.setPlacementId(placementId);
-        ATBannerView.entryAdScenario(placementId, AdConst.SCENARIO_ID.BANNER_AD_SCENARIO);
     }
 
     @Override
@@ -167,7 +166,6 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd() {
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
         //Loading and displaying ads should keep the container and BannerView visible all the time
         mBannerView.setVisibility(View.VISIBLE);
         mBannerViewContainer.setVisibility(View.VISIBLE);
@@ -183,7 +181,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
 
     private void addBannerViewToContainer() {
         if (mBannerViewContainer != null && mBannerView != null) {
-            mBannerViewContainer.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, mBannerViewContainer.getLayoutParams().height));
+            mBannerViewContainer.addView(mBannerView, new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, dip2px(300)));
         }
     }
 

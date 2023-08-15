@@ -86,6 +86,7 @@
                     android:layout_marginTop="@dimen/anythink_18dp"
                     android:text="@string/anythink_load_ad" />
 
+
             </RelativeLayout>
 
             <FrameLayout

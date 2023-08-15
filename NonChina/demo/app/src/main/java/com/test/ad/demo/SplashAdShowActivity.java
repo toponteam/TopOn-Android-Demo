@@ -111,6 +111,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
         splashAd.setLocalExtra(localMap);
+        ATSplashAd.entryAdScenario(placementId, "f628c7999265cd");
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
@@ -151,9 +152,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-//                    splashAd.show(SplashAdShowActivity.this, container);
+                    splashAd.show(SplashAdShowActivity.this, container);
 //                    showAdWithCustomSkipView();//show with customSkipView
-                    splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+//                    splashAd.show(SplashAdShowActivity.this, container, "f628c7999265cd");
                 }
             }, 10);
         } else {
@@ -174,21 +175,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         long callbackInterval = 1000;
         skipView.setText(((int) (countDownDuration / 1000)) + "s | Skip");
 
-//        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
-//            @Override
-//            public void onAdTick(long duration, long remainder) {
-//                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
-//            }
-//
-//            @Override
-//            public void isSupportCustomSkipView(boolean isSupport) {
-//                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
-//                if (isSupport) {
-//                    skipView.setVisibility(View.VISIBLE);
-//                }
-//            }
-//        }));
-
         splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
             @Override
             public void onAdTick(long duration, long remainder) {
@@ -202,7 +188,22 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                     skipView.setVisibility(View.VISIBLE);
                 }
             }
-        }), AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        }));
+
+//        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
+//            @Override
+//            public void onAdTick(long duration, long remainder) {
+//                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
+//            }
+//
+//            @Override
+//            public void isSupportCustomSkipView(boolean isSupport) {
+//                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
+//                if (isSupport) {
+//                    skipView.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        }), "f628c7999265cd");
     }
 
     @Override
@@ -308,8 +309,8 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             needShowSplashAd = false;
 
             if (splashAd.isAdReady()) {
-//                splashAd.show(this, container);
-                splashAd.show(this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+                splashAd.show(this, container);
+//                splashAd.show(this, container, "f628c7999265cd");
             }
         }
     }

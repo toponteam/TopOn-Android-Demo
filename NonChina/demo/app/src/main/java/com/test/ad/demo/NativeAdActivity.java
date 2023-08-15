@@ -24,6 +24,7 @@ import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventExListener;
+import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
@@ -170,8 +171,6 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
-        printLogOnUI(getString(R.string.anythink_ad_status_loading));
-
         Map<String, Object> localExtra = new HashMap<>();
         localExtra.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
         localExtra.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
@@ -197,8 +196,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void showAd() {
-//        NativeAd nativeAd = mATNative.getNativeAd();
-        NativeAd nativeAd = mATNative.getNativeAd(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+        NativeAd nativeAd = mATNative.getNativeAd();
         if (nativeAd != null) {
 
             if (mNativeAd != null) {
@@ -255,6 +253,8 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             });
 
             mATNativeView.removeAllViews();
+            //log
+            printNativeAdMaterial(mNativeAd.getAdMaterial());
 
             ATNativePrepareInfo mNativePrepareInfo = null;
 
@@ -279,6 +279,68 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             printLogOnUI("this placement no cache!");
         }
     }
+
+    private void printNativeAdMaterial(ATNativeMaterial adMaterial) {
+        if (adMaterial == null) return;
+
+        String adType = adMaterial.getAdType();
+        switch (adType) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                Log.i(TAG, "Ad source type: Video" + ", video duration: " + adMaterial.getVideoDuration());
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                Log.i(TAG, "Ad source type: Image");
+                break;
+            default:
+                Log.i(TAG, "Ad source type: Unknown");
+                break;
+        }
+        switch (adMaterial.getNativeType()) {
+            case CustomNativeAd.NativeType.FEED:
+                Log.i(TAG, "Native type: Feed");
+                break;
+            case CustomNativeAd.NativeType.PATCH:
+                Log.i(TAG, "Native type: Patch");
+                break;
+        }
+
+        Log.i(TAG, "show native material:" + "\n" +
+                "getTitle:" + adMaterial.getTitle() + "\n" +
+                "getDescriptionText:" + adMaterial.getDescriptionText() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdMediaView:" + adMaterial.getAdMediaView() + "\n" +
+                "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
+                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
+                "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
+                "getMainImageWidth:" + adMaterial.getMainImageWidth() + "\n" +
+                "getMainImageHeight:" + adMaterial.getMainImageHeight() + "\n" +
+                "getVideoWidth:" + adMaterial.getVideoWidth() + "\n" +
+                "getVideoHeight:" + adMaterial.getVideoHeight() + "\n" +
+                "getAppPrice:" + adMaterial.getAppPrice() + "\n" +
+                "getAppCommentNum:" + adMaterial.getAppCommentNum() + "\n" +
+                "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
+                "getStarRating:" + adMaterial.getStarRating() + "\n" +
+                "getVideoUrl:" + adMaterial.getVideoUrl() + "\n" +
+                "getAdChoiceIconUrl:" + adMaterial.getAdChoiceIconUrl() + "\n" +
+                "getAdFrom:" + adMaterial.getAdFrom() + "\n" +
+                "getImageUrlList:" + adMaterial.getImageUrlList() + "\n" +
+                "getNetworkInfoMap:" + adMaterial.getNetworkInfoMap() + "\n" +
+                "getAdAppInfo:" + adMaterial.getAdAppInfo() + "\n" +
+                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType()) + "\n" +
+                "getVideoDuration:" + adMaterial.getVideoDuration() + "\n" +
+                "getAdvertiserName:" + adMaterial.getAdvertiserName() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdType:" + adMaterial.getAdType() + "\n" +
+                "getNativeCustomVideo:" + adMaterial.getNativeCustomVideo() + "\n" +
+                "getAdLogo:" + adMaterial.getAdLogo() + "\n" +
+                "getNativeExpressWidth:" + adMaterial.getNativeExpressWidth() + "\n" +
+                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
+        );
+    }
+
+//    public void changeBg(View view,boolean selected) {
+//        view.setBackgroundResource(selected ? R.drawable.bg_white_selected : R.drawable.bg_white);
+//    }
 
     @Override
     protected void onDestroy() {
@@ -367,7 +429,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
         switch (v.getId()) {
             case R.id.load_ad_btn:
-                final int adViewWidth = mATNativeView.getWidth() != 0 ? mATNativeView.getWidth() : getResources().getDisplayMetrics().widthPixels;
+                final int adViewWidth = getResources().getDisplayMetrics().widthPixels;
                 final int adViewHeight = adViewWidth * 3 / 4;
                 loadAd(adViewWidth, adViewHeight);
                 break;
@@ -375,7 +437,15 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 isAdReady();
                 break;
             case R.id.show_ad_btn:
-                ATNative.entryAdScenario(mCurrentPlacementId, AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+                /*
+                 * To collect scene arrival rate statistics, you can view related information "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
+                 * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
+                 * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
+                 * 1、Call "entryAdScenario" to report the arrival of the scene.
+                 * 2、Call "ATNative#checkAdStatus#isReady".
+                 * 3、Call "getNativeAd" to show AD view.
+                 */
+                ATNative.entryAdScenario(mCurrentPlacementId, "");
                 if (isAdReady()) {
                     showAd();
                 }
