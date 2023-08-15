@@ -24,7 +24,7 @@ import com.test.ad.demo.TitleBar;
 import com.test.ad.demo.bean.AnnotationAdType;
 import com.test.ad.demo.bean.CommonViewBean;
 import com.test.ad.demo.util.PlacementIdUtil;
-import com.test.ad.demo.utils.ViewUtil;
+import com.test.ad.demo.util.ViewUtil;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

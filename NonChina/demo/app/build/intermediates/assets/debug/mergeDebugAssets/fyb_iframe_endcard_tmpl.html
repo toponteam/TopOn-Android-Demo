@@ -1,0 +1,15 @@
+<script>
+    var ifr = document.createElement('iframe');
+
+    window.addEventListener('load', function(e) {
+        ifr.setAttribute('src', '$__SrcIframeUrl__$');
+        ifr.setAttribute('style', 'display:block; border:none; margin:0; padding:0; overflow:hidden;');
+        ifr.width = window.innerWidth;
+        document.body.appendChild(ifr);
+    });
+
+    window.addEventListener('resize', function(e) {
+        ifr.width = document.body.clientWidth;
+        ifr.height = document.body.clientHeight;
+    });
+</script>

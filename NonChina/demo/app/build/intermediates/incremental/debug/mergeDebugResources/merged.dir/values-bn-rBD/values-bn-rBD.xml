@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bigo_ad_lose_reward">আপনার পুরস্কার হারাবেন।</string>
+    <string name="bigo_ad_resume">আবার চালান</string>
+    <string name="bigo_ad_skip">এড়িয়ে যান</string>
+    <string name="bigo_ad_skip_video">ভিডিও বাদ দিবেন?</string>
+</resources>

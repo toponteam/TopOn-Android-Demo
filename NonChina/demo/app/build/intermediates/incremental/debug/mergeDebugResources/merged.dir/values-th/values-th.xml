@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">กรอไปข้างหน้า %d วินาที</item>
+    <item quantity="other">กรอไปข้างหน้า %d วินาที</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">กรอกลับ %d วินาที</item>
+    <item quantity="other">กรอกลับ %d วินาที</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="other">"หน้าต่างจะปิดภายใน %1$s วินาที"</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="other">"จำการเลือกไว้เป็นเวลา %1$s วัน"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="other">"%1$d วินาที"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"นำทางไปหน้าแรก"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"กลับ"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"ตัวเลือกอื่น"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"เสร็จ"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"ดูทั้งหมด"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"เลือกแอป"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"ปิด"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"เปิด"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"ลบ"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"Space"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"เมนู+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"ค้นหา…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"ล้างคำค้นหา"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"คำค้นหา"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"ค้นหา"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"ส่งคำค้นหา"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"ค้นหาด้วยเสียง"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"แชร์กับ"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"แชร์ทาง <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"ยุบ"</string>
+    <string name="bigo_ad_about_app_default">เกี่ยวกับแอพนี้</string>
+    <string name="bigo_ad_click_to_try">คลิกเพื่อลอง?</string>
+    <string name="bigo_ad_comment_num_text">บทวิจารณ์</string>
+    <string name="bigo_ad_cta_default">ดูเพิ่มเติม</string>
+    <string name="bigo_ad_cta_download_default">ติดตั้ง</string>
+    <string name="bigo_ad_description_default">เข้าฟรีทันที!</string>
+    <string name="bigo_ad_download_num_text">ดาวน์โหลด</string>
+    <string name="bigo_ad_title_default">ยอดเยี่ยมและน่าสนใจ</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">เปิดใช้</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s จะไม่ทำงานจนกว่าคุณจะเปิดใช้บริการ Google Play</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">เปิดใช้บริการ Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ติดตั้ง</string>
+    <string name="common_google_play_services_install_text">%1$s จะไม่ทำงานหากไม่มีบริการ Google Play ซี่งไม่มีในอุปกรณ์ของคุณ</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">ติดตั้งบริการ Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">ความพร้อมใช้งานของบริการ Google Play</string>
+    <string name="common_google_play_services_notification_ticker">ข้อผิดพลาดของบริการ Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s มีปัญหาเกี่ยวกับบริการของ Google Play โปรดลองอีกครั้ง</string>
+    <string name="common_google_play_services_unsupported_text">%1$s จะไม่ทำงานหากไม่มีบริการ Google Play ซึ่งอุปกรณ์ของคุณไม่สนับสนุน</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">อัปเดต</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s จะไม่ทำงานจนกว่าคุณจะอัปเดตบริการ Google Play</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">อัปเดตบริการ Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s จะไม่ทำงานหากไม่มีบริการ Google Play ซึ่งกำลังอัปเดตอยู่ในขณะนี้</string>
+    <string name="common_google_play_services_wear_update_text">จำเป็นต้องใช้บริการ Google Play เวอร์ชันใหม่ ซึ่งจะอัปเดตอัตโนมัติในอีกไม่ช้า</string>
+    <string name="common_open_on_phone">เปิดบนโทรศัพท์</string>
+    <string name="common_signin_button_text">ลงชื่อเข้าใช้</string>
+    <string name="common_signin_button_text_long">ลงชื่อเข้าใช้ด้วย Google</string>
+    <string msgid="3209159573327985035" name="copy">"คัดลอก"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"คัดลอกลิงก์ไปยังคลิปบอร์ดแล้ว"</string>
+    <string name="exo_controls_cc_disabled_description">เปิดใช้คำบรรยาย</string>
+    <string name="exo_controls_cc_enabled_description">ปิดใช้คำบรรยาย</string>
+    <string name="exo_controls_fastforward_description">กรอไปข้างหน้า</string>
+    <string name="exo_controls_fullscreen_enter_description">แสดงแบบเต็มหน้าจอ</string>
+    <string name="exo_controls_fullscreen_exit_description">ออกจากโหมดเต็มหน้าจอ</string>
+    <string name="exo_controls_hide">ซ่อนตัวควบคุมโปรแกรมเล่น</string>
+    <string name="exo_controls_next_description">ถัดไป</string>
+    <string name="exo_controls_overflow_hide_description">ซ่อนการตั้งค่าเพิ่มเติม</string>
+    <string name="exo_controls_overflow_show_description">แสดงการตั้งค่าเพิ่มเติม</string>
+    <string name="exo_controls_pause_description">หยุด</string>
+    <string name="exo_controls_play_description">เล่น</string>
+    <string name="exo_controls_playback_speed">ความเร็ว</string>
+    <string name="exo_controls_playback_speed_normal">ปกติ</string>
+    <string name="exo_controls_previous_description">ก่อนหน้า</string>
+    <string name="exo_controls_repeat_all_description">เล่นซ้ำทั้งหมด</string>
+    <string name="exo_controls_repeat_off_description">ไม่เล่นซ้ำ</string>
+    <string name="exo_controls_repeat_one_description">เล่นซ้ำเพลงเดียว</string>
+    <string name="exo_controls_rewind_description">กรอกลับ</string>
+    <string name="exo_controls_seek_bar_description">ความคืบหน้าในการเล่น</string>
+    <string name="exo_controls_settings_description">การตั้งค่า</string>
+    <string name="exo_controls_show">แสดงแผงควบคุมโปรแกรมเล่น</string>
+    <string name="exo_controls_shuffle_off_description">ปิดการสุ่มเพลงอยู่</string>
+    <string name="exo_controls_shuffle_on_description">เปิดการสุ่มเพลงอยู่</string>
+    <string name="exo_controls_stop_description">หยุด</string>
+    <string name="exo_controls_vr_description">โหมด VR</string>
+    <string name="exo_download_completed">การดาวน์โหลดเสร็จสมบูรณ์</string>
+    <string name="exo_download_description">ดาวน์โหลด</string>
+    <string name="exo_download_downloading">กำลังดาวน์โหลด</string>
+    <string name="exo_download_failed">การดาวน์โหลดล้มเหลว</string>
+    <string name="exo_download_notification_channel_name">ดาวน์โหลด</string>
+    <string name="exo_download_paused">การดาวน์โหลดหยุดชั่วคราว</string>
+    <string name="exo_download_paused_for_network">กำลังรอเครือข่ายเพื่อดาวน์โหลด</string>
+    <string name="exo_download_paused_for_wifi">กำลังรอ Wi-Fi เพื่อดาวน์โหลด</string>
+    <string name="exo_download_removing">กำลังนำรายการที่ดาวน์โหลดออก</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">โมโน</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">อื่นๆ</string>
+    <string name="exo_track_role_closed_captions">คำบรรยาย</string>
+    <string name="exo_track_role_commentary">ความคิดเห็น</string>
+    <string name="exo_track_role_supplementary">แทร็กเสริม</string>
+    <string name="exo_track_selection_auto">ยานยนต์</string>
+    <string name="exo_track_selection_none">ไม่มี</string>
+    <string name="exo_track_selection_title_audio">เสียง</string>
+    <string name="exo_track_selection_title_text">ข้อความ</string>
+    <string name="exo_track_selection_title_video">วิดีโอ</string>
+    <string name="exo_track_stereo">สเตอริโอ</string>
+    <string name="exo_track_surround">เสียงเซอร์ราวด์</string>
+    <string name="exo_track_surround_5_point_1">ระบบเสียง 5.1 เซอร์ราวด์</string>
+    <string name="exo_track_surround_7_point_1">7.1 เสียงเซอร์ราวด์</string>
+    <string name="exo_track_unknown">ไม่ทราบ</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"ขั้นสูง"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"คัดลอกลิงก์"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"เปิดในเบราว์เซอร์"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"แชร์ลิงก์"</string>
+    <string name="hiad_ad_label" priority="translator">"AD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"โฆษณา"</string>
+    <string name="hiad_app_installed" priority="LT">"ติดตั้ง %1$s แล้ว"</string>
+    <string name="hiad_app_open_notification" priority="translator">"การติดตั้งเสร็จสมบูรณ์ แตะเพื่อเปิด"</string>
+    <string name="hiad_app_permission" priority="LT">"การอนุญาต"</string>
+    <string name="hiad_app_preorder" priority="LT">"สั่งซื้อล่วงหน้า"</string>
+    <string name="hiad_app_preordered" priority="translator">"สั่งซื้อล่วงหน้าแล้ว"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"กดย้อนกลับเพื่อข้าม"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"โฆษณาซ่อนอยู่"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"ไม่สนใจ"</string>
+    <string name="hiad_choices_hide" priority="LT">"ซ่อนโฆษณา"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"เหตุใดฉันจึงเห็นโฆษณานี้"</string>
+    <string name="hiad_confirm_download_app" priority="translator">"ติดตั้งแอปนี้หรือไม่"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"การใช้เครือข่ายมือถือจะใช้ข้อมูล %1$s ดำเนินการต่อหรือไม่"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"การเล่นจะใช้ข้อมูลมือถือ ดำเนินการต่อหรือไม่"</string>
+    <string name="hiad_continue_download" priority="LT">"ดาวน์โหลด"</string>
+    <string name="hiad_continue_download_new" priority="LT">"ดาวน์โหลด"</string>
+    <string name="hiad_continue_to_play" priority="LT">"ดำเนินการต่อ"</string>
+    <string name="hiad_copy_link" priority="LT">"คัดลอกลิงก์"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"แอป"</string>
+    <string name="hiad_default_skip_text" priority="LT">"ข้าม"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"ข้ามใน %d วิ"</string>
+    <string name="hiad_detail" priority="LT">"รายละเอียด"</string>
+    <string name="hiad_detail_download_now" priority="LT">"ดาวน์โหลด"</string>
+    <string name="hiad_dialog_accept" priority="LT">"อนุญาต"</string>
+    <string name="hiad_dialog_allow" priority="LT">"อนุญาต"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ยกเลิก"</string>
+    <string name="hiad_dialog_close" priority="LT">"ตกลง"</string>
+    <string name="hiad_dialog_continue" priority="LT">"ดาวน์โหลด"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"รับทราบ"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"อนุญาตให้ %1$s ติดตั้ง %2$s หรือไม่"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"แหล่งที่มา: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"อนุญาต"</string>
+    <string name="hiad_dialog_open" priority="LT">"เปิด"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ปฏิเสธ"</string>
+    <string name="hiad_dialog_title" priority="LT">"ดาวน์โหลดโดยการใช้ข้อมูลมือถือหรือไม่"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"หมายเหตุ"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"ดาวน์โหลดโดยการใช้ข้อมูลมือถือหรือไม่"</string>
+    <string name="hiad_download_download" priority="LT">"ติดตั้ง"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"ดาวน์โหลด (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"เกิดข้อผิดพลาดขณะดาวน์โหลด %1$s"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"ไฟล์เสียหาย โปรดดาวน์โหลดอีกครั้ง"</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"ไม่มีไฟล์อยู่ โปรดลองใหม่อีกครั้ง"</string>
+    <string name="hiad_download_install" priority="LT">"ติดตั้ง"</string>
+    <string name="hiad_download_installing" priority="LT">"กำลังติดตั้ง"</string>
+    <string name="hiad_download_no_space" priority="LT">"พื้นที่เก็บข้อมูลไม่เพียงพอ โปรดเพิ่มพื้นที่ว่างและลองใหม่อีกครั้ง"</string>
+    <string name="hiad_download_open" priority="LT">"เปิด"</string>
+    <string name="hiad_download_resume" priority="LT">"ดำเนินการต่อ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"เกิดข้อผิดพลาดขณะดาวน์โหลด %1$s การดาวน์โหลดจะเริ่มต้นใหม่"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"คุณยังไม่ได้เชื่อมต่อกับ Wi-Fi ในขณะนี้ การดาวน์โหลดขณะนี้จะใช้ข้อมูลมือถือ %1$s ดาวน์โหลดหรือไม่"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"คุณยังไม่ได้เชื่อมต่อกับ WLAN ในขณะนี้ การดาวน์โหลดขณะนี้จะใช้ข้อมูลมือถือ %1$s ดาวน์โหลดหรือไม่"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"รายงานโฆษณานี้"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"ขอบคุณสำหรับความคิดเห็นของคุณ"</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"เราจะแนะนำเนื้อหาแบบนี้น้อยลง"</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"คุณคิดอย่างไรกับโฆษณานี้"</string>
+    <string name="hiad_install_completed" priority="LT">"เสร็จสิ้น"</string>
+    <string name="hiad_installed_description" priority="LT">"การติดตั้งสำเร็จ แตะเพื่อเปิด"</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"ติดตั้งแล้ว"</string>
+    <string name="hiad_jump_desc" priority="LT">"ดูรายละเอียดหรือไปที่แอป"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"หน้านี้ต้องการเปิด %1$s"</string>
+    <string name="hiad_link_already_copied" priority="LT">"คัดลอกลิงก์แล้ว"</string>
+    <string name="hiad_loading_tips" priority="LT">"กำลังโหลด…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"การดาวน์โหลดนี้จะใช้ข้อมูลมือถือ %1$s"</string>
+    <string name="hiad_net_error" priority="LT">"ข้อผิดพลาดเกี่ยวกับการเชื่อมต่อเครือข่าย โปรดลองใหม่อีกครั้ง"</string>
+    <string name="hiad_network_error" priority="LT">"ข้อผิดพลาดเกี่ยวกับการเชื่อมต่อเครือข่าย"</string>
+    <string name="hiad_network_no_available" priority="LT">"ไม่มีการเชื่อมต่ออินเทอร์เน็ต โปรดตรวจสอบการตั้งค่าเครือข่ายของคุณ"</string>
+    <string name="hiad_no_more_remind" priority="LT">"โปรดอย่าเตือนอีก"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"ไม่มีการเชื่อมต่อ Wi-Fi การดาวน์โหลดตอนนี้จะใช้ข้อมูลมือถือของคุณ ดาวน์โหลดหรือไม่"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"ไม่มีการเชื่อมต่อ WLAN การดาวน์โหลดตอนนี้จะใช้ข้อมูลมือถือของคุณ ดาวน์โหลดหรือไม่"</string>
+    <string name="hiad_open_in_browser" priority="LT">"เปิดในเบราว์เซอร์"</string>
+    <string name="hiad_page_load_failed" priority="LT">"ไม่สามารถโหลดหน้าได้ โปรดลองใหม่อีกครั้ง"</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s ต้องการได้รับอนุญาตดังต่อไปนี้:"</string>
+    <string name="hiad_prepare_download" priority="LT">"รอสัญญาณ Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"ดาวน์โหลดผ่านเครือข่ายมือถือหรือไม่"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"รอ WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"รีเฟรช"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"แอปมีขนาดเกิน %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"ข้าม"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"รับชมต่อ"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"รับชมโฆษณานี้จนจบเพื่อรับรางวัล"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"แตะเพื่อเปิดเว็บไซต์/แอป"</string>
+    <string name="hiad_swipe_screen" priority="LT">"ปัดนิ้ว"</string>
+    <string name="hiad_twist_screen" priority="LT">"เขย่าโทรศัพท์"</string>
+    <string name="hiad_whether_download" priority="LT">"ดาวน์โหลดแอปนี้หรือไม่"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"โหลดล่วงหน้าผ่าน Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"โหลดไว้ล่วงหน้า"</string>
+    <string name="native_body">เนื้อความ</string>
+    <string name="native_headline">บรรทัดแรก</string>
+    <string name="native_media_view">มุมมองสื่อ</string>
+    <string msgid="478774118347071097" name="not_set">"ไม่ได้ตั้งค่า"</string>
+    <string name="notifications_permission_confirm">อนุญาต</string>
+    <string name="notifications_permission_decline">ไม่อนุญาต</string>
+    <string name="notifications_permission_title">อนุญาตให้แอปส่งการแจ้งเตือนถึงคุณไหม</string>
+    <string name="offline_notification_text">แตะเพื่อเปิดโฆษณา</string>
+    <string name="offline_notification_title">ดูโฆษณาที่คุณบันทึกไว้ขณะออฟไลน์</string>
+    <string name="offline_opt_in_confirm">ตกลง</string>
+    <string name="offline_opt_in_confirmation">คุณจะได้รับการแจ้งเตือนพร้อมลิงก์เมื่อกลับมาออนไลน์</string>
+    <string name="offline_opt_in_decline">ไม่เป็นไร</string>
+    <string name="offline_opt_in_message">เราจะส่งการแจ้งเตือนให้คุณพร้อมลิงก์ไปยังเว็บไซต์ของผู้ลงโฆษณา</string>
+    <string name="offline_opt_in_title">เปิดโฆษณาเมื่อคุณกลับมาออนไลน์</string>
+    <string msgid="7961817945132860002" name="preference_copied">"คัดลอก \"<ns1:g id="SUMMARY">%1$s</ns1:g>\" ไปยังคลิปบอร์ดแล้ว"</string>
+    <string name="s1">บันทึกรูปภาพ</string>
+    <string name="s2">อนุญาตให้โฆษณาจัดเก็บรูปภาพในแกลเลอรีภาพไหม</string>
+    <string name="s3">ยอมรับ</string>
+    <string name="s4">ปฏิเสธ</string>
+    <string name="s5">สร้างกิจกรรมในปฏิทิน</string>
+    <string name="s6">อนุญาตให้โฆษณาสร้างกิจกรรมในปฏิทินไหม</string>
+    <string name="s7">โฆษณาทดสอบ</string>
+    <string msgid="730395136688082741" name="search_menu_title">"ค้นหา"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g> <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="tt_00_00">00:00</string>
+    <string name="tt_ad">โฆษณา</string>
+    <string name="tt_ad_clicked_text">โฆษณาที่คลิกแล้ว</string>
+    <string name="tt_ad_close_text">ปิดโฆษณาแล้ว</string>
+    <string name="tt_ad_data_error">Response data error</string>
+    <string name="tt_ad_is_closed">ปิดโฆษณา</string>
+    <string name="tt_ad_logo_txt">AD</string>
+    <string name="tt_ad_showed_text">โฆษณาที่แสดง</string>
+    <string name="tt_adslot_empty">No request ad slot</string>
+    <string name="tt_adslot_id_error">Illegal ad slot id</string>
+    <string name="tt_adslot_size_empty">Empty ad slot size</string>
+    <string name="tt_adtype_not_match_rit">Ad slot id error</string>
+    <string name="tt_app_empty">No request app</string>
+    <string name="tt_app_name">tt_open_ad_sdk</string>
+    <string name="tt_auto_play_cancel_text">ยกเลิก</string>
+    <string name="tt_banner_ad_load_image_error">Banner loading failed</string>
+    <string name="tt_cancel">ยกเลิก</string>
+    <string name="tt_choose_language">th</string>
+    <string name="tt_click_to_replay">แตะเพื่อเล่นซ้ำ</string>
+    <string name="tt_comment_num">%1$s รีวิว</string>
+    <string name="tt_comment_num_backup">%1$s รีวิว</string>
+    <string name="tt_comment_score">การประเมินผล</string>
+    <string name="tt_confirm_download">คุณไม่ได้เชื่อมต่อกับเครือข่าย Wi-Fi แน่ใจหรือไม่ว่าคุณต้องการดาวน์โหลด</string>
+    <string name="tt_confirm_download_have_app_name">กำลังเตรียมดาวน์โหลด %s แอป</string>
+    <string name="tt_content_type">Http content type error</string>
+    <string name="tt_count_down_view">ข้าม</string>
+    <string name="tt_dislike_header_tv_back">ย้อนกลับ</string>
+    <string name="tt_dislike_header_tv_title">เลือก</string>
+    <string name="tt_error_access_method_pass">Illegal access method</string>
+    <string name="tt_error_ad_type">Illegal ad type</string>
+    <string name="tt_error_adtype_differ">Ad type error</string>
+    <string name="tt_error_apk_sign_check_error">Illegal apk sha1 value</string>
+    <string name="tt_error_code_adcount_error">Incorrect number of ad</string>
+    <string name="tt_error_code_click_event_error">Click event error</string>
+    <string name="tt_error_image_size">Illegal image size</string>
+    <string name="tt_error_media_id">Illegal media id</string>
+    <string name="tt_error_media_type">Illegal media type</string>
+    <string name="tt_error_new_register_limit">New ad slot exceeded daily request limit</string>
+    <string name="tt_error_origin_ad_error">Origin type error</string>
+    <string name="tt_error_package_name">Package name error</string>
+    <string name="tt_error_redirect">Redirect error</string>
+    <string name="tt_error_request_invalid">Invalid request</string>
+    <string name="tt_error_slot_id_app_id_differ">SlotId and AppId match error</string>
+    <string name="tt_error_splash_ad_type">Splash ad type error</string>
+    <string name="tt_error_union_os_error">Os type error</string>
+    <string name="tt_error_union_sdk_too_old">Sdk version too low</string>
+    <string name="tt_error_unknow">Unknown error</string>
+    <string name="tt_error_verify_reward">Reward verify error</string>
+    <string name="tt_feedback_experience_text">เราจะปรับปรุงการให้บริการของเราต่อไป</string>
+    <string name="tt_feedback_submit_text">คุณได้ส่งคำติชมมาแล้ว คุณไม่จำเป็นต้องส่งอีกครั้ง</string>
+    <string name="tt_feedback_thank_text">ขอบคุณสำหรับคำติชม</string>
+    <string name="tt_frequent_call_erroe">Ad requests are too frequent</string>
+    <string name="tt_full_screen_skip_tx">ข้าม</string>
+    <string name="tt_get_reward">แจกรางวัลแล้ว</string>
+    <string name="tt_insert_ad_load_image_error">Interstitial loading failed</string>
+    <string name="tt_label_cancel">ยกเลิก</string>
+    <string name="tt_label_ok">ตกลง</string>
+    <string name="tt_load_creative_icon_error">Icon loading failed</string>
+    <string name="tt_load_creative_icon_response_error">Icon loading error</string>
+    <string name="tt_load_failed_text">การโหลดโฆษณาล้มเหลว</string>
+    <string name="tt_load_success_text">โหลดโฆษณาสำเร็จแล้ว</string>
+    <string name="tt_msgPlayable">เล่นจนจบเพื่อรับรางวัล</string>
+    <string name="tt_negtiveBtnBtnText">ออก</string>
+    <string name="tt_negtive_txt">ยกเลิก</string>
+    <string name="tt_net_error">Network error</string>
+    <string name="tt_no_ad">No ad</string>
+    <string name="tt_no_ad_parse">Parsing data without ad</string>
+    <string name="tt_no_network">ไม่มีการเชื่อมต่อเครือข่าย โปรดลองอีกครั้งในภายหลัง</string>
+    <string name="tt_no_thank_you">ไม่เป็นไร ขอบคุณ</string>
+    <string name="tt_parse_fail">Parsing error</string>
+    <string name="tt_permission_denied">คุณได้ปิดการใช้งานสิทธิ์ที่จำเป็น โปรดเปิดใช้งานสิทธิ์</string>
+    <string name="tt_postiveBtnText">ดูต่อ</string>
+    <string name="tt_postiveBtnTextPlayable">เล่นต่อ</string>
+    <string name="tt_postive_txt">ตกลง</string>
+    <string name="tt_privacy_title">นโยบายความเป็นส่วนตัว</string>
+    <string name="tt_reder_ad_load_timeout">Template loading timeout</string>
+    <string name="tt_render_diff_template_invalid">Template diff invalid</string>
+    <string name="tt_render_fail_meta_invalid">Template invalid</string>
+    <string name="tt_render_fail_template_parse_error">Template parsing error</string>
+    <string name="tt_render_fail_timeout">Render timeout</string>
+    <string name="tt_render_fail_unknown">Render failed unknown</string>
+    <string name="tt_render_main_template_invalid">Main template invalid</string>
+    <string name="tt_render_render_parse_error">Render parsing failed</string>
+    <string name="tt_request_body_error">Request entity is empty</string>
+    <string name="tt_request_pb_error">Http request pb error</string>
+    <string name="tt_request_permission_descript_external_storage">ที่จัดเก็บ</string>
+    <string name="tt_request_permission_descript_location">ที่ตั้ง</string>
+    <string name="tt_request_permission_descript_read_phone_state">โทรศัพท์</string>
+    <string name="tt_reward_feedback">คำติชม</string>
+    <string name="tt_reward_full_skip">ข้ามหลังจาก %1$s วิ</string>
+    <string name="tt_reward_msg">ดูวิดีโอให้จบเพื่อรับรางวัล</string>
+    <string name="tt_reward_screen_skip_tx">ข้าม</string>
+    <string name="tt_reward_video_show_error">เกิดข้อผิดพลาดในการแสดงผลวิดีโอรางวัล</string>
+    <string name="tt_ror_code_show_event_error">Show event error</string>
+    <string name="tt_skip_ad_time_text">ข้ามหลังจาก %ds วินาที</string>
+    <string name="tt_splash_ad_load_image_error">Splash loading failed</string>
+    <string name="tt_splash_cache_expired_error">Cache expired</string>
+    <string name="tt_splash_cache_parse_error">Cache parsing failed</string>
+    <string name="tt_splash_not_have_cache_error">No splash cache</string>
+    <string name="tt_splash_skip_tv">3 วิ | ข้าม</string>
+    <string name="tt_sys_error">System error</string>
+    <string name="tt_tip">พรอมต์</string>
+    <string name="tt_toast_ad_on_rewarded">Ad on rewarded</string>
+    <string name="tt_toast_later_download">Download later</string>
+    <string name="tt_toast_no_ad">No Ad to Show, Please Load Ad</string>
+    <string name="tt_toast_start_loading">Start Loading</string>
+    <string name="tt_toast_tiktok_ad_failed">TikTok Ad Failed to load, error code is:</string>
+    <string name="tt_try_now">ลองตอนนี้</string>
+    <string name="tt_txt_skip">ข้าม</string>
+    <string name="tt_unlike">ไม่สนใจ</string>
+    <string name="tt_video_bytesize">ข้อมูล</string>
+    <string name="tt_video_bytesize_M">M</string>
+    <string name="tt_video_bytesize_MB">MB</string>
+    <string name="tt_video_continue_play">เล่นต่อ</string>
+    <string name="tt_video_dial_phone">โทรเลย</string>
+    <string name="tt_video_download_apk">ดาวน์โหลดเลย</string>
+    <string name="tt_video_mobile_go_detail">ดูเลย</string>
+    <string name="tt_video_retry_des">การโหลดล้มเหลว คลิกเพื่อลองอีกครั้ง</string>
+    <string name="tt_video_retry_des_txt">การโหลดล้มเหลว โปรดลองอีกครั้ง</string>
+    <string name="tt_video_without_wifi_tips">การเล่นเนื้อหานี้จะใช้อินเทอร์เน็ต %.2f MB"</string>
+    <string name="tt_wap_empty">No request wap</string>
+    <string name="tt_web_title_default">โฆษณา</string>
+    <string name="tt_will_play">วิดีโอกำลังจะเล่น</string>
+    <string name="tt_yes_i_agree">ใช่ ฉันยอมรับ</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"ปิด"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"เปิด"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

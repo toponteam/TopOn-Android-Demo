@@ -5,27 +5,34 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.anythink.core.api.ATAdAppInfo;
 import com.anythink.core.api.ATShakeViewListener;
-import com.anythink.core.common.base.SDKContext;
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
+import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.huawei.hms.ads.AppDownloadButton;
+import com.test.ad.demo.view.MutiImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SelfRenderViewUtil {
+    private static final String TAG = SelfRenderViewUtil.class.getSimpleName();
 
     public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo) {
+        //log
+        printNativeAdMaterial(adMaterial);
+
         int padding = dip2px(context, 5);
         selfRenderView.setPadding(padding, padding, padding, padding);
         TextView titleView = (TextView) selfRenderView.findViewById(R.id.native_ad_title);
@@ -37,6 +44,7 @@ public class SelfRenderViewUtil {
         final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
         FrameLayout shakeViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_shake_view_container);
+        FrameLayout slideViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_slide_view_container);
         FrameLayout adLogoContainer = selfRenderView.findViewById(R.id.native_ad_logo_container);   //v6.1.52+
 
         // bind view
@@ -121,20 +129,50 @@ public class SelfRenderViewUtil {
         View mediaView = adMaterial.getAdMediaView(contentArea);
         int mainImageHeight = adMaterial.getMainImageHeight();
         int mainImageWidth = adMaterial.getMainImageWidth();
-
-        int realMainImageWidth = context.getResources().getDisplayMetrics().widthPixels - dip2px(context, 10);
-        int realMainHeight = 0;
-
         FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
                 , FrameLayout.LayoutParams.WRAP_CONTENT);
-        if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
-            realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
-            mainImageParam.width = realMainImageWidth;
-            mainImageParam.height = realMainHeight;
+        if (mediaView == null) {
+            ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
+            viewTreeObserver.addOnGlobalLayoutListener(
+                    new ViewTreeObserver.OnGlobalLayoutListener() {
+                        @Override
+                        public void onGlobalLayout() {
+                            // 移除监听器
+                            selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+
+                            int realMainImageWidth = selfRenderView.getWidth() - dip2px(context,
+                                    10);
+                            int realMainHeight = 0;
+
+                            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                                realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+                                mainImageParam.width = realMainImageWidth;
+                                mainImageParam.height = realMainHeight;
+                            } else {
+                                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                                mainImageParam.height = realMainImageWidth * 600 / 1024;
+                            }
+                        }
+                    });
         } else {
-            mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-            mainImageParam.height = realMainImageWidth * 600 / 1024;
+            int realMainImageWidth = context.getResources()
+                    .getDisplayMetrics().widthPixels - dip2px(context, 10);
+            if (context.getResources().getDisplayMetrics().widthPixels > context.getResources()
+                    .getDisplayMetrics().heightPixels) {//Horizontal screen
+                realMainImageWidth = context.getResources()
+                        .getDisplayMetrics().widthPixels - dip2px(context, 10) - dip2px(context,
+                        330) - dip2px(context, 130);
+            }
+            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                mainImageParam.height = realMainImageWidth * mainImageHeight / mainImageWidth;
+            } else {
+                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                mainImageParam.height = realMainImageWidth * 600 / 1024;
+            }
         }
+
+        List<String> imageList = adMaterial.getImageUrlList();
 
         contentArea.removeAllViews();
         if (mediaView != null) {
@@ -146,6 +184,12 @@ public class SelfRenderViewUtil {
             contentArea.addView(mediaView, mainImageParam);
             clickViewList.add(mediaView);
             contentArea.setVisibility(View.VISIBLE);
+        } else if (imageList != null && imageList.size() > 1) {
+            MutiImageView mutiImageView = new MutiImageView(context);
+            mutiImageView.setImageList(imageList, mainImageWidth, mainImageHeight);
+            nativePrepareInfo.setMainImageView(mutiImageView);//bind main image
+            contentArea.addView(mutiImageView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            clickViewList.add(mutiImageView);
         } else if (!TextUtils.isEmpty(adMaterial.getMainImageUrl())) {
             ATNativeImageView imageView = new ATNativeImageView(context);
             imageView.setImage(adMaterial.getMainImageUrl());
@@ -196,21 +240,10 @@ public class SelfRenderViewUtil {
         }
         nativePrepareInfo.setAdFromView(adFromView);//bind ad from
 
-        // get the shakeView if the ad platform support, width or height at least 80dp.
-        int shakeViewWidth = dip2px(context, 100), shakeViewHeight = dip2px(context, 100);
-        View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
-            @Override
-            public void onDismiss() {
-
-            }
-        });
-        if (shakeView != null && shakeViewContainer != null) {
-            shakeViewContainer.setVisibility(View.VISIBLE);
-            shakeViewContainer.removeAllViews();
-            FrameLayout.LayoutParams shakeViewLayoutParams = new FrameLayout.LayoutParams(shakeViewWidth, shakeViewHeight);
-            shakeViewLayoutParams.gravity = Gravity.CENTER;
-            shakeViewContainer.addView(shakeView, shakeViewLayoutParams);
-        }
+        //渲染摇一摇组件，若广告不支持摇一摇能力则返回null，目前只有百度广告平台支持
+        renderShakeView(context, adMaterial, shakeViewContainer);
+        //渲染滑一滑组件，若广告不支持则返回null，滑动区域受容器大小控制，目前只有百度广告平台支持
+        renderSlideView(context, adMaterial, slideViewContainer);
 
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
@@ -268,6 +301,43 @@ public class SelfRenderViewUtil {
         }
     }
 
+    private static void renderShakeView(Context context, ATNativeMaterial adMaterial, FrameLayout shakeViewContainer) {
+        int shakeViewWidth = dip2px(context, 100);  //组件的宽，不小于80dp
+        int shakeViewHeight = dip2px(context, 100); //组件的高，不小于80dp
+        View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
+            @Override
+            public void onDismiss() {
+                shakeViewContainer.setVisibility(View.GONE);
+            }
+        });
+        if (shakeView != null && shakeViewContainer != null) {
+            shakeViewContainer.setVisibility(View.VISIBLE);
+            shakeViewContainer.removeAllViews();
+            FrameLayout.LayoutParams shakeViewLayoutParams = new FrameLayout.LayoutParams(shakeViewWidth, shakeViewHeight);
+            shakeViewLayoutParams.gravity = Gravity.CENTER;
+            shakeViewContainer.addView(shakeView, shakeViewLayoutParams);
+        }
+    }
+
+    private static void renderSlideView(Context context, ATNativeMaterial adMaterial, FrameLayout slideViewContainer) {
+        int slideViewWidth = dip2px(context, 120);  //滑动引导区域的宽
+        int slideViewHeight = dip2px(context, 50); // 滑动引导区域的高
+        int repeat = 5; //动画的重复次数，结束后自动隐藏组件
+        View slideView = adMaterial.getSlideView(slideViewWidth, slideViewHeight, repeat, new ATShakeViewListener() {
+            @Override
+            public void onDismiss() {
+                slideViewContainer.setVisibility(View.GONE);
+            }
+        });
+        if (slideView != null && slideViewContainer != null) {
+            slideViewContainer.setVisibility(View.VISIBLE);
+            slideViewContainer.removeAllViews();
+            FrameLayout.LayoutParams slideViewLayoutParams = new FrameLayout.LayoutParams(slideViewWidth, slideViewHeight + dip2px(context, 50));
+            slideViewLayoutParams.gravity = Gravity.CENTER;
+            slideViewContainer.addView(slideView, slideViewLayoutParams);
+        }
+    }
+
     private static void setOpenUrlClickListener(View view, final String url) {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -277,7 +347,7 @@ public class SelfRenderViewUtil {
                             Uri.parse(url));
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
                             | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    Context context = SDKContext.getInstance().getContext();
+                    Context context = view.getContext();
                     if (context != null) {
                         context.startActivity(intent);
                     }
@@ -307,5 +377,63 @@ public class SelfRenderViewUtil {
         return (int) (dipValue * scale + 0.5f);
     }
 
+    private static void printNativeAdMaterial(ATNativeMaterial adMaterial) {
+        if (adMaterial == null) return;
+
+        String adType = adMaterial.getAdType();
+        switch (adType) {
+            case CustomNativeAd.NativeAdConst.VIDEO_TYPE:
+                Log.i(TAG, "Ad source type: Video" + ", video duration: " + adMaterial.getVideoDuration());
+                break;
+            case CustomNativeAd.NativeAdConst.IMAGE_TYPE:
+                Log.i(TAG, "Ad source type: Image");
+                break;
+            default:
+                Log.i(TAG, "Ad source type: Unknown");
+                break;
+        }
+        switch (adMaterial.getNativeType()) {
+            case CustomNativeAd.NativeType.FEED:
+                Log.i(TAG, "Native type: Feed");
+                break;
+            case CustomNativeAd.NativeType.PATCH:
+                Log.i(TAG, "Native type: Patch");
+                break;
+        }
+
+        Log.i(TAG, "show native material:" + "\n" +
+                "adMaterial: " + adMaterial + "\n" +
+                "getTitle:" + adMaterial.getTitle() + "\n" +
+                "getDescriptionText:" + adMaterial.getDescriptionText() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdMediaView:" + adMaterial.getAdMediaView() + "\n" +
+                "getAdIconView:" + adMaterial.getAdIconView() + "\n" +
+                "getIconImageUrl:" + adMaterial.getIconImageUrl() + "\n" +
+                "getMainImageUrl:" + adMaterial.getMainImageUrl() + "\n" +
+                "getMainImageWidth:" + adMaterial.getMainImageWidth() + "\n" +
+                "getMainImageHeight:" + adMaterial.getMainImageHeight() + "\n" +
+                "getVideoWidth:" + adMaterial.getVideoWidth() + "\n" +
+                "getVideoHeight:" + adMaterial.getVideoHeight() + "\n" +
+                "getAppPrice:" + adMaterial.getAppPrice() + "\n" +
+                "getAppCommentNum:" + adMaterial.getAppCommentNum() + "\n" +
+                "getCallToActionText:" + adMaterial.getCallToActionText() + "\n" +
+                "getStarRating:" + adMaterial.getStarRating() + "\n" +
+                "getVideoUrl:" + adMaterial.getVideoUrl() + "\n" +
+                "getAdChoiceIconUrl:" + adMaterial.getAdChoiceIconUrl() + "\n" +
+                "getAdFrom:" + adMaterial.getAdFrom() + "\n" +
+                "getImageUrlList:" + adMaterial.getImageUrlList() + "\n" +
+                "getNetworkInfoMap:" + adMaterial.getNetworkInfoMap() + "\n" +
+                "getAdAppInfo:" + adMaterial.getAdAppInfo() + "\n" +
+                "getNativeAdInteractionType:" + (adMaterial.getNativeAdInteractionType()) + "\n" +
+                "getVideoDuration:" + adMaterial.getVideoDuration() + "\n" +
+                "getAdvertiserName:" + adMaterial.getAdvertiserName() + "\n" +
+                "getNativeType:" + adMaterial.getNativeType() + "\n" +
+                "getAdType:" + adMaterial.getAdType() + "\n" +
+                "getNativeCustomVideo:" + adMaterial.getNativeCustomVideo() + "\n" +
+                "getAdLogo:" + adMaterial.getAdLogo() + "\n" +
+                "getNativeExpressWidth:" + adMaterial.getNativeExpressWidth() + "\n" +
+                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
+        );
+    }
 
 }

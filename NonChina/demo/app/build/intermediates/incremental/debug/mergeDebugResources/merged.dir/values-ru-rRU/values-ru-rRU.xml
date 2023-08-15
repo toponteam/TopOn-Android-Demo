@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ad">Реклама</string>
+    <string name="bigo_ad_feedback_copied">Скопировано</string>
+    <string name="bigo_ad_feedback_copy_ad_id">Скопировать ID объявления</string>
+    <string name="bigo_ad_feedback_hide_ads">Скрыть рекламу</string>
+    <string name="bigo_ad_feedback_report_ads">Пожаловаться на рекламу</string>
+    <string name="bigo_ad_feedback_why_this_ad">Почему я вижу эту рекламу?</string>
+</resources>

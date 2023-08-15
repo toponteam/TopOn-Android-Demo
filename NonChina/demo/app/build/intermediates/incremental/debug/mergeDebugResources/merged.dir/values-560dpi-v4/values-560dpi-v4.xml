@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nend_full_board_ad_card_margin_top">0dp</dimen>
+    <dimen name="nend_full_board_ad_card_width_max">680dp</dimen>
+    <dimen name="nend_full_board_ad_close_button_margin">8dp</dimen>
+    <dimen name="nend_full_board_ad_promotion_text_size">28dp</dimen>
+    <dimen name="nend_full_board_ad_text_size">22dp</dimen>
+    <integer name="nend_full_board_ad_shadow_delta">8</integer>
+</resources>
