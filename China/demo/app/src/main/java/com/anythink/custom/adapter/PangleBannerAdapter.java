@@ -21,7 +21,6 @@ import com.bytedance.sdk.openadsdk.TTAdDislike;
 import com.bytedance.sdk.openadsdk.TTAdManager;
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.bytedance.sdk.openadsdk.TTAdSdk;
-import com.bytedance.sdk.openadsdk.TTBannerAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 
 import java.util.List;
@@ -38,22 +37,6 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
     int mRefreshTime;
 
     //TT Advertising event monitoring
-    TTBannerAd.AdInteractionListener interactionListener = new TTBannerAd.AdInteractionListener() {
-
-        @Override
-        public void onAdClicked(View view, int i) {
-            if (mImpressionEventListener != null) {
-                mImpressionEventListener.onBannerAdClicked();
-            }
-        }
-
-        @Override
-        public void onAdShow(View view, int i) {
-            if (mImpressionEventListener != null) {
-                mImpressionEventListener.onBannerAdShow();
-            }
-        }
-    };
 
 
     //Native Express
@@ -321,7 +304,6 @@ public class PangleBannerAdapter extends CustomBannerAdapter {
             mTTNativeExpressAd = null;
         }
 
-        interactionListener = null;
         expressAdInteractionListener = null;
         expressAdListener = null;
         mActivity = null;

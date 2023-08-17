@@ -20,7 +20,6 @@ import com.bytedance.sdk.openadsdk.TTAdManager;
 import com.bytedance.sdk.openadsdk.TTAdNative;
 import com.bytedance.sdk.openadsdk.TTAdSdk;
 import com.bytedance.sdk.openadsdk.TTFullScreenVideoAd;
-import com.bytedance.sdk.openadsdk.TTInteractionAd;
 import com.bytedance.sdk.openadsdk.TTNativeExpressAd;
 
 import java.util.List;
@@ -31,36 +30,10 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
     String slotId = "";
     boolean isVideo = false;
 
-    private TTInteractionAd mttInterstitialAd;
     private TTFullScreenVideoAd mTTFullScreenVideoAd;
     private TTNativeExpressAd mTTNativeExpressAd;
 
     //TT Advertising event listener
-    TTInteractionAd.AdInteractionListener interactionListener = new TTInteractionAd.AdInteractionListener() {
-
-        @Override
-        public void onAdClicked() {
-            if (mImpressListener != null) {
-                mImpressListener.onInterstitialAdClicked();
-            }
-        }
-
-        @Override
-        public void onAdShow() {
-            if (mImpressListener != null) {
-                mImpressListener.onInterstitialAdShow();
-            }
-        }
-
-        @Override
-        public void onAdDismiss() {
-            if (mImpressListener != null) {
-                mImpressListener.onInterstitialAdClose();
-            }
-        }
-
-    };
-
 
     TTAdNative.FullScreenVideoAdListener ttFullScrenAdListener = new TTAdNative.FullScreenVideoAdListener() {
         @Override
@@ -202,16 +175,11 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
 
     @Override
     public boolean isAdReady() {
-        return mttInterstitialAd != null || mTTFullScreenVideoAd != null || mTTNativeExpressAd != null;
+        return mTTFullScreenVideoAd != null || mTTNativeExpressAd != null;
     }
 
     @Override
     public void show(Activity activity) {
-        if (mttInterstitialAd != null && activity != null) {
-            mttInterstitialAd.setAdInteractionListener(interactionListener);
-            mttInterstitialAd.showInteractionAd(activity);
-        }
-
         if (mTTFullScreenVideoAd != null && activity != null) {
             mTTFullScreenVideoAd.setFullScreenVideoAdInteractionListener(ttFullScreenEventListener);
             mTTFullScreenVideoAd.showFullScreenVideoAd(activity);
@@ -276,11 +244,6 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
             mTTFullScreenVideoAd = null;
         }
 
-        if (mttInterstitialAd != null) {
-            mttInterstitialAd.setAdInteractionListener(null);
-            mttInterstitialAd.setDownloadListener(null);
-            mttInterstitialAd = null;
-        }
 
         if (mTTNativeExpressAd != null) {
             mTTNativeExpressAd.setExpressInteractionListener(null);
@@ -288,7 +251,6 @@ public class PangleInterstitialAdapter extends CustomInterstitialAdapter {
             mTTNativeExpressAd = null;
         }
 
-        interactionListener = null;
         ttFullScreenEventListener = null;
         ttFullScrenAdListener = null;
         adExpressInteractionListener = null;

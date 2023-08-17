@@ -142,7 +142,7 @@
                 android:resource="@xml/anythink_bk_tt_file_path" />
         </provider> <!-- source file: china/network_sdk/baidu/9.313/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/sigmob/4.12.6/AndroidManifest.xml -->
-        <!-- source file: china/network_sdk/mimo/5.2.5/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/mimo/5.2.7/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/klevin/2.11.0.3/AndroidManifest.xml -->
         <provider
             android:name="com.tencent.klevin.utils.FileProvider"
