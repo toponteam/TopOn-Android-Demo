@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="mbridge_common_activity_style" parent="@android:style/Theme.Translucent.NoTitleBar"/>
+    <style name="mbridge_transparent_common_activity_style" parent="mbridge_common_activity_style">
+    </style>
+</resources>

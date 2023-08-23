@@ -1,0 +1,22 @@
+<script language='javascript' type='text/javascript'>
+	(function() {
+        var wasIaLoadFinishedNotified = false;
+        var IA_AD_FINISHED_LOADING_EVENT = 'iaadfinishedloading';
+
+        var iaNotifyLoadFinished = function() {
+            if (!wasIaLoadFinishedNotified) {
+                wasIaLoadFinishedNotified = true;
+                var ifr = document.createElement('iframe');
+                var container = document.body || document.documentElement;
+                container.appendChild(ifr);
+                ifr.setAttribute('sandbox', '');
+                ifr.setAttribute('style', 'position: fixed; bottom: -20px; border: none; display: none; height: 20px; z-index: -99999');
+                ifr.setAttribute('src', IA_AD_FINISHED_LOADING_EVENT + '://' + "success");
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function(e) {
+            iaNotifyLoadFinished.apply(null);
+         }, { once: true });
+   })();
+</script>
