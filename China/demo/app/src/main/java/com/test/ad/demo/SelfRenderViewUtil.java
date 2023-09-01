@@ -44,7 +44,6 @@ public class SelfRenderViewUtil {
         final ATNativeImageView logoView = (ATNativeImageView) selfRenderView.findViewById(R.id.native_ad_logo);
         View closeView = selfRenderView.findViewById(R.id.native_ad_close);
         FrameLayout shakeViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_shake_view_container);
-        FrameLayout slideViewContainer = (FrameLayout) selfRenderView.findViewById(R.id.native_ad_slide_view_container);
         FrameLayout adLogoContainer = selfRenderView.findViewById(R.id.native_ad_logo_container);   //v6.1.52+
 
         // bind view
@@ -131,46 +130,27 @@ public class SelfRenderViewUtil {
         int mainImageWidth = adMaterial.getMainImageWidth();
         FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
                 , FrameLayout.LayoutParams.WRAP_CONTENT);
-        if (mediaView == null) {
-            ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
-            viewTreeObserver.addOnGlobalLayoutListener(
-                    new ViewTreeObserver.OnGlobalLayoutListener() {
-                        @Override
-                        public void onGlobalLayout() {
-                            // 移除监听器
-                            selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-                            int realMainImageWidth = selfRenderView.getWidth() - dip2px(context,
-                                    10);
-                            int realMainHeight = 0;
+        ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
+        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                // 移除监听器
+                selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-                            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
-                                realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
-                                mainImageParam.width = realMainImageWidth;
-                                mainImageParam.height = realMainHeight;
-                            } else {
-                                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-                                mainImageParam.height = realMainImageWidth * 600 / 1024;
-                            }
-                        }
-                    });
-        } else {
-            int realMainImageWidth = context.getResources()
-                    .getDisplayMetrics().widthPixels - dip2px(context, 10);
-            if (context.getResources().getDisplayMetrics().widthPixels > context.getResources()
-                    .getDisplayMetrics().heightPixels) {//Horizontal screen
-                realMainImageWidth = context.getResources()
-                        .getDisplayMetrics().widthPixels - dip2px(context, 10) - dip2px(context,
-                        330) - dip2px(context, 130);
+                int realMainImageWidth = selfRenderView.getWidth() - dip2px(context, 10);
+                int realMainHeight = 0;
+
+                if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                    realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+                    mainImageParam.width = realMainImageWidth;
+                    mainImageParam.height = realMainHeight;
+                } else {
+                    mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                    mainImageParam.height = realMainImageWidth * 600 / 1024;
+                }
             }
-            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
-                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-                mainImageParam.height = realMainImageWidth * mainImageHeight / mainImageWidth;
-            } else {
-                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-                mainImageParam.height = realMainImageWidth * 600 / 1024;
-            }
-        }
+        });
 
         List<String> imageList = adMaterial.getImageUrlList();
 
@@ -240,10 +220,21 @@ public class SelfRenderViewUtil {
         }
         nativePrepareInfo.setAdFromView(adFromView);//bind ad from
 
-        //渲染摇一摇组件，若广告不支持摇一摇能力则返回null，目前只有百度广告平台支持
-        renderShakeView(context, adMaterial, shakeViewContainer);
-        //渲染滑一滑组件，若广告不支持则返回null，滑动区域受容器大小控制，目前只有百度广告平台支持
-        renderSlideView(context, adMaterial, slideViewContainer);
+        // get the shakeView if the ad platform support, width or height at least 80dp.
+        int shakeViewWidth = dip2px(context, 100), shakeViewHeight = dip2px(context, 100);
+        View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
+            @Override
+            public void onDismiss() {
+
+            }
+        });
+        if (shakeView != null && shakeViewContainer != null) {
+            shakeViewContainer.setVisibility(View.VISIBLE);
+            shakeViewContainer.removeAllViews();
+            FrameLayout.LayoutParams shakeViewLayoutParams = new FrameLayout.LayoutParams(shakeViewWidth, shakeViewHeight);
+            shakeViewLayoutParams.gravity = Gravity.CENTER;
+            shakeViewContainer.addView(shakeView, shakeViewLayoutParams);
+        }
 
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
@@ -298,43 +289,6 @@ public class SelfRenderViewUtil {
 
         } else {
             sixInfoView.setVisibility(View.GONE);
-        }
-    }
-
-    private static void renderShakeView(Context context, ATNativeMaterial adMaterial, FrameLayout shakeViewContainer) {
-        int shakeViewWidth = dip2px(context, 100);  //组件的宽，不小于80dp
-        int shakeViewHeight = dip2px(context, 100); //组件的高，不小于80dp
-        View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
-            @Override
-            public void onDismiss() {
-                shakeViewContainer.setVisibility(View.GONE);
-            }
-        });
-        if (shakeView != null && shakeViewContainer != null) {
-            shakeViewContainer.setVisibility(View.VISIBLE);
-            shakeViewContainer.removeAllViews();
-            FrameLayout.LayoutParams shakeViewLayoutParams = new FrameLayout.LayoutParams(shakeViewWidth, shakeViewHeight);
-            shakeViewLayoutParams.gravity = Gravity.CENTER;
-            shakeViewContainer.addView(shakeView, shakeViewLayoutParams);
-        }
-    }
-
-    private static void renderSlideView(Context context, ATNativeMaterial adMaterial, FrameLayout slideViewContainer) {
-        int slideViewWidth = dip2px(context, 120);  //滑动引导区域的宽
-        int slideViewHeight = dip2px(context, 50); // 滑动引导区域的高
-        int repeat = 5; //动画的重复次数，结束后自动隐藏组件
-        View slideView = adMaterial.getSlideView(slideViewWidth, slideViewHeight, repeat, new ATShakeViewListener() {
-            @Override
-            public void onDismiss() {
-                slideViewContainer.setVisibility(View.GONE);
-            }
-        });
-        if (slideView != null && slideViewContainer != null) {
-            slideViewContainer.setVisibility(View.VISIBLE);
-            slideViewContainer.removeAllViews();
-            FrameLayout.LayoutParams slideViewLayoutParams = new FrameLayout.LayoutParams(slideViewWidth, slideViewHeight + dip2px(context, 50));
-            slideViewLayoutParams.gravity = Gravity.CENTER;
-            slideViewContainer.addView(slideView, slideViewLayoutParams);
         }
     }
 
