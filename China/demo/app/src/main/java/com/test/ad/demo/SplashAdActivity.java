@@ -10,6 +10,8 @@ package com.test.ad.demo;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 
@@ -97,11 +99,26 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
 
         //Klevin
 //        defaultConfig = "{\"unit_id\":1333253,\"nw_firm_id\":51,\"adapter_class\":\"com.anythink.network.klevin.KlevinATSplashAdapter\",\"content\":\"{\\\"pos_id\\\":\\\"30029\\\",\\\"app_id\\\":\\\"30008\\\"}\"}";
+        int requestSplashWidth = 0;
+        int requestSplashHeight = 0;
 
-        mSplashAd = new ATSplashAd(this, placementId, new ATSplashExListenerImpl(), 5000, defaultConfig);
+        Configuration cf = getResources().getConfiguration();
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+        int ori = cf.orientation;
+        if (ori == Configuration.ORIENTATION_LANDSCAPE) {
+            requestSplashWidth = (int) (dm.widthPixels * 0.85);
+            requestSplashHeight = dm.heightPixels;
+        } else {
+            requestSplashWidth = dm.widthPixels;
+            requestSplashHeight = (int) (dm.heightPixels * 0.85);
+        }
+
+        mSplashAd = new ATSplashAd(this, placementId, new ATSplashExListenerImpl(), 5000,
+                defaultConfig);
         Map<String, Object> localMap = new HashMap<>();
-//        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
-//        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
+        //穿山甲开屏广告支持传入宽高，单位px
+        localMap.put(ATAdConst.KEY.AD_WIDTH, requestSplashWidth);
+        localMap.put(ATAdConst.KEY.AD_HEIGHT, requestSplashHeight);
 
         mSplashAd.setLocalExtra(localMap);
         mSplashAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());

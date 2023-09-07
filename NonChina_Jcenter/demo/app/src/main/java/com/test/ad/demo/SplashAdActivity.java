@@ -100,8 +100,6 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
 
         mSplashAd = new ATSplashAd(this, placementId, new ATSplashExListenerImpl(), 5000, defaultConfig);
         Map<String, Object> localMap = new HashMap<>();
-//        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
-//        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
 
         mSplashAd.setLocalExtra(localMap);
         mSplashAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());

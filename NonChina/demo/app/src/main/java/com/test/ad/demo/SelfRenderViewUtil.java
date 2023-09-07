@@ -126,26 +126,47 @@ public class SelfRenderViewUtil {
 
         FrameLayout.LayoutParams mainImageParam = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT
                 , FrameLayout.LayoutParams.WRAP_CONTENT);
-        ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
-        viewTreeObserver.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                // 移除监听器
-                selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        if (mediaView == null) {
+            ViewTreeObserver viewTreeObserver = selfRenderView.getViewTreeObserver();
+            viewTreeObserver.addOnGlobalLayoutListener(
+                    new ViewTreeObserver.OnGlobalLayoutListener() {
+                        @Override
+                        public void onGlobalLayout() {
+                            // 移除监听器
+                            selfRenderView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-                int realMainImageWidth = selfRenderView.getWidth() - dip2px(context, 10);
-                int realMainHeight = 0;
+                            int realMainImageWidth = selfRenderView.getWidth() - dip2px(context,
+                                    10);
+                            int realMainHeight = 0;
 
-                if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
-                    realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
-                    mainImageParam.width = realMainImageWidth;
-                    mainImageParam.height = realMainHeight;
-                } else {
-                    mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
-                    mainImageParam.height = realMainImageWidth * 600 / 1024;
-                }
+                            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                                realMainHeight = realMainImageWidth * mainImageHeight / mainImageWidth;
+                                mainImageParam.width = realMainImageWidth;
+                                mainImageParam.height = realMainHeight;
+                            } else {
+                                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                                mainImageParam.height = realMainImageWidth * 600 / 1024;
+                            }
+                        }
+                    });
+        } else {
+            int realMainImageWidth = context.getResources()
+                    .getDisplayMetrics().widthPixels - dip2px(context, 10);
+            if (context.getResources()
+                    .getDisplayMetrics().widthPixels > context.getResources()
+                    .getDisplayMetrics().heightPixels) {//Horizontal screen
+                realMainImageWidth = context.getResources()
+                        .getDisplayMetrics().widthPixels - dip2px(context, 10) - dip2px(context,
+                        330) - dip2px(context, 130);
             }
-        });
+            if (mainImageWidth > 0 && mainImageHeight > 0 && mainImageWidth > mainImageHeight) {
+                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                mainImageParam.height = realMainImageWidth * mainImageHeight / mainImageWidth;
+            } else {
+                mainImageParam.width = FrameLayout.LayoutParams.MATCH_PARENT;
+                mainImageParam.height = realMainImageWidth * 600 / 1024;
+            }
+        }
 
         List<String> imageList = adMaterial.getImageUrlList();
 
