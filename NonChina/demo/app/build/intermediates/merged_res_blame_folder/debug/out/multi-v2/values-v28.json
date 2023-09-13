@@ -1,0 +1,47 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-66:/values-v28/values-v28.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/0b092d9db5f4f5b24bf71aa6003e77ec/transformed/jetified-open_global_ad_sdk_5.4.1.1/res/values-v28/values-v28.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "395"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "589",
+                        "endLines": "17",
+                        "endColumns": "12",
+                        "endOffsets": "929"
+                    }
+                },
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/ccdb1279abedd37a64fa6a06b39ebd31/transformed/appcompat-1.1.0/res/values-v28/values-v28.xml",
+                    "from": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,447",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,442,684"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,397",
+                        "endLines": "2,3,7,11",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,392,584"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -61,6 +61,25 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     private void initData() {
+        ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
+        Configuration cf = getResources().getConfiguration();
+
+        int ori = cf.orientation;
+
+        /**You should set size to the layout param.**/
+        if (ori == Configuration.ORIENTATION_LANDSCAPE) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+            layoutParams.width = (int) (getResources().getDisplayMetrics().widthPixels * 0.9);
+            layoutParams.height = getResources().getDisplayMetrics().heightPixels;
+        } else if (ori == Configuration.ORIENTATION_PORTRAIT) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+        } else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
+            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.85);
+        }
 
         String defaultConfig = "";
 
@@ -86,6 +105,12 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 //        defaultConfig = "{\"unit_id\":1333253,\"nw_firm_id\":51,\"adapter_class\":\"com.anythink.network.klevin.KlevinATSplashAdapter\",\"content\":\"{\\\"pos_id\\\":\\\"30029\\\",\\\"app_id\\\":\\\"30008\\\"}\"}";
         String placementId = getIntent().getStringExtra("placementId");
         splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
+
+        Map<String, Object> localMap = new HashMap<>();
+        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
+        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
+
+        splashAd.setLocalExtra(localMap);
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
@@ -123,9 +148,14 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            //splashAd.show(SplashAdShowActivity.this, container);
-            //showAdWithCustomSkipView();//show with customSkipView
-            splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+//                    splashAd.show(SplashAdShowActivity.this, container);
+//                    showAdWithCustomSkipView();//show with customSkipView
+                    splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+                }
+            }, 10);
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();

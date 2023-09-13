@@ -118,7 +118,7 @@
             android:name="hw_ads_sdk_type"
             android:value="3"
             tools:node="replace" />
-        <!-- source file: china/network_sdk/gdt/4.540.1410/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/gdt/4.541.1411/AndroidManifest.xml -->
         <provider
             android:name="com.qq.e.comm.GDTFileProvider"
             android:authorities="${applicationId}.gdt.fileprovider"
@@ -127,7 +127,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_gdt_file_path" />
-        </provider> <!-- source file: china/network_sdk/csj/5.6.0.2/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/csj/5.6.0.7/AndroidManifest.xml -->
         <provider
             android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
             android:authorities="${applicationId}.TTMultiProvider"
@@ -140,7 +140,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_tt_file_path" />
-        </provider> <!-- source file: china/network_sdk/baidu/9.313/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/baidu/9.32/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/sigmob/4.12.6/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/mimo/5.2.7/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/klevin/2.11.0.3/AndroidManifest.xml -->

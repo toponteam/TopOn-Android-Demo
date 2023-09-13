@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Shpejt përpara %d sekondë</item>
+    <item quantity="other">Shpejt përpara %d sekonda</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Shko prapa %d sekondë</item>
+    <item quantity="other">Shko prapa %d sekonda</item>
+  </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Orientohu për në shtëpi"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Ngjitu lart"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Opsione të tjera"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"U krye"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Shfaq çdo gjë"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Zgjidh një aplikacion"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"JOAKTIV"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"AKTIV"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Funksioni+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"hapësirë"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menyja+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Kërko…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Pastro pyetjen"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Kërko pyetjen"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Kërko"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Dërgo pyetjen"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Kërkim me zë"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Ndaje me"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Ndaje me <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Palos"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivizo</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s nuk do të funksionojë nëse nuk aktivizon shërbimet e \"Luaj me Google\".</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktivizo shërbimet e \"Luaj me Google\"</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalo</string>
+    <string name="common_google_play_services_install_text">%1$s nuk do të funksionojë pa shërbimet e Google Play, të cilat mungojnë në pajisjen tënde.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Merr shërbimet e \"Luaj me Google\"</string>
+    <string name="common_google_play_services_notification_channel_name">Disponueshmëria e shërbimeve të Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Gabim në shërbimet e \"Luaj me Google\"</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ka probleme me shërbimet e Google Play. Provo sërish.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s nuk do të funksionojë pa shërbimet e Google Play, të cilat nuk mbështeten nga pajisja jote.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Përditëso</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s nuk do të funksionojë nëse nuk përditëson shërbimet e \"Luaj me Google\".</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Përditëso shërbimet e \"Luaj me Google\"</string>
+    <string name="common_google_play_services_updating_text">%1$s nuk do të funksionojë pa shërbimet e Google Play, të cilat po përditësohen aktualisht.</string>
+    <string name="common_google_play_services_wear_update_text">Nevojitet një version i ri i shërbimeve të \"Luaj me Google\". Ai do të përditësohet automatikisht së shpejti.</string>
+    <string name="common_open_on_phone">Hape në telefon</string>
+    <string name="common_signin_button_text">Identifikohu</string>
+    <string name="common_signin_button_text_long">Identifikohu me Google</string>
+    <string msgid="3209159573327985035" name="copy">"Kopjo"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Lidhja u kopjua në kujtesën e fragmenteve"</string>
+    <string name="exo_controls_cc_disabled_description">Aktivizo titrat</string>
+    <string name="exo_controls_cc_enabled_description">Çaktivizo titrat</string>
+    <string name="exo_controls_fastforward_description">Përparo me shpejtësi</string>
+    <string name="exo_controls_fullscreen_enter_description">Hyr në luajtjen me ekran të plotë</string>
+    <string name="exo_controls_fullscreen_exit_description">Dil nga ekrani i plotë</string>
+    <string name="exo_controls_hide">Fshih komandat e luajtësit</string>
+    <string name="exo_controls_next_description">Para</string>
+    <string name="exo_controls_overflow_hide_description">Fshih cilësimet shtesë</string>
+    <string name="exo_controls_overflow_show_description">Shfaq cilësimet shtesë</string>
+    <string name="exo_controls_pause_description">Pauzë</string>
+    <string name="exo_controls_play_description">Luaj</string>
+    <string name="exo_controls_playback_speed">Shpejtësia</string>
+    <string name="exo_controls_playback_speed_normal">Normale</string>
+    <string name="exo_controls_previous_description">Prapa</string>
+    <string name="exo_controls_repeat_all_description">Përsërit të gjitha</string>
+    <string name="exo_controls_repeat_off_description">Mos përsërit asnjë</string>
+    <string name="exo_controls_repeat_one_description">Përsërit një</string>
+    <string name="exo_controls_rewind_description">Rikthe</string>
+    <string name="exo_controls_seek_bar_description">Progresi i luajtjes</string>
+    <string name="exo_controls_settings_description">Cilësimet</string>
+    <string name="exo_controls_show">Shfaq komandat e luajtësit</string>
+    <string name="exo_controls_shuffle_off_description">Përzierja joaktive</string>
+    <string name="exo_controls_shuffle_on_description">Përzierja aktive</string>
+    <string name="exo_controls_stop_description">Ndalo</string>
+    <string name="exo_controls_vr_description">Modaliteti RV</string>
+    <string name="exo_download_completed">Shkarkimi përfundoi</string>
+    <string name="exo_download_description">Shkarko</string>
+    <string name="exo_download_downloading">Po shkarkohet</string>
+    <string name="exo_download_failed">Shkarkimi dështoi</string>
+    <string name="exo_download_notification_channel_name">Shkarkimet</string>
+    <string name="exo_download_paused">Shkarkimet u vendosën në pauzë</string>
+    <string name="exo_download_paused_for_network">Shkarkimet në pritje të rrjetit</string>
+    <string name="exo_download_paused_for_wifi">Shkarkimet në pritje të WiFi</string>
+    <string name="exo_download_removing">Shkarkimet po hiqen</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternative</string>
+    <string name="exo_track_role_closed_captions">Titrat</string>
+    <string name="exo_track_role_commentary">Komente</string>
+    <string name="exo_track_role_supplementary">Plotësuese</string>
+    <string name="exo_track_selection_auto">Automatike</string>
+    <string name="exo_track_selection_none">Asnjë</string>
+    <string name="exo_track_selection_title_audio">Audio</string>
+    <string name="exo_track_selection_title_text">Tekst</string>
+    <string name="exo_track_selection_title_video">Video</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Tingulli rrethues</string>
+    <string name="exo_track_surround_5_point_1">Tingull rrethues 5.1</string>
+    <string name="exo_track_surround_7_point_1">Tingull rrethues 7.1</string>
+    <string name="exo_track_unknown">E panjohur</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Të përparuara"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopjo lidhjen"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Hape në shfletues"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Ndaj lidhjen"</string>
+    <string name="native_body">Teksti</string>
+    <string name="native_headline">Titulli</string>
+    <string name="native_media_view">Pamja e medias</string>
+    <string msgid="478774118347071097" name="not_set">"Nuk është caktuar"</string>
+    <string name="notifications_permission_confirm">Lejo</string>
+    <string name="notifications_permission_decline">Mos lejo</string>
+    <string name="notifications_permission_title">Të lejohet aplikacioni të të dërgojë njoftime?</string>
+    <string name="offline_notification_text">Trokit për të hapur reklamën</string>
+    <string name="offline_notification_title">Shiko reklamën që ruajte kur ishe jashtë linje</string>
+    <string name="offline_opt_in_confirm">Në rregull</string>
+    <string name="offline_opt_in_confirmation">Do të marrësh një njoftim me lidhjen kur të jesh përsëri në linjë.</string>
+    <string name="offline_opt_in_decline">Jo</string>
+    <string name="offline_opt_in_message">Do të të dërgojmë një njoftim me një lidhje për te sajti i reklamuesit.</string>
+    <string name="offline_opt_in_title">Hape reklamën kur të jesh përsëri në linjë.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" u kopjua në kujtesën e fragmenteve"</string>
+    <string name="s1">Ruaje imazhin</string>
+    <string name="s2">Të lejohet që reklama të ruajë imazhin në \"Galerinë e fotografive\"?</string>
+    <string name="s3">Prano</string>
+    <string name="s4">Refuzo</string>
+    <string name="s5">Krijo një ngjarje në kalendar</string>
+    <string name="s6">Të lejohet që reklama të krijojë një ngjarje në kalendar?</string>
+    <string name="s7">Reklamë test</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Kërko"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"JOAKTIV"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"AKTIV"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

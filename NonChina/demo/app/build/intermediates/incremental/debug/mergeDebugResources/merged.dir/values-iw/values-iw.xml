@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">הרצה שנייה אחת (%d) קדימה</item>
+    <item quantity="two">הרצה %d שניות קדימה</item>
+    <item quantity="many">הרצה %d שניות קדימה</item>
+    <item quantity="other">הרצה %d שניות קדימה</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">הרצה שנייה אחת (%d) אחורה</item>
+    <item quantity="two">הרצה %d שניות אחורה</item>
+    <item quantity="many">הרצה %d שניות אחורה</item>
+    <item quantity="other">הרצה %d שניות אחורה</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"החלון ייסגר בעוד שנייה %1$s."</item>
+        <item priority="translator" quantity="two">"החלון ייסגר בעוד %1$s שניות."</item>
+        <item priority="translator" quantity="many">"החלון ייסגר בעוד %1$s שניות."</item>
+        <item priority="translator" quantity="other">"החלון ייסגר בעוד %1$s שניות."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"זכור את הבחירה למשך יום %1$s"</item>
+        <item priority="Reviewed" quantity="two">"זכור את הבחירה למשך %1$s ימים"</item>
+        <item priority="translator" quantity="many">"זכור את הבחירה למשך %1$s ימים"</item>
+        <item priority="Reviewed" quantity="other">"זכור את הבחירה למשך %1$s ימים"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d שניות"</item>
+        <item priority="LT" quantity="two">"%1$d שניות"</item>
+        <item priority="translator" quantity="many">"%1$d שניות"</item>
+        <item priority="LT" quantity="other">"%1$d שניות"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"ניווט לדף הבית"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"ניווט למעלה"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"עוד אפשרויות"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"סיום"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"הצגת הכול"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"בחירת אפליקציה"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"כבוי"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"מופעל"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+‎"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"מחיקה"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"רווח"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"תפריט+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"חיפוש…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"מחיקת השאילתה"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"שאילתת חיפוש"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"חיפוש"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"שליחת שאילתה"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"חיפוש קולי"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"שיתוף עם"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"שיתוף עם <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"כיווץ"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">הפעל</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏האפליקציה %1$s לא תפעל אם לא תפעיל את שירותי Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏הפעל את שירותי Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">התקן</string>
+    <string name="common_google_play_services_install_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שאינם מותקנים במכשיר.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">‏קבל את שירותי Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">‏זמינות של שירותי Google Play</string>
+    <string name="common_google_play_services_notification_ticker">‏שגיאה בשירותי Google Play</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s נתקלה בבעיה בשירותי Google Play. נסה שוב.</string>
+    <string name="common_google_play_services_unsupported_text">‏%1$s לא תפעל ללא שירותי Google Play, שאינם נתמכים במכשיר שלך.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">עדכון</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">‏%1$s לא יפעל אם לא תעדכן את שירותי Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">‏עדכון שירותי Google Play</string>
+    <string name="common_google_play_services_updating_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע.</string>
+    <string name="common_google_play_services_wear_update_text">‏דרושה גרסה חדשה של שירותי Google Play. הגרסה תתעדכן בעצמה תוך זמן קצר.</string>
+    <string name="common_open_on_phone">פתח בטלפון</string>
+    <string name="common_signin_button_text">כניסה</string>
+    <string name="common_signin_button_text_long">‏היכנס באמצעות Google</string>
+    <string msgid="3209159573327985035" name="copy">"העתקה"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"הקישור הועתק ללוח"</string>
+    <string name="exo_controls_cc_disabled_description">הפעלת כתוביות</string>
+    <string name="exo_controls_cc_enabled_description">השבתת כתוביות</string>
+    <string name="exo_controls_fastforward_description">הרצה קדימה</string>
+    <string name="exo_controls_fullscreen_enter_description">כניסה למסך מלא</string>
+    <string name="exo_controls_fullscreen_exit_description">יציאה ממסך מלא</string>
+    <string name="exo_controls_hide">הסתרת פקדי הנגן</string>
+    <string name="exo_controls_next_description">הבא</string>
+    <string name="exo_controls_overflow_hide_description">הסתרת ההגדרות הנוספות</string>
+    <string name="exo_controls_overflow_show_description">הצגת הגדרות נוספות</string>
+    <string name="exo_controls_pause_description">השהיה</string>
+    <string name="exo_controls_play_description">הפעלה</string>
+    <string name="exo_controls_playback_speed">מהירות</string>
+    <string name="exo_controls_playback_speed_normal">רגילה</string>
+    <string name="exo_controls_previous_description">הקודם</string>
+    <string name="exo_controls_repeat_all_description">חזור על הכול</string>
+    <string name="exo_controls_repeat_off_description">אל תחזור על אף פריט</string>
+    <string name="exo_controls_repeat_one_description">חזור על פריט אחד</string>
+    <string name="exo_controls_rewind_description">הרצה אחורה</string>
+    <string name="exo_controls_seek_bar_description">התקדמות ההפעלה</string>
+    <string name="exo_controls_settings_description">הגדרות</string>
+    <string name="exo_controls_show">הצגת פקדי הנגן</string>
+    <string name="exo_controls_shuffle_off_description">ההשמעה האקראית מושבתת</string>
+    <string name="exo_controls_shuffle_on_description">ההשמעה האקראית מופעלת</string>
+    <string name="exo_controls_stop_description">הפסקה</string>
+    <string name="exo_controls_vr_description">מצב VR</string>
+    <string name="exo_download_completed">ההורדה הושלמה</string>
+    <string name="exo_download_description">הורדה</string>
+    <string name="exo_download_downloading">ההורדה מתבצעת</string>
+    <string name="exo_download_failed">ההורדה לא הושלמה</string>
+    <string name="exo_download_notification_channel_name">הורדות</string>
+    <string name="exo_download_paused">ההורדות הושהו</string>
+    <string name="exo_download_paused_for_network">ההורדות בהמתנה לרשת</string>
+    <string name="exo_download_paused_for_wifi">ההורדות בהמתנה ל-Wi-Fi</string>
+    <string name="exo_download_removing">מסיר הורדות</string>
+    <string name="exo_item_list">%1$s‏, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f מגה סיביות לשנייה</string>
+    <string name="exo_track_mono">מונו</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">חלופי</string>
+    <string name="exo_track_role_closed_captions">כתוביות</string>
+    <string name="exo_track_role_commentary">פרשנות</string>
+    <string name="exo_track_role_supplementary">משלים</string>
+    <string name="exo_track_selection_auto">אוטומטי</string>
+    <string name="exo_track_selection_none">ללא</string>
+    <string name="exo_track_selection_title_audio">אודיו</string>
+    <string name="exo_track_selection_title_text">טקסט</string>
+    <string name="exo_track_selection_title_video">סרטון</string>
+    <string name="exo_track_stereo">סטריאו</string>
+    <string name="exo_track_surround">סראונד</string>
+    <string name="exo_track_surround_5_point_1">סראונד 5.1</string>
+    <string name="exo_track_surround_7_point_1">סראונד 7.1</string>
+    <string name="exo_track_unknown">לא ידוע</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"מתקדם"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"העתקת הקישור"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"פתיחה בדפדפן"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"לשיתוף הקישור"</string>
+    <string name="hiad_ad_label" priority="translator">"פרסומת"</string>
+    <string name="hiad_ad_label_new" priority="LT">"מודעה"</string>
+    <string name="hiad_app_installed" priority="LT">"%1$s הותקן"</string>
+    <string name="hiad_app_open_notification" priority="translator">"ההתקנה הושלמה. גע כדי לפתוח."</string>
+    <string name="hiad_app_permission" priority="LT">"הרשאות"</string>
+    <string name="hiad_app_preorder" priority="LT">"הזמנה מראש"</string>
+    <string name="hiad_app_preordered" priority="LT">"הוזמנו בהזמנה מוקדמת"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"לחץ על \'חזרה\' כדי לדלג"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"מודעה מוסתרת"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"לא מעוניין"</string>
+    <string name="hiad_choices_hide" priority="LT">"הסתר מודעה"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"מדוע ראיתי מודעה זו?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"להתקין יישום זה?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"שימוש ברשת סלולרית יצרוך %1$s נתונים. להמשיך?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"ההפעלה תשתמש בנתונים סלולריים. להמשיך?"</string>
+    <string name="hiad_continue_download" priority="LT">"הורד"</string>
+    <string name="hiad_continue_download_new" priority="LT">"הורד"</string>
+    <string name="hiad_continue_to_play" priority="LT">"המשך"</string>
+    <string name="hiad_copy_link" priority="LT">"העתק קישור"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"יישום"</string>
+    <string name="hiad_default_skip_text" priority="LT">"דלג"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"דלג ב-%d"</string>
+    <string name="hiad_detail" priority="LT">"פרטים"</string>
+    <string name="hiad_detail_download_now" priority="LT">"הורד"</string>
+    <string name="hiad_dialog_accept" priority="LT">"אפשר"</string>
+    <string name="hiad_dialog_allow" priority="LT">"אפשר"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ביטול"</string>
+    <string name="hiad_dialog_close" priority="LT">"אישור"</string>
+    <string name="hiad_dialog_continue" priority="LT">"הורד"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"קיבלתי"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"לאפשר ל-%1$s להתקין את %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"מקור: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"אפשר"</string>
+    <string name="hiad_dialog_open" priority="LT">"פתח"</string>
+    <string name="hiad_dialog_reject" priority="LT">"סרב"</string>
+    <string name="hiad_dialog_title" priority="LT">"להוריד באמצעות נתונים סלולריים?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"הערה"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"להוריד באמצעות נתונים סלולריים?"</string>
+    <string name="hiad_download_download" priority="LT">"התקן"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"הורד (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"אירעה שגיאה בעת הורדת %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"הקובץ פגום. הורד שוב."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"הקובץ לא קיים. נסה שוב."</string>
+    <string name="hiad_download_install" priority="LT">"התקן"</string>
+    <string name="hiad_download_installing" priority="LT">"מתקין"</string>
+    <string name="hiad_download_no_space" priority="LT">"אין מספיק אחסון. פנה מקום ונסה שוב."</string>
+    <string name="hiad_download_open" priority="LT">"פתח"</string>
+    <string name="hiad_download_resume" priority="LT">"המשך"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"אירעה שגיאה בעת הורדת %1$s. ההורדה תתחיל מחדש."</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"אינך מחובר כעת ל-Wi-Fi. הורדה עכשיו תשתמש ב-%1$s של נתונים סלולריים. להוריד בכל זאת?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"אינך מחובר כעת ל-WLAN. הורדה עכשיו תשתמש ב-%1$s של נתונים סלולריים. להוריד בכל זאת?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"דווח על פרסומת זו"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"תודה על המשוב."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"אנו נמליץ על פחות תוכן כזה."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"מה דעתך על פרסומת זו?"</string>
+    <string name="hiad_install_completed" priority="LT">"בוצע"</string>
+    <string name="hiad_installed_description" priority="LT">"ההתקנה הצליחה. גע כדי לפתוח."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"מותקן"</string>
+    <string name="hiad_jump_desc" priority="LT">"הצג פרטים או עבור אל היישום"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"דף זה רוצה לפתוח את %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"הקישור הועתק."</string>
+    <string name="hiad_loading_tips" priority="translator">"טוען…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"הורדה זו תצרוך %1$s של נתונים סלולריים."</string>
+    <string name="hiad_net_error" priority="LT">"שגיאת חיבור רשת. נסה שוב."</string>
+    <string name="hiad_network_error" priority="LT">"שגיאת חיבור רשת."</string>
+    <string name="hiad_network_no_available" priority="LT">"אין חיבור לאינטרנט. בדוק את הגדרות הרשת."</string>
+    <string name="hiad_no_more_remind" priority="LT">"אל תזכיר לי שוב"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"אין חיבור Wi-Fi. ההורדה תשתמש עכשיו בנתונים סלולריים. להוריד?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"אין חיבור WLAN. ההורדה תשתמש עכשיו בנתונים סלולריים. להוריד?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"פתח בדפדפן"</string>
+    <string name="hiad_page_load_failed" priority="LT">"אין אפשרות לטעון את הדף. נסה שוב."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s זקוק להרשאות הבאות:"</string>
+    <string name="hiad_prepare_download" priority="LT">"המתן ל-Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"להוריד על גבי רשת סלולרית?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"המתן ל-WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"רענן"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"היישום גדול מ-‎%1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"דלג"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"המשך בצפייה"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"סיים לצפות במודעה זו כדי לזכות בפרס."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"גע כדי לפתוח את אתר האינטרנט/היישום"</string>
+    <string name="hiad_swipe_screen" priority="LT">"החלק"</string>
+    <string name="hiad_twist_screen" priority="LT">"נער את הטלפון"</string>
+    <string name="hiad_whether_download" priority="LT">"להוריד יישום זה?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"נטען מראש על גבי Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"טעון מראש"</string>
+    <string name="native_body">גוף המודעה</string>
+    <string name="native_headline">כותרת</string>
+    <string name="native_media_view">תצוגת המדיה</string>
+    <string msgid="478774118347071097" name="not_set">"לא מוגדרת"</string>
+    <string name="notifications_permission_confirm">אישור</string>
+    <string name="notifications_permission_decline">אין אישור</string>
+    <string name="notifications_permission_title">לאפשר לאפליקציה לשלוח לך התראות?</string>
+    <string name="offline_notification_text">יש להקיש כדי לפתוח את המודעה</string>
+    <string name="offline_notification_title">צפייה במודעה ששמרת כשלא היה לך חיבור לאינטרנט</string>
+    <string name="offline_opt_in_confirm">אישור</string>
+    <string name="offline_opt_in_confirmation">תישלח לך התראה עם קישור כשיתחדש החיבור לאינטרנט</string>
+    <string name="offline_opt_in_decline">לא תודה</string>
+    <string name="offline_opt_in_message">נשלח לך התראה עם קישור לאתר המפרסם.</string>
+    <string name="offline_opt_in_title">יש לפתוח את המודעה כשיתחדש החיבור לאינטרנט.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" הועתק ללוח."</string>
+    <string name="s1">שמור את התמונה</string>
+    <string name="s2">האם לאפשר למודעה לאחסן תמונה בגלריית התמונות?</string>
+    <string name="s3">קבל</string>
+    <string name="s4">דחה</string>
+    <string name="s5">צור אירוע ביומן</string>
+    <string name="s6">האם לאפשר למודעה ליצור אירוע ביומן?</string>
+    <string name="s7">מודעת בדיקה</string>
+    <string msgid="730395136688082741" name="search_menu_title">"חיפוש"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"כבוי"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"מופעל"</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>
