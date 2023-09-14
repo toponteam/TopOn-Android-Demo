@@ -55,27 +55,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         String placementId = getIntent().getStringExtra("placementId");
         container = findViewById(R.id.splash_ad_container);
-        ViewGroup.LayoutParams layoutParams = container.getLayoutParams();
-        Configuration cf = getResources().getConfiguration();
-
-        int ori = cf.orientation;
-
-        /**You should set size to the layout param.**/
-        if (ori == Configuration.ORIENTATION_LANDSCAPE) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-            layoutParams.width = (int) (getResources().getDisplayMetrics().widthPixels * 0.9);
-            layoutParams.height = getResources().getDisplayMetrics().heightPixels;
-        } else if (ori == Configuration.ORIENTATION_PORTRAIT) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.9);
-        } else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-            layoutParams.width = getResources().getDisplayMetrics().widthPixels;
-            layoutParams.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.9);
-        }
-
-
         String defaultConfig = "";
 
         //Mintegral
@@ -101,11 +80,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         splashAd = new ATSplashAd(this, placementId, this, 5000, defaultConfig);
 
-        Map<String, Object> localMap = new HashMap<>();
-        localMap.put(ATAdConst.KEY.AD_WIDTH, layoutParams.width);
-        localMap.put(ATAdConst.KEY.AD_HEIGHT, layoutParams.height);
-
-        splashAd.setLocalExtra(localMap);
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
             public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {
@@ -142,15 +116,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-//                    splashAd.show(SplashAdShowActivity.this, container);
-//                    showAdWithCustomSkipView();//show with customSkipView
-                    splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
-                }
-            }, 10);
-
+            //splashAd.show(SplashAdShowActivity.this, container);
+            //showAdWithCustomSkipView();//show with customSkipView
+            splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             splashAd.loadAd();
