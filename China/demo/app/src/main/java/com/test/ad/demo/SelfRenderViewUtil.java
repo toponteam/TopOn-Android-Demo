@@ -296,6 +296,15 @@ public class SelfRenderViewUtil {
                 permissionTextView.setOnClickListener(null);
             }
 
+            if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
+                List<View> appInfoClickViewList = new ArrayList<>();
+                appInfoClickViewList.add(functionTextView);
+                appInfoClickViewList.add(developerTextView);
+                appInfoClickViewList.add(versionTextView);
+                appInfoClickViewList.add(privacyTextView);
+                appInfoClickViewList.add(permissionTextView);
+                ((ATNativePrepareExInfo) nativePrepareInfo).setAppInfoClickViewList(appInfoClickViewList);
+            }
         } else {
             sixInfoView.setVisibility(View.GONE);
         }

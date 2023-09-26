@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Value xml-->
+
+    <!--splash data-->
+    <string name="mSplashData.setAdClickText">getAdClickText</string>
+    <string name="mSplashData.setAppInfo">getAppInfo</string>
+    <string name="mSplashData.setCountDownText">getCountDownText</string>
+    <string name="mSplashData.setLogoText">getLogoText</string>
+
+    <!-- 固定值-->
+    <string name="mSplashData.setNoticeImage">getNoticeImage</string>
+    <string name="mSplashData.setLogoImage">getLogoImage</string>
+
+
+    <!--splash campaign data-->
+    <string name="campaign.iconUrl">getIconUrl</string>
+    <string name="campaign.appName">getAppName</string>
+    <string name="campaign.imageUrl">getImageUrl</string>
+
+    <!-- Action param read-->
+    <!-- <string name=[xml定义函数名]>action 类型|逻辑控制来源|具体控制逻辑的参数值</string>-->
+    <!-- 示例 <string name="dyAction.getClick">click|url|alecfc</string>-->
+    <string name="dyAction.getLogicClick">click|alecfc</string>
+    <string name="dyAction.getClick">click</string>
+    <string name="dyAction.getMove">move</string>
+    <string name="dyAction.getLongClick">longclick</string>
+    <string name="dyAction.getWobble">wobble</string>
+
+    <!-- Strategy 获取方式-->
+    <string name="dyStrategy.getDeeplink">deeplink</string>
+    <string name="dyStrategy.getClose">close</string>
+    <string name="dyStrategy.getActivity">activity</string>
+    <string name="dyStrategy.getDownload">download</string>
+    <string name="dyStrategy.feedback">feedback</string>
+    <string name="dyStrategy.notice">notice</string>
+    <string name="dyStrategy.permissionInfo">permissionInfo</string>
+    <string name="dyStrategy.privateAddress">privateAddress</string>
+
+    <!--effect-->
+    <string name="dyEffect.getVisibleParam">visible|parent</string>
+    <string name="dyEffect.getVisible">visible</string>
+    <string name="dyEffect.getCountDown">countdown</string>
+    <string name="dyEffect.getWobble">wobble</string>
+
+
+
+    <string name="defaults">default</string>
+
+</resources>

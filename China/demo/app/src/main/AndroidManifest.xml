@@ -140,8 +140,8 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/anythink_bk_tt_file_path" />
-        </provider> <!-- source file: china/network_sdk/baidu/9.32/AndroidManifest.xml -->
-        <!-- source file: china/network_sdk/sigmob/4.12.6/AndroidManifest.xml -->
+        </provider> <!-- source file: china/network_sdk/baidu/9.322/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/sigmob/4.12.7/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/mimo/5.2.7/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/klevin/2.11.0.3/AndroidManifest.xml -->
         <provider
