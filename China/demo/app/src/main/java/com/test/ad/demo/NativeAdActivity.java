@@ -23,11 +23,13 @@ import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventExListener;
+import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
+import com.anythink.nativead.api.NativeAdInteractionType;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
@@ -55,6 +57,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     private TextView mTVIsAdReadyBtn;
     private TextView mTVShowAdBtn;
     private View mPanel;
+    private NativeVideoButtonAdapter buttonAdapter;
 
     @Override
     protected int getContentViewId() {
@@ -122,32 +125,44 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         rvButtonList.setLayoutManager(manager);
 
         final boolean[] isMute = new boolean[]{true};
-        NativeVideoButtonAdapter adapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
+        buttonAdapter = new NativeVideoButtonAdapter(mData, new NativeVideoButtonAdapter.OnNativeVideoButtonCallback() {
             @Override
             public void onClick(String action) {
-                if (action.equals(VideoAction.VOICE_CHANGE)) {
+                if (action.equals(PanelAction.VOICE_CHANGE)) {
                     if (mNativeAd != null) {
                         mNativeAd.setVideoMute(!isMute[0]);
                         isMute[0] = !isMute[0];
                     }
-                } else if (action.equals(VideoAction.VIDEO_RESUME)) {
+                } else if (action.equals(PanelAction.VIDEO_RESUME)) {
                     if (mNativeAd != null) {
                         mNativeAd.resumeVideo();
                     }
-                } else if (action.equals(VideoAction.VIDEO_PAUSE)) {
+                } else if (action.equals(PanelAction.VIDEO_PAUSE)) {
                     if (mNativeAd != null) {
                         mNativeAd.pauseVideo();
                     }
-                } else if (action.equals(VideoAction.VIDEO_PROGRESS)) {
+                } else if (action.equals(PanelAction.VIDEO_PROGRESS)) {
                     if (mNativeAd != null) {
                         String tips = "video duration: " + mNativeAd.getVideoDuration() + ", progress: " + mNativeAd.getVideoProgress();
+                        Log.i(TAG, tips);
+                        Toast.makeText(NativeAdActivity.this, tips, Toast.LENGTH_LONG).show();
+                    }
+                } else if (action.equals(PanelAction.DOWNLOAD_STATUS)) {
+                    if (mNativeAd != null) {
+                        String tips = "download status: " + mNativeAd.getDownloadStatus();
+                        Log.i(TAG, tips);
+                        Toast.makeText(NativeAdActivity.this, tips, Toast.LENGTH_LONG).show();
+                    }
+                } else if (action.equals(PanelAction.DOWNLOAD_PROGRESS)) {
+                    if (mNativeAd != null) {
+                        String tips = "download progress: " + mNativeAd.getDownloadProgress();
                         Log.i(TAG, tips);
                         Toast.makeText(NativeAdActivity.this, tips, Toast.LENGTH_LONG).show();
                     }
                 }
             }
         });
-        rvButtonList.setAdapter(adapter);
+        rvButtonList.setAdapter(buttonAdapter);
     }
 
     private void initATNativeAd(String placementId) {
@@ -273,7 +288,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             mNativeAd.prepare(mATNativeView, mNativePrepareInfo);
             mATNativeView.setVisibility(View.VISIBLE);
             mPanel.setVisibility(View.VISIBLE);
-            initPanelButtonList(mNativeAd.getAdMaterial().getAdType());
+            initPanelButtonList(mNativeAd.getAdMaterial());
         } else {
             printLogOnUI("this placement no cache!");
         }
@@ -315,26 +330,28 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         super.onResume();
     }
 
-    private void initPanelButtonList(String adType) {
+    private void initPanelButtonList(ATNativeMaterial atNativeMaterial) {
+        boolean isNativeExpress = true;
+        if (mNativeAd != null) {
+            isNativeExpress = mNativeAd.isNativeExpress();
+        }
+
+        if (isNativeExpress) {
+            return;
+        }
+
+        ATAdInfo atAdInfo = mNativeAd.getAdInfo();
+        int networkId = atAdInfo.getNetworkFirmId();
+
+
+        String adType = atNativeMaterial.getAdType();
         if (Objects.equals(adType, CustomNativeAd.NativeAdConst.VIDEO_TYPE)) {
-            boolean isNativeExpress = true;
-            if (mNativeAd != null) {
-                isNativeExpress = mNativeAd.isNativeExpress();
-            }
-
-            if (isNativeExpress) {
-                return;
-            }
-
-            ATAdInfo atAdInfo = mNativeAd.getAdInfo();
-            int networkId = atAdInfo.getNetworkFirmId();
-
             switch (networkId) {
                 case 8: //for GDT
-                    mData.add(VideoAction.VOICE_CHANGE);
-                    mData.add(VideoAction.VIDEO_RESUME);
-                    mData.add(VideoAction.VIDEO_PAUSE);
-                    mData.add(VideoAction.VIDEO_PROGRESS);
+                    mData.add(PanelAction.VOICE_CHANGE);
+                    mData.add(PanelAction.VIDEO_RESUME);
+                    mData.add(PanelAction.VIDEO_PAUSE);
+                    mData.add(PanelAction.VIDEO_PROGRESS);
                     break;
 //                case 15:
 //                    //for CSJ
@@ -342,9 +359,32 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 //                    break;
                 case 22:    //for BaiDu
                 case 28:    //for KuaiShou
-                    mData.add(VideoAction.VIDEO_PROGRESS);
+                    mData.add(PanelAction.VIDEO_PROGRESS);
                     break;
             }
+        }
+
+        int nativeAdInteractionType = atNativeMaterial.getNativeAdInteractionType();
+        if (nativeAdInteractionType == NativeAdInteractionType.APP_DOWNLOAD_TYPE) {
+            switch (networkId) {
+                case 8: //for GDT
+                case 22:    //for BaiDu
+                    mData.add(PanelAction.DOWNLOAD_STATUS);
+                    mData.add(PanelAction.DOWNLOAD_PROGRESS);
+                    break;
+                case 66:    //for adx
+                case 35:    //for myoffer
+                case 41:    //for online
+                case 42:    //for online
+                case 43:    //for online
+                case 44:    //for online
+                    mData.add(PanelAction.DOWNLOAD_STATUS);
+                    break;
+            }
+        }
+
+        if (buttonAdapter != null) {
+            buttonAdapter.notifyDataSetChanged();
         }
     }
 

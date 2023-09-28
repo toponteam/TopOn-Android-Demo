@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="nend_full_board_ad_close_button_margin">4dp</dimen>
-    <dimen name="nend_full_board_ad_promotion_text_size">24dp</dimen>
-    <dimen name="nend_full_board_ad_text_size">18dp</dimen>
-    <integer name="nend_full_board_ad_shadow_delta">4</integer>
-</resources>
