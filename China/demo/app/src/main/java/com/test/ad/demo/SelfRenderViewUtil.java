@@ -182,7 +182,7 @@ public class SelfRenderViewUtil {
             mainImageParam.gravity = Gravity.CENTER;
             mediaView.setLayoutParams(mainImageParam);
             contentArea.addView(mediaView, mainImageParam);
-            clickViewList.add(mediaView);
+            //clickViewList.add(mediaView);
             contentArea.setVisibility(View.VISIBLE);
         } else if (imageList != null && imageList.size() > 1) {
             MutiImageView mutiImageView = new MutiImageView(context);
@@ -252,11 +252,11 @@ public class SelfRenderViewUtil {
 
         nativePrepareInfo.setClickViewList(clickViewList);//bind click view list
 
-        if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
-            List<View> creativeClickViewList = new ArrayList<>();//click views
-            creativeClickViewList.add(ctaView);
-            ((ATNativePrepareExInfo) nativePrepareInfo).setCreativeClickViewList(creativeClickViewList);//bind custom view list
-        }
+        //if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
+        //    List<View> creativeClickViewList = new ArrayList<>();//click views
+        //    creativeClickViewList.add(ctaView);
+        //    ((ATNativePrepareExInfo) nativePrepareInfo).setCreativeClickViewList(creativeClickViewList);//bind custom view list
+        //}
 
         View sixInfoView = selfRenderView.findViewById(R.id.six_info);
         ATAdAppInfo adAppInfo = adMaterial.getAdAppInfo();
