@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Avanzar %d segundo</item>
+    <item quantity="other">Avanzar %d segundos</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Retroceder %d segundo</item>
+    <item quantity="other">Retroceder %d segundos</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"La ventana se cerrará dentro de %1$s segundo."</item>
+        <item priority="translator" quantity="other">"La ventana se cerrará dentro de %1$s segundos."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Recordar selección durante %1$s día"</item>
+        <item priority="Reviewed" quantity="other">"Recordar selección durante %1$s días"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d s"</item>
+        <item priority="LT" quantity="other">"%1$d s"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Ir a inicio"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Desplazarse hacia arriba"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Más opciones"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Listo"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Ver todo"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Seleccionar una aplicación"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"DESACTIVADO"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ACTIVADO"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"Suprimir"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Intro"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Función +"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Mayús +"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"Espacio"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menú +"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Buscar…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Borrar consulta"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Consulta de búsqueda"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Buscar"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Búsqueda por voz"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Compartir con"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Compartir con <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Ocultar"</string>
+    <string name="applovin_agree_message">Por favor, presione \"Continuar\" si elige comenzar a usar nuestra aplicación.</string>
+    <string name="applovin_alt_privacy_policy_text">Política de Privacidad</string>
+    <string name="applovin_continue_button_text">Continuar</string>
+    <string name="applovin_gdpr_advertising_partners_screen_message">Como se explica en nuestra Políza de Privacidad, con su consentimiento, podemos compartir estos datos con los siguientes socios para permitirles publicar anuncios o contenido personalizados:</string>
+    <string name="applovin_gdpr_advertising_partners_screen_title">Anuncios y contenido personalizados</string>
+    <string name="applovin_gdpr_analytics_partners_screen_message">Como se explica en nuestra Políza de Privacidad, con su consentimiento, podemos compartir estos datos con los siguientes socios para ayudar a medir el rendimiento y mejorar nuestros productos y servicios:</string>
+    <string name="applovin_gdpr_analytics_partners_screen_title">Mediciones de rendimiento y desarrollo de productos</string>
+    <string name="applovin_gdpr_are_you_sure_screen_message">Permitirnos a nosotros y/o a nuestros socios usar estos datos para anuncios y contenido personalizados y otros propósitos, como se describe en nuestra Políza de Privacidad:\n\n\u2022 Le brinda una experiencia, anuncios, y contenido más personalizados\n\n\u2022 Ayuda a respaldar mejoras y desarrollos de productos\n\n\u2022 Te permite participar en promociones.</string>
+    <string name="applovin_gdpr_are_you_sure_screen_title">¿Estas seguro?</string>
+    <string name="applovin_gdpr_back_button_text">De vuelta</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_1">¡Ayudando a mantener nuestra aplicación gratis!</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_2">Dandote una experiencia más personal, incluidos anuncios y contenido personalizados</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_3">Ayudar a respaldar mejoras y desarrollos de productos</string>
+    <string name="applovin_gdpr_learn_more_screen_bullet_4">Permitirle participar en promociones</string>
+    <string name="applovin_gdpr_learn_more_screen_message_1">¡Gracias por descargar nuestra aplicación! Permitiéndo a nosotros y a nuestros socios, usar estos datos, nos ayuda a crear una experiencia de aplicación única, incluso al:</string>
+    <string name="applovin_gdpr_learn_more_screen_message_2">Siempre puede cambiar sus selecciones más adelante. Si elige no compartir sus datos, aún podrá acceder a la aplicación y seguirá recibiendo anuncios. Sin embargo, esos anuncios pueden ser menos relevantes para sus intereses.</string>
+    <string name="applovin_gdpr_main_screen_analytics_purposes_switch_text">Mediciones de rendimiento y desarrollo de productos.</string>
+    <string name="applovin_gdpr_main_screen_learn_more_button_text">Aprende más</string>
+    <string name="applovin_gdpr_main_screen_message">Como se explica en nuestra Políza de Privacidad, con su consentimiento, recopilamos cierta información sobre su dispositivo, como la dirección IP y los identificadores de publicidad. Estos datos nos permiten a nosotros y a nuestros socios ofrecer anuncios y contenido personalizados y realizar mejoras.\n\nA continuación, puede optar por permitirnos a nosotros y/o a nuestros socios utilizar estos datos para los siguientes propósitos:</string>
+    <string name="applovin_gdpr_main_screen_personalized_advertising_purposes_switch_text">Anuncios y contenido personalizados</string>
+    <string name="applovin_gdpr_main_screen_pp_and_tos_switch_text">Tengo más de dieciséis años, acepto los Términos de Uso y reconozco que se aplica la Política de Privacidad.</string>
+    <string name="applovin_gdpr_main_screen_privacy_policy_switch_text">Certifico que soy mayor de dieciséis años y que he leído y entendido la Políza de Privacidad.</string>
+    <string name="applovin_gdpr_main_screen_title">¡Gracias por descargar \n%s!</string>
+    <string name="applovin_gdpr_understand_and_continue_button_text">Entiendo y confirmo</string>
+    <string name="applovin_learn_more_screen_title">¡Ayúdanos a mantener %s gratis y más divertido para ti!</string>
+    <string name="applovin_pp_and_tos_title">Para usar %s debe aceptar nuestros Términos y Condiciones Y afirmar que ha revisado nuestra Políza de Privacidad.</string>
+    <string name="applovin_pp_title">Para usar %s, debe afirmar que ha revisado y aceptado nuestra Políza de Privacidad. </string>
+    <string name="applovin_privacy_policy_text">Políza de Privacidad</string>
+    <string name="applovin_terms_of_service_text">Términos y Condiciones</string>
+    <string name="applovin_terms_of_use_text">Términos de Uso</string>
+    <string name="bigo_ad_about_app_default">Acerca de esta aplicación</string>
+    <string name="bigo_ad_click_to_try">Haga clic para probar?</string>
+    <string name="bigo_ad_comment_num_text">Reseñas</string>
+    <string name="bigo_ad_cta_default">Ver más</string>
+    <string name="bigo_ad_cta_download_default">Instalar</string>
+    <string name="bigo_ad_description_default">¡Acceso gratuito ahora!</string>
+    <string name="bigo_ad_double_video_choose_video">Elige tu vídeo favorito</string>
+    <string name="bigo_ad_double_video_count_down">Juega en %ds</string>
+    <string name="bigo_ad_download_num_text">Descargas</string>
+    <string name="bigo_ad_title_default">fantástico e interesante</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Habilitar</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s no funcionará hasta que no habilites Servicios de Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Habilita Servicios de Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalar</string>
+    <string name="common_google_play_services_install_text">%1$s no se ejecutará si los Servicios de Google Play no están instalados en tu dispositivo.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Descargar Servicios de Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Disponibilidad Servicios de Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Error de Servicios de Google Play</string>
+    <string name="common_google_play_services_unknown_issue">La aplicación %1$s tiene problemas con los Servicios de Google Play. Vuelve a intentarlo.</string>
+    <string name="common_google_play_services_unsupported_text">No es posible ejecutar la aplicación %1$s sin los Servicios de Google Play, que no son compatibles con tu dispositivo.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Actualizar</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s no funcionará hasta que no actualices Servicios de Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Actualiza Servicios de Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s no se ejecutará hasta que finalice la actualización en curso de Servicios de Google Play.</string>
+    <string name="common_google_play_services_wear_update_text">Se necesita una nueva versión de Servicios de Google Play. Se actualizará en breve.</string>
+    <string name="common_open_on_phone">Abrir en teléfono</string>
+    <string name="common_signin_button_text">Iniciar sesión</string>
+    <string name="common_signin_button_text_long">Iniciar sesión con Google</string>
+    <string msgid="3209159573327985035" name="copy">"Copiar"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Enlace copiado en el portapapeles"</string>
+    <string name="exo_controls_cc_disabled_description">Habilitar subtítulos</string>
+    <string name="exo_controls_cc_enabled_description">Inhabilitar subtítulos</string>
+    <string name="exo_controls_fastforward_description">Avanzar rápidamente</string>
+    <string name="exo_controls_fullscreen_enter_description">Activar pantalla completa</string>
+    <string name="exo_controls_fullscreen_exit_description">Salir de pantalla completa</string>
+    <string name="exo_controls_hide">Ocultar controles de jugador</string>
+    <string name="exo_controls_next_description">Siguiente</string>
+    <string name="exo_controls_overflow_hide_description">Ocultar ajustes adicionales</string>
+    <string name="exo_controls_overflow_show_description">Mostrar ajustes adicionales</string>
+    <string name="exo_controls_pause_description">Pausar</string>
+    <string name="exo_controls_play_description">Reproducir</string>
+    <string name="exo_controls_playback_speed">Velocidad</string>
+    <string name="exo_controls_playback_speed_normal">Normal</string>
+    <string name="exo_controls_previous_description">Anterior</string>
+    <string name="exo_controls_repeat_all_description">Repetir todo</string>
+    <string name="exo_controls_repeat_off_description">No repetir</string>
+    <string name="exo_controls_repeat_one_description">Repetir uno</string>
+    <string name="exo_controls_rewind_description">Rebobinar</string>
+    <string name="exo_controls_seek_bar_description">Progreso de reproducción</string>
+    <string name="exo_controls_settings_description">Ajustes</string>
+    <string name="exo_controls_show">Mostrar controles del reproductor</string>
+    <string name="exo_controls_shuffle_off_description">Sin reproducción aleatoria</string>
+    <string name="exo_controls_shuffle_on_description">Con reproducción aleatoria</string>
+    <string name="exo_controls_stop_description">Detener</string>
+    <string name="exo_controls_vr_description">Modo RV</string>
+    <string name="exo_download_completed">Descarga de archivos completado</string>
+    <string name="exo_download_description">Descargar</string>
+    <string name="exo_download_downloading">Descargando</string>
+    <string name="exo_download_failed">No se ha podido descargar</string>
+    <string name="exo_download_notification_channel_name">Descargas</string>
+    <string name="exo_download_paused">Descargas pausadas</string>
+    <string name="exo_download_paused_for_network">Descargas en espera de red</string>
+    <string name="exo_download_paused_for_wifi">Descargas en espera de Wi-Fi</string>
+    <string name="exo_download_removing">Quitando descargas</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d×%2$d</string>
+    <string name="exo_track_role_alternate">Alternativa</string>
+    <string name="exo_track_role_closed_captions">CC</string>
+    <string name="exo_track_role_commentary">Comentarios</string>
+    <string name="exo_track_role_supplementary">Complementaria</string>
+    <string name="exo_track_selection_auto">Automático</string>
+    <string name="exo_track_selection_none">Ninguna</string>
+    <string name="exo_track_selection_title_audio">Audio</string>
+    <string name="exo_track_selection_title_text">Texto</string>
+    <string name="exo_track_selection_title_video">Vídeo</string>
+    <string name="exo_track_stereo">Estéreo</string>
+    <string name="exo_track_surround">Sonido envolvente</string>
+    <string name="exo_track_surround_5_point_1">Sonido envolvente 5.1</string>
+    <string name="exo_track_surround_7_point_1">Sonido envolvente 7.1</string>
+    <string name="exo_track_unknown">Desconocido</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Avanzado"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copiar enlace"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Abrir en el navegador"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Compartir enlace"</string>
+    <string name="hiad_ad_label" priority="translator">"PUBLICIDAD"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Anuncio"</string>
+    <string name="hiad_app_installed" priority="LT">"Se ha instalado %1$s"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalación finalizada. Pulse para abrir."</string>
+    <string name="hiad_app_permission" priority="LT">"Permisos"</string>
+    <string name="hiad_app_preorder" priority="LT">"Reservar"</string>
+    <string name="hiad_app_preordered" priority="LT">"RESERVADO"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Pulse Volver para omitir"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Publicidad oculta"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"No me interesa"</string>
+    <string name="hiad_choices_hide" priority="LT">"Ocultar publicidad"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"¿Por qué he visto esta publicidad?"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"¿Desea instalar la aplicación?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"Si usa la red móvil, se consumirá/n %1$s de datos. ¿Continuar?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"La reproducción consumirá datos móviles. ¿Continuar?"</string>
+    <string name="hiad_continue_download" priority="LT">"Descargar"</string>
+    <string name="hiad_continue_download_new" priority="LT">"DESCARGAR"</string>
+    <string name="hiad_continue_to_play" priority="LT">"CONTINUAR"</string>
+    <string name="hiad_copy_link" priority="LT">"Copiar vínculo"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplicación"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Omitir"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Saltar en %d"</string>
+    <string name="hiad_detail" priority="LT">"Detalles"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Descargar"</string>
+    <string name="hiad_dialog_accept" priority="LT">"PERMITIR"</string>
+    <string name="hiad_dialog_allow" priority="LT">"PERMITIR"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"CANCELAR"</string>
+    <string name="hiad_dialog_close" priority="LT">"ACEPTAR"</string>
+    <string name="hiad_dialog_continue" priority="LT">"DESCARGAR"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ENTENDIDO"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"¿Permitir a %1$s instalar %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Fuente: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"PERMITIR"</string>
+    <string name="hiad_dialog_open" priority="LT">"ABRIR"</string>
+    <string name="hiad_dialog_reject" priority="LT">"NO PERMITIR"</string>
+    <string name="hiad_dialog_title" priority="LT">"¿Descargar usando datos móviles?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Nota"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"¿Descargar usando datos móviles?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALAR"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"DESCARGAR (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Error durante la descarga de %1$s"</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Archivo dañado. Vuelva a descargar."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"El archivo no existe. Vuelva a intentarlo."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALAR"</string>
+    <string name="hiad_download_installing" priority="LT">"Instalando"</string>
+    <string name="hiad_download_no_space" priority="LT">"Memoria insuficiente. Libere espacio y vuelva a intentarlo."</string>
+    <string name="hiad_download_open" priority="LT">"ABRIR"</string>
+    <string name="hiad_download_resume" priority="LT">"CONTINUAR"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Error durante la descarga de %1$s. La descarga se reiniciará."</string>
+    <string name="hiad_download_use_mobile_network" priority="translator">"Ahora no está conectado a Wi-Fi. Si inicia la descarga ahora, utilizará %1$s de datos móviles. ¿Descargar de todos modos?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Ahora no está conectado a WLAN. Si inicia ya la descarga, utilizará %1$s de datos móviles. ¿Descargar de todos modos?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Denunciar este anuncio"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Gracias por tus comentarios."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Recomendaremos menos contenido como este."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"¿Qué opinas de este anuncio?"</string>
+    <string name="hiad_install_completed" priority="LT">"Listo"</string>
+    <string name="hiad_installed_description" priority="LT">"Se ha instalado. Pulsa aquí para abrir."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Se ha instalado"</string>
+    <string name="hiad_jump_desc" priority="LT">"Consulta detalles o accede a la aplicación"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Esta página desea abrir %1$s"</string>
+    <string name="hiad_link_already_copied" priority="LT">"Vínculo copiado"</string>
+    <string name="hiad_loading_tips" priority="LT">"Cargando…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Esta descarga utilizará %1$s de datos móviles."</string>
+    <string name="hiad_net_error" priority="LT">"Error de conexión de red. Vuelva a intentarlo."</string>
+    <string name="hiad_network_error" priority="LT">"Error de conexión de red"</string>
+    <string name="hiad_network_no_available" priority="LT">"Sin conexión a Internet. Verifique los ajustes de red."</string>
+    <string name="hiad_no_more_remind" priority="LT">"No volver a recordar"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Sin conexión Wi-Fi. Si descarga ahora, se consumirán datos móviles. ¿Descargar?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Sin conexión WLAN. Si descarga ahora, se consumirán datos móviles. ¿Descargar?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Abrir en navegador"</string>
+    <string name="hiad_page_load_failed" priority="LT">"No se puede cargar la página. Reintente."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"%1$s requiere los siguientes permisos:"</string>
+    <string name="hiad_prepare_download" priority="LT">"Esperar conexión Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"¿Descargar mediante red móvil?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Esperar WLAN"</string>
+    <string name="hiad_refresh" priority="LT">"Actualizar"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"La aplicación pesa más de %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Saltar"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Ver anuncio"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Termine de ver el anuncio para ganar un premio."</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Pulse aquí para acceder al sitio web/la aplicación"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Deslizar"</string>
+    <string name="hiad_twist_screen" priority="LT">"Agitar el teléfono"</string>
+    <string name="hiad_whether_download" priority="LT">"¿Descargar esta aplicación?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Precargado con Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Precargada"</string>
+    <string name="native_body">Cuerpo</string>
+    <string name="native_headline">Título</string>
+    <string name="native_media_view">Vista del contenido multimedia</string>
+    <string msgid="478774118347071097" name="not_set">"Sin definir"</string>
+    <string name="notifications_permission_confirm">Permitir</string>
+    <string name="notifications_permission_decline">No permitir</string>
+    <string name="notifications_permission_title">¿Permitir que la aplicación te envíe notificaciones?</string>
+    <string name="offline_notification_text">Toca para abrir el anuncio</string>
+    <string name="offline_notification_title">Mira el anuncio guardado cuando no tenías conexión</string>
+    <string name="offline_opt_in_confirm">Aceptar</string>
+    <string name="offline_opt_in_confirmation">Recibirás una notificación que incluirá el enlace cuando recuperes la conexión</string>
+    <string name="offline_opt_in_decline">No, gracias</string>
+    <string name="offline_opt_in_message">Te enviaremos una notificación que incluirá un enlace al sitio web del anunciante.</string>
+    <string name="offline_opt_in_title">Se abrirá el anuncio cuando recuperes la conexión.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" se ha copiado en el portapapeles."</string>
+    <string name="s1">Guardar imagen</string>
+    <string name="s2">¿Permitir que el anuncio almacene imágenes en la galería de imágenes?</string>
+    <string name="s3">Aceptar</string>
+    <string name="s4">Rechazar</string>
+    <string name="s5">Crear evento de calendario</string>
+    <string name="s6">¿Permitir que el anuncio cree un evento de calendario?</string>
+    <string name="s7">Anuncio de prueba</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Buscar"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="tt_00_00">00:00</string>
+    <string name="tt_ad">Anuncio</string>
+    <string name="tt_ad_clicked_text">Anuncio cliqueado</string>
+    <string name="tt_ad_close_text">Anuncio cerrado</string>
+    <string name="tt_ad_data_error">Response data error</string>
+    <string name="tt_ad_is_closed">Anuncios cerrados</string>
+    <string name="tt_ad_logo_txt">AD</string>
+    <string name="tt_ad_showed_text">Anuncio mostrado</string>
+    <string name="tt_adslot_empty">No request ad slot</string>
+    <string name="tt_adslot_id_error">Illegal ad slot id</string>
+    <string name="tt_adslot_size_empty">Empty ad slot size</string>
+    <string name="tt_adtype_not_match_rit">Ad slot id error</string>
+    <string name="tt_app_empty">No request app</string>
+    <string name="tt_app_name">tt_open_ad_sdk</string>
+    <string name="tt_auto_play_cancel_text">Cancelar</string>
+    <string name="tt_banner_ad_load_image_error">Banner loading failed</string>
+    <string name="tt_cancel">Cancelar</string>
+    <string name="tt_choose_language">es</string>
+    <string name="tt_click_to_replay">Toca para reproducir</string>
+    <string name="tt_comment_num">%1$s reseñas</string>
+    <string name="tt_comment_num_backup">%1$s reseñas</string>
+    <string name="tt_comment_score">Evaluación</string>
+    <string name="tt_confirm_download">No está conectado a una red Wi-Fi. ¿Seguro que desea</string>
+    <string name="tt_confirm_download_have_app_name">Preparando la descarga de %s aplicación(es)</string>
+    <string name="tt_content_type">Http content type error</string>
+    <string name="tt_count_down_view">Omitir</string>
+    <string name="tt_dislike_header_tv_back">Atrás</string>
+    <string name="tt_dislike_header_tv_title">Seleccionar</string>
+    <string name="tt_display_error">Error de visualización</string>
+    <string name="tt_error_access_method_pass">Illegal access method</string>
+    <string name="tt_error_ad_type">Illegal ad type</string>
+    <string name="tt_error_adtype_differ">Ad type error</string>
+    <string name="tt_error_apk_sign_check_error">Illegal apk sha1 value</string>
+    <string name="tt_error_code_adcount_error">Incorrect number of ad</string>
+    <string name="tt_error_code_click_event_error">Click event error</string>
+    <string name="tt_error_image_size">Illegal image size</string>
+    <string name="tt_error_media_id">Illegal media id</string>
+    <string name="tt_error_media_type">Illegal media type</string>
+    <string name="tt_error_new_register_limit">New ad slot exceeded daily request limit</string>
+    <string name="tt_error_origin_ad_error">Origin type error</string>
+    <string name="tt_error_package_name">Package name error</string>
+    <string name="tt_error_redirect">Redirect error</string>
+    <string name="tt_error_request_invalid">Invalid request</string>
+    <string name="tt_error_slot_id_app_id_differ">SlotId and AppId match error</string>
+    <string name="tt_error_splash_ad_type">Splash ad type error</string>
+    <string name="tt_error_union_os_error">Os type error</string>
+    <string name="tt_error_union_sdk_too_old">Sdk version too low</string>
+    <string name="tt_error_unknow">Unknown error</string>
+    <string name="tt_error_verify_reward">Reward verify error</string>
+    <string name="tt_feedback_experience_text">Continuaremos mejorando nuestro servicio.</string>
+    <string name="tt_feedback_submit_text">Has enviado comentarios. No los vuelvas a enviar.</string>
+    <string name="tt_feedback_thank_text">Gracias por tus comentarios.</string>
+    <string name="tt_frequent_call_erroe">Ad requests are too frequent</string>
+    <string name="tt_full_screen_skip_tx">Omitir</string>
+    <string name="tt_get_reward">Recompensa distribuida</string>
+    <string name="tt_insert_ad_load_image_error">Interstitial loading failed</string>
+    <string name="tt_label_cancel">Cancelar</string>
+    <string name="tt_label_ok">Aceptar</string>
+    <string name="tt_load_creative_icon_error">Icon loading failed</string>
+    <string name="tt_load_creative_icon_response_error">Icon loading error</string>
+    <string name="tt_load_failed_text">Error al cargar el anuncio</string>
+    <string name="tt_load_success_text">Anuncio cargado con éxito</string>
+    <string name="tt_msgPlayable">Terminar la reproducción para reclamar recompensas</string>
+    <string name="tt_negtiveBtnBtnText">Salir</string>
+    <string name="tt_negtive_txt">Cancelar</string>
+    <string name="tt_net_error">Network error</string>
+    <string name="tt_no_ad">No ad</string>
+    <string name="tt_no_ad_parse">Parsing data without ad</string>
+    <string name="tt_no_network">No hay conexión a la red, inténtelo de nuevo más tarde.</string>
+    <string name="tt_no_thank_you">No, gracias</string>
+    <string name="tt_parse_fail">Parsing error</string>
+    <string name="tt_permission_denied">Ha deshabilitado los permisos necesarios. Habilítelos.</string>
+    <string name="tt_postiveBtnText">Reanudar</string>
+    <string name="tt_postiveBtnTextPlayable">Seguir con la reproducción</string>
+    <string name="tt_postive_txt">Aceptar</string>
+    <string name="tt_privacy_title">Política de privacidad</string>
+    <string name="tt_reder_ad_load_timeout">Template loading timeout</string>
+    <string name="tt_render_diff_template_invalid">Template diff invalid</string>
+    <string name="tt_render_fail_meta_invalid">Template invalid</string>
+    <string name="tt_render_fail_template_parse_error">Template parsing error</string>
+    <string name="tt_render_fail_timeout">Render timeout</string>
+    <string name="tt_render_fail_unknown">Render failed unknown</string>
+    <string name="tt_render_main_template_invalid">Main template invalid</string>
+    <string name="tt_render_render_parse_error">Render parsing failed</string>
+    <string name="tt_request_body_error">Request entity is empty</string>
+    <string name="tt_request_pb_error">Http request pb error</string>
+    <string name="tt_request_permission_descript_external_storage">Almacenamiento</string>
+    <string name="tt_request_permission_descript_location">Ubicación</string>
+    <string name="tt_request_permission_descript_read_phone_state">Teléfono</string>
+    <string name="tt_reward_feedback">Comentarios</string>
+    <string name="tt_reward_full_skip">Omitir tras %1$s s</string>
+    <string name="tt_reward_msg">Mira el vídeo completo para obtener tu recompensa</string>
+    <string name="tt_reward_screen_skip_tx">Omitir</string>
+    <string name="tt_reward_video_show_error">Error en la visualización del vídeo de recompensa</string>
+    <string name="tt_ror_code_show_event_error">Show event error</string>
+    <string name="tt_skip_ad_time_text">Omitir después %ds segundos</string>
+    <string name="tt_splash_ad_load_image_error">Splash loading failed</string>
+    <string name="tt_splash_cache_expired_error">Cache expired</string>
+    <string name="tt_splash_cache_parse_error">Cache parsing failed</string>
+    <string name="tt_splash_not_have_cache_error">No splash cache</string>
+    <string name="tt_splash_skip_tv">3 s. | Omitir</string>
+    <string name="tt_suggestion_commit">Enviar</string>
+    <string name="tt_suggestion_description">Introduce una descripción del error de visualización y haz clic en el botón Enviar. La creatividad del anuncio se enviará también de nuevo a Pangle para intentar solucionar el problema.</string>
+    <string name="tt_sys_error">System error</string>
+    <string name="tt_tip">Notas</string>
+    <string name="tt_toast_ad_on_rewarded">Ad on rewarded</string>
+    <string name="tt_toast_later_download">Download later</string>
+    <string name="tt_toast_no_ad">No Ad to Show, Please Load Ad</string>
+    <string name="tt_toast_start_loading">Start Loading</string>
+    <string name="tt_toast_tiktok_ad_failed">TikTok Ad Failed to load, error code is:</string>
+    <string name="tt_try_now">Probar ahora</string>
+    <string name="tt_txt_skip">Omitir</string>
+    <string name="tt_unlike">No interesado</string>
+    <string name="tt_video_bytesize">Datos</string>
+    <string name="tt_video_bytesize_M">M</string>
+    <string name="tt_video_bytesize_MB">MB</string>
+    <string name="tt_video_continue_play">Seguir con la reproducción</string>
+    <string name="tt_video_dial_phone">Llamar ahora</string>
+    <string name="tt_video_download_apk">Descargar ahora</string>
+    <string name="tt_video_mobile_go_detail">Ver ahora</string>
+    <string name="tt_video_retry_des">Error en la carga. Haga clic para intentarlo de nuevo</string>
+    <string name="tt_video_retry_des_txt">Error en la carga. Inténtelo de nuevo.</string>
+    <string name="tt_video_without_wifi_tips">Reproducir este contenido usará %.2f MB de datos</string>
+    <string name="tt_wap_empty">No request wap</string>
+    <string name="tt_web_title_default">Anuncio</string>
+    <string name="tt_will_play">El vídeo se va a reproducir</string>
+    <string name="tt_yes_i_agree">Sí, acepto</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"DESACTIVADA"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ACTIVADO"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

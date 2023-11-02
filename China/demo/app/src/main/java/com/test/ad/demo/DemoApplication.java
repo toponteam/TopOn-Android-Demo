@@ -12,17 +12,6 @@ import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
 import android.webkit.WebView;
-
-import com.anythink.core.api.ATAdConst;
-import com.anythink.core.api.ATInitConfig;
-import com.anythink.core.api.ATNetworkConfig;
-import com.anythink.core.api.ATSDK;
-import com.anythink.network.gdt.GDTATInitConfig;
-import com.anythink.network.mintegral.MintegralATInitConfig;
-import com.facebook.stetho.Stetho;
-import com.test.ad.demo.util.PlacementIdUtil;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -46,57 +35,9 @@ public class DemoApplication extends MultiDexApplication {
         if (!isMainProcess(this)) {
             return;
         }
-
-        Stetho.initializeWithDefaults(getApplicationContext());
-        ATSDK.setNetworkLogDebug(true);
-        ATSDK.integrationChecking(getApplicationContext());
-//        ATSDK.deniedUploadDeviceInfo(
-//                DeviceDataInfo.DEVICE_SCREEN_SIZE
-//                , DeviceDataInfo.ANDROID_ID
-//                , DeviceDataInfo.APP_PACKAGE_NAME
-//                , DeviceDataInfo.APP_VERSION_CODE
-//                , DeviceDataInfo.APP_VERSION_NAME
-//                , DeviceDataInfo.BRAND
-//                , DeviceDataInfo.GAID
-//                , DeviceDataInfo.LANGUAGE
-//                , DeviceDataInfo.MCC
-//                , DeviceDataInfo.MNC
-//                , DeviceDataInfo.MODEL
-//                , DeviceDataInfo.ORIENTATION
-//                , DeviceDataInfo.OS_VERSION_CODE
-//                , DeviceDataInfo.OS_VERSION_NAME
-//                , DeviceDataInfo.TIMEZONE
-//                , DeviceDataInfo.USER_AGENT
-//                , DeviceDataInfo.NETWORK_TYPE
-//                , ChinaDeviceDataInfo.IMEI
-//                , ChinaDeviceDataInfo.MAC
-//                , ChinaDeviceDataInfo.OAID
-//                , DeviceDataInfo.INSTALLER
-//
-//        );
-
-        ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
-        ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
-
-//        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
-//        ATSDK.init(this, appid, appKey, atNetworkConfig);
-
-
     }
 
-    private ATNetworkConfig getAtNetworkConfig() {
-        List<ATInitConfig> atInitConfigs = new ArrayList<>();
 
-//        ATInitConfig gdtatInitConfig = new GDTATInitConfig("1200028501");
-//        ATInitConfig mintegralATInitConfig = new MintegralATInitConfig("100947", "ef13ef712aeb0f6eb3d698c4c08add96");
-//
-//        atInitConfigs.add(gdtatInitConfig);
-//        atInitConfigs.add(mintegralATInitConfig);
-
-        ATNetworkConfig.Builder builder = new ATNetworkConfig.Builder();
-        builder.withInitConfigList(atInitConfigs);
-        return builder.build();
-    }
 
     public boolean isMainProcess(Context context) {
         try {

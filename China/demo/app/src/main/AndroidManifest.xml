@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright © 2018-2020 TopOn. All rights reserved.
-  ~ https://www.toponad.com
-  ~ Licensed under the TopOn SDK License Agreement
-  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
--->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test.ad.demo" >
@@ -12,18 +6,23 @@
     <uses-sdk tools:overrideLibrary="com.tapsdk.tapad" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/> -->
+    <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH" /> -->
+    <!-- <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -44,7 +43,13 @@
             android:required="false" />
 
         <activity
-            android:name="com.test.ad.demo.MainActivity"
+            android:name="com.test.ad.demo.AdNetworkSelectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.test.ad.demo.InitSDkActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" >
@@ -53,6 +58,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.test.ad.demo.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
         </activity>
         <activity
             android:name="com.test.ad.demo.NativeMainActivity"
@@ -111,48 +122,14 @@
             android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
-
-        <!-- Only for huawei ads 3.4.56.302 -->
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" /> <!-- Only for huawei ads 3.4.56.302 -->
         <meta-data
             android:name="hw_ads_sdk_type"
             android:value="3"
             tools:node="replace" />
-        <!-- source file: china/network_sdk/gdt/4.542.1412/AndroidManifest.xml -->
-        <provider
-            android:name="com.qq.e.comm.GDTFileProvider"
-            android:authorities="${applicationId}.gdt.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_gdt_file_path" />
-        </provider> <!-- source file: china/network_sdk/csj/5.6.1.5/AndroidManifest.xml -->
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
-            android:authorities="${applicationId}.TTMultiProvider"
-            android:exported="false" />
-        <provider
-            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
-            android:authorities="${applicationId}.TTFileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_tt_file_path" />
-        </provider> <!-- source file: china/network_sdk/baidu/9.322/AndroidManifest.xml -->
+        <!-- source file: china/network_sdk/baidu/9.322/AndroidManifest.xml -->
         <!-- source file: china/network_sdk/sigmob/4.12.7/AndroidManifest.xml -->
-        <!-- source file: china/network_sdk/mimo/5.2.7/AndroidManifest.xml -->
-        <!-- source file: china/network_sdk/klevin/2.11.0.3/AndroidManifest.xml -->
-        <provider
-            android:name="com.tencent.klevin.utils.FileProvider"
-            android:authorities="${applicationId}.klevin.fileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/anythink_bk_klevin_file_path" />
-        </provider>
+        <!-- source file: china/network_sdk/csj/5.6.1.5/AndroidManifest.xml -->
     </application>
 
 </manifest>

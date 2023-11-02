@@ -1,0 +1,283 @@
+{
+  "features": [
+    {
+      "id": "close_button",
+      "params": {
+        "close_btn_padding": 10
+      },
+      "experiments": [
+        {
+          "id": "instl_padding",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "ip1",
+              "perc": 3,
+              "params": {
+                "close_btn_padding": 21
+              }
+            },
+            {
+              "id": "ip2",
+              "perc": 3,
+              "params": {
+                "close_btn_padding": 42
+              }
+            },
+            {
+              "id": "ip3",
+              "perc": 3,
+              "params": {
+                "close_btn_padding": 85
+              }
+            }
+          ],
+          "include": {
+            "placement_type": ["interstitial"],
+            "sdk": "7.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "video_player",
+      "params": {
+        "endcard_x_btn_delay_rv": 3,
+        "endcard_x_btn_delay_iv": 3,
+        "countdown_rv": false,
+        "countdown_iv": false,
+        "use_fmp_cache_mechanism": false,
+        "prebuffer_interstitial": 3,
+        "prebuffer_rewarded": 3,
+        "dl_retries": 10,
+        "dl_retry_delay": 500,
+        "second_checkpoint": 25
+      },
+      "experiments": [
+        {
+          "id": "rv_video_endcard_1",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "rve1",
+              "perc": 3,
+              "params": {
+                "endcard_x_btn_delay_rv": 0
+              }
+            },
+            {
+              "id": "rve2",
+              "perc": 3,
+              "params": {
+                "endcard_x_btn_delay_rv": 3,
+                "countdown_rv": true
+              }
+            },
+            {
+              "id": "rve3",
+              "perc": 3,
+              "params": {
+                "endcard_x_btn_delay_rv": 5,
+                "countdown_rv": true
+              }
+            }
+          ],
+          "include": {
+            "placement_type": ["rewarded"],
+            "sdk": "7.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        },
+        {
+          "id": "instl_video_endcard_1",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "ive1",
+              "perc": 5,
+              "params": {
+                "endcard_x_btn_delay_iv": 0
+              }
+            },
+            {
+              "id": "ive2",
+              "perc": 5,
+              "params": {
+                "endcard_x_btn_delay_iv": 3,
+                "countdown_iv": true
+              }
+            }
+          ],
+          "include": {
+            "placement_type": ["interstitial"],
+            "sdk": "7.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        },
+        {
+          "id": "video_caching",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "ivc_1",
+              "perc": 3,
+              "params": {
+                "use_fmp_cache_mechanism": true,
+                "prebuffer_interstitial": 1,
+                "prebuffer_rewarded": 1,
+                "dl_retries": 100,
+                "dl_retry_delay": 50,
+                "second_checkpoint": 5,
+                "url_conn_connection_timeout": 350,
+                "url_conn_read_timeout": 800
+              }
+            },
+            {
+              "id": "ivc_2",
+              "perc": 3,
+              "params": {
+                "use_fmp_cache_mechanism": true,
+                "prebuffer_interstitial": 2,
+                "prebuffer_rewarded": 2,
+                "dl_retries": 50,
+                "dl_retry_delay": 100,
+                "second_checkpoint": 10,
+                "url_conn_connection_timeout": 700,
+                "url_conn_read_timeout": 1400
+              }
+            },
+            {
+              "id": "ivc_3",
+              "perc": 3,
+              "params": {
+                "use_fmp_cache_mechanism": true,
+                "prebuffer_interstitial": 3,
+                "prebuffer_rewarded": 3,
+                "dl_retries": 10,
+                "dl_retry_delay": 500,
+                "second_checkpoint": 25,
+                "url_conn_connection_timeout": 2000,
+                "url_conn_read_timeout": 3500
+              }
+            }
+          ],
+          "include": {
+            "placement_type": ["interstitial", "rewarded"],
+            "os": "android",
+            "sdk": "7.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ad_request",
+      "params": {
+        "connect_timeout": 5000,
+        "read_timeout": 5000
+      },
+      "experiments": [
+        {
+          "id": "connection_timeouts",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "ct1",
+              "perc": 3,
+              "params": {
+                "connect_timeout": 1500,
+                "read_timeout": 2000
+              }
+            },
+            {
+              "id": "ct2",
+              "perc": 3,
+              "params": {
+                "connect_timeout": 2000,
+                "read_timeout": 2500
+              }
+            },
+            {
+              "id": "ct3",
+              "perc": 3,
+              "params": {
+                "connect_timeout": 2500,
+                "read_timeout": 3000
+              }
+            },
+            {
+              "id": "ct4",
+              "perc": 3,
+              "params": {
+                "connect_timeout": 3000,
+                "read_timeout": 3500
+              }
+            },
+            {
+              "id": "ct5",
+              "perc": 3,
+              "params": {
+                "connect_timeout": 3500,
+                "read_timeout": 4000
+              }
+            }
+          ],
+          "include": {
+            "sdk": "7.8.2.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "network_request",
+      "params": {
+        "should_use_is_network_connected": false
+      },
+      "experiments": [
+        {
+          "id": "should_use_is_network_connected",
+          "perc": 80,
+          "variants": [
+            {
+              "id": "su1",
+              "perc": 3,
+              "params": {
+                "should_use_is_network_connected": true
+              }
+            }
+          ],
+          "include": {
+            "sdk": "7.8.2.+"
+          },
+          "exclude": {
+            "pub_id": [
+              213625
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

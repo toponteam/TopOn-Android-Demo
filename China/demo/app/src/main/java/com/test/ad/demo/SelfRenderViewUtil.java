@@ -20,7 +20,7 @@ import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
-import com.huawei.hms.ads.AppDownloadButton;
+//import com.huawei.hms.ads.AppDownloadButton;
 import com.test.ad.demo.view.MutiImageView;
 
 import java.util.ArrayList;
@@ -111,19 +111,19 @@ public class SelfRenderViewUtil {
         // AppDownloadButton(Only Huawei Ads support)
         View lastView = ((ViewGroup) selfRenderView).getChildAt(((ViewGroup) selfRenderView).getChildCount() - 1);
         // Remove AppDownloadButton since last time added
-        if (lastView instanceof AppDownloadButton) {
-            ((ViewGroup) selfRenderView).removeView(lastView);
-        }
-        View appDownloadButton = adMaterial.getAppDownloadButton();
-        if (appDownloadButton != null) {
-            if (appDownloadButton instanceof AppDownloadButton) {
-                ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
-            }
-            ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
-            ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
-            appDownloadButton.setVisibility(View.VISIBLE);
-            ctaView.setVisibility(View.INVISIBLE);
-        }
+        //if (lastView instanceof AppDownloadButton) {
+        //    ((ViewGroup) selfRenderView).removeView(lastView);
+        //}
+        //View appDownloadButton = adMaterial.getAppDownloadButton();
+        //if (appDownloadButton != null) {
+        //    if (appDownloadButton instanceof AppDownloadButton) {
+        //        ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
+        //    }
+        //    ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
+        //    ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
+        //    appDownloadButton.setVisibility(View.VISIBLE);
+        //    ctaView.setVisibility(View.INVISIBLE);
+        //}
 
         // media view
         View mediaView = adMaterial.getAdMediaView(contentArea);

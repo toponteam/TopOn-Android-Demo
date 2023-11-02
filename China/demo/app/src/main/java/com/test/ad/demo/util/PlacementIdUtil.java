@@ -12,7 +12,6 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -212,5 +211,4 @@ public class PlacementIdUtil {
         }
         return splashPlacements;
     }
-
 }

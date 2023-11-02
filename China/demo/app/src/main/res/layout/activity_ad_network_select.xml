@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdNetworkSelectActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_sdk_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="@dimen/anythink_padding">
+
+        <ImageView
+            android:id="@+id/iv_sdk_logo"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_demo_logo" />
+
+        <TextView
+            android:id="@+id/tv_sdk_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_sdk_logo"
+            android:text="@string/anythink_sdk_demo"
+            android:textColor="@color/anythink_1E2231"
+            android:textSize="@dimen/anythink_title_bar_text_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_sdk_title"
+        android:background="@color/anythink_F5F5F5"
+        android:orientation="vertical"
+        android:padding="@dimen/anythink_padding">
+
+
+        <RelativeLayout
+            android:id="@+id/topon_adx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/anythink_10dp"
+            android:background="@drawable/bg_white"
+            android:padding="@dimen/anythink_8dp">
+
+            <LinearLayout
+                android:layout_width="@dimen/anythink_pic_size"
+                android:layout_height="@dimen/anythink_pic_size"
+                android:background="@drawable/shape_gray_width1_corners2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/anythink_pic_width"
+                    android:layout_height="@dimen/anythink_pic_height"
+                    android:src="@mipmap/ic_test_interstitial" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/anythink_title_margin_left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_interstitial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TopOn Adx"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/anythink_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_desc_interstitial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_interstitial"
+                    android:layout_alignLeft="@id/tv_title_interstitial"
+                    android:layout_marginTop="@dimen/anythink_desc_margin_top"
+                    android:maxLines="3"
+                    android:text="Topon Adx"
+                    android:textColor="@color/anythink_666666"
+                    android:textSize="@dimen/anythink_desc_size" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

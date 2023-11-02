@@ -1,0 +1,123 @@
+<div id="gitcontnet">
+    <script type="text/javascript">
+    window.iaPreCachedAd = true;
+
+
+    </script>
+    <script type="text/javascript">
+    var prevWindowOnError = window.onerror;
+    window.onerror = function(err) {
+      if (typeof prevWindowOnError === 'function') {
+        prevWindowOnError.apply();
+      };
+      console.log('WINDOW.ONERROR Javascript Error: ' + err);
+    };
+
+
+    </script>
+    <script type="text/javascript">
+  var img = new Image();
+  var originalWidth = 0;
+  var originalHeight = 0;
+  function resizeImage(img) {
+    var dwidth = originalWidth;
+    var dheight = originalHeight;
+    var vheight = window.innerHeight;
+    var vwidth = window.innerWidth;
+
+    img.width = originalWidth;
+    img.height = originalHeight;
+
+    var scale = 1;
+    var dx = 0;
+    var dy = 0;
+    if (dwidth <= vwidth && dheight <= vheight) {
+      scale = Math.min(vwidth / dwidth, vheight / dheight);
+    } else {
+      scale = Math.min(vwidth / dwidth, vheight / dheight);
+    }
+    dx = Math.round((vwidth - dwidth * scale) * 0.5);
+    dy = Math.round((vheight - dheight * scale) * 0.5);
+
+    img.style.top = dy;
+    img.style.left = dx;
+    img.style.width = Math.round(dwidth * scale);
+    img.style.height = Math.round(dheight * scale);
+  };
+
+    window.addEventListener('load', function(e) {
+      var linky = "$__IMGHREF__$";
+      var link = document.createElement('a');
+      link.href = linky;
+      link.appendChild(img);
+      document.getElementById('gifgoeshere').appendChild(link);
+      //document.getElementsByTagName('div')[0].appendChild(link);
+      img.onload = function() {
+        originalWidth = img.width;
+        originalHeight = img.height;
+        resizeImage(img);
+      };
+      var errfun = function() {
+
+        console.log('failed loading the image');
+        var ifr = document.createElement('iframe');
+        var container = document.body || document.documentElement;
+        container.appendChild(ifr);
+        ifr.setAttribute('sandbox', '');
+        ifr.setAttribute('style', 'position: fixed; bottom: -20px; border: none; visibility: hidden; height: 20px; z-index: -99999');
+        ifr.setAttribute('src', "iaadfinishedloading://failure");
+      };
+      var successFun = function(){
+       
+        var ifr = document.createElement('iframe');
+        var container = document.body || document.documentElement;
+        container.appendChild(ifr);
+        ifr.setAttribute('sandbox', '');
+        ifr.setAttribute('style', 'position: fixed; bottom: -20px; border: none; display: none; height: 20px; z-index: -99999');
+        ifr.setAttribute('src', "iaadfinishedloading://success");
+      };
+
+      img.addEventListener('error', errfun);
+      img.addEventListener('load',successFun);
+      img.src = '$__IMGSRC__$';
+    });
+
+    window.addEventListener('resize', function(e) {
+        resizeImage(img);
+    });
+
+    </script>
+    <style type="text/css">
+    body {
+      margin: 0 !important;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #gifgoeshere {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      top: 0;
+    }
+    #gifgoeshere img {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+    </style>
+
+    <div id="gifgoeshere">
+
+    </div>
+</div>

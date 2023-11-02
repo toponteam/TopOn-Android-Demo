@@ -29,8 +29,6 @@ import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.network.gdt.GDTATConst;
-import com.anythink.network.toutiao.TTATConst;
 import com.test.ad.demo.bean.RecycleViewDataBean;
 import com.test.ad.demo.util.PlacementIdUtil;
 
@@ -175,8 +173,8 @@ public class NativeListActivity extends Activity {
         Map<String, Object> localMap = new HashMap<>();
         localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
-        localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, 0);
-        localMap.put(GDTATConst.AD_HEIGHT, -2);
+        //localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, 0);
+        //localMap.put(GDTATConst.AD_HEIGHT, -2);
         mATNative.setLocalExtra(localMap);
 
         //load ad

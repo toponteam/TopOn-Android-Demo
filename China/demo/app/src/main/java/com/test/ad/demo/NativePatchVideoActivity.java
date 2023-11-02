@@ -28,7 +28,7 @@ import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
-import com.anythink.network.gdt.GDTATConst;
+//import com.anythink.network.gdt.GDTATConst;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.HashMap;
@@ -112,7 +112,7 @@ public class NativePatchVideoActivity extends Activity {
         localMap.put(ATAdConst.KEY.AD_WIDTH, adViewWidth);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, adViewHeight);
 //        localMap.put(TTATConst.NATIVE_AD_IMAGE_HEIGHT, 0);
-        localMap.put(GDTATConst.AD_HEIGHT, -2);
+//        localMap.put(GDTATConst.AD_HEIGHT, -2);
 
         mATNative.setLocalExtra(localMap);
 
