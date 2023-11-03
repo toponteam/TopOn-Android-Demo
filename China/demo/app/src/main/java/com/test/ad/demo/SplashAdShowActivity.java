@@ -10,19 +10,15 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
@@ -35,9 +31,6 @@ import com.anythink.splashad.api.ATSplashSkipInfo;
 import com.test.ad.demo.util.SDKUtil;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class SplashAdShowActivity extends Activity implements ATSplashExListener {
 

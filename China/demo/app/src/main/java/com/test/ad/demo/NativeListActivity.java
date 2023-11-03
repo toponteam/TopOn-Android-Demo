@@ -8,27 +8,16 @@
 package com.test.ad.demo;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 
 import com.anythink.core.api.ATAdConst;
-import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
-import com.anythink.nativead.api.ATNativeAdView;
-import com.anythink.nativead.api.ATNativeDislikeListener;
-import com.anythink.nativead.api.ATNativeEventListener;
 import com.anythink.nativead.api.ATNativeNetworkListener;
-import com.anythink.nativead.api.ATNativePrepareInfo;
-import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.RecycleViewDataBean;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.SDKUtil;

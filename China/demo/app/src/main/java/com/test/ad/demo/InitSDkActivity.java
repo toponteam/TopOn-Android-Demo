@@ -14,11 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
-import com.anythink.core.api.ATSDK;
-import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.SDKUtil;
 
 import java.util.ArrayList;
