@@ -92,7 +92,7 @@
             <FrameLayout
                 android:id="@+id/adview_container"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="100dp"
                 android:layout_below="@id/banner_load_ad_btn"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="@dimen/anythink_10dp"

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -17,8 +18,8 @@ import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
 import com.anythink.core.api.ATSDK;
-import com.facebook.stetho.Stetho;
 import com.test.ad.demo.util.PlacementIdUtil;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +52,6 @@ public class InitSDkActivity extends Activity {
         mPrivacyWebView = findViewById(R.id.privacy_webview);
         initializeWebView(mPrivacyWebView, this);
 
-        //隐私协议url
-        mPrivacyWebView.loadUrl("https://www.toponad.com/zh-cn/privacy-policy");
     }
 
     private void initListener() {
@@ -61,6 +60,10 @@ public class InitSDkActivity extends Activity {
             public void onClick(View v) {
                 //弹出隐私协议弹窗，用户同意后再进行SDK初始化
                 if (!mHasInitSdk) {
+                    //隐私协议url
+                    if (TextUtils.isEmpty(mPrivacyWebView.getUrl())) {
+                        mPrivacyWebView.loadUrl("https://www.toponad.com/zh-cn/privacy-policy");
+                    }
                     mRlPrivacyContainer.setVisibility(View.VISIBLE);
                 } else {
                     showToast("SDK已初始化");
@@ -73,7 +76,7 @@ public class InitSDkActivity extends Activity {
             public void onClick(View v) {
                 if (mHasInitSdk) {
                     startActivity(new Intent(InitSDkActivity.this, MainActivity.class));
-                    finish();
+//                    finish();
                 } else {
                     showToast("请先初始化SDK");
                 }
@@ -91,7 +94,7 @@ public class InitSDkActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //初始化SDK
-                initSDK();
+                SDKUtil.initSDK(InitSDkActivity.this);
                 mHasInitSdk = true;
                 mRlPrivacyContainer.setVisibility(View.GONE);
                 showToast("初始化成功");
@@ -153,41 +156,7 @@ public class InitSDkActivity extends Activity {
 
     }
 
-    private void initSDK() {
-        Stetho.initializeWithDefaults(getApplicationContext());
-        ATSDK.setNetworkLogDebug(true);
-        ATSDK.integrationChecking(getApplicationContext());
-//        ATSDK.deniedUploadDeviceInfo(
-//                DeviceDataInfo.DEVICE_SCREEN_SIZE
-//                , DeviceDataInfo.ANDROID_ID
-//                , DeviceDataInfo.APP_PACKAGE_NAME
-//                , DeviceDataInfo.APP_VERSION_CODE
-//                , DeviceDataInfo.APP_VERSION_NAME
-//                , DeviceDataInfo.BRAND
-//                , DeviceDataInfo.GAID
-//                , DeviceDataInfo.LANGUAGE
-//                , DeviceDataInfo.MCC
-//                , DeviceDataInfo.MNC
-//                , DeviceDataInfo.MODEL
-//                , DeviceDataInfo.ORIENTATION
-//                , DeviceDataInfo.OS_VERSION_CODE
-//                , DeviceDataInfo.OS_VERSION_NAME
-//                , DeviceDataInfo.TIMEZONE
-//                , DeviceDataInfo.USER_AGENT
-//                , DeviceDataInfo.NETWORK_TYPE
-//                , ChinaDeviceDataInfo.IMEI
-//                , ChinaDeviceDataInfo.MAC
-//                , ChinaDeviceDataInfo.OAID
-//                , DeviceDataInfo.INSTALLER
-//
-//        );
 
-        ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
-        ATSDK.init(this, PlacementIdUtil.getAppId(this), PlacementIdUtil.getAppKey(this));
-
-//        ATNetworkConfig atNetworkConfig = getAtNetworkConfig();
-//        ATSDK.init(this, appid, appKey, atNetworkConfig);
-    }
 
     private ATNetworkConfig getAtNetworkConfig() {
         List<ATInitConfig> atInitConfigs = new ArrayList<>();

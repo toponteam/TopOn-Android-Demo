@@ -32,6 +32,7 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
+import com.test.ad.demo.util.SDKUtil;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
@@ -121,6 +122,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
+            SDKUtil.initSDK(getApplicationContext());
             splashAd.loadAd();
         }
 

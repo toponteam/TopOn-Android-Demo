@@ -31,6 +31,7 @@ import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.RecycleViewDataBean;
 import com.test.ad.demo.util.PlacementIdUtil;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -166,6 +167,7 @@ public class NativeListActivity extends Activity {
     // ----------------------------------------------------------------------------------------
 
     private void requestNativeAd() {
+        SDKUtil.initSDK(getApplicationContext());
         if (mATNative == null) {
             mATNative = new ATNative(this, placementId, nativeNetworkListener);
         }

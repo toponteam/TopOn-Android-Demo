@@ -24,6 +24,7 @@ import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -166,6 +167,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd() {
+        SDKUtil.initSDK(getApplicationContext());
         printLogOnUI(getString(R.string.anythink_ad_status_loading));
         //Loading and displaying ads should keep the container and BannerView visible all the time
         mBannerView.setVisibility(View.VISIBLE);
