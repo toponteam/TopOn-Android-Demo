@@ -27,6 +27,7 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashEyeAdListener;
 import com.anythink.splashad.api.IATSplashEyeAd;
+import com.test.ad.demo.util.SDKUtil;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
 import java.util.HashMap;
@@ -74,6 +75,8 @@ public class SplashAdShowInCurrentActivity extends Activity {
                 localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
 
                 splashAd.setLocalExtra(localMap);
+
+                SDKUtil.initSDK(getApplicationContext());
 
                 splashAd.loadAd();
             }

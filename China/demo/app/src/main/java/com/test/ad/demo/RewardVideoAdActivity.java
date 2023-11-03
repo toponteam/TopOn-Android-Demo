@@ -27,6 +27,7 @@ import com.anythink.rewardvideo.api.ATRewardVideoAutoLoadListener;
 import com.anythink.rewardvideo.api.ATRewardVideoExListener;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -305,6 +306,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
     }
 
     private void loadAd() {
+        SDKUtil.initSDK(getApplicationContext());
         if (mRewardVideoAd == null) {
             printLogOnUI("ATRewardVideoAd is not init.");
             return;

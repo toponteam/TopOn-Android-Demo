@@ -28,7 +28,6 @@ import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
-//import com.anythink.network.gdt.GDTATConst;
 import com.test.ad.demo.util.PlacementIdUtil;
 
 import java.util.HashMap;

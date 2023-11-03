@@ -27,6 +27,7 @@ import com.anythink.interstitial.api.ATInterstitialAutoLoadListener;
 import com.anythink.interstitial.api.ATInterstitialExListener;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -250,6 +251,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     }
 
     private void loadAd() {
+        SDKUtil.initSDK(getApplicationContext());
         if (mInterstitialAd == null) {
             printLogOnUI("ATInterstitial is not init.");
             return;

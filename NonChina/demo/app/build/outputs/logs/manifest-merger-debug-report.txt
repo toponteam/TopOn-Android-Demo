@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
 MERGED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:3:1-18:12
 MERGED from [anythink_network_bigo.aar] /Users/developertopon/.gradle/caches/transforms-3/303830bde432664ab121ebcc5c73e722/transformed/jetified-anythink_network_bigo/AndroidManifest.xml:2:1-14:12
 MERGED from [ads-native-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/315b2c6ccb1c3cece100d033ea0b61af/transformed/jetified-ads-native-13.4.62.302/AndroidManifest.xml:3:1-32:12
@@ -39,7 +39,7 @@ MERGED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3
 MERGED from [anythink_network_kidoz.aar] /Users/developertopon/.gradle/caches/transforms-3/d8c21491e14a99c857c1ea8e6b4bafa3/transformed/jetified-anythink_network_kidoz/AndroidManifest.xml:2:1-14:12
 MERGED from [mbridge_nativeex.aar] /Users/developertopon/.gradle/caches/transforms-3/b7966469b33f0afac637f9df41296c94/transformed/jetified-mbridge_nativeex/AndroidManifest.xml:2:1-14:12
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:10:1-36:12
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:2:1-69:12
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:2:1-69:12
 MERGED from [anythink_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/b353f8cd823b02a2b454782128129639/transformed/jetified-anythink_interstitial/AndroidManifest.xml:2:1-11:12
 MERGED from [hybid.sdk.reporting-2.19.0.aar] /Users/developertopon/.gradle/caches/transforms-3/632f67236a2ac78d965a1044a1b42915/transformed/jetified-hybid.sdk.reporting-2.19.0/AndroidManifest.xml:2:1-7:12
 MERGED from [hybid.omsdk-1.4.5.aar] /Users/developertopon/.gradle/caches/transforms-3/24e5bbe7962f3bb7a71e9be3054ba345/transformed/jetified-hybid.omsdk-1.4.5/AndroidManifest.xml:2:1-12:12
@@ -166,29 +166,29 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/developertopon/.gradl
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/developertopon/.gradle/caches/transforms-3/170e6b1f108fcfa50c81d759163a769d/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developertopon/.gradle/caches/transforms-3/5a5fc30614ca149656b27e3852001525/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/developertopon/.gradle/caches/transforms-3/7a513b0fbc76c9b0f3a660e6c51e0091/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
 	package
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:10:5-31
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:10:5-31
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:9:5-51
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:9:5-51
 	android:versionCode
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:1-100:12
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:8:11-69
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:8:11-69
 uses-sdk
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
 MERGED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:8:5-10:41
 MERGED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:8:5-10:41
 MERGED from [anythink_network_bigo.aar] /Users/developertopon/.gradle/caches/transforms-3/303830bde432664ab121ebcc5c73e722/transformed/jetified-anythink_network_bigo/AndroidManifest.xml:5:5-7:41
@@ -259,8 +259,8 @@ MERGED from [mbridge_nativeex.aar] /Users/developertopon/.gradle/caches/transfor
 MERGED from [mbridge_nativeex.aar] /Users/developertopon/.gradle/caches/transforms-3/b7966469b33f0afac637f9df41296c94/transformed/jetified-mbridge_nativeex/AndroidManifest.xml:7:5-9:41
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:14:5-17:409
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:14:5-17:409
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:5:5-7:41
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:5:5-7:41
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:5:5-7:41
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:5:5-7:41
 MERGED from [anythink_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/b353f8cd823b02a2b454782128129639/transformed/jetified-anythink_interstitial/AndroidManifest.xml:5:5-7:41
 MERGED from [anythink_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/b353f8cd823b02a2b454782128129639/transformed/jetified-anythink_interstitial/AndroidManifest.xml:5:5-7:41
 MERGED from [hybid.sdk.reporting-2.19.0.aar] /Users/developertopon/.gradle/caches/transforms-3/632f67236a2ac78d965a1044a1b42915/transformed/jetified-hybid.sdk.reporting-2.19.0/AndroidManifest.xml:5:5-44
@@ -513,20 +513,20 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developertopon
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/developertopon/.gradle/caches/transforms-3/5a5fc30614ca149656b27e3852001525/transformed/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/developertopon/.gradle/caches/transforms-3/7a513b0fbc76c9b0f3a660e6c51e0091/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/developertopon/.gradle/caches/transforms-3/7a513b0fbc76c9b0f3a660e6c51e0091/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
-INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
 	tools:overrideLibrary
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:15-190
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:15-190
 	android:targetSdkVersion
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
-		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:12:5-193
+		INJECTED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:14:5-67
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:14:5-67
 MERGED from [anythink_network_bigo.aar] /Users/developertopon/.gradle/caches/transforms-3/303830bde432664ab121ebcc5c73e722/transformed/jetified-anythink_network_bigo/AndroidManifest.xml:9:5-67
 MERGED from [anythink_network_bigo.aar] /Users/developertopon/.gradle/caches/transforms-3/303830bde432664ab121ebcc5c73e722/transformed/jetified-anythink_network_bigo/AndroidManifest.xml:9:5-67
 MERGED from [anythink_network_unityads.aar] /Users/developertopon/.gradle/caches/transforms-3/1f7d8d4a3c52ad6f1874d9734d8f4df2/transformed/jetified-anythink_network_unityads/AndroidManifest.xml:9:5-67
@@ -553,8 +553,8 @@ MERGED from [anythink_network_kidoz.aar] /Users/developertopon/.gradle/caches/tr
 MERGED from [anythink_network_kidoz.aar] /Users/developertopon/.gradle/caches/transforms-3/d8c21491e14a99c857c1ea8e6b4bafa3/transformed/jetified-anythink_network_kidoz/AndroidManifest.xml:9:5-67
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:19:5-67
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:19:5-67
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:9:5-67
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:9:5-67
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:9:5-67
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:9:5-67
 MERGED from [hybid.omsdk-1.4.5.aar] /Users/developertopon/.gradle/caches/transforms-3/24e5bbe7962f3bb7a71e9be3054ba345/transformed/jetified-hybid.omsdk-1.4.5/AndroidManifest.xml:9:5-67
 MERGED from [hybid.omsdk-1.4.5.aar] /Users/developertopon/.gradle/caches/transforms-3/24e5bbe7962f3bb7a71e9be3054ba345/transformed/jetified-hybid.omsdk-1.4.5/AndroidManifest.xml:9:5-67
 MERGED from [anythink_network_fyber.aar] /Users/developertopon/.gradle/caches/transforms-3/f48c316dedd532cf9d9c1837ade0bc9b/transformed/jetified-anythink_network_fyber/AndroidManifest.xml:9:5-67
@@ -632,9 +632,9 @@ MERGED from [hybid.sdk-2.19.0.aar] /Users/developertopon/.gradle/caches/transfor
 MERGED from [anythink_network_ogury.aar] /Users/developertopon/.gradle/caches/transforms-3/ec046597fd96a34c10e8be27cdc86fe5/transformed/jetified-anythink_network_ogury/AndroidManifest.xml:9:5-67
 MERGED from [anythink_network_ogury.aar] /Users/developertopon/.gradle/caches/transforms-3/ec046597fd96a34c10e8be27cdc86fe5/transformed/jetified-anythink_network_ogury/AndroidManifest.xml:9:5-67
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:14:22-64
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:14:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:15:5-79
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:15:5-79
 MERGED from [inmobi-ads-kotlin-10.5.7.aar] /Users/developertopon/.gradle/caches/transforms-3/89d0a688dc1c3f91bdbf9d88b82481eb/transformed/jetified-inmobi-ads-kotlin-10.5.7/AndroidManifest.xml:12:5-79
 MERGED from [inmobi-ads-kotlin-10.5.7.aar] /Users/developertopon/.gradle/caches/transforms-3/89d0a688dc1c3f91bdbf9d88b82481eb/transformed/jetified-inmobi-ads-kotlin-10.5.7/AndroidManifest.xml:12:5-79
 MERGED from [mobmetricalib-5.0.0.aar] /Users/developertopon/.gradle/caches/transforms-3/69962aa2ceca542b85857f2b41706543/transformed/jetified-mobmetricalib-5.0.0/AndroidManifest.xml:21:5-79
@@ -649,8 +649,8 @@ MERGED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3
 MERGED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3/8d7c665060ca107bcf3cc86962a25c52/transformed/jetified-mbridge_same/AndroidManifest.xml:12:5-79
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:20:5-79
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:20:5-79
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:10:5-79
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:10:5-79
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:10:5-79
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:10:5-79
 MERGED from [hybid.omsdk-1.4.5.aar] /Users/developertopon/.gradle/caches/transforms-3/24e5bbe7962f3bb7a71e9be3054ba345/transformed/jetified-hybid.omsdk-1.4.5/AndroidManifest.xml:10:5-79
 MERGED from [hybid.omsdk-1.4.5.aar] /Users/developertopon/.gradle/caches/transforms-3/24e5bbe7962f3bb7a71e9be3054ba345/transformed/jetified-hybid.omsdk-1.4.5/AndroidManifest.xml:10:5-79
 MERGED from [chartboost-mediation-sdk-4.3.0.aar] /Users/developertopon/.gradle/caches/transforms-3/73e6ef1f4e0f6c87f47f56dc630f0166/transformed/jetified-chartboost-mediation-sdk-4.3.0/AndroidManifest.xml:14:5-79
@@ -698,13 +698,13 @@ MERGED from [com.google.android.exoplayer:exoplayer-core:2.16.1] /Users/develope
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.16.1] /Users/developertopon/.gradle/caches/transforms-3/dd9ebd4dc386788213764e413d3e5ae7/transformed/jetified-exoplayer-common-2.16.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.exoplayer:exoplayer-common:2.16.1] /Users/developertopon/.gradle/caches/transforms-3/dd9ebd4dc386788213764e413d3e5ae7/transformed/jetified-exoplayer-common-2.16.1/AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:15:22-76
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:15:22-76
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:16:5-81
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:16:22-78
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:16:22-78
 application
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:18:5-98:19
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:18:5-98:19
 MERGED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:12:5-16:19
 MERGED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:12:5-16:19
 MERGED from [anythink_network_bigo.aar] /Users/developertopon/.gradle/caches/transforms-3/303830bde432664ab121ebcc5c73e722/transformed/jetified-anythink_network_bigo/AndroidManifest.xml:11:5-12:19
@@ -755,8 +755,8 @@ MERGED from [mbridge_nativeex.aar] /Users/developertopon/.gradle/caches/transfor
 MERGED from [mbridge_nativeex.aar] /Users/developertopon/.gradle/caches/transforms-3/b7966469b33f0afac637f9df41296c94/transformed/jetified-mbridge_nativeex/AndroidManifest.xml:11:5-12:19
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:24:5-34:19
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:24:5-34:19
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:14:5-67:19
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:14:5-67:19
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:14:5-67:19
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:14:5-67:19
 MERGED from [anythink_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/b353f8cd823b02a2b454782128129639/transformed/jetified-anythink_interstitial/AndroidManifest.xml:9:5-20
 MERGED from [anythink_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/b353f8cd823b02a2b454782128129639/transformed/jetified-anythink_interstitial/AndroidManifest.xml:9:5-20
 MERGED from [anythink_network_fyber.aar] /Users/developertopon/.gradle/caches/transforms-3/f48c316dedd532cf9d9c1837ade0bc9b/transformed/jetified-anythink_network_fyber/AndroidManifest.xml:11:5-12:19
@@ -878,155 +878,155 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/deve
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /Users/developertopon/.gradle/caches/transforms-3/c710f486a970e7a5e2d51e4281423a28/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:24:9-35
 	android:label
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:22:9-41
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:22:9-41
 	android:hardwareAccelerated
 		ADDED from [vungle-7.0.0.aar] /Users/developertopon/.gradle/caches/transforms-3/9989dde11cf00ddf421d5d6f23df03e6/transformed/jetified-vungle-7.0.0/AndroidManifest.xml:14:18-52
 	tools:ignore
 		ADDED from [mobmetricalib-5.0.0.aar] /Users/developertopon/.gradle/caches/transforms-3/69962aa2ceca542b85857f2b41706543/transformed/jetified-mobmetricalib-5.0.0/AndroidManifest.xml:25:18-57
 	android:icon
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:21:9-38
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:21:9-38
 	android:allowBackup
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:20:9-36
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:20:9-36
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:25:9-77
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:25:9-77
 	android:networkSecurityConfig
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:23:9-69
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:23:9-69
 	android:usesCleartextTraffic
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:26:9-44
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:26:9-44
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:19:9-56
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:19:9-56
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:27:9-29:70
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:27:9-29:70
 	android:value
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:29:13-67
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:29:13-67
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:28:13-69
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:28:13-69
 uses-library#org.apache.http.legacy
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:31:9-33:40
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:31:9-33:40
 	android:required
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:33:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:32:13-50
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:32:13-50
 activity#com.test.ad.demo.MainActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:35:9-45:20
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:35:9-45:20
 	android:screenOrientation
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:38:13-49
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:38:13-49
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:37:13-36
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:37:13-36
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:39:13-66
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:39:13-66
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:36:13-57
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:36:13-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:40:13-44:29
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:41:17-69
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:41:25-66
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:43:17-77
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:43:27-74
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:43:27-74
 activity#com.test.ad.demo.NativeMainActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:46:9-50:52
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:46:9-50:52
 	android:screenOrientation
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:50:13-49
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:50:13-49
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:49:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:49:13-37
 	android:configChanges
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:48:13-115
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:48:13-115
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:47:13-63
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:47:13-63
 activity#com.test.ad.demo.NativeAdActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:51:9-54:38
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:51:9-54:38
 	android:label
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:54:13-35
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:54:13-35
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:53:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:52:13-61
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:52:13-61
 activity#com.test.ad.demo.RewardVideoAdActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:55:9-58:45
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:55:9-58:45
 	android:label
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:58:13-42
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:58:13-42
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:57:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:56:13-66
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:56:13-66
 activity#com.test.ad.demo.InterstitialAdActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:59:9-62:44
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:59:9-62:44
 	android:label
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:62:13-41
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:62:13-41
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:61:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:61:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:60:13-67
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:60:13-67
 activity#com.test.ad.demo.BannerAdActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:63:9-66:38
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:63:9-66:38
 	android:label
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:66:13-35
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:66:13-35
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:65:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:65:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:64:13-61
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:64:13-61
 activity#com.test.ad.demo.SplashAdActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:67:9-69:40
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:67:9-69:40
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:69:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:68:13-61
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:68:13-61
 activity#com.test.ad.demo.SplashAdShowActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:70:9-73:80
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:70:9-73:80
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:72:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:72:13-37
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:73:13-77
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:73:13-77
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:71:13-65
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:71:13-65
 activity#com.test.ad.demo.SplashAdShowInCurrentActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:74:9-79:80
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:74:9-79:80
 	android:screenOrientation
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:78:13-49
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:78:13-49
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:77:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:77:13-37
 	android:configChanges
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:76:13-115
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:76:13-115
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:79:13-77
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:79:13-77
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:75:13-74
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:75:13-74
 activity#com.test.ad.demo.NativeListActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:80:9-85:69
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:80:9-85:69
 	android:screenOrientation
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:84:13-49
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:84:13-49
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:83:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:83:13-37
 	android:configChanges
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:82:13-115
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:82:13-115
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:85:13-66
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:85:13-66
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:81:13-63
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:81:13-63
 activity#com.test.ad.demo.TestMainActivity
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:86:9-91:80
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:86:9-91:80
 	android:screenOrientation
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:90:13-49
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:90:13-49
 	android:exported
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:89:13-37
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:89:13-37
 	android:configChanges
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:88:13-115
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:88:13-115
 	android:theme
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:91:13-77
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:91:13-77
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:87:13-61
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:87:13-61
 meta-data#com.google.android.gms.ads.AD_MANAGER_APP
-ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:95:9-97:36
+ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:95:9-97:36
 	android:value
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:97:13-33
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:97:13-33
 	android:name
-		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311022204/NonChina/demo/app/src/main/AndroidManifest.xml:96:13-69
+		ADDED from /Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/AndroidManifest.xml:96:13-69
 meta-data#com.huawei.hms.client.service.name:ads-template
 ADDED from [ads-template-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/8433f01cd8679b9ab96e1d956529b753/transformed/jetified-ads-template-13.4.62.302/AndroidManifest.xml:13:9-15:56
 	android:value
@@ -1093,8 +1093,8 @@ MERGED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3
 MERGED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3/8d7c665060ca107bcf3cc86962a25c52/transformed/jetified-mbridge_same/AndroidManifest.xml:13:5-79
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:21:5-79
 MERGED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:21:5-79
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:12:5-79
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:12:5-79
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:12:5-79
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:12:5-79
 MERGED from [chartboost-mediation-sdk-4.3.0.aar] /Users/developertopon/.gradle/caches/transforms-3/73e6ef1f4e0f6c87f47f56dc630f0166/transformed/jetified-chartboost-mediation-sdk-4.3.0/AndroidManifest.xml:16:5-79
 MERGED from [chartboost-mediation-sdk-4.3.0.aar] /Users/developertopon/.gradle/caches/transforms-3/73e6ef1f4e0f6c87f47f56dc630f0166/transformed/jetified-chartboost-mediation-sdk-4.3.0/AndroidManifest.xml:16:5-79
 MERGED from [applovin-sdk-11.11.3.aar] /Users/developertopon/.gradle/caches/transforms-3/ec143e6ec6b3e61714306cd734a680ec/transformed/jetified-applovin-sdk-11.11.3/AndroidManifest.xml:17:5-79
@@ -1397,8 +1397,8 @@ ADDED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3/
 		ADDED from [mbridge_same.aar] /Users/developertopon/.gradle/caches/transforms-3/8d7c665060ca107bcf3cc86962a25c52/transformed/jetified-mbridge_same/AndroidManifest.xml:26:19-70
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:22:5-76
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:11:5-76
-MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:11:5-76
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:11:5-76
+MERGED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:11:5-76
 MERGED from [applovin-sdk-11.11.3.aar] /Users/developertopon/.gradle/caches/transforms-3/ec143e6ec6b3e61714306cd734a680ec/transformed/jetified-applovin-sdk-11.11.3/AndroidManifest.xml:21:5-76
 MERGED from [applovin-sdk-11.11.3.aar] /Users/developertopon/.gradle/caches/transforms-3/ec143e6ec6b3e61714306cd734a680ec/transformed/jetified-applovin-sdk-11.11.3/AndroidManifest.xml:21:5-76
 MERGED from [ads-base-13.4.62.302.aar] /Users/developertopon/.gradle/caches/transforms-3/7d8a1996276174504798026b8b51765c/transformed/jetified-ads-base-13.4.62.302/AndroidManifest.xml:16:5-76
@@ -1426,109 +1426,109 @@ ADDED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms
 	android:name
 		ADDED from [mobileads-5.9.0.aar] /Users/developertopon/.gradle/caches/transforms-3/46934f4612740021d5210506202b9b9c/transformed/jetified-mobileads-5.9.0/AndroidManifest.xml:31:13-94
 activity#com.anythink.core.activity.AnyThinkGdprAuthActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:15:9-20:74
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:15:9-20:74
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:19:13-44
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:19:13-44
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:18:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:18:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:17:13-74
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:17:13-74
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:20:13-71
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:20:13-71
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:16:13-79
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:16:13-79
 activity#com.anythink.basead.ui.ATLandscapeActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:21:9-27:74
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:21:9-27:74
 	android:screenOrientation
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:26:13-56
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:26:13-56
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:25:13-42
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:25:13-42
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:24:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:24:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:23:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:23:13-83
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:27:13-71
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:27:13-71
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:22:13-70
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:22:13-70
 activity#com.anythink.basead.ui.ATPortraitActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:28:9-34:74
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:28:9-34:74
 	android:screenOrientation
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:33:13-55
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:33:13-55
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:32:13-42
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:32:13-42
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:31:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:31:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:30:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:30:13-83
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:34:13-71
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:34:13-71
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:29:13-69
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:29:13-69
 activity#com.anythink.basead.ui.ATLandscapeTranslucentActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:35:9-41:67
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:35:9-41:67
 	android:screenOrientation
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:40:13-56
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:40:13-56
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:39:13-42
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:39:13-42
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:38:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:38:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:37:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:37:13-83
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:41:13-64
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:41:13-64
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:36:13-81
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:36:13-81
 activity#com.anythink.basead.ui.ATPortraitTranslucentActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:42:9-48:67
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:42:9-48:67
 	android:screenOrientation
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:47:13-55
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:47:13-55
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:46:13-42
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:46:13-42
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:45:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:45:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:44:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:44:13-83
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:48:13-64
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:48:13-64
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:43:13-80
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:43:13-80
 activity#com.anythink.core.basead.ui.web.WebLandPageActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:49:9-55:58
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:49:9-55:58
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:53:13-43
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:53:13-43
 	android:windowSoftInputMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:55:13-55
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:55:13-55
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:52:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:52:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:51:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:51:13-83
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:54:13-66
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:54:13-66
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:50:13-79
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:50:13-79
 activity#com.anythink.basead.ui.RewardExitConfirmDialogActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:56:9-59:86
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:56:9-59:86
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:58:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:58:13-37
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:59:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:59:13-83
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:57:13-82
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:57:13-82
 activity#com.anythink.expressad.reward.player.ATRewardVideoActivity
-ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:60:9-66:86
+ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:60:9-66:86
 	android:excludeFromRecents
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:63:13-46
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:63:13-46
 	android:launchMode
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:65:13-42
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:65:13-42
 	android:exported
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:64:13-37
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:64:13-37
 	android:configChanges
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:62:13-87
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:62:13-87
 	android:theme
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:66:13-83
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:66:13-83
 	android:name
-		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/a39f52ed1c1cbdead9a91148cb67c654/transformed/jetified-anythink_core/AndroidManifest.xml:61:13-86
+		ADDED from [anythink_core.aar] /Users/developertopon/.gradle/caches/transforms-3/09fc50d593937a635f2c2f28bf12b9e9/transformed/jetified-anythink_core/AndroidManifest.xml:61:13-86
 activity#com.mbridge.msdk.interstitial.view.MBInterstitialActivity
 ADDED from [mbridge_interstitial.aar] /Users/developertopon/.gradle/caches/transforms-3/cd04efa834bf1baf176df19c9bdd7561/transformed/jetified-mbridge_interstitial/AndroidManifest.xml:12:9-15:49
 	android:excludeFromRecents

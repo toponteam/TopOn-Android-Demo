@@ -25,6 +25,7 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -125,6 +126,7 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd() {
+        SDKUtil.initSDK(getApplicationContext());
         printLogOnUI(getString(R.string.anythink_ad_status_loading));
         if (mSplashAd != null) {
             mSplashAd.loadAd();

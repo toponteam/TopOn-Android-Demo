@@ -33,6 +33,7 @@ import com.anythink.nativead.api.NativeAdInteractionType;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.SDKUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -184,6 +185,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
+        SDKUtil.initSDK(getApplicationContext());
         printLogOnUI(getString(R.string.anythink_ad_status_loading));
 
         Map<String, Object> localExtra = new HashMap<>();
