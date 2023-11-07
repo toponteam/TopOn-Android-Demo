@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="anythink_splash_ad_text">AD</string>
     <string name="anythink_splash_count_time_can_skip">SKIP </string>
     <string name="anythink_splash_count_time_can_skip_not">Auto close after</string>
     <string name="anythink_splash_count_time_can_skip_s">s</string>

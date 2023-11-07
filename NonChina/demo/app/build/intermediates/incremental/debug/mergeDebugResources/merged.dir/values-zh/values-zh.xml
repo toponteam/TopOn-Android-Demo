@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="anythink_random_answers">
+        <item>花店</item>
+        <item>星星</item>
+        <item>动物园</item>
+        <item>长颈鹿</item>
+        <item>无尾熊</item>
+        <item>夹心饼干</item>
+        <item>薯片</item>
+        <item>企鹅</item>
+        <item>停车场</item>
+        <item>零食大礼包</item>
+    </string-array>
     <string name="anythink_basead_ad_text">广告</string>
     <string name="anythink_basead_click_empty">此广告不支持点击打开</string>
     <string name="anythink_basead_click_fail">广告打开失败</string>
@@ -35,6 +47,9 @@
     <string name="anythink_cm_shake_view_hint_text">摇动手机 或 点击图标</string>
     <string name="anythink_cm_shake_view_view_other_app">浏览第三方应用</string>
     <string name="anythink_cm_video_auto_play_after">秒后自动播放</string>
+    <string name="anythink_default_question_title_text">现在播放的是以下何广告?</string>
+    <string name="anythink_fail_tip_text">下次再接再厉</string>
+    <string name="anythink_fail_title_text">回答错误!</string>
     <string name="anythink_interstitial_text_loading_default">广告加载中...</string>
     <string name="anythink_is_ad_ready">Is Ad Ready</string>
     <string name="anythink_load_ad">Load Ad</string>
@@ -100,6 +115,7 @@
     <string name="anythink_myoffer_splash_skip_text">跳过</string>
     <string name="anythink_myoffer_tap_for_detail">点击查看详情</string>
     <string name="anythink_myoffer_webview_reload">重新加载广告</string>
+    <string name="anythink_question_tip_text">答对问题即可提前%1$s秒跳过视频播放并获得奖励</string>
     <string name="anythink_reward_appdesc">app desc</string>
     <string name="anythink_reward_apptitle">app title</string>
     <string name="anythink_reward_clickable_cta_btntext">Play Game</string>
@@ -112,9 +128,15 @@
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
     <string name="anythink_select_network">Select Network</string>
     <string name="anythink_show_ad">Show Ad</string>
+    <string name="anythink_slide_success_text">完成滑动!</string>
+    <string name="anythink_slide_tip_text">完成滑动即可提前%1$s秒跳过视频播放</string>
+    <string name="anythink_slide_title_text">滑动视频 获得奖励</string>
+    <string name="anythink_splash_ad_text">广告</string>
     <string name="anythink_splash_count_time_can_skip">点击跳过|</string>
     <string name="anythink_splash_count_time_can_skip_not">后自动关闭</string>
     <string name="anythink_splash_count_time_can_skip_s">s</string>
+    <string name="anythink_success_tip_text">恭喜您可提前%1$s秒跳过视频并获得奖励</string>
+    <string name="anythink_success_title_text">回答正确!</string>
     <string name="anythink_title_banner">Banner</string>
     <string name="anythink_title_draw">Vertical Draw Video</string>
     <string name="anythink_title_fullscreen">FullScreen</string>

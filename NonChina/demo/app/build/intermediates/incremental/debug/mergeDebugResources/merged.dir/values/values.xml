@@ -18,6 +18,18 @@
     <item>150</item>
     <item>200</item>
   </integer-array>
+    <string-array name="anythink_random_answers">
+        <item>Flower Shop</item>
+        <item>Star</item>
+        <item>Zoo</item>
+        <item>Giraffe</item>
+        <item>Koala</item>
+        <item>Sandwich Cookies</item>
+        <item>Potato Chips</item>
+        <item>Penguin</item>
+        <item>parking lot</item>
+        <item>Snack Bundle</item>
+    </string-array>
     <string-array name="exo_playback_speeds" translatable="false">
     <item>0.25x</item>
     <item>0.5x</item>
@@ -2188,6 +2200,9 @@
     <string name="anythink_cm_shake_view_hint_text">Shake your phone</string>
     <string name="anythink_cm_shake_view_view_other_app">Redirect to third party application</string>
     <string name="anythink_cm_video_auto_play_after">Auto play after</string>
+    <string name="anythink_default_question_title_text">Which of the following ads is currently playing?</string>
+    <string name="anythink_fail_tip_text">Try again next time</string>
+    <string name="anythink_fail_title_text">"Wrong answer!</string>
     <string name="anythink_interstitial_text_loading_default">The ad is loading...</string>
     <string name="anythink_is_ad_ready">Is Ad Ready</string>
     <string name="anythink_load_ad">Load Ad</string>
@@ -2260,6 +2275,7 @@
     <string name="anythink_native_patch">Paster Video</string>
     <string name="anythink_native_refresh_list">Native Refresh list</string>
     <string name="anythink_native_self">Native SelfRender</string>
+    <string name="anythink_question_tip_text">Answer the question correctly to skip the video %1$ss early and get reward.</string>
     <string name="anythink_reward_appdesc">app desc</string>
     <string name="anythink_reward_apptitle">app title</string>
     <string name="anythink_reward_clickable_cta_btntext">Play Game</string>
@@ -2272,9 +2288,15 @@
     <string name="anythink_sdk_version">TopOn SDK: %s</string>
     <string name="anythink_select_network">Select Network</string>
     <string name="anythink_show_ad">Show Ad</string>
+    <string name="anythink_slide_success_text">Finish scrolling!</string>
+    <string name="anythink_slide_tip_text">Scroll the video to skip the video %1$ss early.</string>
+    <string name="anythink_slide_title_text">Scroll the video to get reward</string>
+    <string name="anythink_splash_ad_text">AD</string>
     <string name="anythink_splash_count_time_can_skip">SKIP </string>
     <string name="anythink_splash_count_time_can_skip_not">Auto close after</string>
     <string name="anythink_splash_count_time_can_skip_s">s</string>
+    <string name="anythink_success_tip_text">Congrats!You can skip the video %1$ss earlier and get the reward</string>
+    <string name="anythink_success_title_text">Correct!</string>
     <string name="anythink_title_banner">Banner</string>
     <string name="anythink_title_draw">Vertical Draw Video</string>
     <string name="anythink_title_fullscreen">FullScreen</string>

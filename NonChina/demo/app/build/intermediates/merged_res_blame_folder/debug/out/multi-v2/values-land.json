@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.79_release_202311062013/NonChina/demo/app/src/main/res/values-land/strings.xml",
+                    "from": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "233",
+                        "endColumns": "58",
+                        "endOffsets": "287"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "569",
+                        "endColumns": "58",
+                        "endOffsets": "623"
+                    }
+                },
+                {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/214690006a8ecf04d66dbe49de207f36/transformed/jetified-nendSDK-7.0.3/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
@@ -37,23 +54,6 @@
                         "endLines": "2,8,20",
                         "endColumns": "70,69,12",
                         "endOffsets": "121,564,1332"
-                    }
-                },
-                {
-                    "source": "/Users/developertopon/Code/TopOn_SDK_Release/Android/up_sdk_android/anythink_sdk/outputs/oss_upload/TopOn_Android_SDK_v6.2.78_release_202311031901/NonChina/demo/app/src/main/res/values-land/strings.xml",
-                    "from": {
-                        "startLines": "9",
-                        "startColumns": "4",
-                        "startOffsets": "233",
-                        "endColumns": "58",
-                        "endOffsets": "287"
-                    },
-                    "to": {
-                        "startLines": "9",
-                        "startColumns": "4",
-                        "startOffsets": "569",
-                        "endColumns": "58",
-                        "endOffsets": "623"
                     }
                 },
                 {

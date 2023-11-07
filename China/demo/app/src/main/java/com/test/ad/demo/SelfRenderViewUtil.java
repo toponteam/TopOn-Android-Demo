@@ -107,6 +107,22 @@ public class SelfRenderViewUtil {
             ctaView.setVisibility(View.GONE);
         }
 
+        // AppDownloadButton(Only Huawei Ads support)
+        //View lastView = ((ViewGroup) selfRenderView).getChildAt(((ViewGroup) selfRenderView).getChildCount() - 1);
+        // Remove AppDownloadButton since last time added
+        //if (lastView instanceof AppDownloadButton) {
+        //    ((ViewGroup) selfRenderView).removeView(lastView);
+        //}
+        //View appDownloadButton = adMaterial.getAppDownloadButton();
+        //if (appDownloadButton != null) {
+        //    if (appDownloadButton instanceof AppDownloadButton) {
+        //        ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
+        //    }
+        //    ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
+        //    ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
+        //    appDownloadButton.setVisibility(View.VISIBLE);
+        //    ctaView.setVisibility(View.INVISIBLE);
+        //}
 
         // media view
         View mediaView = adMaterial.getAdMediaView(contentArea);
@@ -251,12 +267,20 @@ public class SelfRenderViewUtil {
             TextView privacyTextView = sixInfoView.findViewById(R.id.privacy_test);
             TextView permissionTextView = sixInfoView.findViewById(R.id.permission_test);
 
-            developerTextView.setText(TextUtils.isEmpty(adAppInfo.getPublisher()) ? "" : adAppInfo.getPublisher());
-            versionTextView.setText(TextUtils.isEmpty(adAppInfo.getAppVersion()) ? "" : adAppInfo.getAppVersion());
+            List<View> appInfoClickViewList = new ArrayList<>();
+            List<View> privacyClickViewList = new ArrayList<>();
+            List<View> permissionClickViewList = new ArrayList<>();
 
+            developerTextView.setText(
+                    TextUtils.isEmpty(adAppInfo.getPublisher()) ? "" : adAppInfo.getPublisher());
+            versionTextView.setText(
+                    TextUtils.isEmpty(adAppInfo.getAppVersion()) ? "" : adAppInfo.getAppVersion());
+            appInfoClickViewList.add(developerTextView);
+            appInfoClickViewList.add(versionTextView);
 
             if (!TextUtils.isEmpty(adAppInfo.getFunctionUrl())) {
                 functionTextView.setVisibility(View.VISIBLE);
+                appInfoClickViewList.add(functionTextView);
                 setOpenUrlClickListener(functionTextView, adAppInfo.getFunctionUrl());
             } else {
                 functionTextView.setOnClickListener(null);
@@ -265,6 +289,7 @@ public class SelfRenderViewUtil {
 
             if (!TextUtils.isEmpty(adAppInfo.getAppPrivacyUrl())) {
                 privacyTextView.setVisibility(View.VISIBLE);
+                privacyClickViewList.add(privacyTextView);
                 setOpenUrlClickListener(privacyTextView, adAppInfo.getAppPrivacyUrl());
             } else {
                 privacyTextView.setVisibility(View.GONE);
@@ -273,6 +298,7 @@ public class SelfRenderViewUtil {
 
             if (!TextUtils.isEmpty(adAppInfo.getAppPermissonUrl())) {
                 permissionTextView.setVisibility(View.VISIBLE);
+                permissionClickViewList.add(permissionTextView);
                 setOpenUrlClickListener(permissionTextView, adAppInfo.getAppPermissonUrl());
             } else {
                 permissionTextView.setVisibility(View.GONE);
@@ -280,13 +306,12 @@ public class SelfRenderViewUtil {
             }
 
             if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
-                List<View> appInfoClickViewList = new ArrayList<>();
-                appInfoClickViewList.add(functionTextView);
-                appInfoClickViewList.add(developerTextView);
-                appInfoClickViewList.add(versionTextView);
-                appInfoClickViewList.add(privacyTextView);
-                appInfoClickViewList.add(permissionTextView);
-                ((ATNativePrepareExInfo) nativePrepareInfo).setAppInfoClickViewList(appInfoClickViewList);
+                ((ATNativePrepareExInfo) nativePrepareInfo).setAppInfoClickViewList(
+                        appInfoClickViewList);
+                ((ATNativePrepareExInfo) nativePrepareInfo).setPermissionClickViewList(
+                        permissionClickViewList);
+                ((ATNativePrepareExInfo) nativePrepareInfo).setPrivacyClickViewList(
+                        privacyClickViewList);
             }
         } else {
             sixInfoView.setVisibility(View.GONE);

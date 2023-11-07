@@ -52,6 +52,7 @@ anim yandex_ads_internal_bottom_adtune_dialog_animation_in
 anim yandex_ads_internal_bottom_adtune_dialog_animation_out
 array al_exo_playback_speeds
 array al_exo_speed_multiplied_by_100
+array anythink_random_answers
 array exo_playback_speeds
 array exo_speed_multiplied_by_100
 attr NendAdjustSize
@@ -2260,6 +2261,7 @@ drawable anythink_reward_flag_cn
 drawable anythink_reward_flag_en
 drawable anythink_reward_more_offer_default_bg
 drawable anythink_reward_notice
+drawable anythink_reward_popview_close
 drawable anythink_reward_shape_choice
 drawable anythink_reward_shape_choice_rl
 drawable anythink_reward_shape_end_pager
@@ -2282,6 +2284,8 @@ drawable anythink_shape_corners_bg
 drawable anythink_shape_splash_circle_14
 drawable anythink_shape_splash_corners_14
 drawable anythink_shape_splash_rightbottom_corners_10
+drawable anythink_slide_hand
+drawable anythink_slide_rightarrow
 drawable anythink_splash_ad
 drawable anythink_splash_ad_en
 drawable anythink_splash_ad_right_bottom_corner_en
@@ -2298,6 +2302,8 @@ drawable anythink_splash_button_bg_green
 drawable anythink_splash_close_bg
 drawable anythink_splash_m_circle
 drawable anythink_splash_notice
+drawable anythink_splash_pop_ad
+drawable anythink_splash_pop_ad_en
 drawable anythink_splash_popview_close
 drawable anythink_splash_popview_default
 drawable anythink_video_common_full_star
@@ -3303,6 +3309,7 @@ id anythink_ec_layout_center
 id anythink_ec_layout_top
 id anythink_gdpr_btn_area
 id anythink_interstitial_iv_loading
+id anythink_interstitial_pb
 id anythink_interstitial_tv_loading
 id anythink_iv_adbanner
 id anythink_iv_adbanner_bg
@@ -3503,6 +3510,7 @@ id anythink_reward_end_card_more_offer_rl
 id anythink_reward_end_card_offer_title_rl
 id anythink_reward_icon_riv
 id anythink_reward_logo_iv
+id anythink_reward_popview
 id anythink_reward_root_container
 id anythink_reward_segment_progressbar
 id anythink_reward_stars_mllv
@@ -4834,6 +4842,7 @@ layout anythink_base_myoffer_media_ad_view
 layout anythink_bt_container
 layout anythink_cm_alertview
 layout anythink_cm_feedbackview
+layout anythink_cm_loading_layout
 layout anythink_interstitial_loading_layout
 layout anythink_more_offer_activity
 layout anythink_myoffer_banner_ad_layout_300x250
@@ -5364,6 +5373,9 @@ string anythink_cm_shake_view_click_default_view
 string anythink_cm_shake_view_hint_text
 string anythink_cm_shake_view_view_other_app
 string anythink_cm_video_auto_play_after
+string anythink_default_question_title_text
+string anythink_fail_tip_text
+string anythink_fail_title_text
 string anythink_interstitial_text_loading_default
 string anythink_is_ad_ready
 string anythink_load_ad
@@ -5436,6 +5448,7 @@ string anythink_native_list
 string anythink_native_patch
 string anythink_native_refresh_list
 string anythink_native_self
+string anythink_question_tip_text
 string anythink_reward_appdesc
 string anythink_reward_apptitle
 string anythink_reward_clickable_cta_btntext
@@ -5448,9 +5461,15 @@ string anythink_sdk_demo
 string anythink_sdk_version
 string anythink_select_network
 string anythink_show_ad
+string anythink_slide_success_text
+string anythink_slide_tip_text
+string anythink_slide_title_text
+string anythink_splash_ad_text
 string anythink_splash_count_time_can_skip
 string anythink_splash_count_time_can_skip_not
 string anythink_splash_count_time_can_skip_s
+string anythink_success_tip_text
+string anythink_success_title_text
 string anythink_title_banner
 string anythink_title_draw
 string anythink_title_fullscreen

@@ -5,25 +5,6 @@
 
     <uses-sdk tools:overrideLibrary="com.tapsdk.tapad" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
-    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/> -->
-    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
-    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <application
         android:name="com.test.ad.demo.DemoApplication"
         android:allowBackup="false"
@@ -98,6 +79,7 @@
             android:label="Splash" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
@@ -122,8 +104,6 @@
             android:name="hw_ads_sdk_type"
             android:value="3"
             tools:node="replace" />
-        <!-- source file: china/network_sdk/gdt/4.542.1412/AndroidManifest.xml -->
-
     </application>
 
 </manifest>

@@ -9,7 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test.ad.demo" >
 
-    <uses-sdk tools:overrideLibrary="com.chartboost.heliumsdk,com.yandex.div.core.logging,com.yandex.div.core.views,com.yandex.div.core.assertion,com.chartboost.mediation.chartboostadapter" />
+    <uses-sdk tools:overrideLibrary="com.chartboost.heliumsdk,com.yandex.div.core.logging,com.yandex.div.core.views,com.yandex.div.core.assertion,com.chartboost.mediation.chartboostadapter,com.my.target" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -69,6 +69,7 @@
             android:exported="false" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity

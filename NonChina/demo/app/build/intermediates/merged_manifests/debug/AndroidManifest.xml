@@ -45,6 +45,9 @@
         <intent>
             <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
         </intent>
+
+        <package android:name="com.android.chrome" />
+
         <intent>
             <action android:name="com.digitalturbine.ignite.cl.IgniteRemoteService" />
         </intent>
@@ -53,7 +56,6 @@
         </intent>
 
         <package android:name="com.facebook.katana" />
-        <package android:name="com.android.chrome" />
         <package android:name="com.android.vending" />
         <package android:name="com.amazon.venezia" />
         <package android:name="com.sec.android.app.samsungapps" />
@@ -137,6 +139,7 @@
             android:exported="false" />
         <activity
             android:name="com.test.ad.demo.SplashAdShowActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
         <activity
@@ -479,7 +482,17 @@
 
         <meta-data
             android:name="com.huawei.hms.client.service.name:ads-lite"
-            android:value="ads-lite:13.4.62.302" />
+            android:value="ads-lite:13.4.62.302" /> <!-- suppress AndroidDomInspection -->
+        <activity
+            android:name="com.my.target.common.MyTargetActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <provider
+            android:name="com.my.target.common.MyTargetContentProvider"
+            android:authorities="com.anythink.sdk.demo.mytargetcontentprovider"
+            android:enabled="true"
+            android:exported="false" />
+
         <meta-data
             android:name="hw_ads_sdk_type"
             android:value="2" />
@@ -747,16 +760,7 @@
         <receiver
             android:name="net.pubnative.lite.sdk.receiver.VolumeChangedActionReceiver"
             android:exported="true" >
-        </receiver> <!-- suppress AndroidDomInspection -->
-        <activity
-            android:name="com.my.target.common.MyTargetActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-
-        <provider
-            android:name="com.my.target.common.MyTargetContentProvider"
-            android:authorities="com.anythink.sdk.demo.mytargetcontentprovider"
-            android:enabled="true"
-            android:exported="false" />
+        </receiver>
 
         <activity
             android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
