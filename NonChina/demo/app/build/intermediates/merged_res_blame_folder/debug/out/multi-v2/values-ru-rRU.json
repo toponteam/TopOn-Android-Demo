@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-74:/values-ru-rRU/values-ru-rRU.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/18f8c12448324777e8c32cc2a03f1ff9/transformed/jetified-bigo-ads-4.1.2/res/values-ru-rRU/values-ru-rRU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,94,158,240,309,389",
+                        "endColumns": "38,63,81,68,79,83",
+                        "endOffsets": "89,153,235,304,384,468"
+                    }
+                }
+            ]
+        }
+    ]
+}

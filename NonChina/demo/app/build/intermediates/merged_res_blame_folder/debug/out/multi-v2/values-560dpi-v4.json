@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-74:/values-560dpi-v4/values-560dpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/developertopon/.gradle/caches/transforms-3/214690006a8ecf04d66dbe49de207f36/transformed/jetified-nendSDK-7.0.3/res/values-560dpi-v4/values-560dpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,120,186,255,325,385",
+                        "endColumns": "64,65,68,69,59,63",
+                        "endOffsets": "115,181,250,320,380,444"
+                    }
+                }
+            ]
+        }
+    ]
+}
