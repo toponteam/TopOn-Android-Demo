@@ -20,8 +20,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATSDK;
+import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
+import com.anythink.nativead.api.ATNativeNetworkListener;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.ATNativeDislikeListener;
 import com.anythink.nativead.api.ATNativeEventListener;
@@ -59,7 +62,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     private OnNativeListCallback mOnNativeListCallback;
 
 
-    private ATNative mATNativeHandler;
+    private ATNative mATNative;
 
     ConcurrentHashMap<String, NativeAd> mImpressionAdMap;
 
@@ -72,7 +75,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     public void setNativeAdHandler(ATNative nativeAdHandler) {
-        mATNativeHandler = nativeAdHandler;
+        mATNative = nativeAdHandler;
     }
 
     public void addData(List<RecycleViewDataBean> data) {
@@ -150,22 +153,48 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         Log.i(TAG, "onBindAdViewHolder");
         RecycleViewDataBean recycleViewDataBean = mData.get(position);
 
+        //海外SDK处理
+        if (!ATSDK.isCnSDK() && !recycleViewDataBean.isLoadingAd) {
+            recycleViewDataBean.isLoadingAd = true;
+            mATNative.setAdListener(new ATNativeNetworkListener() {
+                @Override
+                public void onNativeAdLoaded() {
+                    viewHolder.mAdContainerRoot.setVisibility(View.VISIBLE);
+                    recycleViewDataBean.isLoadingAd = false;
+                    NativeAd nativeAd = mATNative.getNativeAd();
+                    recycleViewDataBean.nativeAd = nativeAd;
+
+                    bindNativeAdWithViewHolder(nativeAd, viewHolder, recycleViewDataBean, position);
+                }
+
+                @Override
+                public void onNativeAdLoadFail(AdError error) {
+                    viewHolder.mAdContainerRoot.setVisibility(View.GONE);
+                    recycleViewDataBean.isLoadingAd = false;
+                }
+            });
+            mATNative.makeAdRequest();
+            return;
+        }
         boolean hasUseNewAd = false;
         if (recycleViewDataBean.nativeAd == null) {
-            recycleViewDataBean.nativeAd = mATNativeHandler.getNativeAd();
+            recycleViewDataBean.nativeAd = mATNative.getNativeAd();
             hasUseNewAd = true;
         }
-
-        if (hasUseNewAd || recycleViewDataBean.nativeAd == null) {
+        if (hasUseNewAd) {
             Log.i(TAG, "start to request new ad object.");
             //It is judged that if a new Ad has been obtained or the advertisement cannot be obtained temporarily, the Ad will be loaded immediately
-            mATNativeHandler.makeAdRequest();
+            mATNative.makeAdRequest();
         }
 
         //Controll the Ad Cache Size
         controlNativeAdCacheSize(recycleViewDataBean, hasUseNewAd);
 
-        if (recycleViewDataBean.nativeAd == null) {
+        bindNativeAdWithViewHolder(recycleViewDataBean.nativeAd, viewHolder, recycleViewDataBean, position);
+    }
+
+    private void bindNativeAdWithViewHolder(NativeAd nativeAd, AdViewHolder viewHolder, RecycleViewDataBean recycleViewDataBean, int position) {
+        if (nativeAd == null) {
             //Temporarily hide the item when the ad object is empty, and display it after the Ad is obtained
             Log.i(TAG, "onBindAdViewHolder: NativeAd is null, it would be gone now.");
             RecyclerView.LayoutParams param = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
@@ -176,7 +205,7 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         } else {
             //Show Ad
             Log.i(TAG, "onBindAdViewHolder: NativeAd exist, start to render view.");
-            Log.i(TAG, "onBindAdViewHolder: RenderAd: " + recycleViewDataBean.nativeAd.getAdInfo().toString());
+            Log.i(TAG, "onBindAdViewHolder: RenderAd: " + nativeAd.getAdInfo().toString());
             viewHolder.itemView.setVisibility(View.VISIBLE);
             RecyclerView.LayoutParams param = (RecyclerView.LayoutParams) viewHolder.itemView.getLayoutParams();
             param.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
@@ -187,8 +216,8 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             viewHolder.mATNativeView.setLayoutParams(params);
 
             viewHolder.setCurrentRecycleViewDataBean(recycleViewDataBean);
-            mImpressionAdMap.put(String.valueOf(recycleViewDataBean.nativeAd.hashCode()), recycleViewDataBean.nativeAd);
-            renderAdView(recycleViewDataBean.nativeAd, viewHolder, position);
+            mImpressionAdMap.put(String.valueOf(nativeAd.hashCode()), nativeAd);
+            renderAdView(nativeAd, viewHolder, position);
         }
     }
 
@@ -317,49 +346,6 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     }
 
-    public static class DataViewHolder extends RecyclerView.ViewHolder {
-
-        View mView;
-        TextView mTvData;
-
-        DataViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            mView = itemView;
-            mTvData = mView.findViewById(R.id.tv_data);
-        }
-    }
-
-    public static class AdViewHolder extends RecyclerView.ViewHolder {
-
-        ATNativeView mATNativeView;
-        View mSelfRenderView;
-        RecycleViewDataBean recycleViewDataBean;
-
-        AdViewHolder(@NonNull View itemView) {
-            super(itemView);
-            mATNativeView = itemView.findViewById(R.id.ad_container);
-            mSelfRenderView = mATNativeView.findViewById(R.id.self_render_view);
-        }
-
-        protected void setCurrentRecycleViewDataBean(RecycleViewDataBean recycleViewDataBean) {
-            this.recycleViewDataBean = recycleViewDataBean;
-        }
-    }
-
-    public static class MoreViewHolder extends RecyclerView.ViewHolder {
-
-        View mView;
-        TextView mTvMore;
-
-        MoreViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            mView = itemView;
-            mTvMore = itemView.findViewById(R.id.tv_more);
-        }
-    }
-
     public void removeAdView(int position) {
         mData.remove(position);
         notifyItemRemoved(position);
@@ -420,15 +406,51 @@ public class NativeListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             }
         }
     }
-//
-//    public void onViewAttachedToWindow(@NonNull RecyclerView.ViewHolder holder) {
-//        Log.i(TAG, "View onViewAttachedToWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
-//    }
-//
-//    public void onViewDetachedFromWindow(@NonNull RecyclerView.ViewHolder holder) {
-//        Log.i(TAG, "View onViewDetachedFromWindow:" + holder.getAdapterPosition() + "---holder:" + holder.toString());
-//    }
 
+    public static class DataViewHolder extends RecyclerView.ViewHolder {
+
+        View mView;
+        TextView mTvData;
+
+        DataViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            mView = itemView;
+            mTvData = mView.findViewById(R.id.tv_data);
+        }
+    }
+
+    public static class AdViewHolder extends RecyclerView.ViewHolder {
+
+        View mAdContainerRoot;
+        ATNativeView mATNativeView;
+        View mSelfRenderView;
+        RecycleViewDataBean recycleViewDataBean;
+
+        AdViewHolder(@NonNull View itemView) {
+            super(itemView);
+            mAdContainerRoot = itemView.findViewById(R.id.fl_ad_container_root);
+            mATNativeView = itemView.findViewById(R.id.ad_container);
+            mSelfRenderView = mATNativeView.findViewById(R.id.self_render_view);
+        }
+
+        protected void setCurrentRecycleViewDataBean(RecycleViewDataBean recycleViewDataBean) {
+            this.recycleViewDataBean = recycleViewDataBean;
+        }
+    }
+
+    public static class MoreViewHolder extends RecyclerView.ViewHolder {
+
+        View mView;
+        TextView mTvMore;
+
+        MoreViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            mView = itemView;
+            mTvMore = itemView.findViewById(R.id.tv_more);
+        }
+    }
 
     public interface OnNativeListCallback {
         void onClickLoadMore();

@@ -10,4 +10,6 @@ public class RecycleViewDataBean {
     public int dataType;
     public String content;
     public NativeAd nativeAd;
+
+    public boolean isLoadingAd;
 }

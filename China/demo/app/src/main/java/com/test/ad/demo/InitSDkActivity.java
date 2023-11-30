@@ -4,18 +4,23 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATInitConfig;
 import com.anythink.core.api.ATNetworkConfig;
+import com.anythink.core.api.ATSDK;
 import com.test.ad.demo.util.SDKUtil;
 
 import java.util.ArrayList;
@@ -27,7 +32,8 @@ public class InitSDkActivity extends Activity {
     private RelativeLayout mRlShowAd;
     private RelativeLayout mRlPrivacyContainer;
     private WebView mPrivacyWebView;
-    private TextView mTVAgree, mTVNoAgree;
+    private TextView mTVAgree, mTVNoAgree, mTVPersonAdDesc;
+    private CheckBox mCBPersonAd;
     boolean mHasInitSdk = false;
 
     @Override
@@ -47,8 +53,12 @@ public class InitSDkActivity extends Activity {
         mTVNoAgree = findViewById(R.id.privaty_no_agree);
 
         mPrivacyWebView = findViewById(R.id.privacy_webview);
+
+        mCBPersonAd = findViewById(R.id.cb_personad_switch);
+        mTVPersonAdDesc = findViewById(R.id.tv_desc_personad_switch);
         initializeWebView(mPrivacyWebView, this);
 
+        initSetting();
     }
 
     private void initListener() {
@@ -105,6 +115,33 @@ public class InitSDkActivity extends Activity {
             }
         });
 
+        mCBPersonAd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    putSPString(InitSDkActivity.this, "ad_setting", "person_ad", "1");
+                    mTVPersonAdDesc.setText("当前状态：开启");
+                    ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
+                } else {
+                    putSPString(InitSDkActivity.this, "ad_setting", "person_ad", "2");
+                    mTVPersonAdDesc.setText("当前状态：关闭");
+                    ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_LIMIT_STATUS);
+                }
+            }
+        });
+    }
+
+    private void initSetting() {
+        //"1":同意，”2“:不同意
+        String spPersonAd = getSPString(InitSDkActivity.this, "ad_setting", "person_ad", "2");
+        boolean allowPersonAd = TextUtils.equals("1", spPersonAd);
+        if (allowPersonAd) {
+            ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_ALLOW_STATUS);
+            mCBPersonAd.setChecked(true);
+        } else {
+            ATSDK.setPersonalizedAdStatus(ATAdConst.PRIVACY.PERSIONALIZED_LIMIT_STATUS);
+            mCBPersonAd.setChecked(false);
+        }
     }
 
     private void showToast(String msg) {
@@ -167,5 +204,35 @@ public class InitSDkActivity extends Activity {
         ATNetworkConfig.Builder builder = new ATNetworkConfig.Builder();
         builder.withInitConfigList(atInitConfigs);
         return builder.build();
+    }
+
+    private void putSPString(Context context, String name, String key, String value) {
+        if (context == null) {
+            return;
+        }
+        try {
+            SharedPreferences sp = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString(key, String.valueOf(value));
+            editor.apply();
+        } catch (Exception e) {
+        } catch (Error e) {
+        }
+    }
+
+    private String getSPString(Context context, String name, String key, String defut) {
+        if (context == null) {
+            return null;
+        }
+        try {
+            SharedPreferences sp = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+            return sp.getString(key, defut);
+        } catch (Exception e) {
+
+        } catch (Error e) {
+
+        }
+        return defut;
+
     }
 }

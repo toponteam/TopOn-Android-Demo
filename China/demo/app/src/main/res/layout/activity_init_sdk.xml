@@ -145,6 +145,65 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/anythink_10dp"
+            android:background="@drawable/bg_white"
+            android:padding="@dimen/anythink_8dp">
+
+            <LinearLayout
+                android:layout_width="@dimen/anythink_pic_size"
+                android:layout_height="@dimen/anythink_pic_size"
+                android:background="@drawable/shape_gray_width1_corners2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/anythink_pic_width"
+                    android:layout_height="@dimen/anythink_pic_height"
+                    android:src="@mipmap/ic_test_interstitial" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/anythink_title_margin_left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_personad_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个性化广告服务开关"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/anythink_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_desc_personad_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_title_personad_switch"
+                    android:layout_alignLeft="@id/tv_title_personad_switch"
+                    android:layout_marginTop="@dimen/anythink_desc_margin_top"
+                    android:text="当前状态：关闭"
+                    android:textColor="@color/anythink_666666"
+                    android:textSize="@dimen/anythink_desc_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_personad_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
     <RelativeLayout
