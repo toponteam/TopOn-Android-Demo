@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Posunout vpřed o %d sekundu</item>
+    <item quantity="few">Posunout vpřed o %d sekundy</item>
+    <item quantity="many">Posunout vpřed o %d sekundy</item>
+    <item quantity="other">Posunout vpřed o %d sekund</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Přetočit zpět o %d sekundu</item>
+    <item quantity="few">Přetočit zpět o %d sekundy</item>
+    <item quantity="many">Přetočit zpět o %d sekundy</item>
+    <item quantity="other">Přetočit zpět o %d sekund</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Okno se zavře za %1$s s."</item>
+        <item priority="translator" quantity="few">"Okno se zavře za %1$s s."</item>
+        <item priority="translator" quantity="many">"Okno se zavře za %1$s s."</item>
+        <item priority="translator" quantity="other">"Okno se zavře za %1$s s."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="translator" quantity="one">"Zapamatovat volbu po dobu %1$s dne"</item>
+        <item priority="translator" quantity="few">"Zapamatovat volbu po dobu %1$s dní"</item>
+        <item priority="translator" quantity="many">"Zapamatovat volbu po dobu %1$s dní"</item>
+        <item priority="translator" quantity="other">"Zapamatovat volbu po dobu %1$s dní"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d s"</item>
+        <item priority="LT" quantity="few">"%1$d s"</item>
+        <item priority="translator" quantity="many">"%1$d s"</item>
+        <item priority="translator" quantity="other">"%1$d s"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Přejít na plochu"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Přejít nahoru"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Více možností"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Hotovo"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Zobrazit vše"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Vybrat aplikaci"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"VYP"</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"ZAP"</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Fn+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"mezerník"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Vyhledat…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Smazat dotaz"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Dotaz pro vyhledávání"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Hledat"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Odeslat dotaz"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Hlasové vyhledávání"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Sdílet s"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Sdílet s aplikací <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Sbalit"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Povolit</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Ke spuštění aplikace %1$s je třeba aktivovat služby Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Aktivace služeb Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalovat</string>
+    <string name="common_google_play_services_install_text">Ke spuštění aplikace %1$s jsou potřeba služby Google Play, které v zařízení nemáte.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Instalace služeb Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Dostupnost služeb Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Chyba služeb Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Aplikace %1$s má potíže se službami Google Play. Zkuste to prosím znovu.</string>
+    <string name="common_google_play_services_unsupported_text">Ke spuštění aplikace %1$s jsou potřeba služby Google Play, které v tomto zařízení nejsou podporovány.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Aktualizovat</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Ke spuštění aplikace %1$s je třeba aktualizovat služby Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Aktualizace služeb Google Play</string>
+    <string name="common_google_play_services_updating_text">Ke spuštění aplikace %1$s jsou potřeba služby Google Play, které jsou právě aktualizovány.</string>
+    <string name="common_google_play_services_wear_update_text">Je vyžadována nová verze služeb Google Play. Nová verze se brzy sama nainstaluje.</string>
+    <string name="common_open_on_phone">Otevřít v telefonu</string>
+    <string name="common_signin_button_text">Přihlásit se</string>
+    <string name="common_signin_button_text_long">Přihlásit se k účtu Google</string>
+    <string msgid="3209159573327985035" name="copy">"Kopírovat"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Odkaz zkopírován do schránky"</string>
+    <string name="exo_controls_cc_disabled_description">Zapnout titulky</string>
+    <string name="exo_controls_cc_enabled_description">Vypnout titulky</string>
+    <string name="exo_controls_fastforward_description">Rychle vpřed</string>
+    <string name="exo_controls_fullscreen_enter_description">Přejít do režimu celé obrazovky</string>
+    <string name="exo_controls_fullscreen_exit_description">Ukončit režim celé obrazovky</string>
+    <string name="exo_controls_hide">Skrýt ovládací prvky přehrávače</string>
+    <string name="exo_controls_next_description">Další</string>
+    <string name="exo_controls_overflow_hide_description">Skrýt další nastavení</string>
+    <string name="exo_controls_overflow_show_description">Zobrazit další nastavení</string>
+    <string name="exo_controls_pause_description">Pozastavit</string>
+    <string name="exo_controls_play_description">Přehrát</string>
+    <string name="exo_controls_playback_speed">Rychlost</string>
+    <string name="exo_controls_playback_speed_normal">Normální</string>
+    <string name="exo_controls_previous_description">Předchozí</string>
+    <string name="exo_controls_repeat_all_description">Opakovat vše</string>
+    <string name="exo_controls_repeat_off_description">Neopakovat</string>
+    <string name="exo_controls_repeat_one_description">Opakovat jednu</string>
+    <string name="exo_controls_rewind_description">Přetočit zpět</string>
+    <string name="exo_controls_seek_bar_description">Průběh přehrávání</string>
+    <string name="exo_controls_settings_description">Nastavení</string>
+    <string name="exo_controls_show">Zobrazit ovládací prvky přehrávače</string>
+    <string name="exo_controls_shuffle_off_description">Náhodné přehrávání vypnuto</string>
+    <string name="exo_controls_shuffle_on_description">Náhodné přehrávání zapnuto</string>
+    <string name="exo_controls_stop_description">Zastavit</string>
+    <string name="exo_controls_vr_description">Režim VR</string>
+    <string name="exo_download_completed">Stahování bylo dokončeno</string>
+    <string name="exo_download_description">Stáhnout</string>
+    <string name="exo_download_downloading">Stahování</string>
+    <string name="exo_download_failed">Stažení se nezdařilo</string>
+    <string name="exo_download_notification_channel_name">Stahování</string>
+    <string name="exo_download_paused">Stahování pozastaveno</string>
+    <string name="exo_download_paused_for_network">Stahování čeká na síť</string>
+    <string name="exo_download_paused_for_wifi">Stahování čeká na WiFi</string>
+    <string name="exo_download_removing">Odstraňování staženého obsahu</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Alternativní</string>
+    <string name="exo_track_role_closed_captions">Titulky</string>
+    <string name="exo_track_role_commentary">Komentář</string>
+    <string name="exo_track_role_supplementary">Dodatkové</string>
+    <string name="exo_track_selection_auto">Automaticky</string>
+    <string name="exo_track_selection_none">Žádné</string>
+    <string name="exo_track_selection_title_audio">Zvuk</string>
+    <string name="exo_track_selection_title_text">Text</string>
+    <string name="exo_track_selection_title_video">Videa</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Prostorový zvuk</string>
+    <string name="exo_track_surround_5_point_1">Prostorový zvuk 5.1</string>
+    <string name="exo_track_surround_7_point_1">Prostorový zvuk 7.1</string>
+    <string name="exo_track_unknown">Neznámé</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Rozšířená nastavení"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopírovat odkaz"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Otevřít v prohlížeči"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Sdílet odkaz"</string>
+    <string name="hiad_ad_experience_feedback" priority="translator">"Dát zpětnou vazbou na tuto návrh této reklamy"</string>
+    <string name="hiad_ad_label" priority="translator">"REKLAMA"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Reklama"</string>
+    <string name="hiad_app_installed" priority="LT">"Aplikace %1$s byla nainstalována"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalace byla dokončena. Klepnutím otevřete."</string>
+    <string name="hiad_app_permission" priority="LT">"Oprávnění"</string>
+    <string name="hiad_app_preorder" priority="LT">"Předobjednat"</string>
+    <string name="hiad_app_preordered" priority="LT">"PŘEDOBJEDNÁNO"</string>
+    <string name="hiad_autoplay_mobile_network_tips" priority="translator">"Automaticky přehrávat videa prostřednictvím mobilních dat"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Pro přeskočení stiskněte tlačítko Zpět"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Reklama je skryta"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Nemám zájem"</string>
+    <string name="hiad_choices_hide" priority="translator">"Skrýt reklamu"</string>
+    <string name="hiad_choices_whythisad" priority="translator">"Proč vidím tuto reklamu?"</string>
+    <string name="hiad_comment" priority="translator">"Komentovat"</string>
+    <string name="hiad_comments_card_collapse" priority="translator">"Zobrazit méně"</string>
+    <string name="hiad_comments_card_like" priority="translator">"To se mi líbí"</string>
+    <string name="hiad_comments_card_unfold" priority="translator">"Zobrazit více"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Nainstalovat tuto aplikaci?"</string>
+    <string name="hiad_confirm_restore_app" priority="translator">"Obnovit tuto aplikaci?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="LT">"Použití mobilní sítě spotřebuje %1$s dat. Pokračovat?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Přehrávání využije mobilní data. Pokračovat?"</string>
+    <string name="hiad_continue_browsing" priority="translator">"Pokračovat v prohlížení"</string>
+    <string name="hiad_continue_download" priority="LT">"Stáhnout"</string>
+    <string name="hiad_continue_download_new" priority="LT">"STÁHNOUT"</string>
+    <string name="hiad_continue_play" priority="translator">"Přehrát"</string>
+    <string name="hiad_continue_to_play" priority="LT">"POKRAČOVAT"</string>
+    <string name="hiad_copy_link" priority="LT">"Kopírovat odkaz"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplikace"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Přeskočit"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Přeskočit za %d"</string>
+    <string name="hiad_detail" priority="LT">"Detaily"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Stáhnout"</string>
+    <string name="hiad_dialog_accept" priority="LT">"POVOLIT"</string>
+    <string name="hiad_dialog_allow" priority="LT">"POVOLIT"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ZRUŠIT"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"STÁHNOUT"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"CHÁPU"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Povolit aplikaci %1$s instalovat %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Zdroj: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"POVOLIT"</string>
+    <string name="hiad_dialog_open" priority="LT">"OTEVŘÍT"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ODMÍTNOUT"</string>
+    <string name="hiad_dialog_title" priority="LT">"Stáhnout pomocí mobilních dat?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Poznámka"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Stáhnout pomocí mobilních dat?"</string>
+    <string name="hiad_download_download" priority="LT">"INSTALOVAT"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"STAHOVÁNÍ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Chyba během stahování %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Soubor je poškozen. Stáhněte ho prosím znovu."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Soubor neexistuje. Zkuste to prosím znovu."</string>
+    <string name="hiad_download_install" priority="LT">"INSTALOVAT"</string>
+    <string name="hiad_download_installing" priority="LT">"Instalace"</string>
+    <string name="hiad_download_no_space" priority="LT">"Nedostatečný prostor. Uvolněte nějaké místo a zkuste to znovu."</string>
+    <string name="hiad_download_open" priority="LT">"OTEVŘÍT"</string>
+    <string name="hiad_download_resume" priority="LT">"POKRAČOVAT"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Během stahování %1$s došlo k chybě. Stahování se restartuje."</string>
+    <string name="hiad_download_status_retry" priority="translator">"Opakovat"</string>
+    <string name="hiad_download_use_mobile_network" priority="translator">"Aktuálně nejste připojeni k Wi-Fi. Stažení nyní využije %1$s mobilních dat. Přesto stáhnout?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Aktuálně nejste připojeni k WLAN. Stažení nyní využije %1$s mobilních dat. Přesto stáhnout?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Nahlásit tuto reklamu"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Děkujeme za vaši zpětnou vazbu."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Budeme doporučovat méně takového obsahu."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Co si myslíte o této reklamě?"</string>
+    <string name="hiad_install_completed" priority="LT">"Hotovo"</string>
+    <string name="hiad_installed_description" priority="translator">"Instalace proběhla úspěšně. Klepnutím ji otevřete."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Nainstalováno"</string>
+    <string name="hiad_intro" priority="translator">"Představení"</string>
+    <string name="hiad_jump_desc" priority="LT">"Zobrazte podrobnosti nebo přejděte do aplikace"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Tato stránka chce otevřít aplikaci %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Odkaz byl zkopírován."</string>
+    <string name="hiad_loading_tips" priority="LT">"Načítání…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Pro toto stažení je zapotřebí %1$s mobilních dat."</string>
+    <string name="hiad_net_error" priority="LT">"Chyba síťového připojení. Zkuste to prosím znovu."</string>
+    <string name="hiad_network_error" priority="LT">"Chyba připojení sítě."</string>
+    <string name="hiad_network_no_available" priority="LT">"Žádné připojení k internetu. Zkontrolujte prosím nastavení sítě."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Znovu nepřipomínat"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Žádné připojení k síti Wi-Fi. Stahováním budete nyní čerpat mobilní data. Stáhnout?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Žádné připojení WLAN. Stahováním budete nyní čerpat mobilní data. Stáhnout?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Otevřít v prohlížeči"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Nelze načíst stránku. Zkuste to prosím znovu."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"Aplikace %1$s vyžaduje následující oprávnění:"</string>
+    <string name="hiad_permissions" priority="translator">"Oprávnění"</string>
+    <string name="hiad_preinstall_cancel_restore" priority="translator">"Zrušit"</string>
+    <string name="hiad_preinstall_restore" priority="translator">"Obnovit"</string>
+    <string name="hiad_preinstall_restore_and_open" priority="translator">"Obnovit a otevřít"</string>
+    <string name="hiad_prepare_download" priority="LT">"Počkat na Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Stáhnout prostřednictvím mobilní sítě?"</string>
+    <string name="hiad_prepare_download_zh" priority="translator">"Počkat na síť WLAN"</string>
+    <string name="hiad_privacy" priority="translator">"Soukromí"</string>
+    <string name="hiad_refresh" priority="LT">"Obnovit"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Aplikace větší než %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Přeskočit"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Sledovat dál"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Po zhlédnutí této reklamy získáte odměnu."</string>
+    <string name="hiad_share" priority="translator">"Sdílet"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Klepnutím otevřete web/aplikaci"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Potáhněte"</string>
+    <string name="hiad_twist_screen" priority="LT">"Zatřeste telefonem"</string>
+    <string name="hiad_unsupported_function" priority="translator">"Funkce aktuálně není podporována."</string>
+    <string name="hiad_version" priority="translator">"Verze %s"</string>
+    <string name="hiad_video_cannot_play" priority="translator">"Nelze přehrát toto video"</string>
+    <string name="hiad_video_play_consumed_traffic" priority="translator">"Přehrávání využije mobilní data"</string>
+    <string name="hiad_video_play_internet_error" priority="translator">"Chyba sítě. Zkontrolujte nastavení sítě."</string>
+    <string name="hiad_video_replay" priority="translator">"Přehrát znovu"</string>
+    <string name="hiad_whether_download" priority="LT">"Chcete stáhnout tuto aplikaci?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Předem načteno přes Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Předem načteno"</string>
+    <string name="native_body">Text</string>
+    <string name="native_headline">Nadpis</string>
+    <string name="native_media_view">Zobrazení mediálního souboru</string>
+    <string msgid="478774118347071097" name="not_set">"Nenastaveno"</string>
+    <string name="notifications_permission_confirm">Povolit</string>
+    <string name="notifications_permission_decline">Nepovolovat</string>
+    <string name="notifications_permission_title">Chcete, aby vám aplikace zasílala oznámení?</string>
+    <string name="offline_notification_text">Klepnutím reklamu otevřete</string>
+    <string name="offline_notification_title">Zobrazte reklamu, kterou jste si uložili, když jste byli offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Až budete znovu online, dostanete oznámení s odkazem</string>
+    <string name="offline_opt_in_decline">Ne, díky</string>
+    <string name="offline_opt_in_message">Pošleme vám oznámení s odkazem na web inzerenta.</string>
+    <string name="offline_opt_in_title">Reklama se otevře, až budete znovu online.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"Položka <ns1:g id="SUMMARY">%1$s</ns1:g> byla zkopírována do schránky."</string>
+    <string name="s1">Uložení obrázku</string>
+    <string name="s2">Povolit reklamě, aby uložila obrázek do galerie fotek?</string>
+    <string name="s3">Přijmout</string>
+    <string name="s4">Odmítnout</string>
+    <string name="s5">Vytvoření události kalendáře</string>
+    <string name="s6">Povolit reklamě, aby vytvořila událost kalendáře?</string>
+    <string name="s7">Zkušební reklama</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Hledat"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"Vypnutí"</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"ZAP"</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>

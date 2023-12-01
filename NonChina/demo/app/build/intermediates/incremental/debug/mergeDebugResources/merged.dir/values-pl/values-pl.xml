@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="exo_controls_fastforward_by_amount_description">
+    <item quantity="one">Przewiń do przodu o %d sekundę</item>
+    <item quantity="few">Przewiń do przodu o %d sekundy</item>
+    <item quantity="many">Przewiń do przodu o %d sekund</item>
+    <item quantity="other">Przewiń do przodu o %d sekundy</item>
+  </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+    <item quantity="one">Przewiń do tyłu o %d sekundę</item>
+    <item quantity="few">Przewiń do tyłu o %d sekundy</item>
+    <item quantity="many">Przewiń do tyłu o %d sekund</item>
+    <item quantity="other">Przewiń do tyłu o %d sekundy</item>
+  </plurals>
+    <plurals name="hiad_dismiss_dilaog">
+        <item priority="translator" quantity="one">"Okno zostanie zamknięte za %1$s sekundę."</item>
+        <item priority="translator" quantity="few">"Okno zostanie zamknięte za %1$s sekundy."</item>
+        <item priority="translator" quantity="many">"Okno zostanie zamknięte za %1$s sekund."</item>
+        <item priority="translator" quantity="other">"Okno zostanie zamknięte za %1$s sekundy."</item>
+    </plurals>
+    <plurals name="hiad_no_prompt_in_days">
+        <item priority="Reviewed" quantity="one">"Pamiętaj wybór przez %1$s dzień"</item>
+        <item priority="Reviewed" quantity="few">"Pamiętaj wybór przez %1$s dni"</item>
+        <item priority="translator" quantity="many">"Pamiętaj wybór przez %1$s dni"</item>
+        <item priority="Reviewed" quantity="other">"Pamiętaj wybór przez %1$s dnia"</item>
+    </plurals>
+    <plurals name="hiad_reward_countdown">
+        <item priority="LT" quantity="one">"%1$d sekunda"</item>
+        <item priority="LT" quantity="few">"%1$d sekundy"</item>
+        <item priority="translator" quantity="many">"%1$d sekund"</item>
+        <item priority="translator" quantity="other">"%1$d sekundy"</item>
+    </plurals>
+    <string msgid="7903180715631665059" name="abc_action_bar_home_description">"Przejdź na stronę główną"</string>
+    <string msgid="6794660482873516081" name="abc_action_bar_up_description">"Przejdź wyżej"</string>
+    <string msgid="1155814932213556626" name="abc_action_menu_overflow_description">"Więcej opcji"</string>
+    <string msgid="2571498368472823490" name="abc_action_mode_done">"Gotowe"</string>
+    <string msgid="3732416590524162402" name="abc_activity_chooser_view_see_all">"Pokaż wszystko"</string>
+    <string msgid="1798588241954930982" name="abc_activitychooserview_choose_application">"Wybierz aplikację"</string>
+    <string msgid="3403923230105792483" name="abc_capital_off">"WYŁ."</string>
+    <string msgid="7831734969929204599" name="abc_capital_on">"WŁ."</string>
+    <string msgid="5725160506500770567" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="944415252197684443" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="129742188101734366" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="6840127756824236027" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="4974283687810130415" name="abc_menu_function_shortcut_label">"Funkcyjny+"</string>
+    <string msgid="8046416353848716905" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="3271697756921353410" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="2304645930658438191" name="abc_menu_space_shortcut_label">"spacja"</string>
+    <string msgid="8327365089695024394" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="3570106412128999382" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="940844115270746197" name="abc_search_hint">"Szukaj…"</string>
+    <string msgid="1769270744562318534" name="abc_searchview_description_clear">"Wyczyść zapytanie"</string>
+    <string msgid="908784302972860853" name="abc_searchview_description_query">"Zapytanie"</string>
+    <string msgid="5466662225065974044" name="abc_searchview_description_search">"Szukaj"</string>
+    <string msgid="8203855622131699655" name="abc_searchview_description_submit">"Wyślij zapytanie"</string>
+    <string msgid="3478748990613108725" name="abc_searchview_description_voice">"Wyszukiwanie głosowe"</string>
+    <string msgid="2650565705514630347" name="abc_shareactionprovider_share_with">"Udostępnij przez:"</string>
+    <string msgid="9009661856846212431" name="abc_shareactionprovider_share_with_application">"Udostępnij przez: <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="6389460216547290468" name="abc_toolbar_collapse_description">"Zwiń"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Włącz</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikacja %1$s nie będzie działać, jeśli nie włączysz Usług Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Włącz Usługi Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Zainstaluj</string>
+    <string name="common_google_play_services_install_text">%1$s nie będzie działać, jeśli nie zainstalujesz na urządzeniu Usług Google Play.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Pobierz Usługi Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Dostępność Usług Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Błąd Usług Google Play</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ma problem z dostępem do Usług Google Play. Spróbuj jeszcze raz.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s nie będzie działać bez Usług Google Play, które nie są obecnie obsługiwane przez urządzenie.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Aktualizuj</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Aplikacja %1$s nie będzie działać, jeśli nie zaktualizujesz Usług Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Zaktualizuj Usługi Google Play</string>
+    <string name="common_google_play_services_updating_text">Aplikacja %1$s nie będzie działać bez Usług Google Play, które są obecnie aktualizowane.</string>
+    <string name="common_google_play_services_wear_update_text">Wymagana jest nowa wersja Usług Google Play. Wkrótce nastąpi automatyczna aktualizacja.</string>
+    <string name="common_open_on_phone">Otwórz na telefonie</string>
+    <string name="common_signin_button_text">Zaloguj się</string>
+    <string name="common_signin_button_text_long">Zaloguj się przez Google</string>
+    <string msgid="3209159573327985035" name="copy">"Kopiuj"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Link skopiowany do schowka"</string>
+    <string name="exo_controls_cc_disabled_description">Włącz napisy</string>
+    <string name="exo_controls_cc_enabled_description">Wyłącz napisy</string>
+    <string name="exo_controls_fastforward_description">Przewiń do przodu</string>
+    <string name="exo_controls_fullscreen_enter_description">Otwórz pełny ekran</string>
+    <string name="exo_controls_fullscreen_exit_description">Zamknij pełny ekran</string>
+    <string name="exo_controls_hide">Ukryj elementy sterujące odtwarzacza</string>
+    <string name="exo_controls_next_description">Następny</string>
+    <string name="exo_controls_overflow_hide_description">Ukryj ustawienia dodatkowe</string>
+    <string name="exo_controls_overflow_show_description">Pokaż ustawienia dodatkowe</string>
+    <string name="exo_controls_pause_description">Wstrzymaj</string>
+    <string name="exo_controls_play_description">Odtwórz</string>
+    <string name="exo_controls_playback_speed">Szybkość</string>
+    <string name="exo_controls_playback_speed_normal">Normalna</string>
+    <string name="exo_controls_previous_description">Poprzedni</string>
+    <string name="exo_controls_repeat_all_description">Powtórz wszystkie</string>
+    <string name="exo_controls_repeat_off_description">Nie powtarzaj</string>
+    <string name="exo_controls_repeat_one_description">Powtórz jeden</string>
+    <string name="exo_controls_rewind_description">Przewiń do tyłu</string>
+    <string name="exo_controls_seek_bar_description">Postęp odtwarzania</string>
+    <string name="exo_controls_settings_description">Ustawienia</string>
+    <string name="exo_controls_show">Pokaż elementy sterujące odtwarzacza</string>
+    <string name="exo_controls_shuffle_off_description">Wyłącz odtwarzanie losowe</string>
+    <string name="exo_controls_shuffle_on_description">Włącz odtwarzanie losowe</string>
+    <string name="exo_controls_stop_description">Zatrzymaj</string>
+    <string name="exo_controls_vr_description">Tryb VR</string>
+    <string name="exo_download_completed">Zakończono pobieranie</string>
+    <string name="exo_download_description">Pobierz</string>
+    <string name="exo_download_downloading">Pobieram</string>
+    <string name="exo_download_failed">Nie udało się pobrać</string>
+    <string name="exo_download_notification_channel_name">Pobieranie</string>
+    <string name="exo_download_paused">Wstrzymano pobieranie</string>
+    <string name="exo_download_paused_for_network">Pobierane pliki oczekują na sieć</string>
+    <string name="exo_download_paused_for_wifi">Pobierane pliki oczekują na Wi-Fi</string>
+    <string name="exo_download_removing">Usuwam pobrane</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mb/s</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_role_alternate">Wersja alternatywna</string>
+    <string name="exo_track_role_closed_captions">Napisy</string>
+    <string name="exo_track_role_commentary">Komentarz</string>
+    <string name="exo_track_role_supplementary">Materiały dodatkowe</string>
+    <string name="exo_track_selection_auto">Automatycznie</string>
+    <string name="exo_track_selection_none">Brak</string>
+    <string name="exo_track_selection_title_audio">Dźwięk</string>
+    <string name="exo_track_selection_title_text">Tekst</string>
+    <string name="exo_track_selection_title_video">Film</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Dźwięk przestrzenny</string>
+    <string name="exo_track_surround_5_point_1">System dźwięku przestrzennego 5.1</string>
+    <string name="exo_track_surround_7_point_1">System dźwięku przestrzennego 7.1</string>
+    <string name="exo_track_unknown">Nieznany</string>
+    <string msgid="1234962710353108940" name="expand_button_title">"Zaawansowane"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Kopiuj link"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Otwórz w przeglądarce"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Udostępnij link"</string>
+    <string name="hiad_ad_experience_feedback" priority="translator">"Wyślij opinie na temat tej reklamy"</string>
+    <string name="hiad_ad_label" priority="translator">"REKLAMA"</string>
+    <string name="hiad_ad_label_new" priority="LT">"Reklama"</string>
+    <string name="hiad_app_installed" priority="LT">"Zainstalowano „%1$s”"</string>
+    <string name="hiad_app_open_notification" priority="translator">"Instalacja zakończona. Dotknij, aby otworzyć."</string>
+    <string name="hiad_app_permission" priority="LT">"Uprawnienia"</string>
+    <string name="hiad_app_preorder" priority="translator">"Zamów w przedsprzedaży"</string>
+    <string name="hiad_app_preordered" priority="translator">"ZAMÓWIONE W PRZEDSPRZEDAŻY"</string>
+    <string name="hiad_autoplay_mobile_network_tips" priority="translator">"Automatycznie odtwarzaj filmy przez komórkową transmisję danych"</string>
+    <string name="hiad_back_skip_tv" priority="LT">"Naciśnij Wstecz, aby pominąć"</string>
+    <string name="hiad_choices_ad_closed" priority="LT">"Reklama ukryta"</string>
+    <string name="hiad_choices_ad_no_interest" priority="LT">"Nie interesuje mnie"</string>
+    <string name="hiad_choices_hide" priority="LT">"Ukryj reklamę"</string>
+    <string name="hiad_choices_whythisad" priority="LT">"Dlaczego widzę tę reklamę?"</string>
+    <string name="hiad_comment" priority="translator">"Skomentuj"</string>
+    <string name="hiad_comments_card_collapse" priority="translator">"Pokaż mniej"</string>
+    <string name="hiad_comments_card_like" priority="translator">"Lubię to"</string>
+    <string name="hiad_comments_card_unfold" priority="translator">"Pokaż więcej"</string>
+    <string name="hiad_confirm_download_app" priority="LT">"Zainstalować tę aplikację?"</string>
+    <string name="hiad_confirm_restore_app" priority="translator">"Przywrócić tę aplikację?"</string>
+    <string name="hiad_consume_data_to_play_video" priority="translator">"Korzystanie z sieci komórkowej spowoduje zużycie %1$s danych. Kontynuować?"</string>
+    <string name="hiad_consume_data_to_play_video_no_data_size" priority="LT">"Odtworzenie będzie wiązało się z użyciem komórkowej transmisji danych. Kontynuować?"</string>
+    <string name="hiad_continue_browsing" priority="translator">"Kontynuuj przeglądanie"</string>
+    <string name="hiad_continue_download" priority="LT">"Pobierz"</string>
+    <string name="hiad_continue_download_new" priority="LT">"POBIERZ"</string>
+    <string name="hiad_continue_play" priority="translator">"Odtwórz"</string>
+    <string name="hiad_continue_to_play" priority="LT">"KONTYNUUJ"</string>
+    <string name="hiad_copy_link" priority="LT">"Kopiuj łącze"</string>
+    <string name="hiad_data_size_prompt" priority="translator">"%1$s MB"</string>
+    <string name="hiad_default_app_name" priority="LT">"Aplikacja"</string>
+    <string name="hiad_default_skip_text" priority="LT">"Pomiń"</string>
+    <string name="hiad_default_skip_text_time" priority="LT">"Pomiń za %d"</string>
+    <string name="hiad_detail" priority="LT">"Szczegóły"</string>
+    <string name="hiad_detail_download_now" priority="LT">"Pobierz"</string>
+    <string name="hiad_dialog_accept" priority="LT">"ZEZWÓL"</string>
+    <string name="hiad_dialog_allow" priority="LT">"ZEZWÓL"</string>
+    <string name="hiad_dialog_cancel" priority="LT">"ANULUJ"</string>
+    <string name="hiad_dialog_close" priority="LT">"OK"</string>
+    <string name="hiad_dialog_continue" priority="LT">"POBIERZ"</string>
+    <string name="hiad_dialog_dismiss" priority="LT">"ROZUMIEM"</string>
+    <string name="hiad_dialog_install_desc" priority="LT">"Zezwolić aplikacji %1$s na zainstalowanie aplikacji %2$s?"</string>
+    <string name="hiad_dialog_install_source" priority="LT">"Źródło: %1$s"</string>
+    <string name="hiad_dialog_ok" priority="LT">"ZEZWÓL"</string>
+    <string name="hiad_dialog_open" priority="LT">"OTWÓRZ"</string>
+    <string name="hiad_dialog_reject" priority="LT">"ZABROŃ"</string>
+    <string name="hiad_dialog_title" priority="LT">"Pobrać przez sieć komórkową?"</string>
+    <string name="hiad_dialog_title_tip" priority="LT">"Uwaga"</string>
+    <string name="hiad_download_app_via_mobile_data" priority="LT">"Pobrać przez komórkową transmisję danych?"</string>
+    <string name="hiad_download_download" priority="LT">"ZAINSTALUJ"</string>
+    <string name="hiad_download_download_with_size" priority="LT">"POBIERZ (%1$s)"</string>
+    <string name="hiad_download_failed_toast_content" priority="LT">"Wystąpił błąd podczas pobierania aplikacji %1$s."</string>
+    <string name="hiad_download_file_corrupted" priority="translator">"Plik uszkodzony. Pobierz ponownie."</string>
+    <string name="hiad_download_file_not_exist" priority="LT">"Plik nie istnieje. Spróbuj ponownie."</string>
+    <string name="hiad_download_install" priority="LT">"ZAINSTALUJ"</string>
+    <string name="hiad_download_installing" priority="LT">"Instalowanie"</string>
+    <string name="hiad_download_no_space" priority="LT">"Za mało pamięci. Zwolnij miejsce na dysku i spróbuj ponownie."</string>
+    <string name="hiad_download_open" priority="LT">"OTWÓRZ"</string>
+    <string name="hiad_download_resume" priority="LT">"KONTYNUUJ"</string>
+    <string name="hiad_download_retry_toast_content" priority="LT">"Wystąpił błąd podczas pobierania aplikacji %1$s. Pobieranie rozpocznie się od nowa."</string>
+    <string name="hiad_download_status_retry" priority="translator">"Spróbuj ponownie"</string>
+    <string name="hiad_download_use_mobile_network" priority="LT">"Urządzenie nie jest połączone z siecią Wi-Fi. Pobieranie będzie wiązało się z użyciem %1$s komórkowej transmisji danych. Pobrać mimo to?"</string>
+    <string name="hiad_download_use_mobile_network_zh" priority="LT">"Urządzenie nie jest połączone z siecią WLAN. Pobieranie będzie wiązało się z użyciem %1$s komórkowej transmisji danych. Pobrać mimo to?"</string>
+    <string name="hiad_feedback_complaint" priority="LT">"Zgłoś reklamę"</string>
+    <string name="hiad_feedback_had_feedback" priority="LT">"Dziękujemy za zgłoszenie."</string>
+    <string name="hiad_feedback_reduce_such_content" priority="LT">"Będziemy polecać mniej podobnych treści."</string>
+    <string name="hiad_feedback_think_of_this_ad" priority="LT">"Co sądzisz o tej reklamie?"</string>
+    <string name="hiad_install_completed" priority="LT">"Gotowe"</string>
+    <string name="hiad_installed_description" priority="translator">"Zainstalowano pomyślnie. Dotknij, aby otworzyć."</string>
+    <string name="hiad_installed_optimize_description" priority="translator">"Zainstalowano"</string>
+    <string name="hiad_intro" priority="translator">"Wprowadzenie"</string>
+    <string name="hiad_jump_desc" priority="LT">"Wyświetl szczegóły lub przejdź do aplikacji"</string>
+    <string name="hiad_landing_page_open_app" priority="LT">"Ta strona chce otworzyć aplikację %1$s."</string>
+    <string name="hiad_link_already_copied" priority="LT">"Łącze skopiowane."</string>
+    <string name="hiad_loading_tips" priority="LT">"Ładowanie…"</string>
+    <string name="hiad_mobile_download_prompt" priority="LT">"Pobranie będzie wiązało się z użyciem %1$s komórkowej transmisji danych."</string>
+    <string name="hiad_net_error" priority="LT">"Błąd połączenia sieciowego. Spróbuj ponownie."</string>
+    <string name="hiad_network_error" priority="LT">"Błąd połączenia sieciowego."</string>
+    <string name="hiad_network_no_available" priority="LT">"Brak połączenia z Internetem. Sprawdź ustawienia sieciowe."</string>
+    <string name="hiad_no_more_remind" priority="LT">"Nie przypominaj ponownie"</string>
+    <string name="hiad_non_wifi_download_prompt" priority="LT">"Brak połączenia z siecią Wi-Fi. Pobranie teraz będzie wiązało się z użyciem komórkowej transmisji danych. Pobrać?"</string>
+    <string name="hiad_non_wifi_download_prompt_zh" priority="LT">"Brak połączenia z siecią WLAN. Pobranie teraz będzie wiązało się z użyciem komórkowej transmisji danych. Pobrać?"</string>
+    <string name="hiad_open_in_browser" priority="LT">"Otwórz w przeglądarce"</string>
+    <string name="hiad_page_load_failed" priority="LT">"Nie można załadować strony. Spróbuj ponownie."</string>
+    <string name="hiad_permission_dialog_title" priority="LT">"Aplikacja %1$s wymagana następujących uprawnień:"</string>
+    <string name="hiad_permissions" priority="translator">"Uprawnienia"</string>
+    <string name="hiad_preinstall_cancel_restore" priority="translator">"Anuluj"</string>
+    <string name="hiad_preinstall_restore" priority="translator">"Przywróć"</string>
+    <string name="hiad_preinstall_restore_and_open" priority="translator">"Przywróć i otwórz"</string>
+    <string name="hiad_prepare_download" priority="LT">"Zaczekaj na Wi-Fi"</string>
+    <string name="hiad_prepare_download_title" priority="LT">"Pobrać przez komórkową transmisję danych?"</string>
+    <string name="hiad_prepare_download_zh" priority="LT">"Zaczekaj na WLAN"</string>
+    <string name="hiad_privacy" priority="translator">"Prywatność"</string>
+    <string name="hiad_refresh" priority="LT">"Odśwież"</string>
+    <string name="hiad_reminder_app_over_size" priority="LT">"Rozmiar aplikacji przekracza %1$d MB"</string>
+    <string name="hiad_reward_close_dialog_close" priority="LT">"Pomiń"</string>
+    <string name="hiad_reward_close_dialog_continue" priority="LT">"Kontynuuj"</string>
+    <string name="hiad_reward_close_dialog_message" priority="LT">"Obejrzyj tę reklamę w całości, aby zdobyć nagrodę."</string>
+    <string name="hiad_share" priority="translator">"Udostępnij"</string>
+    <string name="hiad_splash_pro_desc" priority="LT">"Dotknij, aby otworzyć witrynę/aplikację"</string>
+    <string name="hiad_swipe_screen" priority="LT">"Przeciągnij"</string>
+    <string name="hiad_twist_screen" priority="LT">"Potrząśnij telefonem"</string>
+    <string name="hiad_unsupported_function" priority="translator">"Ta funkcja nie jest obecnie obsługiwana."</string>
+    <string name="hiad_version" priority="translator">"Wersja %s"</string>
+    <string name="hiad_video_cannot_play" priority="translator">"Nie można odtworzyć tego filmu"</string>
+    <string name="hiad_video_play_consumed_traffic" priority="translator">"Odtworzenie będzie wiązało się z użyciem komórkowej transmisji danych"</string>
+    <string name="hiad_video_play_internet_error" priority="translator">"Błąd sieci. Sprawdź ustawienia sieci."</string>
+    <string name="hiad_video_replay" priority="translator">"Odtwórz ponownie"</string>
+    <string name="hiad_whether_download" priority="LT">"Pobrać tę aplikację?"</string>
+    <string name="hiad_wifi_loaded_already" priority="translator">"Załadowane wstępnie przez Wi-Fi"</string>
+    <string name="hiad_wifi_loaded_already_zh" priority="translator">"Załadowane wstępnie"</string>
+    <string name="native_body">Treść</string>
+    <string name="native_headline">Nagłówek</string>
+    <string name="native_media_view">Widok multimediów</string>
+    <string msgid="478774118347071097" name="not_set">"Nie ustawiono"</string>
+    <string name="notifications_permission_confirm">Zezwól</string>
+    <string name="notifications_permission_decline">Nie zezwalaj</string>
+    <string name="notifications_permission_title">Zezwolić aplikacji na wysyłanie powiadomień?</string>
+    <string name="offline_notification_text">Kliknij, by otworzyć reklamę</string>
+    <string name="offline_notification_title">Wyświetl reklamę zapisaną w trybie offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Otrzymasz powiadomienie z linkiem, gdy znów połączysz się z internetem</string>
+    <string name="offline_opt_in_decline">Nie</string>
+    <string name="offline_opt_in_message">Wyślemy Ci powiadomienie z linkiem do strony reklamodawcy.</string>
+    <string name="offline_opt_in_title">Otwórz reklamę, gdy znów połączysz się z internetem.</string>
+    <string msgid="7961817945132860002" name="preference_copied">"Skopiowano „<ns1:g id="SUMMARY">%1$s</ns1:g>” do schowka."</string>
+    <string name="s1">Zapisz obraz</string>
+    <string name="s2">Zezwolić reklamie na zapisanie obrazu w galerii zdjęć?</string>
+    <string name="s3">Zaakceptuj</string>
+    <string name="s4">Odrzuć</string>
+    <string name="s5">Utwórz wydarzenie w kalendarzu</string>
+    <string name="s6">Zezwolić reklamie na utworzenie wydarzenia w kalendarzu?</string>
+    <string name="s7">Reklama testowa</string>
+    <string msgid="730395136688082741" name="search_menu_title">"Szukaj"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="5190123168583152844" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="tt_choose_language">pl</string>
+    <string name="tt_display_error">Błąd wyświetlania</string>
+    <string name="tt_logo_en">Reklamy</string>
+    <string name="tt_reward_full_skip">Pomiń po %1$s s</string>
+    <string name="tt_suggestion_commit">Prześlij</string>
+    <string name="tt_suggestion_description">Opisz napotkany błąd wyświetlania i kliknij przycisk Prześlij. Również kreacja reklamowa zostanie odesłana do Pangle, aby rozwiązać problem.</string>
+    <string msgid="5138405918326871307" name="v7_preference_off">"WYŁ."</string>
+    <string msgid="27351710992731591" name="v7_preference_on">"WŁ."</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_content_inset_material">24dp</dimen>
+    <dimen name="abc_action_bar_content_inset_with_nav">80dp</dimen>
+    <dimen name="abc_action_bar_default_height_material">64dp</dimen>
+    <dimen name="abc_action_bar_default_padding_end_material">8dp</dimen>
+    <dimen name="abc_action_bar_default_padding_start_material">8dp</dimen>
+    <dimen name="abc_config_prefDialogWidth">580dp</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="haid_splash_click_margin_bottom">98dp</dimen>
+    <dimen name="haid_splash_max_height">1100dp</dimen>
+    <dimen name="haid_splash_max_width">700dp</dimen>
+    <dimen name="haid_splash_sound_margin_bottom">42dp</dimen>
+    <dimen name="haid_splash_sound_margin_right">42dp</dimen>
+    <dimen name="hiad_banner_choice_custom_margin">8dp</dimen>
+    <dimen name="hiad_banner_choice_view_size">24dp</dimen>
+    <dimen name="hiad_splash_icon_side_margin">58dp</dimen>
+    <dimen name="hiad_splash_icon_top_margin">50dp</dimen>
+    <dimen name="hiad_splash_label_side_margin">58dp</dimen>
+    <dimen name="hiad_splash_label_vertical_marging">50dp</dimen>
+    <dimen name="hiad_splash_skip_phone_margin">58dp</dimen>
+    <dimen name="hiad_splash_skip_phone_margin_bottom">50dp</dimen>
+    <dimen name="hiad_splash_skip_phone_margin_top">50dp</dimen>
+    <dimen name="hiad_splash_skip_tablet_margin">58dp</dimen>
+    <dimen name="hiad_splash_skip_tablet_margin_bottom">50dp</dimen>
+    <dimen name="hiad_splash_skip_tablet_margin_top">50dp</dimen>
+    <dimen name="hiad_splash_skip_third_margin">4dp</dimen>
+    <dimen name="hiad_splash_wls_side_margin">58dp</dimen>
+    <dimen name="hiad_splash_wls_vertical_margin">50dp</dimen>
+    <dimen name="ia_bg_corner_radius">3dp</dimen>
+    <dimen name="ia_button_padding_lateral">48dp</dimen>
+    <dimen name="ia_endcard_button_margin_bottom">74dp</dimen>
+    <dimen name="ia_endcard_button_padding_vertical">8dp</dimen>
+    <dimen name="ia_endcard_hand_margin_button">50dp</dimen>
+    <dimen name="ia_endcard_overlay_button_height_large">61dp</dimen>
+    <dimen name="ia_endcard_overlay_button_height_medium">45dp</dimen>
+    <dimen name="ia_endcard_overlay_button_width_large">247dp</dimen>
+    <dimen name="ia_endcard_overlay_button_width_medium">185dp</dimen>
+    <dimen name="ia_image_control_padding">5dp</dimen>
+    <dimen name="ia_image_control_size">32dp</dimen>
+    <dimen name="ia_inner_drawable_padding">4dp</dimen>
+    <dimen name="ia_overlay_control_margin">12dp</dimen>
+    <dimen name="ia_play_button_size">80dp</dimen>
+    <dimen name="ia_progress_bar_height">2dp</dimen>
+    <dimen name="ia_round_control_padding">8dp</dimen>
+    <dimen name="ia_round_control_size">40dp</dimen>
+    <dimen name="ia_round_control_size_clickable">64dp</dimen>
+    <dimen name="ia_round_overlay_radius">18dp</dimen>
+    <dimen name="ia_video_control_margin">8dp</dimen>
+    <dimen name="ia_video_overlay_button_width">160dp</dimen>
+    <dimen name="ia_video_overlay_text_large">23sp</dimen>
+    <dimen name="ia_video_overlay_text_large_for_cta">26sp</dimen>
+    <dimen name="ia_video_overlay_text_large_plus">27sp</dimen>
+    <dimen name="ia_video_overlay_text_small">18sp</dimen>
+    <dimen name="ia_video_text_padding">3dp</dimen>
+    <item format="float" name="logo_and_promo_percent_bottom" type="dimen">0.62</item>
+    <item format="float" name="logo_and_promo_percent_top" type="dimen">0.53</item>
+    <dimen name="max_height_rectangle_media_view_replay_cta_land">300dp</dimen>
+    <dimen name="max_width_rectangle_media_view_replay_cta_port">300dp</dimen>
+    <dimen name="native_video_fullscreen_card_advertiser_size">15dp</dimen>
+    <dimen name="native_video_fullscreen_card_description_size">23dp</dimen>
+    <dimen name="native_video_fullscreen_card_height_video_land">400dp</dimen>
+    <dimen name="native_video_fullscreen_card_image_size_video_land">96dp</dimen>
+    <dimen name="native_video_fullscreen_card_image_size_video_port">180dp</dimen>
+    <dimen name="native_video_fullscreen_card_title_size">30dp</dimen>
+    <dimen name="native_video_fullscreen_card_width_video_port">450dp</dimen>
+    <item format="float" name="nend_full_board_ad_action_button_percent_bottom" type="dimen">0.95</item>
+    <dimen name="nend_full_board_ad_card_width_max">680dp</dimen>
+    <item format="float" name="nend_full_board_ad_content_percent_bottom" type="dimen">0.86</item>
+    <item format="float" name="nend_full_board_ad_image_percent_height" type="dimen">0.49</item>
+    <dimen name="nend_full_board_ad_logo_margin">16dp</dimen>
+    <dimen name="nend_full_board_ad_logo_size">60dp</dimen>
+    <dimen name="nend_full_board_ad_promotion_text_size">38dp</dimen>
+    <dimen name="nend_full_board_ad_text_size">32dp</dimen>
+    <integer name="ia_ib_button_size_dp">32</integer>
+    <integer name="ia_ib_toolbar_height_dp">48</integer>
+    <style name="ia_bottom_left_overlay">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginBottom">@dimen/ia_video_control_margin</item>
+        <item name="android:layout_marginLeft">@dimen/ia_video_control_margin</item>
+    </style>
+    <style name="ia_bottom_right_overlay">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginBottom">@dimen/ia_video_control_margin</item>
+        <item name="android:layout_marginRight">@dimen/ia_video_control_margin</item>
+    </style>
+    <style name="ia_expand_collapse_button_style" parent="ia_top_right_overlay">
+        <item name="android:layout_width">@dimen/ia_image_control_size</item>
+        <item name="android:layout_height">@dimen/ia_image_control_size</item>
+        <item name="android:padding">@dimen/ia_image_control_padding</item>
+        <item name="android:background">@drawable/ia_round_overlay_bg</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/ia_sel_expand_collapse</item>
+    </style>
+    <style name="ia_mute_button_style" parent="ia_top_left_overlay">
+        <item name="android:layout_width">@dimen/ia_image_control_size</item>
+        <item name="android:layout_height">@dimen/ia_image_control_size</item>
+        <item name="android:padding">@dimen/ia_image_control_padding</item>
+        <item name="android:background">@drawable/bg_circle_overlay</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/ia_sel_mute</item>
+    </style>
+    <style name="ia_play_button_style">
+        <item name="android:layout_width">@dimen/ia_play_button_size</item>
+        <item name="android:layout_height">@dimen/ia_play_button_size</item>
+        <item name="android:src">@drawable/ia_play</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="ia_top_left_overlay">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">@dimen/ia_video_control_margin</item>
+        <item name="android:layout_marginLeft">@dimen/ia_video_control_margin</item>
+    </style>
+    <style name="ia_top_right_overlay">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">@dimen/ia_video_control_margin</item>
+        <item name="android:layout_marginRight">@dimen/ia_video_control_margin</item>
+    </style>
+    <style name="ia_tv_call_to_action_style" parent="ia_bottom_right_overlay">
+        <item name="android:layout_width">@dimen/ia_video_overlay_button_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/ia_video_overlay_text_view</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/ia_video_text_padding</item>
+        <item name="android:background">@drawable/bg_text_overlay</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="ia_tv_remaining_time_style" parent="ia_bottom_left_overlay">
+        <item name="android:layout_width">@dimen/ia_image_control_size</item>
+        <item name="android:layout_height">@dimen/ia_image_control_size</item>
+        <item name="android:textAppearance">@style/ia_video_overlay_text_view</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_circle_overlay</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="ia_tv_skip_style" parent="ia_top_right_overlay">
+        <item name="android:layout_width">@dimen/ia_video_overlay_button_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/ia_video_text_padding</item>
+        <item name="android:background">@drawable/bg_text_overlay</item>
+        <item name="android:textAppearance">@style/ia_video_overlay_text_view</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="ia_video_overlay_text_view">
+        <item name="android:textSize">@dimen/ia_video_overlay_text_small</item>
+        <item name="android:textColor">@color/ia_video_overlay_text</item>
+        <item name="android:shadowColor">@color/ia_video_overlay_text_shadow</item>
+        <item name="android:shadowRadius">0.5</item>
+        <item name="android:shadowDx">1.5</item>
+        <item name="android:shadowDy">1.0</item>
+    </style>
+    <style name="ia_video_progressbar_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ia_progress_bar_height</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:progressDrawable">@drawable/ia_progress_bar_drawable</item>
+    </style>
+</resources>

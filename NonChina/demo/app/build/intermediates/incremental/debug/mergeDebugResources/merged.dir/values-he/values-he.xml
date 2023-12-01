@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bigo_ad_about_app_default">על האפליקציה הזו</string>
+    <string name="bigo_ad_click_to_try">לחץ כדי לנסות?</string>
+    <string name="bigo_ad_comment_num_text">ביקורות</string>
+    <string name="bigo_ad_cta_default">ראה עוד</string>
+    <string name="bigo_ad_cta_download_default">להתקין</string>
+    <string name="bigo_ad_description_default">גישה חופשית עכשיו!</string>
+    <string name="bigo_ad_double_video_choose_video">בחר את הסרטון המועדף עליך</string>
+    <string name="bigo_ad_double_video_count_down">לשחק ב-%d שניות</string>
+    <string name="bigo_ad_download_num_text">הורדות</string>
+    <string name="bigo_ad_title_default">פנטסטי ומעניין</string>
+</resources>

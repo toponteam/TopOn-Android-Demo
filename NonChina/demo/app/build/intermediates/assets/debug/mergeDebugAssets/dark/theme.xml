@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 深色省电皮肤颜色标记，若应用适配深色省电皮肤，则该资源一定要添加！！！-->
+    <color name="hiad_dark_mode_tag_color">#FF3F97E9</color>
+</resources>
