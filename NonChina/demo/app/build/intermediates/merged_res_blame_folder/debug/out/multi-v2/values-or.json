@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-or/values-or.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-or/values-or.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/3fbaead27bafc8adb9a7a18178f221c0/transformed/jetified-play-services-ads-22.5.0/res/values-or/values.xml",

@@ -363,6 +363,13 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 case 28:    //for KuaiShou
                     mData.add(PanelAction.VIDEO_PROGRESS);
                     break;
+                case 66: //for Adx
+                case 67: //for Direct
+                    mData.add(PanelAction.VOICE_CHANGE);
+                    mData.add(PanelAction.VIDEO_RESUME);
+                    mData.add(PanelAction.VIDEO_PAUSE);
+                    mData.add(PanelAction.VIDEO_PROGRESS);
+                    break;
             }
         }
 

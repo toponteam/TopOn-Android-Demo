@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-ja-rJP/values-ja-rJP.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-ja-rJP/values-ja-rJP.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/896c465ffbbb08728f424007f72c1d99/transformed/jetified-mbridge_dycreator/res/values-ja-rJP/values-ja-rJP.xml",

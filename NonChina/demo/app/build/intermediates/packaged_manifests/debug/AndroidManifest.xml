@@ -16,6 +16,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <queries>
@@ -63,6 +68,7 @@
         <package android:name="com.amazon.venezia" />
         <package android:name="com.sec.android.app.samsungapps" />
         <package android:name="com.huawei.appmarket" />
+        <package android:name="com.appnext.core" />
 
         <intent>
             <action android:name="android.intent.action.ACTION_VIEW" />
@@ -72,8 +78,7 @@
     </queries>
 
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" /> <!-- Permissions required by Open Measurement SDK -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
     <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
@@ -85,6 +90,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name="com.test.ad.demo.DemoApplication"
@@ -171,6 +177,21 @@
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
+
+        <service
+            android:name="com.appnext.actionssdk.ActionService"
+            android:exported="false"
+            android:multiprocess="true" /> <!-- <activity -->
+        <!-- android:name=".ActionActivity" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:theme="@android:style/Theme.Translucent"/> -->
+        <activity
+            android:name="com.appnext.actionssdk.ActionsServiceActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:multiprocess="true"
+            android:theme="@android:style/Theme.Translucent" />
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
@@ -270,7 +291,20 @@
         <service
             android:name="com.applovin.impl.adview.activity.FullscreenAdService"
             android:exported="false"
-            android:stopWithTask="false" />
+            android:stopWithTask="false" /> <!-- Appnext integration -->
+        <activity
+            android:name="com.appnext.ads.interstitial.InterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:multiprocess="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.appnext.ads.fullscreen.FullscreenActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:multiprocess="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <meta-data
             android:name="com.huawei.hms.client.service.name:ads-jsbridge"
@@ -328,6 +362,10 @@
             android:process=":Metrica" />
 
         <activity
+            android:name="com.appnext.banners.BannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.vungle.ads.internal.ui.VungleActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:hardwareAccelerated="true"
@@ -349,6 +387,9 @@
                 android:value="androidx.startup" />
             <meta-data
                 android:name="com.unity3d.services.core.configuration.AdsSdkInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup" />
         </provider>
 
@@ -889,6 +930,17 @@
             android:value="ads-interstitial:13.4.67.300" />
 
         <activity
+            android:name="com.appnext.core.ResultActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.appnext.core.result.ResultPageActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="net.nend.android.internal.ui.activities.fullboard.NendAdFullBoardActivity"
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
@@ -1019,7 +1071,98 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </service> <!-- AppMetrica Analytics: common service -->
+        </service>
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver> <!-- AppMetrica Analytics: common service -->
         <service
             android:name="io.appmetrica.analytics.internal.AppMetricaService"
             android:enabled="true"
@@ -1039,6 +1182,11 @@
             android:enabled="true"
             android:exported="true"
             android:process=":AppMetrica" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
     </application>
 
 </manifest>

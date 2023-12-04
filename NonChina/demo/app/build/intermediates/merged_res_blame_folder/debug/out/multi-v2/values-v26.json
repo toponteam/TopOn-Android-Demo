@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-v26/values-v26.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/130e8e7352fbf70f867061a8350b9540/transformed/jetified-mbridge_same/res/values-v26/values-v26.xml",

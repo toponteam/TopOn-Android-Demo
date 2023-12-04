@@ -96,6 +96,7 @@
     <string name="anythink_myoffer_g2c_slide_to_click">滑动后查看更多</string>
     <string name="anythink_myoffer_give_up">取 消</string>
     <string name="anythink_myoffer_next_step">下一步</string>
+    <string name="anythink_myoffer_panel_funtion">功能</string>
     <string name="anythink_myoffer_panel_permission">权限</string>
     <string name="anythink_myoffer_panel_privacy">隐私</string>
     <string name="anythink_myoffer_reward_exit_confirm_continue">继续观看视频</string>
@@ -114,6 +115,7 @@
     <string name="anythink_myoffer_special_note_delay_click_simple">&lt;font color="#FFFFFF">%d&lt;/font> 秒后跳转</string>
     <string name="anythink_myoffer_splash_skip_text">跳过</string>
     <string name="anythink_myoffer_tap_for_detail">点击查看详情</string>
+    <string name="anythink_myoffer_video_paly_fail_tips">播放失败</string>
     <string name="anythink_myoffer_webview_reload">重新加载广告</string>
     <string name="anythink_question_tip_text">答对问题即可提前%1$s秒跳过视频播放并获得奖励</string>
     <string name="anythink_reward_appdesc">app desc</string>

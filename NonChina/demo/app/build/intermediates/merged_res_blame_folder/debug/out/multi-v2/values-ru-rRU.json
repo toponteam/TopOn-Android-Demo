@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-ru-rRU/values-ru-rRU.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-ru-rRU/values-ru-rRU.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/3f026f732f5e02df3462023a9470f05f/transformed/jetified-bigo-ads-4.2.0/res/values-ru-rRU/values-ru-rRU.xml",

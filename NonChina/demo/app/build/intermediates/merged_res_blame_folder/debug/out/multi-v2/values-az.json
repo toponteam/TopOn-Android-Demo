@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-az/values-az.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/89ef84b95abc5040bb30e19fa463f5bc/transformed/jetified-exoplayer-core-2.18.7/res/values-az/values-az.xml",

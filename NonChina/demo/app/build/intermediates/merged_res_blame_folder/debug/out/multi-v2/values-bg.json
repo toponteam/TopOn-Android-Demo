@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-bg/values-bg.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-bg/values-bg.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/c710f486a970e7a5e2d51e4281423a28/transformed/core-1.6.0/res/values-bg/values-bg.xml",

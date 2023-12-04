@@ -501,6 +501,10 @@
     <bool name="abc_allow_stacked_button_bar">false</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="enable_system_alarm_service_default">true</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">false</bool>
+    <bool name="workmanager_test_configuration">false</bool>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -1095,6 +1099,14 @@
     <dimen name="anythink_myoffer_ad_choice_margin_bottom">5dp</dimen>
     <dimen name="anythink_myoffer_ad_choice_margin_right">12dp</dimen>
     <dimen name="anythink_myoffer_ad_choice_margin_right_media_view">6dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_height">16dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_height_l">26dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_height_s">14dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_height_xs">7dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_width">46dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_width_l">74dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_width_s">40dp</dimen>
+    <dimen name="anythink_myoffer_banner_ad_logo_width_xs">20dp</dimen>
     <dimen name="anythink_myoffer_half_screen_button_size">24dp</dimen>
     <dimen name="anythink_myoffer_half_screen_desc_size_landscape">12sp</dimen>
     <dimen name="anythink_myoffer_half_screen_desc_size_portrait">12sp</dimen>
@@ -1105,6 +1117,8 @@
     <dimen name="anythink_myoffer_half_screen_title_size_portrait">14sp</dimen>
     <dimen name="anythink_myoffer_landscape_banner_cta_max_width">150dp</dimen>
     <dimen name="anythink_myoffer_landscape_banner_cta_padding_horizontal">12dp</dimen>
+    <dimen name="anythink_myoffer_normal_ad_logo_height">12dp</dimen>
+    <dimen name="anythink_myoffer_normal_ad_logo_width">37dp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_large">13sp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_middle">12sp</dimen>
     <dimen name="anythink_myoffer_panel_text_size_small">10sp</dimen>
@@ -1136,6 +1150,8 @@
     <dimen name="anythink_video_common_alertview_contentview_maxwidth">240dp</dimen>
     <dimen name="anythink_video_common_alertview_contentview_minwidth">240dp</dimen>
     <dimen name="anythink_video_common_alertview_title_size">20sp</dimen>
+    <dimen name="app_title_marign_top_suggested_apps">6dp</dimen>
+    <dimen name="app_title_width">60dp</dimen>
     <dimen name="applovin_sdk_actionBarHeight">60dp</dimen>
     <dimen name="applovin_sdk_adControlButton_height">40dp</dimen>
     <dimen name="applovin_sdk_adControlButton_width">70dp</dimen>
@@ -1144,6 +1160,7 @@
     <dimen name="applovin_sdk_mediationDebuggerSectionTextSize">13sp</dimen>
     <dimen name="applovin_sdk_mrec_height">250dp</dimen>
     <dimen name="applovin_sdk_mrec_width">300dp</dimen>
+    <dimen name="apps_marign_top_suggeted_apps">3dp</dimen>
     <dimen name="bigo_ad_replay_size">80dp</dimen>
     <dimen name="bigo_ad_volume_padding">5dp</dimen>
     <dimen name="bigo_ad_volume_size">24dp</dimen>
@@ -1433,6 +1450,8 @@
     <dimen name="ia_video_overlay_text_large_plus">30sp</dimen>
     <dimen name="ia_video_overlay_text_small">12sp</dimen>
     <dimen name="ia_video_text_padding">3dp</dimen>
+    <dimen name="icon_height">40dp</dimen>
+    <dimen name="icon_width">40dp</dimen>
     <dimen name="identifier_image_height">18dp</dimen>
     <dimen name="identifier_image_width">18dp</dimen>
     <dimen name="identifier_layout_height">18dp</dimen>
@@ -1634,6 +1653,7 @@
     <dimen name="replay_view_size">40dp</dimen>
     <dimen name="size_of_information_at_fullscreen">24dp</dimen>
     <dimen name="skip_view_size">40dp</dimen>
+    <dimen name="suggested_apps_title_size">9sp</dimen>
     <dimen name="tab_max_width">72dp</dimen>
     <dimen name="tab_scrollable_min_width">72dp</dimen>
     <dimen name="tab_text_size">14sp</dimen>
@@ -1893,6 +1913,7 @@
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
+    <item name="glide_custom_view_target_tag" type="id"/>
     <item name="haid_down_btn_cancel_btn" type="id"/>
     <item name="hiad_btn_skip" type="id"/>
     <item name="hiad_choice_view" type="id"/>
@@ -2043,6 +2064,7 @@
     <integer name="monetization_instream_internal_progress_bar_max">100</integer>
     <integer name="nend_full_board_ad_shadow_delta">4</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <integer name="suggested_apps_height">105</integer>
     <integer name="tab_indicator_anim_duration_ms">300</integer>
     <integer name="tt_video_progress_max">100</integer>
     <integer name="user_description_length_max">100</integer>
@@ -2251,6 +2273,7 @@
     <string name="anythink_myoffer_g2c_slide_to_click">Swipe to view more</string>
     <string name="anythink_myoffer_give_up">Cancel</string>
     <string name="anythink_myoffer_next_step">Next</string>
+    <string name="anythink_myoffer_panel_funtion">Desc</string>
     <string name="anythink_myoffer_panel_permission">Permission</string>
     <string name="anythink_myoffer_panel_privacy">Privacy</string>
     <string name="anythink_myoffer_panel_version">v%s</string>
@@ -2270,6 +2293,7 @@
     <string name="anythink_myoffer_special_note_delay_click_simple">Jump after &lt;font color="#FFFFFF">%d&lt;/font> s</string>
     <string name="anythink_myoffer_splash_skip_text">Skip</string>
     <string name="anythink_myoffer_tap_for_detail">Tap for details</string>
+    <string name="anythink_myoffer_video_paly_fail_tips">Play failed</string>
     <string name="anythink_myoffer_webview_reload">Reload Ad.</string>
     <string name="anythink_native_draw">Vertical Draw Video</string>
     <string name="anythink_native_express">Native Express</string>
@@ -2316,6 +2340,16 @@
     <string name="anythink_web_land_page_dialog_yes">YES</string>
     <string name="anythink_web_load_fail_hint">CONNECT ERROR</string>
     <string name="anythink_web_load_fail_refresh">Reload</string>
+    <string name="apnxt_6_seconds">6 sec</string>
+    <string name="apnxt_first_label">First game label First game label</string>
+    <string name="apnxt_install_btn">Install</string>
+    <string name="apnxt_play_this_video">Play this video</string>
+    <string name="apnxt_thanks">Thanks for watching!</string>
+    <string name="apnxt_which_video">Which Video <b>would you like to watch?</b></string>
+    <string name="apnxt_which_video_title">Which Video</string>
+    <string name="apnxt_would_you_like">would you like to watch?</string>
+    <string name="apnxt_would_you_like_break_line">would you like\nto watch?</string>
+    <string name="apnxt_you_will_be_redirected">You will be redirected to Google Play once the ad will finish</string>
     <string name="app_name">TopOn SDK Demo</string>
     <string name="applovin_agree_message">Please press \"Continue\" if you choose to start using our app.</string>
     <string name="applovin_alt_privacy_policy_text"/>
@@ -2726,6 +2760,7 @@
     <string name="skip_rewarded_dialog_sub_title">Reward will not be received before video completion.</string>
     <string name="skip_rewarded_dialog_title">Close Video?</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="suggested_apps_title">Apps You May Use Next:</string>
     <string name="summary_collapsed_preference_list"><ns1:g id="current_items">%1$s</ns1:g>, <ns1:g id="added_items">%2$s</ns1:g></string>
     <string name="today">Today</string>
     <string name="tt_00_00">00:00</string>
@@ -3089,6 +3124,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="AppnextActionsResolver">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -5235,6 +5277,21 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar" ns2:targetApi="honeycomb">false</item>
     </style>
+    <style name="apnxtActionsWindow" parent="@android:style/Theme.Holo.Light.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowTitleStyle">@null</item>
+		<item name="android:background">@android:color/transparent</item>
+	</style>
+    <style name="apnxtRatingBar" parent="@android:style/Widget.Holo.Light.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/apnxt_ads_rating_bar</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:transformPivotX">0dp</item>
+        <item name="android:transformPivotY">15dp</item>
+        <item name="android:scaleX">0.9</item>
+        <item name="android:scaleY">0.9</item>
+    </style>
     <style name="com.applovin.creative.CreativeDebuggerActivity.ActionBar" parent="android:Widget.Holo.Light.ActionBar">
         <item name="android:background">@color/applovin_sdk_brand_color</item>
         <item name="android:displayOptions">showTitle</item>
@@ -6459,6 +6516,16 @@
     <attr name="al_ad_marker_color"/>
     <attr name="al_played_ad_marker_color"/>
   </declare-styleable>
+    <declare-styleable name="AppnextDesignedNativeAdView">
+        <attr format="string" name="title"/>
+        <attr format="color" name="titleColor"/>
+        <attr format="integer" name="amountOfApps"/>
+        <attr format="boolean" name="presentAppTitles"/>
+        <attr format="boolean" name="localDirection"/>
+        <attr format="color" name="appTitletColor"/>
+        <attr format="color" name="backgroundColor"/>
+        <attr format="integer" name="transparency"/>
+    </declare-styleable>
     <declare-styleable name="AspectImageView">
         <attr name="android:gravity"/>
         <attr format="float" name="aspectRatio"/>
@@ -6496,6 +6563,10 @@
         <attr format="string" name="bannerSize"/>
         <attr format="string" name="adId"/>
     </declare-styleable>
+    <declare-styleable name="BannersAttrs">
+		<attr format="string" name="bannerSize"/>
+		<attr format="string" name="placementId"/>
+	</declare-styleable>
     <declare-styleable name="BaseIndicatorTabLayout">
         <attr format="dimension" name="tabIndicatorPaddingTop"/>
         <attr format="dimension" name="tabIndicatorPaddingBottom"/>

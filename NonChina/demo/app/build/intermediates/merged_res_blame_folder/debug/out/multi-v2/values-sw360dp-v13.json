@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/d5fcabf09e29d347472db02fc788ff89/transformed/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",

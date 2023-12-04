@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-zh-rMO/values-zh-rMO.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-zh-rMO/values-zh-rMO.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/d9e8b57eebc78e028fc638e03b1e3201/transformed/jetified-applovin-sdk-12.0.0/res/values-zh-rMO/values-zh-rMO.xml",

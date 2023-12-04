@@ -319,6 +319,7 @@ public class SelfRenderViewUtil {
     }
 
     private static void renderShakeView(Context context, ATNativeMaterial adMaterial, FrameLayout shakeViewContainer) {
+        shakeViewContainer.removeAllViews();
         int shakeViewWidth = dip2px(context, 100);  //组件的宽，不小于80dp
         int shakeViewHeight = dip2px(context, 100); //组件的高，不小于80dp
         View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
@@ -337,6 +338,7 @@ public class SelfRenderViewUtil {
     }
 
     private static void renderSlideView(Context context, ATNativeMaterial adMaterial, FrameLayout slideViewContainer) {
+        slideViewContainer.removeAllViews();
         int slideViewWidth = dip2px(context, 120);  //滑动引导区域的宽
         int slideViewHeight = dip2px(context, 50); // 滑动引导区域的高
         int repeat = 5; //动画的重复次数，结束后自动隐藏组件

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.test.ad.demo.app-mergeDebugResources-68:/values-nb/values-nb.xml",
+            "outputFile": "com.test.ad.demo.app-mergeDebugResources-75:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "/Users/developertopon/.gradle/caches/transforms-3/6432378f3f5ee0dcc367a8c449568f5f/transformed/browser-1.4.0/res/values-nb/values-nb.xml",
