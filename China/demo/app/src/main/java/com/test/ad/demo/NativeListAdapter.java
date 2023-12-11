@@ -28,6 +28,7 @@ import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.RecycleViewDataBean;
+import com.test.ad.demo.util.SelfRenderViewUtil;
 
 import java.util.ArrayList;
 import java.util.Iterator;

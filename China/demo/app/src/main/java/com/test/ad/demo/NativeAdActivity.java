@@ -34,6 +34,7 @@ import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
 import com.test.ad.demo.util.SDKUtil;
+import com.test.ad.demo.util.SelfRenderViewUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
