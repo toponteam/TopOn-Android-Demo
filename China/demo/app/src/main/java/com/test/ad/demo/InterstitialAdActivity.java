@@ -18,8 +18,6 @@ import android.widget.TextView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
-import com.anythink.core.api.ATNativeAdCustomRender;
-import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
@@ -29,7 +27,6 @@ import com.anythink.interstitial.api.ATInterstitialAutoLoadListener;
 import com.anythink.interstitial.api.ATInterstitialExListener;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
-import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
@@ -265,13 +262,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
 
 //        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
 //        localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
-        //插屏广告使用原生自渲染广告，只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同插屏广告接入流程相同。
-        mInterstitialAd.setNativeAdCustomRender(new ATNativeAdCustomRender() {
-            @Override
-            public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
-                return MediationNativeAdUtil.getViewFromNativeAd(InterstitialAdActivity.this, mixNativeAd, atAdInfo, true);
-            }
-        });
+
         mInterstitialAd.setLocalExtra(localMap);
         mInterstitialAd.load();
     }

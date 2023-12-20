@@ -29,7 +29,6 @@ import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.api.ATNativeView;
 import com.anythink.nativead.api.NativeAd;
 import com.test.ad.demo.bean.NativeDrawItem;
-import com.test.ad.demo.util.SelfRenderViewUtil;
 import com.test.ad.demo.view.FullScreenVideoView;
 
 import java.util.ArrayList;

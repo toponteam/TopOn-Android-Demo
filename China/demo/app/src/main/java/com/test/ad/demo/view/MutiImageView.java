@@ -1,11 +1,12 @@
 package com.test.ad.demo.view;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.anythink.nativead.api.ATNativeImageView;
-import com.test.ad.demo.util.SelfRenderViewUtil;
+import com.test.ad.demo.SelfRenderViewUtil;
 
 import java.util.List;
 
