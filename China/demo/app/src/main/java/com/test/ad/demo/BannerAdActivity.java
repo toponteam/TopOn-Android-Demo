@@ -20,10 +20,13 @@ import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATNativeAdCustomRender;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
@@ -179,7 +182,13 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
         mBannerView.setLocalExtra(localMap);
-
+        //横幅广告使用原生自渲染广告，只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同横幅广告接入流程相同。
+        mBannerView.setNativeAdCustomRender(new ATNativeAdCustomRender() {
+            @Override
+            public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
+                return MediationNativeAdUtil.getViewFromNativeAd(BannerAdActivity.this, mixNativeAd, atAdInfo, false);
+            }
+        });
         mBannerView.loadAd();
     }
 

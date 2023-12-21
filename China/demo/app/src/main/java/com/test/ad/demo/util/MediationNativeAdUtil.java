@@ -1,34 +1,106 @@
-package com.test.ad.demo;
+package com.test.ad.demo.util;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.anythink.core.api.ATAdAppInfo;
+import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATShakeViewListener;
+import com.anythink.core.api.IATThirdPartyMaterial;
 import com.anythink.nativead.api.ATNativeImageView;
 import com.anythink.nativead.api.ATNativeMaterial;
 import com.anythink.nativead.api.ATNativePrepareExInfo;
 import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
+import com.test.ad.demo.R;
 import com.test.ad.demo.view.MutiImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelfRenderViewUtil {
-    private static final String TAG = SelfRenderViewUtil.class.getSimpleName();
+/**
+ * Description:
+ * Created by Quin on 2023/11/20.
+ **/
+public class MediationNativeAdUtil {
+    private static final String TAG = MediationNativeAdUtil.class.getSimpleName();
 
-    public static void bindSelfRenderView(Context context, ATNativeMaterial adMaterial, View selfRenderView, ATNativePrepareInfo nativePrepareInfo) {
+    public static View getViewFromNativeAd(Context context, ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo, boolean isInterstitialAd) {
+        if (mixNativeAd == null || atAdInfo == null) {
+            return null;
+        }
+        View layoutView = LayoutInflater.from(context).inflate(R.layout.layout_native_self_mix, null, false);
+        if (isInterstitialAd) {
+            //注意：当使用插屏混用原生广告时，最底层布局颜色是全透明的，开发者可根据以下配置实现全屏展示和半屏展示
+            setFullScreenLayoutParams(layoutView);
+//            setHalfScreenLayoutParams(layoutView);
+        }
+        //将信息流自渲染素材转换成view的代码
+        ATNativeAdInfo.AdPrepareInfo prepareInfo = bindSelfRenderView(context, mixNativeAd, layoutView);
+        mixNativeAd.prepare(prepareInfo);
+
+        //获取广告控制器，部分广告平台支持：腾讯广告
+//        ATNativeAdInfo.AdController adController = mixNativeAd.getAdController();
+//        adController.setVideoMute(false);
+//        adController.pauseVideo();
+//        adController.resumeVideo();
+
+        Log.d(TAG, "AdSourceAdType: " + atAdInfo.getAdSourceAdType() + " AdSourceCustomExt: " + atAdInfo.getAdSourceCustomExt());
+
+        return layoutView;
+    }
+
+    /**
+     * 设置全屏显示
+     *
+     * @param layoutView 广告布局
+     */
+    private static void setFullScreenLayoutParams(View layoutView) {
+        //插屏混用原生广告时，设置全屏显示
+        layoutView.setBackgroundColor(Color.GRAY);  //广告View设置背景色
+        FrameLayout.LayoutParams layoutViewParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        layoutViewParams.gravity = Gravity.CENTER;
+        layoutView.setLayoutParams(layoutViewParams);
+    }
+
+    /**
+     * 插屏混用原生广告时，设置半屏显示
+     *
+     * @param layoutView 广告布局
+     */
+    private static void setHalfScreenLayoutParams(View layoutView) {
+        //设置布局背景
+        layoutView.setBackgroundColor(Color.parseColor("#99000000"));
+        //设置布局位置参数
+        FrameLayout.LayoutParams layoutViewParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        layoutView.setLayoutParams(layoutViewParams);
+        //设置左右间距
+        View adRootLayout = layoutView.findViewById(R.id.rl_ad_root);
+        FrameLayout.LayoutParams rootLayoutParams = (FrameLayout.LayoutParams) adRootLayout.getLayoutParams();
+        int padding = dip2px(layoutView.getContext(), 20f);
+        rootLayoutParams.leftMargin = padding;
+        rootLayoutParams.rightMargin = padding;
+        adRootLayout.setLayoutParams(rootLayoutParams);
+    }
+
+    public static ATNativeAdInfo.AdPrepareInfo bindSelfRenderView(Context context, ATNativeAdInfo mixNativeAd, View selfRenderView) {
+        IATThirdPartyMaterial adMaterial = mixNativeAd.getAdMaterial();
+        ATNativeAdInfo.AdPrepareInfo nativePrepareInfo = new ATNativeAdInfo.AdPrepareInfo();
         //log
         printNativeAdMaterial(adMaterial);
 
@@ -47,11 +119,7 @@ public class SelfRenderViewUtil {
         FrameLayout adLogoContainer = selfRenderView.findViewById(R.id.native_ad_logo_container);   //v6.1.52+
 
         // bind view
-        if (nativePrepareInfo == null) {
-            nativePrepareInfo = new ATNativePrepareInfo();
-        }
         List<View> clickViewList = new ArrayList<>();//click views
-
 
         String title = adMaterial.getTitle();
         // title
@@ -247,7 +315,18 @@ public class SelfRenderViewUtil {
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
         nativePrepareInfo.setChoiceViewLayoutParams(layoutParams);//bind layout params for ad choice
-        nativePrepareInfo.setCloseView(closeView);//bind close button
+
+        //关闭按钮渲染方式有两种：
+        // 1.开发者自渲染，通过AdPrepareInfo的setCloseView()方法设置；
+        // 2.如果没有设置AdPrepareInfo的setCloseView()，则TopOn SDK默认会在布局右上角添加关闭按钮。
+        boolean closeBtnCustomRender = false;
+        if (closeBtnCustomRender) {
+            //方式1，通过AdPrepareInfo的setCloseView()设置关闭按钮
+            nativePrepareInfo.setCloseView(closeView);//bind close button
+        } else {
+            //方式2，隐藏布局的关闭按钮，不通过AdPrepareInfo的setCloseView()设置关闭按钮
+            closeView.setVisibility(View.GONE);
+        }
 
         nativePrepareInfo.setClickViewList(clickViewList);//bind click view list
 
@@ -305,21 +384,16 @@ public class SelfRenderViewUtil {
                 permissionTextView.setOnClickListener(null);
             }
 
-            if (nativePrepareInfo instanceof ATNativePrepareExInfo) {
-                ((ATNativePrepareExInfo) nativePrepareInfo).setAppInfoClickViewList(
-                        appInfoClickViewList);
-                ((ATNativePrepareExInfo) nativePrepareInfo).setPermissionClickViewList(
-                        permissionClickViewList);
-                ((ATNativePrepareExInfo) nativePrepareInfo).setPrivacyClickViewList(
-                        privacyClickViewList);
-            }
+            nativePrepareInfo.setAppInfoClickViewList(appInfoClickViewList);
+            nativePrepareInfo.setPermissionClickViewList(permissionClickViewList);
+            nativePrepareInfo.setPrivacyClickViewList(privacyClickViewList);
         } else {
             sixInfoView.setVisibility(View.GONE);
         }
+        return nativePrepareInfo;
     }
 
-    private static void renderShakeView(Context context, ATNativeMaterial adMaterial, FrameLayout shakeViewContainer) {
-        shakeViewContainer.removeAllViews();
+    private static void renderShakeView(Context context, IATThirdPartyMaterial adMaterial, FrameLayout shakeViewContainer) {
         int shakeViewWidth = dip2px(context, 100);  //组件的宽，不小于80dp
         int shakeViewHeight = dip2px(context, 100); //组件的高，不小于80dp
         View shakeView = adMaterial.getShakeView(shakeViewWidth, shakeViewHeight, new ATShakeViewListener() {
@@ -337,8 +411,7 @@ public class SelfRenderViewUtil {
         }
     }
 
-    private static void renderSlideView(Context context, ATNativeMaterial adMaterial, FrameLayout slideViewContainer) {
-        slideViewContainer.removeAllViews();
+    private static void renderSlideView(Context context, IATThirdPartyMaterial adMaterial, FrameLayout slideViewContainer) {
         int slideViewWidth = dip2px(context, 120);  //滑动引导区域的宽
         int slideViewHeight = dip2px(context, 50); // 滑动引导区域的高
         int repeat = 5; //动画的重复次数，结束后自动隐藏组件
@@ -396,7 +469,7 @@ public class SelfRenderViewUtil {
         return (int) (dipValue * scale + 0.5f);
     }
 
-    private static void printNativeAdMaterial(ATNativeMaterial adMaterial) {
+    private static void printNativeAdMaterial(IATThirdPartyMaterial adMaterial) {
         if (adMaterial == null) return;
 
         String adType = adMaterial.getAdType();
@@ -454,5 +527,4 @@ public class SelfRenderViewUtil {
                 "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
         );
     }
-
 }
