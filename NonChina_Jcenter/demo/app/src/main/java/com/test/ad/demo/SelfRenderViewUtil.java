@@ -112,6 +112,7 @@ public class SelfRenderViewUtil {
         if (appDownloadButton != null) {
             if (appDownloadButton instanceof AppDownloadButton) {
                 ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));
+                appDownloadButton.setPadding(dip2px(context, 46),dip2px(context, 24),dip2px(context, 46),dip2px(context, 24));
             }
             ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
             ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
