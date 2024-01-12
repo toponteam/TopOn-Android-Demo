@@ -158,7 +158,7 @@ public class SplashAdShowInCurrentActivity extends Activity {
 
             }
 
-        }, 5000, "");
+        }, 5000);
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override

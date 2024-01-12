@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.AdError;
@@ -287,7 +288,48 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            //下载类原生自渲染广告设置下载状态监听，更新CTA按钮文案
+            if (!mNativeAd.isNativeExpress() && mNativeAd.getAdMaterial()
+                    .getNativeAdInteractionType() == NativeAdInteractionType.APP_DOWNLOAD_TYPE && mNativePrepareInfo.getCtaView() != null && mNativePrepareInfo.getCtaView() instanceof TextView) {
+                TextView ctaTextView = (TextView) mNativePrepareInfo.getCtaView();
+                mNativeAd.setAdDownloadListener(new ATAppDownloadListener() {
+                    @Override
+                    public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                        ctaTextView.setText("暂停下载");
+                        printLogOnUI("onDownloadStart totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                    }
 
+                    @Override
+                    public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                        ctaTextView.setText("暂停下载");
+                        printLogOnUI("onDownloadUpdate totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                    }
+
+                    @Override
+                    public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                        ctaTextView.setText("恢复下载");
+                        printLogOnUI("onDownloadPause totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                    }
+
+                    @Override
+                    public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
+                        ctaTextView.setText("立即安装");
+                        printLogOnUI("onDownloadFinish totalBytes:" + totalBytes + ",appName:" + appName);
+                    }
+
+                    @Override
+                    public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
+                        ctaTextView.setText("开始下载");
+                        printLogOnUI("onDownloadFail totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                    }
+
+                    @Override
+                    public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
+                        ctaTextView.setText("打开应用");
+                        printLogOnUI("onInstalled appName:" + appName);
+                    }
+                });
+            }
             mNativeAd.prepare(mATNativeView, mNativePrepareInfo);
             mATNativeView.setVisibility(View.VISIBLE);
             mPanel.setVisibility(View.VISIBLE);
