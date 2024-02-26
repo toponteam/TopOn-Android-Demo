@@ -23,6 +23,7 @@ import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
+import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
@@ -55,6 +56,8 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
     protected void onSelectPlacementId(String placementId) {
         mBannerView.setPlacementId(placementId);
         ATBannerView.entryAdScenario(placementId, AdConst.SCENARIO_ID.BANNER_AD_SCENARIO);
+        //        mBannerView.setScenario(AdConst.SCENARIO_ID.BANNER_AD_SCENARIO);
+        mBannerView.setShowConfig(getATShowConfig());
     }
 
     @Override
@@ -220,5 +223,13 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         if (v.getId() == R.id.banner_load_ad_btn) {
             loadAd();
         }
+    }
+
+    private ATShowConfig getATShowConfig() {
+        ATShowConfig.Builder builder = new ATShowConfig.Builder();
+        builder.scenarioId(AdConst.SCENARIO_ID.BANNER_AD_SCENARIO);
+        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.BANNER_AD_SHOW_CUSTOM_EXT);
+
+        return builder.build();
     }
 }

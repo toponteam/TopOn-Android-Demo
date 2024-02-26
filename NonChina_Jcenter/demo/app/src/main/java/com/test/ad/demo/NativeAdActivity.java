@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -198,7 +199,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
     private void showAd() {
 //        NativeAd nativeAd = mATNative.getNativeAd();
-        NativeAd nativeAd = mATNative.getNativeAd(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+        NativeAd nativeAd = mATNative.getNativeAd(getATShowConfig());
         if (nativeAd != null) {
 
             if (mNativeAd != null) {
@@ -388,5 +389,13 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 }
                 break;
         }
+    }
+
+    private ATShowConfig getATShowConfig() {
+        ATShowConfig.Builder builder = new ATShowConfig.Builder();
+        builder.scenarioId(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.NATIVE_AD_SHOW_CUSTOM_EXT);
+
+        return builder.build();
     }
 }

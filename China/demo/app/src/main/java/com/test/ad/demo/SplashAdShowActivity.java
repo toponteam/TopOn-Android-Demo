@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
+import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
 import com.anythink.splashad.api.ATSplashAdExtraInfo;
@@ -90,7 +91,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             Log.i(TAG, "SplashAd is ready to show.");
             //splashAd.show(SplashAdShowActivity.this, container);
             //showAdWithCustomSkipView();//show with customSkipView
-            splashAd.show(SplashAdShowActivity.this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+            splashAd.show(SplashAdShowActivity.this, container, null, getATShowConfig());
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
             SDKUtil.initSDK(getApplicationContext());
@@ -139,7 +140,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                     skipView.setVisibility(View.VISIBLE);
                 }
             }
-        }), AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        }), getATShowConfig());
     }
 
     @Override
@@ -159,7 +160,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
 //        splashAd.show(this, container);
 //        showAdWithCustomSkipView();//show with customSkipView
-        splashAd.show(this, container, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        splashAd.show(this, container, null, getATShowConfig());
     }
 
     @Override
@@ -276,4 +277,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     }
 
+    private ATShowConfig getATShowConfig() {
+        ATShowConfig.Builder builder = new ATShowConfig.Builder();
+        builder.scenarioId(AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
+        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.SPLASH_AD_SHOW_CUSTOM_EXT);
+
+        return builder.build();
+    }
 }
