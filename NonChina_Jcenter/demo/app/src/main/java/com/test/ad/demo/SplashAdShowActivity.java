@@ -25,6 +25,8 @@ import android.widget.Toast;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
+import com.anythink.core.api.ATNativeAdCustomRender;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
@@ -33,6 +35,7 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
+import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
 
@@ -45,8 +48,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     private ATSplashAd splashAd;
     private FrameLayout container;
-
-    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,7 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         String placementId = getIntent().getStringExtra("placementId");
         splashAd = new ATSplashAd(this, placementId, this, 5000);
+        splashAd.setNativeAdCustomRender(new AdCustomRender(getApplicationContext()));
 
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
@@ -273,6 +275,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (container != null) {
+            container.removeAllViews();
+        }
         if (splashAd != null) {
             splashAd.setAdListener(null);
             splashAd.setAdDownloadListener(null);
@@ -285,6 +290,18 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     }
 
+    private static class AdCustomRender implements ATNativeAdCustomRender {
+        private Context context;
+
+        public AdCustomRender(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
+            return MediationNativeAdUtil.getViewFromNativeAd(context, mixNativeAd, atAdInfo, false);
+        }
+    }
     private ATShowConfig getATShowConfig() {
         ATShowConfig.Builder builder = new ATShowConfig.Builder();
         builder.scenarioId(AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);

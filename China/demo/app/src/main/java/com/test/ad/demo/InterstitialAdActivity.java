@@ -266,7 +266,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
 
 //        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
 //        localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
-        //插屏广告使用原生自渲染广告，只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同插屏广告接入流程相同。
+        //插屏广告使用原生自渲染广告时，设置自定义渲染方式：只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同插屏广告接入流程相同。
         mInterstitialAd.setNativeAdCustomRender(new ATNativeAdCustomRender() {
             @Override
             public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {

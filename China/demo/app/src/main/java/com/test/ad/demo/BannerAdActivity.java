@@ -185,7 +185,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels - 2 * padding);
         localMap.put(ATAdConst.KEY.AD_HEIGHT, dip2px(60));
         mBannerView.setLocalExtra(localMap);
-        //横幅广告使用原生自渲染广告，只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同横幅广告接入流程相同。
+        //横幅广告使用原生自渲染广告时，设置自定义渲染方式：只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同横幅广告接入流程相同。
         mBannerView.setNativeAdCustomRender(new ATNativeAdCustomRender() {
             @Override
             public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {

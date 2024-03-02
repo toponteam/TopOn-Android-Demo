@@ -40,12 +40,51 @@ public class MediationNativeAdUtil {
             return null;
         }
         View layoutView = LayoutInflater.from(context).inflate(R.layout.layout_native_self_mix, null, false);
+        if (isInterstitialAd) {
+            //注意：当使用插屏混用原生广告时，最底层布局颜色是全透明的，开发者可根据以下配置实现全屏展示和半屏展示
+            setFullScreenLayoutParams(layoutView);
+//            setHalfScreenLayoutParams(layoutView);
+        }
         //将信息流自渲染素材转换成view的代码
         ATNativeAdInfo.AdPrepareInfo prepareInfo = bindSelfRenderView(context, mixNativeAd, layoutView);
         mixNativeAd.prepare(prepareInfo);
 
         Log.d(TAG, "AdSourceAdType: " + atAdInfo.getAdSourceAdType() + " AdSourceCustomExt: " + atAdInfo.getAdSourceCustomExt());
         return layoutView;
+    }
+
+
+    /**
+     * 插屏混用原生广告时，设置半屏显示
+     *
+     * @param layoutView 广告布局
+     */
+    private static void setHalfScreenLayoutParams(View layoutView) {
+        //设置布局背景
+        layoutView.setBackgroundColor(Color.parseColor("#99000000"));
+        //设置布局位置参数
+        FrameLayout.LayoutParams layoutViewParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        layoutView.setLayoutParams(layoutViewParams);
+        //设置左右间距
+        View adRootLayout = layoutView.findViewById(R.id.rl_ad_root);
+        FrameLayout.LayoutParams rootLayoutParams = (FrameLayout.LayoutParams) adRootLayout.getLayoutParams();
+        int padding = dip2px(layoutView.getContext(), 20f);
+        rootLayoutParams.leftMargin = padding;
+        rootLayoutParams.rightMargin = padding;
+        adRootLayout.setLayoutParams(rootLayoutParams);
+    }
+
+    /**
+     * 设置全屏显示
+     *
+     * @param layoutView 广告布局
+     */
+    private static void setFullScreenLayoutParams(View layoutView) {
+        //插屏混用原生广告时，设置全屏显示
+        layoutView.setBackgroundColor(Color.GRAY);  //广告View设置背景色
+        FrameLayout.LayoutParams layoutViewParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        layoutViewParams.gravity = Gravity.CENTER;
+        layoutView.setLayoutParams(layoutViewParams);
     }
 
     public static ATNativeAdInfo.AdPrepareInfo bindSelfRenderView(Context context, ATNativeAdInfo mixNativeAd, View selfRenderView) {
@@ -137,6 +176,7 @@ public class MediationNativeAdUtil {
             ViewGroup.LayoutParams ctaParams = ctaView.getLayoutParams();
             ((ViewGroup) selfRenderView).addView(appDownloadButton, ctaParams);
             appDownloadButton.setVisibility(View.VISIBLE);
+            appDownloadButton.setBackgroundColor(Color.parseColor("#2095F1"));
             ctaView.setVisibility(View.INVISIBLE);
         }
 
@@ -239,6 +279,7 @@ public class MediationNativeAdUtil {
                 logoView.setVisibility(View.VISIBLE);
             } else if (adLogoBitmap != null) {
                 logoView.setImageBitmap(adLogoBitmap);
+                nativePrepareInfo.setAdLogoView(logoView);//bind ad choice
                 logoView.setVisibility(View.VISIBLE);
             } else {
                 logoView.setImageBitmap(null);
@@ -251,26 +292,28 @@ public class MediationNativeAdUtil {
         if (!TextUtils.isEmpty(adFrom)) {
             adFromView.setText(adFrom);
             adFromView.setVisibility(View.VISIBLE);
+            nativePrepareInfo.setAdFromView(adFromView);//bind ad from
         } else {
             adFromView.setVisibility(View.GONE);
         }
-        nativePrepareInfo.setAdFromView(adFromView);//bind ad from
 
         //advertiser info (v6.1.70+)
-        final IATAdvertiserInfoOperate advertiserInfoOperate = adMaterial.getAdvertiserInfoOperate();
-        if (advertiserInfoOperate == null) {
-            //When the advertiserInfoOperate is null, hide the advertiser information icon.
-            advertiserIcon.setVisibility(View.GONE);
-        } else {
-            //When the advertiserInfoOperate is not null, show the advertiser information icon and
-            //call the API to pull up the advertiser information pop-up box.
-            advertiserIcon.setVisibility(View.VISIBLE);
-            advertiserIcon.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    advertiserInfoOperate.showAdvertiserInfoDialog(advertiserIcon, true);
-                }
-            });
+        if (advertiserIcon != null) {
+            final IATAdvertiserInfoOperate advertiserInfoOperate = adMaterial.getAdvertiserInfoOperate();
+            if (advertiserInfoOperate == null) {
+                //When the advertiserInfoOperate is null, hide the advertiser information icon.
+                advertiserIcon.setVisibility(View.GONE);
+            } else {
+                //When the advertiserInfoOperate is not null, show the advertiser information icon and
+                //call the API to pull up the advertiser information pop-up box.
+                advertiserIcon.setVisibility(View.VISIBLE);
+                advertiserIcon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        advertiserInfoOperate.showAdvertiserInfoDialog(advertiserIcon, true);
+                    }
+                });
+            }
         }
 
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(dip2px(context, 40), dip2px(context, 10));//ad choice
@@ -302,7 +345,6 @@ public class MediationNativeAdUtil {
         List<View> creativeClickViewList = new ArrayList<>();//click views
         creativeClickViewList.add(ctaView);
         nativePrepareInfo.setCreativeClickViewList(creativeClickViewList);//bind custom view list
-
         return nativePrepareInfo;
     }
 
@@ -366,7 +408,30 @@ public class MediationNativeAdUtil {
                 "getNativeCustomVideo:" + adMaterial.getNativeCustomVideo() + "\n" +
                 "getAdLogo:" + adMaterial.getAdLogo() + "\n" +
                 "getNativeExpressWidth:" + adMaterial.getNativeExpressWidth() + "\n" +
-                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n"
+                "getNativeExpressHeight" + adMaterial.getNativeExpressHeight() + "\n" +
+                "getWarning: " + adMaterial.getWarning() + "\n" +
+                "getDomain: " + adMaterial.getDomain() + "\n"
         );
+    }
+
+    private static void setOpenUrlClickListener(View view, final String url) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(url));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    Context context = view.getContext();
+                    if (context != null) {
+                        context.startActivity(intent);
+                    }
+                } catch (Throwable e2) {
+                    e2.printStackTrace();
+                }
+            }
+        });
+
     }
 }
