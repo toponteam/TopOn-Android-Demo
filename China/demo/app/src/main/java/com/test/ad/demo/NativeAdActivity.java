@@ -19,7 +19,6 @@ import android.widget.Toast;
 import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
-import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -217,7 +216,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
     private void showAd() {
 //        NativeAd nativeAd = mATNative.getNativeAd();
-        NativeAd nativeAd = mATNative.getNativeAd(getATShowConfig());
+        NativeAd nativeAd = mATNative.getNativeAd(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
         if (nativeAd != null) {
 
             if (mNativeAd != null) {
@@ -296,68 +295,38 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 mNativeAd.setAdDownloadListener(new ATAppDownloadListener() {
                     @Override
                     public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("暂停下载");
-                                printLogOnUI("onDownloadStart totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("暂停下载");
+                        printLogOnUI("onDownloadStart totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
                     }
 
                     @Override
                     public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("暂停下载");
-                                printLogOnUI("onDownloadUpdate totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("暂停下载");
+                        printLogOnUI("onDownloadUpdate totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
                     }
 
                     @Override
                     public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("恢复下载");
-                                printLogOnUI("onDownloadPause totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("恢复下载");
+                        printLogOnUI("onDownloadPause totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
                     }
 
                     @Override
                     public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("立即安装");
-                                printLogOnUI("onDownloadFinish totalBytes:" + totalBytes + ",appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("立即安装");
+                        printLogOnUI("onDownloadFinish totalBytes:" + totalBytes + ",appName:" + appName);
                     }
 
                     @Override
                     public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("开始下载");
-                                printLogOnUI("onDownloadFail totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("开始下载");
+                        printLogOnUI("onDownloadFail totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
                     }
 
                     @Override
                     public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ctaTextView.setText("打开应用");
-                                printLogOnUI("onInstalled appName:" + appName);
-                            }
-                        });
+                        ctaTextView.setText("打开应用");
+                        printLogOnUI("onInstalled appName:" + appName);
                     }
                 });
             }
@@ -507,13 +476,5 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 }
                 break;
         }
-    }
-
-    private ATShowConfig getATShowConfig() {
-        ATShowConfig.Builder builder = new ATShowConfig.Builder();
-        builder.scenarioId(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
-        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.NATIVE_AD_SHOW_CUSTOM_EXT);
-
-        return builder.build();
     }
 }

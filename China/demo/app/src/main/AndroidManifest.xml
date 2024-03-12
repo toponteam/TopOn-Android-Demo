@@ -13,8 +13,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
-        android:usesCleartextTraffic="true"
-        tools:replace="android:allowBackup" >
+        android:usesCleartextTraffic="true" >
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

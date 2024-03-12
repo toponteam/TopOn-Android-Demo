@@ -19,7 +19,6 @@ import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
-import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.rewardvideo.api.ATRewardVideoAd;
 import com.anythink.rewardvideo.api.ATRewardVideoAutoAd;
@@ -358,10 +357,10 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
     private void showAd() {
         if (mIsAutoLoad) {
 //            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener);
+            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO, autoEventListener);
         } else {
 //            mRewardVideoAd.show(RewardVideoAdActivity.this);
-            mRewardVideoAd.show(RewardVideoAdActivity.this, getATShowConfig());
+            mRewardVideoAd.show(RewardVideoAdActivity.this, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO);
         }
     }
 
@@ -397,14 +396,6 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
                 }
                 break;
         }
-    }
-
-    private ATShowConfig getATShowConfig() {
-        ATShowConfig.Builder builder = new ATShowConfig.Builder();
-        builder.scenarioId(AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO);
-        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.REWARD_VIDEO_AD_SHOW_CUSTOM_EXT);
-
-        return builder.build();
     }
 }
 
