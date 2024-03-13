@@ -18,6 +18,8 @@ import android.view.View;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdStatusInfo;
+import com.anythink.core.api.ATNativeAdCustomRender;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
@@ -25,6 +27,7 @@ import com.anythink.splashad.api.ATSplashAdExtraInfo;
 import com.anythink.splashad.api.ATSplashExListener;
 import com.test.ad.demo.base.BaseActivity;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.SDKUtil;
 
 import java.util.HashMap;
@@ -107,6 +110,8 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
         SDKUtil.initSDK(getApplicationContext());
         printLogOnUI(getString(R.string.anythink_ad_status_loading));
         if (mSplashAd != null) {
+            //开屏广告使用原生自渲染广告时，设置自定义渲染方式：只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同开屏广告接入流程相同。
+            mSplashAd.setNativeAdCustomRender(new NativeAdCustomRender(this));
             mSplashAd.loadAd();
         }
     }

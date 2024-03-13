@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 自定义样式选项，必须继承TTDislikeListView -->
+<!--    <com.bytedance.sdk.openadsdk.dislike.TTDislikeListView-->
+<!--        android:id="@+id/lv_dislikelist_custom"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+<!--    <TextView-->
+<!--        android:visibility="gone"-->
+<!--        android:textColor="#EEB4B4"-->
+<!--        android:id="@+id/tv_personalize_prompt"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp" />-->
+
+</LinearLayout>

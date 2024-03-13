@@ -13,12 +13,14 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anythink.china.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.nativead.api.ATNative;
 import com.anythink.nativead.api.ATNativeAdView;
@@ -216,7 +218,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
     private void showAd() {
 //        NativeAd nativeAd = mATNative.getNativeAd();
-        NativeAd nativeAd = mATNative.getNativeAd(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+        NativeAd nativeAd = mATNative.getNativeAd(getATShowConfig());
         if (nativeAd != null) {
 
             if (mNativeAd != null) {
@@ -278,7 +280,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
 
             try {
                 mNativePrepareInfo = new ATNativePrepareExInfo();
-
+                //bindTTDislikeDialog(mATNativeView, mNativeAd);
                 if (mNativeAd.isNativeExpress()) {
                     mNativeAd.renderAdContainer(mATNativeView, null);
                 } else {
@@ -295,38 +297,68 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 mNativeAd.setAdDownloadListener(new ATAppDownloadListener() {
                     @Override
                     public void onDownloadStart(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        ctaTextView.setText("暂停下载");
-                        printLogOnUI("onDownloadStart totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("暂停下载");
+                                printLogOnUI("onDownloadStart totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                            }
+                        });
                     }
 
                     @Override
                     public void onDownloadUpdate(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        ctaTextView.setText("暂停下载");
-                        printLogOnUI("onDownloadUpdate totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("暂停下载");
+                                printLogOnUI("onDownloadUpdate totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                            }
+                        });
                     }
 
                     @Override
                     public void onDownloadPause(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        ctaTextView.setText("恢复下载");
-                        printLogOnUI("onDownloadPause totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("恢复下载");
+                                printLogOnUI("onDownloadPause totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                            }
+                        });
                     }
 
                     @Override
                     public void onDownloadFinish(ATAdInfo adInfo, long totalBytes, String fileName, String appName) {
-                        ctaTextView.setText("立即安装");
-                        printLogOnUI("onDownloadFinish totalBytes:" + totalBytes + ",appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("立即安装");
+                                printLogOnUI("onDownloadFinish totalBytes:" + totalBytes + ",appName:" + appName);
+                            }
+                        });
                     }
 
                     @Override
                     public void onDownloadFail(ATAdInfo adInfo, long totalBytes, long currBytes, String fileName, String appName) {
-                        ctaTextView.setText("开始下载");
-                        printLogOnUI("onDownloadFail totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("开始下载");
+                                printLogOnUI("onDownloadFail totalBytes:" + totalBytes + ",currBytes:" + currBytes + ",appName:" + appName);
+                            }
+                        });
                     }
 
                     @Override
                     public void onInstalled(ATAdInfo adInfo, String fileName, String appName) {
-                        ctaTextView.setText("打开应用");
-                        printLogOnUI("onInstalled appName:" + appName);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ctaTextView.setText("打开应用");
+                                printLogOnUI("onInstalled appName:" + appName);
+                            }
+                        });
                     }
                 });
             }
@@ -477,4 +509,42 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 break;
         }
     }
+
+    private ATShowConfig getATShowConfig() {
+        ATShowConfig.Builder builder = new ATShowConfig.Builder();
+        builder.scenarioId(AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
+        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.NATIVE_AD_SHOW_CUSTOM_EXT);
+
+        return builder.build();
+    }
+
+    //private void bindTTDislikeDialog(ViewGroup anyThinkNativeAdView,NativeAd nativeAd){
+    //    ATNativeMaterial adMaterial = nativeAd.getAdMaterial();
+    //    if (adMaterial != null) {
+    //        Map<String, Object> networkInfoMap = adMaterial.getNetworkInfoMap();
+    //        if (networkInfoMap != null) {
+    //            Object dislikeInfoObj = networkInfoMap.get(TTATConst.CUSTOM_DISLIKE_INFO);
+    //            if (dislikeInfoObj instanceof DislikeInfo) {
+    //                DislikeInfo dislikeInfo = (DislikeInfo) dislikeInfoObj;
+    //                Log.i(TAG, "showAd: dislikeInfo=" + dislikeInfo);
+    //                Map<String, Object> extraMap = new HashMap<>();
+    //                TTCustomDislikeDialog dislikeDialog = new TTCustomDislikeDialog(this, dislikeInfo);
+    //                dislikeDialog.setOnDislikeItemClick(new TTCustomDislikeDialog.OnDislikeItemClick() {
+    //                    @Override
+    //                    public void onItemClick(FilterWord filterWord) {
+    //                        Log.e(TAG, "onItemClick: filterWord=" + filterWord.getName());
+    //
+    //                        if (anyThinkNativeAdView.getParent() != null) {
+    //                            ((ViewGroup) anyThinkNativeAdView.getParent()).removeView(anyThinkNativeAdView);
+    //                            anyThinkNativeAdView.removeAllViews();
+    //                        }
+    //                    }
+    //                });
+    //
+    //                extraMap.put(ATAdConst.KEY.CUSTOM_DISLIKE_DIALOG, dislikeDialog);
+    //                nativeAd.setDevParams(extraMap);
+    //            }
+    //        }
+    //    }
+    //}
 }

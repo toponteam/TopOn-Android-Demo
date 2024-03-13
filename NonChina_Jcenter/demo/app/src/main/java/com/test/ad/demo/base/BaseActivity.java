@@ -1,6 +1,7 @@
 package com.test.ad.demo.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
@@ -18,11 +19,14 @@ import androidx.annotation.Nullable;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
+import com.anythink.core.api.ATNativeAdCustomRender;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.TitleBar;
 import com.test.ad.demo.bean.AnnotationAdType;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.ViewUtil;
 
@@ -198,6 +202,19 @@ public abstract class BaseActivity extends Activity {
         public void onAdSourceLoadFail(ATAdInfo adInfo, AdError adError) {
             Log.i(TAG, "onAdSourceLoadFail Info: " + adInfo.toString());
             Log.i(TAG, "onAdSourceLoadFail error: " + adError.getFullErrorInfo());
+        }
+    }
+
+    public static class NativeAdCustomRender implements ATNativeAdCustomRender {
+        private Context context;
+
+        public NativeAdCustomRender(Context context) {
+            this.context = context.getApplicationContext();
+        }
+
+        @Override
+        public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
+            return MediationNativeAdUtil.getViewFromNativeAd(context, mixNativeAd, atAdInfo, false);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.test.ad.demo.base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
@@ -17,12 +18,15 @@ import android.widget.TextView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
+import com.anythink.core.api.ATNativeAdCustomRender;
+import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.RewardVideoAdActivity;
 import com.test.ad.demo.TitleBar;
 import com.test.ad.demo.bean.AnnotationAdType;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.ViewUtil;
 
@@ -194,6 +198,19 @@ public abstract class BaseActivity extends Activity {
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
+        }
+    }
+
+    public static class NativeAdCustomRender implements ATNativeAdCustomRender {
+        private Context context;
+
+        public NativeAdCustomRender(Context context) {
+            this.context = context.getApplicationContext();
+        }
+
+        @Override
+        public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
+            return MediationNativeAdUtil.getViewFromNativeAd(context, mixNativeAd, atAdInfo, false);
         }
     }
 }

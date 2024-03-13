@@ -21,6 +21,7 @@ import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
+import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.interstitial.api.ATInterstitial;
 import com.anythink.interstitial.api.ATInterstitialAutoAd;
@@ -265,13 +266,8 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
 
 //        localMap.put(ATAdConst.KEY.AD_WIDTH, getResources().getDisplayMetrics().widthPixels);
 //        localMap.put(ATAdConst.KEY.AD_HEIGHT, getResources().getDisplayMetrics().heightPixels);
-        //插屏广告使用原生自渲染广告，只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同插屏广告接入流程相同。
-        mInterstitialAd.setNativeAdCustomRender(new ATNativeAdCustomRender() {
-            @Override
-            public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
-                return MediationNativeAdUtil.getViewFromNativeAd(InterstitialAdActivity.this, mixNativeAd, atAdInfo, true);
-            }
-        });
+        //插屏广告使用原生自渲染广告时，设置自定义渲染方式：只需要在发起请求时额外设置setNativeAdCustomRender即可，请求、展示广告流程同插屏广告接入流程相同。
+        mInterstitialAd.setNativeAdCustomRender(new NativeAdCustomRender(this));
         mInterstitialAd.setLocalExtra(localMap);
         mInterstitialAd.load();
     }
@@ -296,10 +292,10 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     private void showAd() {
         if (mIsAutoLoad) {
 //            ATInterstitialAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-            ATInterstitialAutoAd.show(this, mCurrentPlacementId, AdConst.SCENARIO_ID.INTERSTITIAL_AD_SCENARIO, autoEventListener);
+            ATInterstitialAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener);
         } else {
 //            mInterstitialAd.show(InterstitialAdActivity.this);
-            mInterstitialAd.show(InterstitialAdActivity.this, AdConst.SCENARIO_ID.INTERSTITIAL_AD_SCENARIO);
+            mInterstitialAd.show(InterstitialAdActivity.this, getATShowConfig());
         }
     }
 
@@ -335,6 +331,14 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
                 }
                 break;
         }
+    }
+
+    private ATShowConfig getATShowConfig() {
+        ATShowConfig.Builder builder = new ATShowConfig.Builder();
+        builder.scenarioId(AdConst.SCENARIO_ID.INTERSTITIAL_AD_SCENARIO);
+        builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.INTERSTITIAL_AD_SHOW_CUSTOM_EXT);
+
+        return builder.build();
     }
 }
 
