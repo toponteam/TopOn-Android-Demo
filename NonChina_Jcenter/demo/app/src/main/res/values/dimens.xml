@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <dimen name="anythink_pic_size">100dp</dimen>
+    <dimen name="anythink_pic_width">42dp</dimen>
+    <dimen name="anythink_pic_height">74dp</dimen>
+    <dimen name="anythink_format_pic_height">165dp</dimen>
+    <dimen name="anythink_title_margin_left">12dp</dimen>
+    <dimen name="anythink_title_margin_top">16dp</dimen>
+    <dimen name="anythink_desc_margin_top">4dp</dimen>
+    <dimen name="anythink_padding">12dp</dimen>
+    <dimen name="anythink_padding_5dp">5dp</dimen>
+
+    <dimen name="anythink_text_size_12">12sp</dimen>
+    <dimen name="anythink_title_size">18sp</dimen>
+    <dimen name="anythink_desc_size">14sp</dimen>
+    <dimen name="anythink_name_size">16sp</dimen>
+    <dimen name="anythink_button_size">13dp</dimen>
+    <dimen name="anythink_title_bar_text_size">20sp</dimen>
+
+    <dimen name="anythink_line_width">2dp</dimen>
+    <dimen name="anythink_line_height">12dp</dimen>
+
+    <dimen name="anythink_1dp">1dp</dimen>
+    <dimen name="anythink_2dp">2dp</dimen>
+    <dimen name="anythink_6dp">6dp</dimen>
+    <dimen name="anythink_7dp">7dp</dimen>
+    <dimen name="anythink_8dp">8dp</dimen>
+    <dimen name="anythink_10dp">10dp</dimen>
+    <dimen name="anythink_11dp">11dp</dimen>
+    <dimen name="anythink_12dp">12dp</dimen>
+    <dimen name="anythink_13dp">13dp</dimen>
+    <dimen name="anythink_14dp">14dp</dimen>
+    <dimen name="anythink_18dp">18dp</dimen>
+    <dimen name="anythink_20dp">20dp</dimen>
+    <dimen name="anythink_21dp">21dp</dimen>
+    <dimen name="anythink_27dp">27dp</dimen>
+    <dimen name="anythink_35dp">35dp</dimen>
+    <dimen name="anythink_45dp">45dp</dimen>
+    <dimen name="anythink_60dp">60dp</dimen>
+    <dimen name="anythink_95dp">95dp</dimen>
+
+</resources>

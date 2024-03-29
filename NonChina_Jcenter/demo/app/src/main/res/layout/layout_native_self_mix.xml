@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@android:color/holo_orange_light">
+
+    <RelativeLayout
+        android:id="@+id/rl_ad_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#ffffff">
+
+        <FrameLayout
+            android:id="@+id/native_ad_content_image_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_height="200dp"
+            tools:layout_width="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/native_ad_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/native_ad_content_image_area"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter" />
+
+
+        <FrameLayout
+            android:id="@+id/native_ad_logo_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/native_ad_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/native_self_adlogo"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/ad_logo" />
+
+        <ImageView
+            android:id="@+id/native_ad_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:padding="5dp"
+            android:src="@mipmap/ad_close" />
+
+        <TextView
+            android:id="@+id/native_ad_install_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/native_ad_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="#2095F1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            tools:text="install" />
+
+        <TextView
+            android:id="@+id/native_ad_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/native_ad_image"
+            android:layout_toLeftOf="@id/native_ad_install_btn"
+            android:layout_toRightOf="@id/native_ad_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:text="ad title" />
+
+        <TextView
+            android:id="@+id/native_ad_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/native_ad_image"
+            android:layout_toLeftOf="@id/native_ad_install_btn"
+            android:layout_toRightOf="@id/native_ad_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#777777"
+            android:textSize="12dp"
+            tools:text="ad description" />
+
+        <TextView
+            android:id="@+id/native_ad_domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/native_ad_desc"
+            android:layout_alignStart="@id/native_ad_desc"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/native_ad_install_btn"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#777777"
+            android:textSize="12dp"
+            android:visibility="gone"
+            tools:text="ad domain"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/native_ad_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/native_ad_domain"
+            android:layout_alignStart="@id/native_ad_desc"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/native_ad_install_btn"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#777777"
+            android:textSize="12dp"
+            android:visibility="gone"
+            tools:text="warning"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/native_ad_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/native_self_adlogo"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@id/native_self_adlogo"
+            android:background="#888888"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingTop="1dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="1dp"
+            android:textColor="#ffffff"
+            android:textSize="6dp"
+            tools:text="AdFrom" />
+
+        <TextView
+            android:id="@+id/native_advertiser_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/native_ad_from"
+            android:layout_toRightOf="@id/native_ad_from"
+            android:background="#888888"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingTop="1dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="1dp"
+            android:text="Advertiser Icon"
+            android:textColor="#ffffff"
+            android:textSize="6dp" />
+
+        <com.anythink.nativead.api.ATNativeImageView
+            android:id="@+id/native_ad_logo"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_above="@+id/native_ad_image"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</FrameLayout>

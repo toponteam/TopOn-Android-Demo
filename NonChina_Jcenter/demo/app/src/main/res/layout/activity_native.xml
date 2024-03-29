@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anythink_F5F5F5">
+
+    <com.test.ad.demo.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:padding="@dimen/anythink_padding">
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/ll_type"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <RelativeLayout-->
+        <!--                android:id="@+id/rl_native"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="@dimen/anythink_10dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/bg_white_selected">-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/iv_native"-->
+        <!--                    android:layout_width="50dp"-->
+        <!--                    android:layout_height="85dp"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_35dp"-->
+        <!--                    android:src="@mipmap/ic_test_native" />-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/tv_native"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_below="@id/iv_native"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_10dp"-->
+        <!--                    android:layout_marginBottom="@dimen/anythink_10dp"-->
+        <!--                    android:text="@string/anythink_title_native"-->
+        <!--                    android:lines="2"-->
+        <!--                    android:textSize="@dimen/anythink_desc_size"-->
+        <!--                    android:textColor="@color/anythink_666666" />-->
+
+        <!--            </RelativeLayout>-->
+
+        <!--            <RelativeLayout-->
+        <!--                android:id="@+id/rl_draw"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginEnd="@dimen/anythink_10dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/bg_white_selected">-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/iv_draw"-->
+        <!--                    android:layout_width="50dp"-->
+        <!--                    android:layout_height="85dp"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_35dp"-->
+        <!--                    android:src="@mipmap/ic_test_vertical_draw_video" />-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/tv_draw"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_below="@id/iv_draw"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_10dp"-->
+        <!--                    android:layout_marginBottom="@dimen/anythink_10dp"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="@string/anythink_title_draw"-->
+        <!--                    android:textSize="@dimen/anythink_desc_size"-->
+        <!--                    android:textColor="@color/anythink_666666" />-->
+
+        <!--            </RelativeLayout>-->
+
+        <!--            <RelativeLayout-->
+        <!--                android:id="@+id/rl_patch"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="@drawable/bg_white_selected">-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/iv_patch"-->
+        <!--                    android:layout_width="50dp"-->
+        <!--                    android:layout_height="85dp"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_35dp"-->
+        <!--                    android:src="@mipmap/ic_test_pre_roll" />-->
+
+        <!--                <TextView-->
+        <!--                    android:id="@+id/tv_patch"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_below="@id/iv_patch"-->
+        <!--                    android:lines="2"-->
+        <!--                    android:layout_centerHorizontal="true"-->
+        <!--                    android:layout_marginTop="@dimen/anythink_10dp"-->
+        <!--                    android:layout_marginBottom="@dimen/anythink_10dp"-->
+        <!--                    android:text="@string/anythink_title_patch"-->
+        <!--                    android:textSize="@dimen/anythink_desc_size"-->
+        <!--                    android:textColor="@color/anythink_666666" />-->
+
+        <!--            </RelativeLayout>-->
+
+
+        <!--        </LinearLayout>-->
+
+
+        <include
+            layout="@layout/include_select_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_type"
+            android:layout_marginTop="@dimen/anythink_10dp" />
+
+        <include layout="@layout/include_log_area" />
+
+        <include layout="@layout/include_btn" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/anythink_F5F5F5"
+        android:visibility="invisible">
+
+
+        <com.anythink.nativead.api.ATNativeView
+            android:id="@+id/native_ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <include
+                android:id="@+id/native_selfrender_view"
+                layout="@layout/layout_native_self" />
+        </com.anythink.nativead.api.ATNativeView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/native_ad_view"
+            android:layout_marginStart="@dimen/anythink_12dp"
+            android:layout_marginTop="@dimen/anythink_18dp"
+            android:layout_marginEnd="@dimen/anythink_12dp"/>
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_close_panel"-->
+        <!--            android:layout_width="@dimen/anythink_45dp"-->
+        <!--            android:layout_height="@dimen/anythink_45dp"-->
+        <!--            android:src="@drawable/anythink_myoffer_video_close"-->
+        <!--            />-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

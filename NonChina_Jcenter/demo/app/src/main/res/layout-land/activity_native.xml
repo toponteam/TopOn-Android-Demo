@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anythink_F5F5F5">
+
+    <com.test.ad.demo.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="330dp"
+        android:layout_height="@dimen/anythink_45dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_alignRight="@id/title_bar">
+
+        <include
+            layout="@layout/include_select_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/title_bar" />
+
+        <include layout="@layout/include_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+        <include layout="@layout/include_log_area" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/title_bar"
+        android:paddingHorizontal="5dp"
+        android:background="@color/anythink_F5F5F5"
+        android:visibility="visible">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_button"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="4dp" />
+
+        <com.anythink.nativead.api.ATNativeView
+            android:id="@+id/native_ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/rv_button"
+            android:layout_centerInParent="true"
+            android:visibility="invisible">
+
+            <include
+                android:id="@+id/native_selfrender_view"
+                layout="@layout/layout_native_self" />
+        </com.anythink.nativead.api.ATNativeView>
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_close_panel"-->
+        <!--            android:layout_width="@dimen/anythink_45dp"-->
+        <!--            android:layout_height="@dimen/anythink_45dp"-->
+        <!--            android:src="@drawable/anythink_myoffer_video_close"-->
+        <!--            />-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

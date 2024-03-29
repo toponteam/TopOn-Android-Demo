@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    android:id="@+id/btn_area"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/load_ad_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_27dp"
+        android:layout_margin="3dp"
+        android:text="@string/anythink_load_ad" />
+
+    <TextView
+        android:id="@+id/is_ad_ready_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="@dimen/anythink_27dp"
+        android:text="@string/anythink_is_ad_ready" />
+
+
+    <TextView
+        android:id="@+id/show_ad_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_27dp"
+        android:layout_margin="3dp"
+        android:text="@string/anythink_show_ad" />
+
+</LinearLayout>

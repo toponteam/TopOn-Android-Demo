@@ -1,0 +1,40 @@
+
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+<!--    Only for GDT-->
+    <style name="DownloadConfirmDialogFullScreen" parent="android:Theme.Dialog">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DownloadConfirmDialogAnimationUp">
+        <item name="android:windowEnterAnimation">@anim/download_confirm_dialog_slide_up</item>
+    </style>
+    <style name="DownloadConfirmDialogAnimationRight">
+        <item name="android:windowEnterAnimation">@anim/download_confirm_dialog_slide_right_in</item>
+    </style>
+
+    <style name="style_btn">
+        <item name="android:textSize">@dimen/anythink_title_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/selector_btn</item>
+        <item name="android:background">@drawable/selector_bg_1</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+    <style name="style_checkBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/anythink_666666</item>
+        <item name="colorControlActivated">@color/anythink_0042DF</item>
+    </style>
+
+
+</resources>

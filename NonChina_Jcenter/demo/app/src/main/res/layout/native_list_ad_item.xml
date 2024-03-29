@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_ad_container_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.anythink.nativead.api.ATNativeView
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/anythink_8dp">
+
+        <include
+            android:id="@+id/self_render_view"
+            layout="@layout/layout_native_self"
+            android:visibility="gone" />
+    </com.anythink.nativead.api.ATNativeView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/anythink_8dp"
+        android:background="@color/anythink_E8E8E8" />
+</FrameLayout>

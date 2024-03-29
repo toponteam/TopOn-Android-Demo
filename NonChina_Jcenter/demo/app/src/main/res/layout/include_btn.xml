@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/show_ad_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/anythink_20dp"
+        android:text="@string/anythink_show_ad" />
+
+    <TextView
+        android:id="@+id/is_ad_ready_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp"
+        android:layout_above="@id/show_ad_btn"
+        android:layout_marginBottom="@dimen/anythink_10dp"
+        android:text="@string/anythink_is_ad_ready" />
+
+    <TextView
+        android:id="@+id/load_ad_btn"
+        style="@style/style_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp"
+        android:layout_above="@id/is_ad_ready_btn"
+        android:layout_marginBottom="@dimen/anythink_10dp"
+        android:text="@string/anythink_load_ad" />
+
+</merge>

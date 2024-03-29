@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+apply from: 'topon.gradle'
+
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.anythink.sdk.demo"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+    }
+    signingConfigs {
+        demo {
+            keyAlias 'anythink'
+            keyPassword '123456'
+            storeFile file('anythink.jks')
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.demo
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    //Helium
+    packagingOptions {
+        merge "META-INF/com.android.tools/proguard/coroutines.pro"
+        exclude "META-INF/*.kotlin_module"
+    }
+
+}
+
+repositories{
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.9.0'
+        force 'androidx.recyclerview:recyclerview:1.1.0'
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation ('com.facebook.stetho:stetho:1.3.1') {
+        exclude module: 'support-v4'
+    }
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.browser:browser:1.0.0'
+
+    api 'androidx.multidex:multidex:2.0.1'
+
+    //Helium
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+
+    //ironSource
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.32'
+
+    //Nend
+    implementation ('androidx.preference:preference:1.1.1') {
+        exclude module: 'recyclerview'
+    }
+
+    //Unity Ads
+    implementation 'androidx.startup:startup-runtime:1.1.1'
+    implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
+    implementation 'androidx.webkit:webkit:1.6.1'
+
+    implementation ('com.google.android.exoplayer:exoplayer:2.16.1'){
+        exclude module: 'recyclerview'
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/loadAd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Splash Ad" />
+
+    <Button
+        android:id="@+id/is_ad_ready_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadAd_btn"
+        android:text="Is Splash Ad Ready" />
+
+    <Button
+        android:id="@+id/show_ad_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/is_ad_ready_btn"
+        android:text="Show Splash Ad" />
+
+    <FrameLayout
+        android:id="@+id/splash_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

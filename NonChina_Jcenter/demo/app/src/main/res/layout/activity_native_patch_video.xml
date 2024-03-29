@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.anythink.nativead.api.ATNativeView
+        android:id="@+id/patch_native_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/patch_self_render_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/patch_main_image_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/patch_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#33000000"
+                android:textColor="#ffffff"
+                android:padding="3dp"
+                android:textSize="13dp"/>
+
+            <TextView
+                android:id="@+id/patch_ad_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_btn_normal"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="2dp"
+                android:text="AD"
+                android:textColor="@color/anythink_0042DF"
+                android:textSize="8dp" />
+        </RelativeLayout>
+
+    </com.anythink.nativead.api.ATNativeView>
+
+    <TextView
+        android:id="@+id/patch_count_down_text"
+        android:layout_alignTop="@id/patch_native_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textSize="10dp"
+        android:padding="4dp"
+        android:layout_margin="5dp"
+        android:includeFontPadding="false"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/patch_count_down_bg"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

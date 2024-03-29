@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/autoAdInit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Init Auto Placement"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/auto_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:spinnerMode="dropdown" />
+
+
+    <Button
+        android:id="@+id/autoAdCheckReady"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Check Ready Status"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/autoAdShow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Show"
+        android:textSize="15dp" />
+
+</LinearLayout>

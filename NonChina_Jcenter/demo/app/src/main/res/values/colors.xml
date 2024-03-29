@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="anythink_1E2231">#1E2231</color>
+    <color name="anythink_0042DF">#0042DF</color>
+    <color name="anythink_666666">#666666</color>
+    <color name="anythink_0244E5">#0244E5</color>
+    <color name="anythink_F5F5F5">#F5F5F5</color>
+    <color name="anythink_EDEDED">#EDEDED</color>
+    <color name="anythink_369E9E9E">#369E9E9E</color>
+    <color name="anythink_A9A9A9">#A9A9A9</color>
+    <color name="anythink_EFEFEF">#EFEFEF</color>
+    <color name="anythink_E8E8E8">#E8E8E8</color>
+</resources>
