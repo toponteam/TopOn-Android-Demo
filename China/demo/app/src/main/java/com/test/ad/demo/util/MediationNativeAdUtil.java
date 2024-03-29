@@ -33,10 +33,6 @@ import com.test.ad.demo.view.MutiImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Description:
- * Created by Quin on 2023/11/20.
- **/
 public class MediationNativeAdUtil {
     private static final String TAG = MediationNativeAdUtil.class.getSimpleName();
 

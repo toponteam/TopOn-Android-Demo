@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Copyright © 2018-2020 TopOn. All rights reserved.
-  ~ https://www.toponad.com
-  ~ Licensed under the TopOn SDK License Agreement
-  ~ https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
-  -->
-
 <resources>
     <dimen name="anythink_pic_size">100dp</dimen>
     <dimen name="anythink_pic_width">42dp</dimen>

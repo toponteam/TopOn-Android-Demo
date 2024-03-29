@@ -1,10 +1,4 @@
 package com.test.ad.demo;
-/*
- * Copyright © 2018-2020 TopOn. All rights reserved.
- * https://www.toponad.com
- * Licensed under the TopOn SDK License Agreement
- * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- */
 
 public class PanelAction {
     public static String VOICE_CHANGE = "voice_change";

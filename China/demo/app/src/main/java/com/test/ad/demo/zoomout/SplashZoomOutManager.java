@@ -9,9 +9,6 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 
 
-/*
- * created by timfeng 2020/11/14
- */
 public class SplashZoomOutManager {
     private static final String TAG = "SplashZoomOutManager";
     private static final int LEFT = 0;

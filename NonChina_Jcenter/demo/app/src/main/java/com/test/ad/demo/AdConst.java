@@ -1,14 +1,8 @@
 package com.test.ad.demo;
 
-/**
- * Description:
- * Created by Quin on 2023/8/1.
- **/
+
 public class AdConst {
     /*
-     * To collect scene arrival rate statistics, you can refer to the link below:
-     * en: "https://docs.toponad.com/#/en-us/android/NetworkAccess/scenario/scenario"
-     * chinese: "https://docs.toponad.com/#/zh-cn/android/NetworkAccess/scenario/scenario"
      * Call the "Enter AD scene" method when an AD trigger condition is met, such as:
      * The scenario is a pop-up AD after the cleanup, which is called at the end of the cleanup.
      * The scenarioId support custom.

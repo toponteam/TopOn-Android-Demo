@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.FrameLayout;
 
-/*
- * created by timfeng 2020/11/14
- */
 public class SplashZoomOutLayout extends FrameLayout {
   private float dX, dY;
   private int margin;

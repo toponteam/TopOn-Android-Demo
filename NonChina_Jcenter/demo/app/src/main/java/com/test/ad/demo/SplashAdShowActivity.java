@@ -1,32 +1,17 @@
-/*
- * Copyright © 2018-2020 TopOn. All rights reserved.
- * https://www.toponad.com
- * Licensed under the TopOn SDK License Agreement
- * https://github.com/toponteam/TopOn-Android-SDK/blob/master/LICENSE
- */
-
 package com.test.ad.demo;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdSourceStatusListener;
-import com.anythink.core.api.ATNativeAdCustomRender;
-import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
@@ -36,12 +21,8 @@ import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
 import com.test.ad.demo.base.BaseActivity;
-import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class SplashAdShowActivity extends Activity implements ATSplashExListener {
 
