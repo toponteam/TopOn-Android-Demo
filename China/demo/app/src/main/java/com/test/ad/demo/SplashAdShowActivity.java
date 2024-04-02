@@ -271,7 +271,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             splashAd.setAdDownloadListener(null);
             splashAd.setAdSourceStatusListener(null);
         }
+    }
 
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
     }
 
     @Override

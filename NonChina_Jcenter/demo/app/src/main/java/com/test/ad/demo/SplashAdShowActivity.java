@@ -268,6 +268,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
     }
 
     @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+    }
+
+    @Override
     public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
 
     }
