@@ -10,6 +10,7 @@
     <string name="anythink_title_splash">Splash</string>
     <string name="anythink_title_banner">Banner</string>
     <string name="anythink_title_native">Native</string>
+    <string name="anythink_title_media_video">MediaVideo</string>
     <string name="anythink_title_native_express">Native List</string>
     <string name="anythink_title_native_list">Native List</string>
     <string name="anythink_title_native_draw">Native Draw</string>
@@ -31,6 +32,7 @@
     <string name="anythink_main_desc_splash">Displayed immediately after the application is launched.</string>
     <string name="anythink_main_desc_banner">Flexible formats which could appear at the top, middle or bottom of your app.</string>
     <string name="anythink_main_desc_native">Include Native,Vertical Draw Video and Pre-roll Ads.Most compatible with your native app code for video ads and graphic ads.</string>
+    <string name="anythink_main_desc_media_video">Media Video Ads.</string>
 
     <string name="anythink_load_ad">Load Ad</string>
     <string name="anythink_is_ad_ready">Is Ad Ready</string>
@@ -43,4 +45,5 @@
     <string name="anythink_ad_status_not_load">ad is not load.</string>
 
     <integer name="anythink_native_button_col">2</integer>
+
 </resources>

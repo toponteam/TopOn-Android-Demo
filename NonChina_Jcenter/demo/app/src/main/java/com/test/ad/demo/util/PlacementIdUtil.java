@@ -26,6 +26,7 @@ public class PlacementIdUtil {
     private static Map<String, String> patchPlacements;
     private static Map<String, String> bannerPlacements;
     private static Map<String, String> splashPlacements;
+    private static Map<String, String> mediaVideoPlacements;
 
     private static String appId;
     private static String appKey;
@@ -182,5 +183,12 @@ public class PlacementIdUtil {
             splashPlacements = getPlacementIdMap(context, placementIdJson, "splash");
         }
         return splashPlacements;
+    }
+
+    public static Map<String, String> getMediaVideoPlacements(Context context) {
+        if (mediaVideoPlacements == null) {
+            mediaVideoPlacements = getPlacementIdMap(context, placementIdJson, "media_video");
+        }
+        return mediaVideoPlacements;
     }
 }

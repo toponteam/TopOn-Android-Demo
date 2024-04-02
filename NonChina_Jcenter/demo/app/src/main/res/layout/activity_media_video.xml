@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anythink_F5F5F5">
+
+    <!--    <include layout="@layout/include_title_bar" />-->
+    <com.test.ad.demo.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anythink_45dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:padding="@dimen/anythink_padding">
+        <com.test.ad.demo.mediavideo.VideoPlayerWithAdPlayback
+            android:id="@+id/video_player_with_ad_playback"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="#000000"
+            android:orientation="vertical">
+            <com.test.ad.demo.mediavideo.SampleVideoPlayer
+                android:id="@+id/video_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"/>
+            <FrameLayout
+                android:id="@+id/ad_ui_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.test.ad.demo.mediavideo.VideoPlayerWithAdPlayback>
+        <include
+            layout="@layout/include_select_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_player_with_ad_playback"
+            android:layout_marginTop="@dimen/anythink_10dp" />
+
+        <include layout="@layout/include_log_area" />
+
+        <include layout="@layout/include_btn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

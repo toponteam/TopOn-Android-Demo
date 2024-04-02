@@ -17,6 +17,7 @@ public class AdConst {
         public static final String NATIVE_AD_SCENARIO = "native_ad_show_1";
         public static final String BANNER_AD_SCENARIO = "banner_ad_show_1";
         public static final String REWARD_VIDEO_AD_SCENARIO = "reward_video_ad_show_1";
+        public static final String MEDIA_VIDEO_AD_SCENARIO = "media_video_ad_show_1";
     }
 
     public static class SHOW_CUSTOM_EXT {
@@ -25,5 +26,6 @@ public class AdConst {
         public static final String NATIVE_AD_SHOW_CUSTOM_EXT = "native_ad_show_custom_ext";
         public static final String BANNER_AD_SHOW_CUSTOM_EXT = "banner_ad_show_custom_ext";
         public static final String REWARD_VIDEO_AD_SHOW_CUSTOM_EXT = "reward_video_ad_show_custom_ext";
+        public static final String MEDIA_VIDEO_AD_SHOW_CUSTOM_EXT = "media_video_ad_show_custom_ext";
     }
 }

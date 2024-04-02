@@ -134,6 +134,9 @@ public abstract class BaseActivity extends Activity {
             case ATAdConst.ATMixedFormatAdType.REWARDED_VIDEO:
                 mPlacementIdMap = PlacementIdUtil.getRewardedVideoPlacements(this);
                 break;
+            case ATAdConst.ATMixedFormatAdType.MEDIA_VIDEO:
+                mPlacementIdMap = PlacementIdUtil.getMediaVideoPlacements(this);
+                break;
         }
     }
 

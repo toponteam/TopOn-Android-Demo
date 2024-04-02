@@ -26,6 +26,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private RelativeLayout mRlInterstitialAd;
     private RelativeLayout mRlBannerAd;
     private RelativeLayout mRlSplashAd;
+    private RelativeLayout mRlMediaVideoAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mRlBannerAd = findViewById(R.id.bannerBtn);
         mRlInterstitialAd = findViewById(R.id.interstitialBtn);
         mRlRewardVideoAd = findViewById(R.id.rewardedVideoBtn);
+        mRlMediaVideoAd = findViewById(R.id.media_videoBtn);
     }
 
     private void initListener() {
@@ -53,6 +55,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mRlBannerAd.setOnClickListener(this);
         mRlInterstitialAd.setOnClickListener(this);
         mRlRewardVideoAd.setOnClickListener(this);
+        mRlMediaVideoAd.setOnClickListener(this);
     }
 
     private void initData() {
@@ -118,6 +121,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.rewardedVideoBtn:
                 adPageClass = RewardVideoAdActivity.class;
+                break;
+            case R.id.media_videoBtn:
+                adPageClass = MediaVideoActivity.class;
                 break;
         }
         startAdPage(adPageClass);
