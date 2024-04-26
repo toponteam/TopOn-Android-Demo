@@ -438,6 +438,10 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                     mData.add(PanelAction.VIDEO_PAUSE);
                     mData.add(PanelAction.VIDEO_PROGRESS);
                     break;
+                case 79: //for Vivo
+                    mData.add(PanelAction.VIDEO_RESUME);
+                    mData.add(PanelAction.VIDEO_PAUSE);
+                    break;
             }
         }
 
@@ -455,6 +459,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                 case 42:    //for online
                 case 43:    //for online
                 case 44:    //for online
+                case 79:    //for vivo
                     mData.add(PanelAction.DOWNLOAD_STATUS);
                     break;
             }
