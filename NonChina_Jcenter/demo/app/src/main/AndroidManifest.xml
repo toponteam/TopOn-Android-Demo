@@ -41,6 +41,11 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
+        <meta-data
+            android:name="hw_ads_sdk_type"
+            android:value="6"
+            tools:node="replace" />
+
         <activity
             android:name="com.test.ad.demo.MainActivity"
             android:exported="true"
@@ -104,7 +109,7 @@
             android:exported="false"
             android:label="MediaVideo" />
 
-        <!-- source file: nonchina_jcenter/network_sdk/admob/23.0.0/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/admob/23.1.0/AndroidManifest.xml -->
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
