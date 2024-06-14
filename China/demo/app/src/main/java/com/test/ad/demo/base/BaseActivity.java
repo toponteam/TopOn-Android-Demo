@@ -31,6 +31,7 @@ import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.ViewUtil;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -138,10 +139,23 @@ public abstract class BaseActivity extends Activity {
 
         List<String> placementNameList = new ArrayList<>(mPlacementIdMap.keySet());
 
+        sortPlacementList(placementNameList);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_dropdown_item, placementNameList);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new PlacementSelectListenerImpl());
+    }
+
+    private void sortPlacementList(List<String> placementNameList) {
+        if (placementNameList != null && !placementNameList.isEmpty()) {
+            String excludeName = "All";
+            placementNameList.remove(excludeName);
+
+            Collections.sort(placementNameList);
+
+            placementNameList.add(0, excludeName);
+        }
     }
 
     public static class ATAdSourceStatusListenerImpl implements ATAdSourceStatusListener {

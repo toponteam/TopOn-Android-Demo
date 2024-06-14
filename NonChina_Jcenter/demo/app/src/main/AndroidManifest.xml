@@ -32,7 +32,8 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
         android:usesCleartextTraffic="true"
-        tools:remove="android:taskAffinity" >
+        tools:remove="android:taskAffinity"
+        tools:replace="android:usesCleartextTraffic" >
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9488501426181082~6354662111" />
