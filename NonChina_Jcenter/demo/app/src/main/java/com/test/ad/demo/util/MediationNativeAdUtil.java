@@ -16,15 +16,11 @@ import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.anythink.core.api.ATAdAppInfo;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATNativeAdInfo;
-import com.anythink.core.api.ATShakeViewListener;
 import com.anythink.core.api.IATAdvertiserInfoOperate;
 import com.anythink.core.api.IATThirdPartyMaterial;
 import com.anythink.nativead.api.ATNativeImageView;
-import com.anythink.nativead.api.ATNativePrepareExInfo;
-import com.anythink.nativead.api.ATNativePrepareInfo;
 import com.anythink.nativead.unitgroup.api.CustomNativeAd;
 import com.huawei.hms.ads.AppDownloadButton;
 import com.test.ad.demo.R;
@@ -169,7 +165,7 @@ public class MediationNativeAdUtil {
         if (lastView instanceof AppDownloadButton) {
             ((ViewGroup) selfRenderView).removeView(lastView);
         }
-        View appDownloadButton = adMaterial.getAppDownloadButton();
+        View appDownloadButton = adMaterial.getCallToActionButton();
         if (appDownloadButton != null) {
             if (appDownloadButton instanceof AppDownloadButton) {
                 ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));

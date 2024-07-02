@@ -18,9 +18,11 @@ import androidx.annotation.Nullable;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdMultipleLoadedListener;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
+import com.anythink.core.api.ATRequestingInfo;
 import com.anythink.core.api.AdError;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.TitleBar;
@@ -33,11 +35,12 @@ import com.test.ad.demo.util.ViewUtil;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
 public abstract class BaseActivity extends Activity {
+
+    protected String TAG = getClass().getSimpleName();
     protected String mCurrentPlacementName;
     protected String mCurrentPlacementId;
     private Map<String, String> mPlacementIdMap;
@@ -155,12 +158,13 @@ public abstract class BaseActivity extends Activity {
 
     private void sortPlacementList(List<String> placementNameList) {
         if (placementNameList != null && !placementNameList.isEmpty()) {
-            String excludeName = "All";
-            placementNameList.remove(excludeName);
-
             Collections.sort(placementNameList);
 
-            placementNameList.add(0, excludeName);
+            String excludeName = "All";
+            if (placementNameList.contains(excludeName)) {
+                placementNameList.remove(excludeName);
+                placementNameList.add(0, excludeName);
+            }
         }
     }
 
@@ -231,6 +235,23 @@ public abstract class BaseActivity extends Activity {
         @Override
         public View getMediationViewFromNativeAd(ATNativeAdInfo mixNativeAd, ATAdInfo atAdInfo) {
             return MediationNativeAdUtil.getViewFromNativeAd(context, mixNativeAd, atAdInfo, false);
+        }
+    }
+
+    public class AdMultipleLoadedListener implements ATAdMultipleLoadedListener {
+
+        @Override
+        public void onAdMultipleLoaded(ATRequestingInfo requestingInfo) {
+            if (requestingInfo != null) {
+                List<ATAdInfo> loadingAdInfoList = requestingInfo.getLoadingAdInfoList();
+                List<ATAdInfo> biddingAttemptAdInfoList = requestingInfo.getBiddingAttemptAdInfoList();
+
+                Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=" + (loadingAdInfoList != null ? loadingAdInfoList.size() : 0) + ", " + loadingAdInfoList
+                        + "\n" + "biddingAttemptAdSize=" + (biddingAttemptAdInfoList != null ? biddingAttemptAdInfoList.size() : 0) + ", " + biddingAttemptAdInfoList
+                ) ;
+            } else {
+                Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=0, biddingAttemptAdSize=0");
+            }
         }
     }
 }

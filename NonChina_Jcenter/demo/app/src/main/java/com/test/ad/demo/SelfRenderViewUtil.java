@@ -108,7 +108,7 @@ public class SelfRenderViewUtil {
         if (lastView instanceof AppDownloadButton) {
             ((ViewGroup) selfRenderView).removeView(lastView);
         }
-        View appDownloadButton = adMaterial.getAppDownloadButton();
+        View appDownloadButton = adMaterial.getCallToActionButton();
         if (appDownloadButton != null) {
             if (appDownloadButton instanceof AppDownloadButton) {
                 ((AppDownloadButton) appDownloadButton).setTextSize(dip2px(context, 12));

@@ -164,6 +164,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         });
 
         mBannerView.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+        mBannerView.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private void loadAd() {

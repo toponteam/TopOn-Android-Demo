@@ -219,6 +219,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
         });
 
         mInterstitialAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+        mInterstitialAd.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private void initAutoLoad() {

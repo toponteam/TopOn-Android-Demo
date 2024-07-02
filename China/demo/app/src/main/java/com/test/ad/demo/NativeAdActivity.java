@@ -6,11 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anythink.china.api.ATAppDownloadListener;
+import com.anythink.dlopt.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATShowConfig;
@@ -179,6 +178,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         });
 
         mATNative.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
+        mATNative.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {
