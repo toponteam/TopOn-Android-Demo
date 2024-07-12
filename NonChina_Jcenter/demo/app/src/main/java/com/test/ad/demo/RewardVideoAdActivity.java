@@ -89,6 +89,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
     private void initRewardVideoAd(String placementId) {
         mRewardVideoAd = new ATRewardVideoAd(this, placementId);
 
+        mRewardVideoAd.setAdRevenueListener(new AdRevenueListenerImpl());
         mRewardVideoAd.setAdListener(new ATRewardVideoExListener() {
 
             @Override
@@ -252,7 +253,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
     private void showAd() {
         if (mIsAutoLoad) {
 //            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener);
+            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener, new AdRevenueListenerImpl());
         } else {
 //            mRewardVideoAd.show(RewardVideoAdActivity.this);
             mRewardVideoAd.show(RewardVideoAdActivity.this, getATShowConfig());
@@ -369,6 +370,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
             mRewardVideoAd.setAdSourceStatusListener(null);
             mRewardVideoAd.setAdDownloadListener(null);
             mRewardVideoAd.setAdListener(null);
+            mRewardVideoAd.setAdMultipleLoadedListener(null);
         }
     }
 

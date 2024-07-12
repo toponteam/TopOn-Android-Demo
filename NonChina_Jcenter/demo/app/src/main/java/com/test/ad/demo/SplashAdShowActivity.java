@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.ATShowConfig;
@@ -49,7 +50,12 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         String placementId = getIntent().getStringExtra("placementId");
         splashAd = new ATSplashAd(this, placementId, this, 5000);
         splashAd.setNativeAdCustomRender(new BaseActivity.NativeAdCustomRender(this));
-
+        splashAd.setAdRevenueListener(new ATAdRevenueListener() {
+            @Override
+            public void onAdRevenuePaid(ATAdInfo adInfo) {
+                Log.i(TAG, "onAdRevenuePaid() >>> " + adInfo.toString());
+            }
+        });
         splashAd.setAdSourceStatusListener(new ATAdSourceStatusListener() {
             @Override
             public void onAdSourceBiddingAttempt(ATAdInfo adInfo) {

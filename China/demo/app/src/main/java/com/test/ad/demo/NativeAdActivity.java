@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.dlopt.api.ATAppDownloadListener;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
@@ -219,6 +220,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
             }
             mNativeAd = nativeAd;
 
+            mNativeAd.setAdRevenueListener(new AdRevenueListenerImpl());
             mNativeAd.setNativeEventListener(new ATNativeEventExListener() {
                 @Override
                 public void onDeeplinkCallback(ATNativeAdView view, ATAdInfo adInfo, boolean isSuccess) {
@@ -375,6 +377,7 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         if (mATNative != null) {
             mATNative.setAdListener(null);
             mATNative.setAdSourceStatusListener(null);
+            mATNative.setAdMultipleLoadedListener(null);
         }
     }
 

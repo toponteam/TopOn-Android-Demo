@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
@@ -96,6 +97,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
             printLogOnUI("onDownloadConfirm");
         }
     };
+
     private ATInterstitial mInterstitialAd;
     private boolean mIsAutoLoad;
     private CheckBox mCBAutoLoad;
@@ -154,6 +156,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     private void initInterstitialAd(String placementId) {
         mInterstitialAd = new ATInterstitial(this, placementId);
 
+        mInterstitialAd.setAdRevenueListener(new AdRevenueListenerImpl());
         mInterstitialAd.setAdListener(new ATInterstitialExListener() {
 
             @Override
@@ -286,7 +289,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
     private void showAd() {
         if (mIsAutoLoad) {
 //            ATInterstitialAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-            ATInterstitialAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener);
+            ATInterstitialAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener, new AdRevenueListenerImpl());
         } else {
 //            mInterstitialAd.show(InterstitialAdActivity.this);
             mInterstitialAd.show(InterstitialAdActivity.this, getATShowConfig());
@@ -304,6 +307,7 @@ public class InterstitialAdActivity extends BaseActivity implements View.OnClick
             mInterstitialAd.setAdSourceStatusListener(null);
             mInterstitialAd.setAdDownloadListener(null);
             mInterstitialAd.setAdListener(null);
+            mInterstitialAd.setAdMultipleLoadedListener(null);
         }
     }
 

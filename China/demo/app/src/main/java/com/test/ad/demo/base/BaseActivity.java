@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdMultipleLoadedListener;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
@@ -244,6 +245,14 @@ public abstract class BaseActivity extends Activity {
             } else {
                 Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=0, biddingAttemptAdSize=0");
             }
+        }
+    }
+
+    public class AdRevenueListenerImpl implements ATAdRevenueListener {
+        @Override
+        public void onAdRevenuePaid(ATAdInfo adInfo) {
+            Log.i(TAG, "onAdRevenuePaid: " + adInfo.toString());
+            printLogOnUI("onAdRevenuePaid");
         }
     }
 }

@@ -104,6 +104,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         mBannerView = new ATBannerView(this);
         //Loading and displaying ads should keep the container and BannerView visible all the time
         mBannerView.setVisibility(View.VISIBLE);
+        mBannerView.setAdRevenueListener(new AdRevenueListenerImpl());
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
             @Override

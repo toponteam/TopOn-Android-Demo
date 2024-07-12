@@ -137,7 +137,9 @@
     "DirectOffer": "b62b020b584867",
     "Splash_HB": "b62b021d966a87"
   },
-  "mediavideo": {
-    "All": "b62b035d8cb432"
+  "media_video": {
+    "All": "b6602833ace122",
+    "Vast": "b6600e9f771433",
+    "Vamp": "b6600ea27c6053"
   }
 }

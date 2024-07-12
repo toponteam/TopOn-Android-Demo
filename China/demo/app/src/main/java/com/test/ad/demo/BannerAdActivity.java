@@ -13,6 +13,7 @@ import com.anythink.banner.api.ATBannerExListener;
 import com.anythink.banner.api.ATBannerView;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
@@ -104,6 +105,7 @@ public class BannerAdActivity extends BaseActivity implements View.OnClickListen
         mBannerView = new ATBannerView(this);
         //Loading and displaying ads should keep the container and BannerView visible all the time
         mBannerView.setVisibility(View.VISIBLE);
+        mBannerView.setAdRevenueListener(new AdRevenueListenerImpl());
         mBannerView.setBannerAdListener(new ATBannerExListener() {
 
             @Override

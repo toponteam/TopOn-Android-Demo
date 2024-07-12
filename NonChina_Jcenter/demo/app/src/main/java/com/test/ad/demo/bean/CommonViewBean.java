@@ -4,6 +4,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.test.ad.demo.TitleBar;
+import com.test.ad.demo.mediavideo.VideoPlayerWithAdPlayback;
 
 /**
  * Description:The public view bean of the page.
@@ -13,6 +14,7 @@ public class CommonViewBean {
     private TextView tvLogView;
     private Spinner spinnerSelectPlacement;
     private int titleResId;
+    private VideoPlayerWithAdPlayback videoPlayerWithAdPlayback;
 
     public CommonViewBean() {
 
@@ -48,5 +50,13 @@ public class CommonViewBean {
 
     public void setTvLogView(TextView tvLogView) {
         this.tvLogView = tvLogView;
+    }
+
+    public VideoPlayerWithAdPlayback getVideoPlayerWithAdPlayback() {
+        return videoPlayerWithAdPlayback;
+    }
+
+    public void setVideoPlayerWithAdPlayback(VideoPlayerWithAdPlayback videoPlayerWithAdPlayback) {
+        this.videoPlayerWithAdPlayback = videoPlayerWithAdPlayback;
     }
 }

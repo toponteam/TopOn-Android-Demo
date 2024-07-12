@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdStatusInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
 import com.anythink.core.api.ATShowConfig;
@@ -119,6 +120,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
             printLogOnUI("onAgainReward");
         }
     };
+
     private final Map<String, Boolean> mAutoLoadPlacementIdMap = new HashMap<>();
     private ATRewardVideoAd mRewardVideoAd;
     private boolean mIsAutoLoad;
@@ -176,7 +178,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
 
     private void initRewardVideoAd(String placementId) {
         mRewardVideoAd = new ATRewardVideoAd(this, placementId);
-
+        mRewardVideoAd.setAdRevenueListener(new AdRevenueListenerImpl());
         mRewardVideoAd.setAdListener(new ATRewardVideoExListener() {
 
             @Override
@@ -351,7 +353,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
     private void showAd() {
         if (mIsAutoLoad) {
 //            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, autoEventListener);
-            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener);
+            ATRewardVideoAutoAd.show(this, mCurrentPlacementId, getATShowConfig(), autoEventListener, new AdRevenueListenerImpl());
         } else {
 //            mRewardVideoAd.show(RewardVideoAdActivity.this);
             mRewardVideoAd.show(RewardVideoAdActivity.this, getATShowConfig());
@@ -368,6 +370,7 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
             mRewardVideoAd.setAdSourceStatusListener(null);
             mRewardVideoAd.setAdDownloadListener(null);
             mRewardVideoAd.setAdListener(null);
+            mRewardVideoAd.setAdMultipleLoadedListener(null);
         }
     }
 

@@ -19,15 +19,18 @@ import androidx.annotation.Nullable;
 import com.anythink.core.api.ATAdConst;
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdMultipleLoadedListener;
+import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdSourceStatusListener;
 import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATRequestingInfo;
 import com.anythink.core.api.AdError;
+import com.google.ads.interactivemedia.v3.api.player.VideoProgressUpdate;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.TitleBar;
 import com.test.ad.demo.bean.AnnotationAdType;
 import com.test.ad.demo.bean.CommonViewBean;
+import com.test.ad.demo.mediavideo.VideoPlayerWithAdPlayback;
 import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.PlacementIdUtil;
 import com.test.ad.demo.util.ViewUtil;
@@ -48,6 +51,7 @@ public abstract class BaseActivity extends Activity {
 
     protected TextView mTVShowLog;
     private static WeakReference<TextView> mTVShowLogWR;
+    private static WeakReference<VideoPlayerWithAdPlayback> mVideoPlayWR;
 
 
     @Override
@@ -94,6 +98,21 @@ public abstract class BaseActivity extends Activity {
         ViewUtil.printLog(mTVShowLogWR.get(), msg);
     }
 
+    protected static void resumeContent(){
+        if (mVideoPlayWR == null || mVideoPlayWR.get() == null) return;
+        mVideoPlayWR.get().resumeContentAfterAdPlayback();
+    }
+
+    protected static void pauseContent(){
+        if (mVideoPlayWR == null || mVideoPlayWR.get() == null) return;
+        mVideoPlayWR.get().pauseContentForAdPlayback();
+    }
+
+    protected static VideoProgressUpdate getContentProgress(){
+        if (mVideoPlayWR == null || mVideoPlayWR.get() == null) return null;
+        return mVideoPlayWR.get().getContentProgress();
+    }
+
     private void setTitleBar(TitleBar titleBar, int titleResId) {
         if (titleBar != null && titleResId != 0) {
             titleBar.setTitle(titleResId);
@@ -114,6 +133,9 @@ public abstract class BaseActivity extends Activity {
             if (mTVShowLog != null) {
                 mTVShowLogWR = new WeakReference<>(mTVShowLog);
                 mTVShowLog.setMovementMethod(ScrollingMovementMethod.getInstance());
+            }
+            if (commonViewBean.getVideoPlayerWithAdPlayback() != null) {
+                mVideoPlayWR = new WeakReference<>(commonViewBean.getVideoPlayerWithAdPlayback());
             }
         }
     }
@@ -252,6 +274,14 @@ public abstract class BaseActivity extends Activity {
             } else {
                 Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=0, biddingAttemptAdSize=0");
             }
+        }
+    }
+
+    public class AdRevenueListenerImpl implements ATAdRevenueListener {
+        @Override
+        public void onAdRevenuePaid(ATAdInfo adInfo) {
+            Log.i(TAG, "onAdRevenuePaid: " + adInfo.toString());
+            printLogOnUI("onAdRevenuePaid");
         }
     }
 }
