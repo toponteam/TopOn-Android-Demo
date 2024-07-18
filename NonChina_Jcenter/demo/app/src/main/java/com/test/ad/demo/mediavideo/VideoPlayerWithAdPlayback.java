@@ -193,12 +193,12 @@ public class VideoPlayerWithAdPlayback extends RelativeLayout {
             }
         };
 
-        //contentProgressProvider = new ContentProgressProvider() {
-        //    @Override
-        //    public VideoProgressUpdate getContentProgress() {
-        //        return getContentProgress();
-        //    }
-        //};
+        contentProgressProvider = new ContentProgressProvider() {
+            @Override
+            public VideoProgressUpdate getContentProgress() {
+                return getVideoContentProgress();
+            }
+        };
 
         // Set player callbacks for delegating major video events.
         videoPlayer.addPlayerCallback(new VideoPlayer.PlayerCallback() {
@@ -388,9 +388,6 @@ public class VideoPlayerWithAdPlayback extends RelativeLayout {
         return isAdDisplayed;
     }
 
-    public ContentProgressProvider getContentProgressProvider() {
-        return contentProgressProvider;
-    }
 
     public void enableControls() {
         // Calling enablePlaybackControls(0) with 0 milliseconds shows the controls until
@@ -411,7 +408,7 @@ public class VideoPlayerWithAdPlayback extends RelativeLayout {
         this.readyToPlayContent = readyToPlayContent;
     }
 
-    public VideoProgressUpdate getContentProgress(){
+    private VideoProgressUpdate getVideoContentProgress(){
         if (!readyToPlayContent || isAdDisplayed || videoPlayer.getDuration() <= 0) {
             return VideoProgressUpdate.VIDEO_TIME_NOT_READY;
         }
@@ -428,6 +425,10 @@ public class VideoPlayerWithAdPlayback extends RelativeLayout {
         }
         lastContentPosition = curVideoPosition;
         return new VideoProgressUpdate(curVideoPosition, videoPlayer.getDuration());
+    }
+
+    public ContentProgressProvider getContentProgressProvider(){
+        return contentProgressProvider;
     }
 }
 

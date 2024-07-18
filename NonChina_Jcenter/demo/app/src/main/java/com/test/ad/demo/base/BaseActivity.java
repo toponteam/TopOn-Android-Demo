@@ -25,6 +25,7 @@ import com.anythink.core.api.ATNativeAdCustomRender;
 import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATRequestingInfo;
 import com.anythink.core.api.AdError;
+import com.google.ads.interactivemedia.v3.api.player.ContentProgressProvider;
 import com.google.ads.interactivemedia.v3.api.player.VideoProgressUpdate;
 import com.test.ad.demo.NativeAdActivity;
 import com.test.ad.demo.TitleBar;
@@ -108,9 +109,14 @@ public abstract class BaseActivity extends Activity {
         mVideoPlayWR.get().pauseContentForAdPlayback();
     }
 
-    protected static VideoProgressUpdate getContentProgress(){
+    protected static void setReadyToPlayContent(boolean readyToPlayContent){
+        if (mVideoPlayWR == null || mVideoPlayWR.get() == null) return;
+        mVideoPlayWR.get().setReadyToPlayContent(readyToPlayContent);
+    }
+
+    protected static ContentProgressProvider getContentProgressProvider(){
         if (mVideoPlayWR == null || mVideoPlayWR.get() == null) return null;
-        return mVideoPlayWR.get().getContentProgress();
+        return mVideoPlayWR.get().getContentProgressProvider();
     }
 
     private void setTitleBar(TitleBar titleBar, int titleResId) {

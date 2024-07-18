@@ -87,7 +87,11 @@ private enum PlaybackState {
 
     @Override
     public int getDuration() {
-        return playbackState == PlaybackState.STOPPED ? 0 : super.getDuration();
+        try {
+            return playbackState == PlaybackState.STOPPED ? 0 : super.getDuration();
+        }catch (Throwable t){
+            return 0;
+        }
     }
 
     @Override

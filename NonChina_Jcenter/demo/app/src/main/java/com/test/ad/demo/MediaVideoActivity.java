@@ -36,26 +36,11 @@ import java.util.Map;
 public class MediaVideoActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = MediaVideoActivity.class.getSimpleName();
     private ATMediaVideo mATMediaVideo;
-    private static ATMediaVideo mShowingMediaVideo;
-    private static MediaVideoAd mMediaVideoAd;
+    private MediaVideoAd mMediaVideoAd;
     private TextView mTVLoadAdBtn;
     private TextView mTVIsAdReadyBtn;
     private TextView mTVShowAdBtn;
     private VideoPlayerWithAdPlayback mVideoPlayerWithAdPlayback;
-
-    private static List<String> mBreakReadyFlags = new ArrayList<>();
-
-    private String mCurPlacementId;
-
-    private static ATMediaVideo LastATMediaVideo;
-
-    private static ContentProgressProvider contentProgressProvider = new ContentProgressProvider() {
-        @Override
-        public VideoProgressUpdate getContentProgress() {
-            return MediaVideoActivity.getContentProgress();
-        }
-    };
-
     final String VIDEO_CONTENT_URL = "https://storage.googleapis.com/gvabox/media/samples/stock.mp4";
 
     @Override
@@ -70,8 +55,7 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
 
     @Override
     protected void onSelectPlacementId(String placementId) {
-        mCurPlacementId = placementId;
-        //initMediaVideoAd(placementId);
+        initMediaVideoAd(placementId);
     }
 
     @Override
@@ -98,7 +82,6 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
     protected void initData() {
         super.initData();
         mVideoPlayerWithAdPlayback.setContentVideoPath(VIDEO_CONTENT_URL);
-        resetLastATMediaVideoListener();
     }
 
     @Override
@@ -111,9 +94,6 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
 
     private void initMediaVideoAd(String placementId) {
         ATMediaVideoConfig.Builder atMediaVideoConfigBuilder = new ATMediaVideoConfig.Builder();
-
-        //VAMP required
-        //atMediaVideoConfigBuilder.setContentProgressProvider(contentProgressProvider);
 
         //Ad Url Tag Params
         Map<String, String> adTagUrlPrams = new HashMap<>();
@@ -140,7 +120,16 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
         mATMediaVideo.setAdRevenueListener(new AdRevenueListenerImpl());
         mATMediaVideo.setAdListener(getATMediaVideoEventListener());
         //IMA Event Listener
-        mATMediaVideo.setIMAEventListener(getOnIMAEventListener(mATMediaVideo));
+        mATMediaVideo.setIMAEventListener(new OnIMAEventListener() {
+            @Override
+            public void onEvent(Object adEvent) {
+                if (((AdEvent) adEvent).getType() != AdEvent.AdEventType.AD_PROGRESS) {
+                    Log.i(TAG, "[ATMediaVideo]IMAAdEvent: " + ((AdEvent) adEvent).getType());
+                    //printLogOnUI("IMAAdEvent: " + ((AdEvent) adEvent).getType());
+                }
+            }
+        });
+
         mATMediaVideo.setAdSourceStatusListener(new BaseActivity.ATAdSourceStatusListenerImpl());
         mATMediaVideo.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
@@ -214,15 +203,16 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
         };
     }
 
-    private OnIMAEventListener getOnIMAEventListener(ATMediaVideo atMediaVideo) {
+    private OnIMAEventListener getMediaVideoAdUseOnIMAEventListener() {
         return new OnIMAEventListener() {
-            ATMediaVideo mInnerShowMediaVideo = atMediaVideo;
-
             @Override
-            public void onEvent(Object adEvent, String adapterFlag) {
+            public void onEvent(Object adEvent) {
+                /**
+                 * do content resume、pause and start、destroy MediaVideoAd
+                 */
                 if (adEvent instanceof AdEvent) {
                     if (((AdEvent) adEvent).getType() != AdEvent.AdEventType.AD_PROGRESS) {
-                        Log.i(TAG, "IMAAdEvent: " + ((AdEvent) adEvent).getType());
+                        Log.i(TAG, "[MediaVideoAd]IMAAdEvent: " + ((AdEvent) adEvent).getType());
                         //printLogOnUI("IMAAdEvent: " + ((AdEvent) adEvent).getType());
                     }
 
@@ -240,21 +230,12 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
                             printLogOnUI("ima event CONTENT_PAUSE_REQUESTED");
                             // AdEventType.CONTENT_PAUSE_REQUESTED is fired immediately before
                             // a video ad is played.
-                            if (mInnerShowMediaVideo != mShowingMediaVideo) {
-                                Log.i(TAG, "mATMediaVideo != mShowingMediaVideo onEvent CONTENT_PAUSE_REQUESTED: ");
-                                return;
-                            }
-
                             pauseContent();
                             break;
                         case CONTENT_RESUME_REQUESTED:
                             printLogOnUI("ima event CONTENT_RESUME_REQUESTED");
                             // AdEventType.CONTENT_RESUME_REQUESTED is fired when the ad is
                             // completed and you should start playing your content.
-                            if (mInnerShowMediaVideo != mShowingMediaVideo) {
-                                Log.i(TAG,"mATMediaVideo != mShowingMediaVideo onEvent CONTENT_RESUME_REQUESTED: ");
-                                return;
-                            }
                             resumeContent();
                             break;
                         case PAUSED:
@@ -265,40 +246,25 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
                             // AdEventType.AD_BREAK_READY will be fired when VMAP ads are ready to be played.
                             // For VAMP ads, mMediaVideoAd.start() must be called after AdEventType.AD_BREAK_READY
                             printLogOnUI("ima event AD_BREAK_READY");
-                            mBreakReadyFlags.add(adapterFlag);
-
-                            if (mShowingMediaVideo != null && mInnerShowMediaVideo != mShowingMediaVideo) {
-                                Log.i(TAG, "mATMediaVideo != mShowingMediaVideo onEvent AD_BREAK_READY: ");
-                                return;
-                            }
-                            if (mShowingMediaVideo != null) {
+                            if (mMediaVideoAd != null) {
                                 mMediaVideoAd.start();
                                 printLogOnUI("start MediaVideoAd with AD_BREAK_READY");
                             }
                             break;
                         case ALL_ADS_COMPLETED:
-                            mBreakReadyFlags.remove(mBreakReadyFlags);
-                            if (mShowingMediaVideo != null && mInnerShowMediaVideo != mShowingMediaVideo) {
-                                Log.i(TAG, "mATMediaVideo != mShowingMediaVideo onEvent ALL_ADS_COMPLETED: ");
-                                return;
-                            }
                             mMediaVideoAd = null;//should set null,Avoid affecting other caches
                             destroyShowingMediaVideoAd();
                             printLogOnUI("destroy MediaVideoAd with ALL_ADS_COMPLETED");
                             resumeContent();
-                            mVideoPlayerWithAdPlayback.setReadyToPlayContent(false);
+                            setReadyToPlayContent(false);
                             break;
                         case AD_BREAK_FETCH_ERROR:
-                            if (mShowingMediaVideo != null && mInnerShowMediaVideo != mShowingMediaVideo) {
-                                Log.i(TAG, "mATMediaVideo != mShowingMediaVideo onEvent AD_BREAK_READY: ");
-                                return;
-                            }
                             Log.w(TAG, "Ad Fetch Error. Resuming content.");
                             // A CONTENT_RESUME_REQUESTED event should follow to trigger content playback.
                             destroyShowingMediaVideoAd();
                             printLogOnUI("destroy MediaVideoAd with AD_BREAK_FETCH_ERROR");
                             resumeContent();
-                            mVideoPlayerWithAdPlayback.setReadyToPlayContent(false);
+                            setReadyToPlayContent(false);
                             break;
                         default:
                             break;
@@ -351,17 +317,14 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
 
     private void showAd() {
         if (mATMediaVideo.isAdReady()) {
-            if (mShowingMediaVideo != null) {
-                //release and destroy last mMediaVideoAd
+            if (mMediaVideoAd != null) {
+                //destroy showing media video ad
                 destroyShowingMediaVideoAd();
-                printLogOnUI("destroy MediaVideoAd with showAd");
             }
-            mShowingMediaVideo = mATMediaVideo;
-            mShowingMediaVideo.setATVideoAdPlayer(mVideoPlayerWithAdPlayback.getVideoAdPlayer());
             //reset player state and content video play position
             mVideoPlayerWithAdPlayback.resetInnerVideoPlayerAndParams();
 
-            mMediaVideoAd = mShowingMediaVideo.getMediaVideoAd(getATShowConfig());
+            mMediaVideoAd = mATMediaVideo.getMediaVideoAd(getATShowConfig());
             mVideoPlayerWithAdPlayback.setReadyToPlayContent(true);
 
             //must setContainer(container) before start()
@@ -371,33 +334,29 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
             //need setContainer
             mMediaVideoAd.setContainer(mVideoPlayerWithAdPlayback.getAdUiContainer());
             //setContentProgressProvider(VMAP need)
-            mMediaVideoAd.setContentProgressProvider(contentProgressProvider);
+            mMediaVideoAd.setContentProgressProvider(getContentProgressProvider());
+            //Call setOnIMAEventListener to bind MediaVideoAd and OnIMAEventListener
+            mMediaVideoAd.setOnIMAEventListener(getMediaVideoAdUseOnIMAEventListener());
+
             if (mMediaVideoAd != null) {
-                if (mMediaVideoAd.getExtraInfoMap() != null && (TextUtils.equals("VAST",
-                        mMediaVideoAd.getExtraInfoMap().get("video_type").toString()) || mBreakReadyFlags.contains(mMediaVideoAd.getAdapterFlag()))) {
+                if (!mMediaVideoAd.isVMAPOffer()) {
+                    //VAST just load start
                     printLogOnUI("start MediaVideoAd with Show Ad click");
                     mMediaVideoAd.start();
                 } else {
-                    resumeContent();
+                    //VAMP wait OnIMAEventListener#AD_BREAK_READY call
+                    printLogOnUI("show VMAP wait AD_BREAK_READY");
                 }
             }
         } else {
-            printLogOnUI("MediaVideo ad show fail,ready status:false");
+            printLogOnUI("MediaVideo ad show fail,because of ready status:false");
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (LastATMediaVideo != null) {
-            LastATMediaVideo = mATMediaVideo;
-
-            LastATMediaVideo.setAdRevenueListener(null);
-            LastATMediaVideo.setAdListener(null);
-            LastATMediaVideo.setIMAEventListener(null);
-            LastATMediaVideo.setAdSourceStatusListener(null);
-            LastATMediaVideo.setAdMultipleLoadedListener(null);
-        }
+        destroyShowingMediaVideoAd();
 
         //stop timmer
         if (mVideoPlayerWithAdPlayback != null) {
@@ -405,15 +364,6 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
         }
     }
 
-    private void resetLastATMediaVideoListener() {
-        if (LastATMediaVideo != null) {
-            LastATMediaVideo.setAdRevenueListener(new AdRevenueListenerImpl());
-            LastATMediaVideo.setAdListener(getATMediaVideoEventListener());
-            LastATMediaVideo.setIMAEventListener(getOnIMAEventListener(LastATMediaVideo));
-            LastATMediaVideo.setAdSourceStatusListener(new BaseActivity.ATAdSourceStatusListenerImpl());
-            LastATMediaVideo.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
-        }
-    }
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -426,17 +376,11 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
                 loadAd();
                 break;
             case R.id.is_ad_ready_btn:
-                if (mATMediaVideo == null) {
-                    mATMediaVideo = LastATMediaVideo;
-                }
                 isAdReady();
                 break;
             case R.id.show_ad_btn:
-                if (mATMediaVideo == null) {
-                    mATMediaVideo = LastATMediaVideo;
-                }
                 ATMediaVideo.entryAdScenario(mCurrentPlacementId, AdConst.SCENARIO_ID.MEDIA_VIDEO_AD_SCENARIO);
-                if (mATMediaVideo != null && mATMediaVideo.checkAdStatus().isReady()) {
+                if (mATMediaVideo != null) {
                     showAd();
                 }
                 break;
@@ -482,16 +426,6 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
     }
 
     public void destroyShowingMediaVideoAd() {
-        if (mShowingMediaVideo != null) {
-            //release all listener
-            mShowingMediaVideo.setAdRevenueListener(null);
-            mShowingMediaVideo.setAdMultipleLoadedListener(null);
-            mShowingMediaVideo.setAdSourceStatusListener(null);
-            mShowingMediaVideo.setIMAEventListener(null);
-            mShowingMediaVideo.setAdListener(null);
-            mShowingMediaVideo = null;
-        }
-
         if (mMediaVideoAd != null) {
             mMediaVideoAd.onDestroy();
             mMediaVideoAd = null;
