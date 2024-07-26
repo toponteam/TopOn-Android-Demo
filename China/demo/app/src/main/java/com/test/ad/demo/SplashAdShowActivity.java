@@ -3,21 +3,26 @@ package com.test.ad.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anythink.core.api.ATAdInfo;
 import com.anythink.core.api.ATAdRevenueListener;
 import com.anythink.core.api.ATAdSourceStatusListener;
-import com.anythink.core.api.ATNativeAdCustomRender;
-import com.anythink.core.api.ATNativeAdInfo;
 import com.anythink.core.api.ATNetworkConfirmInfo;
+import com.anythink.core.api.ATSDKGlobalSetting;
 import com.anythink.core.api.ATShowConfig;
 import com.anythink.core.api.AdError;
 import com.anythink.splashad.api.ATSplashAd;
@@ -26,7 +31,6 @@ import com.anythink.splashad.api.ATSplashExListener;
 import com.anythink.splashad.api.ATSplashSkipAdListener;
 import com.anythink.splashad.api.ATSplashSkipInfo;
 import com.test.ad.demo.base.BaseActivity;
-import com.test.ad.demo.util.MediationNativeAdUtil;
 import com.test.ad.demo.util.SDKUtil;
 import com.test.ad.demo.zoomout.SplashEyeAdHolder;
 import com.test.ad.demo.zoomout.SplashZoomOutManager;
@@ -92,6 +96,9 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             }
         });
 
+        //customDirectSplashAdCTAButton();
+        //customDirectSplashAdShakeButton();
+
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
             //splashAd.show(SplashAdShowActivity.this, container);
@@ -146,6 +153,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
                 }
             }
         }), getATShowConfig());
+    }
+
+    public int dip2px(float dipValue) {
+        float scale = this.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
     }
 
     @Override
@@ -295,5 +307,44 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         builder.showCustomExt(AdConst.SHOW_CUSTOM_EXT.SPLASH_AD_SHOW_CUSTOM_EXT);
 
         return builder.build();
+    }
+    TextView directSplashCTATextView,directSplashShakeTextView;
+    private void customDirectSplashAdCTAButton(){
+        directSplashCTATextView = new TextView(this);
+        int paddingVertical =  dip2px(18);
+        int paddingHorizontal =  dip2px(12);
+        directSplashCTATextView.setPadding(paddingVertical,paddingHorizontal,paddingVertical,paddingHorizontal);
+        directSplashCTATextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        directSplashCTATextView.setBackgroundColor(Color.parseColor("#99666666"));
+        directSplashCTATextView.setGravity(Gravity.CENTER);
+
+        //control button size and position
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        layoutParams.setMargins(0, 0, 0,  dip2px(40));
+        //muse set RelativeLayout.LayoutParams
+        directSplashCTATextView.setLayoutParams(layoutParams);
+
+        ATSDKGlobalSetting.setDirectlySplashCTAButton(directSplashCTATextView);
+    }
+
+    private void customDirectSplashAdShakeButton(){
+        directSplashShakeTextView = new TextView(this);
+        int paddingVertical =  dip2px(18);
+        int paddingHorizontal =  dip2px(12);
+        directSplashShakeTextView.setPadding(paddingVertical,paddingHorizontal,paddingVertical,paddingHorizontal);
+        directSplashShakeTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+        directSplashShakeTextView.setBackgroundColor(Color.parseColor("#9900FF00"));
+        directSplashShakeTextView.setGravity(Gravity.CENTER);
+        directSplashShakeTextView.setText("Custom ShakeText");
+
+        //By default, the ShakeButton is added to the bottom(with 100dp margin) horizontal center. You only need to adjust the size.
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //layoutParams.setMargins(0, 0, 0,  dip2px(40));
+        //muse set RelativeLayout.LayoutParams
+        directSplashShakeTextView.setLayoutParams(layoutParams);
+
+        ATSDKGlobalSetting.setDirectlySplashShakeButton(directSplashShakeTextView);
     }
 }
