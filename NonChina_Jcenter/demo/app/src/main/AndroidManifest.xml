@@ -11,12 +11,12 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.REAL_GET_TASKS" />
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" /> <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
     <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
     <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
@@ -115,7 +115,18 @@
         <!-- google -->
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true" />
+            android:value="true" /> <!-- source file: nonchina_jcenter/network_sdk/inmobi/10.7.5/AndroidManifest.xml -->
+        <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+        <!-- source file: nonchina_jcenter/network_sdk/vungle/7.4.0/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/appnext/2.7.1.473/AndroidManifest.xml -->
+        <!-- source file: nonchina_jcenter/network_sdk/startapp/5.0.2/AndroidManifest.xml -->
+        <!-- start.io -->
+        <meta-data
+            android:name="com.startapp.sdk.SPLASH_ENABLED"
+            android:value="false" /> <!-- start.io -->
+        <meta-data
+            android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" />
     </application>
 
 </manifest>
