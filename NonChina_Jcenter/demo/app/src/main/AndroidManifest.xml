@@ -126,6 +126,10 @@
             android:value="false" /> <!-- start.io -->
         <meta-data
             android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" /> <!-- source file: nonchina_jcenter/network_sdk/yandex/7.1.0/AndroidManifest.xml -->
+        <!-- Disable automatic sdk initialization for yandex -->
+        <meta-data
+            android:name="com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION"
             android:value="false" />
     </application>
 
