@@ -314,7 +314,6 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
         });
 
         mRewardVideoAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
-        mRewardVideoAd.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private void initAutoLoad() {

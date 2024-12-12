@@ -179,7 +179,6 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         });
 
         mATNative.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
-        mATNative.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private void loadAd(int adViewWidth, int adViewHeight) {

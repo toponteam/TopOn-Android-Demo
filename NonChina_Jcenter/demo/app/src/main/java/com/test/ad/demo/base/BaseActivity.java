@@ -266,23 +266,6 @@ public abstract class BaseActivity extends Activity {
         }
     }
 
-    public class AdMultipleLoadedListener implements ATAdMultipleLoadedListener {
-
-        @Override
-        public void onAdMultipleLoaded(ATRequestingInfo requestingInfo) {
-            if (requestingInfo != null) {
-                List<ATAdInfo> loadingAdInfoList = requestingInfo.getLoadingAdInfoList();
-                List<ATAdInfo> biddingAttemptAdInfoList = requestingInfo.getBiddingAttemptAdInfoList();
-
-                Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=" + (loadingAdInfoList != null ? loadingAdInfoList.size() : 0) + ", " + loadingAdInfoList
-                        + "\n" + "biddingAttemptAdSize=" + (biddingAttemptAdInfoList != null ? biddingAttemptAdInfoList.size() : 0) + ", " + biddingAttemptAdInfoList
-                ) ;
-            } else {
-                Log.i(TAG, "onAdMultipleLoaded: loadingHigherPriceAdSize=0, biddingAttemptAdSize=0");
-            }
-        }
-    }
-
     public class AdRevenueListenerImpl implements ATAdRevenueListener {
         @Override
         public void onAdRevenuePaid(ATAdInfo adInfo) {

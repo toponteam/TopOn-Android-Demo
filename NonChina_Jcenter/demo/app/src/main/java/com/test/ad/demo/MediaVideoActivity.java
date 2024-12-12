@@ -131,7 +131,6 @@ public class MediaVideoActivity extends BaseActivity implements View.OnClickList
         });
 
         mATMediaVideo.setAdSourceStatusListener(new BaseActivity.ATAdSourceStatusListenerImpl());
-        mATMediaVideo.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
     }
 
     private ATMediaVideoEventListener getATMediaVideoEventListener() {

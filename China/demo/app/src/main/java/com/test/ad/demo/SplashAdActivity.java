@@ -97,7 +97,6 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
 
         mSplashAd.setLocalExtra(localMap);
         mSplashAd.setAdSourceStatusListener(new ATAdSourceStatusListenerImpl());
-        mSplashAd.setAdMultipleLoadedListener(new AdMultipleLoadedListener());
         mSplashAd.setAdRevenueListener(new AdRevenueListenerImpl());
     }
 
